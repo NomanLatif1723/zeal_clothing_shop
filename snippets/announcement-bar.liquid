@@ -1,7 +1,9 @@
 <div class="announcement__bar">
   <div class="page__width">
     <div class="announcement__wrapper">
-      <div class="social__container"></div>
+      <div class="social__container">
+        {% render 'social-icons' %}
+      </div>
       <div class="main__announcement-banner">
         {% if section.settings.heading_text != blank %}
           <div class="main__heading">{{ section.settings.heading_text }}</div>
