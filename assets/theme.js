@@ -37,7 +37,7 @@ function startTimer(hours, minutes) {
   
       // Output the remaining time
       const timerEl = document.querySelector('.main__timer');
-      timerEl.innerHTML = `${minutes} : ${seconds}`;
+      timerEl.innerHTML = `${remainingHours} : ${remainingMinutes} : ${remainingSeconds}`;
   
       // Reduce remaining time by 1 second
       totalMilliseconds -= 1000;
