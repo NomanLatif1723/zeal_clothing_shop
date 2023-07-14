@@ -15,6 +15,16 @@
 
 }
 
+.page__width {
+  max-width: 1420px;
+  margin: 0 auto;
+  padding: 0 17px;
+}
+@media only screen and (min-width: 769px) {
+  .page__width {
+    padding: 0 40px;
+  }
+}
 /* Announcement Bar  */
 .announcement__bar {
   background: var(--colorAnnouncement);
@@ -36,20 +46,8 @@
   color: #EDC128;
   font-weight: bold;
 }
-@media only screen and (min-width: 769px) {
-  .page__width {
-    max-width: 1420px;
-    margin: 0 auto;
-    padding: 0 40px;
-  }
+@media only screen and (max-width: 768px) {
   .main__text {
-    display: block;
+    display: none;
   }
-}
-
-.page__width {
-  padding: 0 17px;
-}
-.main__text {
-  display: none;
 }
