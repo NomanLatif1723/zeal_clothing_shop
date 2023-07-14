@@ -18,7 +18,9 @@
           <div class="main__text">{{ section.settings.announcement_text }}</div>
         {% endif %}
       </div>
-      <div class="language__currency-container"></div>
+      <div class="language__currency-container">
+        {% render 'localization' %}
+      </div>
     </div>
   </div>
 </div>
