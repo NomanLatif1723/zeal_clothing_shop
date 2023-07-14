@@ -8,12 +8,11 @@
 }
 
 :root {
-  --colorAnnouncement: {{ settings.announcement_bg_color }};
-  --colorAnnouncementText: {{ settings.announcement_text_color }};
+  --colorAnnouncement: {{ settings.announcement_bg_color }}
+  ;
+  --colorAnnouncementText: {{ settings.announcement_text_color }}
+  ;
 
-}
-.page__width {
-  padding: 0 17px;
 }
 
 /* Announcement Bar  */
@@ -21,9 +20,6 @@
   background: var(--colorAnnouncement);
   color: var(--colorAnnouncementText);
   padding: 10px 0;
-}
-.main__text {
-  display: none;
 }
 
 .announcement__wrapper {
@@ -40,7 +36,7 @@
   color: #EDC128;
   font-weight: bold;
 }
-@media (min-width:769px) {
+@media only screen and (min-width: 769px) {
   .page__width {
     max-width: 1420px;
     margin: 0 auto;
@@ -49,4 +45,11 @@
   .main__text {
     display: block;
   }
+}
+
+.page__width {
+  padding: 0 17px;
+}
+.main__text {
+  display: none;
 }
