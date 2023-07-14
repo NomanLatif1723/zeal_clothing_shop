@@ -1,22 +1,24 @@
 {
-    "type": "header",
-    "name": "Header",
-    "sections": {
-        "header" : {
-            "type": "header",
-            "settings": {
-                
-            }
-        },
-        "announcement": {
-            "type" : "announcement",
-            "settings": {
-
-            }
-        }
+  "type": "header",
+  "name": "Header",
+  "sections": {
+    "announcement": {
+      "type": "announcement",
+      "settings": {
+        "heading_text": "SUMMER SALES ENDS IN",
+        "show_timer": false,
+        "announcement_timer": "<p>08:17:45<\/p>",
+        "announcement_text": "<p>USE CODE <strong>SUMMERSALE<\/strong><\/p>"
+      }
     },
-    "order": [
-        "header",
-        "announcement"
-    ]
+    "header": {
+      "type": "header",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "announcement",
+    "header"
+  ]
 }
