@@ -2,6 +2,10 @@
   "current": {
     "announcement_bg_color": "#111111",
     "announcement_text_color": "#ffffff",
+    "social_facebook_url": "instagram.com",
+    "social_twitter_url": "instagram.com",
+    "social_instagram_url": "instagram.com",
+    "social_pinterest_url": "instagram.com",
     "content_for_index": [
 
     ]
