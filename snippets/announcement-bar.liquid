@@ -8,8 +8,8 @@
         {% if section.settings.heading_text != blank %}
           <div class="main__heading">{{ section.settings.heading_text }}</div>
         {% endif %}
-        {% if section.settings.announcement_timer != blank %}
-          <div class="main__timer">{{ section.settings.announcement_timer }}</div>
+        {% if section.settings.show_timer %}
+          <div class="main__timer">08:17:45</div>
         {% endif %}
         {% if section.settings.announcement_text != blank %}
           <div class="main__text">{{ section.settings.announcement_text }}</div>
