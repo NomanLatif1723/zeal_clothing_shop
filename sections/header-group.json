@@ -7,6 +7,8 @@
       "settings": {
         "heading_text": "SUMMER SALES ENDS IN",
         "show_timer": true,
+        "timer_hours": "3",
+        "timer_minutes": "50",
         "announcement_text": "<p>USE CODE <strong>SUMMERSALE<\/strong><\/p>"
       }
     },
