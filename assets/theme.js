@@ -36,15 +36,8 @@ function startTimer(hours, minutes) {
       var remainingSeconds = Math.floor((totalMilliseconds % 60000) / 1000);
   
       // Output the remaining time
-      console.log(
-        "Remaining Time: " +
-          remainingHours +
-          "h " +
-          remainingMinutes +
-          "m " +
-          remainingSeconds +
-          "s"
-      );
+      const timerEl = document.querySelector('.main__timer');
+      timerEl.innerHTML = `${minutes} : ${seconds}`;
   
       // Reduce remaining time by 1 second
       totalMilliseconds -= 1000;
