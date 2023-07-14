@@ -8,21 +8,44 @@
 }
 
 :root {
-  --colorAnnouncement ={{ settings.announcement_bg_color | default: "#000000" }};
-  --colorAnnouncementText ={{ settings.announcement_text_color | default: "#000000" }};
+  --colorAnnouncement ={{ settings.announcement_bg_color }};
+  --colorAnnouncementText ={{ settings.announcement_text_color }};
 
 }
 .page__width {
   padding: 0 17px;
 }
+
+/* Announcement Bar  */
 .announcement__bar {
   background: var(--colorAnnouncement);
   color: var(--colorAnnouncementText);
+}
+.main__text {
+  display: none;
+}
+
+.announcement__wrapper {
+  text-align: center;
+}
+
+.main__heading {
+  font-size: 13px;
+  padding-bottom: 6px;
+}
+
+.main__timer {
+  font-size: 14px;
+  color: #EDC128;
+  font-weight: bold;
 }
 @media only screens and (min-width:769px) {
   .page__width {
     max-width: 1420px;
     margin: 0 auto;
     padding: 0 40px;
+  }
+  .main__text {
+    display: block;
   }
 }
