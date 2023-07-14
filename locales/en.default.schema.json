@@ -1,10 +1,10 @@
 {
-    "sections": {
-        "header": {
-            "name": "Header",
-            "settings": {
-                "header_announcement" : "Announcement Bar"
-            }
-        }
+  "sections": {
+    "header": {
+      "name": "Header",
+      "settings": {
+        "header_announcement": "Announcement Bar"
+      }
     }
+  }
 }

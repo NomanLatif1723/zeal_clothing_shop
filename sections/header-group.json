@@ -1,22 +1,24 @@
 {
-    "type": "header",
-    "name": "Header",
-    "sections": {
-        "header" : {
-            "type": "header",
-            "settings": {
-                
-            }
-        },
-        "announcement": {
-            "type" : "announcement",
-            "settings": {
-
-            }
-        }
+  "type": "header",
+  "name": "Header",
+  "sections": {
+    "announcement": {
+      "type": "announcement",
+      "settings": {
+        "heading_text": "Welcome to our shop",
+        "show_timer": false,
+        "announcement_timer": "",
+        "announcement_text": ""
+      }
     },
-    "order": [
-        "header",
-        "announcement"
-    ]
+    "header": {
+      "type": "header",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "announcement",
+    "header"
+  ]
 }
