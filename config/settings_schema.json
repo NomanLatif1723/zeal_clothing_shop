@@ -1,113 +1,112 @@
 [
-    {
-        "name": "theme_info",
-        "theme_name": "clothing_shop_clone",
-        "theme_author": "Noman Latif",
-        "theme_version": "1.0.0",
-        "theme_support_email": "numancreation1723@gmail.com",
-        "theme_documentation_url": "https:\/\/support.shopify.com"
-
-    },
-    {
-        "name": "Colors",
-        "settings": [
-            {
-                "type": "header",
-                "content": "Header"
-            },
-            {
-                "type": "color",
-                "id": "announcement_bg_color",
-                "label": "Announcent bar bg",
-                "default": "#000000"
-            },
-            {
-                "type": "color",
-                "id": "announcement_text_color",
-                "label": "Announcent bar text",
-                "default": "#000000"
-            }
-        ]
-    },
-    {
-        "name": "Typography",
-        "settings" : [
-            {
-                "type": "header",
-                "content": "Headings"
-            },
-            {
-                "type": "font_picker",
-                "id": "heading_font_family",
-                "label": "Font",
-                "default": "sans-serif"
-            },
-            {
-                "type": "header",
-                "content": "Body Text"
-            },
-            {
-                "type": "font_picker",
-                "id": "body_font_family",
-                "label": "Font",
-                "default": "sans-serif"
-            }
-        ]
-    },
-    {
-        "name" : "Social Media",
-        "settings": [
-            {
-                "type": "header",
-                "content": "Accounts"
-            },
-            {
-                "type": "text",
-                "id": "social_facebook_url",
-                "label": "Facebook",
-                "info": "facebook url"
-            },
-            {
-                "type": "text",
-                "id": "social_twitter_url",
-                "label": "Twitter",
-                "info": "Twitter url"
-            },
-            {
-                "type": "text",
-                "id": "social_instagram_url",
-                "label": "Instagram",
-                "info": "Instagram url"
-            },
-            {
-                "type": "text",
-                "id": "social_pinterest_url",
-                "label": "Pinterest",
-                "info": "Pinterest url"
-            }
-        ]
-    },
-    {
-        "name": "Extras",
-        "settings": [
-            {
-                "type": "checkbox",
-                "id": "show_currency",
-                "label": "Show Currency Selector",
-                "default": false
-            },
-            {
-                "type": "checkbox",
-                "id": "show_language",
-                "label": "Show Language Selector",
-                "default": false
-            },
-            {
-                "type": "checkbox",
-                "id": "show_socials",
-                "label": "Show Social Icons",
-                "default": false
-            }
-        ]
-    }
+  {
+    "name": "theme_info",
+    "theme_name": "clothing_shop_clone",
+    "theme_author": "Noman Latif",
+    "theme_version": "1.0.0",
+    "theme_support_email": "numancreation1723@gmail.com",
+    "theme_documentation_url": "https:\/\/support.shopify.com"
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Header"
+      },
+      {
+        "type": "color",
+        "id": "announcement_bg_color",
+        "label": "Announcent bar bg",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "announcement_text_color",
+        "label": "Announcent bar text",
+        "default": "#000000"
+      }
+    ]
+  },
+  {
+    "name": "Typography",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Headings"
+      },
+      {
+        "type": "font_picker",
+        "id": "heading_font_family",
+        "label": "Font",
+        "default": "sans-serif"
+      },
+      {
+        "type": "header",
+        "content": "Body Text"
+      },
+      {
+        "type": "font_picker",
+        "id": "body_font_family",
+        "label": "Font",
+        "default": "sans-serif"
+      }
+    ]
+  },
+  {
+    "name": "Social Media",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Accounts"
+      },
+      {
+        "type": "text",
+        "id": "social_facebook_url",
+        "label": "Facebook",
+        "info": "facebook url"
+      },
+      {
+        "type": "text",
+        "id": "social_twitter_url",
+        "label": "Twitter",
+        "info": "Twitter url"
+      },
+      {
+        "type": "text",
+        "id": "social_instagram_url",
+        "label": "Instagram",
+        "info": "Instagram url"
+      },
+      {
+        "type": "text",
+        "id": "social_pinterest_url",
+        "label": "Pinterest",
+        "info": "Pinterest url"
+      }
+    ]
+  },
+  {
+    "name": "Extras",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_currency",
+        "label": "Show Currency Selector",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "show_language",
+        "label": "Show Language Selector",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "show_socials",
+        "label": "Show Social Icons",
+        "default": false
+      }
+    ]
+  }
 ]
