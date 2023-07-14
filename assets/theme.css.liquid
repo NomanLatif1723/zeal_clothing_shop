@@ -1,7 +1,28 @@
 @charset "UTF-8";
 
+/* reset  */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --colorAnnouncement ={{ settings.announcement_bg_color | default: "000000" }};
   --colorAnnouncementText ={{ settings.announcement_text_color | default: "000000" }};
 
+}
+.page__width {
+  padding: 0 17px;
+}
+.announcement__bar {
+  background: var(--colorAnnouncement);
+  color: var(--colorAnnouncementText);
+}
+@media only screens and (min-width:769px) {
+  .page__width {
+    max-width: 1420px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
 }
