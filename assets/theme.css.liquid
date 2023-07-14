@@ -20,11 +20,11 @@
   margin: 0 auto;
   padding: 0 17px;
 }
-/* @media only screen and (min-width: 769px) {
+@media only screen and (min-width: 769px) {
   .page__width {
     padding: 0 40px;
   }
-} */
+}
 /* Announcement Bar  */
 .announcement__bar {
   background: var(--colorAnnouncement);
@@ -46,13 +46,11 @@
   color: #EDC128;
   font-weight: bold;
 }
-@media(max-width: 768px) {
+.main__text {
+  display: none;
+}
+@media only screen and (min-width: 769px) {
   .main__text {
-    display: none;
+    display: block;
   }
 }
-/* @media(max-width: 768px) {
-  .main__text {
-    display: none;
-  }
-} */
