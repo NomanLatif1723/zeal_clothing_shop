@@ -3,7 +3,15 @@
     <div class="announcement__wrapper">
       <div class="social__container"></div>
       <div class="main__announcement-banner">
-        <h1>Announcement bar</h1>
+        {% if section.settings.heading_text != blank %}
+          <div class="main__heading">{{ section.settings.heading_text }}</div>
+        {% endif %}
+        {% if section.settings.announcement_timer != blank %}
+          <div class="main__timer">{{ section.settings.announcement_timer }}</div>
+        {% endif %}
+        {% if section.settings.announcement_text != blank %}
+          <div class="main__text">{{ section.settings.announcement_text }}</div>
+        {% endif %}
       </div>
       <div class="language__currency-container"></div>
     </div>
