@@ -1,4 +1,4 @@
-const startTime = 90;
+const startTime = 1;
 let time = startTime * 60 ;
 const timerEl = document.querySelector('.main__timer');
 
