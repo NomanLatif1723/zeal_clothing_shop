@@ -1,12 +1,9 @@
 {
   "sections": {
     "main": {
-      "type": "announcement",
+      "type": "header-group",
       "settings": {
-        "heading_text": "SUMMER SALES ENDS IN",
-        "show_timer": false,
-        "announcement_timer": "<p>08:17:45<\/p>",
-        "announcement_text": "<p>USE CODE SUMMERSALE<\/p>"
+        
       }
     }
   },
