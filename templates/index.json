@@ -1,12 +1,16 @@
 {
-    "sections": {
-      "main": {
-        "type": "announcement",
-        "settings": {
-        }
+  "sections": {
+    "main": {
+      "type": "announcement",
+      "settings": {
+        "heading_text": "SUMMER SALES ENDS IN",
+        "show_timer": false,
+        "announcement_timer": "<p>08:17:45<\/p>",
+        "announcement_text": "<p>USE CODE SUMMERSALE<\/p>"
       }
-    },
-    "order": [
-      "main"
-    ]
+    }
+  },
+  "order": [
+    "main"
+  ]
 }
