@@ -23,6 +23,10 @@
 
   </head>
   <body>
-    {{ content_for_layout }}
+    {% sections 'header-group' %}
+    <main class="main__container">
+      {{ content_for_layout }}
+    </main>
+
   </body>
 </html>
