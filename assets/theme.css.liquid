@@ -23,6 +23,7 @@ a {
 h2 {
   font-size: 18px;
   line-height: 30px;
+  margin: 0;
 }
 
 input,
@@ -56,16 +57,11 @@ textarea {
 
 
 :root {
-  --colorAnnouncement: {{ settings.announcement_bg_color }}
-  ;
-  --colorAnnouncementText: {{ settings.announcement_text_color }}
-  ;
-  --colorButton: {{ settings.color_button }}
-  ;
-  --colorButtonText: {{ settings.color_button_text }}
-  ;
-  --colorOutlineButton: {{ settings.color_outline_button }}
-  ;
+  --colorAnnouncement: {{ settings.announcement_bg_color }};
+  --colorAnnouncementText: {{ settings.announcement_text_color }};
+  --colorButton: {{ settings.color_button }};
+  --colorButtonText: {{ settings.color_button_text }};
+  --colorOutlineButton: {{ settings.color_outline_button }};
 }
 
 .page__width {
@@ -223,6 +219,7 @@ textarea {
   margin: 10px 0 15px;
   width: 100%;
   border: none;
+  background: white;
 }
 
 .newsletter__input-group .btn {
