@@ -1,17 +1,20 @@
 {
   "sections": {
-    "main": {
-      "type": "announcement",
-      "disabled": true,
+    "b2c49c1e-4880-4b9e-90e7-0135ddd0a9b9": {
+      "type": "richtext",
       "settings": {
-        "heading_text": "SUMMER SALES ENDS IN",
-        "show_timer": false,
-        "announcement_timer": "<p>08:17:45<\/p>",
-        "announcement_text": "<p>USE CODE SUMMERSALE<\/p>"
+        "text_alignment": "center",
+        "text_sub_heading": "Sub Heading",
+        "text_main_heading": "Heading",
+        "text_description": "",
+        "shop_btn_1": "Button",
+        "button_link_1": "",
+        "shop_btn_2": "Button",
+        "button_link_2": ""
       }
     }
   },
   "order": [
-    "main"
+    "b2c49c1e-4880-4b9e-90e7-0135ddd0a9b9"
   ]
 }
