@@ -1,10 +1,15 @@
 /* @charset "UTF-8"; */
 
 /* resets  */
-* {
+*,:before ,:after ,
+input {
+  box-sizing: border-box;
+}
+
+body,
+html {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
 }
 
 li {
@@ -20,6 +25,14 @@ h2 {
   line-height: 30px;
 }
 
+input,
+select,
+textarea {
+  background-color: inherit;
+  color: inherit;
+  padding: 12px 15px;
+  border: 1px solid black;
+}
 .rte {
   font-size: 14px;
   line-height: 26px;
@@ -192,5 +205,56 @@ h2 {
     align-items: center;
     justify-content: center;
     gap: 20px;
+  }
+}
+
+
+/* newsletter section */
+
+.newsletter__content {
+  text-align: center;
+}
+
+.newsletter__banner {
+  padding: 20px 0;
+}
+
+.newsletter__input-group input {
+  margin: 10px 0 15px;
+  width: 100%;
+  border: none;
+}
+
+.newsletter__input-group .btn {
+  font-size: 14px;
+  line-height: 22px;
+  background: black;
+  color: white;
+  padding: 14px 22px;
+  border: none;
+  cursor: pointer;
+}
+@media only screen and (min-width: 769px) {
+  .newsletter__banner {
+    padding: 30px 0;
+  }
+  .newsletter__input-group input {
+    margin: 0;
+    width: auto;
+  }
+  .newsletter__input-group {
+    display: flex;
+    justify-content: center;
+  }
+  .newsletter__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 920px;
+    margin: 0 auto;
+  }
+
+  .newsletter__block {
+    width: 50%;
   }
 }
