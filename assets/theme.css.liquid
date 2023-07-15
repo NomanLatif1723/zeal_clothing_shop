@@ -25,6 +25,17 @@ h2 {
   line-height: 26px;
 }
 
+.rte p {
+  margin-bottom: 12px;
+}
+
+@media only screen and (max-width: 769px;) {
+  .rte p {
+    margin-bottom: 0;
+    display: inline;
+  }
+}
+
 
 :root {
   --colorAnnouncement: {{ settings.announcement_bg_color }}
@@ -139,12 +150,7 @@ h2 {
   padding-bottom: 8px;
 }
 
-.rich-text__buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
+
 
 a.btn {
   color: white;
@@ -155,6 +161,8 @@ a.btn {
 .rich-text__buttons .rte {
   padding: 14px 22px;
   background: black;
+  margin-bottom: 10px;
+
 }
 
 .text__wrapper {
@@ -164,4 +172,12 @@ a.btn {
 
 .rich-text__text {
   padding: 15px 0 30px;
+}
+@media only screen and (min-width: 769px) {
+  .rich-text__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
 }
