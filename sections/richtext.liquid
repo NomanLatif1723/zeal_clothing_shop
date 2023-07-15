@@ -1,45 +1,51 @@
-<section class="text__banner main__section-{{ section.id }}">
-  <div class="text__container">
-    <div class="page__width">
-      <div class="text__wrapper text__align-{{ section.settings.text_alignment }}">
-        {% if section.settings.text_sub_heading != blank %}
-          <div class="sub__heading">{{ section.settings.text_sub_heading }}</div>
-        {% endif %}
-        {% if section.settings.text_main_heading != blank %}
-          <div class="main__heading rich-text__heading">
-            <h2>{{ section.settings.text_main_heading }}</h2>
-          </div>
-        {% endif %}
-        {% if section.settings.text_description != blank %}
-          <div class="rich-text__text">
-            <div class="rte">
-              {{ section.settings.text_description }}
-            </div>
-          </div>
-        {% endif %}
-        <div class="rich-text__buttons">
-          {% if section.settings.shop_btn_1 != blank %}
-            <div class="rte btn__primary">
-              <a
-                href="{{ section.settings.button_link_1 }}"
-                class="btn"
-                title="{{ section.settings.shop_btn_1 }}">{{ section.settings.shop_btn_1 }}</a>
-            </div>
-          {% endif %}
-          {% if section.settings.shop_btn_2 != blank %}
-
-            <div class="rte btn__primary">
-              <a
-                href="{{ section.settings.button_link_2 }}"
-                class="btn"
-                title="{{ section.settings.shop_btn_2 }}">{{ section.settings.shop_btn_2 }}</a>
-            </div>
-          {% endif %}
+<style>
+  .main__section-{{ section.id }}{
+    padding-top: {{ section.settings.padding_top }}
+    px;
+    padding-bottom: {{ section.settings.padding_bottom }}
+    px;
+  }
+</style>
+<div class="text__container main__section-{{ section.id }}">
+  <div class="page__width">
+    <div class="text__wrapper text__align-{{ section.settings.text_alignment }}">
+      {% if section.settings.text_sub_heading != blank %}
+        <div class="sub__heading">{{ section.settings.text_sub_heading }}</div>
+      {% endif %}
+      {% if section.settings.text_main_heading != blank %}
+        <div class="main__heading rich-text__heading">
+          <h2>{{ section.settings.text_main_heading }}</h2>
         </div>
+      {% endif %}
+      {% if section.settings.text_description != blank %}
+        <div class="rich-text__text">
+          <div class="rte">
+            {{ section.settings.text_description }}
+          </div>
+        </div>
+      {% endif %}
+      <div class="rich-text__buttons">
+        {% if section.settings.shop_btn_1 != blank %}
+          <div class="rte btn__primary">
+            <a
+              href="{{ section.settings.button_link_1 }}"
+              class="btn"
+              title="{{ section.settings.shop_btn_1 }}">{{ section.settings.shop_btn_1 }}</a>
+          </div>
+        {% endif %}
+        {% if section.settings.shop_btn_2 != blank %}
+
+          <div class="rte btn__primary">
+            <a
+              href="{{ section.settings.button_link_2 }}"
+              class="btn"
+              title="{{ section.settings.shop_btn_2 }}">{{ section.settings.shop_btn_2 }}</a>
+          </div>
+        {% endif %}
       </div>
     </div>
   </div>
-</section>
+</div>
 {% schema %}
   {
     "name": "t:sections.richtext.name",
@@ -106,7 +112,30 @@
         "type": "url",
         "id": "button_link_2",
         "label": "Button Link"
+      }, {
+        "type": "header",
+        "content": "Section Spacing"
+      }, {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Top",
+        "default": 16
+      }, {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Bottom",
+        "default": 16
       }
+
+
     ],
     "presets": [
       {
