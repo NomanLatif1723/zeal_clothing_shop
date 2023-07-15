@@ -19,7 +19,7 @@
       "type": "newsletter",
       "settings": {
         "newsletter_heading": "Stay in the loop and subscribe to our newsletter today!",
-        "button_label": "",
+        "button_label": "Join Us",
         "padding_top": 16,
         "padding_bottom": 16
       }
