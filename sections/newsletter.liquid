@@ -15,7 +15,7 @@
 <div class="newsletter__main-wrapper main__section-{{ section.id }}">
   <div class="newsletter__banner">
     <div class="page__width">
-      <div class="newsletter__content">
+      <div class="newsletter__content text__align-{{ section.settings.text_alignment }}">
         <div class="newsletter__block main__heading newsletter__heading">
           <h2>{{ section.settings.newsletter_heading }}</h2>
         </div>
@@ -44,12 +44,29 @@
         "default": "Button"
       },
       {
+        "type": "select",
+        "id": "text_alignment",
+        "label": "Text alignment",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          }, {
+            "value": "center",
+            "label": "Center"
+          }, {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "center"
+      },
+      {
         "type": "color",
         "id": "newsletter_background",
         "label": "Background",
         "default": "#000000"
-      },
-      {
+      }, {
         "type": "color",
         "id": "newsletter_text",
         "label": "Text",

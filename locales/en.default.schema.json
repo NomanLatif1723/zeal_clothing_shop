@@ -15,6 +15,12 @@
       "name": "Newsletter",
       "settings": {
       }
+    },
+    "text-with-icon": {
+      "name": "Text With Icon",
+      "settings": {
+        
+      }
     }
   }
 }
