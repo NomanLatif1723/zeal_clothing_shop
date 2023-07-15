@@ -15,6 +15,17 @@ a {
   text-decoration: none;
 }
 
+h2 {
+  font-size: 26px;
+  line-height: 42px;
+}
+
+.rte {
+  font-size: 14px;
+  line-height: 26px;
+}
+
+
 :root {
   --colorAnnouncement: {{ settings.announcement_bg_color }}
   ;
@@ -106,4 +117,51 @@ a {
     display: block;
     padding: 5px;
   }
+}
+
+/* Richtext section */
+
+.text__align-center {
+  text-align: center;
+}
+
+.text__align-left {
+  text-align: left;
+}
+
+.text__align-right {
+  text-align: right;
+}
+
+.sub__heading {
+  font-size: 14px;
+  line-height: 18px;
+  padding-bottom: 8px;
+}
+
+.rich-text__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+a.btn {
+  color: white;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+}
+
+.rich-text__buttons .rte {
+  padding: 14px 22px;
+  background: black;
+}
+
+.text__wrapper {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.rich-text__text {
+  padding: 15px 0 30px;
 }

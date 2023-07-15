@@ -19,7 +19,7 @@
         {% endif %}
         <div class="rich-text__buttons">
           {% if section.settings.shop_btn_1 != blank %}
-            <div class="rte">
+            <div class="rte btn__primary">
               <a
                 href="{{ section.settings.button_link_1 }}"
                 class="btn"
@@ -28,7 +28,7 @@
           {% endif %}
           {% if section.settings.shop_btn_2 != blank %}
 
-            <div class="rte">
+            <div class="rte btn__primary">
               <a
                 href="{{ section.settings.button_link_2 }}"
                 class="btn"
@@ -43,6 +43,10 @@
 {% schema %}
   {
     "name": "t:sections.richtext.name",
+    "class": "main__section",
+    "disabled_on": {
+      "groups": ["header", "footer"]
+    },
     "settings": [
       {
         "type": "select",

@@ -1,0 +1,26 @@
+{
+    "type": "footer",
+    "name": "Footer",
+    "sections": {
+      "announcement": {
+        "type": "announcement",
+        "settings": {
+          "heading_text": "SUMMER SALES ENDS IN",
+          "show_timer": true,
+          "timer_hours": "2",
+          "timer_minutes": "30",
+          "announcement_text": "<p>USE CODE <strong>SUMMERSALE<\/strong><\/p>"
+        }
+      },
+      "header": {
+        "type": "footer",
+        "settings": {
+        }
+      }
+    },
+    "order": [
+      "announcement",
+      "footer"
+    ]
+  }
+  
