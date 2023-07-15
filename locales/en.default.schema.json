@@ -5,6 +5,11 @@
       "settings": {
         "header_announcement": "Announcement Bar"
       }
+    },
+    "richtext": {
+      "name": "Rich Text",
+      "settings": {
+      }
     }
   }
 }

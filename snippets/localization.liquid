@@ -1,1 +1,11 @@
-{% form 'localization' %}{% endform %}
+{% comment %} to be continued............  {% endcomment %}
+<div class="locale__currency-wrapper">
+  {% form 'localization' %}
+    {% if locale_selector %}
+      <div class="locale__wrapper"></div>
+    {% endif %}
+    {% if currency_selector %}
+      <div class="currency__wrapper"></div>
+    {% endif %}
+  {% endform %}
+</div>
