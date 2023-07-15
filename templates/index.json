@@ -18,8 +18,8 @@
     "92018c5b-7aa4-4095-92a7-00221b583a17": {
       "type": "newsletter",
       "settings": {
-        "newsletter_heading": "Heading",
-        "button_label": "Button",
+        "newsletter_heading": "Stay in the loop and subscribe to our newsletter today!",
+        "button_label": "",
         "padding_top": 16,
         "padding_bottom": 16
       }
