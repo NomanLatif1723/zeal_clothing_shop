@@ -10,7 +10,9 @@
         "shop_btn_1": "SHOP MEN",
         "button_link_1": "",
         "shop_btn_2": "SHOP WOMEN",
-        "button_link_2": ""
+        "button_link_2": "",
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     }
   },
