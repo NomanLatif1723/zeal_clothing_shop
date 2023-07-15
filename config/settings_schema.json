@@ -12,18 +12,40 @@
     "settings": [
       {
         "type": "header",
+        "content": "Buttons"
+      },
+      {
+        "type": "color",
+        "id": "color_button",
+        "label": "Background",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "color_button_text",
+        "label": "Text",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "color_outline_button",
+        "label": "Outline Buttons",
+        "default": "#000000"
+      },
+      {
+        "type": "header",
         "content": "Header"
       },
       {
         "type": "color",
         "id": "announcement_bg_color",
-        "label": "Announcent bar bg",
+        "label": "Announcement Background",
         "default": "#000000"
       },
       {
         "type": "color",
         "id": "announcement_text_color",
-        "label": "Announcent bar text",
+        "label": "Announcement Text",
         "default": "#000000"
       }
     ]
