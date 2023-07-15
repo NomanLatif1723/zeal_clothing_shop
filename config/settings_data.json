@@ -1,5 +1,7 @@
 {
   "current": {
+    "color_button": "#111111",
+    "color_button_text": "#ffffff",
     "announcement_bg_color": "#111111",
     "announcement_text_color": "#ffffff",
     "social_facebook_url": "instagram.com",
