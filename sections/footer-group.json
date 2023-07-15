@@ -1,26 +1,25 @@
 {
-    "type": "footer",
-    "name": "Footer",
-    "sections": {
-      "announcement": {
-        "type": "announcement",
-        "settings": {
-          "heading_text": "SUMMER SALES ENDS IN",
-          "show_timer": true,
-          "timer_hours": "2",
-          "timer_minutes": "30",
-          "announcement_text": "<p>USE CODE <strong>SUMMERSALE<\/strong><\/p>"
-        }
-      },
-      "footer": {
-        "type": "footer",
-        "settings": {
-        }
+  "type": "footer",
+  "name": "Footer",
+  "sections": {
+    "announcement": {
+      "type": "announcement",
+      "settings": {
+        "heading_text": "SUMMER SALES ENDS IN",
+        "show_timer": true,
+        "timer_hours": "2",
+        "timer_minutes": "30",
+        "announcement_text": "<p>USE CODE <strong>SUMMERSALE<\/strong><\/p>"
       }
     },
-    "order": [
-      "announcement",
-      "footer"
-    ]
-  }
-  
+    "footer": {
+      "type": "footer",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "announcement",
+    "footer"
+  ]
+}
