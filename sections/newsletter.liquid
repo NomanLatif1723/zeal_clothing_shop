@@ -3,6 +3,10 @@
     padding-top: {{ section.settings.padding_top }}px;
     padding-bottom: {{ section.settings.padding_bottom }}px;
   }
+  .newsletter__banner {
+    background: {{ section.settings.newsletter_background }};
+    color: {{ section.settings.newsletter_text }};
+  }
 </style>
 <div class="newsletter__main-wrapper main__section-{{ section.id }}">
   <div class="newsletter__banner">
@@ -36,10 +40,20 @@
         "default": "Button"
       },
       {
-        "type": "header",
-        "content": "Section Spacing"
+        "type": "color",
+        "id": "newsletter_background",
+        "label": "Background",
+        "default": "#000000"
       },
       {
+        "type": "color",
+        "id": "newsletter_text",
+        "label": "Text",
+        "default": "#000000"
+      }, {
+        "type": "header",
+        "content": "Section Spacing"
+      }, {
         "type": "range",
         "id": "padding_top",
         "min": 0,

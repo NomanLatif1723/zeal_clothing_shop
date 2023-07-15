@@ -26,9 +26,10 @@
 
   </head>
   <body>
+    <a class="skip__to-content visually__hidden" href="#MainContent">Skip to Content</a>
     {% sections 'header-group' %}
-    
-    <main class="main__container">
+
+    <main class="main__content" id="MainContent">
       {{ content_for_layout }}
     </main>
 
