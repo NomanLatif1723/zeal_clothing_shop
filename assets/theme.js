@@ -1,3 +1,4 @@
+// announcement timer 
 const timerEl = document.querySelector('.main__timer');
 
 if(timerEl){
@@ -33,3 +34,11 @@ if(timerEl){
     }
     startTimer(hours, minutes);
 }
+
+//  Brands slider for mobile devices
+var swiper = new Swiper(".brands__slider", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
