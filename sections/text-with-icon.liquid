@@ -11,7 +11,7 @@
         <div class="image__banner">
           {% if block.settings.brand_logo != blank %}
             {% assign logo__classes = 'brand__logo-img logo__image-{{ forloop.index }}' %}
-            {% render 'image-element', image-element: block.settings.brand_logo, img-width: 40, classes: logo__classes %}
+            {% render 'image-element', img-element: block.settings.brand_logo, img-width: 40, classes: logo__classes %}
           {% else %}
             {{ 'image' | placeholder_svg_tag: "placeholder__Image icon__placeholder" }}
           {% endif %}

@@ -1,5 +1,7 @@
 {%-  liquid 
-    assign alt = alt | escape
+    assign class = classes | escape
+    assign image_element = img-element
+    assign alt = img-element.alt | escape 
 
 -%}
 
@@ -7,6 +9,6 @@
   loading="lazy"
   width=img-width
   height=""
-  src="{{ image-element | image_url: width: image-width }}"
+  src="{{ image_element | img_url: img-width }}"
   srcset=""
-  alt="{{ alt }}">
+  alt=alt>
