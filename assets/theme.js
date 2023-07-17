@@ -50,7 +50,7 @@ if(mobileMedia.matches) {
         slideWrapper.classList.add('swiper-wrapper');
     }
     if(slideItem){
-        slideItem.classList.add('.swiper-slide');
+        slideItem.classList.add('swiper-slide');
     }
 
     var swiper = new Swiper(".brands__slider", {
