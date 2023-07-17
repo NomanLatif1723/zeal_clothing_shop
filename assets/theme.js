@@ -43,7 +43,8 @@ const slideItem = document.querySelector('.text__image-item');
 
 if(mobileMedia.matches) {
     if(mainContainer){
-        mainContainer.classList.add('swiper brands__slider');
+        mainContainer.classList.add('swiper');
+        mainContainer.classList.add('brands__slider');
     }
     if(slideWrapper){
         slideWrapper.classList.add('swiper-wrapper');
