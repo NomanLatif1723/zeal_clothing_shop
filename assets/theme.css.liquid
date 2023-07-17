@@ -74,7 +74,11 @@ textarea {
     display: inline;
   }
 }
-
+@font-face {
+  font-family: 'Monda-Regular';
+  font-display: swap;
+  src: url("{{ 'Monda-Regular' | asset_url }}") format('woff2');
+}
 
 :root {
   --colorAnnouncement: {{ settings.announcement_bg_color }}
@@ -87,8 +91,12 @@ textarea {
   ;
   --colorOutlineButton: {{ settings.color_outline_button }}
   ;
+  --bodyTextFont: 'Monda-Regular';
 }
 
+body {
+  font-family: var(--bodyTextFont) !important;
+}
 .page__width {
   max-width: 1420px;
   margin: 0 auto;
