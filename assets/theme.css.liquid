@@ -317,6 +317,10 @@ textarea {
   display: inline-block;
 }
 
+.text__container-desktop {
+  display: none;
+}
+
 @media only screen and (min-width: 769px) {
   .text__image-wrapper {
     display: flex;
@@ -326,5 +330,11 @@ textarea {
     width: 33.33%;
     border: 1px solid rgba(1, 1, 1, 0.1);
     border-top: none;
+  }
+  .text__container-desktop {
+    display: block;
+  }
+  .text__container-mobile {
+    display: none;
   }
 }

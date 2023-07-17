@@ -36,37 +36,12 @@ if(timerEl){
 }
 
 //  Brands slider for mobile devices
-const mobileMedia = window.matchMedia("(max-width:768px)");
-// const mainContainer = document.querySelector('.text__image-container');
-// const slideWrapper = document.querySelector('.text__image-wrapper');
-// const slideItem = document.querySelector('.text__image-item');
-
-if(mobileMedia.matches) {
-    // if(mainContainer){
-        // mainContainer.classList.add('swiper');
-        // mainContainer.classList.add('brands__slider');
-    // }
-    // if(slideWrapper){
-        // slideWrapper.classList.add('swiper-wrapper');
-    // }
-    // if(slideItem){
-        // slideItem.classList.add('swiper-slide');
-    // }
-
-    // const nextBtn = document.createElement('div');
-    // nextBtn.className = 'swiper-button-next';
-
-    // const previousBtn = document.createElement('div');
-    // previousBtn.className = 'swiper-button-prev';
-
-    // slideWrapper.appendChild(nextBtn);
-    // slideWrapper.appendChild(previousBtn);
-
-
+// const mobileMedia = window.matchMedia("(max-width:768px)");
+// if(mobileMedia.matches) {
     var swiper = new Swiper(".brands__slider", {
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
       });
-}
+// }
