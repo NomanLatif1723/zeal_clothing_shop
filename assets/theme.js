@@ -37,8 +37,22 @@ if(timerEl){
 
 //  Brands slider for mobile devices
 const mobileMedia = window.matchMedia("(max-width:768px)");
+const mainContainer = document.querySelector('.text__image-container');
+const slideWrapper = document.querySelector('.text__image-wrapper');
+const slideItem = document.querySelector('.text__image-item');
+
 if(mobileMedia.matches) {
-    var swiper = new Swiper(".brands__slider", {
+    if(mainContainer){
+        mainContainer.classList.add('swiper brands__slider');
+    }
+    if(slideWrapper){
+        slideWrapper.classList.add('swiper-wrapper');
+    }
+    if(slideItem){
+        slideItem.classList.add('.swiper-slide');
+    }
+
+    const swiper = new Swiper(".brands__slider", {
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
