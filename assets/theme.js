@@ -36,9 +36,12 @@ if(timerEl){
 }
 
 //  Brands slider for mobile devices
-var swiper = new Swiper(".brands__slider", {
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
+const mobileMedia = window.matchMedia("(max-width:768px)");
+if(mobileMedia.matches) {
+    var swiper = new Swiper(".brands__slider", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+}
