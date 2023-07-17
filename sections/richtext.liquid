@@ -1,9 +1,7 @@
 <style>
   .main__section-{{ section.id }}{
-    padding-top: {{ section.settings.padding_top }}
-    px;
-    padding-bottom: {{ section.settings.padding_bottom }}
-    px;
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
   }
 </style>
 <div class="text__container main__section-{{ section.id }}">
@@ -26,19 +24,19 @@
       {% endif %}
       <div class="rich-text__buttons">
         {% if section.settings.shop_btn_1 != blank %}
-          <div class="rte btn__primary">
+          <div class="btn btn__primary">
             <a
               href="{{ section.settings.button_link_1 }}"
-              class="btn"
+              class="btn__link"
               title="{{ section.settings.shop_btn_1 }}">{{ section.settings.shop_btn_1 }}</a>
           </div>
         {% endif %}
         {% if section.settings.shop_btn_2 != blank %}
 
-          <div class="rte btn__primary">
+          <div class="btn btn__primary">
             <a
               href="{{ section.settings.button_link_2 }}"
-              class="btn"
+              class="btn__link"
               title="{{ section.settings.shop_btn_2 }}">{{ section.settings.shop_btn_2 }}</a>
           </div>
         {% endif %}
