@@ -77,11 +77,16 @@ textarea {
 
 
 :root {
-  --colorAnnouncement: {{ settings.announcement_bg_color }};
-  --colorAnnouncementText: {{ settings.announcement_text_color }};
-  --colorButton: {{ settings.color_button }};
-  --colorButtonText: {{ settings.color_button_text }};
-  --colorOutlineButton: {{ settings.color_outline_button }};
+  --colorAnnouncement: {{ settings.announcement_bg_color }}
+  ;
+  --colorAnnouncementText: {{ settings.announcement_text_color }}
+  ;
+  --colorButton: {{ settings.color_button }}
+  ;
+  --colorButtonText: {{ settings.color_button_text }}
+  ;
+  --colorOutlineButton: {{ settings.color_outline_button }}
+  ;
 }
 
 .page__width {
@@ -335,6 +340,6 @@ textarea {
     display: block;
   }
   .text__container-mobile {
-    display: none;
+    display: none !important;
   }
 }
