@@ -2,8 +2,11 @@
     assign alt = alt | escape
 
 -%}
-{{
-   img | image_url: width: img-width
- | image_tag: preload: preload,
- class: classes,
- alt: alt }}
+
+<img
+  loading="lazy"
+  width=img-width
+  height=""
+  src="{{ image-element | image_url: width: image-width }}"
+  srcset=""
+  alt="{{ alt }}">
