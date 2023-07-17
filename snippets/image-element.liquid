@@ -4,12 +4,13 @@
     assign alt = img-element.alt | escape 
 
 -%}
-
-<img
-  loading="lazy"
-  width=img-width
-  height=""
-  class=class
-  src="{{ image_element | img_url: img-width }}"
-  srcset=""
-  alt=alt>
+{{
+   'image_element' | image_url: width: img-width, class: class, alt: alt }}
+{% comment %} <img
+loading="lazy"
+width=img-width
+height=""
+class=class
+src="{{ image_element | img_url: img-width }}"
+srcset=""
+alt=alt> {% endcomment %}
