@@ -1,9 +1,29 @@
 <div class="text__image-container main__section-{{ section.id }}">
   <div class="text__image-wrapper">
-    <div class="image__banner"></div>
-    <div class="main__heading">
-      <h2></h2>
-    </div>
+    {% for block in section.blocks %}
+      <div class="text__image-item">
+        <div class="image__banner">
+          {% if block.settings.brand_logo != blank %}
+            {% assign logo__classes = 'brand__logo-img logo__image-{{ forloop.index }}' %}
+            {% render 'image-element', image-element: block.settings.brand_logo, img-width: 40, classes: logo__classes %}
+          {% else %}
+            {{ 'image' | placeholder_svg_tag: "placeholder__Image icon__placeholder" }}
+          {% endif %}
+        </div>
+        {% if block.settings.brand_heading != blank %}
+          <div class="main__heading text__image-heading">
+            <h2>{{ block.settings.brand_heading }}</h2>
+          </div>
+        {% endif %}
+        {% if block.settings.brand_text != blank %}
+          <div class="text__image-text">
+            <div class="rte">
+              {{ block.settings.brand_text }}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    {% endfor %}
   </div>
 </div>
 {% schema %}

@@ -1,0 +1,16 @@
+{%-  liquid 
+    assign alt = alt | escape
+
+-%}
+
+{% comment %} <img
+loading="lazy"
+width="image_width"
+height=""
+src="{{ image | image_url: width: image-width }}"
+srcset=""
+alt="{{ alt }}"> {% endcomment %}{{
+   img | image_url: width: img-width
+ | image_tag: preload: preload,
+ class: classes,
+ alt: alt }}
