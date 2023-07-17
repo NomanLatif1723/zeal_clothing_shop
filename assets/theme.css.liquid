@@ -288,7 +288,7 @@ textarea {
 }
 
 .text__image-item {
-  padding: 50px 0;
+  padding: 30px 50px;
 }
 
 .placeholder__Image {
@@ -310,6 +310,7 @@ textarea {
 .text__image-item:nth-child(2) {
   border-left: none;
   border-right: none;
+  width: 30%;
 }
 
 .text__image-heading {
@@ -326,13 +327,21 @@ textarea {
   display: none;
 }
 
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  color: #808183;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 @media only screen and (min-width: 769px) {
   .text__image-wrapper {
     display: flex;
     justify-content: center;
   }
   .text__image-item {
-    width: 33.33%;
+    width: 35%;
+    padding: 50px 30px;
     border: 1px solid rgba(1, 1, 1, 0.1);
     border-top: none;
   }
