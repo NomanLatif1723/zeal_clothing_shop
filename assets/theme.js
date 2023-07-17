@@ -53,7 +53,7 @@ if(mobileMedia.matches) {
         slideItem.classList.add('.swiper-slide');
     }
 
-    const swiper = new Swiper(".brands__slider", {
+    var swiper = new Swiper(".brands__slider", {
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
