@@ -33,22 +33,25 @@
         "template--19980215124290__d534c664-a5a4-4f55-b829-6446be3b3cdb-1689579269d14e5d4e-0": {
           "type": "slide",
           "settings": {
-            "brand_heading": "Heading",
-            "brand_text": "Welcome To Our Store"
+            "brand_logo": "shopify:\/\/shop_images\/delivery-fast_1.svg",
+            "brand_heading": "Free Standard Delivery",
+            "brand_text": "Get your loose-wearing clothing delivered for Free, wherever you are."
           }
         },
         "template--19980215124290__d534c664-a5a4-4f55-b829-6446be3b3cdb-1689579269d14e5d4e-1": {
           "type": "slide",
           "settings": {
-            "brand_heading": "Heading",
-            "brand_text": "Welcome To Our Store"
+            "brand_logo": "shopify:\/\/shop_images\/Vector.svg",
+            "brand_heading": "Free In store Returns",
+            "brand_text": "Shop with confidence knowing that returns are always free and easy."
           }
         },
         "template--19980215124290__d534c664-a5a4-4f55-b829-6446be3b3cdb-1689579269d14e5d4e-2": {
           "type": "slide",
           "settings": {
-            "brand_heading": "Heading",
-            "brand_text": "Welcome To Our Store"
+            "brand_logo": "shopify:\/\/shop_images\/security_1.svg",
+            "brand_heading": "100% Secure Checkout",
+            "brand_text": "Shop with peace of mind knowing that your information is safe and secure."
           }
         }
       },
@@ -58,8 +61,8 @@
         "template--19980215124290__d534c664-a5a4-4f55-b829-6446be3b3cdb-1689579269d14e5d4e-2"
       ],
       "settings": {
-        "padding_top": 16,
-        "padding_bottom": 16
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
