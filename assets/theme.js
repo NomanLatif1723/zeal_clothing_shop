@@ -59,7 +59,9 @@ if(mobileMedia.matches) {
     const previousBtn = document.createElement('div');
     previousBtn.className = 'swiper-button-prev';
 
-    slideWrapper.appendChild(nextBtn,previousBtn);
+    slideWrapper.appendChild(nextBtn);
+    slideWrapper.appendChild(previousBtn);
+
 
     var swiper = new Swiper(".brands__slider", {
         navigation: {
