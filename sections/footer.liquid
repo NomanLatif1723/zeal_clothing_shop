@@ -13,7 +13,7 @@
               }
               @media only screen and (min-width:960px) {
                 .grid__item-{{ block.id }}{
-                  width: {{ block.settings.footer_column_width }};
+                  width: {{ block.settings.footer_column_width }}%;
                 }
               }
             {% endstyle %}
@@ -112,7 +112,7 @@
   {
     "name": "t:sections.footer.name",
     "class": "shopify__footer-group",
-    "max_blocks": 4,
+    "max_blocks": 5,
     "settings": [
       {
         "type": "checkbox",
@@ -223,6 +223,25 @@
             "default": 25,
             "step": 1,
             "unit": "%"
+          }
+        ]
+      }, {
+        "type": "address_bar",
+        "name": "t:sections.footer.blocks.address_bar.name",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "footer_address_field",
+            "label": "t:sections.footer.blocks.address_bar.settings.footer_address.label"
+          }, {
+            "type": "richtext",
+            "id": "footer_phone_field",
+            "label": "t:sections.footer.blocks.address_bar.settings.footer_phone_no.label"
+          }, {
+            "type": "richtext",
+            "id": "footer_schedule_field",
+            "label": "t:sections.footer.blocks.address_bar.settings.footer_schedule.label"
           }
         ]
       }

@@ -102,6 +102,20 @@
             }
           }
 
+        },
+        "address_bar": {
+          "name": "AddressBar",
+          "settings": {
+            "footer_address": {
+              "label": "Address"
+            },
+            "footer_phone_no": {
+              "label": "Phone No"
+            },
+            "footer_schedule": {
+              "label": "Schedule"
+            }
+          }
         }
       }
     }
@@ -126,6 +140,9 @@
         },
         "color_button_outline": {
           "label": "Outline Buttons"
+        },
+        "border_color": {
+          "label": "Border"
         },
         "header_header": "Header",
         "color_announcement_background": {

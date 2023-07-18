@@ -27,6 +27,12 @@
         "default": "#111111"
       },
       {
+        "type": "color",
+        "id": "border_color",
+        "label": "t:schema_settings.colors.settings.border_color.label",
+        "default": "#111111"
+      },
+      {
         "type": "header",
         "content": "t:schema_settings.colors.settings.header_buttons"
       },
