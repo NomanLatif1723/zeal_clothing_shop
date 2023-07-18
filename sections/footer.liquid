@@ -105,8 +105,8 @@
   <div class="footer__bottom-section">
     <div class="page__width">
       <div class="footer__address-bar">
-        {% for block in section.blocks %}
-          <div class="rte address__bar-wrapper">
+        <div class="rte address__bar-wrapper">
+          {% for block in section.blocks %}
             {% if block.settings.footer_address_field != blank %}
               <div class="block__item footer__address-container">
                 <div class="icon icon__address">{% render 'icon-map' %}</div>
@@ -125,8 +125,8 @@
                 <div class="bar-text__content">{{ block.settings.footer_schedule_field }}</div>
               </div>
             {% endif %}
-          </div>
-        {% endfor %}
+          {% endfor %}
+        </div>
       </div>
       <div class="footer__copyright-bar">
         {%- if section.settings.show_copyright -%}
