@@ -25,7 +25,6 @@
     "text-with-icon": {
       "name": "Text With Icon",
       "settings": {
-        
       }
     },
     "footer": {
@@ -40,26 +39,24 @@
         "show_payment_icons": {
           "label": "Show Payment Icons"
         }
-
       },
       "blocks": {
-        "menu" : {
-            "name": "Menu",
-            "settings": {
-              "menu_heading":{
-                "label": "Heading"
-              },
-              "show_footer_heading": {
-                "label": "Show Heading"
-              },
-              "footer_menu_label": {
-                "label": "Menu"
-              },
-              "footer_column_width": {
-                "label": "Column Width"
-              }
-
+        "menu": {
+          "name": "Menu",
+          "settings": {
+            "menu_heading": {
+              "label": "Heading"
+            },
+            "show_footer_heading": {
+              "label": "Show Heading"
+            },
+            "footer_menu_label": {
+              "label": "Menu"
+            },
+            "footer_column_width": {
+              "label": "Column Width"
             }
+          }
         },
         "newsletter": {
           "name": "Newsletter",
@@ -83,7 +80,6 @@
               "label": "Column Width"
             }
           }
-
         },
         "text": {
           "name": "Text",
@@ -101,7 +97,6 @@
               "label": "Column Width"
             }
           }
-
         },
         "address_bar": {
           "name": "AddressBar",
@@ -133,7 +128,7 @@
         },
         "header_buttons": "Buttons",
         "color_button_background": {
-            "label": "Background"
+          "label": "Background"
         },
         "color_button_text": {
           "label": "Text"
