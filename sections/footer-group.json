@@ -11,20 +11,20 @@
             "footer_text": "Welcome To Our Shop"
           }
         },
-        "5d99372f-dc59-4aa6-84ec-93899e625e4a": {
-          "type": "menu",
-          "settings": {
-            "menu_heading": "",
-            "show_heading": true,
-            "footer_menu": "footer"
-          }
-        },
         "b3f79816-ea38-49f1-9a7e-07c5ed58bae5": {
           "type": "menu",
           "settings": {
             "menu_heading": "",
             "show_heading": true,
-            "footer_menu": "footer"
+            "footer_menu": "featured"
+          }
+        },
+        "5d99372f-dc59-4aa6-84ec-93899e625e4a": {
+          "type": "menu",
+          "settings": {
+            "menu_heading": "",
+            "show_heading": true,
+            "footer_menu": "support"
           }
         },
         "93e2642f-15d4-4de3-9b9d-d2ac39f95be8": {
@@ -39,8 +39,8 @@
       },
       "block_order": [
         "feb96f67-67b9-4b8c-a080-160b3fbc3380",
-        "5d99372f-dc59-4aa6-84ec-93899e625e4a",
         "b3f79816-ea38-49f1-9a7e-07c5ed58bae5",
+        "5d99372f-dc59-4aa6-84ec-93899e625e4a",
         "93e2642f-15d4-4de3-9b9d-d2ac39f95be8"
       ],
       "settings": {
