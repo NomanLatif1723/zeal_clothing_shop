@@ -44,9 +44,9 @@
         "93e2642f-15d4-4de3-9b9d-d2ac39f95be8"
       ],
       "settings": {
-        "show_copyright": false,
-        "footer_copyright_text": "",
-        "show_payment_icons": false
+        "show_copyright": true,
+        "footer_copyright_text": "All rights reserved",
+        "show_payment_icons": true
       }
     }
   },
