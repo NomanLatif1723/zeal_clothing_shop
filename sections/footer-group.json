@@ -8,6 +8,7 @@
         "feb96f67-67b9-4b8c-a080-160b3fbc3380": {
           "type": "text",
           "settings": {
+            "footer_logo": "shopify:\/\/shop_images\/Group_172.png",
             "footer_text": "Looking for a comfy and stylish clothing? This is 100% perfect for you! With a relaxed fit, our clothing is ideal for everyday wear.",
             "footer_column_width": 30
           }
