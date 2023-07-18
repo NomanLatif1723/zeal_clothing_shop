@@ -38,7 +38,7 @@
             </div>
           </div>
           {%- when 'menu' -%}
-          <div class="site__grid-item site__grid-menu">
+          <div class="site__grid-item site__grid-menu grid__item-{{ block.id }}">
             <div class="site__item-block">
               {%- if block.settings.show_heading -%}
                 {%- if block.settings.menu_heading != blank -%}
@@ -57,7 +57,7 @@
             </div>
           </div>
           {%- when 'newsletter' -%}
-          <div class="site__grid-item site__grid-newsletter">
+          <div class="site__grid-item site__grid-newsletter grid__item-{{ block.id }}">
             <div class="site__item-block">
               {%- if block.settings.show_newsletter_heading -%}
                 <div class="footer__newsletter-heading">
@@ -88,7 +88,21 @@
   </div>
   <div class="footer__bottom-section">
     <div class="page__width">
-      <div class="footer__address-bar"></div>
+      <div class="footer__address-bar">
+        <div class="rte address__bar-wrapper">
+          {% for block in section.blocks %}
+            <div class="footer__address-container">
+              {{ block.settings.footer_address_field }}
+            </div>
+            <div class="footer__phoneno-container">
+              {{ block.settings.footer_phone_field }}
+            </div>
+            <div class="footer__schedule-container">
+              {{ block.settings.footer_schedule_field }}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
       <div class="footer__copyright-bar">
         {%- if section.settings.show_copyright -%}
           <div class="copyright__text">
