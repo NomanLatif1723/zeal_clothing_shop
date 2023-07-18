@@ -14,21 +14,21 @@
   <div class="page__width">
     <div class="site__grid">
       {%- for block in section.blocks -%}
+        {% style %}
+          @media only screen and (min-width:769px) and(max-width: 959px) {
+            .grid__item-{{ block.id }}{
+              width: 50%;
+            }
+          }
+          @media only screen and (min-width:960px) {
+            .grid__item-{{ block.id }}{
+              width: {{ block.settings.footer_column_width }}%;
+            }
+          }
+        {% endstyle %}
         {%- case block.type -%}
           {%- when 'text' -%}
           <div class="site__grid-item site__grid-text grid__item-{{ block.id }}" {{ block.shopify_attributes }}>
-            {% style %}
-              @media only screen and (min-width:769px) and(max-width: 959px) {
-                .grid__item-{{ block.id }}{
-                  width: 50%;
-                }
-              }
-              @media only screen and (min-width:960px) {
-                .grid__item-{{ block.id }}{
-                  width: {{ block.settings.footer_column_width }}%;
-                }
-              }
-            {% endstyle %}
             <div class="site__item-block">
               <div class="footer__logo-block">
                 {%- if block.settings.footer_logo != blank -%}
