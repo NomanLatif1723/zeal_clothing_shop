@@ -1,76 +1,76 @@
 <footer class="site__footer">
   <div class="page__width">
     <div class="site__grid">
-      {% for block in section.blocks %}
-        {% case block.type %}
-          {% when 'text' %}
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'text' -%}
           <div class="site__grid-item site__grid-text">
             <div class="site__item-block">
               <div class="footer__logo-block">
-                {% if block.settings.footer_logo != blank %}
-                  {% assign footer__logo = 'footer__logo-img' %}
-                  {% render 'image-element', img-element: block.settings.footer_logo, img-width: 80, img-height: 50, classes: footer__logo %}
-                {% else %}
+                {%- if block.settings.footer_logo != blank -%}
+                  {%- assign footer__logo = 'footer__logo-img' -%}
+                  {%- render 'image-element', img-element: block.settings.footer_logo, img-width: 80, img-height: 50, classes: footer__logo -%}
+                {%- else -%}
                   <h1 class="site__footer-logo">
                     <a href="{{ routes.root_url }}">{{ shop.name }}</a>
                   </h1>
-                {% endif %}
+                {%- endif -%}
               </div>
-              {% if block.settings.footer_text != blank %}
+              {%- if block.settings.footer_text != blank -%}
                 <div class="site__text-block">
                   <div class="rte">
                     {{ block.settings.footer_text }}
                   </div>
                 </div>
-              {% endif %}
+              {%- endif -%}
             </div>
           </div>
-          {% when 'menu' %}
+          {%- when 'menu' -%}
           <div class="site__grid-item site__grid-menu">
             <div class="site__item-block">
-              {% if block.settings.show_heading %}
-                {% if block.settings.menu_heading != blank %}
+              {%- if block.settings.show_heading -%}
+                {%- if block.settings.menu_heading != blank -%}
                   <h4>{{ block.settings.menu_heading }}</h4>
-                {% else %}
+                {%- else -%}
                   <h4>{{ linklists[block.settings.footer_menu].title }}</h4>
-                {% endif %}
-              {% endif %}
+                {%- endif -%}
+              {%- endif -%}
               <ul class="site__footer-links">
-                {% for link in linklists[block.settings.footer_menu].links %}
+                {%- for link in linklists[block.settings.footer_menu].links -%}
                   <li>
                     <a href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}</a>
                   </li>
-                {% endfor %}
+                {%- endfor -%}
               </ul>
             </div>
           </div>
-          {% when 'newsletter' %}
+          {%- when 'newsletter' -%}
           <div class="site__grid-item site__grid-newsletter">
             <div class="site__item-block">
-              {% if block.settings.show_newsletter_heading %}
+              {%- if block.settings.show_newsletter_heading -%}
                 <div class="footer__newsletter-heading">
                   <h4>{{ block.settings.newsletter_heading }}</h4>
                 </div>
-              {% endif %}
-              {% if block.settings.newsletter_text != blank %}
+              {%- endif -%}
+              {%- if block.settings.newsletter_text != blank -%}
                 <div class="footer__newsletter-text">
                   <div class="rte">
                     {{ block.settings.newsletter_text }}
                   </div>
                 </div>
-              {% endif %}
-              {% if block.settings.show_socials %}
+              {%- endif -%}
+              {%- if block.settings.show_socials -%}
                 <div class="footer__socials">
                   <div class="social__icons-list">
-                    {% render 'social-icons' %}
+                    {%- render 'social-icons' -%}
                   </div>
                 </div>
-              {% endif %}
+              {%- endif -%}
             </div>
           </div>
 
-        {% endcase %}
-      {% endfor %}
+        {%- endcase -%}
+      {%- endfor -%}
 
     </div>
   </div>
@@ -78,16 +78,20 @@
     <div class="page__width">
       <div class="footer__address-bar"></div>
       <div class="footer__copyright-bar">
-        {% if section.settings.show_copyright and section.settings.footer_copyright_text != blank %}
+        {%- if section.settings.show_copyright -%}
           <div class="copyright__text">
-            {{ section.settings.footer_copyright_text }}
+            @copyright 2023 {{ shop.name }},
+            {%- if section.settings.footer_copyright_text != blank -%}
+              {{ section.settings.footer_copyright_text }}
+            {%- endif -%}
+            Powered By Shopify
           </div>
-        {% endif %}
-        {% if section.settings.show_payment_icons %}
+        {%- endif -%}
+        {%- if section.settings.show_payment_icons -%}
           <div class="payment__icons-list">
-            {% render 'payment-icons' %}
+            {%- render 'payment-icons' -%}
           </div>
-        {% endif %}
+        {%- endif -%}
       </div>
     </div>
   </div>
@@ -101,7 +105,7 @@
       {
         "type": "checkbox",
         "id": "show_copyright",
-        "label": "Show Copyright Text",
+        "label": "Additional Copyright Text",
         "default": false
       }, {
         "type": "text",
