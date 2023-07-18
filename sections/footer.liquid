@@ -103,19 +103,25 @@
       <div class="footer__address-bar">
         {% for block in section.blocks %}
           <div class="rte address__bar-wrapper">
-            <div class="footer__address-container">
-              <div class="icon icon__address">{% render 'icon-map' %}</div>
-              <div class="bar-text__content">{{ block.settings.footer_address_field }}</div>
+            {% if block.settings.footer_address_field != blank %}
+              <div class="footer__address-container">
+                <div class="icon icon__address">{% render 'icon-map' %}</div>
+                <div class="bar-text__content">{{ block.settings.footer_address_field }}</div>
+              </div>
+            {% endif %}
+            {% if block.settings.footer_phone_field != blank %}
+              <div class="footer__phoneno-container">
+                <div class="icon icon__phone">{% render 'icon-phone' %}</div>
+                <div class="bar-text__content">{{ block.settings.footer_phone_field }}</div>
+              </div>
+            {% endif %}
+            {% if block.settings.footer_schedule_field != blank %}
+              <div class="footer__schedule-container">
+                <div class="icon icon__clock">{% render 'icon-clock' %}</div>
+                <div class="bar-text__content">{{ block.settings.footer_schedule_field }}</div>
+              </div>
             </div>
-            <div class="footer__phoneno-container">
-              <div class="icon icon__phone">{% render 'icon-phone' %}</div>
-              <div class="bar-text__content">{{ block.settings.footer_phone_field }}</div>
-            </div>
-            <div class="footer__schedule-container">
-              <div class="icon icon__clock">{% render 'icon-clock' %}</div>
-              <div class="bar-text__content">{{ block.settings.footer_schedule_field }}</div>
-            </div>
-          </div>
+          {% endif %}
         {% endfor %}
       </div>
       <div class="footer__copyright-bar">
