@@ -96,5 +96,102 @@
         }
       }
     }
+  },
+  "schema_settings": {
+    "colors": {
+      "name": "Colors",
+      "settings": {
+        "header_general": "General",
+        "color_body_background": {
+          "label": "Background"
+        },
+        "color_body_text": {
+          "label": "Text"
+        },
+        "header_buttons": "Buttons",
+        "color_button_background": {
+            "label": "Background"
+        },
+        "color_button_text": {
+          "label": "Text"
+        },
+        "color_button_outline": {
+          "label": "Outline Buttons"
+        },
+        "header_header": "Header",
+        "color_announcement_background": {
+          "label": "Announcement Background"
+        },
+        "color_announcement_text": {
+          "label": "Announcement Text"
+        },
+        "header_footer": "Footer",
+        "color_footer_background": {
+          "label": "Background"
+        },
+        "color_footer_text": {
+          "label": "Text"
+        }
+      }
+    },
+    "typography": {
+      "name": "Typography",
+      "settings": {
+        "header_headings": "Headings",
+        "heading_font_family": {
+          "label": "Font"
+        },
+        "header_body_text": "Text",
+        "body_text_font_family": {
+          "label": "Font"
+        }
+      }
+    },
+    "social_media": {
+      "name": "Social Media",
+      "settings": {
+        "header_social_accounts": "Accounts",
+        "social_facebook_link": {
+          "label": "Facebook",
+          "info": "https:\/\/www.facebook.com\/shopify"
+        },
+        "social_pinterest_link": {
+          "label": "Pinterest",
+          "info": "https:\/\/www.pinterest.com\/shopify"
+        },
+        "social_twitter_link": {
+          "label": "Twitter",
+          "info": "https:\/\/twitter.com\/shopify"
+        },
+        "social_instagram_link": {
+          "label": "Instagram",
+          "info": "https:\/\/instagram.com\/shopify"
+        },
+        "social_snapchat_link": {
+          "label": "SnapChat",
+          "info": "https:\/\/www.snapchat.com\/add\/shopify"
+        },
+        "social_tumblr_link": {
+          "label": "Tumblr",
+          "info": "http:\/\/shopify.tumblr.com"
+        },
+        "social_tiktok_link": {
+          "label": "TikTok",
+          "info": "https:\/\/www.tiktok.com\/@shopify"
+        },
+        "social_linkedin_link": {
+          "label": "LinkedIn",
+          "info": "https:\/\/www.linkedin.com\/in\/shopify"
+        },
+        "social_youtube_link": {
+          "label": "Youtube",
+          "info": "https:\/\/www.youtube.com\/user\/shopify"
+        },
+        "social_vimeo_link": {
+          "label": "Vimeo",
+          "info": "https:\/\/vimeo.com\/shopify"
+        }
+      }
+    }
   }
 }
