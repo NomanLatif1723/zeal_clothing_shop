@@ -4,7 +4,49 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "feb96f67-67b9-4b8c-a080-160b3fbc3380": {
+          "type": "text",
+          "settings": {
+            "footer_text": "Welcome To Our Shop"
+          }
+        },
+        "5d99372f-dc59-4aa6-84ec-93899e625e4a": {
+          "type": "menu",
+          "settings": {
+            "menu_heading": "",
+            "show_heading": false,
+            "footer_menu": "footer"
+          }
+        },
+        "b3f79816-ea38-49f1-9a7e-07c5ed58bae5": {
+          "type": "menu",
+          "settings": {
+            "menu_heading": "",
+            "show_heading": false,
+            "footer_menu": "footer"
+          }
+        },
+        "93e2642f-15d4-4de3-9b9d-d2ac39f95be8": {
+          "type": "newsletter",
+          "settings": {
+            "show_newsletter_heading": true,
+            "newsletter_heading": "Newsletter",
+            "newsletter_text": "Join Our Newsletter",
+            "show_socials": false
+          }
+        }
+      },
+      "block_order": [
+        "feb96f67-67b9-4b8c-a080-160b3fbc3380",
+        "5d99372f-dc59-4aa6-84ec-93899e625e4a",
+        "b3f79816-ea38-49f1-9a7e-07c5ed58bae5",
+        "93e2642f-15d4-4de3-9b9d-d2ac39f95be8"
+      ],
       "settings": {
+        "show_copyright": false,
+        "footer_copyright_text": "",
+        "show_payment_icons": false
       }
     }
   },
