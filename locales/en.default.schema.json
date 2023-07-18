@@ -1,5 +1,11 @@
 {
   "sections": {
+    "header-group": {
+      "name": "Header Group"
+    },
+    "footer-group": {
+      "name": "Footer Group"
+    },
     "header": {
       "name": "Header",
       "settings": {
@@ -20,6 +26,74 @@
       "name": "Text With Icon",
       "settings": {
         
+      }
+    },
+    "footer": {
+      "name": "Footer",
+      "settings": {
+        "show_copyright": {
+          "label": "Show copyright"
+        },
+        "fooetr_copyright_text": {
+          "label": "Additional Copyright Text"
+        },
+        "show_payment_icons": {
+          "label": "Show Payment Icons"
+        }
+
+      },
+      "blocks": {
+        "menu" : {
+            "name": "Menu",
+            "settings": {
+              "menu_heading":{
+                "label": "Heading"
+              },
+              "show_footer_heading": {
+                "label": "Show Heading"
+              },
+              "footer_menu_label": {
+                "label": "Menu"
+              }
+
+            }
+        },
+        "newsletter": {
+          "name": "Newsletter",
+          "settings": {
+            "show_newsleter_heading": {
+              "label": "Show Heading"
+            },
+            "newsletter_heading": {
+              "label": "Heading"
+            },
+            "newsletter_text": {
+              "label": "Text"
+            },
+            "newsletter_text_info": {
+              "label": "Join Our Newsletter"
+            },
+            "show_socials": {
+              "label": "Show Socials"
+            }
+          }
+
+        },
+        "text": {
+          "name": "Text",
+          "settings": {
+            "footer_logo": {
+              "label": "Logo"
+            },
+            "footer_text": {
+              "label": "Text"
+            },
+            "footer_text_info": {
+              "label": "Welcome To Our Shop"
+            }
+          }
+
+        }
       }
     }
   }

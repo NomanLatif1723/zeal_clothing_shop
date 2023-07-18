@@ -98,23 +98,23 @@
 </footer>
 {% schema %}
   {
-    "name": "Footer",
+    "name": "t:sections.footer.name",
     "class": "shopify__footer-group",
     "max_blocks": 4,
     "settings": [
       {
         "type": "checkbox",
         "id": "show_copyright",
-        "label": "Additional Copyright Text",
+        "label": "t:sections.footer.settings.show_copyright.label",
         "default": false
       }, {
         "type": "text",
         "id": "footer_copyright_text",
-        "label": "Copyright Text"
+        "label": "t:sections.footer.settings.fooetr_copyright_text.label"
       }, {
         "type": "checkbox",
         "id": "show_payment_icons",
-        "label": "Show Payment Icons",
+        "label": "t:sections.footer.settings.show_payment_icons.label",
         "default": false
       }
 
@@ -122,65 +122,65 @@
     "blocks": [
       {
         "type": "menu",
-        "name": "Menu",
+        "name": "t:sections.footer.blocks.menu.name",
         "settings": [
           {
             "type": "text",
             "id": "menu_heading",
-            "label": "Heading"
+            "label": "t:sections.footer.blocks.menu.settings.menu_heading.label"
           }, {
             "type": "checkbox",
             "id": "show_heading",
-            "label": "Show Heading",
+            "label": "t:sections.footer.blocks.menu.settings.show_footer_heading.label",
             "default": false
           }, {
             "type": "link_list",
             "id": "footer_menu",
-            "label": "Menu",
+            "label": "t:sections.footer.blocks.menu.settings.footer_menu_label.label",
             "default": "footer"
           }
         ]
       }, {
         "type": "newsletter",
-        "name": "Newsletter",
+        "name": "t:sections.footer.blocks.newsletter.name",
         "limit": 1,
         "settings": [
           {
             "type": "checkbox",
             "id": "show_newsletter_heading",
-            "label": "Show Heading",
+            "label": "t:sections.footer.blocks.newsletter.settings.show_newsletter_heading.label",
             "default": true
           }, {
             "type": "text",
             "id": "newsletter_heading",
-            "label": "heading",
+            "label": "t:sections.footer.blocks.newsletter.settings.newsletter_heading.label",
             "default": "Newsletter"
           }, {
             "type": "textarea",
             "id": "newsletter_text",
-            "label": "Text",
-            "default": "Join Our Newsletter"
+            "label": "t:sections.footer.blocks.newsletter.settings.newsletter_text",
+            "default": "t:sections.footer.blocks.newsletter.settings.newsletter_text_info.label"
           }, {
             "type": "checkbox",
             "id": "show_socials",
-            "label": "Show Socials",
+            "label": "t:sections.footer.blocks.newsletter.settings.show_socials.label",
             "default": false
           }
         ]
       }, {
         "type": "text",
-        "name": "Text",
+        "name": "t:sections.footer.blocks.text.name",
         "limit": 1,
         "settings": [
           {
             "type": "image_picker",
             "id": "footer_logo",
-            "label": "Logo"
+            "label": "t:sections.footer.blocks.text.settings.footer_logo.label"
           }, {
             "type": "textarea",
             "id": "footer_text",
-            "label": "Text",
-            "default": "Welcome To Our Shop"
+            "label": "t:sections.footer.blocks.text.settings.footer_text.label",
+            "default": "t:sections.footer.blocks.text.settings.footer_text_info.label"
           }
         ]
       }
