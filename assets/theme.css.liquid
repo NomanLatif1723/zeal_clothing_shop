@@ -99,11 +99,7 @@ textarea {
   font-family: 'Monda-Regular';
   src: url("https://cdn.shopify.com/s/files/1/0794/3716/8962/files/Monda-Regular.woff2?v=1689596069");
 }
-{% assign header_font = settings.body_font_family %}
-{% assign base_font = settings.heading_font_family %}
 
-{{ header_font | font_face: font-display: "swap" }}
-{{ base_font | font_face: font-display: "swap" }}
 :root {
   --colorAnnouncement: {{ settings.announcement_bg_color }};
   --colorAnnouncementText: {{ settings.announcement_text_color }};
