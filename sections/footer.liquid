@@ -103,8 +103,8 @@
     </div>
   </div>
   <div class="footer__bottom-section">
-    <div class="page__width">
-      <div class="footer__address-bar">
+    <div class="footer__address-bar">
+      <div class="page__width">
         <div class="rte address__bar-wrapper">
           {% for block in section.blocks %}
             {% if block.settings.footer_address_field != blank %}
@@ -128,21 +128,25 @@
           {% endfor %}
         </div>
       </div>
-      <div class="footer__copyright-bar">
-        {%- if section.settings.show_copyright -%}
-          <div class="copyright__text">
-            @copyright 2023 {{ shop.name }},
-            {%- if section.settings.footer_copyright_text != blank -%}
-              {{ section.settings.footer_copyright_text }}
-            {%- endif -%}
-            Powered By Shopify
-          </div>
-        {%- endif -%}
-        {%- if section.settings.show_payment_icons -%}
-          <div class="payment__icons-list">
-            {%- render 'payment-icons' -%}
-          </div>
-        {%- endif -%}
+    </div>
+    <div class="footer__copyright-bar">
+      <div class="page__width">
+        <div class="copyright__bar-wrapper">
+          {%- if section.settings.show_copyright -%}
+            <div class="copyright__text">
+              @copyright 2023 {{ shop.name }},
+              {%- if section.settings.footer_copyright_text != blank -%}
+                {{ section.settings.footer_copyright_text }}
+              {%- endif -%}
+              Powered By Shopify
+            </div>
+          {%- endif -%}
+          {%- if section.settings.show_payment_icons -%}
+            <div class="payment__icons-list">
+              {%- render 'payment-icons' -%}
+            </div>
+          {%- endif -%}
+        </div>
       </div>
     </div>
   </div>
