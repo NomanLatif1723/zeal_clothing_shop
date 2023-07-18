@@ -61,7 +61,7 @@
         "newsletter": {
           "name": "Newsletter",
           "settings": {
-            "show_newsleter_heading": {
+            "show_newsletter_heading": {
               "label": "Show Heading"
             },
             "newsletter_heading": {
