@@ -59,6 +59,13 @@
                   </div>
                 </div>
               {% endif %}
+              {% if block.settings.show_socials %}
+                <div class="footer__socials">
+                  <div class="social__icons-list">
+                    {% render 'social-icons' %}
+                  </div>
+                </div>
+              {% endif %}
             </div>
           </div>
 

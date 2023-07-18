@@ -1,1 +1,9 @@
-<h1>payment icons</h1>
+{%- unless shop.enabled_payment_types == empty -%}
+  <ul class="payment__icons">
+    {%- for type in shop.enabled_payment_types -%}
+      <li class="icon__payment-item">
+        {{ type | payment_type_svg_tag }}
+      </li>
+    {%- endfor -%}
+  </ul>
+{%- endunless -%}
