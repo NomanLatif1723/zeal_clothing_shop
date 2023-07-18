@@ -54,6 +54,9 @@
               },
               "footer_menu_label": {
                 "label": "Menu"
+              },
+              "footer_column_width": {
+                "label": "Column Width"
               }
 
             }
@@ -75,6 +78,9 @@
             },
             "show_socials": {
               "label": "Show Socials"
+            },
+            "footer_column_width": {
+              "label": "Column Width"
             }
           }
 
@@ -90,6 +96,9 @@
             },
             "footer_text_info": {
               "label": "Welcome To Our Shop"
+            },
+            "footer_column_width": {
+              "label": "Column Width"
             }
           }
 
