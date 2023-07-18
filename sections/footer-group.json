@@ -8,7 +8,8 @@
         "feb96f67-67b9-4b8c-a080-160b3fbc3380": {
           "type": "text",
           "settings": {
-            "footer_text": "Welcome To Our Shop"
+            "footer_text": "Welcome To Our Shop",
+            "footer_column_width": 25
           }
         },
         "b3f79816-ea38-49f1-9a7e-07c5ed58bae5": {
@@ -16,7 +17,8 @@
           "settings": {
             "menu_heading": "",
             "show_heading": true,
-            "footer_menu": "featured"
+            "footer_menu": "featured",
+            "footer_column_width": 25
           }
         },
         "5d99372f-dc59-4aa6-84ec-93899e625e4a": {
@@ -24,7 +26,8 @@
           "settings": {
             "menu_heading": "",
             "show_heading": true,
-            "footer_menu": "support"
+            "footer_menu": "support",
+            "footer_column_width": 25
           }
         },
         "93e2642f-15d4-4de3-9b9d-d2ac39f95be8": {
@@ -33,7 +36,16 @@
             "show_newsletter_heading": true,
             "newsletter_heading": "Join the conversation",
             "newsletter_text": "Lorem ipsum is a dummy text. This is especially written in a certain pattern.",
-            "show_socials": true
+            "show_socials": true,
+            "footer_column_width": 25
+          }
+        },
+        "21e31a57-01ae-4f10-882e-ac61ff9e74ba": {
+          "type": "address_bar",
+          "settings": {
+            "footer_address_field": "<p>28th Floor, Office 218, Emporium heights, Lahore.<\/p>",
+            "footer_phone_field": "<p>+92 334 0034575<\/p>",
+            "footer_schedule_field": "<p>Monday - Friday: 8AM - 5PM<\/p>"
           }
         }
       },
@@ -41,7 +53,8 @@
         "feb96f67-67b9-4b8c-a080-160b3fbc3380",
         "b3f79816-ea38-49f1-9a7e-07c5ed58bae5",
         "5d99372f-dc59-4aa6-84ec-93899e625e4a",
-        "93e2642f-15d4-4de3-9b9d-d2ac39f95be8"
+        "93e2642f-15d4-4de3-9b9d-d2ac39f95be8",
+        "21e31a57-01ae-4f10-882e-ac61ff9e74ba"
       ],
       "settings": {
         "show_copyright": true,
