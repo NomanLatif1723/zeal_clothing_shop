@@ -121,7 +121,8 @@ textarea {
   --bodyTextColor: {{ settings.body_text_color }}
   ;
 
-  --borderColor: {{ settings.border_color }};
+  --borderColor: {{ settings.border_color }}
+  ;
 
 }
 
@@ -369,7 +370,7 @@ body {
 .swiper-button-next:after,
 .swiper-button-prev:after {
   color: #808183;
-  font-size: 20px;
+  font-size: 20px !important;
   font-weight: bold;
 }
 
@@ -381,7 +382,7 @@ body {
   .text__image-item {
     width: 35%;
     padding: 50px 30px;
-    border: 1px solid var(--borderColor);
+    border: 1px solid rgba(var(--borderColor), 0.1);
     border-top: none;
   }
   .text__container-desktop {
@@ -409,7 +410,7 @@ h1.site__footer-logo {
 }
 
 .site__grid-item {
-  border-bottom: 1px solid var(--borderColor);
+  border-bottom: 1px solid rgba(var(--borderColor), 0.1);
   padding: 30px 0;
 }
 
