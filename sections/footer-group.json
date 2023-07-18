@@ -9,7 +9,7 @@
           "type": "text",
           "settings": {
             "footer_text": "Looking for a comfy and stylish clothing? This is 100% perfect for you! With a relaxed fit, our clothing is ideal for everyday wear.",
-            "footer_column_width": 25
+            "footer_column_width": 30
           }
         },
         "b3f79816-ea38-49f1-9a7e-07c5ed58bae5": {
@@ -18,7 +18,7 @@
             "menu_heading": "",
             "show_heading": true,
             "footer_menu": "featured",
-            "footer_column_width": 25
+            "footer_column_width": 20
           }
         },
         "5d99372f-dc59-4aa6-84ec-93899e625e4a": {
@@ -27,7 +27,7 @@
             "menu_heading": "",
             "show_heading": true,
             "footer_menu": "support",
-            "footer_column_width": 25
+            "footer_column_width": 20
           }
         },
         "93e2642f-15d4-4de3-9b9d-d2ac39f95be8": {
@@ -37,7 +37,7 @@
             "newsletter_heading": "Join the conversation",
             "newsletter_text": "Lorem ipsum is a dummy text. This is especially written in a certain pattern.",
             "show_socials": true,
-            "footer_column_width": 25
+            "footer_column_width": 30
           }
         },
         "21e31a57-01ae-4f10-882e-ac61ff9e74ba": {
