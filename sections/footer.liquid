@@ -64,6 +64,24 @@
 
         {% endcase %}
       {% endfor %}
+
+    </div>
+  </div>
+  <div class="footer__bottom-section">
+    <div class="page__width">
+      <div class="footer__address-bar"></div>
+      <div class="footer__copyright-bar">
+        {% if section.settings.show_copyright and section.settings.footer_copyright_text != blank %}
+          <div class="copyright__text">
+            {{ section.settings.footer_copyright_text }}
+          </div>
+        {% endif %}
+        {% if section.settings.show_payment_icons %}
+          <div class="payment__icons-list">
+            {% render 'payment-icons' %}
+          </div>
+        {% endif %}
+      </div>
     </div>
   </div>
 </footer>
@@ -72,7 +90,24 @@
     "name": "Footer",
     "class": "shopify__footer-group",
     "max_blocks": 4,
-    "settings": [],
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_copyright",
+        "label": "Show Copyright Text",
+        "default": false
+      }, {
+        "type": "text",
+        "id": "footer_copyright_text",
+        "label": "Copyright Text"
+      }, {
+        "type": "checkbox",
+        "id": "show_payment_icons",
+        "label": "Show Payment Icons",
+        "default": false
+      }
+
+    ],
     "blocks": [
       {
         "type": "menu",
