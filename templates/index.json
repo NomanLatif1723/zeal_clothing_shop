@@ -60,45 +60,45 @@
           "type": "testimonial",
           "settings": {
             "testimonial_star_icon": "5-star",
-            "slide_heading": "Testimonial",
-            "slide_text": "Testimonial Text",
-            "author_text": "Author"
+            "slide_heading": "“comfortable, stylish, and versatile”",
+            "slide_text": "I absolutely love the clothes I bought from Zeal. They're comfortable, stylish, and versatile, which is exactly what I was looking for.",
+            "author_text": "Sarah R., Austin, TX"
           }
         },
         "template--19980215124290__0a5d7332-5a60-4baf-bf6a-adbba595c25e-16897772153efbd8d2-1": {
           "type": "testimonial",
           "settings": {
             "testimonial_star_icon": "5-star",
-            "slide_heading": "Testimonial",
-            "slide_text": "Testimonial Text",
-            "author_text": "Author"
+            "slide_heading": "“amazing collection”",
+            "slide_text": "I was hesitant to try loose-fitting clothing, but I'm so glad I did! Zeal has an amazing collection of clothes that are both comfortable and stylish.",
+            "author_text": "Michael T., Los Angeles, CA"
           }
         },
         "template--19980215124290__0a5d7332-5a60-4baf-bf6a-adbba595c25e-16897772153efbd8d2-2": {
           "type": "testimonial",
           "settings": {
             "testimonial_star_icon": "5-star",
-            "slide_heading": "Testimonial",
-            "slide_text": "Testimonial Text",
-            "author_text": "Author"
+            "slide_heading": "“soft and breathable”",
+            "slide_text": "I'm someone who values comfort above all else, and I've finally found a brand that understands that. Zeal's clothes are so soft and breathable, and don't cling to my body.",
+            "author_text": "Maria G., New York, NY"
           }
         },
         "template--19980215124290__0a5d7332-5a60-4baf-bf6a-adbba595c25e-16897772153efbd8d2-3": {
           "type": "testimonial",
           "settings": {
-            "testimonial_star_icon": "5-star",
-            "slide_heading": "Testimonial",
-            "slide_text": "Testimonial Text",
-            "author_text": "Author"
+            "testimonial_star_icon": "3-star",
+            "slide_heading": "“soft and breathable”",
+            "slide_text": "Add customer reviews and testimonials to showcase your store’s happy customers.",
+            "author_text": "Maria G., New York, NY"
           }
         },
         "template--19980215124290__0a5d7332-5a60-4baf-bf6a-adbba595c25e-16897772153efbd8d2-4": {
           "type": "testimonial",
           "settings": {
-            "testimonial_star_icon": "5-star",
-            "slide_heading": "Testimonial",
-            "slide_text": "Testimonial Text",
-            "author_text": "Author"
+            "testimonial_star_icon": "4-star",
+            "slide_heading": "“soft and breathable”",
+            "slide_text": "Add customer reviews and testimonials to showcase your store’s happy customers.",
+            "author_text": "Maria G., New York, NY"
           }
         }
       },
@@ -110,8 +110,8 @@
         "template--19980215124290__0a5d7332-5a60-4baf-bf6a-adbba595c25e-16897772153efbd8d2-4"
       ],
       "settings": {
-        "testimonial_heading": "Testimonials",
-        "testimonial_text": "Welcome to Our Store",
+        "testimonial_heading": "Hear from our happy customers",
+        "testimonial_text": "Browse our testimonials to see real feedback from people who have tried and loved our products.",
         "text_alignment": "center",
         "testimonial_background_color": "#ffffff",
         "testimonial_text_color": "#111111"
