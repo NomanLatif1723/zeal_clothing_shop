@@ -79,6 +79,9 @@
             "newsletter_submit_button": {
               "label": "Button"
             },
+            "newsletter_submit_button_info": {
+              "label": "Button"
+            },
             "show_socials": {
               "label": "Show Socials"
             },
