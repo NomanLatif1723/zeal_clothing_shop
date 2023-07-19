@@ -450,7 +450,10 @@ footer.site__footer {
     width: 50%;
     border: none;
     padding: 20px 20px 20px 0;
-}
+  }
+  .address__bar-wrapper {
+    gap: 60px;
+  }
 }
 @media only screen and (min-width: 960px) {
   .site__grid-item {
@@ -458,6 +461,9 @@ footer.site__footer {
     display: flex;
     justify-content: center;
     padding: 0;
+  }
+  .address__bar-wrapper {
+    gap: 30px;
   }
 }
 @media only screen and (min-width: 769px) {
@@ -476,7 +482,7 @@ footer.site__footer {
     display: flex;
     align-items: center;
     gap: 15px;
-    padding-right: 60px;
+/*     padding-right: 60px; */
   }
   .block__item:last-child {
     padding-right: 0;
@@ -489,6 +495,7 @@ footer.site__footer {
   .address__bar-wrapper {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
   }
   
   .copyright__bar-wrapper {
