@@ -13,12 +13,12 @@
     "social_twitter_url": "twitter.com",
     "social_instagram_url": "instagram.com",
     "social_pinterest_url": "pinterest.com",
-    "social_snapchat_url": "pinterest.com",
-    "social_tumblr_url": "pinterest.com",
-    "social_tiktok_url": "pinterest.com",
-    "social_linkedin_url": "pinterest.com",
-    "social_youtube_url": "pinterest.com",
-    "social_vimeo_url": "pinterest.com",
+    "social_snapchat_url": "",
+    "social_tumblr_url": "",
+    "social_tiktok_url": "",
+    "social_linkedin_url": "",
+    "social_youtube_url": "",
+    "social_vimeo_url": "",
     "content_for_index": [
 
     ]
