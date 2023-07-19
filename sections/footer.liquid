@@ -16,11 +16,7 @@
       <div class="site__grid">
         {%- for block in section.blocks -%}
           {% style %}
-            @media only screen and (min-width:769px) and(max-width: 959px) {
-              .grid__item-{{ block.id }}{
-                width: 50%;
-              }
-            }
+            
             @media only screen and (min-width:960px) {
               .grid__item-{{ block.id }}{
                 width: {{ block.settings.footer_column_width }}%;
