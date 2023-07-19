@@ -67,6 +67,9 @@
             "newsletter_heading": {
               "label": "Heading"
             },
+            "newsletter_heading_info": {
+              "label": "Newsletter"
+            },
             "newsletter_text": {
               "label": "Text"
             },
@@ -74,7 +77,7 @@
               "label": "Join Our Newsletter"
             },
             "newsletter_submit_button": {
-              "label": "Submit"
+              "label": "Button"
             },
             "show_socials": {
               "label": "Show Socials"
