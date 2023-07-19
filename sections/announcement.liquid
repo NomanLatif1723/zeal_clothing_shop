@@ -1,43 +1,43 @@
 {% render 'announcement-bar', section: section %}
 {% schema %}
   {
-    "name": "t:sections.header.settings.header_announcement",
+    "name": "t:sections.announcement-bar.name",
     "settings": [
       {
         "type": "text",
         "id": "heading_text",
-        "label": "Heading",
+        "label": "t:sections.announcement-bar.settings.announcement_heading.label",
         "default": "Welcome to our shop"
+      },
+      {
+        "type": "richtext",
+        "id": "announcement_text",
+        "label": "t:sections.announcement-bar.settings.announcement_text.label"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.announcement-bar.settings.header_timer_details.label"
       },
       {
         "type": "checkbox",
         "id": "show_timer",
-        "label": "Show Timer",
+        "label": "t:sections.announcement-bar.settings.header_timer_details.announcement_show_timer.label",
         "default": false
-      },
-      {
-        "type": "header",
-        "content": "Timer Details"
-      },
-      {
+      }, {
         "type": "text",
         "id": "timer_hours",
-        "label": "Hours",
+        "label": "t:sections.announcement-bar.settings.header_timer_details.timer_hour_label.label",
         "default": "2"
       }, {
         "type": "text",
         "id": "timer_minutes",
-        "label": "Minutes",
+        "label": "t:sections.announcement-bar.settings.header_timer_details.timer_minutes_label.label",
         "default": "30"
-      }, {
-        "type": "richtext",
-        "id": "announcement_text",
-        "label": "Text"
       }
     ],
     "presets": [
       {
-        "name": "t:sections.header.settings.header_announcement"
+        "name": "t:sections.announcement-bar.presets.name"
       }
     ]
   }

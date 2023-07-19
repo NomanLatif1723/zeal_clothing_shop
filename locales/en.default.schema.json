@@ -9,7 +9,32 @@
     "header": {
       "name": "Header",
       "settings": {
-        "header_announcement": "Announcement Bar"
+      }
+    },
+    "announcement-bar": {
+      "name": "Announcement Bar",
+      "settings": {
+        "announcement_heading": {
+          "label": "Heading"
+        },
+        "announcement_text": {
+          "label": "Text"
+        },
+        "header_timer_details": {
+          "label": "Timer Details",
+          "announcement_show_timer": {
+            "label": "Show Timer"
+          },
+          "timer_hour_label": {
+            "label": "Hours"
+          },
+          "timer_minutes_label": {
+            "label": "Minutes"
+          }
+        }
+      },
+      "presets": {
+        "name": "Announcement Bar"
       }
     },
     "richtext": {
@@ -110,6 +135,34 @@
     "text-with-icon": {
       "name": "Text With Icon",
       "settings": {
+        "header_spacing": {
+          "label": "Section Spacing",
+          "top_padding": {
+            "label": "Padding Top"
+          },
+          "bottom_padding": {
+            "label": "Padding Bottom"
+          }
+        },
+        "blocks": {
+          "slide": {
+            "name": "Slide",
+            "settings": {
+              "slide_logo_label": {
+                "label": "Logo"
+              },
+              "slide_heading": {
+                "label": "Heading"
+              },
+              "slide_text": {
+                "label": "Text"
+              }
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Text With Icon"
       }
     },
     "footer": {
