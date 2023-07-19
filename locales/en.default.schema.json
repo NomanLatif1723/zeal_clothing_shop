@@ -15,6 +15,56 @@
     "richtext": {
       "name": "Rich Text",
       "settings": {
+        "alignment": {
+          "label": "Text alignment",
+          "options": {
+            "left": {
+              "label": "Left"
+            },
+            "center": {
+              "label": "Center"
+            },
+            "right": {
+              "label": "Right"
+            }
+          }
+        },
+        "richtext_subheading": {
+          "label": "Subheading"
+        },
+        "richtext_main_heading": {
+          "label": "Heading"
+        },
+        "richtext_text_description": {
+          "label": "Text"
+        },
+        "header_first_button": {
+          "label": "First Button",
+          "button_label": {
+            "label": "Button"
+          },
+          "button_link": {
+            "label": "Button Link"
+          }
+        },
+        "header_socond_button": {
+          "label": "Second Button",
+          "button_label": {
+            "label": "Button"
+          },
+          "button_link": {
+            "label": "Button Link"
+          }
+        },
+        "header_spacing": {
+          "label": "Section Spacing",
+          "top_padding": {
+            "label": "Padding Top"
+          },
+          "bottom_padding": {
+            "label": "Padding Bottom"
+          }
+        }
       }
     },
     "newsletter": {
@@ -67,19 +117,10 @@
             "newsletter_heading": {
               "label": "Heading"
             },
-            "newsletter_heading_info": {
-              "label": "Newsletter"
-            },
             "newsletter_text": {
               "label": "Text"
             },
-            "newsletter_text_info": {
-              "label": "Join Our Newsletter"
-            },
             "newsletter_submit_button": {
-              "label": "Button"
-            },
-            "newsletter_button_info": {
               "label": "Button"
             },
             "show_socials": {
@@ -98,9 +139,6 @@
             },
             "footer_text": {
               "label": "Text"
-            },
-            "footer_text_info": {
-              "label": "Welcome To Our Shop"
             },
             "footer_column_width": {
               "label": "Column Width"

@@ -16,7 +16,6 @@
       <div class="site__grid">
         {%- for block in section.blocks -%}
           {% style %}
-            
             @media only screen and (min-width:960px) {
               .grid__item-{{ block.id }}{
                 width: {{ block.settings.footer_column_width }}%;
@@ -94,10 +93,10 @@
                 {%- endif -%}
               </div>
             </div>
-  
+
           {%- endcase -%}
         {%- endfor -%}
-  
+
       </div>
     </div>
   </div>
@@ -129,7 +128,7 @@
       </div>
     </div>
     <div class="footer__copyright-bar">
-      <div class="page__width"> 
+      <div class="page__width">
         <div class="copyright__bar-wrapper">
           {%- if section.settings.show_copyright -%}
             <div class="copyright__text rte">
@@ -146,7 +145,7 @@
             </div>
           {%- endif -%}
         </div>
-      </div> 
+      </div>
     </div>
   </div>
 </footer>
@@ -218,21 +217,20 @@
             "type": "text",
             "id": "newsletter_heading",
             "label": "t:sections.footer.blocks.newsletter.settings.newsletter_heading.label",
-            "default": "t:sections.footer.blocks.newsletter.settings.newsletter_heading_info.label"
+            "default": "Newsletter"
           },
           {
             "type": "textarea",
             "id": "newsletter_text",
             "label": "t:sections.footer.blocks.newsletter.settings.newsletter_text.label",
-            "default": "t:sections.footer.blocks.newsletter.settings.newsletter_text_info.label"
+            "default": "Join Our Newsletter"
           },
           {
             "type": "text",
             "id": "button_label",
             "label": "t:sections.footer.blocks.newsletter.settings.newsletter_submit_button.label",
-            "default": "t:sections.footer.blocks.newsletter.settings.newsletter_button_info.label"
-          },
-          {
+            "default": "Button"
+          }, {
             "type": "checkbox",
             "id": "show_socials",
             "label": "t:sections.footer.blocks.newsletter.settings.show_socials.label",
@@ -261,7 +259,7 @@
             "type": "textarea",
             "id": "footer_text",
             "label": "t:sections.footer.blocks.text.settings.footer_text.label",
-            "default": "t:sections.footer.blocks.text.settings.footer_text_info.label"
+            "default": "Welcome To Our Shop"
           }, {
             "type": "range",
             "id": "footer_column_width",
