@@ -8,8 +8,8 @@
         "heading_text": "SUMMER SALES ENDS IN",
         "announcement_text": "<p>USE CODE <strong>SUMMERSALE<\/strong><\/p>",
         "show_timer": true,
-        "timer_hours": "2",
-        "timer_minutes": ""
+        "timer_hours": "",
+        "timer_minutes": "50"
       }
     },
     "header": {
