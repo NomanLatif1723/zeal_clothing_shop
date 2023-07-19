@@ -1,0 +1,170 @@
+<div class="testimonial__wrapper">
+  <div class="page__width">
+    <div class="testimonial__content text__align-{{ section.settings.text_alignment }}">
+      {%- if section.settings.testimonial_heading != blank -%}
+        <div class="main_heading testimonial__main-heading">
+          <h2>{{ section.settings.testimonial_heading }}</h2>
+        </div>
+      {%- endif -%}
+      {%- if section.settings.testimonial_text != blank -%}
+        <div class="testimonial__text rte">
+          {{ section.settings.testimonial_text }}
+        </div>
+      {%- endif -%}
+      <div class="testimonial_slider-wrapper swiper">
+        <div class="swiper-wrapper">
+          {%- for block in section.blocks -%}
+            <div class="testimonial__slider-item swiper-slide">
+              <blockquote class="testimonial__text">
+                {%- if block.settings.testimonial_star_icon == '5-star' -%}
+                  <span class="icon__stars">★★★★★</span>
+                {%- elsif block.settings.testimonial_star_icon == '4-star' -%}
+                  <span class="icon__stars">★★★★</span>
+                {%- elsif block.settings.testimonial_star_icon == '3-star' -%}
+                  <span class="icon__stars">★★★</span>
+                {%- elsif block.settings.testimonial_star_icon == '2-star' -%}
+                  <span class="icon__stars">★★</span>
+                {%- elsif block.settings.testimonial_star_icon == '1-star' -%}
+                  <span class="icon__stars">★</span>
+                {%- endif -%}
+              </blockquote>
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "t:sections.testimonials.name",
+    "class": "main__section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "testimonial_heading",
+        "label": "t:sections.testimonials.settings.testimonial_heading.label",
+        "default": "Testimonials"
+      },
+      {
+        "type": "textarea",
+        "id": "testimonial_text",
+        "label": "t:sections.testimonials.settings.testimonial_text.label",
+        "default": "Welcome to Our Store"
+      },
+      {
+        "type": "select",
+        "id": "text_alignment",
+        "label": "t:sections.testimonials.settings.alignment.label",
+        "options": [
+          {
+            "value": "left",
+            "label": "t:sections.testimonials.settings.alignment.options.left.label"
+          }, {
+            "value": "center",
+            "label": "t:sections.testimonials.settings.alignment.options.center.label"
+          }, {
+            "value": "right",
+            "label": "t:sections.testimonials.settings.alignment.options.right.label"
+          }
+        ],
+        "default": "center"
+      },
+      {
+        "type": "color",
+        "id": "testimonial_background",
+        "label": "t:sections.testimonials.settings.testimonial_background_color.label",
+        "default": "#ffffff"
+      }, {
+        "type": "color",
+        "id": "testimonial_text",
+        "label": "t:sections.testimonials.settings.testimonial_text_color.label",
+        "default": "#111111"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "testimonial",
+        "name": "t:sections.testimonials.blocks.testimonial.name",
+        "settings": [
+          {
+            "type": "select",
+            "id": "testimonial_star_icon",
+            "label": "t:sections.testimonials.blocks.testimonial.settings.testimonial_star.label",
+            "default": "5-star",
+            "options": [
+              {
+                "value": "5-star",
+                "label": "t:sections.testimonials.blocks.testimonial.settings.testimonial_star.options.5-star.label"
+              },
+              {
+                "value": "4-star",
+                "label": "t:sections.testimonials.blocks.testimonial.settings.testimonial_star.options.4-star.label"
+              },
+              {
+                "value": "3-star",
+                "label": "t:sections.testimonials.blocks.testimonial.settings.testimonial_star.options.3-star.label"
+              },
+              {
+                "value": "2-star",
+                "label": "t:sections.testimonials.blocks.testimonial.settings.testimonial_star.options.2-star.label"
+              }, {
+                "value": "1-star",
+                "label": "t:sections.testimonials.blocks.testimonial.settings.testimonial_star.options.1-star.label"
+              }, {
+                "value": "none",
+                "label": "t:sections.testimonials.blocks.testimonial.settings.testimonial_star.options.none.label"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "id": "slide_heading",
+            "label": "t:sections.testimonials.blocks.testimonial.settings.testimonial_slide_heading.label",
+            "default": "Testimonial"
+          },
+          {
+            "type": "textarea",
+            "id": "slide_text",
+            "label": "t:sections.testimonials.blocks.testimonial.settings.testimonial_slide_text.label",
+            "default": "Testimonial Text"
+          },
+          {
+            "type": "image_picker",
+            "id": "author_image",
+            "label": "t:sections.testimonials.blocks.testimonial.settings.author_image.label"
+          }, {
+            "type": "text",
+            "id": "author_text",
+            "label": "t:sections.testimonials.blocks.testimonial.settings.author_text.label",
+            "default": "Author"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "t:sections.testimonials.presets.name",
+        "blocks": [
+          {
+            "type": "testimonial"
+          },
+          {
+            "type": "testimonial"
+          },
+          {
+            "type": "testimonial"
+          },
+          {
+            "type": "testimonial"
+          }, {
+            "type": "testimonial"
+          }
+        ]
+      }
+    ],
+    "disabled_on": {
+      "groups": ["footer", "header"]
+    }
+  }
+{% endschema %}

@@ -90,6 +90,9 @@
             "label": "Padding Bottom"
           }
         }
+      },
+      "presets": {
+        "name": "Rich Text"
       }
     },
     "newsletter": {
@@ -130,6 +133,9 @@
             "label": "Padding Bottom"
           }
         }
+      },
+      "presets": {
+        "name": "Newsletter"
       }
     },
     "text-with-icon": {
@@ -163,6 +169,82 @@
       },
       "presets": {
         "name": "Text With Icon"
+      }
+    },
+    "testimonials": {
+      "name": "Testimonials",
+      "settings": {
+        "testimonial_heading": {
+          "label": "Heading"
+        },
+        "testimonial_text": {
+          "label": "Text"
+        },
+        "alignment": {
+          "label": "Text alignment",
+          "options": {
+            "left": {
+              "label": "Left"
+            },
+            "center": {
+              "label": "Center"
+            },
+            "right": {
+              "label": "Right"
+            }
+          }
+        },
+        "testimonial_background_color": {
+          "label": "Background"
+        },
+        "testimonial_text_color": {
+          "label": "Text"
+        }
+      },
+      "blocks": {
+        "testimonial": {
+          "name": "Testimonial",
+          "settings": {
+            "testimonial_star": {
+              "label": "Icon",
+              "options": {
+                "5-stars": {
+                  "label": "5 Stars"
+                },
+                "4-stars": {
+                  "label": "4 Stars"
+                },
+                "3-stars": {
+                  "label": "3 Stars"
+                },
+                "2-stars": {
+                  "label": "2 Stars"
+                },
+                "1-stars": {
+                  "label": "1 Stars"
+                },
+                "none": {
+                  "label": "None"
+                }
+              }
+            },
+            "testimonial_slide_heading": {
+              "label": "Heading"
+            },
+            "testimonial_slide_text": {
+              "label": "Text"
+            },
+            "author_image": {
+              "label": "Author Image"
+            },
+            "author_text": {
+              "label": "Author"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Testimonials"
       }
     },
     "footer": {
