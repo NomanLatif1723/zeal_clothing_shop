@@ -448,8 +448,16 @@ footer.site__footer {
 @media only screen and (min-width: 769px) and (max-width:959px) {
   .site__grid-item {
     width: 50%;
+    border: none;
     padding-right: 29px;
 }
+}
+@media only screen and (min-width: 960px) {
+  .site__grid-item {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
 }
 @media only screen and (min-width: 769px) {
   footer.site__footer {
@@ -462,12 +470,7 @@ footer.site__footer {
     display: flex;
     flex-wrap: wrap;
   }
-  .site__grid-item {
-    border: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-  }
+  
   .block__item {
     display: flex;
     align-items: center;
