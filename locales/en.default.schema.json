@@ -73,6 +73,9 @@
             "newsletter_text_info": {
               "label": "Join Our Newsletter"
             },
+            "newsletter_submit_button": {
+              "label": "Submit"
+            },
             "show_socials": {
               "label": "Show Socials"
             },
