@@ -46,6 +46,7 @@ const testimonialSlider = document.querySelector('.testimonial_slider-wrapper');
 if (testimonialSlider) {
   var swiper = new Swiper(".testimonial_slider-wrapper", {
         slidesPerView: 3,
+        spaceBetween: 30,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
