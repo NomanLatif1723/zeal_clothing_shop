@@ -47,7 +47,7 @@
             "label": "Button Link"
           }
         },
-        "header_socond_button": {
+        "header_second_button": {
           "label": "Second Button",
           "button_label": {
             "label": "Button"
@@ -70,6 +70,41 @@
     "newsletter": {
       "name": "Newsletter",
       "settings": {
+        "newsletter_heading": {
+          "label": "Heading"
+        },
+        "newsletter_button_label": {
+          "label": "Button Label"
+        },
+        "alignment": {
+          "label": "Text alignment",
+          "options": {
+            "left": {
+              "label": "Left"
+            },
+            "center": {
+              "label": "Center"
+            },
+            "right": {
+              "label": "Right"
+            }
+          }
+        },
+        "newsletter_background_color": {
+          "label": "Background"
+        },
+        "newsletter_text_color": {
+          "label": "Text"
+        },
+        "header_spacing": {
+          "label": "Section Spacing",
+          "top_padding": {
+            "label": "Padding Top"
+          },
+          "bottom_padding": {
+            "label": "Padding Bottom"
+          }
+        }
       }
     },
     "text-with-icon": {
