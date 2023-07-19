@@ -60,7 +60,7 @@ if (testimonialSlider) {
           slidesPerView: 2,
           spaceBetween: 20,
         },
-        769: {
+        993: {
           slidesPerView: 3,
           spaceBetween: 40,
         },
