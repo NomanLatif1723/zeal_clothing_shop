@@ -1,0 +1,31 @@
+{% form 'customer' %}
+  {% if form.posted_successfully? %}
+    <div class="message success__message">
+      <span>Your form is submitted successfully</span>
+    </div>
+  {% endif %}
+  {% if form.errors %}
+    {{ form.errors | default_errors }}
+  {% endif %}
+  <div class="newsletter__input-group footer__input-group">
+    <input
+      type="email"
+      value="{% if customer %}{{ customer.email }}{% endif %}"
+      name="contact[email]"
+      id="Email-{{ section.id }}"
+      placeholder="{{ 'general.newsletter_form.email_placeholder' | t }}"
+      autocapitalize="off"
+      autocorrect="off">
+    <button
+      type="submit"
+      id="newsletter_form-submit-{{ block.id }}"
+      class="btn btn__submit">
+      {% if block.settings.button_label != blank %}
+        {{ block.settings.button_label }}
+      {% else %}
+        {{ 'general.newsletter_form.submit_text' | t }}
+      {% endif %}
+    </button>
+  </div>
+
+{% endform %}
