@@ -27,6 +27,27 @@
                 {%- elsif block.settings.testimonial_star_icon == '1-star' -%}
                   <span class="icon__stars">★</span>
                 {%- endif -%}
+                {%- if block.settings.slide_heading != blank -%}
+                  <div class="slide__heading">
+                    <h3>{{ block.settings.slide_heading }}</h3>
+                  </div>
+                {%- endif -%}
+                {%- if block.settings.slide_text != blank -%}
+                  <div class="slide__text rte">
+                    {{ block.settings.slide_text }}
+                  </div>
+                {%- endif -%}
+                {%- if block.settings.author_image != blank -%}
+                  {% assign testimonial_image = 'author__logo-img' %}
+                  <div class="author__image img">
+                    {% render 'image-element', img-element: block.settings.author_image, img-width: 70, img-height: 70, classes: testimonial_image %}
+                  </div>
+                {%- endif -%}
+                {%- if block.settings.author_text != blank -%}
+                  <div class="author__text">
+                    {{ block.settings.author_text }}
+                  </div>
+                {%- endif -%}
               </blockquote>
             </div>
           {%- endfor -%}
