@@ -36,12 +36,16 @@ if(timerEl){
 }
 
 //  Brands slider for mobile devices
-// const mobileMedia = window.matchMedia("(max-width:768px)");
-// if(mobileMedia.matches) {
     var swiper = new Swiper(".brands__slider", {
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
       });
-// }
+
+      var swiper = new Swiper(".testimonial_slider-wrapper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
