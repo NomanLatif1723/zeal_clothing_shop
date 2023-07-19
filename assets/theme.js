@@ -56,11 +56,11 @@ if (testimonialSlider) {
           clickable: true,
         },
         breakpoints: {
-        600: {
+        601: {
           slidesPerView: 2,
           spaceBetween: 20,
         },
-        768: {
+        769: {
           slidesPerView: 3,
           spaceBetween: 40,
         },
