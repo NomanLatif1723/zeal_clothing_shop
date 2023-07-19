@@ -37,7 +37,7 @@
             "show_newsletter_heading": true,
             "newsletter_heading": "Join the conversation",
             "newsletter_text": "Lorem ipsum is a dummy text. This is especially written in a certain pattern.",
-            "button_label": "",
+            "button_label": "Subscribe",
             "show_socials": true,
             "footer_column_width": 30
           }
