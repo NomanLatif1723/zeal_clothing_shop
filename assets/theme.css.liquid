@@ -106,10 +106,12 @@ textarea {
   --colorButton: {{ settings.color_button }};
   --colorButtonText: {{ settings.color_button_text }};
   --colorOutlineButton: {{ settings.color_outline_button }};
-
+{% comment %}
   --bodyTextFont: {{ settings.body_font_family.family }};
   --headingTextFont: {{ settings.heading_font_family.family }};
-
+{% endcomment %}
+  --bodyTextFont: 'Monda-Regular';
+  
   --bodyBackgroundColor: {{ settings.body_bg_color }};
   --bodyTextColor: {{ settings.body_text_color }};
 
