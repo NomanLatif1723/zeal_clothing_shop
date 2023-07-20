@@ -7,17 +7,19 @@
 <div class="testimonial__wrapper">
   <div class="page__width">
     <div class="testimonial__content text__align-{{ section.settings.text_alignment }}">
-      {%- if section.settings.testimonial_heading != blank -%}
-        <div class="main_heading testimonial__main-heading">
-          <h2>{{ section.settings.testimonial_heading }}</h2>
-        </div>
-      {%- endif -%}
-      {%- if section.settings.testimonial_text != blank -%}
-        <div class="testimonial__text rte">
-          {{ section.settings.testimonial_text }}
-        </div>
-      {%- endif -%}
-      <div class="testimonial_slider-wrapper swiper">
+      <div class="testimonial__header">
+        {%- if section.settings.testimonial_heading != blank -%}
+          <div class="main_heading testimonial__main-heading">
+            <h2>{{ section.settings.testimonial_heading }}</h2>
+          </div>
+        {%- endif -%}
+        {%- if section.settings.testimonial_text != blank -%}
+          <div class="testimonial__text rte">
+            {{ section.settings.testimonial_text }}
+          </div>
+        {%- endif -%}
+      </div>
+      <div class="testimonial__slider-wrapper swiper">
         <div class="swiper-wrapper">        
           {%- for block in section.blocks -%}
             <div class="testimonial__slider-item swiper-slide">
