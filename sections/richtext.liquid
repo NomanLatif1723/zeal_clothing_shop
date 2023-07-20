@@ -1,7 +1,7 @@
 <style>
   .main__section-{{ section.id }}{
-    padding-top: {{ section.settings.padding_top }}px;
-    padding-bottom: {{ section.settings.padding_bottom }}px;
+    margin-top: {{ section.settings.margin_top }}px;
+    margin-bottom: {{ section.settings.margin_bottom }}px;
   }
 </style>
 <div class="text__container main__section-{{ section.id }}">
@@ -112,21 +112,21 @@
         "content": "t:sections.richtext.settings.header_spacing.label"
       }, {
         "type": "range",
-        "id": "padding_top",
+        "id": "margin_top",
         "min": 0,
         "max": 100,
         "step": 2,
         "unit": "px",
-        "label": "t:sections.richtext.settings.header_spacing.top_padding.label",
+        "label": "t:sections.richtext.settings.header_spacing.top_spacing.label",
         "default": 16
       }, {
         "type": "range",
-        "id": "padding_bottom",
+        "id": "margin_bottom",
         "min": 0,
         "max": 100,
         "step": 2,
         "unit": "px",
-        "label": "t:sections.richtext.settings.header_spacing.bottom_padding.label",
+        "label": "t:sections.richtext.settings.header_spacing.bottom_spacing.label",
         "default": 16
       }
 
