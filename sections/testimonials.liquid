@@ -20,7 +20,9 @@
         {%- endif -%}
       </div>
       <div class="testimonial__slider-wrapper swiper">
-        <div class="swiper-wrapper">        
+        <div class="swiper-wrapper"> 
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
           {%- for block in section.blocks -%}
             <div class="testimonial__slider-item swiper-slide">
               <blockquote class="testimonial__text">
@@ -60,8 +62,6 @@
             </div>
           {%- endfor -%}
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
       </div>
     </div>
