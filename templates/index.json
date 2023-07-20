@@ -34,8 +34,8 @@
         "template--19980215124290__d534c664-a5a4-4f55-b829-6446be3b3cdb-1689579269d14e5d4e-2"
       ],
       "settings": {
-        "padding_top": 0,
-        "padding_bottom": 40
+        "margin_top": 60,
+        "margin_bottom": 60
       }
     },
     "b2c49c1e-4880-4b9e-90e7-0135ddd0a9b9": {
@@ -49,8 +49,8 @@
         "button_link_1": "",
         "shop_btn_2": "SHOP WOMEN",
         "button_link_2": "",
-        "padding_top": 40,
-        "padding_bottom": 40
+        "margin_top": 16,
+        "margin_bottom": 16
       }
     },
     "0a5d7332-5a60-4baf-bf6a-adbba595c25e": {
@@ -130,8 +130,8 @@
         "text_alignment": "center",
         "newsletter_background": "#fceaea",
         "newsletter_text": "#000000",
-        "padding_top": 40,
-        "padding_bottom": 0
+        "margin_top": 16,
+        "margin_bottom": 16
       }
     }
   },
