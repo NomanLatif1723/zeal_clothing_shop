@@ -130,8 +130,8 @@
         "text_alignment": "center",
         "newsletter_background": "#fceaea",
         "newsletter_text": "#000000",
-        "margin_top": 16,
-        "margin_bottom": 16
+        "margin_top": 60,
+        "margin_bottom": 0
       }
     }
   },
