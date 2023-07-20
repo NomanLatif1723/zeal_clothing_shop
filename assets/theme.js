@@ -36,37 +36,40 @@ if(timerEl){
 }
 
 //  Brands slider for mobile devices
-    var swiper = new Swiper(".brands__slider", {
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-
+const logoSlider = document.querySelector('.brands__slider');
+if (logoSlider) {
+  var swiper = new Swiper(".brands__slider", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+}
+    
 // Testimonial Slider 
 const testimonialSlider = document.querySelector('.testimonial__slider-wrapper');
 if (testimonialSlider) {
   var swiper = new Swiper(".testimonial__slider-wrapper", {
-        slidesPerView: 1,
-        spaceBetween: 10,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        breakpoints: {
-        601: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        993: {
-          slidesPerView: 3,
-          spaceBetween: 40,
-        },
+      slidesPerView: 1,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
       },
-      });
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+      601: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      993: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+    },
+    });
 }
       
