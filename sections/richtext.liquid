@@ -8,22 +8,27 @@
   <div class="page__width">
     <div class="text__wrapper text__align-{{ section.settings.text_alignment }}">
       {%- for block in section.blocks -%}
-        {%- if block.settings.text_sub_heading != blank -%}
-          <div class="sub__heading">{{ block.settings.text_sub_heading }}</div>
-        {%- endif -%}
-        {%- if block.settings.text_main_heading != blank -%}
-          <div class="main__heading rich-text__heading">
-            <h2>{{ block.settings.text_main_heading }}</h2>
-          </div>
-        {%- endif -%}
-        {%- if block.settings.text_description != blank -%}
-          <div class="rich-text__text">
-            <div class="rte">
-              {{ block.settings.text_description }}
+        {%- case block.type -%}
+          {%- when 'subheading' -%}
+          {%- if block.settings.text_sub_heading != blank -%}
+            <div class="sub__heading">{{ block.settings.text_sub_heading }}</div>
+          {%- endif -%}
+
+          {%- when 'heading' -%}
+          {%- if block.settings.text_main_heading != blank -%}
+            <div class="main__heading rich-text__heading">
+              <h2>{{ block.settings.text_main_heading }}</h2>
             </div>
-          </div>
-        {%- endif -%}
-        <div class="rich-text__buttons">
+          {%- endif -%}
+          {%- when 'text' -%}
+          {%- if block.settings.text_description != blank -%}
+            <div class="rich-text__text">
+              <div class="rte">
+                {{ block.settings.text_description }}
+              </div>
+            </div>
+          {%- endif -%}
+          {%- when 'button' -%}
           {%- if block.settings.richtext_button_label != blank -%}
             <div class="btn btn__primary">
               <a
@@ -32,7 +37,10 @@
                 title="{{ block.settings.richtext_button_label }}">{{ block.settings.richtext_button_label }}</a>
             </div>
           {%- endif -%}
-        </div>
+          {% comment %} <div class="rich-text__buttons">
+
+          </div> {% endcomment %}
+        {%- endcase -%}
       {%- endfor -%}
     </div>
   </div>
