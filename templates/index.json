@@ -65,13 +65,21 @@
             "richtext_button_label": "SHOP MEN",
             "richtext_button_link": ""
           }
+        },
+        "a4fa9ef8-6bc4-4c30-8327-8e03be4edd50": {
+          "type": "button",
+          "settings": {
+            "richtext_button_label": "Shop Women",
+            "richtext_button_link": ""
+          }
         }
       },
       "block_order": [
         "81265f92-59fc-4bb4-a982-f9f817ade75f",
         "207d8025-4896-4f5e-9355-777ee730fe0e",
         "ca2dd0aa-2a42-41ad-bfa5-153c89c4a4a1",
-        "a7cad5b9-080e-4980-971f-544b5b8d02b6"
+        "a7cad5b9-080e-4980-971f-544b5b8d02b6",
+        "a4fa9ef8-6bc4-4c30-8327-8e03be4edd50"
       ],
       "settings": {
         "text_alignment": "center",
