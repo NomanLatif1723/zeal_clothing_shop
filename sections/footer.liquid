@@ -24,10 +24,9 @@
     <div class="page__width">
       <div class="site__grid">
         {%- for block in section.blocks -%}
-          
           {%- case block.type -%}
             {%- when 'text' -%}
-            <div class="site__grid-item site__grid-text grid__item-{{ block.id }}">
+            <div class="site__grid-item site__grid-text grid__item-{{ block.id }}" {{ block.shopify_attributes }}>
               <div class="site__item-block">
                 <div class="footer__logo-block">
                   {%- if block.settings.footer_logo != blank -%}
