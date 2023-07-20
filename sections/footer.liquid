@@ -1,4 +1,4 @@
-{% style %}
+{%- style -%}
   .footer__bottom-section {
     background: {{ settings.footer_background }};
     color: {{ settings.footer_text }};
@@ -9,19 +9,22 @@
   .copyright__text {
     color: {{ settings.footer_text }};
   }
-{% endstyle %}
-<footer class="site__footer">
-  <div class="site__footer-banner">
-    <div class="page__width">
-      <div class="site__grid">
-        {%- for block in section.blocks -%}
-          {%- style -%}
+{%- endstyle -%}
+{%- for block in section.blocks -%}
+  {%- style -%}
             @media only screen and (min-width:960px) {
               .grid__item-{{ block.id }}{
                 width: {{ block.settings.footer_column_width }}%;
               }
             }
           {%- endstyle -%}
+{%- endfor -%}
+<footer class="site__footer">
+  <div class="site__footer-banner">
+    <div class="page__width">
+      <div class="site__grid">
+        {%- for block in section.blocks -%}
+          
           {%- case block.type -%}
             {%- when 'text' -%}
             <div class="site__grid-item site__grid-text grid__item-{{ block.id }}">
