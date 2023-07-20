@@ -257,6 +257,79 @@
         "name": "Testimonials"
       }
     },
+    "blog-posts":{
+      "name": "Blog Posts",
+      "settings": {
+        "alignment": {
+          "label": "Text alignment",
+          "options": {
+            "left": {
+              "label": "Left"
+            },
+            "center": {
+              "label": "Center"
+            },
+            "right": {
+              "label": "Right"
+            }
+          }
+        },
+        "posts_heading": {
+          "label": "Heading"
+        },
+        "posts_text": {
+          "label": "Text"
+        },
+        "blog": {
+          "label": "Blog"
+        },
+        "blog_show_date": {
+          "label": "Show Date"
+        },
+        "blog_show_tags": {
+          "label": "Show Tags"
+        },
+        "posts_range_label": {
+          "label": "Posts To Show"
+        },
+        "blog_show_viewall": {
+          "label": "Enable 'View All' Button",
+          "info": "Enable 'View All' if blogs have more posts than Shown"
+        },
+        "blog_image_size": {
+          "label": "Image Size",
+          "options": {
+            "natural": {
+              "label": "Natural"
+            },
+            "square": {
+              "label": "Square(1:1)"
+            },
+            "portrait": {
+              "label": "Portrait(2:3)"
+            },
+            "landscape": {
+              "label": "Landscape(4:3)"
+            },
+            "wide": {
+              "label": "Wide(16:9)"
+            }
+          }
+        },
+        "header_spacing": {
+          "label": "Section Spacing",
+          "top_spacing": {
+            "label": "Spacing Top"
+          },
+          "bottom_spacing": {
+            "label": "Spacing Bottom"
+          }
+        }
+      },
+      "presets": {
+        "name": "Blog Posts"
+      }
+    },
     "footer": {
       "name": "Footer",
       "settings": {
