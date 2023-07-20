@@ -83,10 +83,10 @@
         },
         "header_spacing": {
           "label": "Section Spacing",
-          "top_padding": {
+          "top_spacing": {
             "label": "Padding Top"
           },
-          "bottom_padding": {
+          "bottom_spacing": {
             "label": "Padding Bottom"
           }
         }
@@ -126,10 +126,10 @@
         },
         "header_spacing": {
           "label": "Section Spacing",
-          "top_padding": {
+          "top_spacing": {
             "label": "Padding Top"
           },
-          "bottom_padding": {
+          "bottom_spacing": {
             "label": "Padding Bottom"
           }
         }
