@@ -15,13 +15,13 @@
     <div class="page__width">
       <div class="site__grid">
         {%- for block in section.blocks -%}
-          {% style %}
+          {%- style -%}
             @media only screen and (min-width:960px) {
               .grid__item-{{ block.id }}{
                 width: {{ block.settings.footer_column_width }}%;
               }
             }
-          {% endstyle %}
+          {%- endstyle -%}
           {%- case block.type -%}
             {%- when 'text' -%}
             <div class="site__grid-item site__grid-text grid__item-{{ block.id }}">
