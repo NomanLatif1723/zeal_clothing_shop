@@ -1,7 +1,9 @@
 <style>
   .main__section-{{ section.id }}{
-    margin-top: {{ section.settings.margin_top }}px;
-    margin-bottom: {{ section.settings.margin_bottom }}px;
+    margin-top: {{ section.settings.margin_top }}
+    px;
+    margin-bottom: {{ section.settings.margin_bottom }}
+    px;
   }
 </style>
 <div class="text__container main__section-{{ section.id }}">
@@ -48,6 +50,7 @@
   {
     "name": "t:sections.richtext.name",
     "class": "main__section",
+    "max_blocks": 4,
     "settings": [
       {
         "type": "select",
@@ -66,47 +69,6 @@
           }
         ],
         "default": "center"
-      },
-      {
-        "type": "text",
-        "id": "text_sub_heading",
-        "label": "t:sections.richtext.settings.richtext_subheading.label",
-        "default": "Sub Heading"
-      },
-      {
-        "type": "text",
-        "id": "text_main_heading",
-        "label": "t:sections.richtext.settings.richtext_main_heading.label",
-        "default": "Heading"
-      },
-      {
-        "type": "richtext",
-        "id": "text_description",
-        "label": "t:sections.richtext.settings.richtext_text_description.label"
-      }, {
-        "type": "header",
-        "content": "t:sections.richtext.settings.header_first_button.label"
-      }, {
-        "type": "text",
-        "id": "shop_btn_1",
-        "label": "t:sections.richtext.settings.header_first_button.button_label.label",
-        "default": "Button"
-      }, {
-        "type": "url",
-        "id": "button_link_1",
-        "label": "t:sections.richtext.settings.header_first_button.button_link.label"
-      }, {
-        "type": "header",
-        "content": "t:sections.richtext.settings.header_second_button.label"
-      }, {
-        "type": "text",
-        "id": "shop_btn_2",
-        "label": "t:sections.richtext.settings.header_second_button.button_label.label",
-        "default": "Button"
-      }, {
-        "type": "url",
-        "id": "button_link_2",
-        "label": "t:sections.richtext.settings.header_second_button.button_link.label"
       }, {
         "type": "header",
         "content": "t:sections.richtext.settings.header_spacing.label"
@@ -129,12 +91,74 @@
         "label": "t:sections.richtext.settings.header_spacing.bottom_spacing.label",
         "default": 16
       }
+    ],
+    "blocks": [
+      {
+        "type": "subheading",
+        "name": "t:sections.richtext.blocks.subheading.name",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "text_sub_heading",
+            "label": "t:sections.richtext.blocks.subheading.settings.richtext_subheading.label",
+            "default": "Sub Heading"
+          }
+        ]
+      }, {
+        "type": "heading",
+        "name": "t:sections.richtext.blocks.heading.name",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "text_main_heading",
+            "label": "t:sections.richtext.blocks.heading.settings.richtext_main_heading.label",
+            "default": "Heading"
+          }
 
-
+        ]
+      }, {
+        "type": "text",
+        "name": "t:sections.richtext.blocks.text.name",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "text_description",
+            "label": "t:sections.richtext.blocks.text.settings.richtext_text_description.label"
+          }
+        ]
+      }, {
+        "type": "button",
+        "name": "t:sections.richtext.blocks.button.name",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "richtext_button_label",
+            "label": "t:sections.richtext.blocks.button.settings.button_label.label",
+            "default": "Button"
+          }, {
+            "type": "url",
+            "id": "richtext_button_link",
+            "label": "t:sections.richtext.blocks.button.settings.button_link.label"
+          }
+        ]
+      }
     ],
     "presets": [
       {
-        "name": "t:sections.richtext.presets.name"
+        "name": "t:sections.richtext.presets.name",
+        "blocks": [
+          {
+            "type": "subheading"
+          }, {
+            "type": "heading"
+          }, {
+            "type": "text"
+          }
+        ]
       }
     ]
   }
