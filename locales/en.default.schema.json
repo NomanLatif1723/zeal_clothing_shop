@@ -257,7 +257,7 @@
         "name": "Testimonials"
       }
     },
-    "blog-posts":{
+    "blog-posts": {
       "name": "Blog Posts",
       "settings": {
         "alignment": {

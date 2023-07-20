@@ -87,6 +87,22 @@
         "margin_bottom": 60
       }
     },
+    "01666e88-11d5-4970-8587-55e3cb27e243": {
+      "type": "posts",
+      "settings": {
+        "text_alignment": "center",
+        "posts_main_heading": "Heading",
+        "posts_main_text": "Blog Post Text",
+        "blog": "",
+        "posts_to_show": 3,
+        "show_date": false,
+        "show_tags": false,
+        "show_view_all_btn": false,
+        "post_image_size": "natural",
+        "margin_top": 16,
+        "margin_bottom": 16
+      }
+    },
     "0a5d7332-5a60-4baf-bf6a-adbba595c25e": {
       "type": "testimonials",
       "blocks": {
@@ -172,6 +188,7 @@
   "order": [
     "d534c664-a5a4-4f55-b829-6446be3b3cdb",
     "b2c49c1e-4880-4b9e-90e7-0135ddd0a9b9",
+    "01666e88-11d5-4970-8587-55e3cb27e243",
     "0a5d7332-5a60-4baf-bf6a-adbba595c25e",
     "92018c5b-7aa4-4095-92a7-00221b583a17"
   ]
