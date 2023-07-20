@@ -42,9 +42,9 @@ if(timerEl){
           prevEl: ".swiper-button-prev",
         },
       });
-const testimonialSlider = document.querySelector('.testimonial_slider-wrapper');
+const testimonialSlider = document.querySelector('.testimonial__slider-wrapper');
 if (testimonialSlider) {
-  var swiper = new Swiper(".testimonial_slider-wrapper", {
+  var swiper = new Swiper(".testimonial__slider-wrapper", {
         slidesPerView: 1,
         spaceBetween: 10,
         navigation: {
