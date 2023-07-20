@@ -84,10 +84,10 @@
         "header_spacing": {
           "label": "Section Spacing",
           "top_spacing": {
-            "label": "Padding Top"
+            "label": "Spacing Top"
           },
           "bottom_spacing": {
-            "label": "Padding Bottom"
+            "label": "Spacing Bottom"
           }
         }
       },
@@ -127,10 +127,10 @@
         "header_spacing": {
           "label": "Section Spacing",
           "top_spacing": {
-            "label": "Padding Top"
+            "label": "Spacing Top"
           },
           "bottom_spacing": {
-            "label": "Padding Bottom"
+            "label": "Spacing Bottom"
           }
         }
       },
@@ -144,10 +144,10 @@
         "header_spacing": {
           "label": "Section Spacing",
           "top_spacing": {
-            "label": "Padding Top"
+            "label": "Spacing Top"
           },
           "bottom_spacing": {
-            "label": "Padding Bottom"
+            "label": "Spacing Bottom"
           }
         },
         "blocks": {
