@@ -40,15 +40,41 @@
     },
     "b2c49c1e-4880-4b9e-90e7-0135ddd0a9b9": {
       "type": "richtext",
+      "blocks": {
+        "81265f92-59fc-4bb4-a982-f9f817ade75f": {
+          "type": "subheading",
+          "settings": {
+            "text_sub_heading": "Sub Heading"
+          }
+        },
+        "207d8025-4896-4f5e-9355-777ee730fe0e": {
+          "type": "heading",
+          "settings": {
+            "text_main_heading": "Heading"
+          }
+        },
+        "ca2dd0aa-2a42-41ad-bfa5-153c89c4a4a1": {
+          "type": "text",
+          "settings": {
+            "text_description": ""
+          }
+        },
+        "a7cad5b9-080e-4980-971f-544b5b8d02b6": {
+          "type": "button",
+          "settings": {
+            "richtext_button_label": "Button",
+            "richtext_button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "81265f92-59fc-4bb4-a982-f9f817ade75f",
+        "207d8025-4896-4f5e-9355-777ee730fe0e",
+        "ca2dd0aa-2a42-41ad-bfa5-153c89c4a4a1",
+        "a7cad5b9-080e-4980-971f-544b5b8d02b6"
+      ],
       "settings": {
         "text_alignment": "center",
-        "text_sub_heading": "Find Your Perfect Fit",
-        "text_main_heading": "Our Commitment to Comfort",
-        "text_description": "<p>At Zeal, we're passionate about creating comfortable and stylish clothing for our customers. Our clothing is made with high-quality materials and designed with your comfort in mind, whether you're lounging at home or out running errands.<\/p><p> From loose fitting t-shirts and sweaters to flowy dresses and pants, our clothing will keep you feeling comfortable and confident all day long. <\/p><p>Shop our collection today and experience the comfort and style of loose wearing clothing for yourself.<\/p>",
-        "shop_btn_1": "SHOP MEN",
-        "button_link_1": "",
-        "shop_btn_2": "SHOP WOMEN",
-        "button_link_2": "",
         "margin_top": 60,
         "margin_bottom": 60
       }
@@ -118,7 +144,7 @@
         "testimonial_heading": "Hear from our happy customers",
         "testimonial_text": "Browse our testimonials to see real feedback from people who have tried and loved our products.",
         "text_alignment": "center",
-        "testimonial_background_color": "#fff",
+        "testimonial_background_color": "#ffffff",
         "testimonial_text_color": "#111111"
       }
     },
