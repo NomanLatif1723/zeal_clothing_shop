@@ -551,16 +551,7 @@ blockquote.testimonial__text {
     position: relative;
 }
 
-.slider__arrows-container {
-    position: absolute;
-    right: 0;
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    flex-direction: row-reverse;
-}
+
 .testimonial__content .swiper-button-next, .testimonial__content .swiper-button-prev {
     margin-top: 0;
     left: auto;
@@ -578,4 +569,16 @@ blockquote.testimonial__text {
 .testimonial__content .swiper-button-next:after, .testimonial__content .swiper-button-prev:after {
     font-size: 12px!important;
     font-weight: 400;
+}
+@media only screen and (min-width:769px){
+  .slider__arrows-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: row-reverse;
+  }
 }
