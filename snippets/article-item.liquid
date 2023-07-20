@@ -1,0 +1,7 @@
+{% liquid
+    assign article_aspect_ratio = false
+    unless image-size == 'natural'
+    assign article_aspect_ratio = true
+    endunless
+%}
+<div class="grid__item"></div>

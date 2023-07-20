@@ -1,6 +1,67 @@
 {% style %}
   
 {% endstyle %}
+{% liquid
+   assign blog = blogs[section.settings.blog] 
+%}
+<div class="blog-post__wrapper">
+  <div class="page__width">
+    <div class="blog-post__content text__align-{{ section.settings.text_alignment }}">
+      <header class="blog-post__header">
+        {% if section.settings.posts_main_heading != blank %}
+        <div class="main__heading blog-post__heading">
+          <h2>{{ section.settings.posts_main_heading }}</h2>
+        </div>
+        {% endif %}
+        {% if section.settings.posts_main_text != blank %}
+          <div class="blog__text rte">
+            {{ section.settings.posts_main_text }}
+          </div>
+        {% endif %}
+      </header>
+      {% unless blog.empty? or blog.articles.size == 0 %}
+      <div class="blog__grid">
+        {% for article in blog.articles limit: section.settings.posts_to_show %}
+          {% render 'article-item', 
+          article: article,
+          blog: blog,
+          image-size: section.settings.post_image_size,
+          show_date: section.settings.show_date,
+          show_tags: section.settings.show_tags
+          %}
+        {% endfor %}
+
+      </div>
+      {% else %}
+      <div class="blog__grid">
+        {% for i in (1..section.settings.posts_to_show) %}
+          <div class="blog__grid-item">
+            <div class="blog__grid">
+              <div class="blog__grid-item">
+                <a href="#" class="article__image">
+                  {{ 'image' | placeholder_svg_tag: "placeholder__image" }}
+                </a>
+                <div class="grid__item-text">
+                  <div class="article__type-date">
+        Fashion--{% if section.settings.show_date %}25 Apr 2023{% endif %}
+                  </div>
+                  <div class="article__title">
+                    Example Article Title
+                  </div>
+                  <div class="article__content">
+                    Example Article Content 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      {% endunless %}
+      
+    </div>
+  </div>
+</div>
 <h2>blog post</h2>
 {% schema %}
   {
@@ -115,7 +176,10 @@
     ],
     "presets": [
       {
-        "name": "t:sections.blog-posts.presets.name"
+        "name": "t:sections.blog-posts.presets.name",
+        "settings": {
+          "posts_to_show": 4
+        }
       }
     ],
     "disabled_on": {
