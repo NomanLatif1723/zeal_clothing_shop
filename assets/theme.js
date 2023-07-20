@@ -51,13 +51,10 @@ const testimonialSlider = document.querySelector('.testimonial__slider-wrapper')
 if (testimonialSlider) {
   var swiper = new Swiper(".testimonial__slider-wrapper", {
       slidesPerView: 1,
+      loop: true,
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
-      },
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
       },
       pagination: {
         el: ".swiper-pagination",
