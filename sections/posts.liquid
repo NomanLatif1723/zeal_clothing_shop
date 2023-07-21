@@ -40,7 +40,7 @@
         {% endif %}
       </header>
       {% unless blog.empty? or blog.articles.size == 0 %}
-        <div class="blog__grid">
+        <div class="grid blog__grid">
           {% for article in blog.articles limit: posts_to_show %}
             {% render 'article-item' 
              , article: article,
@@ -52,7 +52,7 @@
 
         </div>
       {% else %}
-        <div class="grid blog__grid">
+        <div class="grid blog__grid"> 
           {% for i in (1..posts_to_show) %}
             <div class="grid__item grid__item-one-third">
               <div class="grid article__grid ">
