@@ -33,11 +33,11 @@
 
       </div>
       {% else %}
-      <div class="blog__grid">
+      <div class="grid blog__grid">
         {% for i in (1..section.settings.posts_to_show) %}
-          <div class="blog__grid-item blog__grid-one-third">
-            <div class="blog__grid">
-              <div class="blog__grid-item">
+          <div class="grid__item grid__item-one-third">
+            <div class="grid article__grid ">
+              <div class="grid__item grid__item-small">
                 <a href="#" class="article__image">
                   {{ 'image' | placeholder_svg_tag: "placeholder__image article__placeholder" }}
                 </a>
