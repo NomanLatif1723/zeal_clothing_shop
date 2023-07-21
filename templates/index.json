@@ -90,14 +90,14 @@
     "01666e88-11d5-4970-8587-55e3cb27e243": {
       "type": "posts",
       "settings": {
-        "text_alignment": "left",
-        "posts_main_heading": "Heading",
+        "text_alignment": "center",
+        "posts_main_heading": "Our latest News",
         "posts_main_text": "Blog Post Text",
         "blog": "",
         "posts_to_show": 6,
-        "show_date": false,
-        "show_tags": false,
-        "show_view_all_btn": false,
+        "show_date": true,
+        "show_tags": true,
+        "show_view_all_btn": true,
         "post_image_size": "natural",
         "margin_top": 60,
         "margin_bottom": 60
