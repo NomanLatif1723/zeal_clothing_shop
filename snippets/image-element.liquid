@@ -3,14 +3,7 @@
     assign image_element = img-element  
     assign alt = image_element.alt | default: ''
 -%}
-{% assign image_element = asset | shopify_asset_url %}
-{%- capture img_widths -%}
-    {{ asset | asset_img_url: '360x' }} 360w,
-    {{ asset | asset_img_url: '540x' }} 540w,
-    {{ asset | asset_img_url: '720x' }} 720w,
-    {{ asset | asset_img_url: '900x' }} 900w,
-    {{ asset | asset_img_url: '1080x' }} 1080w
-{%- endcapture -%}
+
 <img loading="lazy"
   src="{{ image_element | img_url: img-width  }}"
   width="{{ img-width }}"
