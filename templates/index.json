@@ -94,7 +94,7 @@
         "posts_main_heading": "Heading",
         "posts_main_text": "Blog Post Text",
         "blog": "",
-        "posts_to_show": 3,
+        "posts_to_show": 6,
         "show_date": false,
         "show_tags": false,
         "show_view_all_btn": false,
