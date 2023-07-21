@@ -27,10 +27,10 @@
           {{ article.handle }}--{% if show_date %}
             {{ article.created_at }}{% endif %}
         </div>
-        <div class="article__title">
-          {{ article.title }}
+        <div class="main__heading article__title">
+          <h2>{{ article.title }}</h2>
         </div>
-        <div class="article__content">
+        <div class="article__content rte">
           {{ article.content | truncatewords: 30 | strip_html }}
         </div>
         {% if show_tags %}
@@ -41,7 +41,7 @@
           </ul>
         {% endif %}
         <div class="btn read__more-btn">
-          <span>Read More..</span>
+          <h3>Read More..</h3>
         </div>
       </div>
     </div>
