@@ -19,7 +19,11 @@
              {% comment %} 
         <img src="{{ article.image | img_url: "master" }}" loading="lazy" width="" height="">
               {% endcomment %}
-              {% render 'image-element', img-element: article.image %}
+              {% render 'image-element',
+                img-element: article.image,
+                sizes: '33vw',
+                widths: '360, 540, 720, 900, 1080',
+              %}
         
             </div>
           </a>
