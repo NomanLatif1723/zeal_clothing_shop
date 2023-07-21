@@ -27,7 +27,7 @@
             class="article__image">
             <div class="article_image-wrapper">
               
-            <img style="aspect-ratio: {{ imageAspectRatio }};" src="{{ article.image | img_url: "460x340" }}" loading="lazy" width="460" height="340">
+            <img style="aspect-ratio: {{ imageAspectRatio }};" src="{{ article.image | img_url: "master" }}" loading="lazy" width="" height="">
               {% comment %}
               {% render 'image-element',
                 img-element: article.image
