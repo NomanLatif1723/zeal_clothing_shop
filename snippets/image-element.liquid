@@ -3,7 +3,7 @@
     assign image_element = img-element  
     assign alt = image_element.alt | default: ''
 -%}
-{% assign img_src = asset | shopify_asset_url %}
+{% assign image_element = asset | shopify_asset_url %}
 {%- capture img_widths -%}
     {{ asset | asset_img_url: '360x' }} 360w,
     {{ asset | asset_img_url: '540x' }} 540w,
