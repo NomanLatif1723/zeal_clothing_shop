@@ -28,7 +28,7 @@
             {{ article.created_at | date: '%d %b %Y' }}{% endif %}</span>
         </div>
         <div class="main__heading article__title">
-          <h2>{{ article.title }}</h2>
+          <h3>{{ article.title }}</h3>
         </div>
         <div class="article__content rte">
           {{ article.content | truncatewords: 30 | strip_html }}
