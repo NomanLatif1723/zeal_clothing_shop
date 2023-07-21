@@ -1,22 +1,21 @@
 {%-  liquid 
     assign class = classes | escape
     assign image_element = img-element  
+    assign alt = image_element.alt | default: ''
 -%}
 {%- capture img_widths -%}
-  {% if host == 'theme' %}
     {{ asset | asset_img_url: '360x' }} 360w,
     {{ asset | asset_img_url: '540x' }} 540w,
     {{ asset | asset_img_url: '720x' }} 720w,
     {{ asset | asset_img_url: '900x' }} 900w,
     {{ asset | asset_img_url: '1080x' }} 1080w
-  {% endif %}
 {%- endcapture -%}
 <img loading="lazy"
   src="{{ image_element | img_url: img-width  }}"
   width="{{ img-width }}"
   height="{{ img-height }}"
   class="{{ class }}"
-  alt="{{ image_element.alt }}"
+  alt="{{ alt }}"
   srcset="{{ img_widths }}"
   >
 {% comment %} <img
