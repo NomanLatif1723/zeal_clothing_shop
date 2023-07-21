@@ -5,6 +5,8 @@
   assign image_size = section.settings.post_image_size
   assign show_date = section.settings.show_date
   assign show_tags = section.settings.show_tags
+  assign show_view_all = section.settings.show_view_all_btn
+  
 
 %}
 {% style %}
@@ -77,10 +79,11 @@
           {% endfor %}
         </div>
       {% endunless %}
-
-      <div class="btn btn__primary view__all-btn">
-        <a class="btn__link" href="" title="View All">View All</a>
-      </div>
+      {% if show_view_all and blog.articles > posts_to_show %}
+        <div class="btn btn__primary view__all-btn">
+          <a class="btn__link" href="" title="View All">View All</a>
+        </div>
+      {% endif %}
 
     </div>
   </div>
