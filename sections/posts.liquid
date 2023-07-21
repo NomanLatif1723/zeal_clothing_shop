@@ -72,8 +72,8 @@
                     </div>
                     {% if show_tags %}
                       <ul class="tags__list">
-                        {% for tags in blog.all_tags %}
-                          <li>{{ tags }}</li>
+                        {% for tag in article.tags %}
+                          <li>{{ tag }}</li>
                         {% endfor %}
                       </ul>
                     {% endif %}
