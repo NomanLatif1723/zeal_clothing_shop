@@ -16,15 +16,12 @@
             aria-label="{{ article.title | escape }}"
             class="article__image">
             <div class="article_image-wrapper">
-             {% comment %} 
-        <img src="{{ article.image | img_url: "master" }}" loading="lazy" width="" height="">
-              {% endcomment %}
+            <img src="{{ article.image | img_url: "460x340" }}" loading="lazy" width="" height="">
+              {% comment %}
               {% render 'image-element',
-                img-element: article.image,
-                sizes: '33vw',
-                widths: '360, 540, 720, 900, 1080',
+                img-element: article.image
               %}
-        
+        {% endcomment %}
             </div>
           </a>
         </div>
