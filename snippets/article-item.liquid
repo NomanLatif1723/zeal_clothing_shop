@@ -1,8 +1,6 @@
 {% liquid
-    assign article_aspect_ratio = false
-    unless image-size == 'natural'
-    assign article_aspect_ratio = true
-    endunless
+    assign selectedImageSize = image-size
+    
 %}
 
 <div class="grid__item grid__item-one-third">
