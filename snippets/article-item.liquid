@@ -16,7 +16,7 @@
             aria-label="{{ article.title | escape }}"
             class="article__image">
             <div class="article_image-wrapper">
-              {% render 'image-element', img-element: article.image %}
+              {% render 'image-element', img-element: article.image, img-width: 460, img-height: 330 %}
             </div>
           </a>
         </div>
