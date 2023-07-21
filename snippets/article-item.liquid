@@ -36,7 +36,7 @@
           <a href="{{ article.url }}" title="{{ article.title }}"><h3>{{ article.title }}</h3></a>
         </div>
         <div class="article__content rte">
-          {{ article.content | truncatewords: 30 | strip_html }}
+          {{ article.content | truncatewords: 15 | strip_html }}
         </div>
         {% if show_tags %}
           <ul class="tags__list">
