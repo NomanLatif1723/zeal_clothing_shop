@@ -96,7 +96,7 @@
         "blog": "testing",
         "posts_to_show": 3,
         "show_date": true,
-        "show_tags": false,
+        "show_tags": true,
         "show_view_all_btn": true,
         "post_image_size": "natural",
         "margin_top": 60,
