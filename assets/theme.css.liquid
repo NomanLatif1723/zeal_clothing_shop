@@ -635,19 +635,25 @@ blockquote.testimonial__text {
 
 @media only screen and(min-width:769px){
   .blog__grid {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .blog__grid-item {
-      width: 33.33%;
-  }
-  
-  .article__image {
-      display: block;
-  }
-  
-  header.blog-post__header {
-      padding-bottom: 20px;
-  }
+    margin: 0 0 0 -20px;
+}
+
+.article__image {
+    display: block;
+}
+
+header.blog-post__header {
+    padding-bottom: 20px;
+}
+
+.blog__grid-one-third {
+    width: 33.33%;
+}
+
+.blog__grid-item {
+    float: left;
+    padding-left: 20px;
+    width: 100%;
+    min-height: 1px;
+}
 }
