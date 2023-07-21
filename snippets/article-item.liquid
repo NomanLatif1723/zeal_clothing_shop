@@ -36,7 +36,7 @@
         {% if show_tags %}
           <ul class="tags__list">
             {% for tag in article.tags %}
-              <li>{{ tag }}</li>
+              <li>{{ tag | truncate: 3 }}</li>
             {% endfor %}
           </ul>
         {% endif %}
