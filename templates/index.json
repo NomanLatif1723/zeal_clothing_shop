@@ -90,7 +90,7 @@
     "01666e88-11d5-4970-8587-55e3cb27e243": {
       "type": "posts",
       "settings": {
-        "text_alignment": "center",
+        "text_alignment": "left",
         "posts_main_heading": "Heading",
         "posts_main_text": "Blog Post Text",
         "blog": "",
