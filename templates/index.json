@@ -98,7 +98,7 @@
         "show_date": true,
         "show_tags": true,
         "show_view_all_btn": true,
-        "post_image_size": "square",
+        "post_image_size": "natural",
         "margin_top": 60,
         "margin_bottom": 60
       }
