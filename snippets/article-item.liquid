@@ -4,36 +4,46 @@
     assign article_aspect_ratio = true
     endunless
 %}
-<div class="grid blog__grid">
-  {% for i in (1..posts_to_show) %}
-    <div class="grid__item grid__item-one-third">
-      <div class="grid article__grid ">
-        <div class="grid__item grid__item-small">
-          <div class="grid__item-image">
-            <a href="#" class="article__image">
-              {{ 'image' | placeholder_svg_tag: "placeholder__image article__placeholder" }}
-            </a>
-          </div>
-          <div class="grid__item-text">
-            <div class="article__type-date">
-              Fashion--{% if show_date %}25 Apr 2023{% endif %}
+
+<div class="grid__item grid__item-one-third">
+  <div class="grid article__grid ">
+    <div class="grid__item grid__item-small">
+      {% if article.image %}
+        <div class="grid__item-image">
+          <a
+            href="{{ article.url }}"
+            title="{{ article.title }}"
+            aria-label="{{ article.title | escape }}"
+            class="article__image">
+            <div class="article_image-wrapper">
+              {% render 'image-element', img-element: article.image %}
             </div>
-            <div class="article__title">
-              Example Article Title
-            </div>
-            <div class="article__content">
-              Example Article Content
-            </div>
-            {% if show_tags %}
-              <ul class="tags__list">
-                {% for tags in blog.all_tags %}
-                  <li>{{ tags }}</li>
-                {% endfor %}
-              </ul>
-            {% endif %}
-          </div>
+          </a>
+        </div>
+      {% endif %}
+
+      <div class="grid__item-text">
+        <div class="article__type-date">
+          {{ article.handle }}--{% if show_date %}
+            {{ article.created_at }}{% endif %}
+        </div>
+        <div class="article__title">
+          {{ article.title }}
+        </div>
+        <div class="article__content">
+          {{ article.content | truncatewords: 30 | strip_html }}
+        </div>
+        {% if show_tags %}
+          <ul class="tags__list">
+            {% for tags in blog.all_tags %}
+              <li>{{ tags }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+        <div class="btn read__more-btn">
+          <span>Read More..</span>
         </div>
       </div>
     </div>
-  {% endfor %}
+  </div>
 </div>
