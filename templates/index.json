@@ -46,7 +46,7 @@
         "template--19980215124290__99f1f786-cfa8-4d76-bd14-7dcb32939b9f-slide-3"
       ],
       "settings": {
-        "slide_height_desktop": "extended",
+        "slide_height_desktop": "natural",
         "slide_height_mobile": "auto",
         "slide_automation": false,
         "slide_change_duration": 4,
