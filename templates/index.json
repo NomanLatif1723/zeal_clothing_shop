@@ -1,5 +1,58 @@
 {
   "sections": {
+    "99f1f786-cfa8-4d76-bd14-7dcb32939b9f": {
+      "type": "slideshow",
+      "blocks": {
+        "template--19980215124290__99f1f786-cfa8-4d76-bd14-7dcb32939b9f-slide-1": {
+          "type": "slide",
+          "settings": {
+            "desktop_content_position": "center-left",
+            "text_alignment": "center",
+            "slide_heading": "Heading",
+            "slide_text": "Slide Text",
+            "slide_button_label": "Button",
+            "slide_button_link": "",
+            "slide_overlay_opacity": 0
+          }
+        },
+        "template--19980215124290__99f1f786-cfa8-4d76-bd14-7dcb32939b9f-slide-2": {
+          "type": "slide",
+          "settings": {
+            "desktop_content_position": "center-left",
+            "text_alignment": "center",
+            "slide_heading": "Heading",
+            "slide_text": "Slide Text",
+            "slide_button_label": "Button",
+            "slide_button_link": "",
+            "slide_overlay_opacity": 0
+          }
+        },
+        "template--19980215124290__99f1f786-cfa8-4d76-bd14-7dcb32939b9f-slide-3": {
+          "type": "slide",
+          "settings": {
+            "desktop_content_position": "center-left",
+            "text_alignment": "center",
+            "slide_heading": "Heading",
+            "slide_text": "Slide Text",
+            "slide_button_label": "Button",
+            "slide_button_link": "",
+            "slide_overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "template--19980215124290__99f1f786-cfa8-4d76-bd14-7dcb32939b9f-slide-1",
+        "template--19980215124290__99f1f786-cfa8-4d76-bd14-7dcb32939b9f-slide-2",
+        "template--19980215124290__99f1f786-cfa8-4d76-bd14-7dcb32939b9f-slide-3"
+      ],
+      "settings": {
+        "slide_height_desktop": "natural",
+        "slide_height_mobile": "auto",
+        "slide_automation": false,
+        "slide_change_duration": 5,
+        "navigation_styles": "bars"
+      }
+    },
     "d534c664-a5a4-4f55-b829-6446be3b3cdb": {
       "type": "text-with-icon",
       "blocks": {
@@ -186,6 +239,7 @@
     }
   },
   "order": [
+    "99f1f786-cfa8-4d76-bd14-7dcb32939b9f",
     "d534c664-a5a4-4f55-b829-6446be3b3cdb",
     "b2c49c1e-4880-4b9e-90e7-0135ddd0a9b9",
     "01666e88-11d5-4970-8587-55e3cb27e243",
