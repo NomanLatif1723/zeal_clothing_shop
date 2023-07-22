@@ -50,6 +50,29 @@
     <div class="swiper-button-prev"></div>
   </div>
 </div>
+<script>
+
+  // Slideshow 
+
+  const slideshowWrapper = document.querySelector('.slideshow__slides');
+  if (slideshowWrapper) {
+    var swiper = new Swiper(".slideshow__slides", {
+      slidesPerView: 1,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },{%- if section.settings.slide_automation -%}
+        autoplay : {
+          delay: {{ section.settings.slide_change_duration | times: 1000 }},
+          disableOnInteraction: false
+        },{%- endif -%}
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      }
+    });
+  }
+</script>
 {% schema %}
   {
     "name": "t:sections.slideshow.name",
