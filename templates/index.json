@@ -230,7 +230,7 @@
       "settings": {
         "newsletter_heading": "Stay in the loop and subscribe to our newsletter today!",
         "button_label": "Join Us",
-        "text_alignment": "center",
+        "text_alignment": "left",
         "newsletter_background": "#fceaea",
         "newsletter_text": "#000000",
         "margin_top": 60,
