@@ -48,7 +48,7 @@
       "settings": {
         "slide_height_desktop": "natural",
         "slide_height_mobile": "auto",
-        "slide_automation": true,
+        "slide_automation": false,
         "slide_change_duration": 4,
         "navigation_styles": "bars"
       }
