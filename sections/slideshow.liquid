@@ -37,7 +37,11 @@
                       {{ block.settings.slide_text }}
                     </div>
                   {%- endif -%}
-                  {%- if block.settings.slide_button_label != blank -%}{%- endif -%}
+                  {%- if block.settings.slide_button_label != blank -%}
+                    <div class="btn outline__btn slide__btn">
+                      <a href="{{ block.settings.slide_button_link }}" title="{{ block.settings.slide_button_label }}">{{ block.settings.slide_button_label }}</a>
+                    </div>
+                  {%- endif -%}
                 </div>
               </div>
             </div>
@@ -61,12 +65,10 @@
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev"
-      },{%- if section.settings.slide_automation -%}
-        autoplay : {
+      },{%- if section.settings.slide_automation -%}autoplay : {
           delay: {{ section.settings.slide_change_duration | times: 1000 }},
           disableOnInteraction: false
-        },{%- endif -%}
-      pagination: {
+        },{%- endif -%}pagination: {
         el: ".swiper-pagination",
         clickable: true
       }
