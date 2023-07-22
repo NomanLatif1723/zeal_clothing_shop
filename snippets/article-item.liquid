@@ -1,4 +1,4 @@
-{% liquid
+{%- liquid
     assign selectedImageSize = image-size
     assign imageAspectRatio = "0"
     case selectedImageSize
@@ -13,12 +13,12 @@
     when 'wide'
     assign imageAspectRatio = "16/9"
     endcase
-%}
+-%}
 
 <div class="grid__item grid__item-one-third">
   <div class="grid article__grid ">
     <div class="grid__item grid__item-small">
-      {% if article.image %}
+      {%- if article.image -%}
         <div class="grid__item-image">
           <a
             href="{{ article.url }}"
@@ -26,36 +26,46 @@
             aria-label="{{ article.title | escape }}"
             class="article__image">
             <div class="article_image-wrapper">
-              
-            <img style="aspect-ratio: {{ imageAspectRatio }};" src="{{ article.image | img_url: "master" }}" loading="lazy" width="" height="">
-              {% comment %}
-              {% render 'image-element',
-                img-element: article.image
-              %}
-        {% endcomment %}
+
+              <img style="aspect-ratio: {{ imageAspectRatio }};"
+                src="{{ article.image | img_url: "master" }}"
+                loading="lazy"
+                width=""
+                height="">
+            {%- comment -%}
+            {%- render 'image-element',
+            img-element: article.image
+            -%}
+            {%- endcomment -%}
             </div>
           </a>
         </div>
-      {% endif %}
+      {%- endif -%}
 
       <div class="grid__item-text">
         <div class="article__type-date">
-          <h4>{{ article.tags[0] }}</h4><span class="article__date"> {% if show_date %} --
-            {{ article.created_at | date: '%d %b %Y' }}{% endif %}</span>
+          <h4>{{ article.tags[0] }}</h4>
+          <span class="article__date">
+            {%- if show_date -%}
+              --
+              {{ article.created_at | date: '%d %b %Y' }}{%- endif -%}
+          </span>
         </div>
         <div class="main__heading article__title">
-          <a href="{{ article.url }}" title="{{ article.title }}"><h3>{{ article.title }}</h3></a>
+          <a href="{{ article.url }}" title="{{ article.title }}">
+            <h3>{{ article.title }}</h3>
+          </a>
         </div>
         <div class="article__content rte">
           {{ article.content | truncatewords: 15 | strip_html }}
         </div>
-        {% if show_tags %}
+        {%- if show_tags -%}
           <ul class="tags__list">
-            {% for tag in article.tags limit: 3 %}
+            {%- for tag in article.tags limit: 3 -%}
               <li>{{ tag }}</li>
-            {% endfor %}
+            {%- endfor -%}
           </ul>
-        {% endif %}
+        {%- endif -%}
         <div class="btn read__more-btn">
           <h4>Read More..</h4>
         </div>

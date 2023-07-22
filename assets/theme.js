@@ -73,4 +73,25 @@ if (testimonialSlider) {
     },
     });
 }
+
+// Slideshow 
+
+const slideshowWrapper = document.querySelector('.slideshow__slides');
+if (slideshowWrapper) {
+  var swiper = new Swiper(".slideshow__slides", {
+    slidesPerView: 1,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+}
       

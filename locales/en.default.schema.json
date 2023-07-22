@@ -330,6 +330,145 @@
         "name": "Blog Posts"
       }
     },
+    "slideshow": {
+      "name": "Slideshow",
+      "settings": {
+        "section_height_desktop": {
+          "label": "Desktop Height",
+          "options": {
+            "natural": {
+              "label": "Natural"
+            },
+            "compact": {
+              "label": "Compact (450px)"
+            },
+            "standard": {
+              "label": "Standard (650px)"
+            },
+            "extended": {
+              "label": "Extended (750px)"
+            },
+            "full": {
+              "label": "Full Screen"
+            }
+          }
+        },
+        "section_height_mobile": {
+          "label": "Mobile Height",
+          "options": {
+            "auto": {
+              "label": "Auto"
+            },
+            "compact": {
+              "label": "Compact (300px)"
+            },
+            "standard": {
+              "label": "Standard (400px)"
+            },
+            "extended": {
+              "label": "Extended (500px)"
+            },
+            "full": {
+              "label": "Full Screen"
+            }
+          }
+        },
+        "show_auto_slides": {
+          "label": "Auto Change Slides"
+        },
+        "change_duration": {
+          "label": "Change Duration"
+        },
+        "navigation_styles": {
+          "label": "Navigation Styles",
+          "options": {
+            "dots": {
+              "label": "Dots"
+            },
+            "bars": {
+              "label": "Bars"
+            }
+          }
+        }
+      },
+      "blocks": {
+        "slide": {
+          "name": "Slide",
+          "settings": {
+            "content_position": {
+              "label": "Content Position",
+              "options": {
+                "top-left": {
+                  "label": "Top Left"
+                },
+                "top-center": {
+                  "label": "Top Center"
+                },
+                "top-right": {
+                  "label": "Top Right"
+                },
+                "center-left": {
+                  "label": "Center Left"
+                },
+                "center": {
+                  "label": "Center"
+                },
+                "center-right": {
+                  "label": "Center Right"
+                },
+                "bottom-left": {
+                  "label": "Bottom Left"
+                },
+                "bottom-center": {
+                  "label": "Bottom Center"
+                },
+                "bottom-right": {
+                  "label": "Bottom Right"
+                }
+              }
+            },
+            "alignment": {
+              "label": "Text alignment",
+              "options": {
+                "left": {
+                  "label": "Left"
+                },
+                "center": {
+                  "label": "Center"
+                },
+                "right": {
+                  "label": "Right"
+                }
+              }
+            },
+            "slide_heading": {
+              "label": "Heading"
+            },
+            "slide_text": {
+              "label": "Text"
+            },
+            "slide_button": {
+              "label": "Button"
+            },
+            "slide_button_link": {
+              "label": "Button Link"
+            },
+            "slide_image_desktop": {
+              "label": "Image"
+            },
+            "slide_image_mobile": {
+              "label": "Mobile Image"
+            },
+            "slide_image_opacity": {
+              "label": "Overlay Opacity"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Slideshow"
+      }
+    },
     "footer": {
       "name": "Footer",
       "settings": {

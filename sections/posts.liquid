@@ -1,4 +1,4 @@
-{% liquid
+{%- liquid
   assign section_heading = section.settings.posts_main_heading
   assign section_text = section.settings.posts_main_text
   assign posts_to_show = section.settings.posts_to_show
@@ -8,8 +8,8 @@
   assign show_view_all = section.settings.show_view_all_btn
   
 
-%}
-{% style %}
+-%}
+{%- style -%}
   .main__section-{{ section.id }}{
     margin-top: 30px;
     margin-bottom: 30px;
@@ -20,40 +20,40 @@
       margin-bottom: {{ section.settings.margin_bottom }}px;
     }
   }
-{% endstyle %}
-{% liquid
+{%- endstyle -%}
+{%- liquid
    assign blog = blogs[section.settings.blog] 
-%}
+-%}
 <div class="blog-post__wrapper main__section-{{ section.id }}">
   <div class="page__width">
     <div class="blog-post__content">
       <header class="blog-post__header text__align-{{ section.settings.text_alignment }}">
-        {% if section_heading != blank %}
+        {%- if section_heading != blank -%}
           <div class="main__heading blog-post__heading">
             <h2>{{ section_heading }}</h2>
           </div>
-        {% endif %}
-        {% if section_text != blank %}
+        {%- endif -%}
+        {%- if section_text != blank -%}
           <div class="blog__text rte">
             {{ section_text }}
           </div>
-        {% endif %}
+        {%- endif -%}
       </header>
-      {% unless blog.empty? or blog.articles.size == 0 %}
+      {%- unless blog.empty? or blog.articles.size == 0 -%}
         <div class="grid blog__grid">
-          {% for article in blog.articles limit: posts_to_show %}
-            {% render 'article-item' 
-             , article: article,
-             blog: blog,
-             image-size: image_size,
-             show_date: show_date,
-             show_tags: show_tags %}
-          {% endfor %}
+          {%- for article in blog.articles limit: posts_to_show -%}
+            {%- render 'article-item' 
+              , article: article,
+              blog: blog,
+              image-size: image_size,
+              show_date: show_date,
+              show_tags: show_tags -%}
+          {%- endfor -%}
 
         </div>
-      {% else %}
-        <div class="grid blog__grid"> 
-          {% for i in (1..posts_to_show) %}
+      {%- else -%}
+        <div class="grid blog__grid">
+          {%- for i in (1..posts_to_show) -%}
             <div class="grid__item grid__item-one-third">
               <div class="grid article__grid ">
                 <div class="grid__item grid__item-small">
@@ -64,7 +64,9 @@
                   </div>
                   <div class="grid__item-text">
                     <div class="article__type-date">
-                      <h4>Fashion</h4>--<span class="article__date">{% if show_date %}25 Apr 2023{% endif %}</span>
+                      <h4>Fashion</h4>--<span class="article__date">
+                        {%- if show_date -%}25 Apr 2023{%- endif -%}
+                      </span>
                     </div>
                     <div class="main__heading article__title">
                       <h3>Example Article Title</h3>
@@ -76,16 +78,19 @@
                 </div>
               </div>
             </div>
-          {% endfor %}
+          {%- endfor -%}
         </div>
-      {% endunless %}
-      {% if show_view_all and blog.articles.size > posts_to_show %}
+      {%- endunless -%}
+      {%- if show_view_all and blog.articles.size > posts_to_show -%}
         <div class="button__wrapper">
           <div class="btn btn__primary view__all-btn">
-            <a class="btn__link" href="" title="View All">View All</a>
+            <a
+              class="btn__link"
+              href=""
+              title="View All">View All</a>
           </div>
         </div>
-      {% endif %}
+      {%- endif -%}
 
     </div>
   </div>
