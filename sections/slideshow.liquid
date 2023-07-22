@@ -1,5 +1,9 @@
+{%- liquid
+    assign desktop_height = section.settings.slide_height_desktop
+    assign mobile_height = section.settings.slide_height_mobile
+-%}
 <div class="slideshow">
-  <div class="slideshow__slides swiper">
+  <div class="slideshow__slides swiper"{%- if desktop_height -%}data-desktop-height={{ desktop_height }}{%- else -%}data-mobile-height={{ mobile_height }}{%- endif -%}>
     <div class="slideshow__wrapper swiper-wrapper">
       {%- for block in section.blocks -%}
         <div class="slideshow__slide swiper-slide">
@@ -20,7 +24,7 @@
                 loading="lazy"
                 alt="">
             {%- else -%}
-              {{ 'image' | placeholder_svg_tag: "placeholder__image hero__image-placeholder" }}
+              {{ 'lifestyle-1' | placeholder_svg_tag: "placeholder__image hero__image-placeholder" }}
             {%- endif -%}
           </div>
           <div class="slideshow__text-content text__align-{{ block.settings.text_alignment }}">
