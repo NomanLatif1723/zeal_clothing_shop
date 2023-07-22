@@ -1,6 +1,7 @@
 {%- liquid
     assign desktop_height = section.settings.slide_height_desktop
     assign mobile_height = section.settings.slide_height_mobile
+    assign navigation_style = section.settings.navigation_styles
 -%}
 <div class="slideshow">
   <div
@@ -57,8 +58,8 @@
       {%- endfor -%}
     </div>
     <div class="swiper-pagination"></div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next {%- if navigation_style == 'bars' -%}nav__bars{%- endif -%}"></div>
+    <div class="swiper-button-prev {%- if navigation_style == 'bars' -%}nav__bars{%- endif -%}"></div>
   </div>
 </div>
 <script>
