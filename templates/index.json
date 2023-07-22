@@ -50,7 +50,7 @@
         "slide_height_mobile": "auto",
         "slide_automation": true,
         "slide_change_duration": 4,
-        "navigation_styles": "dots"
+        "navigation_styles": "bars"
       }
     },
     "d534c664-a5a4-4f55-b829-6446be3b3cdb": {
