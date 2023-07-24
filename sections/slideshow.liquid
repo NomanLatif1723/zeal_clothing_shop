@@ -30,11 +30,26 @@
             .slideshow__slide-{{ block.id }} .slide__text-text{
               color: {{ slideTextColor }};
             }
+            {%- assign button_alpha = block.settings.slider_button_color | color_extract: 'alpha' -%}
+              {% unless button_alpha == 0.0 %}
+                .slideshow__slide--{{ block.id }} .btn {
+                  background: {{ block.settings.slider_button_color }} !important;
+                  border: none;
+
+                  {%- assign accent_brightness = block.settings.slider_button_color | color_extract: 'lightness' -%}
+
+                  {% if accent_brightness > 40 %}
+                    color: #000 !important;
+                  {% endif %}
+                }
+              {% endunless %}
+            {% comment %}
             .slideshow__slide-{{ block.id }} .slide__btn {
               background: {{ slideButtonColor }};
               border: 1px solid {{ slideTextColor }};
               color: {{ slideTextColor }}
             }
+                  {% endcomment %}
           {%- endstyle -%}
           <div class="slideshow__image-container">
             {%- if block.settings.slide_image_desktop != blank or block.settings.slide_image_mobile != blank -%}
