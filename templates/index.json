@@ -8,8 +8,8 @@
           "settings": {
             "content_position": "center-left",
             "text_alignment": "left",
-            "slide_heading": "Heading",
-            "slide_text": "Slide Text",
+            "slide_heading": "Embrace the laid-back look!",
+            "slide_text": "Upgrade Your Style. Shop Now and Experience the Perfect Blend of Comfort and Fashion with Our Loose Wear Collection.",
             "slide_button_label": "Shop Now",
             "slide_button_link": "shopify:\/\/collections\/all",
             "slide_overlay_opacity": 40,
@@ -22,10 +22,10 @@
           "settings": {
             "content_position": "center-left",
             "text_alignment": "center",
-            "slide_heading": "Heading",
-            "slide_text": "Slide Text",
-            "slide_button_label": "Button",
-            "slide_button_link": "",
+            "slide_heading": "Embrace the laid-back look!",
+            "slide_text": "Upgrade Your Style. Shop Now and Experience the Perfect Blend of Comfort and Fashion with Our Loose Wear Collection.",
+            "slide_button_label": "Shop Now",
+            "slide_button_link": "shopify:\/\/collections\/all",
             "slide_overlay_opacity": 0,
             "slide_text_color": "#1773b0",
             "slide_button_color": "#fceaea"
@@ -36,10 +36,10 @@
           "settings": {
             "content_position": "center-left",
             "text_alignment": "center",
-            "slide_heading": "Heading",
-            "slide_text": "Slide Text",
-            "slide_button_label": "Button",
-            "slide_button_link": "",
+            "slide_heading": "Embrace the laid-back look!",
+            "slide_text": "Upgrade Your Style. Shop Now and Experience the Perfect Blend of Comfort and Fashion with Our Loose Wear Collection.",
+            "slide_button_label": "Shop Now",
+            "slide_button_link": "shopify:\/\/collections\/all",
             "slide_overlay_opacity": 0,
             "slide_text_color": "#ffffff",
             "slide_button_color": "#111111"
