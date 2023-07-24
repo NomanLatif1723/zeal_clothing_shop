@@ -42,11 +42,7 @@
             }
             
             {%- endunless -%}
-            .slideshow__slide-{{ block.id }} .slide__btn {
-              background: {{ slideButtonColor }};
-              border: 1px solid {{ slideTextColor }};
-              color: {{ slideTextColor }}
-            }
+
           {%- endstyle -%}
           <div class="slideshow__image-container">
             {%- if block.settings.slide_image_desktop != blank or block.settings.slide_image_mobile != blank -%}
