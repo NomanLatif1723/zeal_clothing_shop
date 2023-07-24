@@ -28,9 +28,11 @@
             .slideshow__slide-{{ block.id }} .slide__text-text{
               color: {{ block.settings.slide_text_color }};
             }
+            .slideshow__slide-{{ block.id }} .slide__btn {
+              background: {{ block.settings.slide_button_color }};
+            }
             .slideshow__slide-{{ block.id }} .slide__btn a{
               color: {{ block.settings.slide_text_color }};
-              background: {{ block.settings.slide_button_color }};
             }
           {%- endstyle -%}
           <div class="slideshow__image-container">
