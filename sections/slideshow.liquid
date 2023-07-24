@@ -31,10 +31,10 @@
               {{ 'lifestyle-1' | placeholder_svg_tag: "placeholder__image hero__image-placeholder" }}
             {%- endif -%}
           </div>
-          <div class="slideshow__text-content text__align-{{ block.settings.text_alignment }}">
+          <div class="slideshow__text-content">
             <div class="page__width">
               <div class="slide__content">
-                <div class="slide__text-shadow">
+                <div class="slide__text-shadow text__align-{{ block.settings.text_alignment }}">
                   {%- if block.settings.slide_heading != blank -%}
                     <div class="slide__text-heading">
                       <h1>{{ block.settings.slide_heading }}</h1>
