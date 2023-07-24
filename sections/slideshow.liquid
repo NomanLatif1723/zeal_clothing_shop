@@ -12,8 +12,14 @@
       {%- for block in section.blocks -%}
         {% assign textColor = block.settings.slide_text_color %}
         {%- style -%}
-          .slide__text-shadow, .slide__text-text.rte, .slide__btn a{
+          .slide__text-shadow {
+            color: {{ textColor }};
+          }
+          .slide__text-text.rte{
             color: {{ textColor }} !important;
+          }
+          .slide__btn a{
+            color: {{ textColor }};
           }
         {%- endstyle -%}
         <div class="slideshow__slide swiper-slide">
