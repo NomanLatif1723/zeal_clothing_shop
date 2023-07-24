@@ -28,9 +28,9 @@
               </div>
             </div>
       <select name="forma">
-    <option value="Home"><a href="home.php">Home</a></option>
-    <option value="Contact"><a href="contact.php">Contact</a></option>
-    <option value="Sitemap"><a href="sitemap.php">Sitemap</a></option>
+    <option value="Home"><a href="/">Home</a></option>
+    <option value="Contact"><a href="{{ routes.root_url }}">Contact</a></option>
+    <option value="Sitemap"><a href="{{ routes.account_login_url }}">Sitemap</a></option>
 </select>
           {%- endif -%}
           {%- when 'button' -%}
