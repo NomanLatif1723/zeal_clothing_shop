@@ -28,6 +28,8 @@
             "slide_text": "Upgrade Your Style. Shop Now and Experience the Perfect Blend of Comfort and Fashion with Our Loose Wear Collection.",
             "slide_button_label": "Shop Now",
             "slide_button_link": "shopify:\/\/collections\/all",
+            "slide_image_desktop": "shopify:\/\/shop_images\/woman-wearing-native-african-clothing-arid-environment_1.jpg",
+            "slide_image_mobile": "shopify:\/\/shop_images\/woman-wearing-native-african-clothing-arid-environment_1.jpg",
             "slide_overlay_opacity": 0,
             "slide_text_color": "#1773b0",
             "slide_button_color": "rgba(0,0,0,0)"
@@ -42,6 +44,8 @@
             "slide_text": "Upgrade Your Style. Shop Now and Experience the Perfect Blend of Comfort and Fashion with Our Loose Wear Collection.",
             "slide_button_label": "Shop Now",
             "slide_button_link": "shopify:\/\/collections\/all",
+            "slide_image_desktop": "shopify:\/\/shop_images\/black-white-minimal-portrait_1.png",
+            "slide_image_mobile": "shopify:\/\/shop_images\/black-white-minimal-portrait_1.png",
             "slide_overlay_opacity": 0,
             "slide_text_color": "#ffffff",
             "slide_button_color": "rgba(0,0,0,0)"
