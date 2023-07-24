@@ -43,6 +43,10 @@
                   {% endif %}
                 }
               {% endunless %}
+             .slideshow__slide-{{ block.id }} .slide__btn.color__inverse {
+                color: #ffffff;
+                border: 1px solid #ffffff;
+            }
             {% comment %}
             .slideshow__slide-{{ block.id }} .slide__btn {
               background: {{ slideButtonColor }};
