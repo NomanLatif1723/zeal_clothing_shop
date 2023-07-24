@@ -16,13 +16,13 @@
             "slide_image_mobile": "shopify:\/\/shop_images\/attractive-woman-wearing-hat-posing-black-background_1.jpg",
             "slide_overlay_opacity": 40,
             "slide_text_color": "#ffffff",
-            "slide_button_color": "rgba(0,0,0,0)"
+            "slide_button_color": "#ffffff"
           }
         },
         "template--19980215124290__99f1f786-cfa8-4d76-bd14-7dcb32939b9f-slide-2": {
           "type": "slide",
           "settings": {
-            "content_position": "top-center",
+            "content_position": "center-left",
             "text_alignment": "left",
             "slide_heading": "Embrace the laid-back look!",
             "slide_text": "Upgrade Your Style. Shop Now and Experience the Perfect Blend of Comfort and Fashion with Our Loose Wear Collection.",
@@ -38,7 +38,7 @@
         "template--19980215124290__99f1f786-cfa8-4d76-bd14-7dcb32939b9f-slide-3": {
           "type": "slide",
           "settings": {
-            "content_position": "bottom-left",
+            "content_position": "center-left",
             "text_alignment": "left",
             "slide_heading": "Embrace the laid-back look!",
             "slide_text": "Upgrade Your Style. Shop Now and Experience the Perfect Blend of Comfort and Fashion with Our Loose Wear Collection.",
