@@ -10,18 +10,6 @@
     data-mobile-height={{ mobile_height }}>
     <div class="slideshow__wrapper swiper-wrapper">
       {%- for block in section.blocks -%}
-        {% assign textColor = block.settings.slide_text_color %}
-        {%- style -%}
-          .slide__text-shadow {
-            color: {{ textColor }} !important;
-          }
-          .slide__text-text.rte{
-            color: {{ textColor }} !important;
-          }
-          .slide__btn a{
-            color: {{ textColor }};
-          }
-        {%- endstyle -%}
         <div class="slideshow__slide swiper-slide">
           <div class="slideshow__image-container">
             {%- if block.settings.slide_image_desktop != blank or block.settings.slide_image_mobile != blank -%}
