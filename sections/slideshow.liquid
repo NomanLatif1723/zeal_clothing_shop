@@ -38,6 +38,10 @@
             .slideshow__slide-{{ block.id }} .slide__btn a{
               color: {{ slideTextColor }};
             }
+            .slideshow__slide-{{ block.id }} .slide__btn .color__inverse{
+              color: white;
+              border: none;
+            }
           {%- endstyle -%}
           <div class="slideshow__image-container">
             {%- if block.settings.slide_image_desktop != blank or block.settings.slide_image_mobile != blank -%}
