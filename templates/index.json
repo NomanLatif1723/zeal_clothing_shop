@@ -12,7 +12,9 @@
             "slide_text": "Slide Text",
             "slide_button_label": "Shop Now",
             "slide_button_link": "shopify:\/\/collections\/all",
-            "slide_overlay_opacity": 0
+            "slide_overlay_opacity": 0,
+            "slide_text_color": "#1773b0",
+            "slide_button_color": "#111111"
           }
         },
         "template--19980215124290__99f1f786-cfa8-4d76-bd14-7dcb32939b9f-slide-2": {
@@ -24,7 +26,9 @@
             "slide_text": "Slide Text",
             "slide_button_label": "Button",
             "slide_button_link": "",
-            "slide_overlay_opacity": 0
+            "slide_overlay_opacity": 0,
+            "slide_text_color": "#ffffff",
+            "slide_button_color": "#111111"
           }
         },
         "template--19980215124290__99f1f786-cfa8-4d76-bd14-7dcb32939b9f-slide-3": {
@@ -36,7 +40,9 @@
             "slide_text": "Slide Text",
             "slide_button_label": "Button",
             "slide_button_link": "",
-            "slide_overlay_opacity": 0
+            "slide_overlay_opacity": 0,
+            "slide_text_color": "#ffffff",
+            "slide_button_color": "#111111"
           }
         }
       },
