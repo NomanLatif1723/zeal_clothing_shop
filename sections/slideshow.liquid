@@ -22,14 +22,26 @@
               background: black;
               opacity: {{ block.settings.slide_overlay_opacity | divided_by: 100 }};
             }
-            {% assign slideTextColor = block.settings.slide_text_color %}
-            {% assign slideButtonColor = block.settings.slide_button_color %}
+            {%- assign slideTextColor = block.settings.slide_text_color -%}
+            {%- assign slideButtonColor = block.settings.slide_button_color -%}
             .slideshow__slide-{{ block.id }} .slide__text-heading{
               color: {{ slideTextColor }};
             }
             .slideshow__slide-{{ block.id }} .slide__text-text{
               color: {{ slideTextColor }};
             }
+            {%- assign button_alpha = block.settings.color_accent | color_extract: 'alpha' -%}
+            {%- unless button_alpha -%}
+              .slideshow__slide-{{ block.id }} .slide__btn {
+              background: {{ slideButtonColor }};
+              border: none;
+                {%- assign accent_brightness = block.settings.color_accent | color_extract: 'lightness' -%}
+              {% if accent_brightness > 40 %}
+                      color: #000 !important;
+                    {% endif %}
+            }
+            
+            {%- endunless -%}
             .slideshow__slide-{{ block.id }} .slide__btn {
               background: {{ slideButtonColor }};
               border: 1px solid {{ slideTextColor }};
