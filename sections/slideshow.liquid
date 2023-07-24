@@ -30,18 +30,6 @@
             .slideshow__slide-{{ block.id }} .slide__text-text{
               color: {{ slideTextColor }};
             }
-            {%- assign button_alpha = block.settings.slide_button_color | color_extract: 'alpha' -%}
-            {%- unless button_alpha -%}
-              .slideshow__slide-{{ block.id }} .slide__btn {
-              background: {{ slideButtonColor }};
-              border: none;
-                {%- assign accent_brightness = block.settings.slide_button_color | color_extract: 'lightness' -%}
-              {% if accent_brightness > 40 %}
-                      color: #fff !important;
-                    {% endif %}
-            }
-            
-            {%- endunless -%}
             .slideshow__slide-{{ block.id }} .slide__btn {
               background: {{ slideButtonColor }};
               border: 1px solid {{ slideTextColor }};
