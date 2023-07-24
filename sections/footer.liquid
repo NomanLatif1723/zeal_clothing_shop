@@ -50,7 +50,7 @@
               </div>
             </div>
             {%- when 'menu' -%}
-            <div class="site__grid-item site__grid-menu grid__item-{{ block.id }}">
+            <div class="site__grid-item site__grid-menu grid__item-{{ block.id }}" {{ block.shopify_attributes }}>
               <div class="site__item-block">
                 {%- if block.settings.show_heading -%}
                   {%- if block.settings.menu_heading != blank -%}
@@ -69,7 +69,7 @@
               </div>
             </div>
             {%- when 'newsletter' -%}
-            <div class="site__grid-item site__grid-newsletter grid__item-{{ block.id }}">
+            <div class="site__grid-item site__grid-newsletter grid__item-{{ block.id }}" {{ block.shopify_attributes }}>
               <div class="site__item-block">
                 {%- if block.settings.show_newsletter_heading -%}
                   <div class="footer__newsletter-heading">
@@ -108,7 +108,7 @@
         <div class="rte address__bar-wrapper">
           {% for block in section.blocks %}
             {% if block.settings.footer_address_field != blank %}
-              <div class="block__item footer__address-container">
+              <div class="block__item footer__address-container" {{ block.shopify_attributes }}>
                 <div class="icon icon__address">{% render 'icon-map' %}</div>
                 <div class="bar-text__content">{{ block.settings.footer_address_field }}</div>
               </div>
