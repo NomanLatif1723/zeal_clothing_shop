@@ -10,8 +10,8 @@
             "text_alignment": "left",
             "slide_heading": "Heading",
             "slide_text": "Slide Text",
-            "slide_button_label": "Button",
-            "slide_button_link": "",
+            "slide_button_label": "Shop Now",
+            "slide_button_link": "shopify:\/\/collections\/all",
             "slide_overlay_opacity": 0
           }
         },
