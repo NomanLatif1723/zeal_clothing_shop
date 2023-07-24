@@ -2,6 +2,29 @@
     assign desktop_height = section.settings.slide_height_desktop
     assign mobile_height = section.settings.slide_height_mobile
     assign navigation_style = section.settings.navigation_styles
+    for block in section.blocks
+    assign slideContentPosition = block.settings.content_position
+    case slideContentPosition
+    when 'top-left'
+    assign contentPositionClass = 'slideshow__top-left'
+    when 'top-right'
+    assign contentPositionClass = 'slideshow__top-right'
+    when 'top-center'
+    assign contentPositionClass = 'slideshow__top-center'
+    when 'center-left',
+    assign contentPositionClass = 'slideshow__center-left'
+    when 'center'
+    assign contentPositionClass = 'slideshow__center'
+    when 'center-right'
+    assign contentPositionClass = 'slideshow__center-right'
+    when 'bottom-left'
+    assign contentPositionClass = 'slideshow__bottom-left'
+    when 'bottom-center'
+    assign contentPositionClass = 'slideshow__bottom-center'
+    when 'bottom-right'
+    assign contentPositionClass = 'slideshow__bottom-right'
+    endcase
+    endfor
 -%}
 <div class="slideshow">
   <div
@@ -33,7 +56,7 @@
           </div>
           <div class="slideshow__text-content">
             <div class="page__width">
-              <div class="slide__content">
+              <div class="slide__content {{ contentPositionClass }}">
                 <div class="slide__text-shadow text__align-{{ block.settings.text_alignment }}">
                   {%- if block.settings.slide_heading != blank -%}
                     <div class="slide__text-heading">
@@ -180,7 +203,7 @@
         "settings": [
           {
             "type": "select",
-            "id": "desktop_content_position",
+            "id": "content_position",
             "label": "t:sections.slideshow.blocks.slide.settings.content_position.label",
             "options": [
               {
