@@ -764,7 +764,16 @@ blockquote.testimonial__text {
 .slideshow__slides[data-mobile-height="full"] {
   height: 100vh;
 }
+.desktop__image{
+  display: none;
+}
 @media only screen and (min-width: 769px) {
+  .mobile__image{
+    display: none;
+  }
+  .desktop__image{
+    display: block;
+  }
   .slideshow__slides[data-desktop-height="natural"] {
     height: auto;
   }
