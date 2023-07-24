@@ -12,7 +12,7 @@
             "slide_text": "Slide Text",
             "slide_button_label": "Shop Now",
             "slide_button_link": "shopify:\/\/collections\/all",
-            "slide_overlay_opacity": 0,
+            "slide_overlay_opacity": 40,
             "slide_text_color": "#dd1d1d",
             "slide_button_color": "#111111"
           }
