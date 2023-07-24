@@ -16,7 +16,7 @@
             "slide_image_mobile": "shopify:\/\/shop_images\/attractive-woman-wearing-hat-posing-black-background_1.jpg",
             "slide_overlay_opacity": 40,
             "slide_text_color": "#ffffff",
-            "slide_button_color": "#f5f5f5"
+            "slide_button_color": "rgba(0,0,0,0)"
           }
         },
         "template--19980215124290__99f1f786-cfa8-4d76-bd14-7dcb32939b9f-slide-2": {
