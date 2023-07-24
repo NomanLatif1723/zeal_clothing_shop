@@ -6,7 +6,7 @@
         "template--19980215124290__99f1f786-cfa8-4d76-bd14-7dcb32939b9f-slide-1": {
           "type": "slide",
           "settings": {
-            "desktop_content_position": "center-left",
+            "content_position": "top-left",
             "text_alignment": "center",
             "slide_heading": "Heading",
             "slide_text": "Slide Text",
@@ -18,7 +18,7 @@
         "template--19980215124290__99f1f786-cfa8-4d76-bd14-7dcb32939b9f-slide-2": {
           "type": "slide",
           "settings": {
-            "desktop_content_position": "center-left",
+            "content_position": "center-left",
             "text_alignment": "center",
             "slide_heading": "Heading",
             "slide_text": "Slide Text",
@@ -30,7 +30,7 @@
         "template--19980215124290__99f1f786-cfa8-4d76-bd14-7dcb32939b9f-slide-3": {
           "type": "slide",
           "settings": {
-            "desktop_content_position": "center-left",
+            "content_position": "center-left",
             "text_alignment": "center",
             "slide_heading": "Heading",
             "slide_text": "Slide Text",
