@@ -41,8 +41,8 @@
             "slide_button_label": "Button",
             "slide_button_link": "",
             "slide_overlay_opacity": 0,
-            "slide_text_color": "#000000",
-            "slide_button_color": "#111111"
+            "slide_text_color": "#ffffff",
+            "slide_button_color": "#ffffff"
           }
         }
       },
