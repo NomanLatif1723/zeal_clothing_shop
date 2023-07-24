@@ -22,7 +22,7 @@
               background: black;
               opacity: {{ block.settings.slide_overlay_opacity | divided_by: 100 }};
             }
-            .slide__text-heading{
+            .slideshow__slide-{{ block.id }} .slide__text-heading{
               color: {{ block.settings.slide_text_color }};
             }
           {%- endstyle -%}
