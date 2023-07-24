@@ -27,11 +27,6 @@
                 {{ block.settings.text_description }}
               </div>
             </div>
-      <select name="forma" onchange="javascript:handleSelect(this)">
-    <option value="{{ routes.root_url }}"><a href="/">Home</a></option>
-    <option value="{{ routes.root_url }}"><a href="{{ routes.root_url }}">Contact</a></option>
-    <option value="{{ routes.root_url }}"><a href="{{ routes.account_login_url }}">Sitemap</a></option>
-</select>
           {%- endif -%}
           {%- when 'button' -%}
           {%- if block.settings.richtext_button_label != blank -%}
@@ -50,12 +45,6 @@
     </div>
   </div>
 </div>
-<script type="text/javascript">
-  function handleSelect(elm)
-  {
-     window.location = elm.value;
-  }
-</script>
 {% schema %}
   {
     "name": "t:sections.richtext.name",
