@@ -398,31 +398,31 @@
             "content_position": {
               "label": "Content Position",
               "options": {
-                "top-left": {
+                "top_left": {
                   "label": "Top Left"
                 },
-                "top-center": {
+                "top_center": {
                   "label": "Top Center"
                 },
-                "top-right": {
+                "top_right": {
                   "label": "Top Right"
                 },
-                "center-left": {
+                "center_left": {
                   "label": "Center Left"
                 },
                 "center": {
                   "label": "Center"
                 },
-                "center-right": {
+                "center_right": {
                   "label": "Center Right"
                 },
-                "bottom-left": {
+                "bottom_left": {
                   "label": "Bottom Left"
                 },
-                "bottom-center": {
+                "bottom_center": {
                   "label": "Bottom Center"
                 },
-                "bottom-right": {
+                "bottom_right": {
                   "label": "Bottom Right"
                 }
               }
