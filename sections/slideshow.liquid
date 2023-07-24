@@ -11,6 +11,18 @@
     <div class="slideshow__wrapper swiper-wrapper">
       {%- for block in section.blocks -%}
         <div class="slideshow__slide swiper-slide" {{ block.shopify_attributes }}>
+          {%- style -%}
+            .slideshow__image-container:after{
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              bottom: 0;
+              right: 0;
+              background: black;
+              opacity: {{ block.settings.slide_overlay_opacity | divided_by: 100 }};
+            }
+          {%- endstyle -%}
           <div class="slideshow__image-container">
             {%- if block.settings.slide_image_desktop != blank or block.settings.slide_image_mobile != blank -%}
               <img
