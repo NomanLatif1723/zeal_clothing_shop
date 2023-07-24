@@ -30,6 +30,7 @@
             .slideshow__slide-{{ block.id }} .slide__text-text{
               color: {{ slideTextColor }};
             }
+            {% comment %}
             {%- assign button_alpha = block.settings.slider_button_color | color_extract: 'alpha' -%}
               {% unless button_alpha == 0.0 %}
                 .slideshow__slide--{{ block.id }} .btn {
@@ -43,17 +44,13 @@
                   {% endif %}
                 }
               {% endunless %}
-             .slideshow__slide-{{ block.id }} .slide__btn.color__inverse {
-                color: #ffffff;
-                border: 1px solid #ffffff;
-            }
-            {% comment %}
+            {% endcomment %}
             .slideshow__slide-{{ block.id }} .slide__btn {
               background: {{ slideButtonColor }};
               border: 1px solid {{ slideTextColor }};
               color: {{ slideTextColor }}
             }
-                  {% endcomment %}
+                  
           {%- endstyle -%}
           <div class="slideshow__image-container">
             {%- if block.settings.slide_image_desktop != blank or block.settings.slide_image_mobile != blank -%}
