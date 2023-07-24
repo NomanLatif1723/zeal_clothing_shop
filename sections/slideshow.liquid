@@ -13,7 +13,7 @@
         {% assign textColor = block.settings.slide_text_color %}
         {%- style -%}
           .slide__text-shadow {
-            color: {{ textColor }};
+            color: {{ textColor }} !important;
           }
           .slide__text-text.rte{
             color: {{ textColor }} !important;
