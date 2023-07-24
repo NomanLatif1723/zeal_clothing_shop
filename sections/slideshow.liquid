@@ -34,12 +34,6 @@
               background: {{ slideButtonColor }};
               border: 1px solid {{ slideTextColor }}
             }
-            {% assign brightness = block.settings.slide_color | color_extract: "lightness" %}
-            {% if brightness < 40 %}
-              .slideshow__slide-{{ block.id }} .slide__btn a{
-              color: black;
-            }
-              {% endif %}
             .slideshow__slide-{{ block.id }} .slide__btn a{
               color: {{ slideTextColor }};
             }
