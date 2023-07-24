@@ -6,8 +6,8 @@
         "template--19980215124290__99f1f786-cfa8-4d76-bd14-7dcb32939b9f-slide-1": {
           "type": "slide",
           "settings": {
-            "content_position": "center-right",
-            "text_alignment": "center",
+            "content_position": "center-left",
+            "text_alignment": "left",
             "slide_heading": "Heading",
             "slide_text": "Slide Text",
             "slide_button_label": "Button",
