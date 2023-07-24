@@ -73,8 +73,8 @@
                     </div>
                   {%- endif -%}
                   {%- if block.settings.slide_button_label != blank -%}
-                    <div class="btn outline__btn slide__btn">
-                      <a href="{{ block.settings.slide_button_link }}" title="{{ block.settings.slide_button_label }}">
+                    <div class="slide__btn-wrapper">
+                      <a class="btn outline__btn slide__btn" href="{{ block.settings.slide_button_link }}" title="{{ block.settings.slide_button_label }}">
                         {{ block.settings.slide_button_label }}
                       </a>
                     </div>
