@@ -461,6 +461,12 @@
             },
             "slide_image_opacity": {
               "label": "Overlay Opacity"
+            },
+            "slide_text_color": {
+              "label": "Text"
+            },
+            "slide_button_color": {
+              "label": "Button"
             }
           }
         }
