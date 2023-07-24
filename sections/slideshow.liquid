@@ -22,18 +22,20 @@
               background: black;
               opacity: {{ block.settings.slide_overlay_opacity | divided_by: 100 }};
             }
+            {% assign slideTextColor = block.settings.slide_text_color %}
             .slideshow__slide-{{ block.id }} .slide__text-heading{
-              color: {{ block.settings.slide_text_color }};
+              color: {{ slideTextColor }};
             }
             .slideshow__slide-{{ block.id }} .slide__text-text{
-              color: {{ block.settings.slide_text_color }};
+              color: {{ slideTextColor }};
             }
             .slideshow__slide-{{ block.id }} .slide__btn {
               background: {{ block.settings.slide_button_color }};
+              border: 1px solid {{ slideTextColor }}
             }
             {% assign brightness = block.settings.slide_color %}
             .slideshow__slide-{{ block.id }} .slide__btn a{
-              color: {{ block.settings.slide_text_color }};
+              color: {{ slideTextColor }};
             }
           {%- endstyle -%}
           <div class="slideshow__image-container">
