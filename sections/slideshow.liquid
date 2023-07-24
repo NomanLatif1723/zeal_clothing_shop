@@ -23,6 +23,7 @@
               opacity: {{ block.settings.slide_overlay_opacity | divided_by: 100 }};
             }
             {% assign slideTextColor = block.settings.slide_text_color %}
+            {% assign slideButtonColor = block.settings.slide_button_color %}
             .slideshow__slide-{{ block.id }} .slide__text-heading{
               color: {{ slideTextColor }};
             }
@@ -30,8 +31,8 @@
               color: {{ slideTextColor }};
             }
             .slideshow__slide-{{ block.id }} .slide__btn {
-              background: {{ block.settings.slide_button_color }};
-              border: 1px solid {{ slideTextColor }}
+              background: {{ slideButtonColor }};
+              border: 1px solid {{ slideButtonColor }}
             }
             {% assign brightness = block.settings.slide_color %}
             .slideshow__slide-{{ block.id }} .slide__btn a{
