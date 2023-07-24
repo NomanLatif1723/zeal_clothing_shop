@@ -56,7 +56,7 @@
           </div>
           <div class="slideshow__text-content">
             <div class="page__width">
-              <div class="slide__content {{ contentPositionClass }}">
+              <div class="slide__content slideshow__{{ block.settings.content_position }}">
                 <div class="slide__text-shadow text__align-{{ block.settings.text_alignment }}">
                   {%- if block.settings.slide_heading != blank -%}
                     <div class="slide__text-heading">
