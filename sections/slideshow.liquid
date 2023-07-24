@@ -22,6 +22,9 @@
               background: black;
               opacity: {{ block.settings.slide_overlay_opacity | divided_by: 100 }};
             }
+            .slide__text-heading{
+              color: {{ block.settings.slide_text_color }};
+            }
           {%- endstyle -%}
           <div class="slideshow__image-container">
             {%- if block.settings.slide_image_desktop != blank or block.settings.slide_image_mobile != blank -%}
