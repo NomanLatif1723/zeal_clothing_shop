@@ -1,4 +1,4 @@
-{% style %}
+<style>
   .marquee-text__item {
     background: #111111;
     background: {{ section.settings.marquee_background }};
@@ -11,7 +11,7 @@
   .marquee-text__slider{
           animation: 35s scrollText infinite linear;
   }
-{% endstyle %}
+</style>
 <div class="marquee-text">
   <div class="marquee-text__inner">
       {% if section.settings.marquee_text_link != blank %}
