@@ -502,6 +502,9 @@
             },
             "marquee_text_speed": {
               "label": "Speed"
+            },
+            "marquee_background_color": {
+              "label": "Background"
             }
           }
         }

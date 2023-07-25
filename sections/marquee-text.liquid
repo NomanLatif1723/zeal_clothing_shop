@@ -2,11 +2,14 @@
   <div class="marquee-text__inner">
     {% for block in section.blocks %}
       {% style %}
-        .marquee-item-{{ block.id }} span {
+        .marquee-text__item {
+          background: #111111;
+          background: {{ block.settings.marquee_background }};
+        }
+        .marquee-item-{{ block.id }}span {
           font-size: {{ block.settings.marquee_text_size }}px;
         }
         --marquee_speed: {{ block.settings.marquee_text_speed }}s;
-
       {% endstyle %}
       {% if block.settings.marquee_text_link != blank %}
         <a href="{{ block.settings.marquee_text_link }}">
@@ -76,6 +79,11 @@
             "step": 10,
             "default": 100,
             "unit": "s"
+          }, {
+            "type": "color",
+            "id": "marquee_background",
+            "label": "t:sections.marquee-text.blocks.marquee.settings.marquee_background_color.label",
+            "default": "#111111"
           }
         ]
       }
