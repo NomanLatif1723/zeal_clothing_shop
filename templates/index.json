@@ -159,7 +159,8 @@
             "marquee_text_link": "",
             "marquee_text_size": 53,
             "marquee_direction": "left",
-            "marquee_text_speed": 110
+            "marquee_text_speed": 200,
+            "marquee_background": "#000000"
           }
         },
         "f489badb-0add-4b7f-926b-60922ffd673b": {
@@ -170,7 +171,8 @@
             "marquee_text_link": "",
             "marquee_text_size": 30,
             "marquee_direction": "left",
-            "marquee_text_speed": 100
+            "marquee_text_speed": 100,
+            "marquee_background": "#111111"
           }
         }
       },
