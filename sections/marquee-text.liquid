@@ -1,19 +1,19 @@
+{% style %}
+  .marquee-text__item {
+    background: #111111;
+    background: {{ section.settings.marquee_background }};
+  }
+  .marquee-text__item h3 {
+    font-size: {{ section.settings.marquee_text_size }}px;
+    line-height: inherit;
+  }
+  --marquee_speed: {{ section.settings.marquee_text_speed }}s;
+  .marquee-text__slider{
+    animation-duration: var(--marquee_speed);
+  }
+{% endstyle %}
 <div class="marquee-text">
   <div class="marquee-text__inner">
-      {% style %}
-        .marquee-text__item {
-          background: #111111;
-          background: {{ section.settings.marquee_background }};
-        }
-        .marquee-text__item h3 {
-          font-size: {{ section.settings.marquee_text_size }}px;
-          line-height: inherit;
-        }
-        --marquee_speed: {{ section.settings.marquee_text_speed }}s;
-        .marquee-text__slider{
-          animation-duration: var(--marquee_speed);
-        }
-      {% endstyle %}
       {% if section.settings.marquee_text_link != blank %}
         <a href="{{ section.settings.marquee_text_link }}">
         {% endif %}
