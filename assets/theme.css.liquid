@@ -944,19 +944,20 @@ textarea {
   } */
 
   .marquee-text__item {
-    display: flex;
     overflow: hidden;
-    gap: 40px;
     color: white;
     padding: 30px 0;
+    white-space: nowrap;
   }
-
+  .marquee-text__slider {
+      display: inline-block;
+      animation: 35s scrollText infinite linear;
+  }
   .marquee-text__item h3 {
     display: inline-block;
     text-transform: uppercase;
     letter-spacing: 1px;
     white-space: nowrap;
-    animation: 35s scrollText infinite linear;
   }
 
   .marquee-text__item h3:nth-child(even) {
