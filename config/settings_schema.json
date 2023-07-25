@@ -34,24 +34,40 @@
       },
       {
         "type": "header",
-        "content": "t:schema_settings.colors.settings.header_buttons"
+        "content": "t:schema_settings.colors.settings.header_primary_buttons"
       },
       {
         "type": "color",
-        "id": "color_button",
-        "label": "t:schema_settings.colors.settings.color_button_background.label",
+        "id": "color_button_primary",
+        "label": "t:schema_settings.colors.settings.primary_button_background.label",
         "default": "#111111"
       },
       {
         "type": "color",
-        "id": "color_button_text",
-        "label": "t:schema_settings.colors.settings.color_button_text.label",
+        "id": "color_button_text_primary",
+        "label": "t:schema_settings.colors.settings.primary_button_text.label",
         "default": "#111111"
       },
       {
         "type": "color",
         "id": "color_outline_button",
         "label": "t:schema_settings.colors.settings.color_button_outline.label",
+        "default": "#111111"
+      },
+      {
+        "type": "header",
+        "content": "t:schema_settings.colors.settings.header_secondary_buttons"
+      },
+      {
+        "type": "color",
+        "id": "color_button_secondary",
+        "label": "t:schema_settings.colors.settings.secondary_button_background.label",
+        "default": "#111111"
+      },
+      {
+        "type": "color",
+        "id": "color_button_text_secondary",
+        "label": "t:schema_settings.colors.settings.secondary_button_text.label",
         "default": "#111111"
       },
       {
