@@ -12,14 +12,6 @@
       {%- for block in section.blocks -%}
         <div class="slideshow__slide swiper-slide slideshow__slide-{{ block.id }}" {{ block.shopify_attributes }}>
           {%- style -%}
-            .slideshow__slide-{{ block.id }} .slideshow__image-container{
-                position: absolute;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                background: #000000;
-                opacity: {{ block.settings.slide_overlay_opacity | divided_by: 100 }};
-            }
             {%- assign slideTextColor = block.settings.slide_text_color -%}
             {%- assign slideButtonColor = block.settings.slide_button_color -%}
             .slideshow__slide-{{ block.id }} .slide__text-heading{
@@ -28,27 +20,11 @@
             .slideshow__slide-{{ block.id }} .slide__text-text{
               color: {{ slideTextColor }};
             }
-            {% comment %}
-            {%- assign button_alpha = block.settings.slider_button_color | color_extract: 'alpha' -%}
-              {% unless button_alpha == 0.0 %}
-                .slideshow__slide--{{ block.id }} .btn {
-                  background: {{ block.settings.slider_button_color }} !important;
-                  border: none;
-
-                  {%- assign accent_brightness = block.settings.slider_button_color | color_extract: 'lightness' -%}
-
-                  {% if accent_brightness > 40 %}
-                    color: #000 !important;
-                  {% endif %}
-                }
-              {% endunless %}
-            {% endcomment %}
             .slideshow__slide-{{ block.id }} .slide__btn {
               background: {{ slideButtonColor }};
               border: 1px solid {{ slideTextColor }};
               color: {{ slideTextColor }}
             }
-                  
           {%- endstyle -%}
           <div class="slideshow__image-container">
             {%- if block.settings.slide_image_desktop != blank or block.settings.slide_image_mobile != blank -%}
