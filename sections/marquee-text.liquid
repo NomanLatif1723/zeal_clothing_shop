@@ -2,7 +2,7 @@
   <div class="marquee-text__inner">
     {% for block in section.blocks %}
       {% style %}
-        .marquee-item-{{ block.id }}span {
+        .marquee-item-{{ block.id }} span {
           font-size: {{ block.settings.marquee_text_size }}px;
         }
         --marquee_speed: {{ block.settings.marquee_text_speed }}s;
