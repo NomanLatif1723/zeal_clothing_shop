@@ -942,26 +942,33 @@ textarea {
 /*   .marquee-text-left {
     animation: 25s scrollText infinite linear;
   } */
-
-  .marquee-text__item {
-    overflow: hidden;
-    color: white;
-    white-space: nowrap;
-  }
-  .marquee-text__slider {
-      display: inline-block;
-      animation: var(--marquee_speed) scrollText infinite linear;
-  }
-  .marquee-text__item h3 {
+.marquee-text__item h3 {
+  padding 0 10px
+}
+.marquee-text__item {
+  overflow: hidden;
+  color: white;
+  padding: 30px 0;
+  white-space: nowrap;
+}
+.marquee-text__slider {
     display: inline-block;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 30px;
-  }
+    animation: var(--marquee_speed) scrollText infinite linear;
+}
+.marquee-text__item h3 {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 
-  .marquee-text__item h3:nth-child(even) {
-    color: rgba(255, 255, 255, 0.5);
+.marquee-text__item h3:nth-child(even) {
+  color: rgba(255, 255, 255, 0.5);
+}
+.marquee-text__item:hover .marquee-text__slider{
+  animation-play-state: paused;
+}
+@media only screen and (min-width: 769px) {
+  .marquee-text__item h3 {
+    padding: 0 30px;
   }
-  .marquee-text__item:hover .marquee-text__slider{
-    animation-play-state: paused;
-  }
+}
