@@ -13,7 +13,7 @@
       {% if block.settings.marquee_text_link != blank %}
         <a href="{{ block.settings.marquee_text_link }}">
         {% endif %}
-        <div class="marquee-text__item marquee-item-{{ block.id }} marquee-text-{{ block.settings.marquee_direction }}">
+        <div class="marquee-text__item marquee-item-{{ block.id }} marquee-text-{{ block.settings.marquee_direction }}" {{ block.shopify_attributes }}>
           {% for i in (1..30) %}
             <span>{{ block.settings.marquee_text }}</span>
           {% endfor %}
