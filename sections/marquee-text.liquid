@@ -2,7 +2,7 @@
   <div class="marquee-text__inner">
     {% for block in section.blocks %}
       {% style %}
-        marquee-item-{{ block.id }}.marquee-text__item {
+        .marquee-text__item.marquee-item-{{ block.id }} {
           background: #111111;
           background: {{ block.settings.marquee_background }};
         }
