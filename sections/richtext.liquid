@@ -30,10 +30,10 @@
           {%- endif -%}
           {%- when 'button' -%}
           {%- if block.settings.richtext_button_label != blank -%}
-            <div class="btn btn__primary richtext__btn richtext__btn-{{ forloop.index }}" {{ block.shopify_attributes }}>
+            <div class="richtext__btn richtext__btn-{{ forloop.index }}" {{ block.shopify_attributes }}>
               <a
                 href="{{ block.settings.richtext_button_link }}"
-                class="btn__link"
+                class="btn btn__primary btn__link"
                 title="{{ block.settings.richtext_button_label }}">{{ block.settings.richtext_button_label }}</a>
             </div>
           {%- endif -%}
