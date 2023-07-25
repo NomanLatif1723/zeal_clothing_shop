@@ -159,7 +159,7 @@
         "posts_main_heading": "Our latest News",
         "posts_main_text": "Discover the latest in comfortable, effortless fashion!",
         "blog": "testing",
-        "posts_to_show": 6,
+        "posts_to_show": 3,
         "show_date": true,
         "show_tags": true,
         "show_view_all_btn": true,
