@@ -2,21 +2,10 @@
   <div class="marquee-text__inner">
     {% for block in section.blocks %}
       {% style %}
-        @keyframes scrollText {
-  from {
-    transform: translateX(0);
-  }
-  to{
-    transform: translateX(-100%);
-  }
-}
         .marquee-item-{{ block.id }}span {
           font-size: {{ block.settings.marquee_text_size }}px;
         }
         --marquee_speed: {{ block.settings.marquee_text_speed }}s;
-        .marquee-item-{{ block.id }}.marquee-text-left{
-          animation: scrollText infinite var(--marquee_speed);
-        }
       {% endstyle %}
       {% if block.settings.marquee_text_link != blank %}
         <a href="{{ block.settings.marquee_text_link }}">
