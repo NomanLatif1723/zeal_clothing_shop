@@ -6,9 +6,7 @@
           font-size: {{ block.settings.marquee_text_size }}px;
         }
         --marquee_speed: {{ block.settings.marquee_text_speed }}s;
-        marquee-item-{{ block.id }}.marquee-text-left{
-          animation-duration: var(--marquee_speed);
-        }
+
       {% endstyle %}
       {% if block.settings.marquee_text_link != blank %}
         <a href="{{ block.settings.marquee_text_link }}">
