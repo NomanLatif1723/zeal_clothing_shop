@@ -155,9 +155,11 @@
         "marquee_text": "free shipping",
         "marquee_text_link": "",
         "marquee_text_size": 18,
-        "marquee_direction": "right",
+        "marquee_direction": "left",
         "marquee_text_speed": 50,
-        "marquee_background": "#111111"
+        "marquee_background": "#111111",
+        "margin_top": 16,
+        "margin_bottom": 16
       }
     },
     "01666e88-11d5-4970-8587-55e3cb27e243": {
