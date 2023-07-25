@@ -3,6 +3,8 @@
     "border_color": "#111111",
     "color_button_text_primary": "#ffffff",
     "color_outline_button": "#ffffff",
+    "color_button_secondary": "#9d1339",
+    "color_button_text_secondary": "#ffffff",
     "announcement_bg_color": "#111111",
     "announcement_text_color": "#ffffff",
     "footer_text": "#ffffff",
