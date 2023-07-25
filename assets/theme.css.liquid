@@ -364,8 +364,13 @@ h1,h2,h3,h4,h5,h6{
 
 .text__image-item {
   padding: 30px 50px;
+  background: #EEF0F4;
 }
 
+.text__image-width {
+    max-width: 300px;
+    display: inline-block;
+}
 .icon__placeholder {
   width: 150px !important;
   height: 150px !important;
@@ -402,11 +407,6 @@ h1,h2,h3,h4,h5,h6{
   font-size: 20px !important;
   font-weight: bold;
 }
-
-.text__image-width {
-    max-width: 300px;
-    display: inline-block;
-}
 @media only screen and (min-width: 769px) {
   .text__image-wrapper {
     display: flex;
@@ -416,7 +416,7 @@ h1,h2,h3,h4,h5,h6{
     width: 35%;
     padding: 50px 30px;
     border: 1px solid rgba(1, 1, 1, 0.1);
-    /*     border-top: none; */
+    background: none;
   }
   .text__container-desktop {
     display: block;
