@@ -151,6 +151,7 @@ body {
 h1,h2,h3,h4,h5,h6{
   font-family: var(--headingTextFont), sans-serif;
 }
+
 .page__width {
   max-width: 1420px;
   margin: 0 auto;
@@ -915,4 +916,19 @@ blockquote.testimonial__text {
   .slide__text-shadow{
     max-width: 500px;
   }
+}
+
+/* Marquee Text Section */
+
+@keyframes scrollText {
+  from {
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-100%);
+  }
+}
+
+.marquee-text-left{
+  animation: scrollText infinite var(--marquee_speed);
 }
