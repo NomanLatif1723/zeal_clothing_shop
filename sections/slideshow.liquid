@@ -70,7 +70,7 @@
                 alt="">
             {%- else -%}
               {%- capture slidePlaceholder -%}lifestyle-{% cycle '1', '2' %}{%- endcapture -%}
-              {{- slidePlaceholder | placeholder_svg_tag: "placeholder__image hero__image-placeholder" -}}
+              {{ slidePlaceholder | placeholder_svg_tag: "placeholder__image hero__image-placeholder" }}
             {%- endif -%}
           </div>
           <div class="slideshow__text-content">
