@@ -1,31 +1,29 @@
 <div class="marquee-text">
   <div class="marquee-text__inner">
-    {% for block in section.blocks %}
       {% style %}
-        .marquee-text__item.marquee-item-{{ block.id }} {
+        .marquee-text__item {
           background: #111111;
-          background: {{ block.settings.marquee_background }};
+          background: {{ section.settings.marquee_background }};
         }
-        .marquee-item-{{ block.id }} h3 {
-          font-size: {{ block.settings.marquee_text_size }}px;
+        .marquee-text__item h3 {
+          font-size: {{ section.settings.marquee_text_size }}px;
           line-height: inherit;
         }
-        --marquee_speed: {{ block.settings.marquee_text_speed }}s;
+        --marquee_speed: {{ section.settings.marquee_text_speed }}s;
       {% endstyle %}
-      {% if block.settings.marquee_text_link != blank %}
-        <a href="{{ block.settings.marquee_text_link }}">
+      {% if section.settings.marquee_text_link != blank %}
+        <a href="{{ section.settings.marquee_text_link }}">
         {% endif %}
-        <div class="marquee-text__item marquee-item-{{ block.id }} marquee-text-{{ block.settings.marquee_direction }}" {{ block.shopify_attributes }}>
+        <div class="marquee-text__item marquee-item-{{ section.id }} marquee-text-{{ section.settings.marquee_direction }}">
           <div class="marquee-text__slider">
             {% for i in (1..30) %}
-              <h3><span>{{ block.settings.marquee_text }}</span></h3>
+              <h3><span>{{ section.settings.marquee_text }}</span></h3>
             {% endfor %}
           </div>
         </div>
-        {% if block.settings.marquee_text_link != blank %}
+        {% if section.settings.marquee_text_link != blank %}
         </a>
       {% endif %}
-    {% endfor %}
   </div>
 </div>
 <script>
@@ -88,23 +86,9 @@
             "default": "#111111"
           }
     ],
-    "blocks": [
-      {
-        "type": "marquee",
-        "name": "t:sections.marquee-text.blocks.marquee.name",
-        "settings": [
-          
-        ]
-      }
-    ],
     "presets": [
       {
-        "name": "t:sections.marquee-text.presets.name",
-        "blocks": [
-          {
-            "type": "marquee"
-          }
-        ]
+        "name": "t:sections.marquee-text.presets.name"
       }
     ],
     "disabled_on": {
