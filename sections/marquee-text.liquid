@@ -16,9 +16,11 @@
         <a href="{{ block.settings.marquee_text_link }}">
         {% endif %}
         <div class="marquee-text__item marquee-item-{{ block.id }} marquee-text-{{ block.settings.marquee_direction }}" {{ block.shopify_attributes }}>
-          {% for i in (1..30) %}
-            <h3><span>{{ block.settings.marquee_text }}</span></h3>
-          {% endfor %}
+          <div class="marquee-text__slider">
+            {% for i in (1..30) %}
+              <h3><span>{{ block.settings.marquee_text }}</span></h3>
+            {% endfor %}
+          </div>
         </div>
         {% if block.settings.marquee_text_link != blank %}
         </a>
@@ -26,6 +28,10 @@
     {% endfor %}
   </div>
 </div>
+<script>
+      var copy = document.querySelector(".marquee-text__slider").cloneNode(true);
+      document.querySelector(".marquee-text__item").appendChild(copy);
+    </script>
 {% schema %}
   {
     "name": "t:sections.marquee-text.name",
