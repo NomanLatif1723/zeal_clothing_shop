@@ -7,9 +7,9 @@
     font-size: {{ section.settings.marquee_text_size }}px;
     line-height: inherit;
   }
-  --marquee_speed: {{ section.settings.marquee_text_speed }}s;
+  --marquee_speed: {{ section.settings.marquee_text_speed }};
   .marquee-text__slider{
-    animation-duration: var(--marquee_speed);
+    animation-duration: var(--marquee_speed)s;
   }
 {% endstyle %}
 <div class="marquee-text">
