@@ -571,18 +571,25 @@
         "color_body_text": {
           "label": "Text"
         },
-        "header_buttons": "Buttons",
-        "color_button_background": {
+        "border_color": {
+          "label": "Border"
+        },
+        "header_primary_buttons": "Primary Buttons",
+        "primary_button_background": {
           "label": "Background"
         },
-        "color_button_text": {
+        "primary_button_text": {
           "label": "Text"
         },
         "color_button_outline": {
           "label": "Outline Buttons"
         },
-        "border_color": {
-          "label": "Border"
+        "header_secondary_buttons": "Secondary Buttons",
+        "secondary_button_background": {
+          "label": "Background"
+        },
+        "secondary_button_text": {
+          "label": "Text"
         },
         "header_header": "Header",
         "color_announcement_background": {
