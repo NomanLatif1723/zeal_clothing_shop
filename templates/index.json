@@ -165,7 +165,6 @@
         },
         "f489badb-0add-4b7f-926b-60922ffd673b": {
           "type": "marquee",
-          "disabled": true,
           "settings": {
             "marquee_text": "Marquee Text",
             "marquee_text_link": "",
