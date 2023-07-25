@@ -112,11 +112,11 @@ textarea {
   }
 }
 
-@font-face {
+/* @font-face {
   font-family: 'Monda-Regular';
   src: url("https://cdn.shopify.com/s/files/1/0794/3716/8962/files/Monda-Regular.woff2?v=1689596069");
   font-display: "swap";
-}
+} */
 
 :root {
   --colorAnnouncement: {{ settings.announcement_bg_color }};
@@ -124,12 +124,12 @@ textarea {
   --colorButton: {{ settings.color_button }};  
   --colorButtonText: {{ settings.color_button_text }};
   --colorOutlineButton: {{ settings.color_outline_button }};
-   {% comment %}
+   
     --bodyTextFont: {{ settings.body_font_family.family }};
     --headingTextFont: {{ settings.heading_font_family.family }};
- {% endcomment %}
+  {% comment %}
   --bodyTextFont: 'Monda-Regular';
-
+ {% endcomment %}
   --bodyBackgroundColor: {{ settings.body_bg_color }}
   ;
   --bodyTextColor: {{ settings.body_text_color }}
