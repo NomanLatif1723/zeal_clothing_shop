@@ -258,10 +258,22 @@
             "marquee_direction": "left",
             "marquee_text_speed": 100
           }
+        },
+        "f489badb-0add-4b7f-926b-60922ffd673b": {
+          "type": "marquee",
+          "disabled": true,
+          "settings": {
+            "marquee_text": "Marquee Text",
+            "marquee_text_link": "",
+            "marquee_text_size": 30,
+            "marquee_direction": "left",
+            "marquee_text_speed": 100
+          }
         }
       },
       "block_order": [
-        "template--19980215124290__211390c4-4881-4386-992f-62907dc8d4a0-marquee-1"
+        "template--19980215124290__211390c4-4881-4386-992f-62907dc8d4a0-marquee-1",
+        "f489badb-0add-4b7f-926b-60922ffd673b"
       ],
       "settings": {
       }
