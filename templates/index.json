@@ -157,7 +157,7 @@
           "settings": {
             "marquee_text": "Marquee Text",
             "marquee_text_link": "",
-            "marquee_text_size": 100,
+            "marquee_text_size": 20,
             "marquee_direction": "left",
             "marquee_text_speed": 200,
             "marquee_background": "#000000"
