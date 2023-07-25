@@ -170,7 +170,7 @@
             "marquee_text": "Marquee Text",
             "marquee_text_link": "",
             "marquee_text_size": 18,
-            "marquee_direction": "left",
+            "marquee_direction": "right",
             "marquee_text_speed": 100,
             "marquee_background": "#111111"
           }
