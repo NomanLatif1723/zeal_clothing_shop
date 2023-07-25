@@ -50,12 +50,57 @@
             "slide_text_color": "#ffffff",
             "slide_button_color": "rgba(0,0,0,0)"
           }
+        },
+        "decfa32d-65c1-42b0-a8ed-22b699e04afb": {
+          "type": "slide",
+          "settings": {
+            "content_position": "center-left",
+            "text_alignment": "center",
+            "slide_heading": "Heading",
+            "slide_text": "Slide Text",
+            "slide_button_label": "Button",
+            "slide_button_link": "",
+            "slide_overlay_opacity": 0,
+            "slide_text_color": "#ffffff",
+            "slide_button_color": "#111111"
+          }
+        },
+        "c6e21ca8-80e8-445f-b03f-6b465c8094e5": {
+          "type": "slide",
+          "settings": {
+            "content_position": "center-left",
+            "text_alignment": "center",
+            "slide_heading": "Heading",
+            "slide_text": "Slide Text",
+            "slide_button_label": "Button",
+            "slide_button_link": "",
+            "slide_overlay_opacity": 0,
+            "slide_text_color": "#ffffff",
+            "slide_button_color": "#111111"
+          }
+        },
+        "303d3111-4a16-4ff0-be20-898299c8c3f6": {
+          "type": "slide",
+          "settings": {
+            "content_position": "center-left",
+            "text_alignment": "center",
+            "slide_heading": "Heading",
+            "slide_text": "Slide Text",
+            "slide_button_label": "Button",
+            "slide_button_link": "",
+            "slide_overlay_opacity": 0,
+            "slide_text_color": "#ffffff",
+            "slide_button_color": "#111111"
+          }
         }
       },
       "block_order": [
         "template--19980215124290__99f1f786-cfa8-4d76-bd14-7dcb32939b9f-slide-1",
         "template--19980215124290__99f1f786-cfa8-4d76-bd14-7dcb32939b9f-slide-2",
-        "template--19980215124290__99f1f786-cfa8-4d76-bd14-7dcb32939b9f-slide-3"
+        "template--19980215124290__99f1f786-cfa8-4d76-bd14-7dcb32939b9f-slide-3",
+        "decfa32d-65c1-42b0-a8ed-22b699e04afb",
+        "c6e21ca8-80e8-445f-b03f-6b465c8094e5",
+        "303d3111-4a16-4ff0-be20-898299c8c3f6"
       ],
       "settings": {
         "slide_height_desktop": "extended",
