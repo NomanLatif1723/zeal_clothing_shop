@@ -125,8 +125,8 @@ textarea {
   --colorButtonText: {{ settings.color_button_text }};
   --colorOutlineButton: {{ settings.color_outline_button }};
    
-    --bodyTextFont: {{ settings.body_font_family.family }};
-    --headingTextFont: {{ settings.heading_font_family.family }};
+    --bodyTextFont: {{ settings.body_font_family.family | font_face: swap }};
+    --headingTextFont: {{ settings.heading_font_family.family | font_face: swap }};
   {% comment %}
   --bodyTextFont: 'Monda-Regular';
  {% endcomment %}
@@ -142,7 +142,10 @@ textarea {
 }
 
 body {
-  font-family: var(--bodyTextFont);
+  font-family: var(--bodyTextFont),sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: var(--headingTextFont), sans-serif;
 }
 .page__width {
   max-width: 1420px;
