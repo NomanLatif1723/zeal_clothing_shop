@@ -8,25 +8,27 @@
   <div class="text__image-wrapper">
     {%- for block in section.blocks -%}
       <div class="text__image-item">
-        <div class="image__banner">
-          {%- if block.settings.brand_logo != blank -%}
-            {%- assign logo__classes = 'brand__logo-img logo__image-{{ forloop.index }}' -%}
-            {%- render 'image-element', img-element: block.settings.brand_logo, img-width: 40, classes: logo__classes -%}
-          {%- else -%}
-            {{ 'image' | placeholder_svg_tag: "placeholder__image icon__placeholder" }}
+        <div class="text__image-width">
+          <div class="image__banner">
+            {%- if block.settings.brand_logo != blank -%}
+              {%- assign logo__classes = 'brand__logo-img logo__image-{{ forloop.index }}' -%}
+              {%- render 'image-element', img-element: block.settings.brand_logo, img-width: 40, classes: logo__classes -%}
+            {%- else -%}
+              {{ 'image' | placeholder_svg_tag: "placeholder__image icon__placeholder" }}
+            {%- endif -%}
+          </div>
+          {%- if block.settings.brand_heading != blank -%}
+            <div class="main__heading text__image-heading">
+              <h3>{{ block.settings.brand_heading }}</h3>
+            </div>
+          {%- endif -%}
+          {%- if block.settings.brand_text != blank -%}
+            <div class="text__image-text">
+              <div class="rte">{{ block.settings.brand_text }}
+              </div>
+            </div>
           {%- endif -%}
         </div>
-        {%- if block.settings.brand_heading != blank -%}
-          <div class="main__heading text__image-heading">
-            <h3>{{ block.settings.brand_heading }}</h3>
-          </div>
-        {%- endif -%}
-        {%- if block.settings.brand_text != blank -%}
-          <div class="text__image-text">
-            <div class="rte">{{ block.settings.brand_text }}
-            </div>
-          </div>
-        {%- endif -%}
       </div>
     {%- endfor -%}
   </div>
