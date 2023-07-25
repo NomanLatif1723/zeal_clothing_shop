@@ -472,6 +472,68 @@
         "name": "Slideshow"
       }
     },
+    "marquee-text": {
+      "name": "Marquee Text",
+      "settings": {
+
+      },
+      "blocks": {
+        "marquee": {
+          "name": "Marquee",
+          "settings": {
+            "marquee_text": {
+              "label": "Text"
+            },
+            "marquee_text_link": {
+              "label": "Link"
+            },
+            "marquee_text_size": {
+              "label": "Text Size"
+            },
+            "marquee_text_direction": {
+              "label": "Text",
+              "options": {
+                "left": {
+                  "label": "Left"
+                },
+                "right": {
+                  "label": "Right"
+                }
+              }
+            },
+            "marquee_text_speed": {
+              "label": "Speed"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Marquee Text"
+      }
+    },
+    "promotional-grid": {
+      "name": "Promotional Grid",
+      "settings": {
+
+      },
+      "blocks": {
+        "banner": {
+          "name": "Banner",
+          "settings": {
+
+          }
+        },
+        "collage": {
+          "name": "Collage",
+          "settings": {
+
+          }
+        }
+      },
+      "presets": {
+        "name": "Promotional Grid"
+      }
+    },
     "footer": {
       "name": "Footer",
       "settings": {

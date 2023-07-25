@@ -1,0 +1,33 @@
+{% schema %}
+  {
+    "name": "t:sections.promotional-grid.name",
+    "class": "main__section",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "banner",
+        "name": "t:sections.promotional-grid.blocks.banner.name",
+        "settings": []
+      }, {
+        "type": "collage",
+        "name": "t:sections.promotional-grid.blocks.collage.name",
+        "settings": []
+      }
+    ],
+    "presets": [
+      {
+        "name": "t:sections.promotional-grid.presets.name",
+        "blocks": [
+          {
+            "type": "banner"
+          }, {
+            "type": "collage"
+          }
+        ]
+      }
+    ],
+    "disabled_on": {
+      "groups": ["header"]
+    }
+  }
+{% endschema %}
