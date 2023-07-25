@@ -932,3 +932,18 @@ blockquote.testimonial__text {
 .marquee-text-left{
   animation: scrollText infinite;
 }
+
+.marquee-text__item {
+    display: flex;
+    overflow: hidden;
+    gap: 40px;
+}
+
+.marquee-text__item span {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.marquee-text__item span:nth-child(even) {
+    color: blue;
+}
