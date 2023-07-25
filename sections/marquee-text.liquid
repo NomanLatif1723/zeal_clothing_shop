@@ -7,10 +7,11 @@
     font-size: {{ section.settings.marquee_text_size }}px;
     line-height: inherit;
   }
-  --marquee_speed: {{ section.settings.marquee_text_speed }};
   .marquee-text__slider{
           animation: 35s scrollText infinite linear;
   }
+  --marquee_speed: {{ section.settings.marquee_text_speed }};
+  
 </style>
 <div class="marquee-text">
   <div class="marquee-text__inner">
