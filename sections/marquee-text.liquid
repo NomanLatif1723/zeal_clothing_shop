@@ -10,8 +10,9 @@
   .marquee-text__slider{
           animation: 35s scrollText infinite linear;
   }
-  --marquee_speed: {{ section.settings.marquee_text_speed }};
-  
+  .marquee-item-{{ section.id }}{
+    --marquee_speed: {{ section.settings.marquee_text_speed }}s;
+  }
 </style>
 <div class="marquee-text">
   <div class="marquee-text__inner">
