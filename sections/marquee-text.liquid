@@ -30,7 +30,7 @@
 </div>
 <script>
       var copy = document.querySelectorAll(".marquee-text__slider").forEach(item => { item.cloneNode(true)});
-      document.querySelectorAll(".marquee-text__item").forEach(block => { block.appendChild(copy)});
+      document.querySelector(".marquee-text__item").appendChild(copy);
     </script>
 {% schema %}
   {
