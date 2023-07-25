@@ -69,7 +69,7 @@
                 loading="lazy"
                 alt="">
             {%- else -%}
-              {% capture slidePlaceholder %}lifestyle-{% cycle '1', '2' %}{% endcapture %}
+              {% capture slidePlaceholder %}lifestyle-{% cycle '1', '2' %} {% endcapture %}
               {{ slidePlaceholder | placeholder_svg_tag: "placeholder__image hero__image-placeholder" }}
             {%- endif -%}
           </div>
