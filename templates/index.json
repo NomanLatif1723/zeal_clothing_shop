@@ -165,20 +165,31 @@
         },
         "f489badb-0add-4b7f-926b-60922ffd673b": {
           "type": "marquee",
-          "disabled": true,
           "settings": {
             "marquee_text": "Marquee Text",
             "marquee_text_link": "",
             "marquee_text_size": 18,
             "marquee_direction": "right",
             "marquee_text_speed": 100,
-            "marquee_background": "#111111"
+            "marquee_background": "#9d1339"
+          }
+        },
+        "2f2fbd35-6903-45d5-be26-338c7fe3a7ff": {
+          "type": "marquee",
+          "settings": {
+            "marquee_text": "Marquee Text",
+            "marquee_text_link": "",
+            "marquee_text_size": 18,
+            "marquee_direction": "left",
+            "marquee_text_speed": 100,
+            "marquee_background": "#1773b0"
           }
         }
       },
       "block_order": [
         "template--19980215124290__211390c4-4881-4386-992f-62907dc8d4a0-marquee-1",
-        "f489badb-0add-4b7f-926b-60922ffd673b"
+        "f489badb-0add-4b7f-926b-60922ffd673b",
+        "2f2fbd35-6903-45d5-be26-338c7fe3a7ff"
       ],
       "settings": {
       }
