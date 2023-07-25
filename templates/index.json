@@ -152,8 +152,8 @@
     "211390c4-4881-4386-992f-62907dc8d4a0": {
       "type": "marquee-text",
       "settings": {
-        "marquee_text": "Marquee Text",
-        "marquee_text_link": "",
+        "marquee_text": "free shipping",
+        "marquee_text_link": "shopify:\/\/collections\/all",
         "marquee_text_size": 18,
         "marquee_direction": "left",
         "marquee_text_speed": 50,
