@@ -10,6 +10,9 @@
           line-height: inherit;
         }
         --marquee_speed: {{ section.settings.marquee_text_speed }}s;
+        .marquee-text__slider{
+          animation-duration: var(--marquee_speed);
+        }
       {% endstyle %}
       {% if section.settings.marquee_text_link != blank %}
         <a href="{{ section.settings.marquee_text_link }}">
