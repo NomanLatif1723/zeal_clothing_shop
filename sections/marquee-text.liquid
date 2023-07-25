@@ -1,4 +1,15 @@
-<style>
+{%- style -%}
+  .main__section-{{ section.id }}{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  @media only screen and (min-width:769px) {
+    .main__section-{{ section.id }}{
+      margin-top: {{ section.settings.margin_top }}px;
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+  }
   .marquee-text__item {
     background: #111111;
     background: {{ section.settings.marquee_background }};
@@ -10,83 +21,106 @@
   .marquee-item-{{ section.id }}{
     --marquee_speed: {{ section.settings.marquee_text_speed }}s;
   }
-</style>
-<div class="marquee-text">
+{%- endstyle -%}
+<div class="marquee-text main__section-{{ section.id }}">
   <div class="marquee-text__inner">
-      {% if section.settings.marquee_text_link != blank %}
-        <a href="{{ section.settings.marquee_text_link }}">
-        {% endif %}
-        <div class="marquee-text__item marquee-item-{{ section.id }} marquee-text-{{ section.settings.marquee_direction }}">
-          <div class="marquee-text__slider">
-            {% for i in (1..30) %}
-              <h3><span>{{ section.settings.marquee_text }}</span></h3>
-            {% endfor %}
-          </div>
+    {%- if section.settings.marquee_text_link != blank -%}
+      <a href="{{ section.settings.marquee_text_link }}">
+      {%- endif -%}
+      <div class="marquee-text__item marquee-item-{{ section.id }} marquee-text-{{ section.settings.marquee_direction }}">
+        <div class="marquee-text__slider">
+          {%- for i in (1..30) -%}
+            <h3>
+              <span>{{ section.settings.marquee_text }}</span>
+            </h3>
+          {%- endfor -%}
         </div>
-        {% if section.settings.marquee_text_link != blank %}
-        </a>
-      {% endif %}
+      </div>
+      {%- if section.settings.marquee_text_link != blank -%}
+      </a>
+    {%- endif -%}
   </div>
 </div>
 <script>
-      var copy = document.querySelector(".marquee-text__slider").cloneNode(true);
-      document.querySelector(".marquee-text__item").appendChild(copy);
-    </script>
+  var copy = document.querySelector(".marquee-text__slider").cloneNode(true);
+  document.querySelector(".marquee-text__item").appendChild(copy);
+</script>
 {% schema %}
   {
     "name": "t:sections.marquee-text.name",
     "class": "main__section",
     "settings": [
       {
-            "type": "text",
-            "id": "marquee_text",
-            "label": "t:sections.marquee-text.settings.marquee_text.label",
-            "default": "Marquee Text"
-          },
+        "type": "text",
+        "id": "marquee_text",
+        "label": "t:sections.marquee-text.settings.marquee_text.label",
+        "default": "Marquee Text"
+      },
+      {
+        "type": "url",
+        "id": "marquee_text_link",
+        "label": "t:sections.marquee-text.settings.marquee_text_link.label"
+      },
+      {
+        "type": "range",
+        "id": "marquee_text_size",
+        "label": "t:sections.marquee-text.settings.marquee_text_size.label",
+        "min": 16,
+        "max": 100,
+        "step": 2,
+        "default": 18,
+        "unit": "px"
+      },
+      {
+        "type": "select",
+        "id": "marquee_direction",
+        "label": "t:sections.marquee-text.settings.marquee_text_direction.label",
+        "options": [
           {
-            "type": "url",
-            "id": "marquee_text_link",
-            "label": "t:sections.marquee-text.settings.marquee_text_link.label"
-          },
-          {
-            "type": "range",
-            "id": "marquee_text_size",
-            "label": "t:sections.marquee-text.settings.marquee_text_size.label",
-            "min": 16,
-            "max": 100,
-            "step": 2,
-            "default": 18,
-            "unit": "px"
-          },
-          {
-            "type": "select",
-            "id": "marquee_direction",
-            "label": "t:sections.marquee-text.settings.marquee_text_direction.label",
-            "options": [
-              {
-                "value": "left",
-                "label": "t:sections.marquee-text.settings.marquee_text_direction.options.left.label"
-              }, {
-                "value": "right",
-                "label": "t:sections.marquee-text.settings.marquee_text_direction.options.right.label"
-              }
-            ],
-            "default": "left"
+            "value": "left",
+            "label": "t:sections.marquee-text.settings.marquee_text_direction.options.left.label"
           }, {
-            "type": "range",
-            "id": "marquee_text_speed",
-            "label": "t:sections.marquee-text.settings.marquee_text_speed.label",
-            "min": 50,
-            "max": 500,
-            "step": 10,
-            "default": 100,
-            "unit": "s"
-          }, {
-            "type": "color",
-            "id": "marquee_background",
-            "label": "t:sections.marquee-text.settings.marquee_background_color.label",
-            "default": "#111111"
+            "value": "right",
+            "label": "t:sections.marquee-text.settings.marquee_text_direction.options.right.label"
           }
+        ],
+        "default": "left"
+      }, {
+        "type": "range",
+        "id": "marquee_text_speed",
+        "label": "t:sections.marquee-text.settings.marquee_text_speed.label",
+        "min": 50,
+        "max": 500,
+        "step": 10,
+        "default": 100,
+        "unit": "s"
+      }, {
+        "type": "color",
+        "id": "marquee_background",
+        "label": "t:sections.marquee-text.settings.marquee_background_color.label",
+        "default": "#111111"
+      }, {
+        "type": "header",
+        "content": "t:sections.marquee-text.settings.header_spacing.label"
+      }, {
+        "type": "range",
+        "id": "margin_top",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "label": "t:sections.marquee-text.settings.header_spacing.top_spacing.label",
+        "default": 16
+      }, {
+        "type": "range",
+        "id": "margin_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "label": "t:sections.marquee-text.settings.header_spacing.bottom_spacing.label",
+        "default": 16
+      }
     ],
     "presets": [
       {

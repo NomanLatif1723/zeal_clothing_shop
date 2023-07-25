@@ -500,6 +500,15 @@
         },
         "marquee_background_color": {
           "label": "Background"
+        },
+        "header_spacing": {
+          "label": "Section Spacing",
+          "top_spacing": {
+            "label": "Spacing Top"
+          },
+          "bottom_spacing": {
+            "label": "Spacing Bottom"
+          }
         }
       },
       "presets": {
