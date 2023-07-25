@@ -14,7 +14,6 @@
             "slide_button_link": "shopify:\/\/collections\/all",
             "slide_image_desktop": "shopify:\/\/shop_images\/attractive-woman-wearing-hat-posing-black-background_1.jpg",
             "slide_image_mobile": "shopify:\/\/shop_images\/attractive-woman-wearing-hat-posing-black-background_1.jpg",
-            "slide_overlay_opacity": 74,
             "slide_text_color": "#ffffff",
             "slide_button_color": "rgba(0,0,0,0)"
           }
@@ -30,7 +29,6 @@
             "slide_button_link": "shopify:\/\/collections\/all",
             "slide_image_desktop": "shopify:\/\/shop_images\/woman-wearing-native-african-clothing-arid-environment_1.jpg",
             "slide_image_mobile": "shopify:\/\/shop_images\/woman-wearing-native-african-clothing-arid-environment_1.jpg",
-            "slide_overlay_opacity": 100,
             "slide_text_color": "#ffffff",
             "slide_button_color": "rgba(0,0,0,0)"
           }
@@ -46,7 +44,6 @@
             "slide_button_link": "shopify:\/\/collections\/all",
             "slide_image_desktop": "shopify:\/\/shop_images\/black-white-minimal-portrait_1.png",
             "slide_image_mobile": "shopify:\/\/shop_images\/black-white-minimal-portrait_1.png",
-            "slide_overlay_opacity": 100,
             "slide_text_color": "#ffffff",
             "slide_button_color": "rgba(0,0,0,0)"
           }
@@ -248,6 +245,26 @@
         "margin_top": 60,
         "margin_bottom": 0
       }
+    },
+    "211390c4-4881-4386-992f-62907dc8d4a0": {
+      "type": "marquee-text",
+      "blocks": {
+        "template--19980215124290__211390c4-4881-4386-992f-62907dc8d4a0-marquee-1": {
+          "type": "marquee",
+          "settings": {
+            "marquee_text": "Marquee Text",
+            "marquee_text_link": "",
+            "marquee_text_size": 30,
+            "marquee_direction": "left",
+            "marquee_text_speed": 100
+          }
+        }
+      },
+      "block_order": [
+        "template--19980215124290__211390c4-4881-4386-992f-62907dc8d4a0-marquee-1"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -256,6 +273,7 @@
     "b2c49c1e-4880-4b9e-90e7-0135ddd0a9b9",
     "01666e88-11d5-4970-8587-55e3cb27e243",
     "0a5d7332-5a60-4baf-bf6a-adbba595c25e",
-    "92018c5b-7aa4-4095-92a7-00221b583a17"
+    "92018c5b-7aa4-4095-92a7-00221b583a17",
+    "211390c4-4881-4386-992f-62907dc8d4a0"
   ]
 }
