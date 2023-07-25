@@ -88,7 +88,7 @@
       },
       {
         "type": "header",
-        "content": "t:schema_settings.colors.settings.header_footer.label"
+        "content": "t:schema_settings.colors.settings.header_footer"
       },
       {
         "type": "color",
