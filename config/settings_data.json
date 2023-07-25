@@ -1,8 +1,7 @@
 {
   "current": {
     "border_color": "#111111",
-    "color_button": "#111111",
-    "color_button_text": "#ffffff",
+    "color_button_text_primary": "#ffffff",
     "color_outline_button": "#ffffff",
     "announcement_bg_color": "#111111",
     "announcement_text_color": "#ffffff",
@@ -19,6 +18,8 @@
     "social_linkedin_url": "",
     "social_youtube_url": "",
     "social_vimeo_url": "",
+    "color_button": "#111111",
+    "color_button_text": "#ffffff",
     "content_for_index": [
 
     ]
