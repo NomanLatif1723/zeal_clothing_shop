@@ -475,7 +475,6 @@
     "marquee-text": {
       "name": "Marquee Text",
       "settings": {
-
       },
       "blocks": {
         "marquee": {
@@ -514,19 +513,16 @@
     "promotional-grid": {
       "name": "Promotional Grid",
       "settings": {
-
       },
       "blocks": {
         "banner": {
           "name": "Banner",
           "settings": {
-
           }
         },
         "collage": {
           "name": "Collage",
           "settings": {
-
           }
         }
       },
