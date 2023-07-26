@@ -35,16 +35,7 @@ if(timerEl){
     startTimer(hours, minutes);
 }
 
-//  Brands slider for mobile devices
-const logoSlider = document.querySelector('.brands__slider');
-if (logoSlider) {
-  var swiper = new Swiper(".brands__slider", {
-      navigation: {
-        nextEl: ".swiper-button-next.swiper-button-{{ section.id }}",
-        prevEl: ".swiper-button-prev.swiper-button-{{ section.id }}",
-      },
-    });
-}
+
     
 
 
