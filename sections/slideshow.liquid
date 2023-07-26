@@ -90,7 +90,7 @@
 
   // Slideshow 
   const slideshowWrapper = document.querySelector('#swiper-{{ section.id }}');
-  if(slideshowWrapper){
+
       var swiper{{ section.id | remove: '-' }} = new Swiper('#swiper-{{ section.id }}', {
         slidesPerView: 1,
         navigation: {
@@ -104,7 +104,7 @@
           clickable: true
         }
       });
-  }
+
 </script>
 {% schema %}
   {
