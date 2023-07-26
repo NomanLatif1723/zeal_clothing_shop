@@ -29,7 +29,7 @@
             "slide_button_link": "shopify:\/\/collections\/all",
             "slide_image_desktop": "shopify:\/\/shop_images\/woman-wearing-native-african-clothing-arid-environment_1.jpg",
             "slide_image_mobile": "shopify:\/\/shop_images\/woman-wearing-native-african-clothing-arid-environment_1.jpg",
-            "slide_text_color": "#ffffff",
+            "slide_text_color": "rgba(0,0,0,0)",
             "slide_button_color": "rgba(0,0,0,0)"
           }
         },
