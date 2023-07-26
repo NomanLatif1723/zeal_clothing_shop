@@ -14,6 +14,11 @@
 <div class="promotional__wrapper main__section-{{ section.id }}">
   <div class="promotional-grid">
     {% for block in section.blocks %}
+      {% style %}
+        .promotional-item-{{ block.id }} .promotional-banner__wrapper{
+          background: {{ block.settings.banner_background_color }};
+        }
+        {% endstyle %}
       <div class="promotional-grid__item promotional-item-{{ block.id }}">
         {% case block.type %}
           {% when 'image-with-text' %}
