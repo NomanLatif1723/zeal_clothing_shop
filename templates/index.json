@@ -202,11 +202,11 @@
         "b71874c4-6c86-417e-87de-1853939421d4": {
           "type": "banner",
           "settings": {
-            "banner_heading": "Banner Promotion",
-            "banner_text": "Welcome to Our Shop",
-            "banner_button_1": "Shop This",
+            "banner_heading": "Get -15% on your first purchase!",
+            "banner_text": "Valid for new users only.",
+            "banner_button_1": "Shop Now",
             "banner_button_link_1": "",
-            "banner_button_2": "Shop All",
+            "banner_button_2": "Learn More",
             "banner_button_link_2": "",
             "banner_background_color": "#000000"
           }
