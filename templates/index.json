@@ -319,6 +319,7 @@
     },
     "b481be53-fe90-4907-90b0-8e6cfd17eb76": {
       "type": "slideshow",
+      "disabled": true,
       "blocks": {
         "template--19980215124290__b481be53-fe90-4907-90b0-8e6cfd17eb76-slide-1": {
           "type": "slide",
