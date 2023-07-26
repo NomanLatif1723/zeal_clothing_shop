@@ -1,42 +1,4 @@
 
-  {% assign uniqueId = 'swiper-' | append: forloop.index %}
-
-  <div class="slideshow__slides swiper-container" id="{{ uniqueId }}">
-    <!-- Slides and Swiper content for this section -->
-    <div class="swiper-wrapper">
-      {% for i in (1..3) %}
-        <div class="swiper-slide">
-          some text here
-        </div>
-      {% endfor %}
-    </div>
-    <div class="swiper-pagination"></div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
-
-  <script>
-    var swiper{{ uniqueId | remove: "-" }} = new Swiper('#{{ uniqueId }}', {
-      slidesPerView: 1,
-      navigation: {
-        nextEl: "#{{ uniqueId }} .swiper-button-next",
-        prevEl: "#{{ uniqueId }} .swiper-button-prev"
-      },
-      {% if section.settings.slide_automation %}
-      autoplay: {
-        delay: {{ section.settings.slide_change_duration | times: 1000 }},
-        disableOnInteraction: false
-      },
-      {% endif %}
-      pagination: {
-        el: "#{{ uniqueId }} .swiper-pagination",
-        clickable: true
-      }
-    });
-  </script>
-
-
-{% comment %}
 {%- liquid
     assign desktop_height = section.settings.slide_height_desktop
     assign mobile_height = section.settings.slide_height_mobile
@@ -144,7 +106,6 @@
       });
   }
 </script>
-{% endcomment %}
 {% schema %}
   {
     "name": "t:sections.slideshow.name",
