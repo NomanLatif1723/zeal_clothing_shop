@@ -14,15 +14,15 @@
           {%- style -%}
             {%- assign slideTextColor = block.settings.slide_text_color -%}
             {%- assign slideButtonColor = block.settings.slide_button_color -%}
+            .slideshow__slide-{{ block.id }} .text-color__inverse{
+              color: #ffffff;
+            }
             .slideshow__slide-{{ block.id }} .text-color__light{
               color: {{ slideTextColor }};
             }
             .slideshow__slide-{{ block.id }} .slide__btn {
               background: {{ slideButtonColor }};
               border: 1px solid #ffffff;
-            }
-            .slideshow__slide-{{ block.id }} .text-color__inverse{
-              color: #ffffff;
             }
             .slideshow__slide-{{ block.id }} .btn-color__dark{
               color: #111111;
