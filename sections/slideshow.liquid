@@ -89,10 +89,10 @@
 
   // Slideshow 
 
-  const slideshowWrapper = document.querySelectorAll('.slideshow__slides');
-  slideshowWrapper.forEach(slider => {
+  const slideshowWrapper = document.querySelector('.slideshow__slides');
 
-    var swiper = new Swiper(slider, {
+
+    var swiper = new Swiper('.swiper-{{ section.id }}', {
       slidesPerView: 1,
       navigation: {
         nextEl: ".swiper-button-next",
@@ -106,7 +106,7 @@
       }
     });
 
-  })
+
   
 </script>
 {% schema %}
