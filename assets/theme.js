@@ -74,6 +74,4 @@ if (testimonialSlider) {
     });
 }
 
-const copy = document.querySelector(".marquee-text__slider").cloneNode(true);
-document.querySelector(".marquee-text__item").appendChild(copy);
       
