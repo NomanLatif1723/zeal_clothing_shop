@@ -24,7 +24,7 @@
       <div class="promotional-grid__item promotional-item-{{ block.id }}">
         {% case block.type %}
           {% when 'image-with-text' %}
-          <div class="promotional-grid__container promo-image__text">
+          <div class="promotional-grid__container promo-image__text promo-grid-{{ block.settings.block_width }}">
             <div class="page__width">
               <div class="promotional-grid__image">
                 {% if block.settings.promo_image != blank %}
