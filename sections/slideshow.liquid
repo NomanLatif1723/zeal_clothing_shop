@@ -85,10 +85,10 @@
     <div class="swiper-button-prev"></div>
   </div>
 </div>
+{% for section in sections %}
 <script>
 
   // Slideshow 
-  {% for section in sections %}
   const slideshowWrapper = document.querySelector('.slideshow__slides');
 
 
@@ -106,9 +106,10 @@
       }
     });
 
-  {% endfor %}
+
   
 </script>
+  {% endfor %}
 {% schema %}
   {
     "name": "t:sections.slideshow.name",
