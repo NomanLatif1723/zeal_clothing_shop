@@ -162,6 +162,60 @@
         "margin_bottom": 64
       }
     },
+    "75424914-7932-4d7c-ba8c-94a8743c1d8f": {
+      "type": "promotional-grid",
+      "blocks": {
+        "template--19980215124290__75424914-7932-4d7c-ba8c-94a8743c1d8f-banner-1": {
+          "type": "banner",
+          "settings": {
+            "banner_heading": "Heading",
+            "banner_text": "Welcome to Our Shop",
+            "banner_button_1": "Button",
+            "banner_button_link_1": "",
+            "banner_button_2": "Button",
+            "banner_button_link_2": "",
+            "banner_background_color": "#000000"
+          }
+        },
+        "template--19980215124290__75424914-7932-4d7c-ba8c-94a8743c1d8f-product-1": {
+          "type": "product",
+          "settings": {
+            "promo_product": "",
+            "promo_heading": "Heading",
+            "promo_text": "Description Text",
+            "show_price": false,
+            "show_timer": false,
+            "promo_button_label": "Button",
+            "promo_button_link": "",
+            "promo_background_color": "#111111",
+            "block_width": "small"
+          }
+        },
+        "template--19980215124290__75424914-7932-4d7c-ba8c-94a8743c1d8f-collection-1": {
+          "type": "collection",
+          "settings": {
+            "promo_collection": "",
+            "collection_heading": "Heading",
+            "collection_text": "Description Text",
+            "show_collection_price": false,
+            "show_collection_timer": false,
+            "collection_button_label": "Button",
+            "collection_button_link": "",
+            "collection_background_color": "#111111",
+            "block_width": "small"
+          }
+        }
+      },
+      "block_order": [
+        "template--19980215124290__75424914-7932-4d7c-ba8c-94a8743c1d8f-banner-1",
+        "template--19980215124290__75424914-7932-4d7c-ba8c-94a8743c1d8f-product-1",
+        "template--19980215124290__75424914-7932-4d7c-ba8c-94a8743c1d8f-collection-1"
+      ],
+      "settings": {
+        "margin_top": 64,
+        "margin_bottom": 64
+      }
+    },
     "01666e88-11d5-4970-8587-55e3cb27e243": {
       "type": "posts",
       "settings": {
@@ -258,58 +312,6 @@
         "margin_top": 60,
         "margin_bottom": 0
       }
-    },
-    "75424914-7932-4d7c-ba8c-94a8743c1d8f": {
-      "type": "promotional-grid",
-      "blocks": {
-        "template--19980215124290__75424914-7932-4d7c-ba8c-94a8743c1d8f-banner-1": {
-          "type": "banner",
-          "settings": {
-            "banner_heading": "Heading",
-            "banner_text": "Welcome to Our Shop",
-            "banner_button_1": "Button",
-            "banner_button_link_1": "",
-            "banner_button_2": "Button",
-            "banner_button_link_2": "",
-            "banner_background_color": "#000000"
-          }
-        },
-        "template--19980215124290__75424914-7932-4d7c-ba8c-94a8743c1d8f-product-1": {
-          "type": "product",
-          "settings": {
-            "promo_product": "",
-            "promo_heading": "Heading",
-            "promo_text": "Description Text",
-            "show_price": false,
-            "show_timer": false,
-            "promo_button_label": "Button",
-            "promo_button_link": "",
-            "promo_background_color": "#111111"
-          }
-        },
-        "template--19980215124290__75424914-7932-4d7c-ba8c-94a8743c1d8f-collection-1": {
-          "type": "collection",
-          "settings": {
-            "promo_collection": "",
-            "collection_heading": "Heading",
-            "collection_text": "Description Text",
-            "show_collection_price": false,
-            "show_collection_timer": false,
-            "collection_button_label": "Button",
-            "collection_button_link": "",
-            "collection_background_color": "#111111"
-          }
-        }
-      },
-      "block_order": [
-        "template--19980215124290__75424914-7932-4d7c-ba8c-94a8743c1d8f-banner-1",
-        "template--19980215124290__75424914-7932-4d7c-ba8c-94a8743c1d8f-product-1",
-        "template--19980215124290__75424914-7932-4d7c-ba8c-94a8743c1d8f-collection-1"
-      ],
-      "settings": {
-        "margin_top": 64,
-        "margin_bottom": 64
-      }
     }
   },
   "order": [
@@ -317,9 +319,9 @@
     "d534c664-a5a4-4f55-b829-6446be3b3cdb",
     "b2c49c1e-4880-4b9e-90e7-0135ddd0a9b9",
     "211390c4-4881-4386-992f-62907dc8d4a0",
+    "75424914-7932-4d7c-ba8c-94a8743c1d8f",
     "01666e88-11d5-4970-8587-55e3cb27e243",
     "0a5d7332-5a60-4baf-bf6a-adbba595c25e",
-    "92018c5b-7aa4-4095-92a7-00221b583a17",
-    "75424914-7932-4d7c-ba8c-94a8743c1d8f"
+    "92018c5b-7aa4-4095-92a7-00221b583a17"
   ]
 }
