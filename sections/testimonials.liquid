@@ -23,7 +23,7 @@
         <div class="swiper-button-next swiper-button-{{ section.id }}"></div>
         <div class="swiper-button-prev swiper-button-{{ section.id }}"></div>
       </div>
-      <div class="testimonial__slider-wrapper swiper">
+      <div id="swiper-{{ section.id }}" class="testimonial__slider-wrapper swiper">
         <div class="swiper-wrapper"> 
           {%- for block in section.blocks -%}
             <div class="testimonial__slider-item swiper-slide" {{ block.shopify_attributes }}>
@@ -71,8 +71,9 @@
 </div>
 <script>
   // Testimonial Slider 
-let testimonialSlider = document.querySelector('.testimonial__slider-wrapper');
-  var swiper = new Swiper(".testimonial__slider-wrapper", {
+let testimonialSlider = document.querySelector('#swiper-{{ section.id }}');
+if (testimonialSlider) {
+  var swiper = new Swiper("#swiper-{{ section.id }}", {
       slidesPerView: 1,
       navigation: {
         nextEl: ".swiper-button-next.swiper-button-{{ section.id }}",
@@ -95,6 +96,7 @@ let testimonialSlider = document.querySelector('.testimonial__slider-wrapper');
       },
     },
     });
+}
 </script>
 {% schema %}
   {
