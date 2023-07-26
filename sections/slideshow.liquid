@@ -92,13 +92,13 @@
   var swiper{{ section.id | remove: '-' }} = new Swiper('#swiper-{{ section.id }}', {
     slidesPerView: 1,
     navigation: {
-      nextEl: ".swiper-button-next.swiper-button-{{ section.id }}",
-      prevEl: ".swiper-button-prev.swiper-button-{{ section.id }}"
+      nextEl: ".swiper-button-{{ section.id }}.swiper-button-next",
+      prevEl: ".swiper-button-{{ section.id }}.swiper-button-prev"
     },{%- if section.settings.slide_automation -%}autoplay : {
         delay: {{ section.settings.slide_change_duration | times: 1000 }},
         disableOnInteraction: false
       },{%- endif -%}pagination: {
-      el: ".swiper-pagination.swiper-pagination-{{ section.id }}",
+      el: ".swiper-pagination-{{ section.id }}.swiper-pagination",
       clickable: true
     }
   });
