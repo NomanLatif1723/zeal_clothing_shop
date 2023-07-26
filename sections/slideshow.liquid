@@ -14,10 +14,7 @@
           {%- style -%}
             {%- assign slideTextColor = block.settings.slide_text_color -%}
             {%- assign slideButtonColor = block.settings.slide_button_color -%}
-            .slideshow__slide-{{ block.id }} .slide__text-heading{
-              color: {{ slideTextColor }};
-            }
-            .slideshow__slide-{{ block.id }} .slide__text-text{
+            .slideshow__slide-{{ block.id }} .text-color__light{
               color: {{ slideTextColor }};
             }
             .slideshow__slide-{{ block.id }} .slide__btn {
