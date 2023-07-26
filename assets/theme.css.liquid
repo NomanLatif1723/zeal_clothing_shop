@@ -971,7 +971,8 @@ font-display: "swap";
   }
   
   .banner__text {
-      font-size: 16px;
+      font-size: 14px;
+      line-height: 30px;
       opacity: 0.65;
       padding-top: 0;
   }
@@ -984,13 +985,18 @@ font-display: "swap";
   .banner-button__wrapper .btn__link {
     display: inline-block;
     text-transform: capitalize;
-}
+  }
+  
+  .banner-button__wrapper {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+  }
+  .banner__heading h2 {
+      font-size: 18px;
+  }
 
-.banner-button__wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
+
 @media only screen and (min-width:769px) {
   .promotional-banner__content {
     display: flex;
@@ -1009,6 +1015,8 @@ font-display: "swap";
     text-align: inherit;
   }
   .banner__text {
-      padding-top: 10px;
+    padding-top: 10px;
+    font-size: 16px;
+    line-height: 20px;
   }
 }
