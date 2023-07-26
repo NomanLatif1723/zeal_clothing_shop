@@ -27,7 +27,7 @@
           <div class="promotional-grid__container promo-image__text"></div>
 
           {% when 'banner' %}
-          <div class="promotional-grid__container promotional-banner__wrapper">
+          <div class="promotional-grid__container promotional-banner__wrapper {% if bannerBackgroundColor contains '#fff' or bannerBackgroundColor contains '#f' %}text__dark{% else %}text__light{% endif %}">
             <div class="page__width">
               <div class="promotional-banner__content">
                 <div class="banner-text__container">
@@ -46,7 +46,7 @@
                 <div class="banner-button__wrapper">
                   {% if block.settings.banner_button_1 != blank %}
                     <a
-                      class="btn btn__link btn__block"
+                      class="btn btn__link btn__block {% if bannerBackgroundColor contains '#fff' or bannerBackgroundColor contains '#f' %}btn-text__dark{% else %}btn-text__light{% endif %}"
                       href="{{ block.settings.banner_button_link_1 }}"
                       title="{{ block.settings.banner_button_1 }}">
                       {{ block.settings.banner_button_1 }}
@@ -54,7 +54,7 @@
                   {% endif %}     
                   {% if block.settings.banner_button_2 != blank %}      
                     <a   
-                      class="btn btn__link btn__outline {% if bannerBackgroundColor contains '#fff' or bannerBackgroundColor contains '#f' %}text-dark{% else %}text-light{% endif %}"
+                      class="btn btn__link btn__outline {% if bannerBackgroundColor contains '#fff' or bannerBackgroundColor contains '#f' %}btn-text__dark{% else %}btn-text__light{% endif %}"
                       href="{{ block.settings.banner_button_link_2 }}"
                       title="{{ block.settings.banner_button_2 }}">
                       {{ block.settings.banner_button_2 }}
