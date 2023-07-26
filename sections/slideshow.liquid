@@ -89,9 +89,10 @@
 
   // Slideshow 
 
-  const slideshowWrapper = document.querySelector('.slideshow__slides');
-  if (slideshowWrapper) {
-    var swiper = new Swiper(".slideshow__slides", {
+  const slideshowWrapper = document.querySelectorAll('.slideshow__slides');
+  slideshowWrapper.forEach(slider => {
+
+    var swiper = new Swiper(slider, {
       slidesPerView: 1,
       navigation: {
         nextEl: ".swiper-button-next",
@@ -104,7 +105,9 @@
         clickable: true
       }
     });
-  }
+
+  })
+  
 </script>
 {% schema %}
   {
