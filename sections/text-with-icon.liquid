@@ -74,14 +74,12 @@
 <script>
 //  Brands slider for mobile devices
 let logoSlider = document.querySelector('.brands__slider');
-if (logoSlider) {
   var swiper = new Swiper(".brands__slider", {
       navigation: {
         nextEl: ".swiper-button-next.swiper-button-{{ section.id }}",
         prevEl: ".swiper-button-prev.swiper-button-{{ section.id }}",
       },
     });
-}
 </script>
 {% schema %}
   {
