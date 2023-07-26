@@ -34,7 +34,7 @@
       <a href="{{ section.settings.marquee_text_link }}">
       {%- endif -%}
       <div class="marquee-text__item marquee-item-{{ section.id }} {% if marqueeBackground contains '#fff' or marqueeBackground contains '#f' %}marquee-text__dark{% else %}marquee-text__light{% endif %}">
-        <div class="marquee-text__slider marquee-text-{{ section.settings.marquee_direction }}">
+        <div id="marquee-{{ section.id }}" class="marquee-text__slider marquee-text-{{ section.settings.marquee_direction }}">
           {%- for i in (1..30) -%}
             <h3>
               <span>{{ section.settings.marquee_text }}</span>
@@ -48,8 +48,8 @@
   </div>
 </div>
 <script>
-  var copy = document.querySelector(".marquee-text__slider").cloneNode(true);
-  document.querySelector(".marquee-text__item").appendChild(copy);
+  const copy = document.querySelector("#marquee-{{ section.id }}").cloneNode(true);
+  document.querySelector(".main__section-{{ section.id }} .marquee-text__item").appendChild(copy);
 </script>
 {% schema %}
   {
