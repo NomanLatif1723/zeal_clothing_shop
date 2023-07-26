@@ -40,8 +40,8 @@ const logoSlider = document.querySelector('.brands__slider');
 if (logoSlider) {
   var swiper = new Swiper(".brands__slider", {
       navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next.swiper-button-{{ section.id }}",
+        prevEl: ".swiper-button-prev.swiper-button-{{ section.id }}",
       },
     });
 }
@@ -52,15 +52,15 @@ if (testimonialSlider) {
   var swiper = new Swiper(".testimonial__slider-wrapper", {
       slidesPerView: 1,
       navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next.swiper-button-{{ section.id }}",
+        prevEl: ".swiper-button-prev.swiper-button-{{ section.id }}",
       },
       autoplay: {
         delay: 2500,
         disableOnInteraction: false,
       },
       pagination: {
-        el: ".swiper-pagination",
+        el: ".swiper-pagination.swiper-pagination-{{ section.id }}",
         clickable: true,
       },
       breakpoints: {
