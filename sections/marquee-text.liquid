@@ -48,8 +48,7 @@
   </div>
 </div>
 <script>
-  const copy = document.querySelector("#marquee-{{ section.id }}").cloneNode(true);
-  document.querySelector(".main__section-{{ section.id }} .marquee-text__item").appendChild(copy);
+  document.querySelector(".main__section-{{ section.id }} .marquee-text__item").appendChild(document.querySelector("#marquee-{{ section.id }}").cloneNode(true));
 </script>
 {% schema %}
   {
