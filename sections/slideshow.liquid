@@ -88,7 +88,7 @@
 <script>
 
   // Slideshow 
-
+  {% for section in sections %}
   const slideshowWrapper = document.querySelector('.slideshow__slides');
 
 
@@ -106,7 +106,7 @@
       }
     });
 
-
+  {% endfor %}
   
 </script>
 {% schema %}
