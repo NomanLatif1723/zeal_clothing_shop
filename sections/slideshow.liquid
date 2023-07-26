@@ -3,14 +3,6 @@
     assign mobile_height = section.settings.slide_height_mobile
     assign navigation_style = section.settings.navigation_styles
 -%}
-.text-color__inverse {
-  }
-  .btn-color__dark{
-    color: #111111;
-  }
-  .btn-color__light{
-    color: #ffffff;
-  }
 <div class="slideshow">
   <div
     class="slideshow__slides swiper"
@@ -33,6 +25,12 @@
               border: 1px solid #ffffff;
             }
             .slideshow__slide-{{ block.id }} .text-color__inverse{
+              color: #ffffff;
+            }
+            .slideshow__slide-{{ block.id }} .btn-color__dark{
+              color: #111111;
+            }
+            .slideshow__slide-{{ block.id }} .btn-color__light{
               color: #ffffff;
             }
           {%- endstyle -%}
