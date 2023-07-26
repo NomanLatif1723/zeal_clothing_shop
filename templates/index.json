@@ -102,7 +102,6 @@
     },
     "75424914-7932-4d7c-ba8c-94a8743c1d8f": {
       "type": "promotional-grid",
-      "disabled": true,
       "blocks": {
         "acb60259-a65e-4cd7-afb3-87c052d0c8b8": {
           "type": "image-with-text",
