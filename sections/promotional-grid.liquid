@@ -11,7 +11,64 @@
     }
   }
 {% endstyle %}
+<div class="promotional__wrapper main__section-{{ section.id }}">
+  <div class="page__width">
+    <div class="promotional-grid">
+      {% for block in section.blocks %}
+        <div class="promotional-grid__item promotional-item-{{ block.id }}">
+          {% case block.type %}
+            {% when 'image-with-text' %}
+            <div class="promotional-grid__container promo-image__text"></div>
 
+            {% when 'banner' %}
+            <div class="promotional-grid__container promotional-banner__wrapper">
+              <div class="promotional-banner__content">
+                <div class="banner-text__container">
+                  {% if block.settings.banner_heading != blank %}
+                    <div class="main__heading banner__heading">
+                      <h2>{{ block.settings.banner_heading }}</h2>
+                    </div>
+                  {% endif %}
+
+                  {% if block.settings.banner_text != blank %}
+                    <div class="banner__text rte">
+                      {{ block.settings.banner_text }}
+                    </div>
+                  {% endif %}
+                </div>
+                <div class="banner-button__wrapper">
+                  {% if block.settings.banner_button_1 != blank %}
+                    <a
+                      class="btn btn__link btn__block"
+                      href="{{ block.settings.banner_button_link_1 }}"
+                      title="{{ block.settings.banner_button_1 }}">
+                      {{ block.settings.banner_button_1 }}
+                    </a>
+                  {% endif %}
+                  {% if block.settings.banner_button_2 != blank %}
+                    <a
+                      class="btn btn__link btn__outline"
+                      href="{{ block.settings.banner_button_link_2 }}"
+                      title="{{ block.settings.banner_button_2 }}">
+                      {{ block.settings.banner_button_2 }}
+                    </a>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+
+            {% when 'product' %}
+
+            {% when 'collection' %}
+
+
+
+          {% endcase %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
 {% schema %}
   {
     "name": "t:sections.promotional-grid.name",
@@ -54,13 +111,13 @@
             "type": "text",
             "id": "subheading",
             "label": "t:sections.promotional-grid.blocks.image-with-text.settings.subheading.label",
-            "default": "Heading"
+            "default": "SubHeading"
           },
           {
             "type": "text",
             "id": "heading",
             "label": "t:sections.promotional-grid.blocks.image-with-text.settings.heading.label",
-            "default": "Heading"
+            "default": "Image With Text"
           },
           {
             "type": "text",
@@ -86,7 +143,8 @@
                 "value": "full",
                 "label": "t:sections.promotional-grid.blocks.image-with-text.settings.layout_width.full.label"
               }
-            ]
+            ],
+            "default": "full"
           }
         ]
       }, {
@@ -135,22 +193,6 @@
             "id": "banner_background_color",
             "label": "t:sections.promotional-grid.blocks.banner.settings.banner_background.label",
             "default": "#000000"
-          }, {
-            "type": "select",
-            "id": "block_width",
-            "label": "t:sections.promotional-grid.blocks.banner.settings.layout_width.label",
-            "options": [
-              {
-                "value": "small",
-                "label": "t:sections.promotional-grid.blocks.banner.settings.layout_width.small.label"
-              }, {
-                "value": "medium",
-                "label": "t:sections.promotional-grid.blocks.banner.settings.layout_width.medium.label"
-              }, {
-                "value": "full",
-                "label": "t:sections.promotional-grid.blocks.banner.settings.layout_width.full.label"
-              }
-            ]
           }
         ]
       }, {
@@ -213,7 +255,8 @@
                 "value": "full",
                 "label": "t:sections.promotional-grid.blocks.product.settings.layout_width.full.label"
               }
-            ]
+            ],
+            "default": "full"
           }
         ]
       }, {
@@ -259,7 +302,7 @@
           }, {
             "type": "color",
             "id": "collection_background_color",
-            "label": "t:sections.promotional-grid.blocks.collection.settings.promo_background_color.label",
+            "label": "t:sections.promotional-grid.blocks.collection.settings.collection_background_color.label",
             "default": "#111111"
           }, {
             "type": "select",
@@ -276,7 +319,8 @@
                 "value": "full",
                 "label": "t:sections.promotional-grid.blocks.collection.settings.layout_width.full.label"
               }
-            ]
+            ],
+            "default": "full"
           }
         ]
       }

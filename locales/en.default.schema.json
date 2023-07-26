@@ -590,18 +590,6 @@
             },
             "banner_background": {
               "label": "Background"
-            },
-            "layout_width": {
-              "label": "Width",
-              "small": {
-                "label": "Small"
-              },
-              "medium": {
-                "label": "Medium"
-              },
-              "full": {
-                "label": "Full Screen"
-              }
             }
           }
         },
