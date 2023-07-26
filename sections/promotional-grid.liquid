@@ -15,7 +15,7 @@
   <div class="promotional-grid">
     {% for block in section.blocks %}
       {% style %}
-        {% assign bannerBackgroundColor = '#FFFFFF' %}
+        {% assign bannerBackgroundColor = block.settings.banner_background_color %}
         .promotional-item-{{ block.id }} .promotional-banner__wrapper{
           background: #9d1339;
           background: {{ bannerBackgroundColor }};
