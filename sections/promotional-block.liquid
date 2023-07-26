@@ -1,0 +1,156 @@
+{%- style -%}
+  .main__section-{{ section.id }}{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  @media only screen and (min-width:769px) {
+    .main__section-{{ section.id }}{
+      margin-top: {{ section.settings.margin_top }}px;
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<div class="promo-block__wrapper main__section-{{ section.id }}">
+  <div class="page__width">
+    <div class="promo-block__grid">
+      {%- for block in section.blocks -%}
+        <div class="promo-block__item promo-block-{{ block.settings.block_width }}">
+          <div class="promo-block__image">
+            {%- if block.settings.promo_image != blank -%}
+              <img
+                src="{{ block.settings.promo_image | img_url: 'master' }}"
+                loading="lazy"
+                width=""
+                height="" />
+            {%- else -%}
+              {{ 'lifestyle-1' | placeholder_svg_tag: "placeholder__image" }}
+            {%- endif -%}
+          </div>
+          <div class="promo-block__content">
+            <div class="promo-block__box">
+              <div class="promo-block__shadow">
+                {%- if block.settings.subheading != blank -%}
+                  <div class="sub__heading promo-sub__heading">
+                    {{ block.settings.subheading }}
+                  </div>
+                {%- endif -%}
+                {%- if block.settings.heading != blank -%}
+                  <div class="main__heading promo-main__heading">
+                    <h2>{{ block.settings.heading }}</h2>
+                  </div>
+                {%- endif -%}
+                {%- if block.settings.button_label != blank -%}
+                  <div class="promo-button__container">
+                    <a
+                      class="btn btn__link btn__promo"
+                      href="{{ block.settings.button_link }}"
+                      title="{{ block.settings.button_label }}">
+                      {{ block.settings.button_label }}
+                    </a>
+                  </div>
+                {%- endif -%}
+              </div>
+            </div>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Promotional Block",
+    "settings": [
+      {
+        "type": "header",
+        "content": "t:sections.promotional-grid.settings.header_spacing.label"
+      }, {
+        "type": "range",
+        "id": "margin_top",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "label": "t:sections.promotional-grid.settings.header_spacing.top_spacing.label",
+        "default": 16
+      }, {
+        "type": "range",
+        "id": "margin_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "label": "t:sections.promotional-grid.settings.header_spacing.bottom_spacing.label",
+        "default": 16
+      }
+    ],
+    "blocks": [
+      {
+        "type": "image-with-text",
+        "name": "t:sections.promotional-grid.blocks.image-with-text.name",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "promo_image",
+            "label": "t:sections.promotional-grid.blocks.image-with-text.settings.image.label"
+          },
+          {
+            "type": "text",
+            "id": "subheading",
+            "label": "t:sections.promotional-grid.blocks.image-with-text.settings.subheading.label",
+            "default": "SubHeading"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "t:sections.promotional-grid.blocks.image-with-text.settings.heading.label",
+            "default": "Image With Text"
+          },
+          {
+            "type": "text",
+            "id": "button_label",
+            "label": "t:sections.promotional-grid.blocks.image-with-text.settings.button_label.label",
+            "default": "Button"
+          }, {
+            "type": "url",
+            "id": "button_link",
+            "label": "t:sections.promotional-grid.blocks.image-with-text.settings.button_link.label"
+          }, {
+            "type": "select",
+            "id": "block_width",
+            "label": "t:sections.promotional-grid.blocks.image-with-text.settings.layout_width.label",
+            "options": [
+              {
+                "value": "small",
+                "label": "t:sections.promotional-grid.blocks.image-with-text.settings.layout_width.small.label"
+              }, {
+                "value": "medium",
+                "label": "t:sections.promotional-grid.blocks.image-with-text.settings.layout_width.medium.label"
+              }, {
+                "value": "full",
+                "label": "t:sections.promotional-grid.blocks.image-with-text.settings.layout_width.full.label"
+              }
+            ],
+            "default": "full"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Preomotional Block",
+        "blocks": [
+          {
+            "type": "image-with-text"
+          }, {
+            "type": "image-with-text"
+          }
+        ]
+      }
+    ],
+    "disabled_on": {
+      "groups": ["header", "footer"]
+    }
+  }
+{% endschema %}
