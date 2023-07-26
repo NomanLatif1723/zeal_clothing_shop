@@ -102,7 +102,6 @@
     },
     "75424914-7932-4d7c-ba8c-94a8743c1d8f": {
       "type": "promotional-grid",
-      "disabled": true,
       "blocks": {
         "acb60259-a65e-4cd7-afb3-87c052d0c8b8": {
           "type": "image-with-text",
@@ -111,7 +110,7 @@
             "heading": "Image With Text",
             "button_label": "Button",
             "button_link": "",
-            "block_width": "full"
+            "block_width": "medium"
           }
         },
         "00b8b47c-09a7-4318-a223-78db98ff63e9": {
@@ -121,7 +120,7 @@
             "heading": "Image With Text",
             "button_label": "Button",
             "button_link": "",
-            "block_width": "full"
+            "block_width": "medium"
           }
         }
       },
