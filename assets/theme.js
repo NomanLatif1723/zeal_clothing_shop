@@ -46,32 +46,6 @@ if (logoSlider) {
     });
 }
     
-// Testimonial Slider 
-const testimonialSlider = document.querySelector('.testimonial__slider-wrapper');
-if (testimonialSlider) {
-  var swiper = new Swiper(".testimonial__slider-wrapper", {
-      slidesPerView: 1,
-      navigation: {
-        nextEl: ".swiper-button-next.swiper-button-{{ section.id }}",
-        prevEl: ".swiper-button-prev.swiper-button-{{ section.id }}",
-      },
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".swiper-pagination.swiper-pagination-{{ section.id }}",
-        clickable: true,
-      },
-      breakpoints: {
-      601: {
-        slidesPerView: 2,
-      },
-      993: {
-        slidesPerView: 3,
-      },
-    },
-    });
-}
+
 
       
