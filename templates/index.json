@@ -198,6 +198,23 @@
     },
     "51d4a2b7-8c2e-4a53-bb06-179664c435d0": {
       "type": "promotional-grid",
+      "blocks": {
+        "b71874c4-6c86-417e-87de-1853939421d4": {
+          "type": "banner",
+          "settings": {
+            "banner_heading": "Banner Promotion",
+            "banner_text": "Welcome to Our Shop",
+            "banner_button_1": "Shop This",
+            "banner_button_link_1": "",
+            "banner_button_2": "Shop All",
+            "banner_button_link_2": "",
+            "banner_background_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "b71874c4-6c86-417e-87de-1853939421d4"
+      ],
       "settings": {
         "margin_top": 16,
         "margin_bottom": 16
