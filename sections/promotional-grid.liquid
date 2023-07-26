@@ -11,6 +11,7 @@
     }
   }
 {% endstyle %}
+
 {% schema %}
   {
     "name": "t:sections.promotional-grid.name",
@@ -18,7 +19,7 @@
     "settings": [
       {
         "type": "header",
-        "content": "t:sections.marquee-text.settings.header_spacing.label"
+        "content": "t:sections.promotional-grid.settings.header_spacing.label"
       }, {
         "type": "range",
         "id": "margin_top",
@@ -26,7 +27,7 @@
         "max": 100,
         "step": 2,
         "unit": "px",
-        "label": "t:sections.marquee-text.settings.header_spacing.top_spacing.label",
+        "label": "t:sections.promotional-grid.settings.header_spacing.top_spacing.label",
         "default": 16
       }, {
         "type": "range",
@@ -35,12 +36,60 @@
         "max": 100,
         "step": 2,
         "unit": "px",
-        "label": "t:sections.marquee-text.settings.header_spacing.bottom_spacing.label",
+        "label": "t:sections.promotional-grid.settings.header_spacing.bottom_spacing.label",
         "default": 16
       }
     ],
     "blocks": [
       {
+        "type": "image-with-text",
+        "name": "t:sections.promotional-grid.blocks.image-with-text.name",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "promo_image",
+            "label": "t:sections.promotional-grid.blocks.image-with-text.settings.image.label"
+          },
+          {
+            "type": "text",
+            "id": "subheading",
+            "label": "t:sections.promotional-grid.blocks.image-with-text.settings.subheading.label",
+            "default": "Heading"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "t:sections.promotional-grid.blocks.image-with-text.settings.heading.label",
+            "default": "Heading"
+          },
+          {
+            "type": "text",
+            "id": "button_label",
+            "label": "t:sections.promotional-grid.blocks.image-with-text.settings.button_label.label",
+            "default": "Button"
+          }, {
+            "type": "url",
+            "id": "button_link",
+            "label": "t:sections.promotional-grid.blocks.image-with-text.settings.button_link.label"
+          }, {
+            "type": "select",
+            "id": "block_width",
+            "label": "t:sections.promotional-grid.blocks.image-with-text.settings.layout_width.label",
+            "options": [
+              {
+                "value": "small",
+                "label": "t:sections.promotional-grid.blocks.image-with-text.settings.layout_width.small.label"
+              }, {
+                "value": "medium",
+                "label": "t:sections.promotional-grid.blocks.image-with-text.settings.layout_width.medium.label"
+              }, {
+                "value": "full",
+                "label": "t:sections.promotional-grid.blocks.image-with-text.settings.layout_width.full.label"
+              }
+            ]
+          }
+        ]
+      }, {
         "type": "banner",
         "name": "t:sections.promotional-grid.blocks.banner.name",
         "settings": [
@@ -86,6 +135,22 @@
             "id": "banner_background_color",
             "label": "t:sections.promotional-grid.blocks.banner.settings.banner_background.label",
             "default": "#000000"
+          }, {
+            "type": "select",
+            "id": "block_width",
+            "label": "t:sections.promotional-grid.blocks.banner.settings.layout_width.label",
+            "options": [
+              {
+                "value": "small",
+                "label": "t:sections.promotional-grid.blocks.banner.settings.layout_width.small.label"
+              }, {
+                "value": "medium",
+                "label": "t:sections.promotional-grid.blocks.banner.settings.layout_width.medium.label"
+              }, {
+                "value": "full",
+                "label": "t:sections.promotional-grid.blocks.banner.settings.layout_width.full.label"
+              }
+            ]
           }
         ]
       }, {
@@ -95,44 +160,60 @@
           {
             "type": "product",
             "id": "promo_product",
-            "label": "Product"
+            "label": "t:sections.promotional-grid.blocks.product.settings.promo_product.label"
           },
           {
             "type": "text",
             "id": "promo_heading",
-            "label": "Heading",
+            "label": "t:sections.promotional-grid.blocks.product.settings.promo_product_heading.label",
             "default": "Heading"
           },
           {
             "type": "textarea",
             "id": "promo_text",
-            "label": "Text",
+            "label": "t:sections.promotional-grid.blocks.product.settings.promo_product_text.label",
             "default": "Description Text"
           },
           {
             "type": "checkbox",
             "id": "show_price",
-            "label": "Show Price",
+            "label": "t:sections.promotional-grid.blocks.product.settings.show_price.label",
             "default": false
           }, {
             "type": "checkbox",
             "id": "show_timer",
-            "label": "Show Timer",
+            "label": "t:sections.promotional-grid.blocks.product.settings.show_timer.label",
             "default": false
           }, {
             "type": "text",
             "id": "promo_button_label",
-            "label": "Button",
+            "label": "t:sections.promotional-grid.blocks.product.settings.button_label.label",
             "default": "Button"
           }, {
             "type": "url",
             "id": "promo_button_link",
-            "label": "Link"
+            "label": "t:sections.promotional-grid.blocks.product.settings.button_link.label"
           }, {
             "type": "color",
             "id": "promo_background_color",
-            "label": "Background",
+            "label": "t:sections.promotional-grid.blocks.product.settings.promo_background_color.label",
             "default": "#111111"
+          }, {
+            "type": "select",
+            "id": "block_width",
+            "label": "t:sections.promotional-grid.blocks.product.settings.layout_width.label",
+            "options": [
+              {
+                "value": "small",
+                "label": "t:sections.promotional-grid.blocks.product.settings.layout_width.small.label"
+              }, {
+                "value": "medium",
+                "label": "t:sections.promotional-grid.blocks.product.settings.layout_width.medium.label"
+              }, {
+                "value": "full",
+                "label": "t:sections.promotional-grid.blocks.product.settings.layout_width.full.label"
+              }
+            ]
           }
         ]
       }, {
@@ -142,44 +223,60 @@
           {
             "type": "collection",
             "id": "promo_collection",
-            "label": "Product"
+            "label": "t:sections.promotional-grid.blocks.collection.settings.promo_collection.label"
           },
           {
             "type": "text",
             "id": "collection_heading",
-            "label": "Heading",
+            "label": "t:sections.promotional-grid.blocks.collection.settings.promo_collection_heading.label",
             "default": "Heading"
           },
           {
             "type": "textarea",
             "id": "collection_text",
-            "label": "Text",
+            "label": "t:sections.promotional-grid.blocks.collection.settings.promo_collection_text.label",
             "default": "Description Text"
           },
           {
             "type": "checkbox",
             "id": "show_collection_price",
-            "label": "Show Price",
+            "label": "t:sections.promotional-grid.blocks.collection.settings.show_price.label",
             "default": false
           }, {
             "type": "checkbox",
             "id": "show_collection_timer",
-            "label": "Show Timer",
+            "label": "t:sections.promotional-grid.blocks.collection.settings.show_timer.label",
             "default": false
           }, {
             "type": "text",
             "id": "collection_button_label",
-            "label": "Button",
+            "label": "t:sections.promotional-grid.blocks.collection.settings.button_label.label",
             "default": "Button"
           }, {
             "type": "url",
             "id": "collection_button_link",
-            "label": "Link"
+            "label": "t:sections.promotional-grid.blocks.collection.settings.button_link.label"
           }, {
             "type": "color",
             "id": "collection_background_color",
-            "label": "Background",
+            "label": "t:sections.promotional-grid.blocks.collection.settings.promo_background_color.label",
             "default": "#111111"
+          }, {
+            "type": "select",
+            "id": "block_width",
+            "label": "t:sections.promotional-grid.blocks.collection.settings.layout_width.label",
+            "options": [
+              {
+                "value": "small",
+                "label": "t:sections.promotional-grid.blocks.collection.settings.layout_width.small.label"
+              }, {
+                "value": "medium",
+                "label": "t:sections.promotional-grid.blocks.collection.settings.layout_width.medium.label"
+              }, {
+                "value": "full",
+                "label": "t:sections.promotional-grid.blocks.collection.settings.layout_width.full.label"
+              }
+            ]
           }
         ]
       }

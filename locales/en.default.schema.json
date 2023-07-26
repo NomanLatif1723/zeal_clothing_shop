@@ -529,6 +529,38 @@
         }
       },
       "blocks": {
+        "image-with-text": {
+          "name": "Image With Text",
+          "settings": {
+            "image": {
+              "label": "Image"
+            },
+            "subheading": {
+              "label": "Subheading"
+            },
+            "heading": {
+              "label": "Heading"
+            },
+            "button_label": {
+              "label": "Button"
+            },
+            "button_link": {
+              "label": "Link"
+            },
+            "layout_width": {
+              "label": "Width",
+              "small": {
+                "label": "Small"
+              },
+              "medium": {
+                "label": "Medium"
+              },
+              "full": {
+                "label": "Full Screen"
+              }
+            }
+          }
+        },
         "banner": {
           "name": "Banner",
           "settings": {
@@ -558,6 +590,18 @@
             },
             "banner_background": {
               "label": "Background"
+            },
+            "layout_width": {
+              "label": "Width",
+              "small": {
+                "label": "Small"
+              },
+              "medium": {
+                "label": "Medium"
+              },
+              "full": {
+                "label": "Full Screen"
+              }
             }
           }
         },
@@ -587,6 +631,18 @@
             },
             "promo_background_color": {
               "label": "Background"
+            },
+            "layout_width": {
+              "label": "Width",
+              "small": {
+                "label": "Small"
+              },
+              "medium": {
+                "label": "Medium"
+              },
+              "full": {
+                "label": "Full Screen"
+              }
             }
           }
         },
@@ -616,6 +672,18 @@
             },
             "collection_background_color": {
               "label": "Background"
+            },
+            "layout_width": {
+              "label": "Width",
+              "small": {
+                "label": "Small"
+              },
+              "medium": {
+                "label": "Medium"
+              },
+              "full": {
+                "label": "Full Screen"
+              }
             }
           }
         }
