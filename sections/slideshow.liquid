@@ -10,7 +10,7 @@
     data-mobile-height={{ mobile_height }}>
     <div class="slideshow__wrapper swiper-wrapper">
       {%- for block in section.blocks -%}
-        <div class="slideshow__slide swiper-slide slideshow__slide-{{ block.id }} swiper-{{ section.id }}" {{ block.shopify_attributes }}>
+        <div id="swiper-{{ section.id }}" class="slideshow__slide swiper-slide slideshow__slide-{{ block.id }}" {{ block.shopify_attributes }}>
           {%- style -%}
             {%- assign slideTextColor = block.settings.slide_text_color -%}
             {%- assign slideButtonColor = block.settings.slide_button_color -%}
@@ -92,7 +92,7 @@
   const slideshowWrapper = document.querySelector('.slideshow__slides');
 
 
-    var swiper{{ section.id | remove: "-" }} = new Swiper('.swiper-{{ section.id }}', {
+    var swiper{{ section.id | remove: "-" }} = new Swiper('#swiper-{{ section.id }}', {
       slidesPerView: 1,
       navigation: {
         nextEl: ".swiper-button-next",
