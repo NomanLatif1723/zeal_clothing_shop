@@ -176,40 +176,10 @@
             "banner_button_link_2": "",
             "banner_background_color": "#000000"
           }
-        },
-        "template--19980215124290__75424914-7932-4d7c-ba8c-94a8743c1d8f-product-1": {
-          "type": "product",
-          "settings": {
-            "promo_product": "",
-            "promo_heading": "Heading",
-            "promo_text": "Description Text",
-            "show_price": false,
-            "show_timer": false,
-            "promo_button_label": "Button",
-            "promo_button_link": "",
-            "promo_background_color": "#111111",
-            "block_width": "small"
-          }
-        },
-        "template--19980215124290__75424914-7932-4d7c-ba8c-94a8743c1d8f-collection-1": {
-          "type": "collection",
-          "settings": {
-            "promo_collection": "",
-            "collection_heading": "Heading",
-            "collection_text": "Description Text",
-            "show_collection_price": false,
-            "show_collection_timer": false,
-            "collection_button_label": "Button",
-            "collection_button_link": "",
-            "collection_background_color": "#111111",
-            "block_width": "small"
-          }
         }
       },
       "block_order": [
-        "template--19980215124290__75424914-7932-4d7c-ba8c-94a8743c1d8f-banner-1",
-        "template--19980215124290__75424914-7932-4d7c-ba8c-94a8743c1d8f-product-1",
-        "template--19980215124290__75424914-7932-4d7c-ba8c-94a8743c1d8f-collection-1"
+        "template--19980215124290__75424914-7932-4d7c-ba8c-94a8743c1d8f-banner-1"
       ],
       "settings": {
         "margin_top": 64,
