@@ -110,7 +110,7 @@
             "heading": "Image With Text",
             "button_label": "Button",
             "button_link": "",
-            "block_width": "full"
+            "block_width": "medium"
           }
         },
         "00b8b47c-09a7-4318-a223-78db98ff63e9": {
@@ -120,7 +120,7 @@
             "heading": "Image With Text",
             "button_label": "Button",
             "button_link": "",
-            "block_width": "full"
+            "block_width": "medium"
           }
         }
       },
