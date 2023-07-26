@@ -52,18 +52,18 @@
               <div class="slide__content slideshow__{{ block.settings.content_position }}">
                 <div class="slide__text-shadow text__align-{{ block.settings.text_alignment }}">
                   {%- if block.settings.slide_heading != blank -%}
-                    <div class="slide__text-heading {% if slideTextColor contains 'rgba(0,0,0,0)' %}color__inverse{% endif %}">
+                    <div class="slide__text-heading {% if slideTextColor contains 'rgba(0,0,0,0)' %}text-color__inverse{% endif %}">
                       <h1>{{ block.settings.slide_heading }}</h1>
                     </div>
                   {%- endif -%}
                   {%- if block.settings.slide_text != blank -%}
-                    <div class="slide__text-text rte">
+                    <div class="slide__text-text rte {% if slideTextColor contains 'rgba(0,0,0,0)' %}text-color__inverse{% endif %}">
                       {{ block.settings.slide_text }}
                     </div>
                   {%- endif -%}
                   {%- if block.settings.slide_button_label != blank -%}
                     <div class="slide__btn-wrapper">
-                      <a class="btn btn__link slide__btn{% if block.settings.slide_button_color contains '#ffffff' or block.settings.slide_button_color contains '#f' %} color__inverse{% endif %}" href="{{ block.settings.slide_button_link }}" title="{{ block.settings.slide_button_label }}">
+                      <a class="btn btn__link slide__btn{% if block.settings.slide_button_color contains '#ffffff' or block.settings.slide_button_color contains '#f' %} btn-color__inverse{% endif %}" href="{{ block.settings.slide_button_link }}" title="{{ block.settings.slide_button_label }}">
                         {{ block.settings.slide_button_label }}
                       </a>
                     </div>
