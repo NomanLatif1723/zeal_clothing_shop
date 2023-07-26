@@ -1,4 +1,4 @@
-{% for section in sections %}
+
   {% assign uniqueId = 'swiper-' | append: forloop.index %}
 
   <div class="slideshow__slides swiper-container" id="{{ uniqueId }}">
@@ -35,7 +35,7 @@
       }
     });
   </script>
-{% endfor %}
+
 
 {% comment %}
 {%- liquid
