@@ -316,6 +316,62 @@
         "margin_top": 60,
         "margin_bottom": 0
       }
+    },
+    "79f8f47c-dd29-43cf-9e49-22ba4c7444e5": {
+      "type": "slideshow",
+      "blocks": {
+        "template--19980215124290__79f8f47c-dd29-43cf-9e49-22ba4c7444e5-slide-1": {
+          "type": "slide",
+          "settings": {
+            "content_position": "center-left",
+            "text_alignment": "center",
+            "slide_heading": "Heading",
+            "slide_text": "Slide Text",
+            "slide_button_label": "Button",
+            "slide_button_link": "",
+            "slide_text_color": "#ffffff",
+            "slide_button_color": "#111111"
+          }
+        },
+        "template--19980215124290__79f8f47c-dd29-43cf-9e49-22ba4c7444e5-slide-2": {
+          "type": "slide",
+          "settings": {
+            "content_position": "center-left",
+            "text_alignment": "center",
+            "slide_heading": "Heading",
+            "slide_text": "Slide Text",
+            "slide_button_label": "Button",
+            "slide_button_link": "",
+            "slide_text_color": "#ffffff",
+            "slide_button_color": "#111111"
+          }
+        },
+        "template--19980215124290__79f8f47c-dd29-43cf-9e49-22ba4c7444e5-slide-3": {
+          "type": "slide",
+          "settings": {
+            "content_position": "center-left",
+            "text_alignment": "center",
+            "slide_heading": "Heading",
+            "slide_text": "Slide Text",
+            "slide_button_label": "Button",
+            "slide_button_link": "",
+            "slide_text_color": "#ffffff",
+            "slide_button_color": "#111111"
+          }
+        }
+      },
+      "block_order": [
+        "template--19980215124290__79f8f47c-dd29-43cf-9e49-22ba4c7444e5-slide-1",
+        "template--19980215124290__79f8f47c-dd29-43cf-9e49-22ba4c7444e5-slide-2",
+        "template--19980215124290__79f8f47c-dd29-43cf-9e49-22ba4c7444e5-slide-3"
+      ],
+      "settings": {
+        "slide_height_desktop": "natural",
+        "slide_height_mobile": "auto",
+        "slide_automation": false,
+        "slide_change_duration": 5,
+        "navigation_styles": "bars"
+      }
     }
   },
   "order": [
@@ -327,6 +383,7 @@
     "51d4a2b7-8c2e-4a53-bb06-179664c435d0",
     "01666e88-11d5-4970-8587-55e3cb27e243",
     "0a5d7332-5a60-4baf-bf6a-adbba595c25e",
-    "92018c5b-7aa4-4095-92a7-00221b583a17"
+    "92018c5b-7aa4-4095-92a7-00221b583a17",
+    "79f8f47c-dd29-43cf-9e49-22ba4c7444e5"
   ]
 }
