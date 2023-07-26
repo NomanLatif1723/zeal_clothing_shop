@@ -39,7 +39,7 @@
     {%- endfor -%}
   </div>
 </div>
-<div class="text__image-container main__section-{{ section.id }} text__container-mobile swiper brands__slider">
+<div id="swiper-{{ section.id }}" class="text__image-container main__section-{{ section.id }} text__container-mobile swiper brands__slider">
   <div class="text__image-wrapper swiper-wrapper">
     {%- for block in section.blocks -%}
       <div class="text__image-item swiper-slide" {{ block.shopify_attributes }}>
@@ -73,8 +73,7 @@
 </div>
 <script>
 //  Brands slider for mobile devices
-let logoSlider = document.querySelector('.brands__slider');
-  var swiper = new Swiper(".brands__slider", {
+  var swiper = new Swiper("#swiper-{{ section.id }}", {
       navigation: {
         nextEl: ".swiper-button-next.swiper-button-{{ section.id }}",
         prevEl: ".swiper-button-prev.swiper-button-{{ section.id }}",
