@@ -51,10 +51,10 @@
                       title="{{ block.settings.banner_button_1 }}">
                       {{ block.settings.banner_button_1 }}
                     </a>
-                  {% endif %}
-                  {% if block.settings.banner_button_2 != blank %}
-                    <a
-                      class="btn btn__link btn__outline"
+                  {% endif %}     
+                  {% if block.settings.banner_button_2 != blank %}      
+                    <a   
+                      class="btn btn__link btn__outline {% if bannerBackgroundColor contains '#FFF' or bannerBackgroundColor contains '#FFFFFF' %}text-dark{% else %}text-light{% endif %}"
                       href="{{ block.settings.banner_button_link_2 }}"
                       title="{{ block.settings.banner_button_2 }}">
                       {{ block.settings.banner_button_2 }}
