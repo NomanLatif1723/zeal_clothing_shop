@@ -3,6 +3,7 @@
     assign mobile_height = section.settings.slide_height_mobile
     assign navigation_style = section.settings.navigation_styles
 -%}
+{% for section in sections %}
 <div class="slideshow">
   <div
     class="slideshow__slides swiper"
@@ -107,7 +108,7 @@
       }
     });
   </script>
-
+{% endfor %}
 
 {% schema %}
   {
