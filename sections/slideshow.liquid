@@ -4,12 +4,11 @@
   <div class="slideshow__slides swiper-container" id="{{ uniqueId }}">
     <!-- Slides and Swiper content for this section -->
     <div class="swiper-wrapper">
-
+      {% for i in (1..3) %}
         <div class="swiper-slide">
-         
           some text here
         </div>
-
+      {% endfor %}
     </div>
     <div class="swiper-pagination"></div>
     <div class="swiper-button-next"></div>
