@@ -14,10 +14,10 @@
           {%- style -%}
             {%- assign slideTextColor = block.settings.slide_text_color -%}
             {%- assign slideButtonColor = block.settings.slide_button_color -%}
-            .slideshow__slide-{{ block.id }} .text-color__inverse{
-              color: #ffffff;
+            .slideshow__slide-{{ block.id }} .slide__text-heading{
+              color: {{ slideTextColor }};
             }
-            .slideshow__slide-{{ block.id }} .text-color__light{
+            .slideshow__slide-{{ block.id }} .slide__text-text{
               color: {{ slideTextColor }};
             }
             .slideshow__slide-{{ block.id }} .slide__btn {
@@ -57,12 +57,12 @@
               <div class="slide__content slideshow__{{ block.settings.content_position }}">
                 <div class="slide__text-shadow text__align-{{ block.settings.text_alignment }}">
                   {%- if block.settings.slide_heading != blank -%}
-                    <div class="slide__text-heading {% if slideTextColor contains 'rgba(0,0,0,0)' %}text-color__inverse{% else %}text-color__light{% endif %}">
+                    <div class="slide__text-heading">
                       <h1>{{ block.settings.slide_heading }}</h1>
                     </div>
                   {%- endif -%}
                   {%- if block.settings.slide_text != blank -%}
-                    <div class="slide__text-text rte {% if slideTextColor contains 'rgba(0,0,0,0)' %}text-color__inverse{% else %}text-color__light{% endif %}">
+                    <div class="slide__text-text rte">
                       {{ block.settings.slide_text }}
                     </div>
                   {%- endif -%}
