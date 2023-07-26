@@ -92,7 +92,7 @@
   const slideshowWrapper = document.querySelector('.slideshow__slides');
 
 
-    var swiper = new Swiper('.swiper-{{ section.id }}', {
+    var swiper{{ section.id | remove: "-" }} = new Swiper('.swiper-{{ section.id }}', {
       slidesPerView: 1,
       navigation: {
         nextEl: ".swiper-button-next",
