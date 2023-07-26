@@ -3,7 +3,6 @@
     assign mobile_height = section.settings.slide_height_mobile
     assign navigation_style = section.settings.navigation_styles
 -%}
-{% for section in sections %}
 <div class="slideshow">
   <div
     class="slideshow__slides swiper"
@@ -86,29 +85,26 @@
     <div class="swiper-button-prev"></div>
   </div>
 </div>
+<script>
 
   // Slideshow 
-
-  <script>
-    var swiper{{ section.id | remove: "-" }} = new Swiper('#swiper-{{ section.id }}', {
-      slidesPerView: 1,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
-      },
-      {% if section.settings.slide_automation %}
-      autoplay: {
-        delay: {{ section.settings.slide_change_duration | times: 1000 }},
-        disableOnInteraction: false
-      },
-      {% endif %}
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true
-      }
-    });
-  </script>
-{% endfor %}
+  const slideshowWrapper = document.querySelector('.slideshow__slides');
+  if(slideshowWrapper){
+      var swiper{{ section.id | remove: "-" }} = new Swiper('#swiper-{{ section.id }}', {
+        slidesPerView: 1,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        },{%- if section.settings.slide_automation -%}autoplay : {
+            delay: {{ section.settings.slide_change_duration | times: 1000 }},
+            disableOnInteraction: false
+          },{%- endif -%}pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        }
+      });
+  }
+</script>
 
 {% schema %}
   {
