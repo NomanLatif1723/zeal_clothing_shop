@@ -5,13 +5,13 @@
     assign navigation_style = section.settings.navigation_styles
 -%}
 <div class="slideshow">
-  <div
+  <div id="swiper-{{ section.id }}"
     class="slideshow__slides swiper"
     data-desktop-height={{ desktop_height }}
     data-mobile-height={{ mobile_height }}>
     <div class="slideshow__wrapper swiper-wrapper">
       {%- for block in section.blocks -%}
-        <div id="swiper-{{ section.id }}" class="slideshow__slide swiper-slide slideshow__slide-{{ block.id }}" {{ block.shopify_attributes }}>
+        <div class="slideshow__slide swiper-slide slideshow__slide-{{ block.id }}" {{ block.shopify_attributes }}>
           {%- style -%}
             {%- assign slideTextColor = block.settings.slide_text_color -%}
             {%- assign slideButtonColor = block.settings.slide_button_color -%}
