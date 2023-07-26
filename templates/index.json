@@ -316,70 +316,6 @@
         "margin_top": 60,
         "margin_bottom": 0
       }
-    },
-    "e279f6ce-cd35-41cb-8b33-eb118a5a6f66": {
-      "type": "testimonials",
-      "blocks": {
-        "template--19980215124290__e279f6ce-cd35-41cb-8b33-eb118a5a6f66-testimonial-1": {
-          "type": "testimonial",
-          "settings": {
-            "testimonial_star_icon": "5-star",
-            "slide_heading": "Testimonial",
-            "slide_text": "Testimonial Text",
-            "author_text": "Author"
-          }
-        },
-        "template--19980215124290__e279f6ce-cd35-41cb-8b33-eb118a5a6f66-testimonial-2": {
-          "type": "testimonial",
-          "settings": {
-            "testimonial_star_icon": "5-star",
-            "slide_heading": "Testimonial",
-            "slide_text": "Testimonial Text",
-            "author_text": "Author"
-          }
-        },
-        "template--19980215124290__e279f6ce-cd35-41cb-8b33-eb118a5a6f66-testimonial-3": {
-          "type": "testimonial",
-          "settings": {
-            "testimonial_star_icon": "5-star",
-            "slide_heading": "Testimonial",
-            "slide_text": "Testimonial Text",
-            "author_text": "Author"
-          }
-        },
-        "template--19980215124290__e279f6ce-cd35-41cb-8b33-eb118a5a6f66-testimonial-4": {
-          "type": "testimonial",
-          "settings": {
-            "testimonial_star_icon": "5-star",
-            "slide_heading": "Testimonial",
-            "slide_text": "Testimonial Text",
-            "author_text": "Author"
-          }
-        },
-        "template--19980215124290__e279f6ce-cd35-41cb-8b33-eb118a5a6f66-testimonial-5": {
-          "type": "testimonial",
-          "settings": {
-            "testimonial_star_icon": "5-star",
-            "slide_heading": "Testimonial",
-            "slide_text": "Testimonial Text",
-            "author_text": "Author"
-          }
-        }
-      },
-      "block_order": [
-        "template--19980215124290__e279f6ce-cd35-41cb-8b33-eb118a5a6f66-testimonial-1",
-        "template--19980215124290__e279f6ce-cd35-41cb-8b33-eb118a5a6f66-testimonial-2",
-        "template--19980215124290__e279f6ce-cd35-41cb-8b33-eb118a5a6f66-testimonial-3",
-        "template--19980215124290__e279f6ce-cd35-41cb-8b33-eb118a5a6f66-testimonial-4",
-        "template--19980215124290__e279f6ce-cd35-41cb-8b33-eb118a5a6f66-testimonial-5"
-      ],
-      "settings": {
-        "testimonial_heading": "Testimonials",
-        "testimonial_text": "Welcome to Our Store",
-        "text_alignment": "center",
-        "testimonial_background_color": "#ffffff",
-        "testimonial_text_color": "#111111"
-      }
     }
   },
   "order": [
@@ -391,7 +327,6 @@
     "51d4a2b7-8c2e-4a53-bb06-179664c435d0",
     "01666e88-11d5-4970-8587-55e3cb27e243",
     "0a5d7332-5a60-4baf-bf6a-adbba595c25e",
-    "92018c5b-7aa4-4095-92a7-00221b583a17",
-    "e279f6ce-cd35-41cb-8b33-eb118a5a6f66"
+    "92018c5b-7aa4-4095-92a7-00221b583a17"
   ]
 }
