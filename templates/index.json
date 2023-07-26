@@ -191,7 +191,7 @@
         "marquee_text_size": 18,
         "marquee_direction": "left",
         "marquee_text_speed": 50,
-        "marquee_background": "#111111",
+        "marquee_background": "#ffffff",
         "margin_top": 64,
         "margin_bottom": 64
       }
