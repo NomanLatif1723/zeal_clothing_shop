@@ -52,7 +52,7 @@
               <div class="slide__content slideshow__{{ block.settings.content_position }}">
                 <div class="slide__text-shadow text__align-{{ block.settings.text_alignment }}">
                   {%- if block.settings.slide_heading != blank -%}
-                    <div class="slide__text-heading">
+                    <div class="slide__text-heading {% if slideTextColor contains 'rgba(0,0,0,0)' %}color__inverse{% endif %}">
                       <h1>{{ block.settings.slide_heading }}</h1>
                     </div>
                   {%- endif -%}
