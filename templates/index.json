@@ -317,39 +317,68 @@
         "margin_bottom": 0
       }
     },
-    "732e91b4-7ad0-44d7-8dc7-b601ad0166c4": {
-      "type": "text-with-icon",
+    "e279f6ce-cd35-41cb-8b33-eb118a5a6f66": {
+      "type": "testimonials",
       "blocks": {
-        "template--19980215124290__732e91b4-7ad0-44d7-8dc7-b601ad0166c4-slide-1": {
-          "type": "slide",
+        "template--19980215124290__e279f6ce-cd35-41cb-8b33-eb118a5a6f66-testimonial-1": {
+          "type": "testimonial",
           "settings": {
-            "brand_heading": "Heading",
-            "brand_text": "Welcome To Our Store"
+            "testimonial_star_icon": "5-star",
+            "slide_heading": "Testimonial",
+            "slide_text": "Testimonial Text",
+            "author_text": "Author"
           }
         },
-        "template--19980215124290__732e91b4-7ad0-44d7-8dc7-b601ad0166c4-slide-2": {
-          "type": "slide",
+        "template--19980215124290__e279f6ce-cd35-41cb-8b33-eb118a5a6f66-testimonial-2": {
+          "type": "testimonial",
           "settings": {
-            "brand_heading": "Heading",
-            "brand_text": "Welcome To Our Store"
+            "testimonial_star_icon": "5-star",
+            "slide_heading": "Testimonial",
+            "slide_text": "Testimonial Text",
+            "author_text": "Author"
           }
         },
-        "template--19980215124290__732e91b4-7ad0-44d7-8dc7-b601ad0166c4-slide-3": {
-          "type": "slide",
+        "template--19980215124290__e279f6ce-cd35-41cb-8b33-eb118a5a6f66-testimonial-3": {
+          "type": "testimonial",
           "settings": {
-            "brand_heading": "Heading",
-            "brand_text": "Welcome To Our Store"
+            "testimonial_star_icon": "5-star",
+            "slide_heading": "Testimonial",
+            "slide_text": "Testimonial Text",
+            "author_text": "Author"
+          }
+        },
+        "template--19980215124290__e279f6ce-cd35-41cb-8b33-eb118a5a6f66-testimonial-4": {
+          "type": "testimonial",
+          "settings": {
+            "testimonial_star_icon": "5-star",
+            "slide_heading": "Testimonial",
+            "slide_text": "Testimonial Text",
+            "author_text": "Author"
+          }
+        },
+        "template--19980215124290__e279f6ce-cd35-41cb-8b33-eb118a5a6f66-testimonial-5": {
+          "type": "testimonial",
+          "settings": {
+            "testimonial_star_icon": "5-star",
+            "slide_heading": "Testimonial",
+            "slide_text": "Testimonial Text",
+            "author_text": "Author"
           }
         }
       },
       "block_order": [
-        "template--19980215124290__732e91b4-7ad0-44d7-8dc7-b601ad0166c4-slide-1",
-        "template--19980215124290__732e91b4-7ad0-44d7-8dc7-b601ad0166c4-slide-2",
-        "template--19980215124290__732e91b4-7ad0-44d7-8dc7-b601ad0166c4-slide-3"
+        "template--19980215124290__e279f6ce-cd35-41cb-8b33-eb118a5a6f66-testimonial-1",
+        "template--19980215124290__e279f6ce-cd35-41cb-8b33-eb118a5a6f66-testimonial-2",
+        "template--19980215124290__e279f6ce-cd35-41cb-8b33-eb118a5a6f66-testimonial-3",
+        "template--19980215124290__e279f6ce-cd35-41cb-8b33-eb118a5a6f66-testimonial-4",
+        "template--19980215124290__e279f6ce-cd35-41cb-8b33-eb118a5a6f66-testimonial-5"
       ],
       "settings": {
-        "margin_top": 16,
-        "margin_bottom": 16
+        "testimonial_heading": "Testimonials",
+        "testimonial_text": "Welcome to Our Store",
+        "text_alignment": "center",
+        "testimonial_background_color": "#ffffff",
+        "testimonial_text_color": "#111111"
       }
     }
   },
@@ -363,6 +392,6 @@
     "01666e88-11d5-4970-8587-55e3cb27e243",
     "0a5d7332-5a60-4baf-bf6a-adbba595c25e",
     "92018c5b-7aa4-4095-92a7-00221b583a17",
-    "732e91b4-7ad0-44d7-8dc7-b601ad0166c4"
+    "e279f6ce-cd35-41cb-8b33-eb118a5a6f66"
   ]
 }
