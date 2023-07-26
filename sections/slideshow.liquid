@@ -89,9 +89,9 @@
 <script>
 
   // Slideshow 
-  const slideshowWrapper = document.querySelector('.slideshow__slides');
+  const slideshowWrapper = document.querySelector('#swiper-{{ section.id }}');
   if(slideshowWrapper){
-      var swiper = new Swiper('.slideshow__slides', {
+      var swiper = new Swiper('#swiper-{{ section.id }}', {
         slidesPerView: 1,
         navigation: {
           nextEl: ".swiper-button-next",
