@@ -100,6 +100,40 @@
         "margin_bottom": 60
       }
     },
+    "75424914-7932-4d7c-ba8c-94a8743c1d8f": {
+      "type": "promotional-grid",
+      "disabled": true,
+      "blocks": {
+        "acb60259-a65e-4cd7-afb3-87c052d0c8b8": {
+          "type": "image-with-text",
+          "settings": {
+            "subheading": "SubHeading",
+            "heading": "Image With Text",
+            "button_label": "Button",
+            "button_link": "",
+            "block_width": "full"
+          }
+        },
+        "00b8b47c-09a7-4318-a223-78db98ff63e9": {
+          "type": "image-with-text",
+          "settings": {
+            "subheading": "SubHeading",
+            "heading": "Image With Text",
+            "button_label": "Button",
+            "button_link": "",
+            "block_width": "full"
+          }
+        }
+      },
+      "block_order": [
+        "acb60259-a65e-4cd7-afb3-87c052d0c8b8",
+        "00b8b47c-09a7-4318-a223-78db98ff63e9"
+      ],
+      "settings": {
+        "margin_top": 64,
+        "margin_bottom": 64
+      }
+    },
     "b2c49c1e-4880-4b9e-90e7-0135ddd0a9b9": {
       "type": "richtext",
       "blocks": {
@@ -162,13 +196,13 @@
         "margin_bottom": 64
       }
     },
-    "75424914-7932-4d7c-ba8c-94a8743c1d8f": {
+    "51d4a2b7-8c2e-4a53-bb06-179664c435d0": {
       "type": "promotional-grid",
       "blocks": {
-        "template--19980215124290__75424914-7932-4d7c-ba8c-94a8743c1d8f-banner-1": {
+        "template--19980215124290__51d4a2b7-8c2e-4a53-bb06-179664c435d0-banner-1": {
           "type": "banner",
           "settings": {
-            "banner_heading": "Heading",
+            "banner_heading": "Banner Promotion",
             "banner_text": "Welcome to Our Shop",
             "banner_button_1": "Button",
             "banner_button_link_1": "",
@@ -176,14 +210,44 @@
             "banner_button_link_2": "",
             "banner_background_color": "#000000"
           }
+        },
+        "template--19980215124290__51d4a2b7-8c2e-4a53-bb06-179664c435d0-product-1": {
+          "type": "product",
+          "settings": {
+            "promo_product": "",
+            "promo_heading": "Heading",
+            "promo_text": "Description Text",
+            "show_price": false,
+            "show_timer": false,
+            "promo_button_label": "Button",
+            "promo_button_link": "",
+            "promo_background_color": "#111111",
+            "block_width": "full"
+          }
+        },
+        "template--19980215124290__51d4a2b7-8c2e-4a53-bb06-179664c435d0-collection-1": {
+          "type": "collection",
+          "settings": {
+            "promo_collection": "",
+            "collection_heading": "Heading",
+            "collection_text": "Description Text",
+            "show_collection_price": false,
+            "show_collection_timer": false,
+            "collection_button_label": "Button",
+            "collection_button_link": "",
+            "collection_background_color": "#111111",
+            "block_width": "full"
+          }
         }
       },
       "block_order": [
-        "template--19980215124290__75424914-7932-4d7c-ba8c-94a8743c1d8f-banner-1"
+        "template--19980215124290__51d4a2b7-8c2e-4a53-bb06-179664c435d0-banner-1",
+        "template--19980215124290__51d4a2b7-8c2e-4a53-bb06-179664c435d0-product-1",
+        "template--19980215124290__51d4a2b7-8c2e-4a53-bb06-179664c435d0-collection-1"
       ],
       "settings": {
-        "margin_top": 64,
-        "margin_bottom": 64
+        "margin_top": 16,
+        "margin_bottom": 16
       }
     },
     "01666e88-11d5-4970-8587-55e3cb27e243": {
@@ -287,9 +351,10 @@
   "order": [
     "99f1f786-cfa8-4d76-bd14-7dcb32939b9f",
     "d534c664-a5a4-4f55-b829-6446be3b3cdb",
+    "75424914-7932-4d7c-ba8c-94a8743c1d8f",
     "b2c49c1e-4880-4b9e-90e7-0135ddd0a9b9",
     "211390c4-4881-4386-992f-62907dc8d4a0",
-    "75424914-7932-4d7c-ba8c-94a8743c1d8f",
+    "51d4a2b7-8c2e-4a53-bb06-179664c435d0",
     "01666e88-11d5-4970-8587-55e3cb27e243",
     "0a5d7332-5a60-4baf-bf6a-adbba595c25e",
     "92018c5b-7aa4-4095-92a7-00221b583a17"
