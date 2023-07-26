@@ -71,8 +71,6 @@
 </div>
 <script>
   // Testimonial Slider 
-let testimonialSlider = document.querySelector('#swiper-{{ section.id }}');
-if (testimonialSlider) {
   var swiper{{ section.id | remove: '-' }} = new Swiper("#swiper-{{ section.id }}", {
       slidesPerView: 1,
       navigation: {
@@ -96,7 +94,6 @@ if (testimonialSlider) {
       },
     },
     });
-}
 </script>
 {% schema %}
   {
