@@ -164,13 +164,7 @@ font-display: "swap";
     margin: 0 auto;
     padding: 0 17px;
   }
-  @media only screen and (min-width: 769px) {
-    .page__width {
-      padding: 0 40px;
-    }
-  }
-
-  .btn__primary {
+    .btn__primary {
     background: var(--colorButtonPrimary);
     color: var(--colorButtonTextPrimary);
   }
@@ -178,7 +172,6 @@ font-display: "swap";
     font-size: 13px;
     line-height: 16px;
     letter-spacing: 0.2em;
-    display: inline-block;
     text-transform: uppercase;
   }
 
@@ -186,6 +179,16 @@ font-display: "swap";
     background: var(--colorButtonSecondary);
     color: var(--colorButtonTextSecondary);
   }
+  @media only screen and (min-width: 769px) {
+    .page__width {
+      padding: 0 40px;
+    }
+    .btn__link {
+      display: inline-block;
+    }
+  }
+
+
 
 
   /* Announcement Bar  */
