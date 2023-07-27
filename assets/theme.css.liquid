@@ -1039,8 +1039,6 @@ font-display: "swap";
 }
 /* Promotional Grid Image with text Block */
 .promo-block__grid {
-    display: flex;
-    flex-wrap: wrap;
     margin-top: -20px;
     margin-left: -20px;
 }
@@ -1088,4 +1086,10 @@ font-display: "swap";
 .promo-block__shadow {
     display: inline-block;
     max-width: 400px;
+}
+@media only screen and (min-width:769px) {
+  .promo-block__grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
