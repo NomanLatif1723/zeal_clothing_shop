@@ -731,6 +731,15 @@
                   "label": "Right"
                 }
               }
+            },
+            "header_colors": {
+              "label": "Colors",
+              "text": {
+                "label": "Text"
+              },
+              "button": {
+                "label": "Button"
+              }
             }
           }
         }
