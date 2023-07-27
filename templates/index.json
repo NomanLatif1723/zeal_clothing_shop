@@ -275,12 +275,14 @@
         },
         "a9d2a4aa-d0eb-4faf-8acf-b47dcee66582": {
           "type": "lookbook",
+          "disabled": true,
           "settings": {
             "lookbook_image": "shopify:\/\/shop_images\/black-white-minimal-portrait_2_1_1.jpg"
           }
         },
         "ca437c69-1dba-4129-a016-79d82c03faae": {
           "type": "lookbook",
+          "disabled": true,
           "settings": {
             "lookbook_image": "shopify:\/\/shop_images\/black-white-minimal-portrait_3_1_1.jpg"
           }
