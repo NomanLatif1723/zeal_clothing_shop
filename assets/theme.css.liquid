@@ -1099,7 +1099,9 @@ font-display: "swap";
     display: inline-block;
     max-width: 400px;
 }
-
+.promo-image__desktop{
+  display: none;
+}
 @media only screen and (min-width:769px) {
   .promo-block__grid {
     display: flex;
@@ -1111,5 +1113,11 @@ font-display: "swap";
   }
   .promo-main__heading {
     padding-bottom: 30px;
+  }
+  .promo-image__desktop{
+    display: block;
+  }
+  .promo-image__mobile{
+    display: none;
   }
 }
