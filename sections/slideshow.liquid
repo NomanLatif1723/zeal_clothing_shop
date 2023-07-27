@@ -40,14 +40,14 @@
                 width=""
                 height=""
                 loading="lazy"
-                alt="">
+                alt="{{ block.settings.slide_image_desktop.alt }}">
               <img
                 class="hero__image mobile__image"
                 src="{{ block.settings.slide_image_mobile | img_url: 'master' }}"
                 width=""
                 height=""
                 loading="lazy"
-                alt="">
+                alt="{{ block.settings.slide_image_mobile.alt }}">
             {%- else -%}
               {%- capture imagePlaceholder -%}lifestyle-{% cycle '1', '2' %}{%- endcapture -%}
               {{ imagePlaceholder | placeholder_svg_tag: "placeholder__image hero__image-placeholder" }}
