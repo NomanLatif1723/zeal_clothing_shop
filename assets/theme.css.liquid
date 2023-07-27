@@ -1139,23 +1139,20 @@ font-display: "swap";
 }
 
 /*  Lookbook Section */
-.lookbook-grid__item {
-    flex: 1 0 33.33%;
-}
 
-.lookbook-image__container {
-    width: 100%;
-}
 .lookbook-grid {
     display: flex;
     flex-wrap: wrap;
 }
-
+.lookbook-grid__item {
+    flex: 1 0 33.33%;
+}
 .lookbook-grid__item:nth-child(4n+4) {
     flex: 1 0 100%;
 }
 .lookbook-image__container {
     height: 100%;
+    width: 100%;
 }
 .lookbook-image__container img {
     object-fit: cover;
