@@ -106,7 +106,7 @@
         "template--19980215124290__82c03348-6eae-4f16-8533-d3ae96f7f7c5-image-with-text-1": {
           "type": "image-with-text",
           "settings": {
-            "promo_image": "shopify:\/\/shop_images\/black-white-minimal-portrait_3_1.jpg",
+            "promo_image_mobile": "shopify:\/\/shop_images\/black-white-minimal-portrait_3_1_1.jpg",
             "subheading": "Exclusive Online Offer",
             "heading": "Shop Our Website and Get 15% Off Your First Purchase",
             "button_label": "Shop Now",
@@ -120,7 +120,6 @@
         "template--19980215124290__82c03348-6eae-4f16-8533-d3ae96f7f7c5-image-with-text-2": {
           "type": "image-with-text",
           "settings": {
-            "promo_image": "shopify:\/\/shop_images\/black-white-minimal-portrait_2_1.jpg",
             "subheading": "New Season, New Deals",
             "heading": "Save Big on Our Latest Collection",
             "button_label": "Shop Now",
