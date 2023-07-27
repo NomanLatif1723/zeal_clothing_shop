@@ -120,13 +120,24 @@
             "heading": "Image With Text",
             "button_label": "Button",
             "button_link": "",
-            "block_width": "medium"
+            "block_width": "small"
+          }
+        },
+        "938ec47f-9df7-4dd4-a483-0fa00535be3b": {
+          "type": "image-with-text",
+          "settings": {
+            "subheading": "SubHeading",
+            "heading": "Image With Text",
+            "button_label": "Button",
+            "button_link": "",
+            "block_width": "small"
           }
         }
       },
       "block_order": [
         "template--19980215124290__82c03348-6eae-4f16-8533-d3ae96f7f7c5-image-with-text-1",
-        "template--19980215124290__82c03348-6eae-4f16-8533-d3ae96f7f7c5-image-with-text-2"
+        "template--19980215124290__82c03348-6eae-4f16-8533-d3ae96f7f7c5-image-with-text-2",
+        "938ec47f-9df7-4dd4-a483-0fa00535be3b"
       ],
       "settings": {
         "margin_top": 64,
