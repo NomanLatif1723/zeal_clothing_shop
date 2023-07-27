@@ -1137,3 +1137,17 @@ font-display: "swap";
     max-width: 400px;
   }
 }
+
+/*  Lookbook Section */
+.lookbook-grid__item {
+    flex: 0 1 33.33%;
+}
+
+.lookbook-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.lookbook-grid__item:nth-child(n+4) {
+    flex: 0 1 100%;
+}
