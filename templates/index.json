@@ -246,6 +246,41 @@
         "margin_bottom": 60
       }
     },
+    "749269fd-a63a-458d-b3f5-57ec8c86568c": {
+      "type": "lookbook",
+      "blocks": {
+        "template--19980215124290__749269fd-a63a-458d-b3f5-57ec8c86568c-lookbook-1": {
+          "type": "lookbook",
+          "settings": {
+          }
+        },
+        "template--19980215124290__749269fd-a63a-458d-b3f5-57ec8c86568c-lookbook-2": {
+          "type": "lookbook",
+          "settings": {
+          }
+        },
+        "template--19980215124290__749269fd-a63a-458d-b3f5-57ec8c86568c-lookbook-3": {
+          "type": "lookbook",
+          "settings": {
+          }
+        },
+        "template--19980215124290__749269fd-a63a-458d-b3f5-57ec8c86568c-lookbook-4": {
+          "type": "lookbook",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "template--19980215124290__749269fd-a63a-458d-b3f5-57ec8c86568c-lookbook-1",
+        "template--19980215124290__749269fd-a63a-458d-b3f5-57ec8c86568c-lookbook-2",
+        "template--19980215124290__749269fd-a63a-458d-b3f5-57ec8c86568c-lookbook-3",
+        "template--19980215124290__749269fd-a63a-458d-b3f5-57ec8c86568c-lookbook-4"
+      ],
+      "settings": {
+        "margin_top": 16,
+        "margin_bottom": 16
+      }
+    },
     "01666e88-11d5-4970-8587-55e3cb27e243": {
       "type": "posts",
       "settings": {
@@ -342,41 +377,6 @@
         "margin_top": 60,
         "margin_bottom": 0
       }
-    },
-    "749269fd-a63a-458d-b3f5-57ec8c86568c": {
-      "type": "lookbook",
-      "blocks": {
-        "template--19980215124290__749269fd-a63a-458d-b3f5-57ec8c86568c-lookbook-1": {
-          "type": "lookbook",
-          "settings": {
-          }
-        },
-        "template--19980215124290__749269fd-a63a-458d-b3f5-57ec8c86568c-lookbook-2": {
-          "type": "lookbook",
-          "settings": {
-          }
-        },
-        "template--19980215124290__749269fd-a63a-458d-b3f5-57ec8c86568c-lookbook-3": {
-          "type": "lookbook",
-          "settings": {
-          }
-        },
-        "template--19980215124290__749269fd-a63a-458d-b3f5-57ec8c86568c-lookbook-4": {
-          "type": "lookbook",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "template--19980215124290__749269fd-a63a-458d-b3f5-57ec8c86568c-lookbook-1",
-        "template--19980215124290__749269fd-a63a-458d-b3f5-57ec8c86568c-lookbook-2",
-        "template--19980215124290__749269fd-a63a-458d-b3f5-57ec8c86568c-lookbook-3",
-        "template--19980215124290__749269fd-a63a-458d-b3f5-57ec8c86568c-lookbook-4"
-      ],
-      "settings": {
-        "margin_top": 16,
-        "margin_bottom": 16
-      }
     }
   },
   "order": [
@@ -386,9 +386,9 @@
     "b2c49c1e-4880-4b9e-90e7-0135ddd0a9b9",
     "211390c4-4881-4386-992f-62907dc8d4a0",
     "51d4a2b7-8c2e-4a53-bb06-179664c435d0",
+    "749269fd-a63a-458d-b3f5-57ec8c86568c",
     "01666e88-11d5-4970-8587-55e3cb27e243",
     "0a5d7332-5a60-4baf-bf6a-adbba595c25e",
-    "92018c5b-7aa4-4095-92a7-00221b583a17",
-    "749269fd-a63a-458d-b3f5-57ec8c86568c"
+    "92018c5b-7aa4-4095-92a7-00221b583a17"
   ]
 }
