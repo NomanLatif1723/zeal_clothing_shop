@@ -462,11 +462,14 @@
             "slide_image_mobile": {
               "label": "Mobile Image"
             },
-            "slide_text_color": {
-              "label": "Text"
-            },
-            "slide_button_color": {
-              "label": "Button"
+            "header_colors": {
+              "label": "Colors",
+              "text": {
+                "label": "Text"
+              },
+              "button": {
+                "label": "Button"
+              }
             }
           }
         }
