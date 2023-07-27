@@ -39,12 +39,17 @@
         <div class="promo-block__item promo-block-{{ block.id }}" {{ block.shopify_attributes }}>
           <div class="promo-block__container">
             <div class="promo-block__image">
-              {%- if block.settings.promo_image != blank -%}
+              {%- if block.settings.promo_image_desktop != blank or block.settings.promo_image_mobile != blank -%}
                 <img
-                  src="{{ block.settings.promo_image | img_url: 'master' }}"
+                  src="{{ block.settings.promo_image_desktop | img_url: 'master' }}"
                   loading="lazy"
                   width=""
-                  height="" alt="{{ block.settings.promo_image.alt }}" />
+                  height="" alt="{{ block.settings.promo_image_desktop.alt }}" />
+                <img
+                  src="{{ block.settings.promo_image_mobile | img_url: 'master' }}"
+                  loading="lazy"
+                  width=""
+                  height="" alt="{{ block.settings.promo_image_mobile.alt }}" />
               {%- else -%}
                 {{ 'lifestyle-1' | placeholder_svg_tag: "placeholder__image" }}
               {%- endif -%}
@@ -115,8 +120,13 @@
         "settings": [
           {
             "type": "image_picker",
-            "id": "promo_image",
-            "label": "t:sections.promotional-block.blocks.image-with-text.settings.image.label"
+            "id": "promo_image_desktop",
+            "label": "t:sections.promotional-block.blocks.image-with-text.settings.image_desktop.label"
+          },
+          {
+            "type": "image_picker",
+            "id": "promo_image_mobile",
+            "label": "t:sections.promotional-block.blocks.image-with-text.settings.image_mobile.label"
           },
           {
             "type": "text",
