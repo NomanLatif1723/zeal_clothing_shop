@@ -671,8 +671,11 @@
         "image-with-text": {
           "name": "Image With Text",
           "settings": {
-            "image": {
-              "label": "Image"
+            "image_desktop": {
+              "label": "Desktop Image"
+            },
+            "image_mobile": {
+              "label": "Mobile Image"
             },
             "subheading": {
               "label": "Subheading"
