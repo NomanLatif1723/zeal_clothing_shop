@@ -41,7 +41,7 @@
         <div class="promo-block__item promo-block-{{ block.id }}" {{ block.shopify_attributes }}>
           <div class="promo-block__container">
             <div class="promo-block__image">
-              {%- if imageDesktop != blank or imageMobile != blank -%}
+              {%- if imageDesktop != blank and imageMobile != blank -%}
                 {%- if imageDesktop != blank -%}
                   <img class="promo-image__desktop"
                     src="{{ imageDesktop | img_url: 'master' }}"
