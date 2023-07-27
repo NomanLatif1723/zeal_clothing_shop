@@ -529,38 +529,6 @@
         }
       },
       "blocks": {
-        "image-with-text": {
-          "name": "Image With Text",
-          "settings": {
-            "image": {
-              "label": "Image"
-            },
-            "subheading": {
-              "label": "Subheading"
-            },
-            "heading": {
-              "label": "Heading"
-            },
-            "button_label": {
-              "label": "Button"
-            },
-            "button_link": {
-              "label": "Link"
-            },
-            "layout_width": {
-              "label": "Width",
-              "small": {
-                "label": "Small"
-              },
-              "medium": {
-                "label": "Medium"
-              },
-              "full": {
-                "label": "Full Screen"
-              }
-            }
-          }
-        },
         "banner": {
           "name": "Banner",
           "settings": {
@@ -678,6 +646,57 @@
       },
       "presets": {
         "name": "Promotional Grid"
+      }
+    },
+    "promotional-block": {
+      "name": "Promotional Block",
+      "settings": {
+        "header_spacing": {
+          "label": "Section Spacing",
+          "top_spacing": {
+            "label": "Spacing Top"
+          },
+          "bottom_spacing": {
+            "label": "Spacing Bottom"
+          }
+        }
+      },
+      "blocks": {
+        "image-with-text": {
+          "name": "Image With Text",
+          "settings": {
+            "image": {
+              "label": "Image"
+            },
+            "subheading": {
+              "label": "Subheading"
+            },
+            "heading": {
+              "label": "Heading"
+            },
+            "button_label": {
+              "label": "Button"
+            },
+            "button_link": {
+              "label": "Link"
+            },
+            "layout_width": {
+              "label": "Width",
+              "small": {
+                "label": "Small"
+              },
+              "medium": {
+                "label": "Medium"
+              },
+              "full": {
+                "label": "Full Screen"
+              }
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Promotional Block"
       }
     },
     "footer": {
