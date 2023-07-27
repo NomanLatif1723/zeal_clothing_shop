@@ -1097,6 +1097,16 @@ font-display: "swap";
 .promo-image__desktop{
   display: none;
 }
+@media only screen and(min-width: 769px) and (max-width: 992px) {
+  .promo-block__item {
+    flex: 1 0 50%;
+  }
+}
+@media only screen and(min-width: 993px) {
+  .promo-block__item {
+    flex: 1 0 33.33%;
+  }
+}
 @media only screen and (min-width:769px) {
   .promo-block__grid {
     display: flex;
@@ -1122,7 +1132,6 @@ font-display: "swap";
   .promo-block__item {
     padding: 20px 0 0 20px;
     min-height: 300px;
-    flex: 1 0 33.33%;
   }
   .promo-block__shadow {
     max-width: 400px;
