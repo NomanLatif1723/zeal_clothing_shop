@@ -757,8 +757,17 @@
     "lookbook": {
       "name": "Lookbook",
       "settings": {
+        "header_spacing": {
+          "label": "Section Spacing",
+          "top_spacing": {
+            "label": "Spacing Top"
+          },
+          "bottom_spacing": {
+            "label": "Spacing Bottom"
+          }
+        }
       },
-      "block": {
+      "blocks": {
         "name": "lookbook",
         "settings": {
           "image": {
