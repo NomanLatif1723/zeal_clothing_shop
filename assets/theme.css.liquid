@@ -1067,10 +1067,18 @@ font-display: "swap";
     padding: 20px 0 0 20px;
 }
 
-.promo-block__content {
-    display: none;
+.promo-block__container {
+    position: relative;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    width: 100%;
 }
 
-.promo-block__image {
-    width: 100%;
+.promo-block__box {
+    display: table-cell;
+    padding: 20px;
+}
+
+.promo-block__shadow {
+    display: inline-block;
 }
