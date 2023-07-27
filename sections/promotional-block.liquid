@@ -17,7 +17,9 @@
       {%- for block in section.blocks -%}
         {%- style -%}
           {%- assign textColor = block.settings.promo_text_color -%}
-          {% assign buttonBackground = block.settings.promo_button_color %}
+          {%- assign buttonBackground = block.settings.promo_button_color -%}
+          {%- assign imageDesktop = block.settings.promo_image_desktop -%}
+          {%- assign imageMobile = block.settings.promo_image_mobile -%}
           .promo-block-{{ block.id }} .promo-block__shadow{
             color: {{ textColor }};
           }
@@ -39,17 +41,21 @@
         <div class="promo-block__item promo-block-{{ block.id }}" {{ block.shopify_attributes }}>
           <div class="promo-block__container">
             <div class="promo-block__image">
-              {%- if block.settings.promo_image_desktop != blank or block.settings.promo_image_mobile != blank -%}
-                <img
-                  src="{{ block.settings.promo_image_desktop | img_url: 'master' }}"
-                  loading="lazy"
-                  width=""
-                  height="" alt="{{ block.settings.promo_image_desktop.alt }}" />
-                <img
-                  src="{{ block.settings.promo_image_mobile | img_url: 'master' }}"
-                  loading="lazy"
-                  width=""
-                  height="" alt="{{ block.settings.promo_image_mobile.alt }}" />
+              {%- if imageDesktop != blank or imageMobile != blank -%}
+                {%- if imageDesktop != blank -%}
+                  <img class="promo-image__desktop"
+                    src="{{ imageDesktop | img_url: 'master' }}"
+                    loading="lazy"
+                    width=""
+                    height="" alt="{{ imageDesktop.alt }}" />
+                {%- endif -%}
+                {%- if imageMobile != blank -%}
+                  <img class="promo-image__mobile"
+                    src="{{ imageMobile | img_url: 'master' }}"
+                    loading="lazy"
+                    width=""
+                    height="" alt="{{ imageMobile.alt }}" />
+                {%- endif -%}
               {%- else -%}
                 {{ 'lifestyle-1' | placeholder_svg_tag: "placeholder__image" }}
               {%- endif -%}
