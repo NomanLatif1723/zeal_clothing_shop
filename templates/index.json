@@ -214,8 +214,8 @@
         "marquee_direction": "left",
         "marquee_text_speed": 50,
         "marquee_background": "#111111",
-        "margin_top": 64,
-        "margin_bottom": 64
+        "margin_top": 60,
+        "margin_bottom": 60
       }
     },
     "51d4a2b7-8c2e-4a53-bb06-179664c435d0": {
