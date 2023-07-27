@@ -35,7 +35,7 @@
             }
           {%- endstyle -%}
           <div class="slideshow__image-container">
-            {%- if imageDesktop != blank and imageMobile != blank -%}
+            {%- if imageDesktop != blank or imageMobile != blank -%}
               {%- if imageDesktop != blank -%}
                 <img
                   class="hero__image desktop__image"
