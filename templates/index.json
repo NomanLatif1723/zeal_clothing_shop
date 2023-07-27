@@ -135,7 +135,6 @@
         },
         "938ec47f-9df7-4dd4-a483-0fa00535be3b": {
           "type": "image-with-text",
-          "disabled": true,
           "settings": {
             "subheading": "SubHeading",
             "heading": "Image With Text",
