@@ -136,6 +136,7 @@
         "938ec47f-9df7-4dd4-a483-0fa00535be3b": {
           "type": "image-with-text",
           "settings": {
+            "promo_image_desktop": "shopify:\/\/shop_images\/black-white-minimal-portrait_2_1_1.jpg",
             "subheading": "SubHeading",
             "heading": "Image With Text",
             "button_label": "Button",
