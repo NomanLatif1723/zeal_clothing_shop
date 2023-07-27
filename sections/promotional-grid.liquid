@@ -14,13 +14,13 @@
 <div class="promotional__wrapper main__section-{{ section.id }}">
   <div class="promotional-grid">
     {%- for block in section.blocks -%}
-      {%- style -%}
+      {% style %}
         {%- assign bannerBackgroundColor = block.settings.banner_background_color -%}
         .promotional-item-{{ block.id }} .promotional-banner__wrapper {
           background: #9d1339;
           background: {{ bannerBackgroundColor }};
         }
-      {%- endstyle -%}
+      {% endstyle %}
       <div class="promotional-grid__item promotional-item-{{ block.id }}">
         {%- case block.type -%}
           {%- when 'banner' -%}
