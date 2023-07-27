@@ -754,6 +754,23 @@
         "name": "Promotional Block"
       }
     },
+    "lookbook": {
+      "name": "Lookbook",
+      "settings": {
+
+      },
+      "block": {
+        "name": "lookbook",
+        "settings": {
+          "image": {
+            "label": "Image"
+          }
+        }
+      },
+      "presets": {
+        "name": "Lookbook"
+      }
+    },
     "footer": {
       "name": "Footer",
       "settings": {
