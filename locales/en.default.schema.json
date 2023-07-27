@@ -768,10 +768,12 @@
         }
       },
       "blocks": {
-        "name": "lookbook",
-        "settings": {
-          "image": {
-            "label": "Image"
+        "lookbook": {
+          "name": "lookbook",
+          "settings": {
+            "image": {
+              "label": "Image"
+            }
           }
         }
       },
