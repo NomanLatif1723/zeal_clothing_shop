@@ -137,6 +137,7 @@
           "type": "image-with-text",
           "settings": {
             "promo_image_desktop": "shopify:\/\/shop_images\/black-white-minimal-portrait_2_1_1.jpg",
+            "promo_image_mobile": "shopify:\/\/shop_images\/black-white-minimal-portrait_2_1_1.jpg",
             "subheading": "SubHeading",
             "heading": "Image With Text",
             "button_label": "Button",
