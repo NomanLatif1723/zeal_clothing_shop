@@ -6,14 +6,14 @@
         "template--19980215124290__99f1f786-cfa8-4d76-bd14-7dcb32939b9f-slide-1": {
           "type": "slide",
           "settings": {
-            "content_position": "center-left",
-            "text_alignment": "left",
             "slide_heading": "Embrace the laid-back look!",
             "slide_text": "Upgrade Your Style. Shop Now and Experience the Perfect Blend of Comfort and Fashion with Our Loose Wear Collection.",
             "slide_button_label": "Shop Now",
             "slide_button_link": "shopify:\/\/collections\/all",
             "slide_image_desktop": "shopify:\/\/shop_images\/attractive-woman-wearing-hat-posing-black-background_1.jpg",
             "slide_image_mobile": "shopify:\/\/shop_images\/attractive-woman-wearing-hat-posing-black-background_1.jpg",
+            "content_position": "center-left",
+            "text_alignment": "left",
             "slide_text_color": "#ffffff",
             "slide_button_color": "rgba(0,0,0,0)"
           }
@@ -21,14 +21,14 @@
         "template--19980215124290__99f1f786-cfa8-4d76-bd14-7dcb32939b9f-slide-2": {
           "type": "slide",
           "settings": {
-            "content_position": "center-left",
-            "text_alignment": "left",
             "slide_heading": "Embrace the laid-back look!",
             "slide_text": "Upgrade Your Style. Shop Now and Experience the Perfect Blend of Comfort and Fashion with Our Loose Wear Collection.",
             "slide_button_label": "Shop Now",
             "slide_button_link": "shopify:\/\/collections\/all",
             "slide_image_desktop": "shopify:\/\/shop_images\/woman-wearing-native-african-clothing-arid-environment_1.jpg",
             "slide_image_mobile": "shopify:\/\/shop_images\/woman-wearing-native-african-clothing-arid-environment_1.jpg",
+            "content_position": "center-left",
+            "text_alignment": "left",
             "slide_text_color": "#ffffff",
             "slide_button_color": "rgba(0,0,0,0)"
           }
@@ -36,14 +36,14 @@
         "template--19980215124290__99f1f786-cfa8-4d76-bd14-7dcb32939b9f-slide-3": {
           "type": "slide",
           "settings": {
-            "content_position": "center-left",
-            "text_alignment": "left",
             "slide_heading": "Embrace the laid-back look!",
             "slide_text": "Upgrade Your Style. Shop Now and Experience the Perfect Blend of Comfort and Fashion with Our Loose Wear Collection.",
             "slide_button_label": "Shop Now",
             "slide_button_link": "shopify:\/\/collections\/all",
             "slide_image_desktop": "shopify:\/\/shop_images\/black-white-minimal-portrait_1.png",
             "slide_image_mobile": "shopify:\/\/shop_images\/black-white-minimal-portrait_1.png",
+            "content_position": "center-left",
+            "text_alignment": "left",
             "slide_text_color": "#ffffff",
             "slide_button_color": "rgba(0,0,0,0)"
           }
@@ -110,9 +110,10 @@
             "heading": "Image With Text",
             "button_label": "Button",
             "button_link": "",
-            "block_width": "medium",
             "content_position": "center-left",
-            "text_alignment": "left"
+            "text_alignment": "left",
+            "promo_text_color": "#ffffff",
+            "promo_button_color": "#ffffff"
           }
         },
         "template--19980215124290__82c03348-6eae-4f16-8533-d3ae96f7f7c5-image-with-text-2": {
@@ -122,9 +123,10 @@
             "heading": "Image With Text",
             "button_label": "Button",
             "button_link": "",
-            "block_width": "medium",
             "content_position": "center-left",
-            "text_alignment": "left"
+            "text_alignment": "left",
+            "promo_text_color": "#111111",
+            "promo_button_color": "#111111"
           }
         },
         "938ec47f-9df7-4dd4-a483-0fa00535be3b": {
@@ -134,9 +136,10 @@
             "heading": "Image With Text",
             "button_label": "Button",
             "button_link": "",
-            "block_width": "small",
             "content_position": "center-left",
-            "text_alignment": "left"
+            "text_alignment": "left",
+            "promo_text_color": "#111111",
+            "promo_button_color": "#111111"
           }
         }
       },
@@ -340,12 +343,12 @@
         "template--19980215124290__b481be53-fe90-4907-90b0-8e6cfd17eb76-slide-1": {
           "type": "slide",
           "settings": {
-            "content_position": "center-left",
-            "text_alignment": "center",
             "slide_heading": "Heading",
             "slide_text": "Slide Text",
             "slide_button_label": "Button",
             "slide_button_link": "",
+            "content_position": "center-left",
+            "text_alignment": "center",
             "slide_text_color": "#ffffff",
             "slide_button_color": "#111111"
           }
@@ -353,12 +356,12 @@
         "template--19980215124290__b481be53-fe90-4907-90b0-8e6cfd17eb76-slide-2": {
           "type": "slide",
           "settings": {
-            "content_position": "center-left",
-            "text_alignment": "center",
             "slide_heading": "Heading",
             "slide_text": "Slide Text",
             "slide_button_label": "Button",
             "slide_button_link": "",
+            "content_position": "center-left",
+            "text_alignment": "center",
             "slide_text_color": "#ffffff",
             "slide_button_color": "#111111"
           }
@@ -366,12 +369,12 @@
         "template--19980215124290__b481be53-fe90-4907-90b0-8e6cfd17eb76-slide-3": {
           "type": "slide",
           "settings": {
-            "content_position": "center-left",
-            "text_alignment": "center",
             "slide_heading": "Heading",
             "slide_text": "Slide Text",
             "slide_button_label": "Button",
             "slide_button_link": "",
+            "content_position": "center-left",
+            "text_alignment": "center",
             "slide_text_color": "#ffffff",
             "slide_button_color": "#111111"
           }
