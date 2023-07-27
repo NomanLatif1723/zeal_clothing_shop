@@ -31,7 +31,9 @@
                 src="{{ article.image | img_url: "master" }}"
                 loading="lazy"
                 width=""
-                height="">
+                height=""
+                alt="{{ article.image.alt }}"
+                >
             {%- comment -%}
             {%- render 'image-element',
             img-element: article.image
