@@ -395,6 +395,9 @@
         "slide": {
           "name": "Slide",
           "settings": {
+            "header_alignment": {
+              "label": "Position and Alignment"
+            },
             "content_position": {
               "label": "Content Position",
               "options": {
