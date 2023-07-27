@@ -683,18 +683,6 @@
             "button_link": {
               "label": "Link"
             },
-            "layout_width": {
-              "label": "Width",
-              "small": {
-                "label": "Small"
-              },
-              "medium": {
-                "label": "Medium"
-              },
-              "full": {
-                "label": "Full Screen"
-              }
-            },
             "header_alignment": {
               "label": "Position and Alignment"
             },
