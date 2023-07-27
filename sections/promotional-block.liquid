@@ -16,7 +16,14 @@
     <div class="promo-block__grid">
       {%- for block in section.blocks -%}
         {%- style -%}
-          
+          {%- assign textColor = block.settings.promo_text_color -%}
+          {% assign buttonBackground = block.settings.promo_button_color %}
+          .promo-block-{{ block.id }} .promo-block__shadow{
+            color: {{ textColor }};
+          }
+          .promo-block-{{ block.id }} .btn__promo{
+            background: {{ buttonBackground }};
+          }
         {%- endstyle -%}
         <div class="promo-block__item promo-block-{{ block.id }}" {{ block.shopify_attributes }}>
           <div class="promo-block__container">
