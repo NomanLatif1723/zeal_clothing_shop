@@ -273,6 +273,11 @@
           "type": "lookbook",
           "settings": {
           }
+        },
+        "ca437c69-1dba-4129-a016-79d82c03faae": {
+          "type": "lookbook",
+          "settings": {
+          }
         }
       },
       "block_order": [
@@ -280,7 +285,8 @@
         "template--19980215124290__749269fd-a63a-458d-b3f5-57ec8c86568c-lookbook-2",
         "template--19980215124290__749269fd-a63a-458d-b3f5-57ec8c86568c-lookbook-3",
         "template--19980215124290__749269fd-a63a-458d-b3f5-57ec8c86568c-lookbook-4",
-        "a9d2a4aa-d0eb-4faf-8acf-b47dcee66582"
+        "a9d2a4aa-d0eb-4faf-8acf-b47dcee66582",
+        "ca437c69-1dba-4129-a016-79d82c03faae"
       ],
       "settings": {
         "margin_top": 60,
