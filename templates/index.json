@@ -130,7 +130,7 @@
             "heading": "Image With Text",
             "button_label": "Button",
             "button_link": "",
-            "block_width": "small"
+            "block_width": "full"
           }
         }
       },
