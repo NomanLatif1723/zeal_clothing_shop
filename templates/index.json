@@ -252,31 +252,37 @@
         "template--19980215124290__749269fd-a63a-458d-b3f5-57ec8c86568c-lookbook-1": {
           "type": "lookbook",
           "settings": {
+            "lookbook_image": "shopify:\/\/shop_images\/ann-agterberg-8r_6PdUpSGY-unsplash_1.jpg"
           }
         },
         "template--19980215124290__749269fd-a63a-458d-b3f5-57ec8c86568c-lookbook-2": {
           "type": "lookbook",
           "settings": {
+            "lookbook_image": "shopify:\/\/shop_images\/david-taffet-mzbju_-fnnE-unsplash.jpg"
           }
         },
         "template--19980215124290__749269fd-a63a-458d-b3f5-57ec8c86568c-lookbook-3": {
           "type": "lookbook",
           "settings": {
+            "lookbook_image": "shopify:\/\/shop_images\/dario-didon-hFJu68IoRZQ-unsplash_1.jpg"
           }
         },
         "template--19980215124290__749269fd-a63a-458d-b3f5-57ec8c86568c-lookbook-4": {
           "type": "lookbook",
           "settings": {
+            "lookbook_image": "shopify:\/\/shop_images\/black-white-minimal-portrait_2_2.jpg"
           }
         },
         "a9d2a4aa-d0eb-4faf-8acf-b47dcee66582": {
           "type": "lookbook",
           "settings": {
+            "lookbook_image": "shopify:\/\/shop_images\/black-white-minimal-portrait_2_1_1.jpg"
           }
         },
         "ca437c69-1dba-4129-a016-79d82c03faae": {
           "type": "lookbook",
           "settings": {
+            "lookbook_image": "shopify:\/\/shop_images\/black-white-minimal-portrait_3_1_1.jpg"
           }
         }
       },
