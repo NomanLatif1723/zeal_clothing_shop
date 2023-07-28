@@ -136,19 +136,19 @@
           "info": "Enable View All Only If your collection has more products than shown"
         },
         "header_alignment": {
-          "label": "Position and Alignment"
-        },
-        "alignment": {
-          "label": "Text alignment",
-          "options": {
-            "left": {
-              "label": "Left"
-            },
-            "center": {
-              "label": "Center"
-            },
-            "right": {
-              "label": "Right"
+          "label": "Alignment",
+          "alignment": {
+            "label": "Text alignment",
+            "options": {
+              "left": {
+                "label": "Left"
+              },
+              "center": {
+                "label": "Center"
+              },
+              "right": {
+                "label": "Right"
+              }
             }
           }
         },
