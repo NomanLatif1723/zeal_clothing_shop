@@ -253,7 +253,7 @@
         "heading": "Featured Collection",
         "text": "Write Small Description About Your Collection",
         "product_per_row": 4,
-        "product_rows": 1,
+        "product_rows": 2,
         "stack_product": true,
         "show_view_all": false,
         "margin_top": 60,
