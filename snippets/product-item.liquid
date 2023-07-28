@@ -1,3 +1,19 @@
+{%- liquid
+    assign selectedImageSize = settings.image_size
+    assign imageAspectRatio = "0"
+    case selectedImageSize
+    when 'natural'
+    assign imageAspectRatio = "0"
+    when 'square'
+    assign imageAspectRatio = "1/1"
+    when 'portrait'
+    assign imageAspectRatio = "2/3"
+    when 'landscape'
+    assign imageAspectRatio = "4/3"
+    when 'wide'
+    assign imageAspectRatio = "16/9"
+    endcase
+-%}
 {%- case products_per_row -%}
   {%- when 1 -%}
   {%- assign itemWidth = '' -%}
@@ -14,7 +30,13 @@
   <div class="featured-grid__content">
     <div class="featured-grid__image">
       <div class="featured-product__image">
-        <img src="{{ product.featured_media | img_url: "master" }}" width="" height="" alt="{{ product.featured_image.alt }}" loading="lazy" /> 
+        <img style="aspect-ratio: {{ imageAspectRatio }};"
+          src="{{ product.featured_media | img_url: "master" }}"
+          width=""
+          height=""
+          alt="{{ product.featured_image.alt }}"
+          loading="lazy"
+          /> 
       </div>
     </div>
     <div class="featured-grid__description text__align-{{ textAlignment }}">

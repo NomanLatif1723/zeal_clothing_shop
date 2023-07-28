@@ -221,7 +221,8 @@
           {
             "value": "landscape",
             "label": "t:schema_settings.products.settings.image_size.options.landscape.label"
-          }, {
+          },
+          {
             "value": "wide",
             "label": "t:schema_settings.products.settings.image_size.options.wide.label"
           }
