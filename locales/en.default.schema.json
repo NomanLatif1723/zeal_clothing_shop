@@ -969,19 +969,6 @@
         }
       }
     },
-    "typography": {
-      "name": "Typography",
-      "settings": {
-        "header_headings": "Headings",
-        "heading_font_family": {
-          "label": "Font"
-        },
-        "header_body_text": "Text",
-        "body_text_font_family": {
-          "label": "Font"
-        }
-      }
-    },
     "social_media": {
       "name": "Social Media",
       "settings": {
@@ -1027,6 +1014,70 @@
           "info": "https:\/\/vimeo.com\/shopify"
         }
       }
+    },
+    "typography": {
+      "name": "Typography",
+      "settings": {
+        "header_headings": "Headings",
+        "heading_font_family": {
+          "label": "Font"
+        },
+        "header_body_text": "Text",
+        "body_text_font_family": {
+          "label": "Font"
+        }
+      }
+    },
+    "products": {
+      "name": "Products",
+      "settings": {
+        "image_size": {
+          "label": "Image Size",
+          "options": {
+            "natural": {
+              "label": "Natural"
+            },
+            "square": {
+              "label": "Square(1:1)"
+            },
+            "portrait": {
+              "label": "Portrait(2:3)"
+            },
+            "landscape": {
+              "label": "Landscape(4:3)"
+            },
+            "wide": {
+              "label": "Wide(16:9)"
+            }
+          }
+        },
+        "show_quick_view": {
+          "label": "Show Quick View On Hover"
+        },
+        "quick_shop_text": {
+          "label": "Quick Shop text"
+        },
+        "show_color_swatches": {
+          "label": "Enable color Swatches"
+        },
+        "show_vendor": {
+          "label": "Show Vendor"
+        },
+        "show_second_image": {
+          "label": "Hover to Reveal Second Image"
+        },
+        "header_colors": {
+          "label": "Colors",
+          "sale_badge_color": {
+            "label": "Sale Badge Color"
+          },
+          "soldout_badge_color": {
+            "label": "Soldout Badge Color"
+          }
+        }
+       
+      }
     }
+ 
   }
 }

@@ -199,6 +199,83 @@
     ]
   },
   {
+    "name": "t:schema_settings.products.name",
+    "settings": [
+      {
+        "type": "select",
+        "id": "image_size",
+        "label": "t:schema_settings.products.settings.image_size.label",
+        "options": [
+          {
+            "value": "natural",
+            "label": "t:schema_settings.products.settings.image_size.options.natural.label"
+          },
+          {
+            "value": "square",
+            "label": "t:schema_settings.products.settings.image_size.options.square.label"
+          },
+          {
+            "value": "portrait",
+            "label": "t:schema_settings.products.settings.image_size.options.portrait.label"
+          },
+          {
+            "value": "landscape",
+            "label": "t:schema_settings.products.settings.image_size.options.landscape.label"
+          }, {
+            "value": "wide",
+            "label": "t:schema_settings.products.settings.image_size.options.wide.label"
+          }
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "show_quick_view",
+        "label": "t:schema_settings.products.settings.show_quick_view.label",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "quick_button_text",
+        "label": "t:schema_settings.products.settings.quick_shop_text.label",
+        "default": "Quick View"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_color_swatches",
+        "label": "t:schema_settings.products.settings.show_color_swatches.label",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "show_vendor",
+        "label": "t:schema_settings.products.settings.show_vendor.label",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "show_second_image",
+        "label": "t:schema_settings.products.settings.show_second_image.label",
+        "default": false
+      },
+      {
+        "type": "header",
+        "content": "t:schema_settings.products.settings.header_colors.label"
+      },
+      {
+        "type": "color",
+        "id": "sale_badge_color",
+        "label": "t:schema_settings.products.settings.header_colors.sale_badge_color.label",
+        "default": "#111111"
+      },
+      {
+        "type": "color",
+        "id": "soldout_badge_color",
+        "label": "t:schema_settings.products.settings.header_colors.soldout_badge_color.label",
+        "default": "#111111"
+      }
+    ]
+  },
+  {
     "name": "Extras",
     "settings": [
       {
