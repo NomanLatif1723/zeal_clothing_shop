@@ -9,7 +9,7 @@
             "slide_heading": "Embrace the laid-back look!",
             "slide_text": "Upgrade Your Style. Shop Now and Experience the Perfect Blend of Comfort and Fashion with Our Loose Wear Collection.",
             "slide_button_label": "Shop Now",
-            "slide_button_link": "shopify:\/\/collections\/all",
+            "slide_button_link": "shopify:\/\/products\/black-leather-bag",
             "slide_image_desktop": "shopify:\/\/shop_images\/attractive-woman-wearing-hat-posing-black-background_1.jpg",
             "slide_image_mobile": "shopify:\/\/shop_images\/attractive-woman-wearing-hat-posing-black-background_1.jpg",
             "content_position": "center-left",
@@ -24,7 +24,7 @@
             "slide_heading": "Embrace the laid-back look!",
             "slide_text": "Upgrade Your Style. Shop Now and Experience the Perfect Blend of Comfort and Fashion with Our Loose Wear Collection.",
             "slide_button_label": "Shop Now",
-            "slide_button_link": "shopify:\/\/collections\/all",
+            "slide_button_link": "shopify:\/\/products\/chequered-red-shirt",
             "slide_image_desktop": "shopify:\/\/shop_images\/woman-wearing-native-african-clothing-arid-environment_1.jpg",
             "slide_image_mobile": "shopify:\/\/shop_images\/woman-wearing-native-african-clothing-arid-environment_1.jpg",
             "content_position": "center-left",
@@ -39,7 +39,7 @@
             "slide_heading": "Embrace the laid-back look!",
             "slide_text": "Upgrade Your Style. Shop Now and Experience the Perfect Blend of Comfort and Fashion with Our Loose Wear Collection.",
             "slide_button_label": "Shop Now",
-            "slide_button_link": "shopify:\/\/collections\/all",
+            "slide_button_link": "shopify:\/\/products\/classic-leather-jacket",
             "slide_image_desktop": "shopify:\/\/shop_images\/black-white-minimal-portrait_1.png",
             "slide_image_mobile": "shopify:\/\/shop_images\/black-white-minimal-portrait_1.png",
             "content_position": "center-left",
@@ -233,7 +233,7 @@
             "banner_button_1": "Shop Now",
             "banner_button_link_1": "",
             "banner_button_2": "Learn More",
-            "banner_button_link_2": "",
+            "banner_button_link_2": "shopify:\/\/collections\/womens-shorts",
             "banner_background_color": "#9d1339"
           }
         }
