@@ -5,11 +5,11 @@
   {%- when 2 -%}
   {%- assign itemWidth = 'medium-one__half' -%}
   {%- when 3 -%}
-  {%- assign itemWidth = 'medium-one__third' -%}
+  {%- assign itemWidth = 'small-one__half medium-one__third' -%}
   {%- when 4 -%}
-  {%- assign itemWidth = 'medium-one__quarter' -%}
+  {%- assign itemWidth = 'small-one__half medium-one__quarter' -%}
   {%- when 5 -%}
-  {%- assign itemWidth = 'medium-one__fifth' -%}
+  {%- assign itemWidth = 'small-one__half medium-one__fifth' -%}
 {%- endcase -%}
 {%- assign product_rows = section.settings.product_rows -%}
 {%- assign product_limit = products_per_row | times: product_rows -%}
