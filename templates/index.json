@@ -256,8 +256,8 @@
         "product_rows": 1,
         "stack_product": true,
         "show_view_all": false,
-        "margin_top": 16,
-        "margin_bottom": 16
+        "margin_top": 60,
+        "margin_bottom": 60
       }
     },
     "749269fd-a63a-458d-b3f5-57ec8c86568c": {
