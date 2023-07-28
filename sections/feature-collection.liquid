@@ -3,13 +3,13 @@
   {%- when 1 -%}
   {%- assign itemWidth = '' -%}
   {%- when 2 -%}
-  {%- assign itemWidth = 'medium-one__half' -%}
+  {%- assign itemWidth = 'block__item--half' -%}
   {%- when 3 -%}
-  {%- assign itemWidth = 'small-one__half medium-one__third' -%}
+  {%- assign itemWidth = 'block__item--auto block__item--one-third' -%}
   {%- when 4 -%}
-  {%- assign itemWidth = 'small-one__half medium-one__quarter' -%}
+  {%- assign itemWidth = 'block__item--auto block__item--one-fourth' -%}
   {%- when 5 -%}
-  {%- assign itemWidth = 'small-one__half medium-one__fifth' -%}
+  {%- assign itemWidth = 'block__item--auto block__item--one-fifth' -%}
 {%- endcase -%}
 {%- assign product_rows = section.settings.product_rows -%}
 {%- assign product_limit = products_per_row | times: product_rows -%}
