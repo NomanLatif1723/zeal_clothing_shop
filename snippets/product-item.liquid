@@ -1,0 +1,15 @@
+<div class="featured-grid__item {{ itemWidth }} {% if stackProduct == false %}list-scroller__item{% endif %}"> 
+  <div class="featured-grid__content">
+    <div class="featured-grid__image">
+      <div class="featured-product__image">
+        <img src="{{ product.featured_image | img_url: "master" }}" width="" height="" alt="{{ product.featured_image.alt }}" loading="lazy"/> 
+      </div>
+    </div>
+    <div class="featured-grid__description text__align-{{ textAlignment }}">
+      <div class="grid-product__title">
+        <h4>{{ product.title }}</h4>
+      </div>
+      <div class="grid-product__price">{{ product.price | money }}</div>
+    </div>
+  </div>
+</div>
