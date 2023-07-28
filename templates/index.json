@@ -249,7 +249,7 @@
     "90c94887-f920-4f4d-8dbc-70cf6119d3ce": {
       "type": "feature-collection",
       "settings": {
-        "collection": "mens-wear",
+        "collection": "frontpage",
         "heading": "Featured Collection",
         "text": "Write Small Description About Your Collection",
         "product_per_row": 4,
