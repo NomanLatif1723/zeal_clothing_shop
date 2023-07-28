@@ -73,7 +73,7 @@
                   {%- endif -%}
                   {%- if block.settings.slide_button_label != blank -%}
                     <div class="slide__btn-wrapper">
-                      <a class="btn btn__link slide__btn{% if block.settings.slide_button_color contains '#ffffff' or block.settings.slide_button_color contains '#f' %} btn-color__dark{% else %} btn-color__light{% endif %}" href="{{ block.settings.slide_button_link }}" title="{{ block.settings.slide_button_label }}">
+                      <a href="{{ block.settings.slide_button_link }}" class="btn btn__link slide__btn{% if block.settings.slide_button_color contains '#ffffff' or block.settings.slide_button_color contains '#f' %} btn-color__dark{% else %} btn-color__light{% endif %}" href="{{ block.settings.slide_button_link }}" title="{{ block.settings.slide_button_label }}">
                         {{ block.settings.slide_button_label }}
                       </a>
                     </div>
