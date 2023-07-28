@@ -42,7 +42,6 @@
                   src="{{ imageDesktop | img_url: 'master' }}"
                   width=""
                   height=""
-                  loading="lazy"
                   alt="{{ imageDesktop.alt }}">
               {%- endif -%}
               {%- if imageDesktop != blank -%}
@@ -51,7 +50,6 @@
                   src="{{ imageMobile | img_url: 'master' }}"
                   width=""
                   height=""
-                  loading="lazy"
                   alt="{{ imageMobile.alt }}">
               {%- endif -%}
             {%- else -%}
