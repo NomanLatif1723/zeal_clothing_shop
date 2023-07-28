@@ -31,12 +31,12 @@
                 <div class="footer__logo-block">
                   {%- if block.settings.footer_logo != blank -%}
                     {%- assign footer__logo = 'footer__logo-img' -%}
-                    <a href="{{ routes.root_url }}">
+                    <a href="{{ routes.root_url }}" title="{{ shop.name }}">
                       {%- render 'image-element', img-element: block.settings.footer_logo, img-width: 80, img-height: 50, classes: footer__logo -%}
                     </a>
                   {%- else -%}
                     <h1 class="site__footer-logo">
-                      <a href="{{ routes.root_url }}">{{ shop.name }}</a>
+                      <a href="{{ routes.root_url }}" title="{{ shop.name }}">{{ shop.name }}</a>
                     </h1>
                   {%- endif -%}
                 </div>
