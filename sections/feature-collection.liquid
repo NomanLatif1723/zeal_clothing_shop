@@ -69,10 +69,10 @@
         {%- else -%}
           {%- for product in collection.products limit: product_limit -%}
             {%- render 'product-item',
-              products_per_row: products_per_row,
-              product: product,
-              collection: collection,
-              section: section
+                section: section,
+                products_per_row: products_per_row,
+                product: product,
+                collection: collection
             -%}
           {%- endfor -%}
         {%- endif -%}
