@@ -2,7 +2,7 @@
   <div class="featured-grid__content">
     <div class="featured-grid__image">
       <div class="featured-product__image">
-        <img src="{{ product.featured_image | img_url: "master" }}" width="" height="" alt="{{ product.featured_image.alt }}" loading="lazy"/> 
+        <img src="{{ product.featured_media | img_url: "master" }}" width="" height="" alt="{{ product.featured_image.alt }}" loading="lazy" /> 
       </div>
     </div>
     <div class="featured-grid__description text__align-{{ textAlignment }}">
