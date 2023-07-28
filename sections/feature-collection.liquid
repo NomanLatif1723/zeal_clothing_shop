@@ -16,6 +16,8 @@
 {%- assign collection = collections[section.settings.collection] -%}
 {%- assign show_view_all = section.settings.show_view_all -%}
 {%- assign textAlignment = section.settings.text_alignment -%}
+{%- assign stackProduct = section.settings.stack_product -%}
+
 {%- style -%}
   .main__section-{{ section.id }}{
     margin-top: 30px;
@@ -43,35 +45,33 @@
       {%- endif -%}
     </div>
     <div class="featured-collection__container">  
-      <div class="scroller">
-        <div class="featured-collection__grid scroller__inner">
-          {%- if collection == blank or collection.empty? or collection.products_count == 0 -%}
-            {%- for i in (1..product_limit) -%}
-              <div class="featured-grid__item {{ itemWidth }}">
-                <div class="featured-grid__content">
-                  <div class="featured-grid__image">
-                    {%- capture count -%}
-                      {%- cycle 1, 2, 3, 4, 5, 6 -%}
-                    {%- endcapture -%}
-                    <div class="featured-product__image">
-                      {{ 'product-' | append: count | placeholder_svg_tag: "placeholder__image product__placeholder" }}
-                    </div>
-                  </div>
-                  <div class="featured-grid__description text__align-{{ textAlignment }}">
-                    <div class="grid-product__title">
-                      <h4>{{ 'homepage.onboarding.product_title' | t }}</h4>
-                    </div>
-                    <div class="grid-product__price">$30</div>
+      <div class="featured-collection__grid {% if stackProduct == false %}list-scroller{% endif %}">
+        {%- if collection == blank or collection.empty? or collection.products_count == 0 -%}
+          {%- for i in (1..product_limit) -%}
+            <div class="featured-grid__item {{ itemWidth }} {% if stackProduct == false %}list-scroller__item{% endif %}">
+              <div class="featured-grid__content">
+                <div class="featured-grid__image">
+                  {%- capture count -%}
+                    {%- cycle 1, 2, 3, 4, 5, 6 -%}
+                  {%- endcapture -%}
+                  <div class="featured-product__image">
+                    {{ 'product-' | append: count | placeholder_svg_tag: "placeholder__image product__placeholder" }}
                   </div>
                 </div>
-             </div>
-            {%- endfor -%}
-          {%- else -%}
-            {%- for product in collection.products limit: product_limit -%}
-              {%- render 'product-item', products_per_row: products_per_row -%}
-            {%- endfor -%}
-          {%- endif -%}
-        </div>
+                <div class="featured-grid__description text__align-{{ textAlignment }}">
+                  <div class="grid-product__title">
+                    <h4>{{ 'homepage.onboarding.product_title' | t }}</h4>
+                  </div>
+                  <div class="grid-product__price">$30</div>
+                </div>
+              </div>
+           </div>
+          {%- endfor -%}
+        {%- else -%}
+          {%- for product in collection.products limit: product_limit -%}
+            {%- render 'product-item', products_per_row: products_per_row -%}
+          {%- endfor -%}
+        {%- endif -%}
       </div>
     </div>
     {%- if show_view_all -%}
