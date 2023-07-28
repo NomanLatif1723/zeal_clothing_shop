@@ -185,14 +185,14 @@
           "type": "button",
           "settings": {
             "richtext_button_label": "SHOP MEN",
-            "richtext_button_link": ""
+            "richtext_button_link": "shopify:\/\/products\/chain-bracelet"
           }
         },
         "a4fa9ef8-6bc4-4c30-8327-8e03be4edd50": {
           "type": "button",
           "settings": {
             "richtext_button_label": "Shop Women",
-            "richtext_button_link": ""
+            "richtext_button_link": "shopify:\/\/products\/bangle-bracelet"
           }
         }
       },
