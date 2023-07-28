@@ -37,226 +37,6 @@
         "name": "Announcement Bar"
       }
     },
-    "richtext": {
-      "name": "Rich Text",
-      "settings": {
-        "alignment": {
-          "label": "Text alignment",
-          "options": {
-            "left": {
-              "label": "Left"
-            },
-            "center": {
-              "label": "Center"
-            },
-            "right": {
-              "label": "Right"
-            }
-          }
-        },
-        "header_spacing": {
-          "label": "Section Spacing",
-          "top_spacing": {
-            "label": "Spacing Top"
-          },
-          "bottom_spacing": {
-            "label": "Spacing Bottom"
-          }
-        }
-      },
-      "blocks": {
-        "subheading": {
-          "name": "Subheading",
-          "settings": {
-            "richtext_subheading": {
-              "label": "Subheading"
-            }
-          }
-        },
-        "heading": {
-          "name": "Heading",
-          "settings": {
-            "richtext_main_heading": {
-              "label": "Heading"
-            }
-          }
-        },
-        "text": {
-          "name": "Text",
-          "settings": {
-            "richtext_text_description": {
-              "label": "Text"
-            }
-          }
-        },
-        "button": {
-          "name": "Button",
-          "settings": {
-            "button_label": {
-              "label": "Button"
-            },
-            "button_link": {
-              "label": "Button Link"
-            }
-          }
-        }
-      },
-      "presets": {
-        "name": "Rich Text"
-      }
-    },
-    "newsletter": {
-      "name": "Newsletter",
-      "settings": {
-        "newsletter_heading": {
-          "label": "Heading"
-        },
-        "newsletter_button_label": {
-          "label": "Button Label"
-        },
-        "alignment": {
-          "label": "Text alignment",
-          "options": {
-            "left": {
-              "label": "Left"
-            },
-            "center": {
-              "label": "Center"
-            },
-            "right": {
-              "label": "Right"
-            }
-          }
-        },
-        "newsletter_background_color": {
-          "label": "Background"
-        },
-        "newsletter_text_color": {
-          "label": "Text"
-        },
-        "header_spacing": {
-          "label": "Section Spacing",
-          "top_spacing": {
-            "label": "Spacing Top"
-          },
-          "bottom_spacing": {
-            "label": "Spacing Bottom"
-          }
-        }
-      },
-      "presets": {
-        "name": "Newsletter"
-      }
-    },
-    "text-with-icon": {
-      "name": "Text With Icon",
-      "settings": {
-        "header_spacing": {
-          "label": "Section Spacing",
-          "top_spacing": {
-            "label": "Spacing Top"
-          },
-          "bottom_spacing": {
-            "label": "Spacing Bottom"
-          }
-        },
-        "blocks": {
-          "slide": {
-            "name": "Slide",
-            "settings": {
-              "slide_logo_label": {
-                "label": "Logo"
-              },
-              "slide_heading": {
-                "label": "Heading"
-              },
-              "slide_text": {
-                "label": "Text"
-              }
-            }
-          }
-        }
-      },
-      "presets": {
-        "name": "Text With Icon"
-      }
-    },
-    "testimonials": {
-      "name": "Testimonials",
-      "settings": {
-        "testimonial_heading": {
-          "label": "Heading"
-        },
-        "testimonial_text": {
-          "label": "Text"
-        },
-        "alignment": {
-          "label": "Text alignment",
-          "options": {
-            "left": {
-              "label": "Left"
-            },
-            "center": {
-              "label": "Center"
-            },
-            "right": {
-              "label": "Right"
-            }
-          }
-        },
-        "testimonial_background_color": {
-          "label": "Background"
-        },
-        "testimonial_text_color": {
-          "label": "Text"
-        }
-      },
-      "blocks": {
-        "testimonial": {
-          "name": "Testimonial",
-          "settings": {
-            "testimonial_star": {
-              "label": "Icon",
-              "options": {
-                "5-stars": {
-                  "label": "5 Stars"
-                },
-                "4-stars": {
-                  "label": "4 Stars"
-                },
-                "3-stars": {
-                  "label": "3 Stars"
-                },
-                "2-stars": {
-                  "label": "2 Stars"
-                },
-                "1-stars": {
-                  "label": "1 Stars"
-                },
-                "none": {
-                  "label": "None"
-                }
-              }
-            },
-            "testimonial_slide_heading": {
-              "label": "Heading"
-            },
-            "testimonial_slide_text": {
-              "label": "Text"
-            },
-            "author_image": {
-              "label": "Author Image"
-            },
-            "author_text": {
-              "label": "Author"
-            }
-          }
-        }
-      },
-      "presets": {
-        "name": "Testimonials"
-      }
-    },
     "blog-posts": {
       "name": "Blog Posts",
       "settings": {
@@ -330,152 +110,154 @@
         "name": "Blog Posts"
       }
     },
-    "slideshow": {
-      "name": "Slideshow",
+    "featured-collection": {
+      "name": "Featured Collection",
       "settings": {
-        "section_height_desktop": {
-          "label": "Desktop Height",
-          "options": {
-            "natural": {
-              "label": "Natural"
+        "collection": {
+          "label": "Collection"
+        },
+        "heading": {
+          "label": "Heading"
+        },
+        "text": {
+          "label": "Text"
+        },
+        "products_per_row": {
+          "label": "Products Per Row"
+        },
+        "product_rows": {
+          "label": "Rows of Products"
+        },
+        "stack_product": {
+          "label": "Stack On Mobile"
+        },
+        "show_view_all": {
+          "label": "Show View All",
+          "info": "Enable View All Only If your collection has more products than shown"
+        },
+        "header_spacing": {
+          "label": "Section Spacing",
+          "top_spacing": {
+            "label": "Spacing Top"
+          },
+          "bottom_spacing": {
+            "label": "Spacing Bottom"
+          }
+        }
+      },
+      "presets": {
+        "name": "Featured Collection"
+      }
+    },
+    "footer": {
+      "name": "Footer",
+      "settings": {
+        "show_copyright": {
+          "label": "Show copyright"
+        },
+        "fooetr_copyright_text": {
+          "label": "Additional Copyright Text"
+        },
+        "show_payment_icons": {
+          "label": "Show Payment Icons"
+        }
+      },
+      "blocks": {
+        "menu": {
+          "name": "Menu",
+          "settings": {
+            "menu_heading": {
+              "label": "Heading"
             },
-            "compact": {
-              "label": "Compact (450px)"
+            "show_footer_heading": {
+              "label": "Show Heading"
             },
-            "standard": {
-              "label": "Standard (650px)"
+            "footer_menu_label": {
+              "label": "Menu"
             },
-            "extended": {
-              "label": "Extended (750px)"
-            },
-            "full": {
-              "label": "Full Screen"
+            "footer_column_width": {
+              "label": "Column Width"
             }
           }
         },
-        "section_height_mobile": {
-          "label": "Mobile Height",
-          "options": {
-            "auto": {
-              "label": "Auto"
+        "newsletter": {
+          "name": "Newsletter",
+          "settings": {
+            "show_newsletter_heading": {
+              "label": "Show Heading"
             },
-            "compact": {
-              "label": "Compact (300px)"
+            "newsletter_heading": {
+              "label": "Heading"
             },
-            "standard": {
-              "label": "Standard (400px)"
+            "newsletter_text": {
+              "label": "Text"
             },
-            "extended": {
-              "label": "Extended (500px)"
+            "newsletter_submit_button": {
+              "label": "Button"
             },
-            "full": {
-              "label": "Full Screen"
+            "show_socials": {
+              "label": "Show Socials"
+            },
+            "footer_column_width": {
+              "label": "Column Width"
             }
           }
         },
-        "show_auto_slides": {
-          "label": "Auto Change Slides"
-        },
-        "change_duration": {
-          "label": "Change Duration"
-        },
-        "navigation_styles": {
-          "label": "Navigation Styles",
-          "options": {
-            "dots": {
-              "label": "Dots"
+        "text": {
+          "name": "Text",
+          "settings": {
+            "footer_logo": {
+              "label": "Logo"
             },
-            "bars": {
-              "label": "Bars"
+            "footer_text": {
+              "label": "Text"
+            },
+            "footer_column_width": {
+              "label": "Column Width"
             }
+          }
+        },
+        "address_bar": {
+          "name": "AddressBar",
+          "settings": {
+            "footer_address": {
+              "label": "Address"
+            },
+            "footer_phone_no": {
+              "label": "Phone No"
+            },
+            "footer_schedule": {
+              "label": "Schedule"
+            }
+          }
+        }
+      }
+    },
+    "lookbook": {
+      "name": "Lookbook",
+      "settings": {
+        "header_spacing": {
+          "label": "Section Spacing",
+          "top_spacing": {
+            "label": "Spacing Top"
+          },
+          "bottom_spacing": {
+            "label": "Spacing Bottom"
           }
         }
       },
       "blocks": {
-        "slide": {
-          "name": "Slide",
+        "lookbook": {
+          "name": "lookbook",
           "settings": {
-            "header_alignment": {
-              "label": "Position and Alignment"
-            },
-            "content_position": {
-              "label": "Content Position",
-              "options": {
-                "top_left": {
-                  "label": "Top Left"
-                },
-                "top_center": {
-                  "label": "Top Center"
-                },
-                "top_right": {
-                  "label": "Top Right"
-                },
-                "center_left": {
-                  "label": "Center Left"
-                },
-                "center": {
-                  "label": "Center"
-                },
-                "center_right": {
-                  "label": "Center Right"
-                },
-                "bottom_left": {
-                  "label": "Bottom Left"
-                },
-                "bottom_center": {
-                  "label": "Bottom Center"
-                },
-                "bottom_right": {
-                  "label": "Bottom Right"
-                }
-              }
-            },
-            "alignment": {
-              "label": "Text alignment",
-              "options": {
-                "left": {
-                  "label": "Left"
-                },
-                "center": {
-                  "label": "Center"
-                },
-                "right": {
-                  "label": "Right"
-                }
-              }
-            },
-            "slide_heading": {
-              "label": "Heading"
-            },
-            "slide_text": {
-              "label": "Text"
-            },
-            "slide_button": {
-              "label": "Button"
-            },
-            "slide_button_link": {
-              "label": "Button Link"
-            },
-            "slide_image_desktop": {
+            "image": {
               "label": "Image"
-            },
-            "slide_image_mobile": {
-              "label": "Mobile Image"
-            },
-            "header_colors": {
-              "label": "Colors",
-              "text": {
-                "label": "Text"
-              },
-              "button": {
-                "label": "Button"
-              }
             }
           }
         }
       },
       "presets": {
-        "name": "Slideshow"
+        "name": "Lookbook"
       }
     },
     "marquee-text": {
@@ -519,6 +301,49 @@
       },
       "presets": {
         "name": "Marquee Text"
+      }
+    },
+    "newsletter": {
+      "name": "Newsletter",
+      "settings": {
+        "newsletter_heading": {
+          "label": "Heading"
+        },
+        "newsletter_button_label": {
+          "label": "Button Label"
+        },
+        "alignment": {
+          "label": "Text alignment",
+          "options": {
+            "left": {
+              "label": "Left"
+            },
+            "center": {
+              "label": "Center"
+            },
+            "right": {
+              "label": "Right"
+            }
+          }
+        },
+        "newsletter_background_color": {
+          "label": "Background"
+        },
+        "newsletter_text_color": {
+          "label": "Text"
+        },
+        "header_spacing": {
+          "label": "Section Spacing",
+          "top_spacing": {
+            "label": "Spacing Top"
+          },
+          "bottom_spacing": {
+            "label": "Spacing Bottom"
+          }
+        }
+      },
+      "presets": {
+        "name": "Newsletter"
       }
     },
     "promotional-grid": {
@@ -754,9 +579,23 @@
         "name": "Promotional Block"
       }
     },
-    "lookbook": {
-      "name": "Lookbook",
+    "richtext": {
+      "name": "Rich Text",
       "settings": {
+        "alignment": {
+          "label": "Text alignment",
+          "options": {
+            "left": {
+              "label": "Left"
+            },
+            "center": {
+              "label": "Center"
+            },
+            "right": {
+              "label": "Right"
+            }
+          }
+        },
         "header_spacing": {
           "label": "Section Spacing",
           "top_spacing": {
@@ -768,101 +607,301 @@
         }
       },
       "blocks": {
-        "lookbook": {
-          "name": "lookbook",
+        "subheading": {
+          "name": "Subheading",
           "settings": {
-            "image": {
-              "label": "Image"
-            }
-          }
-        }
-      },
-      "presets": {
-        "name": "Lookbook"
-      }
-    },
-    "footer": {
-      "name": "Footer",
-      "settings": {
-        "show_copyright": {
-          "label": "Show copyright"
-        },
-        "fooetr_copyright_text": {
-          "label": "Additional Copyright Text"
-        },
-        "show_payment_icons": {
-          "label": "Show Payment Icons"
-        }
-      },
-      "blocks": {
-        "menu": {
-          "name": "Menu",
-          "settings": {
-            "menu_heading": {
-              "label": "Heading"
-            },
-            "show_footer_heading": {
-              "label": "Show Heading"
-            },
-            "footer_menu_label": {
-              "label": "Menu"
-            },
-            "footer_column_width": {
-              "label": "Column Width"
+            "richtext_subheading": {
+              "label": "Subheading"
             }
           }
         },
-        "newsletter": {
-          "name": "Newsletter",
+        "heading": {
+          "name": "Heading",
           "settings": {
-            "show_newsletter_heading": {
-              "label": "Show Heading"
-            },
-            "newsletter_heading": {
+            "richtext_main_heading": {
               "label": "Heading"
-            },
-            "newsletter_text": {
-              "label": "Text"
-            },
-            "newsletter_submit_button": {
-              "label": "Button"
-            },
-            "show_socials": {
-              "label": "Show Socials"
-            },
-            "footer_column_width": {
-              "label": "Column Width"
             }
           }
         },
         "text": {
           "name": "Text",
           "settings": {
-            "footer_logo": {
-              "label": "Logo"
-            },
-            "footer_text": {
+            "richtext_text_description": {
               "label": "Text"
-            },
-            "footer_column_width": {
-              "label": "Column Width"
             }
           }
         },
-        "address_bar": {
-          "name": "AddressBar",
+        "button": {
+          "name": "Button",
           "settings": {
-            "footer_address": {
-              "label": "Address"
+            "button_label": {
+              "label": "Button"
             },
-            "footer_phone_no": {
-              "label": "Phone No"
-            },
-            "footer_schedule": {
-              "label": "Schedule"
+            "button_link": {
+              "label": "Button Link"
             }
           }
         }
+      },
+      "presets": {
+        "name": "Rich Text"
+      }
+    },
+    "slideshow": {
+      "name": "Slideshow",
+      "settings": {
+        "section_height_desktop": {
+          "label": "Desktop Height",
+          "options": {
+            "natural": {
+              "label": "Natural"
+            },
+            "compact": {
+              "label": "Compact (450px)"
+            },
+            "standard": {
+              "label": "Standard (650px)"
+            },
+            "extended": {
+              "label": "Extended (750px)"
+            },
+            "full": {
+              "label": "Full Screen"
+            }
+          }
+        },
+        "section_height_mobile": {
+          "label": "Mobile Height",
+          "options": {
+            "auto": {
+              "label": "Auto"
+            },
+            "compact": {
+              "label": "Compact (300px)"
+            },
+            "standard": {
+              "label": "Standard (400px)"
+            },
+            "extended": {
+              "label": "Extended (500px)"
+            },
+            "full": {
+              "label": "Full Screen"
+            }
+          }
+        },
+        "show_auto_slides": {
+          "label": "Auto Change Slides"
+        },
+        "change_duration": {
+          "label": "Change Duration"
+        },
+        "navigation_styles": {
+          "label": "Navigation Styles",
+          "options": {
+            "dots": {
+              "label": "Dots"
+            },
+            "bars": {
+              "label": "Bars"
+            }
+          }
+        }
+      },
+      "blocks": {
+        "slide": {
+          "name": "Slide",
+          "settings": {
+            "header_alignment": {
+              "label": "Position and Alignment"
+            },
+            "content_position": {
+              "label": "Content Position",
+              "options": {
+                "top_left": {
+                  "label": "Top Left"
+                },
+                "top_center": {
+                  "label": "Top Center"
+                },
+                "top_right": {
+                  "label": "Top Right"
+                },
+                "center_left": {
+                  "label": "Center Left"
+                },
+                "center": {
+                  "label": "Center"
+                },
+                "center_right": {
+                  "label": "Center Right"
+                },
+                "bottom_left": {
+                  "label": "Bottom Left"
+                },
+                "bottom_center": {
+                  "label": "Bottom Center"
+                },
+                "bottom_right": {
+                  "label": "Bottom Right"
+                }
+              }
+            },
+            "alignment": {
+              "label": "Text alignment",
+              "options": {
+                "left": {
+                  "label": "Left"
+                },
+                "center": {
+                  "label": "Center"
+                },
+                "right": {
+                  "label": "Right"
+                }
+              }
+            },
+            "slide_heading": {
+              "label": "Heading"
+            },
+            "slide_text": {
+              "label": "Text"
+            },
+            "slide_button": {
+              "label": "Button"
+            },
+            "slide_button_link": {
+              "label": "Button Link"
+            },
+            "slide_image_desktop": {
+              "label": "Image"
+            },
+            "slide_image_mobile": {
+              "label": "Mobile Image"
+            },
+            "header_colors": {
+              "label": "Colors",
+              "text": {
+                "label": "Text"
+              },
+              "button": {
+                "label": "Button"
+              }
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Slideshow"
+      }
+    },
+    "text-with-icon": {
+      "name": "Text With Icon",
+      "settings": {
+        "header_spacing": {
+          "label": "Section Spacing",
+          "top_spacing": {
+            "label": "Spacing Top"
+          },
+          "bottom_spacing": {
+            "label": "Spacing Bottom"
+          }
+        },
+        "blocks": {
+          "slide": {
+            "name": "Slide",
+            "settings": {
+              "slide_logo_label": {
+                "label": "Logo"
+              },
+              "slide_heading": {
+                "label": "Heading"
+              },
+              "slide_text": {
+                "label": "Text"
+              }
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Text With Icon"
+      }
+    },
+    "testimonials": {
+      "name": "Testimonials",
+      "settings": {
+        "testimonial_heading": {
+          "label": "Heading"
+        },
+        "testimonial_text": {
+          "label": "Text"
+        },
+        "alignment": {
+          "label": "Text alignment",
+          "options": {
+            "left": {
+              "label": "Left"
+            },
+            "center": {
+              "label": "Center"
+            },
+            "right": {
+              "label": "Right"
+            }
+          }
+        },
+        "testimonial_background_color": {
+          "label": "Background"
+        },
+        "testimonial_text_color": {
+          "label": "Text"
+        }
+      },
+      "blocks": {
+        "testimonial": {
+          "name": "Testimonial",
+          "settings": {
+            "testimonial_star": {
+              "label": "Icon",
+              "options": {
+                "5-stars": {
+                  "label": "5 Stars"
+                },
+                "4-stars": {
+                  "label": "4 Stars"
+                },
+                "3-stars": {
+                  "label": "3 Stars"
+                },
+                "2-stars": {
+                  "label": "2 Stars"
+                },
+                "1-stars": {
+                  "label": "1 Stars"
+                },
+                "none": {
+                  "label": "None"
+                }
+              }
+            },
+            "testimonial_slide_heading": {
+              "label": "Heading"
+            },
+            "testimonial_slide_text": {
+              "label": "Text"
+            },
+            "author_image": {
+              "label": "Author Image"
+            },
+            "author_text": {
+              "label": "Author"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Testimonials"
       }
     }
   },

@@ -13,5 +13,15 @@
     "announcement-bar": {
       "header_announcement": "Announcement Bar"
     }
+  },
+  "collections": {
+    "general": {
+      "all_collection": "View All"
+    }
+  },
+  "homepage": {
+    "onboarding": {
+      "product_title": "Example Product"
+    }
   }
 }
