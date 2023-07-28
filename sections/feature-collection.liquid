@@ -67,8 +67,12 @@
            </div>
           {%- endfor -%}
         {%- else -%}
-          {%- for product in collections[section.settings.collection].products limit: product_limit -%}
-            {%- render 'product-item', products_per_row: products_per_row -%}
+          {%- for product in collection.products limit: product_limit -%}
+            {%- render 'product-item',
+              products_per_row: products_per_row,
+              product: product,
+              collection: collection
+            -%}
           {%- endfor -%}
         {%- endif -%}
       </div>
