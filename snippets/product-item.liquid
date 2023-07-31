@@ -33,7 +33,7 @@
       {% if product.available %}
         <span class="badge sale__badge{% if settings.sale_badge_color contains '#f' %} badge-color__dark{% else %} badge-color__light{% endif %}">{{ 'collections.products.on_sale' | t }}</span>
       {% else %}
-        <span class="badge soldout__badge">{{ 'collections.products.sold_out' | t }}</span>
+        <span class="badge soldout__badge{% if settings.soldout_badge_color contains '#f' %} badge-color__dark{% else %} badge-color__light{% endif %}">{{ 'collections.products.sold_out' | t }}</span>
       {% endif %}
     </div>
     
