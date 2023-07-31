@@ -74,7 +74,7 @@
               sizes="{{ sizes }}"
               alt="{{ product.media[1].alt }}"
               />
-          {%- endif -%}
+          {%- endif -%} 
         </a>
     </div>
     <div class="featured-grid__description text__align-{{ textAlignment }}">
@@ -95,12 +95,3 @@
     </div>
   </div>
 </div>
-{%- style -%}
-  .sale__badge{
-    background: {{ settings.sale_badge_color }};
-  }
-  
-  .soldout__badge{
-    background: {{ settings.soldout_badge_color }};
-  }
-{%- endstyle -%}
