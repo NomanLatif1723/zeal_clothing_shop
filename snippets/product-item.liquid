@@ -51,7 +51,7 @@
           />
           {%- if product.media[1] != null and settings.show_second_image -%}
             <img class="product-secondary__image" style="aspect-ratio: {{ imageAspectRatio }};"
-              src="{{ image[1] | product_img_url: medium }}"
+              src="{{ product.media[1] | product_img_url: medium }}"
               srcset="
                     {{ product.media[1] | product_img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
                     {{ product.media[1] | product_img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
