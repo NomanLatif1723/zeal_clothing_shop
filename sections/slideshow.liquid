@@ -17,6 +17,9 @@
             {%- assign slideButtonColor = block.settings.slide_button_color -%}
             {%- assign imageDesktop = block.settings.slide_image_desktop -%}
             {%- assign imageMobile = block.settings.slide_image_mobile -%}
+            {% assign ratio = 0.75 %}
+            {% assign default = 'medium' %}
+            {% assign sizes = '(min-width: 1200px) 650px, 45vw' %}
             .slideshow__slide-{{ block.id }} .slide__text-heading{
               color: {{ slideTextColor }};
             }
@@ -40,16 +43,34 @@
                 <img
                   class="hero__image desktop__image"
                   src="{{ imageDesktop | img_url: 'master' }}"
-                  width=""
-                  height=""
+                  srcset="
+                      {{ imageDesktop | product_img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
+                      {{ imageDesktop | product_img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
+                      {{ imageDesktop | product_img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
+                      {{ imageDesktop | product_img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
+                      {{ imageDesktop | product_img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
+                  "
+                  width="{{ imageDesktop.width }}"
+                  height="{{ imageDesktop.height }}"
+                  loading= "lazy"
+                  sizes="{{ sizes }}"
                   alt="{{ imageDesktop.alt }}">
               {%- endif -%}
               {%- if imageDesktop != blank -%}
                 <img
                   class="hero__image mobile__image"
                   src="{{ imageMobile | img_url: 'master' }}"
-                  width=""
-                  height=""
+                  srcset="
+                      {{ imageMobile | product_img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
+                      {{ imageMobile | product_img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
+                      {{ imageMobile | product_img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
+                      {{ imageMobile | product_img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
+                      {{ imageMobile | product_img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
+                  "
+                  width="{{ imageMobile.width }}"
+                  height="{{ imageMobile.height }}"
+                  loading= "lazy"
+                  sizes="{{ sizes }}"
                   alt="{{ imageMobile.alt }}">
               {%- endif -%}
             {%- else -%}
