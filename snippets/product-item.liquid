@@ -109,7 +109,17 @@
       {%- if settings.show_color_swatches -%}
       <div class="grid-product__variants">
         {% for option in product.options_with_values %}
-          {{ option.name }}--- {{ value }}
+          {%- liquid 
+            assign optionName = option.name
+            assign isColorOption = false
+            if optionName == 'color' or optionName == 'colour'
+            assign isColorOption = true
+             endif
+          -%}
+          {%- if isColorOption -%}
+            {% for variant in product.variants %}
+            {% endfor %}
+          {%- endif -%}
         {% endfor %}
       </div>
       {%- endif -%}
