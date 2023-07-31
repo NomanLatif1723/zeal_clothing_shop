@@ -31,11 +31,11 @@
     <div class="featured-grid__image">
       {% assign image = product.featured_image %}
       {% assign ratio = 0.75 %}
-      {% assign default = 'grande' %}
+      {% assign default = 'medium' %}
       {% assign sizes = '(min-width: 1200px) 650px, 45vw' %}
       
       <img class="" style="aspect-ratio: {{ imageAspectRatio }};"
-        src="{{ image | product_img_url: default }}"
+        src="{{ image | product_img_url: medium }}"
         srcset="
               {{ image | product_img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
               {{ image | product_img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
