@@ -19,7 +19,7 @@
             {%- assign imageMobile = block.settings.slide_image_mobile -%}
             {% assign ratio = 0.75 %}
             {% assign default = 'medium' %}
-            {% assign sizes = '(min-width: 1200px) 650px, 45vw' %}
+            {% assign sizes = '100vw' %}
             .slideshow__slide-{{ block.id }} .slide__text-heading{
               color: {{ slideTextColor }};
             }
@@ -56,7 +56,7 @@
                   sizes="{{ sizes }}"
                   alt="{{ imageDesktop.alt }}">
               {%- endif -%}
-              {%- if imageDesktop != blank and imageMobile != blank -%}
+              {%- if imageMobile != blank -%}
                 <img
                   class="hero__image mobile__image"
                   src="{{ imageMobile | img_url: 'master' }}"
