@@ -19,7 +19,8 @@
       "all_collection": "View All"
     },
     "products": {
-      "on_sale": "Sale"
+      "on_sale": "Sale",
+      "sold_out": "Sold Out"
     }
   },
   "homepage": {
