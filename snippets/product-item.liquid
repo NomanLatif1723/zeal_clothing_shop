@@ -35,8 +35,8 @@
         {% assign default = 'grande' %}
         {% assign sizes = '(min-width: 1360px) 650px, 45vw' %}
         
-        <img class="lazyload" style="aspect-ratio: {{ imageAspectRatio }};"
-          src="{{ image | img_url: default }}"
+        <img class="" style="aspect-ratio: {{ imageAspectRatio }};"
+          src="{{ image | product_img_url: default }}"
           srcset="
         		{{ image | product_img_url: 'pico' }} {% if ratio < 1 %}{{ 16 | times: ratio | round }}{% else %}16{% endif %}w,
         		{{ image | product_img_url: 'icon' }} {% if ratio < 1 %}{{ 32 | times: ratio | round }}{% else %}32{% endif %}w,
@@ -49,6 +49,9 @@
         		{{ image | product_img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
         		{{ image | product_img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
             "
+          width="{{ image.width }}"
+          height="{{ image.height }}"
+          loading="lazy"
           sizes="{{ sizes }}"
           alt="{{ image.alt }}"
           /> 
