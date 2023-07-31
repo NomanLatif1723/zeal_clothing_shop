@@ -21,6 +21,7 @@
     "social_youtube_url": "",
     "social_vimeo_url": "",
     "image_size": "square",
+    "show_vendor": true,
     "color_button": "#111111",
     "color_button_text": "#ffffff",
     "content_for_index": [
