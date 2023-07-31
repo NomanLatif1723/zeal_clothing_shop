@@ -34,8 +34,7 @@
       {% assign default = 'medium' %}
       {% assign sizes = '(min-width: 1200px) 650px, 45vw' %}
       <a href="{{ product.url }}" title="{{ image.alt }}">
-        <img class="" style="aspect-ratio: {{ imageAspectRatio }};"
-          class="product__image"
+        <img class="product__image" style="aspect-ratio: {{ imageAspectRatio }};"
           src="{{ image | product_img_url: medium }}"
           srcset="
                 {{ image | product_img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
@@ -51,8 +50,7 @@
           alt="{{ image.alt }}"
           />
           {%- if product.media[1] != null and settings.show_second_image -%}
-            <img class="" style="aspect-ratio: {{ imageAspectRatio }};"
-              class="product-secondary__image"
+            <img class="product-secondary__image" style="aspect-ratio: {{ imageAspectRatio }};"
               src="{{ image[1] | product_img_url: medium }}"
               srcset="
                     {{ product.media[1] | product_img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
