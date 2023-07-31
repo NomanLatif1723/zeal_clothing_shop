@@ -32,7 +32,7 @@
       {% assign image = product.featured_image %}
       {% assign ratio = 0.75 %}
       {% assign default = 'grande' %}
-      {% assign sizes = '(min-width: 1360px) 650px, 45vw' %}
+      {% assign sizes = '(min-width: 1200px) 650px, 45vw' %}
       
       <img class="" style="aspect-ratio: {{ imageAspectRatio }};"
         src="{{ image | product_img_url: default }}"
