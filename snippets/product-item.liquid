@@ -49,7 +49,7 @@
           sizes="{{ sizes }}"
           alt="{{ image.alt }}"
           />
-          {%- if product.media[1] != null and settings.show_second_image -%}
+          {%- if product.media > 1 and settings.show_second_image -%}
             <img class="product-secondary__image" style="aspect-ratio: {{ imageAspectRatio }};"
               src="{{ product.media[1] | product_img_url: medium }}"
               srcset="
