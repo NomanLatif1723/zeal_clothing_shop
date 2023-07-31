@@ -104,9 +104,11 @@
           <span class="product__compare-price">{{ product.compare_at_price | money_without_trailing_zeros }}</span>
         {%- endunless -%}
       </div>
+      {%- if settings.show_color_swatches -%}
       <div class="grid-product__variants">
         
       </div>
+      {%- endif -%}
     </div>
   </div>
 </div>
