@@ -35,14 +35,9 @@
         {% assign default = 'grande' %}
         {% assign sizes = '(min-width: 1360px) 650px, 45vw' %}
         
-        <img class="" style="aspect-ratio: {{ imageAspectRatio }};"
+        <img class="" style="aspect-ratio: {{ ratio }};"
           src="{{ image | product_img_url: default }}"
           srcset="
-        		{{ image | product_img_url: 'pico' }} {% if ratio < 1 %}{{ 16 | times: ratio | round }}{% else %}16{% endif %}w,
-        		{{ image | product_img_url: 'icon' }} {% if ratio < 1 %}{{ 32 | times: ratio | round }}{% else %}32{% endif %}w,
-        		{{ image | product_img_url: 'thumb' }} {% if ratio < 1 %}{{ 50 | times: ratio | round }}{% else %}50{% endif %}w,
-        		{{ image | product_img_url: 'small' }} {% if ratio < 1 %}{{ 100 | times: ratio | round }}{% else %}100{% endif %}w,
-        		{{ image | product_img_url: 'compact' }} {% if ratio < 1 %}{{ 160 | times: ratio | round }}{% else %}160{% endif %}w,
         		{{ image | product_img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
         		{{ image | product_img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
         		{{ image | product_img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
