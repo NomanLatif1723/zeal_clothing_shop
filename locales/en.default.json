@@ -7,6 +7,10 @@
     "newsletter_form": {
       "email_placeholder": "Enter Your Email",
       "submit_text": "Submit"
+    },
+    "products": {
+      "regular_price": "Regular Price",
+      "compare_price": "Comapre Price"
     }
   },
   "sections": {
@@ -27,5 +31,7 @@
     "onboarding": {
       "product_title": "Example Product"
     }
+  },
+  "products": {
   }
 }
