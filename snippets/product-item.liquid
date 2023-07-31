@@ -30,30 +30,30 @@
   <div class="featured-grid__content">
     
     <div class="grid__badge">
-      {% if product.available %}
+      {%- if product.available -%}
         <span class="badge sale__badge{% if settings.sale_badge_color contains '#f' %} badge-color__dark{% else %} badge-color__light{% endif %}">{{ 'collections.products.on_sale' | t }}</span>
       {% else %}
         <span class="badge soldout__badge{% if settings.soldout_badge_color contains '#f' %} badge-color__dark{% else %} badge-color__light{% endif %}">{{ 'collections.products.sold_out' | t }}</span>
-      {% endif %}
+      {%- endif -%}
     </div>
     
     <div class="featured-grid__image{% if product.media.size > 1 and settings.show_second_image %} has-secondary__image{% endif %}">
-      {% if settings.show_quick_view %}
+      {%- if settings.show_quick_view -%}
         <div class="quick-shop__wrapper">
           <div class="quick-shop__flex">
             <div class="quick-shop__text">
               {{ settings.quick_button_text }}
             </div>
             <div class="icon quick-shop__icon">
-              {% render 'icon-quickview' %}
+              {%- render 'icon-quickview' -%}
             </div>
           </div>
         </div>
-      {% endif %}
-      {% assign image = product.featured_image %}
-      {% assign ratio = 0.75 %}
-      {% assign default = 'medium' %}
-      {% assign sizes = '(min-width: 1200px) 650px, 45vw' %}
+      {%- endif -%}
+      {%- assign image = product.featured_image -%}
+      {%- assign ratio = 0.75 -%}
+      {%- assign default = 'medium' -%}
+      {%- assign sizes = '(min-width: 1200px) 650px, 45vw' -%}
       <a href="{{ product.url }}" title="{{ image.alt }}">
         <img class="product__image" style="aspect-ratio: {{ imageAspectRatio }};"
           src="{{ image | product_img_url: medium }}"
