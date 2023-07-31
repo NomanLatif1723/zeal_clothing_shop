@@ -56,7 +56,7 @@
                   sizes="{{ sizes }}"
                   alt="{{ imageDesktop.alt }}">
               {%- endif -%}
-              {%- if imageDesktop != blank -%}
+              {%- if imageDesktop != blank and imageMobile != blank -%}
                 <img
                   class="hero__image mobile__image"
                   src="{{ imageMobile | img_url: 'master' }}"
