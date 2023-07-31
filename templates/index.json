@@ -107,6 +107,7 @@
           "type": "image-with-text",
           "settings": {
             "promo_image_desktop": "shopify:\/\/shop_images\/black-white-minimal-portrait_3_1.jpg",
+            "promo_image_mobile": "shopify:\/\/shop_images\/black-white-minimal-portrait_3_1_1.jpg",
             "subheading": "Exclusive Online Offer",
             "heading": "Shop Our Website and Get 15% Off Your First Purchase",
             "button_label": "Shop Now",
