@@ -55,7 +55,10 @@
       <div class="grid-product__title">
         <a href="{{ product.url }}" title="{{ product.title }}"><h4>{{ product.title }}</h4></a>
       </div>
-      <div class="grid-product__price">{{ product.price | money }}</div>
+      <div class="grid-product__price">
+        <span class="product__sale-price">{{ product.price | money }}</span>
+        <span class="product__compare-price">{{ product.compare_at_price }}</span>
+      </div>
     </div>
   </div>
 </div>
