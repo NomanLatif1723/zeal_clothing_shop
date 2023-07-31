@@ -1265,6 +1265,36 @@ font-display: "swap";
    color: white;
 }
 
+.quick-shop__wrapper {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    padding: 6px;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.quick-shop__flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 28px;
+    background: rgba(255,255,255,0.5);
+    cursor: pointer;
+}
+
+.quick-shop__text {
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 16px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+}
+
+.featured-grid__image:hover .quick-shop__wrapper {
+    visibility: visible;
+}
+
 @media only screen and (max-width: 1200px){
   .block__item--auto{
     width: 25%;
