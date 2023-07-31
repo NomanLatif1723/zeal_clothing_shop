@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#111111" />
+    <link rel="canonical" href="{{ canonical_url }}" />
+    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+    <link rel="dns-prefetch" href="https://productreviews.shopifycdn.com">
     <title>
       {{ page_title -}}
       {%- if current_tags %}
@@ -18,9 +22,9 @@
       <meta name="description" content="{{ page_description | escape }}" />
     {% endif %}
 
-    <meta name="theme-color" content="#111111" />
+    
 
-    <link rel="canonical" href="{{ canonical_url }}" />
+    
     {{ content_for_header }}
 
     {{ 'theme.css' | asset_url | stylesheet_tag: preload: true }}
