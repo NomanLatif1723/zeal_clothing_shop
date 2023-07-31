@@ -17,6 +17,9 @@
   "collections": {
     "general": {
       "all_collection": "View All"
+    },
+    "products": {
+      "on_sale": "Sale"
     }
   },
   "homepage": {
