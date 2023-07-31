@@ -41,7 +41,7 @@
             {%- if imageDesktop != blank or imageMobile != blank -%}
               {%- if imageDesktop != blank -%}
                 <img
-                  class="hero__image desktop__image"
+                  class="hero__image desktop__image{% if imageMobile != blank %} desktop__image-hide{% endif %}"
                   src="{{ imageDesktop | img_url: 'master' }}"
                   srcset="
                       {{ imageDesktop | product_img_url: 'medium' }} {% if imageDesktop.ratio < 1 %}{{ 240 | times: imageDesktop.ratio | round }}{% else %}240{% endif %}w,
