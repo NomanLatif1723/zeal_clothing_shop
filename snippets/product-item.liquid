@@ -52,6 +52,11 @@
         </a>
     </div>
     <div class="featured-grid__description text__align-{{ textAlignment }}">
+      {%- if settings.show_vendor -%}
+        <div class="grid-product__vendor">
+          {{ product.vendor }}
+        </div>
+      {%- endif -%}
       <div class="grid-product__title">
         <a href="{{ product.url }}" title="{{ product.title }}"><h4>{{ product.title }}</h4></a>
       </div>
