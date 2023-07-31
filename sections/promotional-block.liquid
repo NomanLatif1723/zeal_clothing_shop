@@ -43,7 +43,7 @@
             <div class="promo-block__image">
               {%- if imageDesktop != blank or imageMobile != blank -%}
                 {%- if imageDesktop != blank -%}
-                  <img class="promo__image promo-image__desktop {% if imageMobile != blank %}promo__image-hide{% endif %}"
+                  <img class="promo__image promo-image__desktop{% if imageMobile != blank %} promo__image-hide{% endif %}"
                     src="{{ imageDesktop | img_url: 'master' }}"
                     loading="lazy"
                     width=""
