@@ -30,14 +30,27 @@
   <div class="featured-grid__content">
     <div class="featured-grid__image">
       <div class="featured-product__image">
+        {% assign image = product.featured_image %}
+        {% assign ratio = 0.75 %}
+        {% assign default = 'grande' %}
+        {% assign sizes = '(min-width: 1360px) 650px, 45vw' %}
+        
         <img class="lazyload" style="aspect-ratio: {{ imageAspectRatio }};"
-          src="{{ product.featured_image | img_url: "300x" }}"
-          data-src="{{ img_url }}"
-          data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]"
-          data-aspectratio="{{ product.featured_image.aspect_ratio }}"
-          data-sizes="auto"
-          data-parent-fit="cover"
-          alt="{{ product.featured_image.alt }}"
+          src="{{ image | img_url: default }}"
+          srcset="
+        		{{ image | product_img_url: 'pico' }} {% if ratio < 1 %}{{ 16 | times: ratio | round }}{% else %}16{% endif %}w,
+        		{{ image | product_img_url: 'icon' }} {% if ratio < 1 %}{{ 32 | times: ratio | round }}{% else %}32{% endif %}w,
+        		{{ image | product_img_url: 'thumb' }} {% if ratio < 1 %}{{ 50 | times: ratio | round }}{% else %}50{% endif %}w,
+        		{{ image | product_img_url: 'small' }} {% if ratio < 1 %}{{ 100 | times: ratio | round }}{% else %}100{% endif %}w,
+        		{{ image | product_img_url: 'compact' }} {% if ratio < 1 %}{{ 160 | times: ratio | round }}{% else %}160{% endif %}w,
+        		{{ image | product_img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
+        		{{ image | product_img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
+        		{{ image | product_img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
+        		{{ image | product_img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
+        		{{ image | product_img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
+            "
+          sizes="{{ sizes }}"
+          alt="{{ image.alt }}"
           /> 
       </div>
     </div>
