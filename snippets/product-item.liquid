@@ -26,15 +26,6 @@
   {%- when 5 -%}
   {%- assign itemWidth = 'block__item--auto block__item--one-fifth' -%}
 {%- endcase -%}
-{%- style -%}
-  .sale__badge{
-    background: {{ settings.sale_badge_color }};
-  }
-  
-  .soldout__badge{
-    background: {{ settings.soldout_badge_color }};
-  }
-{%- endstyle -%}
 <div class="featured-grid__item {{ itemWidth }} {% if stackProduct == false %}list-scroller__item{% endif %}">
   <div class="featured-grid__content">
     
@@ -104,3 +95,12 @@
     </div>
   </div>
 </div>
+{%- style -%}
+  .sale__badge{
+    background: {{ settings.sale_badge_color }};
+  }
+  
+  .soldout__badge{
+    background: {{ settings.soldout_badge_color }};
+  }
+{%- endstyle -%}
