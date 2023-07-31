@@ -35,7 +35,7 @@
         {% assign default = 'grande' %}
         {% assign sizes = '(min-width: 1360px) 650px, 45vw' %}
         
-        <img class="" style="aspect-ratio: {{ ratio }};"
+        <img class="" style="aspect-ratio: {{ imageAspectRatio }};"
           src="{{ image | product_img_url: default }}"
           srcset="
         		{{ image | product_img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
