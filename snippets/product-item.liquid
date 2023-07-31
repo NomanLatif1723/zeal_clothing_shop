@@ -56,8 +56,10 @@
         <a href="{{ product.url }}" title="{{ product.title }}"><h4>{{ product.title }}</h4></a>
       </div>
       <div class="grid-product__price">
-        <span class="product__sale-price">{{ product.price | money_without_trailing_zeros }}</span>
-        <span class="product__compare-price">{%- unless product.compare_at_price > product.price -%}{{ product.compare_at_price | money_without_trailing_zeros }} {%- endunless -%}</span>
+        <span class="product__sale-price">{{ product.price | money }}</span>
+        {%- unless product.compare_at_price > product.price -%}
+          <span class="product__compare-price">{{ product.compare_at_price | money_without_trailing_zeros }}</span>
+        {%- endunless -%}
       </div>
     </div>
   </div>
