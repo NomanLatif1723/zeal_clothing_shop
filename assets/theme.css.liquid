@@ -1215,6 +1215,17 @@ font-display: "swap";
     padding-bottom: 10px;
     letter-spacing: 0.7px;
 }
+.product-secondary__image {
+    display: none;
+}
+.product__image:hover .product__image {
+    display: none;
+}
+
+.product__image:hover .product-secondary__image {
+    display: block;
+}
+
 @media only screen and (max-width: 1200px){
   .block__item--auto{
     width: 25%;
