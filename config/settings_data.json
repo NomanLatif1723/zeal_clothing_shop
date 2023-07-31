@@ -22,6 +22,7 @@
     "social_vimeo_url": "",
     "image_size": "square",
     "show_quick_view": true,
+    "show_color_swatches": true,
     "show_vendor": false,
     "show_second_image": false,
     "sale_badge_color": "#9d1339",
