@@ -28,9 +28,15 @@
 {%- endcase -%}
 <div class="featured-grid__item {{ itemWidth }} {% if stackProduct == false %}list-scroller__item{% endif %}">
   <div class="featured-grid__content">
-    <div class="grid__badge sale__badge">
-      {{ 'collection.product.on_sale' | t }}
+    
+    <div class="grid__badge">
+      {% if product.available %}
+        <span class="sale__badge">{{ 'collections.products.on_sale' | t }}</span>
+      {% else %}
+        <span class="soldout__badge">{{ 'collections.products.sold_out' | t }}</span>
+      {% endif %}
     </div>
+    
     <div class="featured-grid__image{% if product.media.size > 1 %} has-secondary__image{% endif %}">
       {% assign image = product.featured_image %}
       {% assign ratio = 0.75 %}
