@@ -60,7 +60,7 @@
         "slide_automation": false,
         "slide_change_duration": 4,
         "navigation_styles": "bars",
-        "lazyload_images": true
+        "lazyload_images": false
       }
     },
     "d534c664-a5a4-4f55-b829-6446be3b3cdb": {
