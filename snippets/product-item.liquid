@@ -1,3 +1,4 @@
+
 {%- liquid
     assign selectedImageSize = settings.image_size
     assign imageAspectRatio = "0"
@@ -13,6 +14,12 @@
     when 'wide'
     assign imageAspectRatio = "16/9"
     endcase
+
+    assign lazyloadnig = ''
+    assign lazyloadImages = section.settings.lazyload_images
+    if lazyloadImages
+    assign lazyloadnig = 'lazy'
+    endif
 -%}
 {%- case products_per_row -%}
   {%- when 1 -%}
