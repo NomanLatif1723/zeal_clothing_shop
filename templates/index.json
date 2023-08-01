@@ -260,6 +260,7 @@
         "stack_product": true,
         "show_view_all": false,
         "text_alignment": "center",
+        "lazyload_images": true,
         "margin_top": 60,
         "margin_bottom": 60
       }
