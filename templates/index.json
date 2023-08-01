@@ -158,6 +158,7 @@
         "938ec47f-9df7-4dd4-a483-0fa00535be3b"
       ],
       "settings": {
+        "lazyload_images": true,
         "margin_top": 60,
         "margin_bottom": 60
       }
