@@ -124,9 +124,7 @@
              endif
           -%}
           {%- if isColorOption -%}
-            {% for variant in product.variants %}
-              {{ variant.title }}
-            {% endfor %}
+            {{ option.value }}
           {%- endif -%}
         {% endfor %}
       </div>
