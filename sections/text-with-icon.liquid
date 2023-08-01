@@ -1,5 +1,9 @@
 {%- liquid
+    assign lazyloadnig = false
     assign lazyloadImages = section.settings.lazyload_images
+    if lazyloadImages
+    assign lazyloadnig = true
+    endif
 -%}
 <style>
   .main__section-{{ section.id }}{
@@ -22,7 +26,7 @@
           <div class="image__banner">
             {%- if brandLogo != blank -%}
               {%- assign logo__classes = 'brand__logo-img' -%}
-              {{ brandLogo | image_url: width: 40 | image_tag: class: logo__classes, loading: 'lazy' }}
+              {{ brandLogo | image_url: width: 40 | image_tag: class: logo__classes, loading: lazyloadnig }}
             {%- else -%}
               {{ 'image' | placeholder_svg_tag: "placeholder__image icon__placeholder" }}
             {%- endif -%}
