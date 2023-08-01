@@ -116,7 +116,7 @@
           -%}
           {%- if isColorOption -%}
             {% for value in option.values %}
-              {% assign optionId = {{ section.id }}-{{ option.name | handlize }}-{{ value | handlize }} %}
+              {% assign optionId = {{ section.id }}-{{ option.name }}-{{ value }} %}
               <div class="color-swatch__item">
               <input
                 {% if option.selected_value == value %} checked {% endif %}
