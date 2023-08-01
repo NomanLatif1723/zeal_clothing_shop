@@ -28,8 +28,8 @@
             <div class="article_image-wrapper">
 
               <img style="aspect-ratio: {{ imageAspectRatio }};"
-                src="{{ article.image | img_url: "master" }}"
-                loading="lazy"
+                src="{{ article.image | img_url: "grande" }}"
+                loading="{{ lazyloading }}"
                 width=""
                 height=""
                 alt="{{ article.image.alt }}"
