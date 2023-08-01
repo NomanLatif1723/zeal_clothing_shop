@@ -316,6 +316,7 @@
         "ca437c69-1dba-4129-a016-79d82c03faae"
       ],
       "settings": {
+        "lazyload_images": false,
         "margin_top": 60,
         "margin_bottom": 60
       }
@@ -402,7 +403,8 @@
         "testimonial_text": "Browse our testimonials to see real feedback from people who have tried and loved our products.",
         "text_alignment": "center",
         "testimonial_background_color": "#ffffff",
-        "testimonial_text_color": "#111111"
+        "testimonial_text_color": "#111111",
+        "lazyload_images": true
       }
     },
     "92018c5b-7aa4-4095-92a7-00221b583a17": {
