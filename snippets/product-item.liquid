@@ -16,7 +16,7 @@
     endcase
 
     assign lazyloadnig = ''
-    assign lazyloadImages = section.settings.lazyload_images
+    assign lazyloadImages = lazyloadImages
     if lazyloadImages
     assign lazyloadnig = 'lazy'
     endif
