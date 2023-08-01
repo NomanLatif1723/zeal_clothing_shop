@@ -105,7 +105,7 @@
         {%- endunless -%}
       </div>
       {%- if settings.show_color_swatches -%}
-      <div class="grid-product__variants">
+      <div class="grid-product__variants color-swatch__list">
         {% for option in product.options_with_values %}
           {%- liquid 
             assign optionName = option.name | downcase
@@ -116,7 +116,15 @@
           -%}
           {%- if isColorOption -%}
             {% for value in option.values %}
-              {{ value }}
+              {% assign optionId = {{ section.id }}-{{ option.position }}-{{ product.selected_or_first_available_variant.id }} %}
+              <div class="color-swatch__item">
+              <input 
+                type="radio"
+                id="{{ optionId }}"
+                value= "{{ value }}"
+                />
+                <label for="{{ optionId }}">{{ value }}</label>
+              </div>
               {% endfor %}
           {%- endif -%}
         {% endfor %}
