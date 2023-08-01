@@ -135,7 +135,7 @@
         };
       }
 
-      const swiper = new Swiper(`#swiper-${sectionId}`, swiperConfig);
+      let swiper = new Swiper(`#swiper-${sectionId}`, swiperConfig);
 {% comment %}
   // Slideshow
      var swiper{{ section.id | remove: '-' }} = new Swiper('#swiper-{{ section.id }}', {
