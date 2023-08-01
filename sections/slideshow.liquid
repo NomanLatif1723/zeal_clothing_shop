@@ -4,7 +4,11 @@
     assign navigation_style = section.settings.navigation_styles
     assign slideChangeDuration = section.settings.slide_change_duration | times: 1000
     assign slideAutomation = section.settings.slide_automation
+    assign lazyloadnig = false
     assign lazyloadImages = section.settings.lazyload_images
+    if lazyloadImages
+    assign lazyloadnig = true
+    endif
 -%}
 <div class="slideshow">
   <div id="swiper-{{ section.id }}"
@@ -55,7 +59,7 @@
                   width="{{ imageDesktop.width }}"
                   height="{{ imageDesktop.height }}"
                   {%- if lazyloadImages -%}
-                  loading="lazy"
+                  loading={{ lazyloadnig }}
                   {%- endif -%}
                   sizes="{{ sizes }}"
                   alt="{{ imageDesktop.alt }}">
@@ -74,7 +78,7 @@
                   width="{{ imageMobile.width }}"
                   height="{{ imageMobile.height }}"
                   {%- if lazyloadImages -%}
-                  loading="lazy"
+                  loading={{ lazyloadnig }}
                   {%- endif -%}
                   sizes="{{ sizes }}"
                   alt="{{ imageMobile.alt }}">
