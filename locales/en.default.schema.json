@@ -181,6 +181,10 @@
         },
         "show_payment_icons": {
           "label": "Show Payment Icons"
+        },
+        "lazyload_images": {
+          "label": "Enable LazyLoad Images",
+          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
         }
       },
       "blocks": {
