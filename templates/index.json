@@ -316,7 +316,7 @@
         "ca437c69-1dba-4129-a016-79d82c03faae"
       ],
       "settings": {
-        "lazyload_images": false,
+        "lazyload_images": true,
         "margin_top": 60,
         "margin_bottom": 60
       }
@@ -333,6 +333,7 @@
         "show_tags": true,
         "show_view_all_btn": true,
         "post_image_size": "natural",
+        "lazyload_images": true,
         "margin_top": 60,
         "margin_bottom": 60
       }
