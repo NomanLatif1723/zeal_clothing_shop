@@ -50,7 +50,9 @@
               blog: blog,
               image-size: image_size,
               show_date: show_date,
-              show_tags: show_tags -%}
+              show_tags: show_tags,
+              lazyloading: lazyloading
+            -%}
           {%- endfor -%}
 
         </div>
@@ -190,9 +192,9 @@
       {
         "type": "checkbox",
         "id": "lazyload_images",
-        "label": "t:sections.slideshow.settings.lazyload_images.label",
+        "label": "t:sections.blog-posts.settings.lazyload_images.label",
         "default": false,
-        "info": "t:sections.slideshow.settings.lazyload_images.info"
+        "info": "t:sections.blog-posts.settings.lazyload_images.info"
       },
       {
         "type": "header",
