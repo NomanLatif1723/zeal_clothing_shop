@@ -113,31 +113,6 @@
   </div>
 </div>
 <script>
-    {% comment %}
-      const sectionId = "{{ section.id | remove: '-' }}";
-      
-
-      const swiperConfig = {
-        slidesPerView: 1,
-        navigation: {
-          nextEl: `.swiper-button-${sectionId}.swiper-button-next`,
-          prevEl: `.swiper-button-${sectionId}.swiper-button-prev`,
-        },
-        pagination: {
-          el: `.swiper-pagination-${sectionId}.swiper-pagination`,
-          clickable: true,
-        },
-      };
-
-      if (slideAutomation) {
-        swiperConfig.autoplay = {
-          delay: slideChangeDuration,
-          disableOnInteraction: false,
-        };
-      }
-
-      let swiper`${sectionId}` = new Swiper(`#swiper-${sectionId}`, swiperConfig);
-{% endcomment %}
   // Slideshow
      let swiper{{ section.id | remove: '-' }} = new Swiper('#swiper-{{ section.id }}', {
     slidesPerView: 1,
