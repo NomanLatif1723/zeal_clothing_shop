@@ -126,7 +126,9 @@
                   value= "{{ value }}"
                   name="{{ option.name }}"
                   />
-                  <label for="{{ optionId }}">{{ value }}</label>
+                  <label for="{{ optionId }}" style="background:{{ value | downcase }}">
+                    <span class="visually__hidden">{{ value }}</span>
+                  </label>
                 </div>
                 {% endfor %}
             {%- endif -%}
