@@ -112,7 +112,6 @@
   </div>
 </div>
 <script>
-   function initializeSwiper() {
       const sectionId = "{{ section.id | remove: '-' }}";
       const slideChangeDuration = {{ section.settings.slide_change_duration | times: 1000 }};
       const slideAutomation = {% if section.settings.slide_automation %}true{% else %}false{% endif %};
@@ -137,11 +136,6 @@
       }
 
       const swiper = new Swiper(`#swiper-${sectionId}`, swiperConfig);
-
-      // You can perform additional tasks after the Swiper initialization here
-      // For example, you can update the UI or handle other asynchronous operations.
-    }
-initializeSwiper();
 {% comment %}
   // Slideshow
      var swiper{{ section.id | remove: '-' }} = new Swiper('#swiper-{{ section.id }}', {
