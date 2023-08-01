@@ -16,6 +16,7 @@
 <div class="text__image-container main__section-{{ section.id }} text__container-desktop">
   <div class="text__image-wrapper">
     {%- for block in section.blocks -%}
+      {%- assign brandLogo = block.settings.brand_logo -%}
       <div class="text__image-item">
         <div class="text__image-width">
           <div class="image__banner">
