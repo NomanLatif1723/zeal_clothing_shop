@@ -115,7 +115,7 @@
              endif
           -%}
           {%- if isColorOption -%}
-            {% for value in product.option %}
+            {% for value in product.options_with_values %}
               {{ value }}
               {% endfor %}
           {%- endif -%}
