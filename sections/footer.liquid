@@ -1,3 +1,10 @@
+{%- liquid
+    assign lazyloading = ''
+    assign lazyloadImages = section.settings.lazyload_images
+    if lazyloadImages
+    assign lazyloading = 'lazy'
+    endif
+-%}
 {%- style -%}
   .footer__bottom-section {
     background: {{ settings.footer_background }};
@@ -33,7 +40,7 @@
                   {%- if footer_logo != blank -%}
                     {%- assign classes = 'footer__logo-img' -%}
                     <a href="{{ routes.root_url }}" title="{{ shop.name }}">
-                      {{ footer_logo | image_url: width: 80, height: 50 | image_tag: class: logo__classes, loading: lazyloading }}
+                      {{ footer_logo | image_url: width: 80, height: 50 | image_tag: class: classes, loading: lazyloading }}
                     </a>
                   {%- else -%}
                     <h1 class="site__footer-logo">
@@ -172,8 +179,14 @@
         "id": "show_payment_icons",
         "label": "t:sections.footer.settings.show_payment_icons.label",
         "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "lazyload_images",
+        "label": "t:sections.text-with-icon.settings.lazyload_images.label",
+        "default": false,
+        "info": "t:sections.text-with-icon.settings.lazyload_images.info"
       }
-
     ],
     "blocks": [
       {
