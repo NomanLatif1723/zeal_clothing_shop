@@ -18,20 +18,19 @@
   }
 {%- endstyle -%}
 {%- for block in section.blocks -%}
-  
+  {%- style -%}
+    @media only screen and (min-width:960px) {
+      .grid__item-{{ block.id }}{
+        width: {{ block.settings.footer_column_width }}%;
+      }
+    }
+  {%- endstyle -%}
 {%- endfor -%}
 <footer class="site__footer">
   <div class="site__footer-banner">
     <div class="page__width">
       <div class="site__grid">
         {%- for block in section.blocks -%}
-          {%- style -%}
-            @media only screen and (min-width:960px) {
-              .grid__item-{{ block.id }}{
-                width: {{ block.settings.footer_column_width }}%;
-              }
-            }
-          {%- endstyle -%}
           {%- assign footer_logo = block.settings.footer_logo -%}
           {%- case block.type -%}
             {%- when 'text' -%}
