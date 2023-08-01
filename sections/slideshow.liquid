@@ -139,11 +139,10 @@
       let swiper`${sectionId}` = new Swiper(`#swiper-${sectionId}`, swiperConfig);
 {% endcomment %}
   // Slideshow
-      let sectionId = "{{ section.id | remove: '-' }}";
       let slideChangeDuration = {{ section.settings.slide_change_duration | times: 1000 }};
       let slideAutomation = {% if section.settings.slide_automation %}true{% else %}false{% endif %};
   
-     var swiper = new Swiper('#swiper-{{ sectionId }}', {
+     var swiper = new Swiper('#swiper-{{ section.id }}', {
     slidesPerView: 1,
     navigation: {
       nextEl: ".swiper-button-{{ section.id }}.swiper-button-next",
