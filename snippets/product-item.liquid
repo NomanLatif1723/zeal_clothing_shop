@@ -118,10 +118,12 @@
             {% for value in option.values %}
               {% assign optionId = {{ section.id }}-{{ option.name | handlize }}-{{ value | handlize }} %}
               <div class="color-swatch__item">
-              <input 
+              <input
+                {% if option.selected_value == value %} checked {% endif %}
                 type="radio"
                 id="{{ optionId }}"
                 value= "{{ value }}"
+                name="{{ option.name }}"
                 />
                 <label for="{{ optionId }}">{{ value }}</label>
               </div>
