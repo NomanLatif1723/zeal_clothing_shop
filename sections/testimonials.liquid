@@ -33,6 +33,7 @@
       <div id="swiper-{{ section.id }}" class="testimonial__slider-wrapper swiper">
         <div class="swiper-wrapper"> 
           {%- for block in section.blocks -%}
+            {%- assign author_image = block.settings.author_image -%}
             <div class="testimonial__slider-item swiper-slide" {{ block.shopify_attributes }}>
               <blockquote class="testimonial__text">
                 {%- if block.settings.testimonial_star_icon == '5-star' -%}
@@ -56,10 +57,10 @@
                     {{ block.settings.slide_text }}
                   </div>
                 {%- endif -%}
-                {%- if block.settings.author_image != blank -%}
-                  {% assign testimonial_image = 'author__logo-img' %}
+                {%- if author_image != blank -%}
+                  {% assign classes = 'author__logo-img' %}
                   <div class="author__image img">
-                    {% render 'image-element', img-element: block.settings.author_image, img-width: 70, img-height: 70, classes: testimonial_image %}
+                    {{ author_image | image_url: width: 70 | image_tag: class: classes, loading: lazyloading }}
                   </div>
                 {%- endif -%}
                 {%- if block.settings.author_text != blank -%}
