@@ -889,6 +889,10 @@
         },
         "testimonial_text_color": {
           "label": "Text"
+        },
+        "lazyload_images": {
+          "label": "Enable LazyLoad Images",
+          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
         }
       },
       "blocks": {
