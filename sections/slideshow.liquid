@@ -50,11 +50,11 @@
                   class="hero__image desktop__image{% if imageMobile != blank %} desktop__image-hide{% endif %}"
                   src="{{ imageDesktop | img_url: 'grande' }}"
                   srcset="
-                      {{ imageDesktop | product_img_url: 'medium' }} {% if imageDesktop.ratio < 1 %}{{ 240 | times: imageDesktop.ratio | round }}{% else %}240{% endif %}w,
-                      {{ imageDesktop | product_img_url: 'large' }} {% if imageDesktop.ratio < 1 %}{{ 480 | times: imageDesktop.ratio | round }}{% else %}480{% endif %}w,
-                      {{ imageDesktop | product_img_url: 'grande' }} {% if imageDesktop.ratio < 1 %}{{ 600 | times: imageDesktop.ratio | round }}{% else %}600{% endif %}w,
-                      {{ imageDesktop | product_img_url: '1024x1024' }} {% if imageDesktop.ratio < 1 %}{{ 1024 | times: imageDesktop.ratio | round }}{% else %}1024{% endif %}w,
-                      {{ imageDesktop | product_img_url: '2048x2048' }} {% if imageDesktop.ratio < 1 %}{{ 2048 | times: imageDesktop.ratio | round }}{% else %}2048{% endif %}w
+                      {{ imageDesktop | product_img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
+                      {{ imageDesktop | product_img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
+                      {{ imageDesktop | product_img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
+                      {{ imageDesktop | product_img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
+                      {{ imageDesktop | product_img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
                   "
                   width="{{ imageDesktop.width }}"
                   height="{{ imageDesktop.height }}"
@@ -67,11 +67,11 @@
                   class="hero__image mobile__image"
                   src="{{ imageMobile | img_url: 'grande' }}"
                   srcset="
-                      {{ imageMobile | product_img_url: 'medium' }} {% if imageMobile.ratio < 1 %}{{ 240 | times: imageMobile.ratio | round }}{% else %}240{% endif %}w,
-                      {{ imageMobile | product_img_url: 'large' }} {% if imageMobile.ratio < 1 %}{{ 480 | times: imageMobile.ratio | round }}{% else %}480{% endif %}w,
-                      {{ imageMobile | product_img_url: 'grande' }} {% if imageMobile.ratio < 1 %}{{ 600 | times: imageMobile.ratio | round }}{% else %}600{% endif %}w,
-                      {{ imageMobile | product_img_url: '1024x1024' }} {% if imageMobile.ratio < 1 %}{{ 1024 | times: imageMobile.ratio | round }}{% else %}1024{% endif %}w,
-                      {{ imageMobile | product_img_url: '2048x2048' }} {% if imageMobile.ratio < 1 %}{{ 2048 | times: imageMobile.ratio | round }}{% else %}2048{% endif %}w
+                      {{ imageMobile | product_img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
+                      {{ imageMobile | product_img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
+                      {{ imageMobile | product_img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
+                      {{ imageMobile | product_img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
+                      {{ imageMobile | product_img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
                   "
                   width="{{ imageMobile.width }}"
                   height="{{ imageMobile.height }}"
