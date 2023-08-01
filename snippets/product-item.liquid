@@ -35,15 +35,6 @@
 {%- endcase -%}
 <div class="featured-grid__item {{ itemWidth }} {% if stackProduct == false %}list-scroller__item{% endif %}">
   <div class="featured-grid__content">
-    
-    <div class="grid__badge">
-      {%- if product.available -%}
-        <span class="badge sale__badge{% if settings.sale_badge_color contains '#f' %} badge-color__dark{% else %} badge-color__light{% endif %}">{{ 'collections.products.on_sale' | t }}</span>
-      {% else %}
-        <span class="badge soldout__badge{% if settings.soldout_badge_color contains '#f' %} badge-color__dark{% else %} badge-color__light{% endif %}">{{ 'collections.products.sold_out' | t }}</span>
-      {%- endif -%}
-    </div>
-    
     <div class="featured-grid__image{% if product.media.size > 1 and settings.show_second_image %} has-secondary__image{% endif %}">
       {%- if settings.show_quick_view -%}
         <div class="quick-shop__wrapper">
@@ -128,6 +119,13 @@
           {%- endif -%}
         {% endfor %}
       </div>
+      {%- endif -%}
+    </div>
+    <div class="grid__badge">
+      {%- if product.available -%}
+        <span class="badge sale__badge{% if settings.sale_badge_color contains '#f' %} badge-color__dark{% else %} badge-color__light{% endif %}">{{ 'collections.products.on_sale' | t }}</span>
+      {% else %}
+        <span class="badge soldout__badge{% if settings.soldout_badge_color contains '#f' %} badge-color__dark{% else %} badge-color__light{% endif %}">{{ 'collections.products.sold_out' | t }}</span>
       {%- endif -%}
     </div>
   </div>
