@@ -143,7 +143,7 @@
       let slideChangeDuration = {{ section.settings.slide_change_duration | times: 1000 }};
       let slideAutomation = {% if section.settings.slide_automation %}true{% else %}false{% endif %};
   
-     var swiper{{ section.id | remove: '-' }} = new Swiper('#swiper-{{ section.id }}', {
+     var swiper = new Swiper('#swiper-{{ sectionId }}', {
     slidesPerView: 1,
     navigation: {
       nextEl: ".swiper-button-{{ section.id }}.swiper-button-next",
