@@ -125,6 +125,7 @@
           -%}
           {%- if isColorOption -%}
             {% for variant in product.variants %}
+              {{ variant.featured_media }}
             {% endfor %}
           {%- endif -%}
         {% endfor %}
