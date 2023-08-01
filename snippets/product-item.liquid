@@ -117,16 +117,16 @@
             -%}
             {%- if isColorOption -%}
               {% for value in option.values %}
-                {% capture optionId ={{ option.name }}-{{ value }} %}{% endcapture %}
+                {% capture optionId = {{ section.id }}-{{ option.name | handleize }}-{{ value | handleize }} %}{% endcapture %}
                 <div class="color-swatch__item">
                 <input
-                  {% if option.selected_value == value %}checked{% endif %}
+                  {% if option.selected_value == value %} checked {% endif %}
                   type="radio"
-                  id="{{ optionId }}"
+                  id="{{ section.id }}-{{ option.name | handleize }}-{{ value | handleize }}"
                   value= "{{ value }}"
                   name="{{ option.name }}"
                   />
-                  <label for="{{ optionId }}" style="background:{{ value | downcase }}">
+                  <label for="{{ section.id }}-{{ option.name | handleize }}-{{ value | handleize }}" style="background:{{ value | downcase }}">
                     <span class="visually__hidden">{{ value }}</span>
                   </label>
                 </div>
