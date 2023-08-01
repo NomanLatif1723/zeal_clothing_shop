@@ -21,7 +21,7 @@
           <div class="image__banner">
             {%- if brandLogo != blank -%}
               {%- assign logo__classes = 'brand__logo-img logo__image-{{ forloop.index }}' -%}
-              {{ brandLogo | image_tag: width: 40, height: 40 }}
+              {{ brandLogo | image_url: width: 40 | image_tag }}
             {%- else -%}
               {{ 'image' | placeholder_svg_tag: "placeholder__image icon__placeholder" }}
             {%- endif -%}
