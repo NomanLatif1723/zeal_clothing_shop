@@ -108,7 +108,7 @@
       <div class="grid-product__variants">
         {% for option in product.options_with_values %}
           {%- liquid 
-            assign optionName = option.name
+            assign optionName = option.name | downcase
             assign isColorOption = false
             if optionName == 'color' or optionName == 'colour'
             assign isColorOption = true
