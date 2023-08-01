@@ -114,9 +114,8 @@
             assign isColorOption = true
              endif
           -%}
-          {{ isColorOption }}
           {%- if isColorOption -%}
-            {{ value }}
+            {{ option.name }}
           {%- endif -%}
         {% endfor %}
       </div>
