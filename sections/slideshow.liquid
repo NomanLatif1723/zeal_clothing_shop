@@ -141,12 +141,7 @@
       // You can perform additional tasks after the Swiper initialization here
       // For example, you can update the UI or handle other asynchronous operations.
     }
-
-    const swiperScript = document.createElement('script');
-    swiperScript.src = "{{ 'swiper.min.js' | asset_url }}";
-    swiperScript.onload = initializeSwiper;
-
-    document.head.appendChild(swiperScript);
+initializeSwiper();
 {% comment %}
   // Slideshow
      var swiper{{ section.id | remove: '-' }} = new Swiper('#swiper-{{ section.id }}', {
