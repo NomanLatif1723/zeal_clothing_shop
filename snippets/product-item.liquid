@@ -120,7 +120,7 @@
                 {% capture optionId ={{ option.name | handleize }}-{{ value | handleize }} %}{% endcapture %}
                 <div class="color-swatch__item">
                 <input
-                  {% if option.selected_value == value %} checked {% endif %}
+                  {% if option.selected_value == value %}checked{% endif %}
                   type="radio"
                   id="{{ optionId }}"
                   value= "{{ value }}"
