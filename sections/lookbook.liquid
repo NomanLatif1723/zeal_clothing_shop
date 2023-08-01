@@ -1,6 +1,6 @@
 {%- liquid
     assign lazyloading = ''
-    assign lazyloadImages = lazyloadImages
+    assign lazyloadImages = section.settings.lazyload_images
     if lazyloadImages
     assign lazyloading = 'lazy'
     endif
