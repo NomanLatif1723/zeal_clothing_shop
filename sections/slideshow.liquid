@@ -4,10 +4,10 @@
     assign navigation_style = section.settings.navigation_styles
     assign slideChangeDuration = section.settings.slide_change_duration | times: 1000
     assign slideAutomation = section.settings.slide_automation
-    assign lazyloadnig = ''
+    assign lazyloading = ''
     assign lazyloadImages = section.settings.lazyload_images
     if lazyloadImages
-    assign lazyloadnig = 'lazy'
+    assign lazyloading = 'lazy'
     endif
 -%}
 <div class="slideshow">
@@ -58,7 +58,7 @@
                   "
                   width="{{ imageDesktop.width }}"
                   height="{{ imageDesktop.height }}"
-                  loading= "{{ lazyloadnig }}"
+                  loading= "{{ lazyloading }}"
                   sizes="{{ sizes }}"
                   alt="{{ imageDesktop.alt }}">
               {%- endif -%}
@@ -75,7 +75,7 @@
                   "
                   width="{{ imageMobile.width }}"
                   height="{{ imageMobile.height }}"
-                  loading= "{{ lazyloadnig }}"
+                  loading= "{{ lazyloading }}"
                   sizes="{{ sizes }}"
                   alt="{{ imageMobile.alt }}">
               {%- endif -%}
