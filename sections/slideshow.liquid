@@ -20,7 +20,7 @@
             {%- assign imageDesktop = block.settings.slide_image_desktop -%}
             {%- assign imageMobile = block.settings.slide_image_mobile -%}
             {%- assign ratio = 0.75 -%}
-            {%- assign default = 'medium' -%}
+            {%- assign default = 'grande' -%}
             {%- assign sizes = '100vw' -%}
             .slideshow__slide-{{ block.id }} .slide__text-heading{
               color: {{ slideTextColor }};
@@ -44,7 +44,7 @@
               {%- if imageDesktop != blank -%}
                 <img
                   class="hero__image desktop__image{% if imageMobile != blank %} desktop__image-hide{% endif %}"
-                  src="{{ imageDesktop | img_url: 'master' }}"
+                  src="{{ imageDesktop | img_url: 'grande' }}"
                   srcset="
                       {{ imageDesktop | product_img_url: 'medium' }} {% if imageDesktop.ratio < 1 %}{{ 240 | times: imageDesktop.ratio | round }}{% else %}240{% endif %}w,
                       {{ imageDesktop | product_img_url: 'large' }} {% if imageDesktop.ratio < 1 %}{{ 480 | times: imageDesktop.ratio | round }}{% else %}480{% endif %}w,
@@ -63,7 +63,7 @@
               {%- if imageMobile != blank -%}
                 <img
                   class="hero__image mobile__image"
-                  src="{{ imageMobile | img_url: 'master' }}"
+                  src="{{ imageMobile | img_url: 'grande' }}"
                   srcset="
                       {{ imageMobile | product_img_url: 'medium' }} {% if imageMobile.ratio < 1 %}{{ 240 | times: imageMobile.ratio | round }}{% else %}240{% endif %}w,
                       {{ imageMobile | product_img_url: 'large' }} {% if imageMobile.ratio < 1 %}{{ 480 | times: imageMobile.ratio | round }}{% else %}480{% endif %}w,
