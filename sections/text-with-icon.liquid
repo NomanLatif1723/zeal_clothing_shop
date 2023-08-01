@@ -16,33 +16,12 @@
 <div class="text__image-container main__section-{{ section.id }} text__container-desktop">
   <div class="text__image-wrapper">
     {%- for block in section.blocks -%}
-      {%- assign brandLogo = block.settings.brand_logo -%}
-      {%- assign ratio = 0.75 -%}
-      {%- assign default = 'grande' -%}
-      {%- assign sizes = '100vw' -%}
       <div class="text__image-item">
         <div class="text__image-width">
           <div class="image__banner">
             {%- if brandLogo != blank -%}
               {%- assign logo__classes = 'brand__logo-img logo__image-{{ forloop.index }}' -%}
-              <img
-                class="brand__logo-img logo__image-{{ forloop.index }}"
-                src="{{ brandLogo | img_url: 'master' }}"
-                  srcset="
-                      {{ brandLogo | product_img_url: 'medium' }} {% if brandLogo.ratio < 1 %}{{ 240 | times: brandLogo.ratio | round }}{% else %}240{% endif %}w,
-                      {{ brandLogo | product_img_url: 'large' }} {% if brandLogo.ratio < 1 %}{{ 480 | times: brandLogo.ratio | round }}{% else %}480{% endif %}w,
-                      {{ brandLogo | product_img_url: 'grande' }} {% if brandLogo.ratio < 1 %}{{ 600 | times: brandLogo.ratio | round }}{% else %}600{% endif %}w,
-                      {{ brandLogo | product_img_url: '1024x1024' }} {% if brandLogo.ratio < 1 %}{{ 1024 | times: brandLogo.ratio | round }}{% else %}1024{% endif %}w,
-                      {{ brandLogo | product_img_url: '2048x2048' }} {% if brandLogo.ratio < 1 %}{{ 2048 | times: brandLogo.ratio | round }}{% else %}2048{% endif %}w
-                  "
-                  width="{{ brandLogo.width }}"
-                  height="{{ brandLogo.height }}"
-                  {%- if lazyloadImages -%}
-                  loading="lazy"
-                  {%- endif -%}
-                  sizes="{{ sizes }}"
-                  alt="{{ brandLogo.alt }}"
-                >
+              {{ brandLogo | image_url: width: 40, height: 40 }}
             {%- else -%}
               {{ 'image' | placeholder_svg_tag: "placeholder__image icon__placeholder" }}
             {%- endif -%}
