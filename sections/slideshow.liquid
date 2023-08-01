@@ -77,9 +77,7 @@
                   "
                   width="{{ imageMobile.width }}"
                   height="{{ imageMobile.height }}"
-                  {%- if lazyloadImages -%}
-                  loading={{ lazyloadnig }}
-                  {%- endif -%}
+                  loading= "{{ lazyloadnig }}"
                   sizes="{{ sizes }}"
                   alt="{{ imageMobile.alt }}">
               {%- endif -%}
