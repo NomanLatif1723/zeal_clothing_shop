@@ -116,7 +116,7 @@
           -%}
           {%- if isColorOption -%}
             {% for value in option.values %}
-              {% assign optionId = {{ section.id }}-{{ option.position }}-{{ product.selected_or_first_available_variant.id }} %}
+              {% assign optionId = {{ section.id }}-{{ option.name | handlize }}-{{ value | handlize }} %}
               <div class="color-swatch__item">
               <input 
                 type="radio"
