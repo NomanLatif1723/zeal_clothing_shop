@@ -112,7 +112,7 @@
   </div>
 </div>
 <script>
-
+    {% comment %}
       const sectionId = "{{ section.id | remove: '-' }}";
       const slideChangeDuration = {{ section.settings.slide_change_duration | times: 1000 }};
       const slideAutomation = {% if section.settings.slide_automation %}true{% else %}false{% endif %};
@@ -136,8 +136,8 @@
         };
       }
 
-      let swiper{{ section.id | remove: '-' }} = new Swiper(`#swiper-${sectionId}`, swiperConfig);
-{% comment %}
+      let swiper`${sectionId}` = new Swiper(`#swiper-${sectionId}`, swiperConfig);
+{% endcomment %}
   // Slideshow
       const sectionId = "{{ section.id | remove: '-' }}";
       const slideChangeDuration = {{ section.settings.slide_change_duration | times: 1000 }};
@@ -148,15 +148,18 @@
     navigation: {
       nextEl: ".swiper-button-{{ section.id }}.swiper-button-next",
       prevEl: ".swiper-button-{{ section.id }}.swiper-button-prev"
-    },{%- if section.settings.slide_automation -%}autoplay : {
-        delay: {{ section.settings.slide_change_duration | times: 1000 }},
+    },
+    {%- if slideAutomation -%}
+      autoplay : {
+        delay: {{ slideChangeDuration }},
         disableOnInteraction: false
-      },{%- endif -%}pagination: {
+      },
+    {%- endif -%}
+      pagination: {
       el: ".swiper-pagination-{{ section.id }}.swiper-pagination",
       clickable: true
     }
   });
-  {% endcomment %}
 </script>
 {% schema %}
   {
