@@ -53,7 +53,7 @@
       <div class="text__image-item swiper-slide" {{ block.shopify_attributes }}>
         <div class="text__image-width">
           <div class="image__banner">
-            {%- if block.settings.brand_logo != blank -%}
+            {%- if brandLogo != blank -%}
               {%- assign logo__classes = 'brand__logo-img' -%}
               {{ brandLogo | image_url: width: 40 | image_tag: class: logo__classes, loading: lazyloading }}
             {%- else -%}
