@@ -499,6 +499,10 @@
     "promotional-block": {
       "name": "Promotional Block",
       "settings": {
+        "lazyload_images": {
+          "label": "Enable LazyLoad Images",
+          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+        },
         "header_spacing": {
           "label": "Section Spacing",
           "top_spacing": {
