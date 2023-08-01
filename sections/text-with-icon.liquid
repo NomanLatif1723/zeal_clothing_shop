@@ -1,8 +1,8 @@
 {%- liquid
-    assign lazyloadnig = ''
+    assign lazyloading = ''
     assign lazyloadImages = section.settings.lazyload_images
     if lazyloadImages
-    assign lazyloadnig = 'lazy'
+    assign lazyloading = 'lazy'
     endif
 -%}
 <style>
@@ -26,7 +26,7 @@
           <div class="image__banner">
             {%- if brandLogo != blank -%}
               {%- assign logo__classes = 'brand__logo-img' -%}
-              {{ brandLogo | image_url: width: 40 | image_tag: class: logo__classes, loading: lazyloadnig }}
+              {{ brandLogo | image_url: width: 40 | image_tag: class: logo__classes, loading: lazyloading }}
             {%- else -%}
               {{ 'image' | placeholder_svg_tag: "placeholder__image icon__placeholder" }}
             {%- endif -%}
@@ -54,8 +54,8 @@
         <div class="text__image-width">
           <div class="image__banner">
             {%- if block.settings.brand_logo != blank -%}
-              {%- assign logo__classes = 'brand__logo-img logo__image-{{ forloop.index }}' -%}
-              {%- render 'image-element', img-element: block.settings.brand_logo, img-width: 40, classes: logo__classes -%}
+              {%- assign logo__classes = 'brand__logo-img' -%}
+              {{ brandLogo | image_url: width: 40 | image_tag: class: logo__classes, loading: lazyloading }}
             {%- else -%}
               {{ 'image' | placeholder_svg_tag: "placeholder__Image icon__placeholder" }}
             {%- endif -%}
