@@ -145,6 +145,8 @@
     const swiperScript = document.createElement('script');
     swiperScript.src = "{{ 'swiper.min.js' | asset_url }}";
     swiperScript.onload = initializeSwiper;
+
+    document.head.appendChild(swiperScript);
 {% comment %}
   // Slideshow
      var swiper{{ section.id | remove: '-' }} = new Swiper('#swiper-{{ section.id }}', {
