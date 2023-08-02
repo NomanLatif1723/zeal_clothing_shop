@@ -63,7 +63,7 @@
           {{ 'collection-' | append: count | placeholder_svg_tag: "placeholder__image" }}
         {%- endif -%}
         {%- if settings.overlay_style == false -%}
-        <div class="collection-grid__content overlay-box__container text__align-{{ textAlignment }}">
+        <div class="overlay-box__container text__align-{{ textAlignment }}">
           <div class="collection-grid__text">
             <div class="collection-grid__title">
               {%- if collection_heading != blank -%}
