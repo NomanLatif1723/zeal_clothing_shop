@@ -105,9 +105,8 @@
         {%- endunless -%}
       </div>
       {%- if settings.show_color_swatches -%}
-        {%- assign limit = 5 -%}
       <div class="grid-product__variants">
-        <div class="color-swatch__list" data-limit="{{ limit }}">
+        <div class="color-swatch__list">
           {% for option in product.options_with_values %}
             {%- liquid 
               assign optionName = option.name | downcase
@@ -116,27 +115,29 @@
               assign isColorOption = true
                endif
             -%}
-            {%- if isColorOption and limit > 0 -%}
+            {%- if isColorOption -%}
+              {%- assign limit = 5 -%}
               {%- for value in option.values -%}
-                <div class="color-swatch__item">
-                <input
-                  {% if option.selected_value == value %} checked {% endif %}
-                  type="radio"
-                  id="{{ option.name | handleize }}-{{ value | handleize }}"
-                  value= "{{ value }}"
-                  name="{{ option.name }}"
-                  />
-                  <label for="{{ option.name | handleize }}-{{ value | handleize }}">
-                    <span class="color-swatch__option" style="background:{{ value | downcase }}"></span>
-                  </label>
-                </div>
-                {%- assign limit = limit | minus: 1 -%}
-                {% endfor %}
+                {% if limit > 0 %}
+                  <div class="color-swatch__item">
+                  <input
+                    {% if option.selected_value == value %} checked {% endif %}
+                    type="radio"
+                    id="{{ option.name | handleize }}-{{ value | handleize }}"
+                    value= "{{ value }}"
+                    name="{{ option.name }}"
+                    />
+                    <label for="{{ option.name | handleize }}-{{ value | handleize }}">
+                      <span class="color-swatch__option" style="background:{{ value | downcase }}"></span>
+                    </label>
+                  </div>
+                  {%- assign limit = limit | minus: 1 -%}
+                {% endif %}
+              {% endfor %}
               {%- if option.values.size > limit -%}
                 <div class="color-swatch__item show-more__swatches">
                   <span>+</span>
                 </div>
-                
               {%- endif -%}
             {%- endif -%}
           {% endfor %}
