@@ -29,7 +29,11 @@
 <section class="collection-list__wrapper main__section-{{ section.id }}">
   <div class="page__width">
     <div class="collection-list">
-      <header class="collection-list__header"></header>
+      <header class="collection-list__header">
+        <div class="main__heading collection-list__heading">
+          <h2>{{ main_heading }}</h2>
+        </div>
+      </header>
       <collection-list class="collection-grid">
         {%- if show_all_collections -%}
           {%- for collection in collections -%}
