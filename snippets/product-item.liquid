@@ -131,8 +131,8 @@
                           <span class="color-swatch__option" style="background:{{ value | downcase }}"></span>
                         </label>
                     </div>
-                    {%- assign limit = limit | minus: 1 -%}
                 {% endfor %}
+                {%- assign limit = limit | minus: 1 -%}
               {% endif %}
               {%- if option.values.size > limit -%}
                 <div class="color-swatch__item show-more__swatches">
