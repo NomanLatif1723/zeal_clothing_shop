@@ -116,8 +116,8 @@
               assign isColorOption = true
                endif
             -%}
-            {%- if isColorOption -%}
-              {%- for value in option.values limit: limit -%}
+            {%- if isColorOption and limit > 0 -%}
+              {%- for value in option.values -%}
                 <div class="color-swatch__item">
                 <input
                   {% if option.selected_value == value %} checked {% endif %}
