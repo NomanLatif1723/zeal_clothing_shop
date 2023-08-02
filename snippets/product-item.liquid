@@ -129,10 +129,10 @@
                   <label for="{{ option.name | handleize }}-{{ value | handleize }}">
                     <span class="color-swatch__option" style="background:{{ value | downcase }}"></span>
                   </label>
-                  {%- if option.values.size > limit -%}
+                </div>
+          {%- if option.values.size > limit -%}
                     <span>+</span>
                   {%- endif -%}
-                </div>
                 {% endfor %}
             {%- endif -%}
           {% endfor %}
