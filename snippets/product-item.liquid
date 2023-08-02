@@ -117,40 +117,42 @@
             -%}
             {%- if isColorOption -%}
               {%- assign limit = 5 -%}
-              {%- for value in option.values -%}
-                {% if limit > 0 %}
-                  <div class="color-swatch__item">
-                    <input
-                      {% if option.selected_value == value %} checked {% endif %}
-                      type="radio"
-                      id="{{ option.name | handleize }}-{{ value | handleize }}"
-                      value= "{{ value }}"
-                      name="{{ option.name }}"
-                      />
-                      <label for="{{ option.name | handleize }}-{{ value | handleize }}">
-                        <span class="color-swatch__option" style="background:{{ value | downcase }}"></span>
-                      </label>
-                  </div>
-                  {%- assign limit = limit | minus: 1 -%}
-                {% endif %}
-              {% endfor %}
+              {% if limit > 0 %}
+                {%- for value in option.values -%}
+                    <div class="color-swatch__item">
+                      <input
+                        {% if option.selected_value == value %} checked {% endif %}
+                        type="radio"
+                        id="{{ option.name | handleize }}-{{ value | handleize }}"
+                        value= "{{ value }}"
+                        name="{{ option.name }}"
+                        />
+                        <label for="{{ option.name | handleize }}-{{ value | handleize }}">
+                          <span class="color-swatch__option" style="background:{{ value | downcase }}"></span>
+                        </label>
+                    </div>
+                    {%- assign limit = limit | minus: 1 -%}
+                {% endfor %}
+              {% endif %}
               {%- if option.values.size > limit -%}
                 <div class="color-swatch__item show-more__swatches">
                   <span>+</span>
                 </div>
                 <div class="hidden__swatches">
-                  <div class="color-swatch__item">
-                    <input
-                      {% if option.selected_value == value %} checked {% endif %}
-                      type="radio"
-                      id="{{ option.name | handleize }}-{{ value | handleize }}"
-                      value= "{{ value }}"
-                      name="{{ option.name }}"
-                      />
-                      <label for="{{ option.name | handleize }}-{{ value | handleize }}">
-                        <span class="color-swatch__option" style="background:{{ value | downcase }}"></span>
-                      </label>
-                  </div>
+                  {%- for value in option.values offset: 5 -%}
+                    <div class="color-swatch__item">
+                      <input
+                        {% if option.selected_value == value %} checked {% endif %}
+                        type="radio"
+                        id="{{ option.name | handleize }}-{{ value | handleize }}"
+                        value= "{{ value }}"
+                        name="{{ option.name }}"
+                        />
+                        <label for="{{ option.name | handleize }}-{{ value | handleize }}">
+                          <span class="color-swatch__option" style="background:{{ value | downcase }}"></span>
+                        </label>
+                    </div>
+                  {%- endfor -%}
                 </div>
               {%- endif -%}
             {%- endif -%}
