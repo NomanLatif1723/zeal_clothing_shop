@@ -226,21 +226,21 @@
           "type": "collection",
           "settings": {
             "collection": "mens-wear",
-            "collection_heading": "Collection Title"
+            "collection_heading": ""
           }
         },
         "template--19980215124290__eb20ecc0-4470-4624-b140-f1161cf8823f-collection-3": {
           "type": "collection",
           "settings": {
             "collection": "womens-shorts",
-            "collection_heading": "Collection Title"
+            "collection_heading": ""
           }
         },
         "template--19980215124290__eb20ecc0-4470-4624-b140-f1161cf8823f-collection-4": {
           "type": "collection",
           "settings": {
             "collection": "womens-wear",
-            "collection_heading": "Collection Title"
+            "collection_heading": ""
           }
         }
       },
