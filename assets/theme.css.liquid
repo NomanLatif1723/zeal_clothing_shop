@@ -1311,8 +1311,14 @@ font-display: "swap";
     display: block;
     padding: 2px;
     border: 1px solid rgba(1,1,1,0.3);
+    transition: all 0.3s ease;
     cursor: pointer;
 }
+
+input[type="radio"]:checked + label {
+    border: 1px solid rgba(1,1,1,1);
+}
+
 .color-swatch__option {
     display: block;
     width: 100%;
