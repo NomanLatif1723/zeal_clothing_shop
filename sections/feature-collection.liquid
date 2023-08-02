@@ -80,7 +80,7 @@
         {%- endif -%}
       </div>
     </div>
-    {%- if show_view_all -%}
+    {%- if show_view_all and product.size > product_limit -%}
       <div class="collection__footer">
         <div class="collection-btn__container">
           <a href="{{ collection.url }}" class="btn btn__link view_all_btn">{{ 'collections.general.all_collection' | t }}</a>
