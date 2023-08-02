@@ -27,7 +27,7 @@
               {%- assign limit = limit | minus: 1 -%}
             {% endif %}
           {% endfor %}
-        {%- if option.values.size > limit -%}
+        {%- if option.values.size > 5 -%}
           <div class="color-swatch__item show-more__swatches">
             <span class="icon__Plus">+</span>
           </div>
