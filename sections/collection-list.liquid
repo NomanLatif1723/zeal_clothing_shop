@@ -35,26 +35,16 @@
         </div>
       </header>
       <collection-list class="collection-grid">
-        {%- if show_all_collections -%}
-          {%- for collection in collections -%}
-            {%- render 'collection-item'
-              , section: section,
-              collection_per_row: collection_per_row,
-              show_all_collections: show_all_collections,
-              products_count: products_count
-              lazyloading: lazyloading -%}
-          {%- endfor -%}
-
-        {%- else -%}
           {%- for block in section.blocks -%}
-            {%- render 'collection-item'
-              , block: block,
+            {%- render 'collection-item', 
+              block: block,
               collection: collection,
               collection_heading: collection_heading,
               lazyloading: lazyloading,
+              collection_per_row: collection_per_row,
               products_count: products_count -%}
           {%- endfor -%}
-        {%- endif -%}
+
       </collection-list>
     </div>
   </div>
