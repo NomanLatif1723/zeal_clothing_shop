@@ -29,7 +29,7 @@
 
     assign collection_image = collection.image
     if settings.show_first_product
-    assign collection_image = collection.products.first.featured_media.preview_image
+    assign collection_image = collection.products.first
     endif
     assign ratio = 0.75
     assign default = 'grande'
