@@ -212,6 +212,54 @@
         "margin_bottom": 60
       }
     },
+    "eb20ecc0-4470-4624-b140-f1161cf8823f": {
+      "type": "collection-list",
+      "blocks": {
+        "template--19980215124290__eb20ecc0-4470-4624-b140-f1161cf8823f-collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "frontpage",
+            "collection_heading": "Collection Title"
+          }
+        },
+        "template--19980215124290__eb20ecc0-4470-4624-b140-f1161cf8823f-collection-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_heading": "Collection Title"
+          }
+        },
+        "template--19980215124290__eb20ecc0-4470-4624-b140-f1161cf8823f-collection-3": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_heading": "Collection Title"
+          }
+        },
+        "template--19980215124290__eb20ecc0-4470-4624-b140-f1161cf8823f-collection-4": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_heading": "Collection Title"
+          }
+        }
+      },
+      "block_order": [
+        "template--19980215124290__eb20ecc0-4470-4624-b140-f1161cf8823f-collection-1",
+        "template--19980215124290__eb20ecc0-4470-4624-b140-f1161cf8823f-collection-2",
+        "template--19980215124290__eb20ecc0-4470-4624-b140-f1161cf8823f-collection-3",
+        "template--19980215124290__eb20ecc0-4470-4624-b140-f1161cf8823f-collection-4"
+      ],
+      "settings": {
+        "heading": "Collection List",
+        "collection_per_row": 4,
+        "all_collections": false,
+        "products_count": true,
+        "lazyload_images": false,
+        "margin_top": 60,
+        "margin_bottom": 60
+      }
+    },
     "211390c4-4881-4386-992f-62907dc8d4a0": {
       "type": "marquee-text",
       "settings": {
@@ -477,54 +525,6 @@
         "navigation_styles": "bars",
         "lazyload_images": false
       }
-    },
-    "eb20ecc0-4470-4624-b140-f1161cf8823f": {
-      "type": "collection-list",
-      "blocks": {
-        "template--19980215124290__eb20ecc0-4470-4624-b140-f1161cf8823f-collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": "frontpage",
-            "collection_heading": "Collection Title"
-          }
-        },
-        "template--19980215124290__eb20ecc0-4470-4624-b140-f1161cf8823f-collection-2": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "collection_heading": "Collection Title"
-          }
-        },
-        "template--19980215124290__eb20ecc0-4470-4624-b140-f1161cf8823f-collection-3": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "collection_heading": "Collection Title"
-          }
-        },
-        "template--19980215124290__eb20ecc0-4470-4624-b140-f1161cf8823f-collection-4": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "collection_heading": "Collection Title"
-          }
-        }
-      },
-      "block_order": [
-        "template--19980215124290__eb20ecc0-4470-4624-b140-f1161cf8823f-collection-1",
-        "template--19980215124290__eb20ecc0-4470-4624-b140-f1161cf8823f-collection-2",
-        "template--19980215124290__eb20ecc0-4470-4624-b140-f1161cf8823f-collection-3",
-        "template--19980215124290__eb20ecc0-4470-4624-b140-f1161cf8823f-collection-4"
-      ],
-      "settings": {
-        "heading": "Collection List",
-        "collection_per_row": 4,
-        "all_collections": false,
-        "products_count": true,
-        "lazyload_images": false,
-        "margin_top": 60,
-        "margin_bottom": 60
-      }
     }
   },
   "order": [
@@ -532,6 +532,7 @@
     "d534c664-a5a4-4f55-b829-6446be3b3cdb",
     "82c03348-6eae-4f16-8533-d3ae96f7f7c5",
     "b2c49c1e-4880-4b9e-90e7-0135ddd0a9b9",
+    "eb20ecc0-4470-4624-b140-f1161cf8823f",
     "211390c4-4881-4386-992f-62907dc8d4a0",
     "51d4a2b7-8c2e-4a53-bb06-179664c435d0",
     "90c94887-f920-4f4d-8dbc-70cf6119d3ce",
@@ -539,7 +540,6 @@
     "01666e88-11d5-4970-8587-55e3cb27e243",
     "0a5d7332-5a60-4baf-bf6a-adbba595c25e",
     "92018c5b-7aa4-4095-92a7-00221b583a17",
-    "89b00526-245a-4caf-93a7-7382706b1dca",
-    "eb20ecc0-4470-4624-b140-f1161cf8823f"
+    "89b00526-245a-4caf-93a7-7382706b1dca"
   ]
 }
