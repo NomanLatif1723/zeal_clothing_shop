@@ -118,7 +118,7 @@
             {%- if isColorOption -%}
               {%- assign limit = 5 -%}
               {%- for value in option.values limit: limit -%}
-                <div class="color-swatch__item">
+                <div class="color-swatch__item" data-limit="{{ limit }}">
                 <input
                   {% if option.selected_value == value %} checked {% endif %}
                   type="radio"
