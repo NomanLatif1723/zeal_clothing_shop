@@ -62,21 +62,39 @@
           {%- endcapture -%}
           {{ 'collection-' | append: count | placeholder_svg_tag: "placeholder__image" }}
         {%- endif -%}
-      </div>
-      <div class="collection-grid__text text__align-{{ textAlignment }}{% if settings.overlay_style %} text-below__image{% endif %}">
-        <div class="collection-grid__title">
-          {%- if collection_heading != blank -%}
-            <h4>{{ collection_heading }}</h4>
-          {%- else -%}
-            <h4>{{ collection.title }}</h4>
+        {%- if settings.overlay_style == false -%}
+        <div class="collection-grid__text text__align-{{ textAlignment }}">
+          <div class="collection-grid__title">
+            {%- if collection_heading != blank -%}
+              <h4>{{ collection_heading }}</h4>
+            {%- else -%}
+              <h4>{{ collection.title }}</h4>
+            {%- endif -%}
+          </div>
+          {%- if products_count and collection != blank -%}
+            <div class="collection-grid-count">
+              <span>({{ collection.all_products_count }})</span>
+            </div>
           {%- endif -%}
         </div>
-        {%- if products_count and collection != blank -%}
-          <div class="collection-grid-count">
-            <span>({{ collection.all_products_count }})</span>
-          </div>
-        {%- endif -%}
+      {%- endif -%}
       </div>
+      {%- if settings.overlay_style -%}
+        <div class="collection-grid__text text__align-{{ textAlignment }}">
+          <div class="collection-grid__title">
+            {%- if collection_heading != blank -%}
+              <h4>{{ collection_heading }}</h4>
+            {%- else -%}
+              <h4>{{ collection.title }}</h4>
+            {%- endif -%}
+          </div>
+          {%- if products_count and collection != blank -%}
+            <div class="collection-grid-count">
+              <span>({{ collection.all_products_count }})</span>
+            </div>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
     </a>
   </div>
 </collection-item>
