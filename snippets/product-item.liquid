@@ -132,7 +132,10 @@
                 </div>
                 {% endfor %}
               {%- if option.values.size > limit -%}
-                <span class="show-more__swatches">+</span>
+                <div class="show-more__swatches">
+                  <span>+</span>
+                </div>
+                
               {%- endif -%}
             {%- endif -%}
           {% endfor %}
