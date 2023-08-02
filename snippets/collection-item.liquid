@@ -63,7 +63,7 @@
           {{ 'collection-' | append: count | placeholder_svg_tag: "placeholder__image" }}
         {%- endif -%}
       </div>
-      <div class="collection-grid__text{% if settings.overlay_style %} text-below__image{% endif %}">
+      <div class="collection-grid__text text__align-{{ textAlignment }}{% if settings.overlay_style %} text-below__image{% endif %}">
         <div class="collection-grid__title">
           {%- if collection_heading != blank -%}
             <h4>{{ collection_heading }}</h4>
