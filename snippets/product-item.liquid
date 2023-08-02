@@ -116,10 +116,11 @@
                endif
             -%}
             {%- if isColorOption -%}
-              {% for value in option.values limit: 5 %}
+              {%- assign limit = 5 -%}
+              {%- for value in option.values limit: limit -%}
                 <div class="color-swatch__item">
                 <input
-                  {% if option.selected_value == value %} checked {% endif %}
+                  {%- if option.selected_value == value -%} checked {%- endif -%}
                   type="radio"
                   id="{{ option.name | handleize }}-{{ value | handleize }}"
                   value= "{{ value }}"
@@ -128,6 +129,9 @@
                   <label for="{{ option.name | handleize }}-{{ value | handleize }}">
                     <span class="color-swatch__option" style="background:{{ value | downcase }}"></span>
                   </label>
+                  {%- if option.values.size > limit -%}
+                    <span>+</span>
+                  {%- endif -%}
                 </div>
                 {% endfor %}
             {%- endif -%}
