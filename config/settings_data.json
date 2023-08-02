@@ -30,7 +30,7 @@
     "sale_badge_color": "#9d1339",
     "soldout_badge_color": "#a6a9ab",
     "overlay_style": false,
-    "show_first_product": true,
+    "show_first_product": false,
     "collection_image_size": "portrait",
     "show_flags": false,
     "show_socials": false,
