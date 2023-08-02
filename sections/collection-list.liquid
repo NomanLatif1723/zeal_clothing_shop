@@ -38,7 +38,7 @@
       <collection-list class="collection-grid">
           {%- for block in section.blocks -%}
             {%- render 'collection-item', 
-              collection: collection,
+              collection: collections[block.settings.collection],
               collection_heading: collection_heading,
               lazyloading: lazyloading,
               collection_per_row: collection_per_row,
