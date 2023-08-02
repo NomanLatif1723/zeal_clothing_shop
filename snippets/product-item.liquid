@@ -105,8 +105,9 @@
         {%- endunless -%}
       </div>
       {%- if settings.show_color_swatches -%}
+        {%- assign limit = 5 -%}
       <div class="grid-product__variants">
-        <div class="color-swatch__list">
+        <div class="color-swatch__list" data-limit="{{ limit }}">
           {% for option in product.options_with_values %}
             {%- liquid 
               assign optionName = option.name | downcase
@@ -116,9 +117,8 @@
                endif
             -%}
             {%- if isColorOption -%}
-              {%- assign limit = 5 -%}
               {%- for value in option.values limit: limit -%}
-                <div class="color-swatch__item" data-limit="{{ limit }}">
+                <div class="color-swatch__item">
                 <input
                   {% if option.selected_value == value %} checked {% endif %}
                   type="radio"
