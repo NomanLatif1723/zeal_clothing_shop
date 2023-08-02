@@ -35,6 +35,14 @@ if(timerEl){
     startTimer(hours, minutes);
 }
 
+// Featured Collection 
+const showMoreSwatches = document.querySelectorAll('.show-more__swatches');
+showMoreSwatches.forEach(option => {
+  option.addEventListener('click', () => {
+    console.log("hello");
+  })
+})
+
 
     
 
