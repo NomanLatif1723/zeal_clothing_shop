@@ -277,6 +277,66 @@
     ]
   },
   {
+    "name": "t:schema_settings.collections.name",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "overlay_style",
+        "label": "t:schema_settings.collections.settings.overlay_style.label",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "show_first_product",
+        "label": "t:schema_settings.collections.settings.show_first_product.label",
+        "default": false
+      },
+      {
+        "type": "select",
+        "id": "collection_image_size",
+        "label": "t:schema_settings.collections.settings.image_size.label",
+        "options": [
+          {
+            "value": "natural",
+            "label": "t:schema_settings.collections.settings.image_size.options.natural.label"
+          },
+          {
+            "value": "square",
+            "label": "t:schema_settings.collections.settings.image_size.options.square.label"
+          },
+          {
+            "value": "portrait",
+            "label": "t:schema_settings.collections.settings.image_size.options.portrait.label"
+          },
+          {
+            "value": "landscape",
+            "label": "t:schema_settings.collections.settings.image_size.options.landscape.label"
+          },
+          {
+            "value": "wide",
+            "label": "t:schema_settings.collections.settings.image_size.options.wide.label"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "collection_layout",
+        "label": "t:schema_settings.collections.settings.collection_layout.label",
+        "default": "grid",
+        "options": [
+            {
+                "value": "grid",
+                "label": "t:schema_settings.collections.settings.collection_layout.options.grid.label"
+            },
+            {
+                "value": "slider",
+                "label": "t:schema_settings.collections.settings.collection_layout.options.slider.label"
+            }
+        ]
+      }
+    ]
+  },
+  {
     "name": "Extras",
     "settings": [
       {

@@ -1,4 +1,3 @@
-
 {%- liquid
     assign selectedImageSize = settings.image_size
     assign imageAspectRatio = "0"
@@ -50,42 +49,44 @@
       {%- endif -%}
       {%- assign image = product.featured_image -%}
       {%- assign ratio = 0.75 -%}
-      {%- assign default = 'medium' -%}
+      {%- assign default = 'grande' -%}
       {%- assign sizes = '(min-width: 1200px) 650px, 45vw' -%}
       <a href="{{ product.url }}" title="{{ image.alt }}">
-        <img class="product__image" style="aspect-ratio: {{ imageAspectRatio }};"
-          src="{{ image | product_img_url: medium }}"
+        <img
+          class="product__image"
+          style="aspect-ratio: {{ imageAspectRatio }};"
+          src="{{ image | product_img_url: default }}"
           srcset="
-                {{ image | product_img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
-                {{ image | product_img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
-                {{ image | product_img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
-                {{ image | product_img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
-                {{ image | product_img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
-            "
+                            {{ image | product_img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
+                            {{ image | product_img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
+                            {{ image | product_img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
+                            {{ image | product_img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
+                            {{ image | product_img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
+                        "
           width="{{ image.width }}"
           height="{{ image.height }}"
           loading="{{ lazyloading }}"
           sizes="{{ sizes }}"
-          alt="{{ image.alt }}" 
-          />
-          {%- if product.media[1] != null and settings.show_second_image -%} 
-            <img class="product-secondary__image" style="aspect-ratio: {{ imageAspectRatio }};"
-              src="{{ product.media[1] | product_img_url: medium }}"
-              srcset="
-                    {{ product.media[1] | product_img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
-                    {{ product.media[1] | product_img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
-                    {{ product.media[1] | product_img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
-                    {{ product.media[1] | product_img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
-                    {{ product.media[1] | product_img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
-                "
-              width="{{ product.media[1].width }}"
-              height="{{ product.media[1].height }}"
-              loading="{{ lazyloading }}"
-              sizes="{{ sizes }}"
-              alt="{{ product.media[1].alt }}"
-              />
-          {%- endif -%} 
-        </a>
+          alt="{{ image.alt }}" />
+        {%- if product.media[1] != null and settings.show_second_image -%}
+          <img
+            class="product-secondary__image"
+            style="aspect-ratio: {{ imageAspectRatio }};"
+            src="{{ product.media[1] | product_img_url: medium }}"
+            srcset="
+                                  {{ product.media[1] | product_img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
+                                  {{ product.media[1] | product_img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
+                                  {{ product.media[1] | product_img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
+                                  {{ product.media[1] | product_img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
+                                  {{ product.media[1] | product_img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
+                              "
+            width="{{ product.media[1].width }}"
+            height="{{ product.media[1].height }}"
+            loading="{{ lazyloading }}"
+            sizes="{{ sizes }}"
+            alt="{{ product.media[1].alt }}" />
+        {%- endif -%}
+      </a>
     </div>
     <div class="featured-grid__description text__align-{{ textAlignment }}">
       {%- if settings.show_vendor -%}
@@ -94,7 +95,9 @@
         </div>
       {%- endif -%}
       <div class="grid-product__title">
-        <a href="{{ product.url }}" title="{{ product.title }}"><h4>{{ product.title }}</h4></a>
+        <a href="{{ product.url }}" title="{{ product.title }}">
+          <h4>{{ product.title }}</h4>
+        </a>
       </div>
       <div class="grid-product__price">
         <span class="visually__hidden">{{ 'general.products.regular_price' | t }}</span>
@@ -106,7 +109,7 @@
       </div>
 
       {%- if settings.show_color_swatches -%}
-      {% render 'product-options-swatches', product: product %}
+        {% render 'product-options-swatches', product: product %}
       {%- endif -%}
     </div>
     <div class="grid__badge">

@@ -114,6 +114,52 @@
         "name": "Blog Posts"
       }
     },
+    "collection-list": {
+      "name": "Collection List",
+      "settings": {
+        "heading": {
+          "label": "Heading"
+        },
+        "collection_per_row": {
+          "label": "Collections Per Row"
+        },
+        "all_collections": {
+          "label": "Show All Collections"
+        },
+        "products_count": {
+          "label": "Products In A Collection"
+        },
+        "lazyload_images": {
+          "label": "Enable LazyLoad Images",
+          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+        },
+        "header_spacing": {
+          "label": "Section Spacing",
+          "top_spacing": {
+            "label": "Spacing Top"
+          },
+          "bottom_spacing": {
+            "label": "Spacing Bottom"
+          }
+        }
+      },
+      "blocks": {
+        "collection": {
+          "name": "Collection",
+          "settings": {
+            "collection": {
+              "label": "Collection"
+            },
+            "collection_heading": {
+              "label": "Heading"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Collection List"
+      }
+    },
     "featured-collection": {
       "name": "Featured Collection",
       "settings": {
@@ -1105,6 +1151,48 @@
           },
           "soldout_badge_color": {
             "label": "Soldout Badge Color"
+          }
+        }
+      }
+    },
+    "collections": {
+      "name": "Collections",
+      "settings": {
+        "overlay_style": {
+          "label": "Overlay Below The Image"
+        },
+        "show_first_product": {
+          "label": "Show First Product Image"
+        },
+        "image_size": {
+          "label": "Image Size",
+          "options": {
+            "natural": {
+              "label": "Natural"
+            },
+            "square": {
+              "label": "Square(1:1)"
+            },
+            "portrait": {
+              "label": "Portrait(2:3)"
+            },
+            "landscape": {
+              "label": "Landscape(4:3)"
+            },
+            "wide": {
+              "label": "Wide(16:9)"
+            }
+          }
+        },
+        "collection_layout": {
+          "label": "layout",
+          "options": {
+            "grid": {
+              "label": "Grid"
+            },
+            "slider": {
+              "label": "Slider"
+            }
           }
         }
       }
