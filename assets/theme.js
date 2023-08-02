@@ -40,7 +40,7 @@ const showMoreSwatches = document.querySelectorAll('.show-more__swatches');
 showMoreSwatches.forEach(option => {
   option.addEventListener('click', () => {
     let optionLimit = option.closest('.color-swatch__list').getAttribute('data-limit');
-    optionLimit.setAttribute('data-limit', "0");
+    console.log(optionLimit)
   })
 })
 
