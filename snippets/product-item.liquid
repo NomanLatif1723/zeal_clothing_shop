@@ -154,7 +154,7 @@
 </div>
 <script>
   // Featured Collection 
-const showMoreSwatches = document.querySelectorAll('.show-more__swatches');
+let showMoreSwatches = document.querySelectorAll('.show-more__swatches');
 showMoreSwatches.forEach(option => {
   option.addEventListener('click', () => {
     {% assign limit = 0 %}
