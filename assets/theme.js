@@ -35,7 +35,14 @@ if(timerEl){
     startTimer(hours, minutes);
 }
 
+// featured Collection
 
+document.querySelectorAll('.show-more__swatches').forEach(option => {
+  option.addEventListener('click', () => {
+    const hiddenSwatches = option.closest('.color-swatch__list').querySelector('.hidden__swatches');
+    hiddenSwatches.classList.add('show');
+  })
+})
 
 
     
