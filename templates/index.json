@@ -242,13 +242,141 @@
             "collection": "womens-wear",
             "collection_heading": ""
           }
+        },
+        "a9ca97d8-f3e5-4713-a095-e5e41acddf70": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_heading": "Collection Title"
+          }
+        },
+        "9dcfc794-b98b-4181-be5a-dbb72df48ba0": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_heading": "Collection Title"
+          }
+        },
+        "afeb5df1-0de1-4a6d-bd73-d6e1d90e4566": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_heading": "Collection Title"
+          }
+        },
+        "73639bf9-5b41-4215-ae0b-c61150ab2a00": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_heading": "Collection Title"
+          }
+        },
+        "50c44082-00be-4348-a6a9-4160e2169eb0": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_heading": "Collection Title"
+          }
+        },
+        "661e8e48-ebce-467c-8df4-e264d5de125c": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_heading": "Collection Title"
+          }
+        },
+        "fe190f21-7712-4a2a-99be-81705180f193": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_heading": "Collection Title"
+          }
+        },
+        "8339ae96-4fe9-4de9-a9fb-afe26efce410": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_heading": "Collection Title"
+          }
+        },
+        "87fbb131-7351-48dd-baa9-e715010514cc": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_heading": "Collection Title"
+          }
+        },
+        "b98dcf42-3484-4839-8fa7-5978caf1936b": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_heading": "Collection Title"
+          }
+        },
+        "73e77dff-6774-411f-aded-e0d419e4092d": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_heading": "Collection Title"
+          }
+        },
+        "70829e06-b2ae-4371-8b29-1a724862b1d3": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_heading": "Collection Title"
+          }
+        },
+        "a7c55e0c-fd0c-44de-a805-a3432d80c126": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_heading": "Collection Title"
+          }
+        },
+        "a910565c-1490-4b81-a4b4-3df13f8e26a0": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_heading": "Collection Title"
+          }
+        },
+        "b458ae41-8774-473d-a722-76ab3b4b5b3b": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_heading": "Collection Title"
+          }
+        },
+        "f863dcb1-0ed2-47fa-b9d4-261d9ab91e50": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_heading": "Collection Title"
+          }
         }
       },
       "block_order": [
         "template--19980215124290__eb20ecc0-4470-4624-b140-f1161cf8823f-collection-1",
         "template--19980215124290__eb20ecc0-4470-4624-b140-f1161cf8823f-collection-2",
         "template--19980215124290__eb20ecc0-4470-4624-b140-f1161cf8823f-collection-3",
-        "template--19980215124290__eb20ecc0-4470-4624-b140-f1161cf8823f-collection-4"
+        "template--19980215124290__eb20ecc0-4470-4624-b140-f1161cf8823f-collection-4",
+        "a9ca97d8-f3e5-4713-a095-e5e41acddf70",
+        "9dcfc794-b98b-4181-be5a-dbb72df48ba0",
+        "afeb5df1-0de1-4a6d-bd73-d6e1d90e4566",
+        "73639bf9-5b41-4215-ae0b-c61150ab2a00",
+        "50c44082-00be-4348-a6a9-4160e2169eb0",
+        "661e8e48-ebce-467c-8df4-e264d5de125c",
+        "fe190f21-7712-4a2a-99be-81705180f193",
+        "8339ae96-4fe9-4de9-a9fb-afe26efce410",
+        "87fbb131-7351-48dd-baa9-e715010514cc",
+        "b98dcf42-3484-4839-8fa7-5978caf1936b",
+        "73e77dff-6774-411f-aded-e0d419e4092d",
+        "70829e06-b2ae-4371-8b29-1a724862b1d3",
+        "a7c55e0c-fd0c-44de-a805-a3432d80c126",
+        "a910565c-1490-4b81-a4b4-3df13f8e26a0",
+        "b458ae41-8774-473d-a722-76ab3b4b5b3b",
+        "f863dcb1-0ed2-47fa-b9d4-261d9ab91e50"
       ],
       "settings": {
         "heading": "Collection List",
