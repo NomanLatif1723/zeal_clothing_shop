@@ -39,7 +39,8 @@ if(timerEl){
 const showMoreSwatches = document.querySelectorAll('.show-more__swatches');
 showMoreSwatches.forEach(option => {
   option.addEventListener('click', () => {
-    console.log("hello");
+    const optionLimit = option.closest('.color-swatch__list').getAttribute('data-limit');
+    optionLimit = 0
   })
 })
 
