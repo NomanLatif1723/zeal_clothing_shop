@@ -256,7 +256,7 @@
         "all_collections": false,
         "products_count": true,
         "text_alignment": "center",
-        "lazyload_images": false,
+        "lazyload_images": true,
         "margin_top": 60,
         "margin_bottom": 60
       }
