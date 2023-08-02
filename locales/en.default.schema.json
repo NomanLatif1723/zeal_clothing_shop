@@ -129,6 +129,23 @@
         "products_count": {
           "label": "Products In A Collection"
         },
+        "header_alignment": {
+          "label": "Alignment",
+          "alignment": {
+            "label": "Text alignment",
+            "options": {
+              "left": {
+                "label": "Left"
+              },
+              "center": {
+                "label": "Center"
+              },
+              "right": {
+                "label": "Right"
+              }
+            }
+          }
+        },
         "lazyload_images": {
           "label": "Enable LazyLoad Images",
           "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
