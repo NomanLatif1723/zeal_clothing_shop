@@ -104,6 +104,7 @@
           <span class="product__compare-price">{{ product.compare_at_price | money_without_trailing_zeros }}</span>
         {%- endunless -%}
       </div>
+
       {%- if settings.show_color_swatches -%}
       <div class="grid-product__variants">
         <div class="color-swatch__list">
@@ -117,8 +118,8 @@
             -%}
             {%- if isColorOption -%}
               {%- assign limit = 5 -%}
-              {% if limit > 0 %}
                 {%- for value in option.values -%}
+                  {% if limit > 0 %}
                     <div class="color-swatch__item">      
                       <input
                         {% if option.selected_value == value %} checked {% endif %}
@@ -131,10 +132,10 @@
                           <span class="color-swatch__option" style="background:{{ value | downcase }}"></span>
                         </label>
                     </div>
+                    {%- assign limit = limit | minus: 1 -%}
+                  {% endif %}
                 {% endfor %}
-                {%- assign limit = limit | minus: 1 -%}
-              {% endif %}
-              {%- if option.values.size > 5 -%}
+              {%- if option.values.size > limit -%}
                 <div class="color-swatch__item show-more__swatches">
                   <span>+</span>
                 </div>
