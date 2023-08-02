@@ -125,8 +125,8 @@
                   value= "{{ value }}"
                   name="{{ option.name }}"
                   />
-                  <label for="{{ option.name | handleize }}-{{ value | handleize }}" style="background:{{ value | downcase }}">
-                    <span class="visually__hidden">{{ value }}</span>
+                  <label for="{{ option.name | handleize }}-{{ value | handleize }}">
+                    <span class="color-swatch__option" style="background:{{ value | downcase }}"></span>
                   </label>
                 </div>
                 {% endfor %}
