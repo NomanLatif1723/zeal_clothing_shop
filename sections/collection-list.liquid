@@ -63,11 +63,11 @@
         {%- if show_all_collections -%}
           {% for collection in collections %}
             {% render 'collection-list-all',
-              collection: collection,
               textAlignment: textAlignment,
               itemWidth: itemWidth,
               imageAspectRatio: imageAspectRatio,
-              products_count: products_count
+              products_count: products_count,
+              lazyloading: lazyloading
             %}
           {% endfor %}
         {%- else -%}
@@ -104,7 +104,6 @@
                 collection: collections[block.settings.collection],
                 collection_heading: block.settings.collection_heading,
                 lazyloading: lazyloading,
-                collection_per_row: collection_per_row,
                 products_count: products_count,
                 textAlignment: textAlignment,
                 itemWidth: itemWidth,
