@@ -1197,17 +1197,6 @@
               "label": "Landscape(4:3)"
             }
           }
-        },
-        "collection_layout": {
-          "label": "layout",
-          "options": {
-            "grid": {
-              "label": "Grid"
-            },
-            "slider": {
-              "label": "Slider"
-            }
-          }
         }
       }
     }
