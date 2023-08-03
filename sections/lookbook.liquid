@@ -42,7 +42,7 @@
           <div class="lookbook-image__container">
             {%- if lookbookImage != blank -%}
               <img
-                
+                style="aspect-ratio: {{ imageAspectRatio }};"
                 src="{{ lookbookImage | img_url: default }}"
                 srcset="
                   {{ lookbookImage | product_img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
