@@ -69,93 +69,91 @@
       {%- endif -%}
       {%- if collection_layout == 'slider' -%}
         <div id="swiper-{{ section.id }}" class="collection-list__slider swiper">
-      {%- endif -%}
-      <collection-list class="collection-grid__list collection-grid{% if collection_layout == 'slider' %} swiper-wrapper{% endif %}{% if swipe_on_mobile and collection_layout == 'grid' %} collection-grid__scroll{% endif %}">
-        {%- if show_all_collections -%}
-          {% for collection in collections %}
-            {% render 'collection-list-all',
-              collection: collection,
-              textAlignment: textAlignment,
-              itemWidth: itemWidth,
-              imageAspectRatio: imageAspectRatio,
-              products_count: products_count,
-              lazyloading: lazyloading,
-              collection_layout: collection_layout,
-              swipe_on_mobile: swipe_on_mobile
-            %}
-          {% endfor %}
-        {%- else -%}
-          {%- for block in section.blocks -%}
-            {%- if collections[block.settings.collection] ==  blank -%}
-              <collection-item class="collection-grid__item {{ itemWidth }} {% if collection_layout == 'slider' %} swiper-slide{% endif %}{% if swipe_on_mobile and collection_layout == 'grid' %} collection-item__scroll{% endif %}" {{ block.shopify_attributes }}>
-                <div class="collection-grid__content">
-                  {%- capture count -%}
-                    {%- cycle 1, 2, 3, 4, 5, 6 -%}
-                  {%- endcapture -%}
-                  <div class="collection-grid__image " style="aspect-ratio: {{ imageAspectRatio }};">
-                    {{ 'collection-' | append: count | placeholder_svg_tag: "placeholder__image" }}
-                    {%- if settings.overlay_style == false -%}
-                      <div class="overlay-box__container text__align-{{ textAlignment }}">
-                        <div class="collection-grid__text">
-                          <div class="collection-grid__title">
-                            <h4>Example Collection</h4>
+        {%- endif -%}
+        <collection-list class="collection-grid__list collection-grid{% if collection_layout == 'slider' %} swiper-wrapper{% endif %}{% if swipe_on_mobile and collection_layout == 'grid' %} collection-grid__scroll{% endif %}">
+          {%- if show_all_collections -%}
+            {% for collection in collections %}
+              {% render 'collection-list-all' 
+               , collection: collection,
+               textAlignment: textAlignment,
+               itemWidth: itemWidth,
+               imageAspectRatio: imageAspectRatio,
+               products_count: products_count,
+               lazyloading: lazyloading,
+               collection_layout: collection_layout,
+               swipe_on_mobile: swipe_on_mobile %}
+            {% endfor %}
+          {%- else -%}
+            {%- for block in section.blocks -%}
+              {%- if collections[block.settings.collection] == blank -%}
+                <collection-item class="collection-grid__item {{ itemWidth }} {% if collection_layout == 'slider' %} swiper-slide{% endif %}{% if swipe_on_mobile and collection_layout == 'grid' %} collection-item__scroll{% endif %}" {{ block.shopify_attributes }}>
+                  <div class="collection-grid__content">
+                    {%- capture count -%}
+                      {%- cycle 1, 2, 3, 4, 5, 6 -%}
+                    {%- endcapture -%}
+                    <div class="collection-grid__image " style="aspect-ratio: {{ imageAspectRatio }};">
+                      {{ 'collection-' | append: count | placeholder_svg_tag: "placeholder__image" }}
+                      {%- if settings.overlay_style == false -%}
+                        <div class="overlay-box__container text__align-{{ textAlignment }}">
+                          <div class="collection-grid__text">
+                            <div class="collection-grid__title">
+                              <h4>Example Collection</h4>
+                            </div>
                           </div>
+                        </div>
+                      {%- endif -%}
+                    </div>
+                    {%- if settings.overlay_style -%}
+                      <div class="collection-grid__text text__align-{{ textAlignment }}">
+                        <div class="collection-grid__title">
+                          <h4>Example Collection</h4>
                         </div>
                       </div>
                     {%- endif -%}
                   </div>
-                  {%- if settings.overlay_style -%}
-                    <div class="collection-grid__text text__align-{{ textAlignment }}">   
-                      <div class="collection-grid__title">
-                        <h4>Example Collection</h4>
-                      </div>
-                    </div>
-                  {%- endif -%}
-                </div>
-              </collection-item>
-            {%- else -%}
-              {%- render 'collection-item', 
-                collection: collections[block.settings.collection],
-                collection_heading: block.settings.collection_heading,
-                lazyloading: lazyloading,
-                products_count: products_count,
-                textAlignment: textAlignment,
-                itemWidth: itemWidth,
-                imageAspectRatio: imageAspectRatio,
-                collection_layout: collection_layout,
-                swipe_on_mobile: swipe_on_mobile
-              -%}
-            {%- endif -%}
-          {%- endfor -%}
-        {%- endif -%}
-      </collection-list>
-      <div class="swiper-pagination swiper-pagination-{{ section.id }}"></div>
-      {%- if collection_layout == 'slider' -%}
+                </collection-item>
+              {%- else -%}
+                {%- render 'collection-item' 
+                  , collection: collections[block.settings.collection],
+                  collection_heading: block.settings.collection_heading,
+                  lazyloading: lazyloading,
+                  products_count: products_count,
+                  textAlignment: textAlignment,
+                  itemWidth: itemWidth,
+                  imageAspectRatio: imageAspectRatio,
+                  collection_layout: collection_layout,
+                  swipe_on_mobile: swipe_on_mobile -%}
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endif -%}
+        </collection-list>
+        <div class="swiper-pagination swiper-pagination-{{ section.id }}"></div>
+        {%- if collection_layout == 'slider' -%}
         </div>
       {%- endif -%}
     </div>
   </div>
 </section>
 <script>
-  var swiper{{ section.id | remove: '-' }} = new Swiper("#swiper-{{ section.id }}", {
-      slidesPerView: 2,
-      navigation: {
-        nextEl: ".swiper-button-next.swiper-button-{{ section.id }}",
-        prevEl: ".swiper-button-prev.swiper-button-{{ section.id }}",
+  var swiper {{ section.id | remove: '-' }} = new Swiper("#swiper-  {{ section.id }}", {
+    slidesPerView: 2,
+    navigation: {
+      nextEl: ".swiper-button-next.swiper-button-  {{ section.id }}",
+      prevEl: ".swiper-button-prev.swiper-button-  {{ section.id }}"
+    },
+    pagination: {
+      el: ".swiper-pagination.swiper-pagination-  {{ section.id }}",
+      clickable: true
+    },
+    breakpoints: {
+      769: {
+        slidesPerView: 3
       },
-      pagination: {
-        el: ".swiper-pagination.swiper-pagination-{{ section.id }}",
-        clickable: true,
-      },
-      breakpoints: {
-        769: {
-          slidesPerView: 3,
-        },
-        993: {
-          slidesPerView: 4,
-        },
-      },
-    });
+      993: {
+        slidesPerView: 4
+      }
+    }
+  });
 </script>
 {% schema %}
   {
@@ -188,14 +186,12 @@
         "id": "swipe_on_mobile",
         "label": "t:sections.collection-list.settings.swipe_on_mobile.label",
         "default": false
-      },
-      {
+      }, {
         "type": "checkbox",
         "id": "products_count",
         "label": "t:sections.collection-list.settings.products_count.label",
         "default": true
-      },
-      {
+      }, {
         "type": "select",
         "id": "text_alignment",
         "label": "t:sections.collection-list.settings.header_alignment.alignment.label",
@@ -212,8 +208,7 @@
           }
         ],
         "default": "center"
-      },
-      {
+      }, {
         "type": "select",
         "id": "collection_layout",
         "label": "t:sections.collection-list.settings.collection_layout.label",
@@ -222,25 +217,21 @@
           {
             "value": "grid",
             "label": "t:sections.collection-list.settings.collection_layout.options.grid.label"
-          },
-          {
+          }, {
             "value": "slider",
             "label": "t:sections.collection-list.settings.collection_layout.options.slider.label"
           }
         ]
-      },
-      {
+      }, {
         "type": "checkbox",
         "id": "lazyload_images",
         "label": "t:sections.collection-list.settings.lazyload_images.label",
         "default": false,
         "info": "t:sections.collection-list.settings.lazyload_images.info"
-      },
-      {
+      }, {
         "type": "header",
         "content": "t:sections.collection-list.settings.header_spacing.label"
-      },
-      {
+      }, {
         "type": "range",
         "id": "margin_top",
         "min": 0,
@@ -249,8 +240,7 @@
         "unit": "px",
         "label": "t:sections.collection-list.settings.header_spacing.top_spacing.label",
         "default": 16
-      },
-      {
+      }, {
         "type": "range",
         "id": "margin_bottom",
         "min": 0,
