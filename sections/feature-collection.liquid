@@ -83,7 +83,7 @@
         {%- endif -%}
       </div>
     </div>
-    {%- unless collection == blank or collection.isEmpty? or collection.products_count == 0  -%}
+    {%- unless collection == blank or collection.isEmpty? or collection.products_count == 0 -%}
       {%- if show_view_all and collection.products_count > product_limit -%}
         <div class="collection__footer">
           <div class="collection-btn__container">
