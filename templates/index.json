@@ -217,7 +217,6 @@
       "blocks": {
         "template--19980215124290__eb20ecc0-4470-4624-b140-f1161cf8823f-collection-1": {
           "type": "collection",
-          "disabled": true,
           "settings": {
             "collection": "mens-wear",
             "collection_heading": ""
@@ -225,7 +224,6 @@
         },
         "template--19980215124290__eb20ecc0-4470-4624-b140-f1161cf8823f-collection-2": {
           "type": "collection",
-          "disabled": true,
           "settings": {
             "collection": "womens-shorts",
             "collection_heading": ""
@@ -233,7 +231,6 @@
         },
         "template--19980215124290__eb20ecc0-4470-4624-b140-f1161cf8823f-collection-3": {
           "type": "collection",
-          "disabled": true,
           "settings": {
             "collection": "frontpage",
             "collection_heading": ""
@@ -241,7 +238,6 @@
         },
         "template--19980215124290__eb20ecc0-4470-4624-b140-f1161cf8823f-collection-4": {
           "type": "collection",
-          "disabled": true,
           "settings": {
             "collection": "womens-wear",
             "collection_heading": ""
@@ -249,6 +245,7 @@
         },
         "58b60cd6-a012-4f73-ae0d-10b47b04ebbc": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "",
             "collection_heading": "Collection Title"
@@ -256,6 +253,7 @@
         },
         "382afd65-600b-4606-ab46-4256d8829337": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "",
             "collection_heading": "Collection Title"
@@ -263,6 +261,7 @@
         },
         "20138859-62be-4db4-92dc-48a3448624d0": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "",
             "collection_heading": "Collection Title"
