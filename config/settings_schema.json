@@ -297,10 +297,6 @@
         "label": "t:schema_settings.collections.settings.image_size.label",
         "options": [
           {
-            "value": "natural",
-            "label": "t:schema_settings.collections.settings.image_size.options.natural.label"
-          },
-          {
             "value": "square",
             "label": "t:schema_settings.collections.settings.image_size.options.square.label"
           },
@@ -311,10 +307,6 @@
           {
             "value": "landscape",
             "label": "t:schema_settings.collections.settings.image_size.options.landscape.label"
-          },
-          {
-            "value": "wide",
-            "label": "t:schema_settings.collections.settings.image_size.options.wide.label"
           }
         ]
       },
