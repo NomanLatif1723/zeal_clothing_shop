@@ -1456,3 +1456,20 @@ input[type="radio"]:checked + label {
 .collection-grid-count {
     color: rgba(1,1,1,0.6);
 }
+@media only screen and (min-width: 769px){
+  .collection-list.swiper-button-next,
+  .collection-list .swiper-button-prev {
+      margin-top: 0;
+      left: auto;
+      right: 0;
+      border: 1px solid rgba(1, 1, 1, 0.1);
+      height: auto;
+      padding: 11px 18px;
+      position: relative;
+    }
+    .collection-list .swiper-button-next:after,
+    .collection-list .swiper-button-prev:after {
+      font-size: 12px !important;
+      font-weight: 400;
+    }
+}
