@@ -126,6 +126,9 @@
         "all_collections": {
           "label": "Show All Collections"
         },
+        "swipe_on_mobile": {
+          "label": "Swipe On Mobile"
+        },
         "products_count": {
           "label": "Products In A Collection"
         },
