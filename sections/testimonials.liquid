@@ -1,4 +1,6 @@
 {%- liquid
+   assign testimonial_heading = section.settings.testimonial_heading
+   assign testimonial_text = section.settings.testimonial_text
     assign lazyloading = ''
     assign lazyloadImages = section.settings.lazyload_images
     if lazyloadImages
@@ -15,14 +17,14 @@
   <div class="page__width">
     <div class="testimonial__content text__align-{{ section.settings.text_alignment }}">
       <div class="testimonial__header">
-        {%- if section.settings.testimonial_heading != blank -%}
+        {%- if testimonial_heading != blank -%}
           <div class="main__heading testimonial__main-heading">
-            <h2>{{ section.settings.testimonial_heading }}</h2>
+            <h2>{{ testimonial_heading }}</h2>
           </div>
         {%- endif -%}
-        {%- if section.settings.testimonial_text != blank -%}
+        {%- if testimonial_text != blank -%}
           <div class="testimonial__text rte">
-            {{ section.settings.testimonial_text }}
+            {{ testimonial_text }}
           </div>
         {%- endif -%}
       </div>
@@ -33,28 +35,34 @@
       <div id="swiper-{{ section.id }}" class="testimonial__slider-wrapper swiper">
         <div class="swiper-wrapper"> 
           {%- for block in section.blocks -%}
-            {%- assign author_image = block.settings.author_image -%}
+            {%- liquid
+               assign author_image = block.settings.author_image
+               assign testimonial_star_icon = block.settings.testimonial_star_icon
+               assign slide_heading = block.settings.slide_heading
+               assign slide_text = block.settings.slide_text
+               assign author_name = block.settings.author_text
+            -%}
             <div class="testimonial__slider-item swiper-slide" {{ block.shopify_attributes }}>
               <blockquote class="testimonial__text">
-                {%- if block.settings.testimonial_star_icon == '5-star' -%}
+                {%- if testimonial_star_icon == '5-star' -%}
                   <span class="icon__stars">★★★★★</span>
-                {%- elsif block.settings.testimonial_star_icon == '4-star' -%}
+                {%- elsif testimonial_star_icon == '4-star' -%}
                   <span class="icon__stars">★★★★</span>
-                {%- elsif block.settings.testimonial_star_icon == '3-star' -%}
+                {%- elsif testimonial_star_icon == '3-star' -%}
                   <span class="icon__stars">★★★</span>
-                {%- elsif block.settings.testimonial_star_icon == '2-star' -%}
+                {%- elsif testimonial_star_icon == '2-star' -%}
                   <span class="icon__stars">★★</span>
-                {%- elsif block.settings.testimonial_star_icon == '1-star' -%}
+                {%- elsif testimonial_star_icon == '1-star' -%}
                   <span class="icon__stars">★</span>
                 {%- endif -%}
-                {%- if block.settings.slide_heading != blank -%}
+                {%- if slide_heading != blank -%}
                   <div class="slide__heading">
-                    <h3>{{ block.settings.slide_heading }}</h3>
+                    <h3>{{ slide_heading }}</h3>
                   </div>
                 {%- endif -%}
-                {%- if block.settings.slide_text != blank -%}
+                {%- if slide_text != blank -%}
                   <div class="slide__text rte">
-                    {{ block.settings.slide_text }}
+                    {{ slide_text }}
                   </div>
                 {%- endif -%}
                 {%- if author_image != blank -%}
@@ -63,9 +71,9 @@
                     {{ author_image | image_url: width: 70 | image_tag: class: classes, loading: lazyloading }}
                   </div>
                 {%- endif -%}
-                {%- if block.settings.author_text != blank -%}
+                {%- if author_name != blank -%}
                   <div class="author__text">
-                    {{ block.settings.author_text }}
+                    {{ author_name }}
                   </div>
                 {%- endif -%}
               </blockquote>
