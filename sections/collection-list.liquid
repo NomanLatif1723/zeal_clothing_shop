@@ -36,6 +36,34 @@
         </div>
       </header>
       <collection-list class="collection-grid">
+        {%- if collection ==  blank or collection.products_count == 0 -%}
+          <collection-item class="collection-grid__item {{ itemWidth }}">
+            <div class="collection-grid__content">
+              {%- capture count -%}
+                {%- cycle 1, 2, 3, 4, 5, 6 -%}
+              {%- endcapture -%}
+              <div class="collection-grid__image">
+                {{ 'collection-' | append: count | placeholder_svg_tag: "placeholder__image" }}
+                {%- if settings.overlay_style == false -%}
+                  <div class="overlay-box__container text__align-{{ textAlignment }}">
+                    <div class="collection-grid__text">
+                      <div class="collection-grid__title">
+                        <h4>Example Collection</h4>
+                      </div>
+                    </div>
+                  </div>
+                {%- endif -%}
+              </div>
+              {%- if settings.overlay_style -%}
+                <div class="collection-grid__text text__align-{{ textAlignment }}">   
+                  <div class="collection-grid__title">
+                    <h4>Example Collection</h4>
+                  </div>
+                </div>
+              {%- endif -%}
+            </div>
+          </collection-item>
+        {%- else -%}
           {%- for block in section.blocks -%}
             {%- render 'collection-item', 
               collection: collections[block.settings.collection],
@@ -46,7 +74,7 @@
               textAlignment: textAlignment
             -%}
           {%- endfor -%}
-
+        {%- endif -%}
       </collection-list>
     </div>
   </div>
