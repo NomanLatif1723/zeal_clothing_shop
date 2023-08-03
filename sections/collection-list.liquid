@@ -135,7 +135,7 @@
 </section>
 
 <script>
-  var swiper {{ section.id | remove: '-' }} = new Swiper("#swiper-{{ section.id }}", {
+  var swiper{{ section.id | remove: '-' }} = new Swiper("#swiper-{{ section.id }}", {
     slidesPerView: 2,
     navigation: {
       nextEl: ".swiper-button-next.swiper-button-{{ section.id }}",
