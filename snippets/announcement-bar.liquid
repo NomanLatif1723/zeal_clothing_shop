@@ -35,7 +35,7 @@ endif
             data-hour="{{ section.settings.timer_hours }}"
             data-minutes="{{ section.settings.timer_minutes }}"></div>
         {%- endif -%}
-        {% if section.settings.announcement_text != blank %}
+        {%- if section.settings.announcement_text != blank -%}
           <div class="main__text">{{ section.settings.announcement_text }}</div>
         {%- endif -%}
       </div>
