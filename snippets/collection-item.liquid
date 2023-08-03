@@ -36,7 +36,7 @@
     assign sizes = '(min-width: 1200px) 650px, 45vw'
 -%}
 <collection-item class="collection-grid__item {{ itemWidth }}">
-  {%- if collection_image != blank -%}
+  {%- if collection == blank -%}
     <div class="collection-grid__content">
       <a href="{{ collection.url }}" title="{{ collection.title }}">
         <div class="collection-grid__image">
