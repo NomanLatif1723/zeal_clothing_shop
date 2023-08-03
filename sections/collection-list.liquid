@@ -60,6 +60,13 @@
         </div>
       </header>
       <collection-list class="collection-grid">
+        {%- if all_collections -%}
+          {% render 'collection-list-placeholder',
+            textAlignment: textAlignment,
+            itemWidth: itemWidth,
+            imageAspectRatio: imageAspectRatio
+          %}
+        {%- else -%}
           {%- for block in section.blocks -%}
             {%- if collections[block.settings.collection] ==  blank -%}
               <collection-item class="collection-grid__item {{ itemWidth }}">
@@ -101,6 +108,7 @@
               -%}
             {%- endif -%}
           {%- endfor -%}
+        {%- endif -%}
       </collection-list>
     </div>
   </div>
