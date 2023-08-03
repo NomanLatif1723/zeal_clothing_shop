@@ -19,13 +19,15 @@
       {%- for block in section.blocks -%}
         <div class="slideshow__slide swiper-slide slideshow__slide-{{ block.id }}" {{ block.shopify_attributes }}>
           {%- style -%}
-            {%- assign slideTextColor = block.settings.slide_text_color -%}
-            {%- assign slideButtonColor = block.settings.slide_button_color -%}
-            {%- assign imageDesktop = block.settings.slide_image_desktop -%}
-            {%- assign imageMobile = block.settings.slide_image_mobile -%}
-            {%- assign ratio = 0.75 -%}
-            {%- assign default = 'grande' -%}
-            {%- assign sizes = '100vw' -%}
+            {%- liquid
+               assign slideTextColor = block.settings.slide_text_color
+               assign slideButtonColor = block.settings.slide_button_color
+               assign imageDesktop = block.settings.slide_image_desktop
+               assign imageMobile = block.settings.slide_image_mobile
+               assign ratio = 0.75
+               assign default = 'grande'
+               assign sizes = '100vw'
+            -%}
             .slideshow__slide-{{ block.id }} .slide__text-heading{
               color: {{ slideTextColor }};
             }
@@ -48,7 +50,7 @@
               {%- if imageDesktop != blank -%}
                 <img
                   class="hero__image desktop__image{% if imageMobile != blank %} desktop__image-hide{% endif %}"
-                  src="{{ imageDesktop | img_url: 'grande' }}"
+                  src="{{ imageDesktop | img_url: default }}"
                   srcset="
                       {{ imageDesktop | product_img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
                       {{ imageDesktop | product_img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
@@ -65,7 +67,7 @@
               {%- if imageMobile != blank -%}
                 <img
                   class="hero__image mobile__image"
-                  src="{{ imageMobile | img_url: 'grande' }}"
+                  src="{{ imageMobile | img_url: default }}"
                   srcset="
                       {{ imageMobile | product_img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
                       {{ imageMobile | product_img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
