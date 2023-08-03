@@ -299,7 +299,7 @@
         "heading": "Shop by Categories",
         "collection_per_row": 4,
         "all_collections": false,
-        "swipe_on_mobile": true,
+        "swipe_on_mobile": false,
         "products_count": true,
         "text_alignment": "center",
         "lazyload_images": true,
