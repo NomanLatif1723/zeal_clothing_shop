@@ -149,6 +149,17 @@
             }
           }
         },
+        "collection_layout": {
+          "label": "layout",
+          "options": {
+            "grid": {
+              "label": "Grid"
+            },
+            "slider": {
+              "label": "Slider"
+            }
+          }
+        },
         "lazyload_images": {
           "label": "Enable LazyLoad Images",
           "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
