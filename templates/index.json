@@ -394,7 +394,7 @@
         "ca437c69-1dba-4129-a016-79d82c03faae"
       ],
       "settings": {
-        "image_size": "square",
+        "image_size": "portrait",
         "lazyload_images": true,
         "margin_top": 60,
         "margin_bottom": 60
