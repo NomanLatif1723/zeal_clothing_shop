@@ -68,7 +68,7 @@
                 {%- endif -%}
                 {%- if author_image != blank -%}
                   {% assign classes = 'author__logo-img' %}
-                  <div class="author__image{% if show_circular_images %} author-image__circular{% endif %}">
+                  <div class="author__image{% if circular_images %} author-image__circular{% endif %}">
                     {{ author_image | image_url: width: 70 | image_tag: class: classes, loading: lazyloading }}
                   </div>
                 {%- endif -%}
