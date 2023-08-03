@@ -571,6 +571,56 @@
         "navigation_styles": "bars",
         "lazyload_images": false
       }
+    },
+    "767b54aa-8063-41b9-981d-96dad77951fb": {
+      "type": "collection-list",
+      "blocks": {
+        "template--19980215124290__767b54aa-8063-41b9-981d-96dad77951fb-collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_heading": "Collection Title"
+          }
+        },
+        "template--19980215124290__767b54aa-8063-41b9-981d-96dad77951fb-collection-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_heading": "Collection Title"
+          }
+        },
+        "template--19980215124290__767b54aa-8063-41b9-981d-96dad77951fb-collection-3": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_heading": "Collection Title"
+          }
+        },
+        "template--19980215124290__767b54aa-8063-41b9-981d-96dad77951fb-collection-4": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_heading": "Collection Title"
+          }
+        }
+      },
+      "block_order": [
+        "template--19980215124290__767b54aa-8063-41b9-981d-96dad77951fb-collection-1",
+        "template--19980215124290__767b54aa-8063-41b9-981d-96dad77951fb-collection-2",
+        "template--19980215124290__767b54aa-8063-41b9-981d-96dad77951fb-collection-3",
+        "template--19980215124290__767b54aa-8063-41b9-981d-96dad77951fb-collection-4"
+      ],
+      "settings": {
+        "heading": "Collection List",
+        "collection_per_row": 4,
+        "all_collections": false,
+        "swipe_on_mobile": false,
+        "products_count": true,
+        "text_alignment": "center",
+        "lazyload_images": false,
+        "margin_top": 16,
+        "margin_bottom": 16
+      }
     }
   },
   "order": [
@@ -586,6 +636,7 @@
     "01666e88-11d5-4970-8587-55e3cb27e243",
     "0a5d7332-5a60-4baf-bf6a-adbba595c25e",
     "92018c5b-7aa4-4095-92a7-00221b583a17",
-    "89b00526-245a-4caf-93a7-7382706b1dca"
+    "89b00526-245a-4caf-93a7-7382706b1dca",
+    "767b54aa-8063-41b9-981d-96dad77951fb"
   ]
 }
