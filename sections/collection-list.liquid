@@ -59,7 +59,10 @@
           <h2>{{ main_heading }}</h2>
         </div>
       </header>
-      <collection-list class="collection-grid">
+      {%- if collection_layout == 'slider' -%}
+        <div id="swiper-{{ section.id }}" class="collection-list__slider swiper">
+      {%- endif -%}
+      <collection-list class="collection-grid{% if collection_layout == 'slider' %} swiper-wrapper{% endif %}">
         {%- if show_all_collections -%}
           {% for collection in collections %}
             {% render 'collection-list-all',
@@ -74,7 +77,7 @@
         {%- else -%}
           {%- for block in section.blocks -%}
             {%- if collections[block.settings.collection] ==  blank -%}
-              <collection-item class="collection-grid__item {{ itemWidth }}">
+              <collection-item class="collection-grid__item {{ itemWidth }} {% if collection_layout == 'slider' %} swiper-slide{% endif %}" {{ block.shopify_attributes }}>
                 <div class="collection-grid__content">
                   {%- capture count -%}
                     {%- cycle 1, 2, 3, 4, 5, 6 -%}
@@ -114,6 +117,9 @@
           {%- endfor -%}
         {%- endif -%}
       </collection-list>
+      {%- if collection_layout == 'slider' -%}
+        </div>
+      {%- endif -%}
     </div>
   </div>
 </section>
