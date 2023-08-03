@@ -253,7 +253,7 @@
       "settings": {
         "heading": "Shop by Categories",
         "collection_per_row": 4,
-        "all_collections": false,
+        "all_collections": true,
         "products_count": true,
         "text_alignment": "center",
         "lazyload_images": true,
