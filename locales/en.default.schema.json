@@ -342,6 +342,20 @@
     "lookbook": {
       "name": "Lookbook",
       "settings": {
+        "image_size": {
+          "label": "Image Size",
+          "options": {
+            "square": {
+              "label": "Square(1:1)"
+            },
+            "portrait": {
+              "label": "Portrait(2:3)"
+            },
+            "landscape": {
+              "label": "Landscape(4:3)"
+            }
+          }
+        },
         "lazyload_images": {
           "label": "Enable LazyLoad Images",
           "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
