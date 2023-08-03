@@ -49,7 +49,7 @@
         </div>
       </header>
       <collection-list class="collection-grid">
-        {%- if collection ==  blank or collection.products_count == 0 -%}
+        {%- if collection ==  blank -%}
           {%- for i in (1..collection_per_row) -%}
             <collection-item class="collection-grid__item {{ itemWidth }}">
               <div class="collection-grid__content">
