@@ -126,6 +126,7 @@
           {%- endfor -%}
         {%- endif -%}
       </collection-list>
+      <div class="swiper-pagination swiper-pagination-{{ section.id }}"></div>
       {%- if collection_layout == 'slider' -%}
         </div>
       {%- endif -%}
@@ -138,6 +139,10 @@
       navigation: {
         nextEl: ".swiper-button-next.swiper-button-{{ section.id }}",
         prevEl: ".swiper-button-prev.swiper-button-{{ section.id }}",
+      },
+      pagination: {
+        el: ".swiper-pagination.swiper-pagination-{{ section.id }}",
+        clickable: true,
       },
       breakpoints: {
         769: {
