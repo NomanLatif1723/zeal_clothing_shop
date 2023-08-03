@@ -123,6 +123,12 @@
       {%- if collection_layout == 'slider' -%}
         </div>
       {%- endif -%}
+      {%- if collection_layout == 'slider' -%}
+        <div class="slider__arrows-container">
+          <div class="swiper-button-next swiper-button-{{ section.id }}"></div>
+          <div class="swiper-button-prev swiper-button-{{ section.id }}"></div>
+        </div>
+      {%- endif -%}
     </div>
   </div>
 </section>
