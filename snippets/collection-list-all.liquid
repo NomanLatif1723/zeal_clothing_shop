@@ -45,6 +45,11 @@
         <div class="collection-grid__title">
           <h4>{{ collection.title }}</h4>
         </div>
+        {%- if products_count and collection != blank -%}
+          <div class="collection-grid-count">
+            <span>({{ collection.all_products_count }})</span>
+          </div>
+        {%- endif -%}
       </div>
     {%- endif -%}
   </div>
