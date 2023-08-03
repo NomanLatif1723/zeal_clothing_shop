@@ -246,6 +246,7 @@
         },
         "58b60cd6-a012-4f73-ae0d-10b47b04ebbc": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "",
             "collection_heading": "Collection Title"
@@ -253,6 +254,7 @@
         },
         "382afd65-600b-4606-ab46-4256d8829337": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "",
             "collection_heading": "Collection Title"
@@ -260,6 +262,7 @@
         },
         "20138859-62be-4db4-92dc-48a3448624d0": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "",
             "collection_heading": "Collection Title"
