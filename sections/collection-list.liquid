@@ -3,7 +3,8 @@
     assign collection_per_row = section.settings.collection_per_row
     assign show_all_collections = section.settings.all_collections
     assign products_count = section.settings.products_count
-    assign textAlignment = section.settings.text_alignment 
+    assign textAlignment = section.settings.text_alignment
+    assign collection_layout = settings.collection_layout
     assign lazyloading = ''
     assign lazyloadImages = section.settings.lazyload_images
     if lazyloadImages
@@ -71,7 +72,8 @@
               itemWidth: itemWidth,
               imageAspectRatio: imageAspectRatio,
               products_count: products_count,
-              lazyloading: lazyloading
+              lazyloading: lazyloading,
+              collection_layout: collection_layout
             %}
           {% endfor %}
         {%- else -%}
@@ -111,7 +113,8 @@
                 products_count: products_count,
                 textAlignment: textAlignment,
                 itemWidth: itemWidth,
-                imageAspectRatio: imageAspectRatio
+                imageAspectRatio: imageAspectRatio,
+                collection_layout: collection_layout
               -%}
             {%- endif -%}
           {%- endfor -%}
