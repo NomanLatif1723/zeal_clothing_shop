@@ -63,6 +63,7 @@
         {%- if show_all_collections -%}
           {% for collection in collections %}
             {% render 'collection-list-all',
+              collection: collection,
               textAlignment: textAlignment,
               itemWidth: itemWidth,
               imageAspectRatio: imageAspectRatio,
