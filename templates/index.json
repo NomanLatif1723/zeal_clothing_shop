@@ -274,6 +274,13 @@
             "collection": "",
             "collection_heading": "Collection Title"
           }
+        },
+        "f035c5d1-cde8-4dcf-979e-a7d685046d95": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_heading": "Collection Title"
+          }
         }
       },
       "block_order": [
@@ -284,7 +291,8 @@
         "58b60cd6-a012-4f73-ae0d-10b47b04ebbc",
         "382afd65-600b-4606-ab46-4256d8829337",
         "20138859-62be-4db4-92dc-48a3448624d0",
-        "e374ffc2-b8d6-4bc3-bca4-b1abfbfdd989"
+        "e374ffc2-b8d6-4bc3-bca4-b1abfbfdd989",
+        "f035c5d1-cde8-4dcf-979e-a7d685046d95"
       ],
       "settings": {
         "heading": "Shop by Categories",
