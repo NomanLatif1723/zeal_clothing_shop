@@ -1460,6 +1460,14 @@ input[type="radio"]:checked + label {
 .collection-list__slider {
     margin-right: -10px !important;
 }
+.collection-list__slider .swiper-pagination {
+    display: none;
+}
+@media only screen and (max-width: 768px) {
+  .collection-list__slider .swiper-pagination {
+    display: block;
+  }
+}
 @media only screen and (min-width: 769px){
   .collection-list .swiper-button-next,
   .collection-list .swiper-button-prev {
