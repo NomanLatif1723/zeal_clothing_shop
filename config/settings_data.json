@@ -32,7 +32,7 @@
     "overlay_style": false,
     "show_first_product": false,
     "collection_image_size": "portrait",
-    "collection_layout": "grid",
+    "collection_layout": "slider",
     "show_flags": false,
     "show_socials": false,
     "color_button": "#111111",
