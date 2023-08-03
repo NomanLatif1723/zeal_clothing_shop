@@ -243,13 +243,39 @@
             "collection": "womens-wear",
             "collection_heading": ""
           }
+        },
+        "58b60cd6-a012-4f73-ae0d-10b47b04ebbc": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_heading": "Collection Title"
+          }
+        },
+        "382afd65-600b-4606-ab46-4256d8829337": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "",
+            "collection_heading": "Collection Title"
+          }
+        },
+        "20138859-62be-4db4-92dc-48a3448624d0": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "",
+            "collection_heading": "Collection Title"
+          }
         }
       },
       "block_order": [
         "template--19980215124290__eb20ecc0-4470-4624-b140-f1161cf8823f-collection-1",
         "template--19980215124290__eb20ecc0-4470-4624-b140-f1161cf8823f-collection-2",
         "template--19980215124290__eb20ecc0-4470-4624-b140-f1161cf8823f-collection-3",
-        "template--19980215124290__eb20ecc0-4470-4624-b140-f1161cf8823f-collection-4"
+        "template--19980215124290__eb20ecc0-4470-4624-b140-f1161cf8823f-collection-4",
+        "58b60cd6-a012-4f73-ae0d-10b47b04ebbc",
+        "382afd65-600b-4606-ab46-4256d8829337",
+        "20138859-62be-4db4-92dc-48a3448624d0"
       ],
       "settings": {
         "heading": "Shop by Categories",
