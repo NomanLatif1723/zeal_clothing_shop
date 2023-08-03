@@ -50,7 +50,7 @@
       </header>
       <collection-list class="collection-grid">
           {%- for block in section.blocks -%}
-            {%- if block.settings.collection ==  blank -%}
+            {%- if collections[block.settings.collection] ==  blank -%}
               <collection-item class="collection-grid__item {{ itemWidth }}">
                 <div class="collection-grid__content">
                   {%- capture count -%}
