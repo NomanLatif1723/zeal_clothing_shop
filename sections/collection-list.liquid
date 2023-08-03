@@ -23,10 +23,6 @@
     assign itemWidth = 'block__item--auto block__item--one-fifth'
     endcase
 
-    for block in section.blocks
-        assign collection = collections[block.settings.collection]
-        assign collection_heading = block.settings.collection_heading
-    endfor
 -%}
 {%- style -%}
   .main__section-{{ section.id }}{
