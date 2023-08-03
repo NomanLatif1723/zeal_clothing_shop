@@ -62,6 +62,7 @@
       <collection-list class="collection-grid">
         {%- if show_all_collections -%}
           {% render 'collection-list-placeholder',
+            collection: collection,
             textAlignment: textAlignment,
             itemWidth: itemWidth,
             imageAspectRatio: imageAspectRatio
