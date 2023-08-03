@@ -270,6 +270,7 @@
         },
         "e374ffc2-b8d6-4bc3-bca4-b1abfbfdd989": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "",
             "collection_heading": "Collection Title"
@@ -277,6 +278,7 @@
         },
         "f035c5d1-cde8-4dcf-979e-a7d685046d95": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "",
             "collection_heading": "Collection Title"
