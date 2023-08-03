@@ -238,6 +238,7 @@
         },
         "template--19980215124290__eb20ecc0-4470-4624-b140-f1161cf8823f-collection-4": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "womens-wear",
             "collection_heading": ""
@@ -298,7 +299,7 @@
       "settings": {
         "heading": "Shop by Categories",
         "collection_per_row": 4,
-        "all_collections": false,
+        "all_collections": true,
         "products_count": true,
         "text_alignment": "center",
         "lazyload_images": true,
