@@ -83,13 +83,15 @@
         {%- endif -%}
       </div>
     </div>
-    {%- if show_view_all and collection.products_count > product_limit -%}
-      <div class="collection__footer">
-        <div class="collection-btn__container">
-          <a href="{{ collection.url }}" class="btn btn__link view_all_btn">{{ 'collections.general.all_collection' | t }}</a>
+    {%- unless collection == blank or collection.isEmpty? or collection.products_count == 0  -%}
+      {%- if show_view_all and collection.products_count > product_limit -%}
+        <div class="collection__footer">
+          <div class="collection-btn__container">
+            <a href="{{ collection.url }}" class="btn btn__link view_all_btn">{{ 'collections.general.all_collection' | t }}</a>
+          </div>
         </div>
-      </div>
-    {%- endif -%}
+      {%- endif -%}
+    {%- endunless -%}
 
   </div>
 </div>
