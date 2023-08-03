@@ -345,22 +345,6 @@
         "margin_bottom": 60
       }
     },
-    "90c94887-f920-4f4d-8dbc-70cf6119d3ce": {
-      "type": "feature-collection",
-      "settings": {
-        "collection": "mens-wear",
-        "heading": "Featured Collection",
-        "text": "Write Small Description About Your Collection",
-        "product_per_row": 4,
-        "product_rows": 2,
-        "stack_product": true,
-        "show_view_all": true,
-        "text_alignment": "center",
-        "lazyload_images": true,
-        "margin_top": 60,
-        "margin_bottom": 60
-      }
-    },
     "749269fd-a63a-458d-b3f5-57ec8c86568c": {
       "type": "lookbook",
       "blocks": {
@@ -499,9 +483,10 @@
         "testimonial_heading": "Hear from our happy customers",
         "testimonial_text": "Browse our testimonials to see real feedback from people who have tried and loved our products.",
         "text_alignment": "center",
+        "show_circular_images": true,
+        "lazyload_images": true,
         "testimonial_background_color": "#ffffff",
-        "testimonial_text_color": "#111111",
-        "lazyload_images": true
+        "testimonial_text_color": "#111111"
       }
     },
     "92018c5b-7aa4-4095-92a7-00221b583a17": {
@@ -583,7 +568,6 @@
     "eb20ecc0-4470-4624-b140-f1161cf8823f",
     "211390c4-4881-4386-992f-62907dc8d4a0",
     "51d4a2b7-8c2e-4a53-bb06-179664c435d0",
-    "90c94887-f920-4f4d-8dbc-70cf6119d3ce",
     "749269fd-a63a-458d-b3f5-57ec8c86568c",
     "01666e88-11d5-4970-8587-55e3cb27e243",
     "0a5d7332-5a60-4baf-bf6a-adbba595c25e",
