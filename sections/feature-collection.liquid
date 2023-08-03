@@ -6,6 +6,7 @@
   assign textAlignment = section.settings.text_alignment 
   assign stackProduct = section.settings.stack_product
   assign products_per_row = section.settings.product_per_row
+  
   case products_per_row
   when 1
     assign itemWidth = ''
@@ -17,7 +18,8 @@
     assign itemWidth = 'block__item--auto block__item--one-fourth'
   when 5
     assign itemWidth = 'block__item--auto block__item--one-fifth'
-  endcase 
+  endcase
+  
 -%}
 {%- style -%}
   .main__section-{{ section.id }}{
