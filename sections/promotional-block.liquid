@@ -22,16 +22,16 @@
   <div class="page__width">
     <div class="promo-block__grid">
       {%- for block in section.blocks -%}
+        {%- liquid
+           assign textColor = block.settings.promo_text_color
+           assign buttonBackground = block.settings.promo_button_color
+           assign imageDesktop = block.settings.promo_image_desktop
+           assign imageMobile = block.settings.promo_image_mobile
+           assign ratio = 0.75
+           assign default = 'grande'
+           assign sizes = '100vw'
+        -%}
         {%- style -%}
-          {%- liquid
-             assign textColor = block.settings.promo_text_color
-             assign buttonBackground = block.settings.promo_button_color
-             assign imageDesktop = block.settings.promo_image_desktop
-             assign imageMobile = block.settings.promo_image_mobile
-             assign ratio = 0.75
-             assign default = 'grande'
-             assign sizes = '100vw'
-          -%}
           .promo-block-{{ block.id }} .promo-block__shadow{
             color: {{ textColor }};
           }
