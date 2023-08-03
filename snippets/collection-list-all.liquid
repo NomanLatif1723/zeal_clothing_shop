@@ -7,7 +7,6 @@
     assign default = 'grande'
     assign sizes = '(min-width: 1200px) 650px, 45vw'
 -%}
-{% for collection in collections %}
 <collection-item class="collection-grid__item {{ itemWidth }}">
   <div class="collection-grid__content">
     <div class="collection-grid__image " style="aspect-ratio: {{ imageAspectRatio }};">
@@ -45,4 +44,3 @@
     {%- endif -%}
   </div>
 </collection-item>
-{% endfor %}
