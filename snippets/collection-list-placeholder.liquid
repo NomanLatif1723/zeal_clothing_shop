@@ -1,3 +1,12 @@
+{%- liquid
+    assign collection_image = collection.image
+    if settings.show_first_product
+    assign collection_image = collection.products.first
+    endif
+    assign ratio = 0.75
+    assign default = 'grande'
+    assign sizes = '(min-width: 1200px) 650px, 45vw'
+-%}
 {% for collection in collections %}
 <collection-item class="collection-grid__item {{ itemWidth }}">
   <div class="collection-grid__content">
