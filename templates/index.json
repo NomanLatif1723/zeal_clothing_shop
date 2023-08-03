@@ -301,6 +301,7 @@
         "swipe_on_mobile": false,
         "products_count": true,
         "text_alignment": "center",
+        "collection_layout": "slider",
         "lazyload_images": true,
         "margin_top": 60,
         "margin_bottom": 60
@@ -571,6 +572,57 @@
         "navigation_styles": "bars",
         "lazyload_images": false
       }
+    },
+    "d8a6ba09-9ada-49b8-9557-a9e5e1f90882": {
+      "type": "collection-list",
+      "blocks": {
+        "template--19980215124290__d8a6ba09-9ada-49b8-9557-a9e5e1f90882-collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_heading": "Collection Title"
+          }
+        },
+        "template--19980215124290__d8a6ba09-9ada-49b8-9557-a9e5e1f90882-collection-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_heading": "Collection Title"
+          }
+        },
+        "template--19980215124290__d8a6ba09-9ada-49b8-9557-a9e5e1f90882-collection-3": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_heading": "Collection Title"
+          }
+        },
+        "template--19980215124290__d8a6ba09-9ada-49b8-9557-a9e5e1f90882-collection-4": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_heading": "Collection Title"
+          }
+        }
+      },
+      "block_order": [
+        "template--19980215124290__d8a6ba09-9ada-49b8-9557-a9e5e1f90882-collection-1",
+        "template--19980215124290__d8a6ba09-9ada-49b8-9557-a9e5e1f90882-collection-2",
+        "template--19980215124290__d8a6ba09-9ada-49b8-9557-a9e5e1f90882-collection-3",
+        "template--19980215124290__d8a6ba09-9ada-49b8-9557-a9e5e1f90882-collection-4"
+      ],
+      "settings": {
+        "heading": "Collection List",
+        "collection_per_row": 4,
+        "all_collections": false,
+        "swipe_on_mobile": false,
+        "products_count": true,
+        "text_alignment": "center",
+        "collection_layout": "grid",
+        "lazyload_images": false,
+        "margin_top": 16,
+        "margin_bottom": 16
+      }
     }
   },
   "order": [
@@ -586,6 +638,7 @@
     "01666e88-11d5-4970-8587-55e3cb27e243",
     "0a5d7332-5a60-4baf-bf6a-adbba595c25e",
     "92018c5b-7aa4-4095-92a7-00221b583a17",
-    "89b00526-245a-4caf-93a7-7382706b1dca"
+    "89b00526-245a-4caf-93a7-7382706b1dca",
+    "d8a6ba09-9ada-49b8-9557-a9e5e1f90882"
   ]
 }
