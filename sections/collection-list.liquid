@@ -67,7 +67,7 @@
                   {%- capture count -%}
                     {%- cycle 1, 2, 3, 4, 5, 6 -%}
                   {%- endcapture -%}
-                  <div class="collection-grid__image">
+                  <div class="collection-grid__image " style="aspect-ratio: {{ imageAspectRatio }};">
                     {{ 'collection-' | append: count | placeholder_svg_tag: "placeholder__image" }}
                     {%- if settings.overlay_style == false -%}
                       <div class="overlay-box__container text__align-{{ textAlignment }}">
