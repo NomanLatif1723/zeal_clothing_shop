@@ -1,15 +1,30 @@
+{% for collection in collections %}
 <collection-item class="collection-grid__item {{ itemWidth }}">
   <div class="collection-grid__content">
     {%- capture count -%}
       {%- cycle 1, 2, 3, 4, 5, 6 -%}
     {%- endcapture -%}
     <div class="collection-grid__image " style="aspect-ratio: {{ imageAspectRatio }};">
-      {{ 'collection-' | append: count | placeholder_svg_tag: "placeholder__image" }}
+      <img
+          class="collection__image"
+          src="{{ collection_image | img_url: default }}"
+          srcset="
+              {{ collection_image | img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
+              {{ collection_image | img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
+              {{ collection_image | img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
+              {{ collection_image | img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
+              {{ collection_image | img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
+          "
+          width="{{ collection_image.width }}"
+          height="{{ collection_image.height }}"
+          loading="{{ lazyloading }}"
+          sizes="{{ sizes }}"
+          alt="{{ collection_image.alt }}" />
       {%- if settings.overlay_style == false -%}
         <div class="overlay-box__container text__align-{{ textAlignment }}">
           <div class="collection-grid__text">
             <div class="collection-grid__title">
-              <h4>Example Collection</h4>
+              <h4>{{ collection.title }}</h4>
             </div>
           </div>
         </div>
@@ -18,9 +33,10 @@
     {%- if settings.overlay_style -%}
       <div class="collection-grid__text text__align-{{ textAlignment }}">   
         <div class="collection-grid__title">
-          <h4>Example Collection</h4>
+          <h4>{{ collection.title }}</h4>
         </div>
       </div>
     {%- endif -%}
   </div>
 </collection-item>
+{% endfor %}
