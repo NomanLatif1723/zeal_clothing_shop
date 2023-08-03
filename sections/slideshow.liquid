@@ -18,17 +18,17 @@
     >    
     <div class="slideshow__wrapper swiper-wrapper">
       {%- for block in section.blocks -%}
+        {%- liquid
+           assign slideTextColor = block.settings.slide_text_color
+           assign slideButtonColor = block.settings.slide_button_color
+           assign imageDesktop = block.settings.slide_image_desktop
+           assign imageMobile = block.settings.slide_image_mobile
+           assign ratio = 0.75
+           assign default = 'grande'
+           assign sizes = '100vw'
+        -%}
         <div class="slideshow__slide swiper-slide slideshow__slide-{{ block.id }}" {{ block.shopify_attributes }}>
           {%- style -%}
-            {%- liquid
-               assign slideTextColor = block.settings.slide_text_color
-               assign slideButtonColor = block.settings.slide_button_color
-               assign imageDesktop = block.settings.slide_image_desktop
-               assign imageMobile = block.settings.slide_image_mobile
-               assign ratio = 0.75
-               assign default = 'grande'
-               assign sizes = '100vw'
-            -%}
             .slideshow__slide-{{ block.id }} .slide__text-heading{
               color: {{ slideTextColor }};
             }
