@@ -39,7 +39,6 @@
     when 5
     assign itemWidth = 'block__item--auto block__item--one-fifth'
     endcase
-
 -%}
 {%- style -%}
   .main__section-{{ section.id }}{
@@ -113,8 +112,8 @@
                   </div>
                 </collection-item>
               {%- else -%}
-                {%- render 'collection-item' 
-                  , collection: collections[block.settings.collection],
+                {%- render 'collection-item', 
+                  collection: collections[block.settings.collection],
                   collection_heading: block.settings.collection_heading,
                   lazyloading: lazyloading,
                   products_count: products_count,
@@ -135,14 +134,14 @@
   </div>
 </section>
 <script>
-  var swiper {{ section.id | remove: '-' }} = new Swiper("#swiper-  {{ section.id }}", {
+  var swiper {{ section.id | remove: '-' }} = new Swiper("#swiper-{{ section.id }}", {
     slidesPerView: 2,
     navigation: {
-      nextEl: ".swiper-button-next.swiper-button-  {{ section.id }}",
-      prevEl: ".swiper-button-prev.swiper-button-  {{ section.id }}"
+      nextEl: ".swiper-button-next.swiper-button-{{ section.id }}",
+      prevEl: ".swiper-button-prev.swiper-button-{{ section.id }}"
     },
     pagination: {
-      el: ".swiper-pagination.swiper-pagination-  {{ section.id }}",
+      el: ".swiper-pagination.swiper-pagination-{{ section.id }}",
       clickable: true
     },
     breakpoints: {
