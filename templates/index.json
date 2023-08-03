@@ -238,7 +238,6 @@
         },
         "template--19980215124290__eb20ecc0-4470-4624-b140-f1161cf8823f-collection-4": {
           "type": "collection",
-          "disabled": true,
           "settings": {
             "collection": "womens-wear",
             "collection_heading": ""
@@ -246,7 +245,6 @@
         },
         "58b60cd6-a012-4f73-ae0d-10b47b04ebbc": {
           "type": "collection",
-          "disabled": true,
           "settings": {
             "collection": "",
             "collection_heading": "Collection Title"
