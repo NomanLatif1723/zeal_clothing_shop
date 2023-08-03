@@ -976,6 +976,10 @@
             }
           }
         },
+        "show_circular_images": {
+          "label": "Circular Images",
+          "info": "Require Square Images"
+        },
         "testimonial_background_color": {
           "label": "Background"
         },
