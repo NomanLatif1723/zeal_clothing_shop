@@ -7,7 +7,7 @@
     assign default = 'grande'
     assign sizes = '(min-width: 1200px) 650px, 45vw'
 -%}
-<collection-item class="collection-grid__item {{ itemWidth }} {% if collection_layout == 'slider' %} swiper-slide{% endif %}">
+<collection-item class="collection-grid__item{% if collection_layout == 'slider' %} swiper-slide{% else %} {{ itemWidth }}{% endif %}">
   <div class="collection-grid__content">
     <div class="collection-grid__image " style="aspect-ratio: {{ imageAspectRatio }};">
       <img
