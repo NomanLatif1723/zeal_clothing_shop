@@ -1,12 +1,11 @@
 {%- liquid
+  assign products_per_row = section.settings.product_per_row
   assign product_rows = section.settings.product_rows
-  assign product_limit = products_per_row | times: product_rows
+  assign product_limit = products_per_row | times: product_rows     
   assign collection = collections[section.settings.collection]   
   assign show_view_all = section.settings.show_view_all   
   assign textAlignment = section.settings.text_alignment    
   assign stackProduct = section.settings.stack_product    
-  assign products_per_row = section.settings.product_per_row    
-  
   case products_per_row   
   when 1
     assign itemWidth = ''
