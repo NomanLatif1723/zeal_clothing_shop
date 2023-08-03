@@ -23,27 +23,28 @@ endif
   <div class="page__width">
     <div class="announcement__wrapper">
       <div class="social__container">
-        {% render 'social-icons' %}
+        {%- render 'social-icons' -%}
       </div>
       <div class="main__announcement-banner">
-        {% if section.settings.heading_text != blank %}
+        {%- if section.settings.heading_text != blank -%}
           <div class="announcement__heading">{{ section.settings.heading_text }}</div>
-        {% endif %}
-        {% if section.settings.show_timer %}
+        {%- endif -%}
+        {%- if section.settings.show_timer -%}
           <div
             class="main__timer"
             data-hour="{{ section.settings.timer_hours }}"
             data-minutes="{{ section.settings.timer_minutes }}"></div>
-        {% endif %}
+        {%- endif -%}
         {% if section.settings.announcement_text != blank %}
           <div class="main__text">{{ section.settings.announcement_text }}</div>
-        {% endif %}
+        {%- endif -%}
       </div>
       <div class="language__currency-container">
-        {% render 'localization' 
-         , locale_selector: locale_selector,
+        {%- render 'localization',
+         locale_selector: locale_selector,
          currency_selector: currency_selector,
-         show_flags: settings.show_flags %}
+         show_flags: settings.show_flags 
+        -%}
       </div>
     </div>
   </div>
