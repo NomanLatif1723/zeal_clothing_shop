@@ -295,6 +295,7 @@
         "type": "select",
         "id": "collection_image_size",
         "label": "t:schema_settings.collections.settings.image_size.label",
+        "default": "portrait",
         "options": [
           {
             "value": "square",
