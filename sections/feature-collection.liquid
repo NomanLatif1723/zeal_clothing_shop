@@ -70,13 +70,14 @@
           {%- endfor -%}
         {%- else -%}
           {%- for product in collection.products limit: product_limit -%}
-            {%- render 'product-item'
-              , section: section,
+            {%- render 'product-item',
+              section: section,
               textAlignment: textAlignment,
-              products_per_row: products_per_row,
               product: product,
               collection: collection,
-              lazyloadImages: section.settings.lazyload_images -%}
+              lazyloadImages: section.settings.lazyload_images,
+              itemWidth: itemWidth
+            -%}
           {%- endfor -%}
         {%- endif -%}
       </div>
