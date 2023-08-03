@@ -66,7 +66,7 @@
           <div class="swiper-button-prev swiper-button-{{ section.id }}"></div>
         </div>
       {%- endif -%}
-      {%- if collection_layout == 'slider' and collection != blank -%}
+      {%- if collection_layout == 'slider' -%}
         <div id="swiper-{{ section.id }}" class="collection-list__slider swiper">
       {%- endif -%}
       <collection-list class="collection-grid{% if collection_layout == 'slider' %} swiper-wrapper{% endif %}">
