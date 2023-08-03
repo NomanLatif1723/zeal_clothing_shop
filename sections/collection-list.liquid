@@ -72,8 +72,8 @@
         <collection-list class="collection-grid__list collection-grid{% if collection_layout == 'slider' %} swiper-wrapper{% endif %}{% if swipe_on_mobile and collection_layout == 'grid' %} collection-grid__scroll{% endif %}">
           {%- if show_all_collections -%}
             {% for collection in collections %}
-              {% render 'collection-list-all' 
-               , collection: collection,
+              {% render 'collection-list-all', 
+               collection: collection,
                textAlignment: textAlignment,
                itemWidth: itemWidth,
                imageAspectRatio: imageAspectRatio,
