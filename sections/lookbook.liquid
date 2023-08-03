@@ -21,10 +21,12 @@
   <div class="page__width">
     <div class="lookbook-grid">
       {%- for block in section.blocks -%}
-        {%- assign lookbookImage = block.settings.lookbook_image -%}
-        {%- assign ratio = 0.75 -%}
-        {%- assign default = 'grande' -%}
-        {%- assign sizes = '(min-width: 1200px) 650px, 45vw' -%}
+        {%- liquid
+           assign lookbookImage = block.settings.lookbook_image
+           assign ratio = 0.75
+           assign default = 'grande'
+           assign sizes = '(min-width: 1200px) 650px, 45vw'
+        -%}
         <div class="lookbook-grid__item lookbook-item-{{ block.id }}">
           <div class="lookbook-image__container">
             {%- if lookbookImage != blank -%}
