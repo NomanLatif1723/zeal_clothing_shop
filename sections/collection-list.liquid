@@ -133,7 +133,7 @@
     </div>
   </div>
 </section>
-
+{%- if collection_layout == 'slider' -%}
 <script>
   var swiper{{ section.id | remove: '-' }} = new Swiper("#swiper-{{ section.id }}", {
     slidesPerView: 2,
@@ -156,6 +156,7 @@
   });
 
 </script>
+{%- endif -%}
 {% schema %}
   {
     "name": "t:sections.collection-list.name",
