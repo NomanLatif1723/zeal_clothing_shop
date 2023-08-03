@@ -4,6 +4,7 @@
     assign show_all_collections = section.settings.all_collections
     assign products_count = section.settings.products_count
     assign textAlignment = section.settings.text_alignment
+    assign swipe_on_mobile = section.settings.swipe_on_mobile
     assign collection_layout = settings.collection_layout
     assign lazyloading = ''
     assign lazyloadImages = section.settings.lazyload_images
@@ -69,7 +70,7 @@
       {%- if collection_layout == 'slider' -%}
         <div id="swiper-{{ section.id }}" class="collection-list__slider swiper">
       {%- endif -%}
-      <collection-list class="collection-grid{% if collection_layout == 'slider' %} swiper-wrapper{% endif %}">
+      <collection-list class="collection-grid{% if collection_layout == 'slider' %} swiper-wrapper{% endif %}{% if swipe_on_mobile %} collection-grid__scroll{% endif %}">
         {%- if show_all_collections -%}
           {% for collection in collections %}
             {% render 'collection-list-all',
@@ -85,7 +86,7 @@
         {%- else -%}
           {%- for block in section.blocks -%}
             {%- if collections[block.settings.collection] ==  blank -%}
-              <collection-item class="collection-grid__item {{ itemWidth }} {% if collection_layout == 'slider' %} swiper-slide{% endif %}" {{ block.shopify_attributes }}>
+              <collection-item class="collection-grid__item {{ itemWidth }} {% if collection_layout == 'slider' %} swiper-slide{% endif %}{% if swipe_on_mobile %} collection-item__scroll{% endif %}" {{ block.shopify_attributes }}>
                 <div class="collection-grid__content">
                   {%- capture count -%}
                     {%- cycle 1, 2, 3, 4, 5, 6 -%}
