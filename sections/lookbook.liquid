@@ -60,6 +60,26 @@
     "class": "main__section",
     "settings": [
       {
+        "type": "select",
+        "id": "collection_image_size",
+        "label": "t:schema_settings.collections.settings.image_size.label",
+        "default": "portrait",
+        "options": [
+          {
+            "value": "square",
+            "label": "t:schema_settings.collections.settings.image_size.options.square.label"
+          },
+          {
+            "value": "portrait",
+            "label": "t:schema_settings.collections.settings.image_size.options.portrait.label"
+          },
+          {
+            "value": "landscape",
+            "label": "t:schema_settings.collections.settings.image_size.options.landscape.label"
+          }
+        ]
+      },
+      {
         "type": "checkbox",
         "id": "lazyload_images",
         "label": "t:sections.lookbook.settings.lazyload_images.label",
