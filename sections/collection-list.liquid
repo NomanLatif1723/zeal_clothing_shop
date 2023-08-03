@@ -61,12 +61,14 @@
       </header>
       <collection-list class="collection-grid">
         {%- if show_all_collections -%}
-          {% render 'collection-list-all',
-            collection: collection,
-            textAlignment: textAlignment,
-            itemWidth: itemWidth,
-            imageAspectRatio: imageAspectRatio
-          %}
+          {% for collection in collections %}
+            {% render 'collection-list-all',
+              collection: collection,
+              textAlignment: textAlignment,
+              itemWidth: itemWidth,
+              imageAspectRatio: imageAspectRatio
+            %}
+          {% endfor %}
         {%- else -%}
           {%- for block in section.blocks -%}
             {%- if collections[block.settings.collection] ==  blank -%}
