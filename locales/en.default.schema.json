@@ -1184,9 +1184,6 @@
         "image_size": {
           "label": "Image Size",
           "options": {
-            "natural": {
-              "label": "Natural"
-            },
             "square": {
               "label": "Square(1:1)"
             },
@@ -1195,9 +1192,6 @@
             },
             "landscape": {
               "label": "Landscape(4:3)"
-            },
-            "wide": {
-              "label": "Wide(16:9)"
             }
           }
         },
