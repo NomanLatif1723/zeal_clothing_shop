@@ -75,7 +75,7 @@
           </div>
         {%- endif -%}
       </div>
-      
+      {%- unless autoplay_video -%}
         <div class="video-section__content">
           <div class="video-section__content--box text__position-{{ content_position }}">
             <div class="video-section__box--element text__align-{{ text_alignment }}">
@@ -95,7 +95,7 @@
             </div>
           </div>
         </div>
-      
+      {%- endunless -%}
     </div>
 
     {%- if full_width == false -%}
