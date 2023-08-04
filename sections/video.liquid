@@ -29,22 +29,10 @@
       class="video-section__main" data-desktop-height="{{ desktop_height }}" data-mobile-height="{{ mobile_height }}">
       <div class="video-section__video--container">
         {%- if external_video != blank and video != blank -%}
-          {%- render 'video-poster', 
-            section: section,
-            sub_heading: sub_heading,
-            heading: heading,
-            cover_image: cover_image,
-            autoplay_video: autoplay_video -%}
           <div class="native-video__container">
             {{ video | video_tag: autoplay: autoplay_video, muted: autoplay_video, playsinline: autoplay_video, loop: autoplay_video }}
           </div>
         {%- elsif external_video != blank and video == blank -%}
-          {%- render 'video-poster', 
-            section: section,
-            sub_heading: sub_heading,
-            heading: heading,
-            cover_image: cover_image,
-            autoplay_video: autoplay_video -%}
           <div class="external-video__container">
             {%- if external_video.type == 'youtube' -%}
               <iframe
@@ -60,6 +48,10 @@
                 allow="autoplay"></iframe>
             {%- endif -%}
           </div>
+        {%- elsif external_video == blank and video != blank -%}
+          <div class="native-video__container">
+            {{ video | video_tag: autoplay: autoplay_video, muted: autoplay_video, playsinline: autoplay_video, loop: autoplay_video }}
+          </div>
         {%- else -%}
           {%- render 'video-poster',
             section: section,
@@ -67,11 +59,7 @@
             heading: heading,
             cover_image: cover_image,
             autoplay_video: autoplay_video -%}
-          <div class="native-video__container">
-            {{ video | video_tag: autoplay: autoplay_video, muted: autoplay_video, playsinline: autoplay_video, loop: autoplay_video }}
-          </div>
         {%- endif -%}
-
       </div>
       {%- if external_video != blank or video != blank -%}
         <div class="video-section__content">
