@@ -329,6 +329,7 @@
         "height_mobile": "auto",
         "sub_heading": "Sub Heading",
         "heading": "Video",
+        "cover_image": "shopify:\/\/shop_images\/Modwl_1.jpg",
         "external_video": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "video": "shopify:\/\/files\/videos\/Elementor video placeholder.mp4",
         "autoplay_video": false,
