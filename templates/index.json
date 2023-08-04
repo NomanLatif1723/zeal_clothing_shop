@@ -325,7 +325,7 @@
       "type": "video",
       "settings": {
         "section_width": true,
-        "height_desktop": "full",
+        "height_desktop": "compact",
         "height_mobile": "auto",
         "sub_heading": "Sub Heading",
         "heading": "Video",
