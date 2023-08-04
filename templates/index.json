@@ -321,6 +321,22 @@
         "margin_bottom": 60
       }
     },
+    "c0245056-efb1-46ad-88b8-a41be958d247": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "",
+        "heading": "Featured Collection",
+        "text": "Write Small Description About Your Collection",
+        "product_per_row": 4,
+        "product_rows": 2,
+        "stack_product": true,
+        "show_view_all": false,
+        "text_alignment": "center",
+        "lazyload_images": true,
+        "margin_top": 60,
+        "margin_bottom": 60
+      }
+    },
     "51d4a2b7-8c2e-4a53-bb06-179664c435d0": {
       "type": "promotional-grid",
       "blocks": {
@@ -566,6 +582,7 @@
     "b2c49c1e-4880-4b9e-90e7-0135ddd0a9b9",
     "eb20ecc0-4470-4624-b140-f1161cf8823f",
     "211390c4-4881-4386-992f-62907dc8d4a0",
+    "c0245056-efb1-46ad-88b8-a41be958d247",
     "51d4a2b7-8c2e-4a53-bb06-179664c435d0",
     "749269fd-a63a-458d-b3f5-57ec8c86568c",
     "01666e88-11d5-4970-8587-55e3cb27e243",
