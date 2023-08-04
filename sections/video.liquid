@@ -21,7 +21,7 @@
     }
   }
 {%- endstyle -%}
-<section class="video__wrapper main__section-{{ section.id }}" data-desktop-height="{{ desktop_height }}" data-mobile-height="{{ mobile_height }}">
+<div class="video__wrapper main__section-{{ section.id }}" data-desktop-height="{{ desktop_height }}" data-mobile-height="{{ mobile_height }}">
   {%- if full_width == false -%}
     <div class="page__width">
     {%- endif -%}
@@ -99,7 +99,7 @@
     {%- if full_width == false -%}
     </div>
   {%- endif -%}
-</section>
+</div>
 {% schema %}
   {
     "name": "t:sections.video.name",
