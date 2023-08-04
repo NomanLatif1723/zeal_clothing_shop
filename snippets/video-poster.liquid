@@ -1,7 +1,7 @@
-{% if cover_image != blank %}
-  <div class="video-section__poster">
+{%- if cover_image != blank -%}
+  <div class="video-section__poster">   
     {{ cover_image | image_url: width: cover_image.width | image_tag: loading: 'lazy', sizes: '100vw', widths: '240,480,600,1024,2048', class: "video-poster__image" }}
-  {% else %}
+  {%- else -%}
     {{ 'lifestyle-1' | placeholder_svg_tag: "placeholder__image" }}
     <div class="video-poster__content">
       <div class="video-section__content--box">
@@ -23,4 +23,4 @@
       </div>
     </div>
   </div>
-{% endif %}
+{%- endif -%}
