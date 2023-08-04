@@ -1158,12 +1158,14 @@ font-display: "swap";
 }
 
 /*  Lookbook Section */
-.lookbook-grid__item {
-  padding-bottom: 10px;
-}
 /* .lookbook-grid__item:last-child {
     padding-bottom: 0;
 } */
+.lookbook-grid__item {
+    /* padding-bottom: 10px; */
+    min-height: 500px;
+    max-height: 500px;
+}
 .lookbook-image__container {
     height: 100%;
     width: 100%;
@@ -1172,6 +1174,10 @@ font-display: "swap";
     object-fit: cover;
 }
 @media only screen and (min-width: 769px) {
+  .lookbook-grid__item {
+    min-height: 580px;
+    max-height: 580px;
+  }
   .lookbook-grid {
     display: flex;
     flex-wrap: wrap;
