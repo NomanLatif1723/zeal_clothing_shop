@@ -1,9 +1,0 @@
-<div class="video-section__poster">
-  {%- unless autoplay_video -%}
-    {%- if cover_image != blank -%}
-      {{ cover_image | image_url: width: cover_image.width | image_tag: loading: 'lazy', sizes: '100vw', widths: '240,480,600,1024,2048', class: "video-poster__image" }}
-    {%- else -%}
-      {{ 'lifestyle-1' | placeholder_svg_tag: "placeholder__image" }}
-    {%- endif -%}
-  {%- endunless -%}
-</div>
