@@ -331,6 +331,9 @@
         "heading": "Video",
         "external_video": "",
         "autoplay_video": false,
+        "color_text": "rgba(0,0,0,0)",
+        "content_position": "center",
+        "text_alignment": "center",
         "margin_top": 60,
         "margin_bottom": 60
       }
