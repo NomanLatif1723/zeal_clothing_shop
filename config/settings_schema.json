@@ -314,6 +314,16 @@
     ]
   },
   {
+    "name": "Favicon",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "favicon",
+        "label": "Favicon Image"
+      }
+    ]
+  },
+  {
     "name": "Extras",
     "settings": [
       {
