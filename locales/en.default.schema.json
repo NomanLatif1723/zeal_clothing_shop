@@ -1117,6 +1117,9 @@
         "autoplay_video": {
           "label": "Autoplay Video"
         },
+        "color_text": {
+          "label": "Text"
+        },
         "header_alignment": {
           "label": "Position and Alignment",
           "content_position": {
