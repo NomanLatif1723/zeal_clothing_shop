@@ -324,7 +324,7 @@
     "6c915974-bf41-4211-adbb-e966c2df30a9": {
       "type": "video",
       "settings": {
-        "section_width": true,
+        "section_width": false,
         "height_desktop": "full",
         "height_mobile": "auto",
         "sub_heading": "Sub Heading",
