@@ -37,13 +37,13 @@
             {%- if external_video.type == 'youtube' -%}
               <iframe
                 title="{{ heading }}"
-                src="https://www.youtube.com/embed/{{ external_video.id }}?playsinline=1&autoplay=1{% if autoplay_video %}&controls=0&mute=1&loop=1{% endif %}"
+                src="https://www.youtube.com/embed/{{ external_video.id }}?playsinline=1{% if autoplay_video %}&autoplay=1{% endif %}&controls=0&mute=1&loop=1"
                 allow=""
                 allowfullscreen></iframe>
             {%- endif -%}
             {%- if external_video.type == 'vimeo' -%}
               <iframe
-                src="https://player.vimeo.com/video/{{ external_video.id }}?autoplay=1&autopause=1{% if autoplay_video %}&background=1&loop=1&muted=1{% endif %}"
+                src="https://player.vimeo.com/video/{{ external_video.id }}?{% if autoplay_video %}autoplay=1{% endif %}&autopause=1&background=1&loop=1&muted=1"
                 allowfullscreen
                 allow="autoplay"></iframe>
             {%- endif -%}
