@@ -1178,12 +1178,18 @@ font-display: "swap";
 .lookbook-image__container img {
     object-fit: cover;
 }
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 481px) {
+  .lookbook-grid__item {
+    min-height: 400px;
+    max-height: 400px;
+  }
+}
+/* @media only screen and (min-width: 769px) {
   .lookbook-grid__item {
     min-height: 500px;
     max-height: 500px;
   }
-}
+} */
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
   .lookbook-grid__item {
     flex: 1 0 50%;
@@ -1191,6 +1197,8 @@ font-display: "swap";
 }
 @media only screen and (min-width: 1201px) {
   .lookbook-grid__item {
+    min-height: 500px;
+    max-height: 500px;
     flex: 1 0 33.33%;
   }
   
