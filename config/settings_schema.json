@@ -319,7 +319,8 @@
       {
         "type": "image_picker",
         "id": "favicon",
-        "label": "Favicon Image"
+        "label": "Favicon Image",
+        "info": "Will be Scaled Down to 32 X 32px"
       }
     ]
   },
