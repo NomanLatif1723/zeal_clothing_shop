@@ -10,11 +10,15 @@
   assign autoplay_video = section.settings.autoplay_video
   assign content_position = section.settings.content_position
   assign text_alignment = section.settings.text_alignment
+  assign color_text = section.settings.color_text
 -%}
 {%- style -%}
   .main__section-{{ section.id }}{
     margin-top: 30px;
     margin-bottom: 30px;
+  }
+  .video-section__box--element{
+    color: {{ color_text }};
   }
   @media only screen and (min-width: 769px) {
     .main__section-{{ section.id }}{
