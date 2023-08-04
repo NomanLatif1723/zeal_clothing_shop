@@ -21,14 +21,12 @@
     }
   }
 {%- endstyle -%}
-<section class="video__wrapper main__section-{{ section.id }}">
+<section class="video__wrapper main__section-{{ section.id }}" data-desktop-height="{{ desktop_height }}" data-mobile-height="{{ mobile_height }}">
   {%- if full_width == false -%}
     <div class="page__width">
     {%- endif -%}
     <div
-      class="video-section__main"
-      data-desktop-height="{{ desktop_height }}"
-      data-mobile-height="{{ mobile_height }}">
+      class="video-section__main">
       <div class="video-section__video--container">
         {%- if external_video != blank and video != blank -%}
           {%- render 'video-poster' 
