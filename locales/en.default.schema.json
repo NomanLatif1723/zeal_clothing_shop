@@ -1053,6 +1053,74 @@
       "presets": {
         "name": "Testimonials"
       }
+    },
+    "video": {
+      "name": "Video",
+      "settings": {
+        "section_width": {
+          "label": "Full Width"
+        },
+        "section_height_desktop": {
+          "label": "Desktop Height",
+          "options": {
+            "compact": {
+              "label": "Compact (450px)"
+            },
+            "standard": {
+              "label": "Standard (650px)"
+            },
+            "extended": {
+              "label": "Extended (750px)"
+            },
+            "full": {
+              "label": "Full Screen"
+            }
+          }
+        },
+        "section_height_mobile": {
+          "label": "Mobile Height",
+          "options": {
+            "auto": {
+              "label": "Auto"
+            },
+            "compact": {
+              "label": "Compact (300px)"
+            },
+            "standard": {
+              "label": "Standard (400px)"
+            },
+            "extended": {
+              "label": "Extended (500px)"
+            },
+            "full": {
+              "label": "Full Screen"
+            }
+          }
+        },
+        "sub_heading": {
+          "label": "Subheading"
+        },
+        "heading": {
+          "label": "Heading"
+        },
+        "cover_image": {
+          "label": "Cover Image",
+          "info": "Applied Only If Autoplay Turned Off"
+        },
+        "external_video": {
+          "label": "External Video"
+        },
+        "video": {
+          "label": "Video",
+          "info": "Replaces The External Video If both are set"
+        },
+        "autoplay_video": {
+          "label": "Autoplay Video"
+        }
+      },
+      "presets": {
+        "name": "Video"
+      }
     }
   },
   "schema_settings": {

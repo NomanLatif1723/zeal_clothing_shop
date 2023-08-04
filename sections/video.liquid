@@ -1,0 +1,226 @@
+{%-  liquid
+  assign full_width = section.settings.section_width
+  assign desktop_height = section.settings.height_desktop
+  assign mobile_height = section.settings.height_mobile
+  assign sub_heading = section.settings.sub_heading
+  assign heading = section.settings.heading
+  assign cover_image = section.settings.cover_image
+  assign external_video = section.settings.external_video
+  assign video = section.settings.video
+  assign autoplay_video = section.settings.autoplay_video
+-%}
+{%- style -%}
+  .main__section-{{ section.id }}{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  @media only screen and (min-width: 769px) {
+    .main__section-{{ section.id }}{
+      margin-top: {{ section.settings.margin_top }}px;
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<section class="video__wrapper main__section-{{ section.id }}">
+  {%- if full_width == false -%}
+    <div class="page__width">
+    {%- endif -%}
+    <div
+      class="video-section__main"
+      data-desktop-height="{{ desktop_height }}"
+      data-mobile-height="{{ mobile_height }}">
+      <div class="video-section__video--container">
+        {%- if external_video != blank and video != blank -%}
+          {%- render 'video-poster'
+            , section: section,
+            sub_heading: sub_heading,
+            heading: heading,
+            cover_image: cover_image,
+            autoplay_video: autoplay_video -%}
+          <div class="native-video__container">
+            {{ video | video_tag: autoplay: autoplay_video, muted: autoplay_video, playsinline: autoplay_video, loop: autoplay_video }}
+          </div>
+        {%- elsif external_video != blank and video == blank -%}
+          {%- render 'video-poster'
+            , section: section,
+            sub_heading: sub_heading,
+            heading: heading,
+            cover_image: cover_image,
+            autoplay_video: autoplay_video -%}
+          <div class="external-video__container">
+            {%- if external_video.type == 'youtube' -%}
+              <iframe
+                title="{{ heading }}"
+                src="https://www.youtube.com/embed/{{ external_video.id }}?playsinline=1&autoplay=1{% if autoplay_video %}&controls=0&mute=1&loop=1{% endif %}"
+                allow=""
+                allowfullscreen></iframe>
+            {%- endif -%}
+            {%- if external_video.type == 'vimeo' -%}
+              <iframe
+                src="https://player.vimeo.com/video/{{ external_video.id }}?autoplay=1&autopause=1{% if autoplay_video %}&background=1&loop=1&muted=1{% endif %}"
+                allowfullscreen
+                allow="autoplay"></iframe>
+            {%- endif -%}
+          </div>
+        {%- else -%}
+          {%- render 'video-poster'
+            , section: section,
+            sub_heading: sub_heading,
+            heading: heading,
+            cover_image: cover_image,
+            autoplay_video: autoplay_video -%}
+          <div class="native-video__container">
+            {{ video | video_tag: autoplay: autoplay_video, muted: autoplay_video, playsinline: autoplay_video, loop: autoplay_video }}
+          </div>
+        {%- endif -%}
+
+      </div>
+      {%- if external_video != blank or video != blank -%}
+        <div class="video-section__content">
+          <div class="video-section__content--box">
+            <div class="video-section__box--element">
+              {%- if sub_heading != blank -%}
+                <div class="sub__heading video-section__subheading">
+                  {{ sub_heading }}
+                </div>
+              {%- endif -%}
+              {%- if heading != blank -%}
+                <div class="video-section__heading">
+                  <h1>{{ heading }}</h1>
+                </div>
+              {%- endif -%}
+              <div class="video-section__playicon">
+                {% render 'icon-play' %}
+              </div>
+            </div>
+          </div>
+        </div>
+      {%- endif -%}
+    </div>
+
+    {%- if full_width == false -%}
+    </div>
+  {%- endif -%}
+</section>
+{% schema %}
+  {
+    "name": "t:sections.video.name",
+    "class": "main__section",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "section_width",
+        "label": "t:sections.video.settings.section_width.label",
+        "default": true
+      },
+      {
+        "type": "select",
+        "id": "height_desktop",
+        "label": "t:sections.video.settings.section_height_desktop.label",
+        "options": [
+          {
+            "value": "compact",
+            "label": "t:sections.video.settings.section_height_desktop.options.compact.label"
+          }, {
+            "value": "standard",
+            "label": "t:sections.video.settings.section_height_desktop.options.standard.label"
+          }, {
+            "value": "extended",
+            "label": "t:sections.video.settings.section_height_desktop.options.extended.label"
+          }, {
+            "value": "full",
+            "label": "t:sections.video.settings.section_height_desktop.options.full.label"
+          }
+        ],
+        "default": "full"
+      },
+      {
+        "type": "select",
+        "id": "height_mobile",
+        "label": "t:sections.video.settings.section_height_mobile.label",
+        "options": [
+          {
+            "value": "auto",
+            "label": "t:sections.video.settings.section_height_mobile.options.auto.label"
+          },
+          {
+            "value": "compact",
+            "label": "t:sections.video.settings.section_height_mobile.options.compact.label"
+          },
+          {
+            "value": "standard",
+            "label": "t:sections.video.settings.section_height_mobile.options.standard.label"
+          },
+          {
+            "value": "extended",
+            "label": "t:sections.video.settings.section_height_mobile.options.extended.label"
+          }, {
+            "value": "full",
+            "label": "t:sections.video.settings.section_height_mobile.options.full.label"
+          }
+        ],
+        "default": "auto"
+      },
+      {
+        "type": "text",
+        "id": "sub_heading",
+        "label": "t:sections.video.settings.sub_heading.label",
+        "default": "Sub Heading"
+      }, {
+        "type": "text",
+        "id": "heading",
+        "label": "t:sections.video.settings.heading.label",
+        "default": "Video"
+      }, {
+        "type": "image_picker",
+        "id": "cover_image",
+        "label": "t:sections.video.settings.cover_image.label",
+        "info": "t:sections.video.settings.cover_image.info"
+      }, {
+        "type": "video_url",
+        "id": "external_video",
+        "label": "t:sections.video.settings.external_video.label",
+        "accepts": ["youtube", "vimeo"]
+      }, {
+        "type": "video",
+        "id": "video",
+        "label": "t:sections.video.settings.video.label",
+        "info": "t:sections.video.settings.video.info"
+      }, {
+        "type": "checkbox",
+        "id": "autoplay_video",
+        "label": "t:sections.video.settings.autoplay_video.label",
+        "default": false
+      }, {
+        "type": "header",
+        "content": "t:sections.video.settings.header_spacing.label"
+      }, {
+        "type": "range",
+        "id": "margin_top",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "label": "t:sections.video.settings.header_spacing.top_spacing.label",
+        "default": 16
+      }, {
+        "type": "range",
+        "id": "margin_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "label": "t:sections.video.settings.header_spacing.bottom_spacing.label",
+        "default": 16
+      }
+    ],
+    "presets": [
+      {
+        "name": "t:sections.video.presets.name"
+      }
+    ],
+    "disabled_on": {
+      "groups": ["header", "footer"]
+    }
+  }
+{% endschema %}
