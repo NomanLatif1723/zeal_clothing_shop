@@ -52,7 +52,7 @@
             {%- endif -%}
             {%- if external_video.type == 'vimeo' -%}
               <iframe
-                src="https://player.vimeo.com/video/{{ external_video.id }}?{% if autoplay_video %}autoplay=1{% endif %}&autopause=1&background=1&loop=1&muted=1"
+                src="https://player.vimeo.com/video/{{ external_video.id }}?{% if autoplay_video %}autoplay=1&autopause=1&background=1&loop=1&muted=1"{% endif %}
                 allowfullscreen
                 allow="autoplay"></iframe>
             {%- endif -%}
