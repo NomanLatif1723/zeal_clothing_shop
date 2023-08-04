@@ -8,6 +8,8 @@
   assign external_video = section.settings.external_video
   assign video = section.settings.video
   assign autoplay_video = section.settings.autoplay_video
+  assign content_position = section.settings.content_position
+  assign text_alignment = section.settings.text_alignment
 -%}
 {%- style -%}
   .main__section-{{ section.id }}{
@@ -64,8 +66,8 @@
       </div>
       
         <div class="video-section__content">
-          <div class="video-section__content--box">
-            <div class="video-section__box--element">
+          <div class="video-section__content--box text__position-{{ content_position }}">
+            <div class="video-section__box--element text__align-{{ text_alignment }}">
               {%- if sub_heading != blank -%}
                 <div class="sub__heading video-section__subheading">
                   {{ sub_heading }}
