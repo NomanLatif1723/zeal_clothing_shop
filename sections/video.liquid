@@ -42,6 +42,13 @@
             {{ video | video_tag: autoplay: autoplay_video, muted: autoplay_video, playsinline: autoplay_video, loop: autoplay_video }}
           </div>
         {%- elsif external_video != blank and video == blank -%}
+          {%- unless autoplay_video -%}
+            {%- if cover_image != blank -%}
+              {{ cover_image | image_url: width: cover_image.width | image_tag: loading: 'lazy', sizes: '(min-width: 1200px) 650px, 45vw', widths: '240,480,600,1024,2048', class: "video-poster__image" }}
+            {%- else -%}
+              {{ 'lifestyle-1' | placeholder_svg_tag: "placeholder__image" }}
+            {%- endif -%}
+          {%- endunless -%}
           <div class="external-video__container">
             {%- if external_video.type == 'youtube' -%}
               <iframe
