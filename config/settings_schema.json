@@ -344,12 +344,6 @@
         "id": "show_flags",
         "label": "Show Flags",
         "default": false
-      },
-      {
-        "type": "checkbox",
-        "id": "show_socials",
-        "label": "Show Social Icons",
-        "default": false
       }
     ]
   }
