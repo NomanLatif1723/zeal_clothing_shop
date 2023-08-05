@@ -49,25 +49,30 @@ document.querySelectorAll('.show-more__swatches').forEach(option => {
 
 const videoPlayIcon = document.querySelectorAll('.video-section__playicon');
 const poster = document.querySelector('.video__poster');
-const externalVideoContainer = document.querySelector('.external-video__container');
+// const externalVideoContainer = document.querySelector('.external-video__container');
 const externalVideo = document.querySelector('.external-video__container video');
-const nativeVideoContainer = document.querySelector('.native-video__container');
+// const nativeVideoContainer = document.querySelector('.native-video__container');
 const nativeVideo = document.querySelector('.native-video__container iframe');
 
 videoPlayIcon.forEach(button => {
   button.addEventListener('click', () => {
-    
-    if(externalVideoContainer) {
-      button.closest('.video-section__content').style.display = 'none';
-      poster.style.display = 'none';
-      button.closest('.video-section__main').querySelector('.external-video__container').classList.remove('video-container__hide');
-    } else if(nativeVideoContainer) {
-      button.closest('.video-section__content').style.display = 'none';
-      poster.style.display = 'none';
-      button.closest('.video-section__main').querySelector('.native-video__container').classList.remove('video-container__hide');
-      button.closest('.video-section__main').querySelector('.native-video__container video').play();
-    }
-    
+      // button.closest('.video-section__content').style.display = 'none';
+      // poster.style.display = 'none';
+      const externalVideoContainer = button.closest('.video-section__main').querySelector('.external-video__container');
+      const nativeVideoContainer = button.closest('.video-section__main').querySelector('.native-video__container');
+      const externalVideo = button.closest('.video-section__main').querySelector('.external-video__container iframe');
+      const nativeVideo = button.closest('.video-section__main').querySelector('.native-video__container video');
+      const overlayContainer = button.closest('.video-section__content').style.display = 'none';
+      if (externalVideo) {
+        poster.style.display = 'none';
+        overlayContainer.style.display = 'none';
+        externalVideoContainer.classList.remove('video-container__hide');
+      } else if (nativeVideo) {
+        poster.style.display = 'none';
+        overlayContainer.style.display = 'none';
+        nativeVideoContainer.classList.remove('video-container__hide');
+        nativeVideo.play();
+      }
   })
 })
 
