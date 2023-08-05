@@ -555,56 +555,15 @@
         "margin_bottom": 16
       }
     },
-    "a8a94a5c-39f2-466a-ac22-d0e07d82370e": {
-      "type": "promotional-grid",
-      "blocks": {
-        "template--19980215124290__a8a94a5c-39f2-466a-ac22-d0e07d82370e-banner-1": {
-          "type": "banner",
-          "settings": {
-            "banner_heading": "Banner Promotion",
-            "banner_text": "Welcome to Our Shop",
-            "banner_button_1": "Shop This",
-            "banner_button_link_1": "",
-            "banner_button_2": "Shop All",
-            "banner_button_link_2": "",
-            "banner_background_color": "#dd1d1d"
-          }
-        },
-        "template--19980215124290__a8a94a5c-39f2-466a-ac22-d0e07d82370e-product-1": {
-          "type": "product",
-          "settings": {
-            "promo_product": "",
-            "promo_heading": "Heading",
-            "promo_text": "Description Text",
-            "promo_button_label": "Button",
-            "promo_button_link": "",
-            "show_price": false,
-            "show_timer": false,
-            "promo_background_color": "#111111",
-            "block_width": "full"
-          }
-        },
-        "template--19980215124290__a8a94a5c-39f2-466a-ac22-d0e07d82370e-collection-1": {
-          "type": "collection",
-          "settings": {
-            "promo_collection": "",
-            "collection_heading": "Heading",
-            "collection_text": "Description Text",
-            "collection_button_label": "Button",
-            "collection_button_link": "",
-            "show_collection_price": false,
-            "show_collection_timer": false,
-            "collection_background_color": "#111111",
-            "block_width": "full"
-          }
-        }
-      },
-      "block_order": [
-        "template--19980215124290__a8a94a5c-39f2-466a-ac22-d0e07d82370e-banner-1",
-        "template--19980215124290__a8a94a5c-39f2-466a-ac22-d0e07d82370e-product-1",
-        "template--19980215124290__a8a94a5c-39f2-466a-ac22-d0e07d82370e-collection-1"
-      ],
+    "85348f39-5f29-40af-bf92-6bcd0c74071b": {
+      "type": "marquee-text",
       "settings": {
+        "marquee_text": "Marquee Text",
+        "marquee_text_link": "",
+        "marquee_text_size": 18,
+        "marquee_direction": "left",
+        "marquee_text_speed": 100,
+        "marquee_background": "#fceaea",
         "margin_top": 16,
         "margin_bottom": 16
       }
@@ -625,6 +584,6 @@
     "0a5d7332-5a60-4baf-bf6a-adbba595c25e",
     "92018c5b-7aa4-4095-92a7-00221b583a17",
     "7b9de0b8-2dd6-471d-8652-5e3493fedd6b",
-    "a8a94a5c-39f2-466a-ac22-d0e07d82370e"
+    "85348f39-5f29-40af-bf92-6bcd0c74071b"
   ]
 }
