@@ -56,14 +56,18 @@ const nativeVideo = document.querySelector('.native-video__container iframe');
 
 videoPlayIcon.forEach(button => {
   button.addEventListener('click', () => {
-    console.log("button clicked");
-    button.closest('.video-section__content').style.display = 'none';
-    poster.style.display = 'none';
+    
     if(externalVideo) {
+      button.closest('.video-section__content').style.display = 'none';
+      poster.style.display = 'none';
       button.closest('.video-section__main').querySelector('.external-video__container').classList.remove('video-container__hide');
     } else if(nativeVideo) {
+      button.closest('.video-section__content').style.display = 'none';
+      poster.style.display = 'none';
       button.closest('.video-section__main').querySelector('.native-video__container').classList.remove('video-container__hide');
       button.closest('.video-section__main').querySelector('.native-video__container video').play();
+    } else {
+      
     }
     
   })
