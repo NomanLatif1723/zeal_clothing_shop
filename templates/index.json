@@ -632,7 +632,7 @@
         "show_date": false,
         "show_tags": false,
         "show_view_all_btn": false,
-        "post_image_size": "natural",
+        "post_image_size": "wide",
         "lazyload_images": false,
         "margin_top": 16,
         "margin_bottom": 16
