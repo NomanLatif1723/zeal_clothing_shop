@@ -537,62 +537,20 @@
         "margin_bottom": 0
       }
     },
-    "89b00526-245a-4caf-93a7-7382706b1dca": {
-      "type": "slideshow",
-      "disabled": true,
-      "blocks": {
-        "template--19980215124290__89b00526-245a-4caf-93a7-7382706b1dca-slide-1": {
-          "type": "slide",
-          "settings": {
-            "slide_heading": "Heading",
-            "slide_text": "Slide Text",
-            "slide_button_label": "Button",
-            "slide_button_link": "",
-            "content_position": "center-left",
-            "text_alignment": "left",
-            "slide_text_color": "#ffffff",
-            "slide_button_color": "#111111"
-          }
-        },
-        "template--19980215124290__89b00526-245a-4caf-93a7-7382706b1dca-slide-2": {
-          "type": "slide",
-          "settings": {
-            "slide_heading": "Heading",
-            "slide_text": "Slide Text",
-            "slide_button_label": "Button",
-            "slide_button_link": "",
-            "content_position": "center-left",
-            "text_alignment": "left",
-            "slide_text_color": "#ffffff",
-            "slide_button_color": "#111111"
-          }
-        },
-        "template--19980215124290__89b00526-245a-4caf-93a7-7382706b1dca-slide-3": {
-          "type": "slide",
-          "settings": {
-            "slide_heading": "Heading",
-            "slide_text": "Slide Text",
-            "slide_button_label": "Button",
-            "slide_button_link": "",
-            "content_position": "center-left",
-            "text_alignment": "left",
-            "slide_text_color": "#ffffff",
-            "slide_button_color": "#111111"
-          }
-        }
-      },
-      "block_order": [
-        "template--19980215124290__89b00526-245a-4caf-93a7-7382706b1dca-slide-1",
-        "template--19980215124290__89b00526-245a-4caf-93a7-7382706b1dca-slide-2",
-        "template--19980215124290__89b00526-245a-4caf-93a7-7382706b1dca-slide-3"
-      ],
+    "0f7b650c-6d45-4ff7-a181-db8f55d436d9": {
+      "type": "featured-collection",
       "settings": {
-        "slide_height_desktop": "natural",
-        "slide_height_mobile": "auto",
-        "slide_automation": true,
-        "slide_change_duration": 5,
-        "navigation_styles": "bars",
-        "lazyload_images": false
+        "collection": "mens-wear",
+        "heading": "Featured Collection",
+        "text": "Write Small Description About Your Collection",
+        "product_per_row": 4,
+        "product_rows": 2,
+        "stack_product": true,
+        "show_view_all": false,
+        "text_alignment": "center",
+        "lazyload_images": false,
+        "margin_top": 16,
+        "margin_bottom": 16
       }
     }
   },
@@ -610,6 +568,6 @@
     "01666e88-11d5-4970-8587-55e3cb27e243",
     "0a5d7332-5a60-4baf-bf6a-adbba595c25e",
     "92018c5b-7aa4-4095-92a7-00221b583a17",
-    "89b00526-245a-4caf-93a7-7382706b1dca"
+    "0f7b650c-6d45-4ff7-a181-db8f55d436d9"
   ]
 }
