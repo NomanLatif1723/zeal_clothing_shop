@@ -49,9 +49,21 @@
           <div class="slideshow__image-container">
             {%- if imageDesktop != blank or imageMobile != blank -%}
               {%- if imageDesktop != blank -%}
-                <div class="desktop__image{% if imageMobile != blank %} desktop__image-hide{% endif %}">
-                {{ imageDesktop | image_url: width: imageDesktop.width, height: imageDesktop.height | image_tag: loading: lazyloading, widths: '240,480,600,1024,2048', sizes: '100vw', alt: imageDesktop.alt, class: "hero__image" }}
-                </div>
+                <img
+                  class="hero__image desktop__image{% if imageMobile != blank %} desktop__image-hide{% endif %}"
+                  src="{{ imageDesktop | img_url: default }}"
+                  srcset="
+                      {{ imageDesktop | product_img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
+                      {{ imageDesktop | product_img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
+                      {{ imageDesktop | product_img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
+                      {{ imageDesktop | product_img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
+                      {{ imageDesktop | product_img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
+                  "
+                  width="{{ imageDesktop.width }}"
+                  height="{{ imageDesktop.height }}"
+                  loading= "{{ lazyloading }}"
+                  sizes="{{ sizes }}"
+                  alt="{{ imageDesktop.alt }}">
               {%- endif -%}
               {%- if imageMobile != blank -%}
                 <img
