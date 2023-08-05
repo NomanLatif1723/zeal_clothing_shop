@@ -33,6 +33,7 @@
     "show_first_product": false,
     "collection_image_size": "portrait",
     "favicon": "shopify:\/\/shop_images\/Vector.svg",
+    "show_language": false,
     "show_flags": false,
     "show_socials": false,
     "collection_layout": "slider",
