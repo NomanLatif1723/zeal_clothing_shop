@@ -58,10 +58,9 @@ videoPlayIcon.forEach(button => {
     button.closest('.video-section__content').style.display = 'none';
     poster.style.display = 'none';
     if(externalVideoContainer) {
-      externalVideoContainer.classList.remove('video-container__hide');
-      document.querySelector('.external-video__container video').play();
+      button.closest('.video-section__main').querySelector('.external-video__container').classList.remove('video-container__hide');
     } else {
-      nativeVideoContainer.classList.remove('video-container__hide');
+      button.closest('.video-section__main').querySelector('.native-video__container').classList.remove('video-container__hide');
     }
     
   })
