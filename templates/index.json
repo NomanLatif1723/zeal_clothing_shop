@@ -555,42 +555,9 @@
         "margin_bottom": 16
       }
     },
-    "2281508e-8869-4f0e-9597-e7f8b02eb308": {
+    "658cae66-2f65-498b-926e-baa7733b07b7": {
       "type": "image-with-text",
-      "blocks": {
-        "31fef133-6ba4-44aa-9e95-0091ff4b4ced": {
-          "type": "text",
-          "settings": {
-            "text_content": "jghkjshgkjfdslh"
-          }
-        },
-        "9b3ae737-1001-42fa-ab9c-eb9137dcab72": {
-          "type": "text",
-          "settings": {
-            "text_content": "hjkhgkjfslhljhsjlfsh"
-          }
-        },
-        "ce574379-2bee-4cdc-bfb3-c14806969261": {
-          "type": "text",
-          "settings": {
-            "text_content": "hjkfhafkjdhajkhjklhfakjds"
-          }
-        },
-        "fdb08abe-0e4c-4724-9fd9-3f9da1073db9": {
-          "type": "text",
-          "settings": {
-            "text_content": ""
-          }
-        }
-      },
-      "block_order": [
-        "31fef133-6ba4-44aa-9e95-0091ff4b4ced",
-        "9b3ae737-1001-42fa-ab9c-eb9137dcab72",
-        "ce574379-2bee-4cdc-bfb3-c14806969261",
-        "fdb08abe-0e4c-4724-9fd9-3f9da1073db9"
-      ],
       "settings": {
-        "image_section": "shopify:\/\/shop_images\/david-taffet-mzbju_-fnnE-unsplash.jpg"
       }
     }
   },
@@ -609,6 +576,6 @@
     "0a5d7332-5a60-4baf-bf6a-adbba595c25e",
     "92018c5b-7aa4-4095-92a7-00221b583a17",
     "7b9de0b8-2dd6-471d-8652-5e3493fedd6b",
-    "2281508e-8869-4f0e-9597-e7f8b02eb308"
+    "658cae66-2f65-498b-926e-baa7733b07b7"
   ]
 }
