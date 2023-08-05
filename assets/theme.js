@@ -53,6 +53,7 @@ const poster = document.querySelector('.video-poster__image');
 videoPlayIcon.forEach(button => {
   button.addEventListener('click', () => {
     console.log("button clicked");
+    button.closest('.video-section__content').style.dispplay = 'none';
     poster.style.display = 'none';
   })
 })
