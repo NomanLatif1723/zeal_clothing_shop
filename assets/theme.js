@@ -57,11 +57,11 @@ const nativeVideo = document.querySelector('.native-video__container iframe');
 videoPlayIcon.forEach(button => {
   button.addEventListener('click', () => {
     
-    if(externalVideo) {
+    if(externalVideoContainer) {
       button.closest('.video-section__content').style.display = 'none';
       poster.style.display = 'none';
       button.closest('.video-section__main').querySelector('.external-video__container').classList.remove('video-container__hide');
-    } else if(nativeVideo) {
+    } else if(nativeVideoContainer) {
       button.closest('.video-section__content').style.display = 'none';
       poster.style.display = 'none';
       button.closest('.video-section__main').querySelector('.native-video__container').classList.remove('video-container__hide');
