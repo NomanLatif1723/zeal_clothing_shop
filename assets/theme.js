@@ -50,9 +50,9 @@ document.querySelectorAll('.show-more__swatches').forEach(option => {
 const videoPlayIcon = document.querySelectorAll('.video-section__playicon');
 const poster = document.querySelector('.video__poster');
 // const externalVideoContainer = document.querySelector('.external-video__container');
-const externalVideo = document.querySelector('.external-video__container video');
+// const externalVideo = document.querySelector('.external-video__container video');
 // const nativeVideoContainer = document.querySelector('.native-video__container');
-const nativeVideo = document.querySelector('.native-video__container iframe');
+// const nativeVideo = document.querySelector('.native-video__container iframe');
 
 videoPlayIcon.forEach(button => {
   button.addEventListener('click', () => {
