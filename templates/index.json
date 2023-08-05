@@ -620,6 +620,23 @@
         "testimonial_background_color": "#9d1339",
         "testimonial_text_color": "#111111"
       }
+    },
+    "64daa207-f481-4627-8989-0395575ad811": {
+      "type": "posts",
+      "settings": {
+        "text_alignment": "center",
+        "posts_main_heading": "Blog Posts",
+        "posts_main_text": "Blog Post Text",
+        "blog": "",
+        "posts_to_show": 3,
+        "show_date": false,
+        "show_tags": false,
+        "show_view_all_btn": false,
+        "post_image_size": "natural",
+        "lazyload_images": false,
+        "margin_top": 16,
+        "margin_bottom": 16
+      }
     }
   },
   "order": [
@@ -637,6 +654,7 @@
     "0a5d7332-5a60-4baf-bf6a-adbba595c25e",
     "92018c5b-7aa4-4095-92a7-00221b583a17",
     "7b9de0b8-2dd6-471d-8652-5e3493fedd6b",
-    "3fe97b76-6702-49d6-92be-86146eab071f"
+    "3fe97b76-6702-49d6-92be-86146eab071f",
+    "64daa207-f481-4627-8989-0395575ad811"
   ]
 }
