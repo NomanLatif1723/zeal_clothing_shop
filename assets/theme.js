@@ -59,7 +59,7 @@ if(externalVideo || nativeVideo) {
     button.addEventListener('click', () => {
       console.log("button clicked");
       button.closest('.video-section__content').style.display = 'none';
-      button.closest('.video-section__main').querySelector('video-section__video--container .video-poster__image').style.display = 'none';
+      button.closest('.video-section__main').querySelector('.video-section__video--container .video-poster__image').style.display = 'none';
       if(externalVideoContainer) {
         button.closest('.video-section__main').querySelector('.external-video__container').classList.remove('video-container__hide');
       } else {
