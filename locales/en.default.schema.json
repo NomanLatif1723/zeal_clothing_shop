@@ -1367,7 +1367,7 @@
     "favicon": {
       "name": "favicon",
       "settings": {
-        "favicon_image": {
+        "favicon": {
           "label": "Favicon Image",
           "info": "Will be Scaled Down to 32 x 32px"
         }
