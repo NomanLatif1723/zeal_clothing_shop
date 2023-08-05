@@ -48,7 +48,7 @@ document.querySelectorAll('.show-more__swatches').forEach(option => {
 // Video Section Events
 
 const videoPlayIcon = document.querySelectorAll('.video-section__playicon');
-const poster = document.querySelector('.video__poster');
+const poster = document.querySelector('.video-poster__image');
 const externalVideoContainer = document.querySelector('.external-video__container');
 const externalVideo = document.querySelector('.external-video__container video');
 const nativeVideoContainer = document.querySelector('.native-video__container');
