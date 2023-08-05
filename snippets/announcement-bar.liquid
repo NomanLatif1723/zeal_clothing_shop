@@ -20,21 +20,23 @@ endif
 <div class="announcement__bar">
   <div class="page__width">
     <div class="announcement__wrapper">
-      <div class="social__container">
-        {%- render 'social-icons' -%}
-      </div>
+      {%- if show_socials -%}
+        <div class="social__container">
+          {%- render 'social-icons' -%}
+        </div>
+      {%- endif -%}
       <div class="main__announcement-banner">
-        {%- if section.settings.heading_text != blank -%}
-          <div class="announcement__heading">{{ section.settings.heading_text }}</div>
+        {%- if heading_text != blank -%}
+          <div class="announcement__heading">{{ heading_text }}</div>
         {%- endif -%}
-        {%- if section.settings.show_timer -%}
+        {%- if show_timer -%}
           <div
             class="main__timer"
-            data-hour="{{ section.settings.timer_hours }}"
-            data-minutes="{{ section.settings.timer_minutes }}"></div>
+            data-hour="{{ timer_hours }}"
+            data-minutes="{{ timer_minutes }}"></div>
         {%- endif -%}
-        {%- if section.settings.announcement_text != blank -%}
-          <div class="main__text">{{ section.settings.announcement_text }}</div>
+        {%- if announcement_text != blank -%}
+          <div class="main__text">{{ announcement_text }}</div>
         {%- endif -%}
       </div>
       <div class="language__currency-container">
