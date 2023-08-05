@@ -65,11 +65,11 @@ videoPlayIcon.forEach(button => {
       const overlayContainer = button.closest('.video-section__content').style.display = 'none';
       if (externalVideo) {
         poster.style.display = 'none';
-        overlayContainer.style.display = 'none';
+        // overlayContainer.style.display = 'none';
         externalVideoContainer.classList.remove('video-container__hide');
       } else if (nativeVideo) {
         poster.style.display = 'none';
-        overlayContainer.style.display = 'none';
+        // overlayContainer.style.display = 'none';
         nativeVideoContainer.classList.remove('video-container__hide');
         nativeVideo.play();
       }
