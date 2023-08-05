@@ -57,7 +57,7 @@ videoPlayIcon.forEach(button => {
     console.log("button clicked");
     button.closest('.video-section__content').style.display = 'none';
     poster.style.display = 'none';
-    if(externalVideo) {
+    if(externalVideoContainer) {
       externalVideoContainer.classList.remove('video-container__hide');
       document.querySelector('.external-video__container video').play();
     } else {
