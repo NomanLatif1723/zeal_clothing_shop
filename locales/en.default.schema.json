@@ -1194,112 +1194,167 @@
     "colors": {
       "name": "Colors",
       "settings": {
-        "header_general": "General",
-        "color_body_background": {
-          "label": "Background"
+        "header_general": {
+          "label": "General",
+          "color_body_background": {
+            "label": "Background"
+          },
+          "color_body_text": {
+            "label": "Text"
+          },
+          "border_color": {
+            "label": "Border"
+          }
         },
-        "color_body_text": {
-          "label": "Text"
+        "header_primary_buttons": {
+          "label": "Primary Buttons",
+          "primary_button_background": {
+            "label": "Background"
+          },
+          "primary_button_text": {
+            "label": "Text"
+          },
+          "color_button_outline": {
+            "label": "Outline Buttons"
+          }
         },
-        "border_color": {
-          "label": "Border"
+        
+        "header_secondary_buttons": {
+          "label": "Secondary Buttons",
+          "secondary_button_background": {
+            "label": "Background"
+          },
+          "secondary_button_text": {
+            "label": "Text"
+          }
         },
-        "header_primary_buttons": "Primary Buttons",
-        "primary_button_background": {
-          "label": "Background"
+        "header_header": {
+          "label": "Header",
+          "color_announcement_background": {
+            "label": "Announcement Background"
+          },
+          "color_announcement_text": {
+            "label": "Announcement Text"
+          },
+          "header_background_color": {
+            "label": "Background"
+          },
+          "header_text_color": {
+            "label": "Text"
+          }
         },
-        "primary_button_text": {
-          "label": "Text"
-        },
-        "color_button_outline": {
-          "label": "Outline Buttons"
-        },
-        "header_secondary_buttons": "Secondary Buttons",
-        "secondary_button_background": {
-          "label": "Background"
-        },
-        "secondary_button_text": {
-          "label": "Text"
-        },
-        "header_header": "Header",
-        "color_announcement_background": {
-          "label": "Announcement Background"
-        },
-        "color_announcement_text": {
-          "label": "Announcement Text"
-        },
-        "header_footer": "Footer",
-        "color_footer_background": {
-          "label": "Background"
-        },
-        "color_footer_text": {
-          "label": "Text"
+        
+        "header_footer": {
+          "label": "Footer",
+          "color_footer_background": {
+            "label": "Background"
+          },
+          "color_footer_text": {
+            "label": "Text"
+          }
         }
       }
     },
-    "social_media": {
-      "name": "Social Media",
+    "collections": {
+      "name": "Collections",
       "settings": {
-        "header_social_accounts": "Accounts",
-        "social_facebook_link": {
-          "label": "Facebook",
-          "info": "https:\/\/www.facebook.com\/shopify"
+        "overlay_style": {
+          "label": "Overlay Below The Image"
         },
-        "social_pinterest_link": {
-          "label": "Pinterest",
-          "info": "https:\/\/www.pinterest.com\/shopify"
+        "show_first_product": {
+          "label": "Show First Product Image"
         },
-        "social_twitter_link": {
-          "label": "Twitter",
-          "info": "https:\/\/twitter.com\/shopify"
-        },
-        "social_instagram_link": {
-          "label": "Instagram",
-          "info": "https:\/\/instagram.com\/shopify"
-        },
-        "social_snapchat_link": {
-          "label": "SnapChat",
-          "info": "https:\/\/www.snapchat.com\/add\/shopify"
-        },
-        "social_tumblr_link": {
-          "label": "Tumblr",
-          "info": "http:\/\/shopify.tumblr.com"
-        },
-        "social_tiktok_link": {
-          "label": "TikTok",
-          "info": "https:\/\/www.tiktok.com\/@shopify"
-        },
-        "social_linkedin_link": {
-          "label": "LinkedIn",
-          "info": "https:\/\/www.linkedin.com\/in\/shopify"
-        },
-        "social_youtube_link": {
-          "label": "Youtube",
-          "info": "https:\/\/www.youtube.com\/user\/shopify"
-        },
-        "social_vimeo_link": {
-          "label": "Vimeo",
-          "info": "https:\/\/vimeo.com\/shopify"
+        "header_image_size": {
+          "label": "Image Size",
+          "options": {
+            "square": {
+              "label": "Square(1:1)"
+            },
+            "portrait": {
+              "label": "Portrait(2:3)"
+            },
+            "landscape": {
+              "label": "Landscape(4:3)"
+            }
+          }
         }
       }
     },
-    "typography": {
-      "name": "Typography",
+    "cart": {
+      "name": "Cart",
       "settings": {
-        "header_headings": "Headings",
-        "heading_font_family": {
-          "label": "Font"
+        "header_cart_type": {
+          "label": "Cart Type",
+          "options": {
+            "page": {
+              "label": "Page"
+            },
+            "drawer": {
+              "label": "Drawer"
+            },
+            "popup": {
+              "label": "popup"
+            }
+          }
         },
-        "header_body_text": "Text",
-        "body_text_font_family": {
-          "label": "Font"
+        "header_cart_icon": {
+          "label": "Cart Icon",
+          "options": {
+            "cart": {
+              "label": "Cart"
+            },
+            "bag": {
+              "label": "Bag"
+            },
+            "minimal_bag": {
+              "label": "Minimal Bag"
+            }
+          }
+        },
+        "free_shipping_bar": {
+          "label": " Enable Free Shipping Bar"
+        },
+        "free_shipping_amount": {
+          "label": "Free Shipping Amount"
+        },
+        "additional_checkout_buttons": {
+          "label": "Enable Additional Checkout Buttons"
+        },
+        "show_terms": {
+          "label": "Enable Terms and Conditions"
+        },
+        "show_note": {
+          "label": "Show Order Note"
+        }
+      }
+    },
+    "extras": {
+      "name": "Extras",
+      "settings": {
+        "show_currency": {
+          "label": "Show Currency Selector"
+        },
+        "show_language": {
+          "label": "Show Language Selector"
+        },
+        "show_flags": {
+          "label": "Show Flags"
+        }
+      }
+    },
+    "favicon": {
+      "name": "favicon",
+      "settings": {
+        "favicon": {
+          "label": "Favicon Image",
+          "info": "Will be Scaled Down to 32 x 32px"
         }
       }
     },
     "products": {
       "name": "Products",
       "settings": {
-        "image_size": {
+        "header_image_size": {
           "label": "Image Size",
           "options": {
             "natural": {
@@ -1345,51 +1400,68 @@
         }
       }
     },
-    "collections": {
-      "name": "Collections",
+    "social_media": {
+      "name": "Social Media",
       "settings": {
-        "overlay_style": {
-          "label": "Overlay Below The Image"
-        },
-        "show_first_product": {
-          "label": "Show First Product Image"
-        },
-        "image_size": {
-          "label": "Image Size",
-          "options": {
-            "square": {
-              "label": "Square(1:1)"
-            },
-            "portrait": {
-              "label": "Portrait(2:3)"
-            },
-            "landscape": {
-              "label": "Landscape(4:3)"
-            }
+        "header_social_accounts": {
+          "label": "Accounts",
+          "social_facebook_link": {
+            "label": "Facebook",
+            "info": "https:\/\/www.facebook.com\/shopify"
+          },
+          "social_pinterest_link": {
+            "label": "Pinterest",
+            "info": "https:\/\/www.pinterest.com\/shopify"
+          },
+          "social_twitter_link": {
+            "label": "Twitter",
+            "info": "https:\/\/twitter.com\/shopify"
+          },
+          "social_instagram_link": {
+            "label": "Instagram",
+            "info": "https:\/\/instagram.com\/shopify"
+          },
+          "social_snapchat_link": {
+            "label": "SnapChat",
+            "info": "https:\/\/www.snapchat.com\/add\/shopify"
+          },
+          "social_tumblr_link": {
+            "label": "Tumblr",
+            "info": "http:\/\/shopify.tumblr.com"
+          },
+          "social_tiktok_link": {
+            "label": "TikTok",
+            "info": "https:\/\/www.tiktok.com\/@shopify"
+          },
+          "social_linkedin_link": {
+            "label": "LinkedIn",
+            "info": "https:\/\/www.linkedin.com\/in\/shopify"
+          },
+          "social_youtube_link": {
+            "label": "Youtube",
+            "info": "https:\/\/www.youtube.com\/user\/shopify"
+          },
+          "social_vimeo_link": {
+            "label": "Vimeo",
+            "info": "https:\/\/vimeo.com\/shopify"
           }
         }
       }
     },
-    "favicon": {
-      "name": "favicon",
+    "typography": {
+      "name": "Typography",
       "settings": {
-        "favicon": {
-          "label": "Favicon Image",
-          "info": "Will be Scaled Down to 32 x 32px"
-        }
-      }
-    },
-    "extras": {
-      "name": "Extras",
-      "settings": {
-        "show_currency": {
-          "label": "Show Currency Selector"
+        "header_headings": {
+          "label": "Headings",
+          "heading_font_family": {
+            "label": "Font"
+          }
         },
-        "show_language": {
-          "label": "Show Language Selector"
-        },
-        "show_flags": {
-          "label": "Show Flags"
+        "header_body_text": {
+          "label": "Text",
+          "body_text_font_family": {
+            "label": "Font"
+          }
         }
       }
     }

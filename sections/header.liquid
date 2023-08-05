@@ -1,1 +1,153 @@
-<h1>Header</h1>
+<header></header>
+{% schema %}
+  {
+    "name": "Header",
+    "class": "shopify__header-group",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Navigation Menus"
+      },
+      {
+        "type": "link_list",
+        "id": "desktop_menu",
+        "label": "desktop Menu",
+        "default": "main-menu"
+      },
+      {
+        "type": "link_list",
+        "id": "mobile_menu",
+        "label": "Mobile Menu",
+        "info": "Provide Different Menu for Mobile Devices If None Selected Then Desktop Menu Used"
+      },
+      {
+        "type": "select",
+        "id": "header_styles",
+        "label": "Header Styles",
+        "default": "left",
+        "options": [
+          {
+            "value": "center-left",
+            "label": "Logo center Menu Left"
+          },
+          {
+            "value": "left-center",
+            "label": "Logo Left Menu Center"
+          },
+          {
+            "value": "left",
+            "label": "Logo Left Menu Left"
+          },
+          {
+            "value": "drawer-center",
+            "label": "Menu Drawer Logo Center"
+          }, {
+            "value": "center-below",
+            "label": "Logo Center Menu Below"
+          }
+        ]
+      }, {
+        "type": "checkbox",
+        "id": "sticky_header",
+        "label": "Sticky Header",
+        "default": false
+      }, {
+        "type": "checkbox",
+        "id": "show_icons",
+        "label": "Show Icons",
+        "default": true
+      }
+    ],
+    "blocks": [
+      {
+        "type": "logo",
+        "name": "Logo",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "header_logo",
+            "label": "Logo Image"
+          }, {
+            "type": "range",
+            "id": "desktop_logo_width",
+            "label": "Desktop Logo Width",
+            "min": 50,
+            "max": 350,
+            "step": 10,
+            "unit": "px",
+            "default": 100
+          }, {
+            "type": "range",
+            "id": "mobile_logo_width",
+            "label": "Desktop Logo Width",
+            "min": 20,
+            "max": 200,
+            "step": 10,
+            "unit": "px",
+            "default": 100
+          }
+        ]
+      }, {
+        "type": "mega-menu",
+        "name": "Mega Menu",
+        "settings": [
+          {
+            "type": "text",
+            "id": "menu_item_label",
+            "label": "Menu Item",
+            "info": "Enter Menu Title to Apply Mega Menu"
+          },
+          {
+            "type": "header",
+            "content": "Image 1"
+          },
+          {
+            "type": "image_picker",
+            "id": "promo_image_1",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "promo_image_1_subheading",
+            "label": "Subheading",
+            "default": "Subheading"
+          }, {
+            "type": "text",
+            "id": "promo_image_1_heading",
+            "label": "Heading"
+          }, {
+            "type": "text",
+            "id": "promo_image_1_text",
+            "label": "Text",
+            "default": "Text"
+          }, {
+            "type": "header",
+            "content": "Image 2"
+          }, {
+            "type": "image_picker",
+            "id": "promo_image_2",
+            "label": "Image"
+          }, {
+            "type": "text",
+            "id": "promo_image_2_subheading",
+            "label": "Subheading",
+            "default": "Subheading"
+          }, {
+            "type": "text",
+            "id": "promo_image_2_heading",
+            "label": "Heading"
+          }, {
+            "type": "text",
+            "id": "promo_image_2_text",
+            "label": "Text",
+            "default": "Text"
+          }
+        ]
+      }
+    ],
+    "disabled_on": {
+      "groups": ["footer"]
+    }
+  }
+{% endschema %}
