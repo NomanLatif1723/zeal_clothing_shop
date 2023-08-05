@@ -45,6 +45,10 @@ document.querySelectorAll('.show-more__swatches').forEach(option => {
   })
 })
 
+// Video Section Events
+
+const videoPlayIcon = document.querySelectorAll('.video-section__playicon');
+
 
     
 
