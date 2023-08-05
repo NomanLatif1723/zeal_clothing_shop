@@ -557,6 +557,17 @@
     },
     "2281508e-8869-4f0e-9597-e7f8b02eb308": {
       "type": "image-with-text",
+      "blocks": {
+        "31fef133-6ba4-44aa-9e95-0091ff4b4ced": {
+          "type": "text",
+          "settings": {
+            "left_text_content": "some text"
+          }
+        }
+      },
+      "block_order": [
+        "31fef133-6ba4-44aa-9e95-0091ff4b4ced"
+      ],
       "settings": {
         "image_section": "shopify:\/\/shop_images\/david-taffet-mzbju_-fnnE-unsplash.jpg"
       }
