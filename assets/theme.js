@@ -66,8 +66,6 @@ videoPlayIcon.forEach(button => {
       poster.style.display = 'none';
       button.closest('.video-section__main').querySelector('.native-video__container').classList.remove('video-container__hide');
       button.closest('.video-section__main').querySelector('.native-video__container video').play();
-    } else {
-      
     }
     
   })
