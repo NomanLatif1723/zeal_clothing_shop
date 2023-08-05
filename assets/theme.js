@@ -54,7 +54,7 @@ const externalVideo = document.querySelector('.external-video__container video')
 const nativeVideoContainer = document.querySelector('.native-video__container');
 const nativeVideo = document.querySelector('.native-video__container iframe');
 
-if(externalVideo || nativeVideo) {
+
   videoPlayIcon.forEach(button => {
     button.addEventListener('click', () => {
       console.log("button clicked");
@@ -69,7 +69,7 @@ if(externalVideo || nativeVideo) {
       
     })
   })
-}
+
 
 
     
