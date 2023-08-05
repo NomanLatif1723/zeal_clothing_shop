@@ -314,13 +314,13 @@
     ]
   },
   {
-    "name": "Favicon",
+    "name": "t:schema_settings.favicon.name",
     "settings": [
       {
         "type": "image_picker",
-        "id": "favicon",
-        "label": "Favicon Image",
-        "info": "Will be Scaled Down to 32 X 32px"
+        "id": "favicon_image",
+        "label": "t:schema_settings.favicon.settings.favicon_image.label",
+        "info": "t:schema_settings.favicon.settings.favicon_image.info"
       }
     ]
   },
