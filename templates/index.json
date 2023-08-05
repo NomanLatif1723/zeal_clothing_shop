@@ -546,7 +546,7 @@
         "sub_heading": "Sub Heading",
         "heading": "Video",
         "autoplay_video": false,
-        "color_text": "#111111",
+        "color_text": "#dd1d1d",
         "content_position": "center",
         "text_alignment": "center",
         "margin_top": 16,
