@@ -2,27 +2,23 @@
 .image-with-text-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
 }
 
-.image-container {
-  flex: 0 0 50%;
-  max-width: 50%;
+.text-block {
+  flex: 1;
   padding: 10px;
   box-sizing: border-box;
 }
 
-.text-container {
-  flex: 0 0 50%;
-  max-width: 50%;
+.image-container {
+  flex: 1;
   padding: 10px;
   box-sizing: border-box;
 }
 {% endstylesheet %}
 
 <div class="image-with-text-container">
-  <div class="text-container">
+  <div class="text-block">
     {% for block in section.blocks %}
       <p>{{ block.settings.text_content }}</p>
     {% endfor %}
