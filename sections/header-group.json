@@ -15,7 +15,6 @@
     },
     "header": {
       "type": "header",
-      "disabled": true,
       "settings": {
       }
     }
