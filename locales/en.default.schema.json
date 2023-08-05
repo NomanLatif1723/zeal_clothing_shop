@@ -1375,6 +1375,20 @@
           "info": "Will be Scaled Down to 32 x 32px"
         }
       }
+    },
+    "extras": {
+      "name": "Extras",
+      "settings": {
+        "show_currency": {
+          "label": "Show Currency"
+        },
+        "show_language": {
+          "label": "Show Language"
+        },
+        "show_flags": {
+          "label": "Show Flags"
+        }
+      }
     }
   }
 }
