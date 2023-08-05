@@ -49,6 +49,11 @@ document.querySelectorAll('.show-more__swatches').forEach(option => {
 
 const videoPlayIcon = document.querySelectorAll('.video-section__playicon');
 
+videoPlayIcon.forEach(button => {
+  button.addEventListener('click', () => {
+    console.log("button clicked");
+  })
+})
 
     
 
