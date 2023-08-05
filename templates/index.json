@@ -544,6 +544,7 @@
         "height_mobile": "auto",
         "sub_heading": "Sub Heading",
         "heading": "Video",
+        "external_video": "https:\/\/www.youtube.com\/watch?v=Hka0Zr8Dikc",
         "autoplay_video": false,
         "color_text": "#ffffff",
         "content_position": "center",
