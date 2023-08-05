@@ -59,6 +59,7 @@ videoPlayIcon.forEach(button => {
     poster.style.display = 'none';
     if(externalVideo) {
       externalVideo.classList.remove('video-container__hide');
+      externalVideo.querySelector('video').play();
     } else {
       nativeVideo.classList.remove('video-container__hide');
     }
