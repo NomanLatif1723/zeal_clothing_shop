@@ -1,39 +1,36 @@
 {% stylesheet %}
-.section-image-with-text {
+.image-with-text-container {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .image-container {
-  flex: 1 1 50%;
+  flex: 0 0 50%;
   max-width: 50%;
   padding: 10px;
   box-sizing: border-box;
 }
 
 .text-container {
-  flex: 1 1 50%;
+  flex: 0 0 50%;
   max-width: 50%;
   padding: 10px;
   box-sizing: border-box;
 }
 {% endstylesheet %}
 
-{% assign blocks_limit = 6 %}
-{% assign current_blocks_count = section.blocks.size %}
+<div class="image-with-text-container">
+  <div class="text-container">
+    {% for block in section.blocks %}
+      <p>{{ block.settings.text_content }}</p>
+    {% endfor %}
+  </div>
 
-<div class="section-image-with-text">
   <div class="image-container">
     <img src="{{ section.settings.image_section | img_url }}" alt="">
   </div>
-  
-  {% for block in section.blocks %}
-    {% if forloop.index <= blocks_limit %}
-      <div class="text-container">
-        <p>{{ block.settings.left_text_content }}</p>
-      </div>
-    {% endif %}
-  {% endfor %}
 </div>
 {% schema %}
 {
@@ -48,11 +45,11 @@
   "blocks": [
     {
       "type": "text",
-      "name": "Left Text",
+      "name": "Text Content",
       "settings": [
         {
           "type": "text",
-          "id": "left_text_content",
+          "id": "text_content",
           "label": "Text Content"
         }
       ]
