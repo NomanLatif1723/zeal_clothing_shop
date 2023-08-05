@@ -49,9 +49,20 @@
           <div class="slideshow__image-container">
             {%- if imageDesktop != blank or imageMobile != blank -%}
               {%- if imageDesktop != blank -%}
-                <div class="desktop__image{% if imageMobile != blank %} desktop__image-hide{% endif %}">
-                {{ imageDesktop | image_url: width: imageDesktop.width, height: imageDesktop.height | image_tag: loading: lazyloading, widths: '240,480,600,1024,2048', sizes: '100vw', alt: imageDesktop.alt, class: "hero__image" }}
-                </div>
+{% capture imageClass %}
+  {% if imageMobile == nil %}
+    hero__image your_desired_mobile_class
+  {% else %}
+    hero__image
+  {% endif %}
+{% endcapture %}
+
+{{ imageDesktop | image_url: width: imageDesktop.width, height: imageDesktop.height | image_tag: loading: lazyloading, widths: '240,480,600,1024,2048', sizes: '100vw', alt: imageDesktop.alt, class: imageClass }}
+
+
+
+
+
                 
               {%- endif -%}
               {%- if imageMobile != blank -%}
