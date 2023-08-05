@@ -554,18 +554,6 @@
         "margin_top": 16,
         "margin_bottom": 16
       }
-    },
-    "3a14eb89-e204-47fd-a444-1bb37fe7642c": {
-      "type": "newsletter",
-      "settings": {
-        "newsletter_heading": "Newsletter",
-        "button_label": "Button",
-        "text_alignment": "center",
-        "newsletter_background": "#dd1d1d",
-        "newsletter_text": "#1773b0",
-        "margin_top": 16,
-        "margin_bottom": 16
-      }
     }
   },
   "order": [
@@ -582,7 +570,6 @@
     "01666e88-11d5-4970-8587-55e3cb27e243",
     "0a5d7332-5a60-4baf-bf6a-adbba595c25e",
     "92018c5b-7aa4-4095-92a7-00221b583a17",
-    "7b9de0b8-2dd6-471d-8652-5e3493fedd6b",
-    "3a14eb89-e204-47fd-a444-1bb37fe7642c"
+    "7b9de0b8-2dd6-471d-8652-5e3493fedd6b"
   ]
 }
