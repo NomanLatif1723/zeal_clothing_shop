@@ -90,7 +90,10 @@
                 </div>
               {%- endif -%}
               <div class="video-section__playicon">
-                {% render 'icon-play' %}
+                <img src="{{ 'play.png' | asset_url }}" width="25" height="25" loading="lazy" />
+                {% comment %}
+                {%- render 'icon-play' -%}
+                {% endcomment %}
               </div>
             </div>
           </div>
