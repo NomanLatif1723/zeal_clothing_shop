@@ -30,6 +30,9 @@
           },
           "timer_minutes_label": {
             "label": "Minutes"
+          },
+          "show_socials": {
+            "label": "Show Socials"
           }
         }
       },
