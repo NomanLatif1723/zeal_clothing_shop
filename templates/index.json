@@ -557,7 +557,33 @@
     },
     "658cae66-2f65-498b-926e-baa7733b07b7": {
       "type": "image-with-text",
+      "blocks": {
+        "9695b188-dc7d-48b0-88d6-1d5fd338a5b4": {
+          "type": "text",
+          "settings": {
+            "text_content": "left text"
+          }
+        },
+        "0080f9d5-840e-45cb-92cc-3f0e34656032": {
+          "type": "text",
+          "settings": {
+            "text_content": "right text"
+          }
+        },
+        "41e0fd35-47c2-44a9-bf2f-99da39e791d5": {
+          "type": "text",
+          "settings": {
+            "text_content": "left text"
+          }
+        }
+      },
+      "block_order": [
+        "9695b188-dc7d-48b0-88d6-1d5fd338a5b4",
+        "0080f9d5-840e-45cb-92cc-3f0e34656032",
+        "41e0fd35-47c2-44a9-bf2f-99da39e791d5"
+      ],
       "settings": {
+        "image_section": "shopify:\/\/shop_images\/Rectangle77_1.jpg"
       }
     }
   },
