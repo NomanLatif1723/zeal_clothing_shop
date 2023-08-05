@@ -49,21 +49,14 @@
           <div class="slideshow__image-container">
             {%- if imageDesktop != blank or imageMobile != blank -%}
               {%- if imageDesktop != blank -%}
-{% capture imageClass %}
-  {% if imageMobile == nil %}
-    hero__image your_desired_mobile_class
-  {% else %}
-    hero__image
-  {% endif %}
-{% endcapture %}
-
-{{ imageDesktop | image_url: width: imageDesktop.width, height: imageDesktop.height | image_tag: loading: lazyloading, widths: '240,480,600,1024,2048', sizes: '100vw', alt: imageDesktop.alt, class: imageClass }}
-
-
-
-
-
-                
+              {% capture imageClass %}
+                {% if imageMobile == nil %}
+                  hero__image desktop__image-hide
+                {% else %}
+                  hero__image
+                {% endif %}
+              {% endcapture %}
+              {{ imageDesktop | image_url: width: imageDesktop.width, height: imageDesktop.height | image_tag: loading: lazyloading, widths: '240,480,600,1024,2048', sizes: '100vw', alt: imageDesktop.alt, class: imageClass }}
               {%- endif -%}
               {%- if imageMobile != blank -%}
                 <img
