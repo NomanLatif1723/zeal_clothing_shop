@@ -1218,7 +1218,6 @@
             "label": "Outline Buttons"
           }
         },
-        
         "header_secondary_buttons": {
           "label": "Secondary Buttons",
           "secondary_button_background": {
@@ -1243,7 +1242,6 @@
             "label": "Text"
           }
         },
-        
         "header_footer": {
           "label": "Footer",
           "color_footer_background": {
