@@ -70,7 +70,7 @@ videoPlayIcon.forEach(button => {
 })
 
 
-Theme Javascript
+// Theme Javascript
 
 (() => {
   var __defProp = Object.defineProperty;
