@@ -9,24 +9,23 @@
   padding: 10px;
   box-sizing: border-box;
 }
-
-.image-container {
-  flex: 1;
-  padding: 10px;
-  box-sizing: border-box;
-}
 {% endstylesheet %}
 
 <div class="image-with-text-container">
-  <div class="text-block">
-    {% for block in section.blocks %}
-      <p>{{ block.settings.text_content }}</p>
-    {% endfor %}
-  </div>
-
-  <div class="image-container">
-    <img src="{{ section.settings.image_section | img_url }}" alt="">
-  </div>
+  {% for block in section.blocks %}
+    {% if forloop.index == 1 %}
+      <div class="text-block">
+        <p>{{ block.settings.text_content }}</p>
+      </div>
+      <div class="image-container">
+        <img src="{{ section.settings.image_section | img_url }}" alt="">
+      </div>
+    {% else %}
+      <div class="text-block">
+        <p>{{ block.settings.text_content }}</p>
+      </div>
+    {% endif %}
+  {% endfor %}
 </div>
 {% schema %}
 {
