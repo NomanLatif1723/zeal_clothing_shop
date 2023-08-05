@@ -20,11 +20,11 @@ endif
 <div class="announcement__bar">
   <div class="page__width">
     <div class="announcement__wrapper">
-      {%- if show_socials -%}
-        <div class="social__container">
+      <div class="social__container">
+        {%- if show_socials -%}
           {%- render 'social-icons' -%}
-        </div>
-      {%- endif -%}
+        {%- endif -%}
+      </div>
       <div class="main__announcement-banner">
         {%- if heading_text != blank -%}
           <div class="announcement__heading">{{ heading_text }}</div>
