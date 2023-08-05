@@ -49,12 +49,20 @@ document.querySelectorAll('.show-more__swatches').forEach(option => {
 
 const videoPlayIcon = document.querySelectorAll('.video-section__playicon');
 const poster = document.querySelector('.video-poster__image');
+const externalVideo = document.querySelector('.external-video__container ');
+const nativeVideo = document.querySelector('.native-video__container');
 
 videoPlayIcon.forEach(button => {
   button.addEventListener('click', () => {
     console.log("button clicked");
     button.closest('.video-section__content').style.dispplay = 'none';
     poster.style.display = 'none';
+    if(externalVideo) {
+      externalVideo.classList.remove('video-container__hide');
+    } else {
+      nativeVideo.classList.remove('video-container__hide');
+    }
+    
   })
 })
 
