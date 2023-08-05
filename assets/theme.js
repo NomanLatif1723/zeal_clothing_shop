@@ -48,10 +48,12 @@ document.querySelectorAll('.show-more__swatches').forEach(option => {
 // Video Section Events
 
 const videoPlayIcon = document.querySelectorAll('.video-section__playicon');
+const poster = document.querySelector('.video-poster__image');
 
 videoPlayIcon.forEach(button => {
   button.addEventListener('click', () => {
     console.log("button clicked");
+    poster.style.display = 'none';
   })
 })
 
