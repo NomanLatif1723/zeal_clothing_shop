@@ -49,6 +49,10 @@
           <div class="slideshow__image-container">
             {%- if imageDesktop != blank or imageMobile != blank -%}
               {%- if imageDesktop != blank -%}
+                {% if imageMobile != blank %}
+                  {% assign imageHide = "desktop__image-hide" %}
+                  {% endif %}
+                {{ imageDesktop | image_url: width: imageDesktop.width, height: imageDesktop.height | image_tag: loading: lazyloading, widths: '240,480,600,1024,2048', sizes: '100vw', alt: imageDesktop.alt, class: "hero__image desktop__image" }}
                 <img
                   class="hero__image desktop__image{% if imageMobile != blank %} desktop__image-hide{% endif %}"
                   src="{{ imageDesktop | img_url: default }}"
