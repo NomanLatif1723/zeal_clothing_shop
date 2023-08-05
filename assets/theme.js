@@ -49,15 +49,8 @@ document.querySelectorAll('.show-more__swatches').forEach(option => {
 
 const videoPlayIcon = document.querySelectorAll('.video-section__playicon');
 const poster = document.querySelector('.video__poster');
-// const externalVideoContainer = document.querySelector('.external-video__container');
-// const externalVideo = document.querySelector('.external-video__container video');
-// const nativeVideoContainer = document.querySelector('.native-video__container');
-// const nativeVideo = document.querySelector('.native-video__container iframe');
-
 videoPlayIcon.forEach(button => {
   button.addEventListener('click', () => {
-      // button.closest('.video-section__content').style.display = 'none';
-      // poster.style.display = 'none';
       const externalVideoContainer = button.closest('.video-section__main').querySelector('.external-video__container');
       const nativeVideoContainer = button.closest('.video-section__main').querySelector('.native-video__container');
       const externalVideo = button.closest('.video-section__main').querySelector('.external-video__container iframe');
