@@ -1,4 +1,20 @@
-{% render 'announcement-bar', section: section %}
+{%- liquid
+   assign heading_text = section.settings.heading_text
+   assign announcement_text = section.settings.announcement_text
+   assign show_timer = section.settings.show_timer
+   assign timer_hours = section.settings.timer_hours
+   assign timer_minutes = section.settings.timer_minutes
+   assign show_socials = section.settings.show_socials
+
+-%}
+{%- render 'announcement-bar',
+   heading_text: heading_text,
+   announcement_text: announcement_text,
+   show_timer: show_timer,
+   timer_hours: timer_hours,
+   timer_minutes: timer_minutes,
+   show_socials: show_socials
+-%}
 {% schema %}
   {
     "name": "t:sections.announcement-bar.name",
