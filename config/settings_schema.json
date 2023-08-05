@@ -325,24 +325,24 @@
     ]
   },
   {
-    "name": "Extras",
+    "name": "t:schema_settings.extras.name",
     "settings": [
       {
         "type": "checkbox",
         "id": "show_currency",
-        "label": "Show Currency Selector",
+        "label": "t:schema_settings.extras.settings.show_currency.label",
         "default": false
       },
       {
         "type": "checkbox",
         "id": "show_language",
-        "label": "Show Language Selector",
+        "label": "t:schema_settings.extras.settings.show_language.label",
         "default": false
       },
       {
         "type": "checkbox",
         "id": "show_flags",
-        "label": "Show Flags",
+        "label": "t:schema_settings.extras.settings.show_flags.label",
         "default": false
       }
     ]
