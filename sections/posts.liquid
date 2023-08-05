@@ -6,11 +6,27 @@
   assign show_date = section.settings.show_date
   assign show_tags = section.settings.show_tags
   assign show_view_all = section.settings.show_view_all_btn
+  
   assign lazyloading = ''
-    assign lazyloadImages = section.settings.lazyload_images
-    if lazyloadImages
-    assign lazyloading = 'lazy'
-    endif
+  assign lazyloadImages = section.settings.lazyload_images
+  if lazyloadImages
+  assign lazyloading = 'lazy'
+  endif
+  
+  assign selectedImageSize = image_size
+  assign imageAspectRatio = "0"
+  case selectedImageSize
+  when 'natural'
+  assign imageAspectRatio = "0"
+  when 'square'
+  assign imageAspectRatio = "1/1"
+  when 'portrait'
+  assign imageAspectRatio = "2/3"
+  when 'landscape'
+  assign imageAspectRatio = "4/3"
+  when 'wide'
+  assign imageAspectRatio = "16/9"
+  endcase
 -%}
 {%- style -%}
   .main__section-{{ section.id }}{
@@ -48,7 +64,7 @@
             {%- render 'article-item' 
               , article: article,
               blog: blog,
-              image-size: image_size,
+              imageAspectRatio: imageAspectRatio,
               show_date: show_date,
               show_tags: show_tags,
               lazyloading: lazyloading
