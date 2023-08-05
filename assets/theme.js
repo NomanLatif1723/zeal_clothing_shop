@@ -54,20 +54,20 @@ const externalVideo = document.querySelector('.external-video__container video')
 const nativeVideoContainer = document.querySelector('.native-video__container');
 const nativeVideo = document.querySelector('.native-video__container iframe');
 
-  videoPlayIcon.forEach(button => {
-    button.addEventListener('click', () => {
-      console.log("button clicked");
-      button.closest('.video-section__content').style.display = 'none';
-      poster.style.display = 'none';
-      if(externalVideoContainer) {
-        button.closest('.video-section__main').querySelector('.external-video__container').classList.remove('video-container__hide');
-      } else {
-        button.closest('.video-section__main').querySelector('.native-video__container').classList.remove('video-container__hide');
-        button.closest('.video-section__main').querySelector('.native-video__container video').play();
-      }
-      
-    })
+videoPlayIcon.forEach(button => {
+  button.addEventListener('click', () => {
+    console.log("button clicked");
+    button.closest('.video-section__content').style.display = 'none';
+    poster.style.display = 'none';
+    if(externalVideo) {
+      button.closest('.video-section__main').querySelector('.external-video__container').classList.remove('video-container__hide');
+    } else {
+      button.closest('.video-section__main').querySelector('.native-video__container').classList.remove('video-container__hide');
+      button.closest('.video-section__main').querySelector('.native-video__container video').play();
+    }
+    
   })
+})
 
 
     
