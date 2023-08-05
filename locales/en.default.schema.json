@@ -1380,10 +1380,10 @@
       "name": "Extras",
       "settings": {
         "show_currency": {
-          "label": "Show Currency"
+          "label": "Show Currency Selector"
         },
         "show_language": {
-          "label": "Show Language"
+          "label": "Show Language Selector"
         },
         "show_flags": {
           "label": "Show Flags"
