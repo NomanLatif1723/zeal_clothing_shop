@@ -50,6 +50,7 @@ document.querySelectorAll('.show-more__swatches').forEach(option => {
 const videoPlayIcon = document.querySelectorAll('.video-section__playicon');
 const poster = document.querySelector('.video-poster__image');
 const externalVideoContainer = document.querySelector('.external-video__container');
+const externalVideo = document.querySelector('.external-video__container video');
 const nativeVideoContainer = document.querySelector('.native-video__container');
 
 videoPlayIcon.forEach(button => {
@@ -62,6 +63,7 @@ videoPlayIcon.forEach(button => {
       button.closest('.video-section__main').querySelector('.external-video__container video').classList.add('active');
     } else {
       button.closest('.video-section__main').querySelector('.native-video__container').classList.remove('video-container__hide');
+      button.closest('.video-section__main').querySelector('.external-video__container video').classList.add('active');
     }
     
   })
