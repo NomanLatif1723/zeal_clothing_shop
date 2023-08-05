@@ -63,7 +63,7 @@ videoPlayIcon.forEach(button => {
       button.closest('.video-section__main').querySelector('.external-video__container video').classList.add('active');
     } else {
       button.closest('.video-section__main').querySelector('.native-video__container').classList.remove('video-container__hide');
-      button.closest('.video-section__main').querySelector('.external-video__container video').play();
+      button.closest('.video-section__main').querySelector('.native-video__container video').play();
     }
     
   })
