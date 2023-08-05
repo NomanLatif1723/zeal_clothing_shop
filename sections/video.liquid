@@ -43,7 +43,7 @@
             cover_image: cover_image
           %}
           <div class="native-video__container{% if autoplay_video == false %} video-container__hide{% endif %}">
-            {{ video | video_tag: autoplay: autoplay_video, muted: autoplay_video, loop: autoplay_video }}
+            {{ video | video_tag: autoplay: autoplay_video, muted: autoplay_video, playsinline: autoplay_video, loop: autoplay_video }}
           </div>
         {%- elsif external_video != blank and video == blank -%}
           {% render 'video-poster',
