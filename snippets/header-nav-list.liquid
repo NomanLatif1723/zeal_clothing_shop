@@ -11,7 +11,7 @@
             {%- render 'icon-arrow-down' -%}
           {%- endif -%}
         </a>
-        {% if link.links != blank %}
+        {% if link.links.size > 0 %}
           <ul class="menu__list child-menu__list">
             {% for childlink in link %}
               <li class="menu__item child-menu__item">
