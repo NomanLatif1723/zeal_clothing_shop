@@ -66,12 +66,12 @@
           {%- endcase -%}
       {%- endfor -%}
       {%- if header_styles == 'center_left' -%}
-        <div class="header__navigation">
+        <div class="header__block header__navigation">
           {%- render 'header-nav-list',
             main_menu: main_menu,
             mobile_menu: mobile_menu -%}
         </div>
-        <div class="header__logo">
+        <div class="header__block header__logo">
           {{ header_logo }}
         </div>
       {%- elsif header_styles == 'drawer-center' -%}
@@ -80,20 +80,20 @@
             {% render 'icon-hamburger' %}
           </button>
         </div>
-        <div class="header__logo">
+        <div class="header__block header__logo">
           {{ header_logo }}
         </div>
       {%- else -%}
-        <div class="header__logo{% if header_styles == 'center_below' %} header__logo-center{% endif %}">
+        <div class="header__block header__logo{% if header_styles == 'center_below' %} header__logo-center{% endif %}">
           {{ header_logo }}
         </div>
-        <div class="header__navigation{% if header_styles == 'left_center' or header_styles == 'center_below' %} header-nav__center{% endif %}">
+        <div class="header__block header__navigation{% if header_styles == 'left_center' or header_styles == 'center_below' %} header-nav__center{% endif %}">
           {%- render 'header-nav-list', 
             main_menu: main_menu,
             mobile_menu: mobile_menu -%}
         </div>
       {%- endif -%}
-      <div class="header__icon-container">
+      <div class="header__block header__icon-container">
         {%- if show_icons -%}
           <a
             href="{{ routes.search_url }}"
