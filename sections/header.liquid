@@ -38,17 +38,15 @@
   <div class="page__width">
     <div class="header__wrapper" data-header-style="{{ header_styles }}">
       {%- capture header_logo -%}
-        {%- if header_logo -%}
-          <h1 class="site__logo">
-            <a href="{{ routes.root_url }}" aria-label="{{ shop.name }}">
-              {% if header_logo %}
-                {{ header_logo | image_url: width: header_logo.width, height: header_logo.height | image_tag: loading: "lazy", class: "site__logo-image" }}
-              {% else %}
-                <span>{{ shop.name }}</span>
-              {% endif %}
-            </a>
-          </h1>
-        {%- endif -%}
+        <h1 class="site__logo">
+          <a href="{{ routes.root_url }}" aria-label="{{ shop.name }}">
+            {% if header_logo %}
+              {{ header_logo | image_url: width: header_logo.width, height: header_logo.height | image_tag: loading: "lazy", class: "site__logo-image" }}
+            {% else %}
+              <span>{{ shop.name }}</span>
+            {% endif %}
+          </a>
+        </h1>
       {%- endcapture -%}
       {%- if header_styles == 'center_left' -%}
         <div class="header__navigation">
