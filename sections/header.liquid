@@ -27,32 +27,41 @@
     width: {{ mobile_logo_width }}px;
     max-width: flex 0 0 {{ mobile_logo_width }}px
   }
+  
   @media only screen and (min-width: 769px) {
     .header__logo{
       width: {{ desktop_logo_width }}px;
       max-width: flex 0 0 {{ desktop_logo_width }}px
+    }
+    .site__logo-image {
+      width: 70px;
     }
   }
 {%- endstyle -%}
 <header class="section__header{% if sticky_header %} sticky__header{% endif %}">
   <div class="page__width">
     <div class="header__wrapper" data-header-style="{{ header_styles }}">
-      {% for block in section.blocks %}
-        {% case block.type %}
-          {% when 'logo' %}
+      {%- for block in section.blocks -%}
+        {%- liquid
+          assign header_logo = block.settings.header_logo
+          assign desktop_logo_width = block.settings.desktop_logo_width
+          assign mobile_logo_width = block.settings.mobile_logo_width
+        -%}
+        {%- case block.type -%}
+          {%- when 'logo' -%}
             {%- capture header_logo -%}
               <h1 class="site__logo">
                 <a href="{{ routes.root_url }}" aria-label="{{ shop.name }}">
                   {% if header_logo %}
                     {{ header_logo | image_url: width: 70, height: 70 | image_tag: loading: "lazy", class: "site__logo-image" }}
-                  {% else %}
+                  {%- else -%}
                     <span>{{ shop.name }}</span>
                   {% endif %}
                 </a>
               </h1>
             {%- endcapture -%}
-          {% endcase %}
-      {% endfor %}
+          {%- endcase -%}
+      {%- endfor -%}
       {%- if header_styles == 'center_left' -%}
         <div class="header__navigation">
           {%- render 'header-nav-list' 
