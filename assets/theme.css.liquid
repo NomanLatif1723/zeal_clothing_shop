@@ -1693,4 +1693,28 @@ input[type="radio"]:checked + label {
   .child-menu__item {
       padding: 15px 20px;
   }
+
+  .grandchild-menu__list {
+      position: absolute;
+      left: 100%;
+      background: white;
+      width: 250px;
+      top: 0;
+      transform: translateY(30px);
+      transition: transform 0.3s ease;
+      visibility: hidden;
+  }
+  
+  .child-menu__item:hover .grandchild-menu__list {
+      visibility: visible;
+      transform: translateY(0);
+  }
+  
+  .child-menu__item--link {
+      justify-content: space-between;
+  }
+  
+  .grandchild-menu__item {
+      padding: 15px 20px;
+  }
   
