@@ -10,9 +10,10 @@
     case block.type
       when 'logo'
         assign header_logo = block.settings.header_logo
+        assign desktop_logo_width = block.settings.desktop_logo_width
+        assign mobile_logo_width = block.settings.mobile_logo_width
     endcase
-    assign desktop_logo_width = block.settings.desktop_logo_width
-    assign mobile_logo_width = block.settings.mobile_logo_width
+    
   endfor
 -%}
 {%- style -%}
@@ -40,17 +41,22 @@
 <header class="section__header{% if sticky_header %} sticky__header{% endif %}">
   <div class="page__width">
     <div class="header__wrapper" data-header-style="{{ header_styles }}">
-      {%- capture header_logo -%}
-        <h1 class="site__logo">
-          <a href="{{ routes.root_url }}" aria-label="{{ shop.name }}">
-            {% if header_logo %}
-              {{ header_logo | image_url: width: header_logo.width, height: header_logo.height | image_tag: loading: "lazy", class: "site__logo-image" }}
-            {% else %}
-              <span>{{ shop.name }}</span>
-            {% endif %}
-          </a>
-        </h1>
-      {%- endcapture -%}
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'logo' %}
+            {%- capture header_logo -%}
+              <h1 class="site__logo">
+                <a href="{{ routes.root_url }}" aria-label="{{ shop.name }}">
+                  {% if header_logo %}
+                    {{ header_logo | image_url: width: header_logo.width, height: header_logo.height | image_tag: loading: "lazy", class: "site__logo-image" }}
+                  {% else %}
+                    <span>{{ shop.name }}</span>
+                  {% endif %}
+                </a>
+              </h1>
+            {%- endcapture -%}
+          {% endcase %}
+      {% endfor %}
       {%- if header_styles == 'center_left' -%}
         <div class="header__navigation">
           {%- render 'header-nav-list' 
