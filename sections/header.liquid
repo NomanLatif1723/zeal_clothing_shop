@@ -34,7 +34,7 @@
       max-width: flex 0 0 {{ desktop_logo_width }}px
     }
     .site__logo-image {
-      width: 70px;
+      width: {{ desktop_logo_width }}px;
     }
   }
 {%- endstyle -%}
@@ -53,7 +53,7 @@
               <h1 class="site__logo">
                 <a href="{{ routes.root_url }}" aria-label="{{ shop.name }}">
                   {% if header_logo %}
-                    {{ header_logo | image_url: width: 70, height: 70 | image_tag: loading: "lazy", class: "site__logo-image" }}
+                    {{ header_logo | image_url: width: desktop_logo_width.width, height: desktop_logo_width.height | image_tag: loading: "lazy", class: "site__logo-image" }}
                   {%- else -%}
                     <span>{{ shop.name }}</span>
                   {% endif %}
