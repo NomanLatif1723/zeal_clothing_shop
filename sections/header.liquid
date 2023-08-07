@@ -67,8 +67,8 @@
       {%- endfor -%}
       {%- if header_styles == 'center_left' -%}
         <div class="header__navigation">
-          {%- render 'header-nav-list' 
-            , main_menu: main_menu,
+          {%- render 'header-nav-list',
+            main_menu: main_menu,
             mobile_menu: mobile_menu -%}
         </div>
         <div class="header__logo">
@@ -88,8 +88,8 @@
           {{ header_logo }}
         </div>
         <div class="header__navigation{% if header_styles == 'left_center' or header_styles == 'center_below' %} header-nav__center{% endif %}">
-          {%- render 'header-nav-list' 
-            , main_menu: main_menu,
+          {%- render 'header-nav-list', 
+            main_menu: main_menu,
             mobile_menu: mobile_menu -%}
         </div>
       {%- endif -%}
