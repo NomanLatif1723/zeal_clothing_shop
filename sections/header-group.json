@@ -30,7 +30,7 @@
       ],
       "settings": {
         "desktop_menu": "main-menu",
-        "mobile_menu": "",
+        "mobile_menu": "featured",
         "header_styles": "left",
         "sticky_header": true,
         "show_icons": true
