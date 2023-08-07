@@ -1631,90 +1631,86 @@ input[type="radio"]:checked + label {
   }
 
   .main-menu__list {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
   }
   
   .site__logo {
-      font-size: 26px;
-      white-space: nowrap;
-      line-height: 1.4;
+    font-size: 26px;
+    white-space: nowrap;
+    line-height: 1.4;
   }
   
   .header__logo {
-      display: flex;
+    display: flex;
   }
   
   .header__navigation {
-      display: flex;
-      flex: 1 1 auto;
-      padding-left: 22px;
+    display: flex;
+    flex: 1 1 auto;
+    padding-left: 22px;
   }
      
   .menu__item {
-      padding: 25px 0 25px 20px;
-      cursor: pointer;
-      position: relative;
+    position: relative;
   }
 
   .menu__item a {
-      display: flex;
-      align-items: center;
-      gap: 10px;
+    padding: 25px 0 25px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
 
   .header__icon-container {
-      display: flex;
-      flex: 0 1 auto;
+    display: flex;
+    flex: 0 1 auto;
   }
   
   .header__icon-container .icon {
-      padding: 12px;
-      display: inline-flex;
+    padding: 12px;
+    display: inline-flex;
   }
 
   .child-menu__list {
-      position: absolute;
-      top: 68px;
-      background: white;
-      width: 250px;
-      z-index: 9;
-      left: 0;
-      transform: translateY(30px);
-      transition: transform 0.3s ease;
-      visibility: hidden;
+    position: absolute;
+    top: 68px;
+    background: white;
+    width: 250px;
+    z-index: 9;
+    left: 0;
+    transform: translateY(30px);
+    transition: transform 0.3s ease;
+    visibility: hidden;
   }  
   .menu__item:hover .child-menu__list{
-      transform: translateY(0);
-      visibility: visible;
+    transform: translateY(0);
+    visibility: visible;
   }
 
-  .child-menu__item {
-      padding: 15px 20px;
+  .child-menu__item a,
+  .grandchild-menu__item a  {
+    padding: 15px 20px;
   }
 
   .grandchild-menu__list {
-      position: absolute;
-      left: 100%;
-      background: white;
-      width: 250px;
-      top: 0;
-      transform: translateY(30px);
-      transition: transform 0.3s ease;
-      visibility: hidden;
+    position: absolute;
+    left: 100%;
+    background: white;
+    width: 250px;
+    top: 0;
+    transform: translateY(30px);
+    transition: transform 0.3s ease;
+    visibility: hidden;
   }
   
   .child-menu__item:hover .grandchild-menu__list {
-      visibility: visible;
-      transform: translateY(0);
+    visibility: visible;
+    transform: translateY(0);
   }
   
   .child-menu__item--link {
-      justify-content: space-between;
-  }
-  
-  .grandchild-menu__item {
-      padding: 15px 20px;
+    justify-content: space-between;
   }
   
