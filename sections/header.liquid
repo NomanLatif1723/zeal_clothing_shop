@@ -1,60 +1,177 @@
-<header>Header</header>
+{%-  liquid
+  assign sticky_header = section.settings.sticky_header
+  assign show_icons = section.settings.show_icons
+  assign main_menu = linklists[section.settings.desktop_menu]
+  assign mobile_menu = linklists[section.settings.mobile_menu]
+  assign header_styles = section.settings.header_styles
+  assign cart_icon = settings.cart_icon
+
+  for block in section.blocks
+    assign header_logo = block.settings.header_logo
+  endfor
+-%}
+{%- style -%}
+  :root  {
+    --headerBackground: settings.header_background_color;
+    --headerText: settings.header_text_color
+  }
+  .section__header {
+    background: #111111;
+    background: var(--headerBackground);
+    color: #ffffff;
+    color: var(--headerText);
+  }
+{%- endstyle -%}
+<header class="section__header{% if sticky_header %} sticky__header{% endif %}">
+  <div class="page__width">
+    <div class="header__wrapper" data-header-style="{{ header_styles }}">
+      {%- capture header_logo -%}
+        <h1 class="site__logo">
+          <a href="{{ routes.root_url }}" aria-label="{{ shop.name }}">
+            {% if header_logo %}
+              {{ header_logo | image_url: width: header_logo.width, height: header_logo.height | image_tag: loading: "lazy", class: "site__logo-image" }}
+            {% else %}
+              <span>{{ shop.name }}</span>
+            {% endif %}
+          </a>
+        </h1>
+      {%- endcapture -%}
+      {%- if header_styles == 'center_left' -%}
+        <div class="header__navigation">
+          {%- render 'header-nav-list' 
+            , main_menu: main_menu,
+            mobile_menu: mobile_menu -%}
+        </div>
+        <div class="header__logo">
+          {{ header_logo }}
+        </div>
+      {%- elsif header_styles == 'drawer-center' -%}
+        <div class="header__navigation">
+          <button class="menu-item__link menu-toggle__btn">
+            {% render 'icon-hamburger' %}
+          </button>
+        </div>
+        <div class="header__logo">
+          {{ header_logo }}
+        </div>
+      {%- else -%}
+        <div class="header__logo{% if header_styles == 'center_below' %} header__logo-center{% endif %}">
+          {{ header_logo }}
+        </div>
+        <div class="header__navigation{% if header_styles == 'left_center' or header_styles == 'center_below' %} header-nav__center{% endif %}">
+          {%- render 'header-nav-list' 
+            , main_menu: main_menu,
+            mobile_menu: mobile_menu -%}
+        </div>
+      {%- endif -%}
+      <div class="header__icon-container">
+        {%- if show_icons -%}
+          <a
+            href="{{ routes.search_url }}"
+            aria-label="Search"
+            class="icon icon__search">
+            {%- render 'icon-search' -%}
+          </a>
+          {%- if shop.customer_accounts_enabled -%}
+            <a
+              href="{{ routes.account_url }}"
+              aria-label="Accounts"
+              class="icon icon__accounts">
+              {%- render 'icon-account' -%}
+            </a>
+          {%- endif -%}
+          <a
+            href="{{ routes.cart_url }}"
+            aria-label="Cart"
+            aria-controls="drawer"
+            class="icon icon__cart">
+            {%- if cart_icon == 'cart' -%}
+              {%- render 'icon-cart' -%}
+            {%- elsif cart_icon == 'bag' -%}
+              {%- render 'icon-bag' -%}
+            {%- else -%}
+              {%- render 'icon-minimal-bag' -%}
+            {%- endif -%}
+          </a>
+        {%- else -%}
+          <ul class="icons-text__list">
+            <li class="icons-text__item">
+              <a href="{{ routes.search_url }}" aria-label="Search">Search</a>
+            </li>
+            {%- if shop.customer_accounts_enabled -%}
+              <li class="icons-text__list">
+                <a href="{{ routes.account_url }}" aria-label="Accounts">Accounts</a>
+              </li>
+            {%- endif -%}
+            <li class="icons-text__list">
+              <a
+                href="{{ routes.cart_url }}"
+                aria-label="Cart"
+                aria-controls="drawer"
+                class="icon icon__cart">Cart</a>
+            </li>
+          </ul>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</header>
 {% schema %}
   {
-    "name": "Header",
+    "name": "t:sections.header.name",
     "class": "shopify__header-group",
     "settings": [
       {
         "type": "header",
-        "content": "Navigation Menus"
+        "content": "t:sections.header.settings.header_navigation.label"
       },
       {
         "type": "link_list",
         "id": "desktop_menu",
-        "label": "Menu",
+        "label": "t:sections.header.settings.header_navigation.desktop_menu.label",
         "default": "main-menu"
       },
       {
         "type": "link_list",
         "id": "mobile_menu",
-        "label": "Mobile Menu",
+        "label": "t:sections.header.settings.header_navigation.mobile_menu.label",
         "info": "Provide Different Menu for Mobile Devices If None Selected Then Desktop Menu Used"
       },
       {
         "type": "select",
         "id": "header_styles",
-        "label": "Header Styles",
+        "label": "t:sections.header.settings.header_styles.label",
         "default": "left",
         "options": [
           {
-            "value": "center-left",
-            "label": "Logo center Menu Left"
+            "value": "center_left",
+            "label": "t:sections.header.settings.header_styles.center-left.label"
           },
           {
-            "value": "left-center",
-            "label": "Logo Left Menu Center"
+            "value": "left_center",
+            "label": "t:sections.header.settings.header_styles.left_center.label"
           },
           {
             "value": "left",
-            "label": "Logo Left Menu Left"
+            "label": "t:sections.header.settings.header_styles.left.label"
           },
           {
-            "value": "drawer-center",
-            "label": "Menu Drawer Logo Center"
+            "value": "drawer_center",
+            "label": "t:sections.header.settings.header_styles.drawer_center.label"
           }, {
-            "value": "center-below",
-            "label": "Logo Center Menu Below"
+            "value": "center_below",
+            "label": "t:sections.header.settings.header_styles.center_below.label"
           }
         ]
       }, {
         "type": "checkbox",
         "id": "sticky_header",
-        "label": "Sticky Header",
+        "label": "t:sections.header.settings.header_styles.sticky_header.label",
         "default": false
       }, {
         "type": "checkbox",
         "id": "show_icons",
-        "label": "Show Icons",
+        "label": "t:sections.header.settings.header_styles.show_icons.label",
         "default": true
       }
     ],

@@ -1,0 +1,45 @@
+<nav class="header__menu header-desktop__menu{% if mobile_menu != blank %} desktop-menu__hide{% endif %}">
+  <ul class="menu__list main-menu__list">
+    {% for link in main_menu.links %}
+      <li class="menu__item">
+        <a
+          href="{{ link.url }}"
+          title="{{ link.title }}"
+          class="menu-item__link">
+          {{ link.title }}
+          {%- if link.links != blank -%}
+            {%- render 'icon-arrow-down' -%}
+          {%- endif -%}
+        </a>
+        {% if link.links != blank %}
+          <ul class="menu__list child-menu__list">
+            {% for childlink in link %}
+              <li class="menu__item child-menu__item">
+                <a
+                  href="{{ childlink.url }}"
+                  title="{{ childlink.title }}"
+                  class="menu-item__link child-menu__item--link">{{ childlink.title }}
+                  {% if childlink.links != blank %}
+                    {% render 'icon-arrow-down' %}
+                  {% endif %}
+                </a>
+                {% if childlink.links != blank %}
+                  <ul class="menu__list grandchild-menu__list">
+                    {% for grandchild in childlink %}
+                      <li class="menu__item grandchild-menu__item">
+                        <a
+                          href="{{ grandchild.url }}"
+                          title="{{ grandchild.title }}"
+                          class="menu-item__link grandchild-menu__item--link">{{ grandchild.title }}</a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
