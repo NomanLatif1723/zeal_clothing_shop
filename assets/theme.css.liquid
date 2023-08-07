@@ -355,6 +355,7 @@ font-display: "swap";
   .menu__item {
       padding: 25px 0 25px 20px;
       cursor: pointer;
+      position: relative;
   }
 
   .menu__item a {
@@ -372,6 +373,20 @@ font-display: "swap";
       padding: 12px;
       display: inline-flex;
   }
+
+  .child-menu__list {
+    position: absolute;
+    top: 68px;
+    background: white;
+    width: 300px;
+    z-index: 9;
+    left: 0;
+    display: none;
+}
+
+.child-menu__item {
+    padding: 15px 20px;
+}
   
 
   /* Richtext section */
