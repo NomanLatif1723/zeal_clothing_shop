@@ -7,7 +7,10 @@
   assign cart_icon = settings.cart_icon
 
   for block in section.blocks
-    assign header_logo = block.settings.header_logo
+    case block.type
+      when 'logo'
+        assign header_logo = block.settings.header_logo
+    endcase
     assign desktop_logo_width = block.settings.desktop_logo_width
     assign mobile_logo_width = block.settings.mobile_logo_width
   endfor
