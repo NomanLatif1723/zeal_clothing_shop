@@ -15,6 +15,18 @@
     },
     "header": {
       "type": "header",
+      "blocks": {
+        "0245aaf5-9a53-4308-a71f-a8de2161de7c": {
+          "type": "logo",
+          "settings": {
+            "desktop_logo_width": 100,
+            "mobile_logo_width": 100
+          }
+        }
+      },
+      "block_order": [
+        "0245aaf5-9a53-4308-a71f-a8de2161de7c"
+      ],
       "settings": {
         "desktop_menu": "main-menu",
         "mobile_menu": "",
