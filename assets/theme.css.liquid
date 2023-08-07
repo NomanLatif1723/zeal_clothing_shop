@@ -1622,3 +1622,74 @@ input[type="radio"]:checked + label {
     height: 100vh;
   } 
 }
+
+  /* Header Section */
+  .header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .main-menu__list {
+      display: flex;
+      align-items: center;
+  }
+  
+  .site__logo {
+      font-size: 26px;
+      white-space: nowrap;
+      line-height: 1.4;
+  }
+  
+  .header__logo {
+      display: flex;
+  }
+  
+  .header__navigation {
+      display: flex;
+      flex: 1 1 auto;
+      padding-left: 22px;
+  }
+     
+  .menu__item {
+      padding: 25px 0 25px 20px;
+      cursor: pointer;
+      position: relative;
+  }
+
+  .menu__item a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+  }
+
+  .header__icon-container {
+      display: flex;
+      flex: 0 1 auto;
+  }
+  
+  .header__icon-container .icon {
+      padding: 12px;
+      display: inline-flex;
+  }
+
+  .child-menu__list {
+      position: absolute;
+      top: 68px;
+      background: white;
+      width: 250px;
+      z-index: 9;
+      left: 0;
+      transform: translateY(30px);
+      transition: transform 0.3s ease;
+      visibility: hidden;
+  }  
+  .menu__item:hover .child-menu__list{
+      transform: translateY(0);
+      visibility: visible;
+  }
+
+  .child-menu__item {
+      padding: 15px 20px;
+  }
+  
