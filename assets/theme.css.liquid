@@ -112,11 +112,6 @@ textarea {
     display: inline;
   }
   }
-/* @font-face {
-font-family: 'Monda-Regular';
-src: url("https://cdn.shopify.com/s/files/1/0794/3716/8962/files/Monda-Regular.woff2?v=1689596069");
-font-display: "swap";
-} */
 :root
   {
     --colorBody: {{ settings.body_bg_color }};
@@ -137,9 +132,7 @@ font-display: "swap";
 
     --bodyTextFont: {{ settings.body_font_family.family }};
     --headingTextFont: {{ settings.heading_font_family.family }};
-    {% comment %}
-      --bodyTextFont: 'Monda-Regular';
-    {% endcomment %}
+
     --bodyBackgroundColor: {{ settings.body_bg_color }};
     --bodyTextColor: {{ settings.body_text_color }};
 
