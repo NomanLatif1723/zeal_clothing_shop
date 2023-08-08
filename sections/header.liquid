@@ -91,11 +91,23 @@
         <div class="header__block header__logo">
           {{ header_logo }}
         </div>
+      {%- elsif header_styles == 'center_below' -%}
+        <div class="header-center__below">
+          <div class="header__block header__logo">
+            {{ header_logo }}
+          </div>
+          <div class="header__block header__navigation">
+            {%- render 'header-nav-list', 
+              main_menu: main_menu,
+              mobile_menu: mobile_menu -%}
+          </div>
+        </div>
+      
       {%- else -%}
-        <div class="header__block header__logo{% if header_styles == 'center_below' %} header__logo-center{% endif %}">
+        <div class="header__block header__logo">
           {{ header_logo }}
         </div>
-        <div class="header__block header__navigation{% if header_styles == 'left_center' or header_styles == 'center_below' %} header-nav__center{% endif %}">
+        <div class="header__block header__navigation{% if header_styles == 'left_center' %} header-nav__center{% endif %}">
           {%- render 'header-nav-list', 
             main_menu: main_menu,
             mobile_menu: mobile_menu -%}
