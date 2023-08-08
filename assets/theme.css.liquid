@@ -1727,9 +1727,6 @@ input[type="radio"]:checked + label {
     flex: 0;
   }
   
-  .header__block.header__icon-container {
-      flex: 1;
-  }
   @media only screen and (max-width: 768px) {
     .desktop-menu__hide {
       display: none;
@@ -1768,6 +1765,9 @@ input[type="radio"]:checked + label {
     
     .header-center__below .header__navigation {
         justify-content: center;
+    }
+    .header__icon-container {
+        flex: 0 1 auto;
     }
   }
   
