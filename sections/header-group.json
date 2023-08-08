@@ -31,7 +31,7 @@
       "settings": {
         "desktop_menu": "main-menu",
         "mobile_menu": "featured",
-        "header_styles": "center_below",
+        "header_styles": "center_left",
         "sticky_header": true,
         "show_icons": true
       }
