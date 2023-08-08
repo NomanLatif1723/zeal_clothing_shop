@@ -33,7 +33,7 @@
           {%- when 'image' -%}
           <div class="image-text__Item image__block" {{ block.shopify_attributes }}>
             {%- if image != blank -%}
-              {{ image | image_url: width: image.width, height: image.height | image_tag: loading: lazyloading, class: 'image-text__image', widths: '240,480,600,1024,2048', sizes: '(min-width: 1200px) 650px, 45vw' }}
+              {{ image | image_url: width: image.width, height: image.height | image_tag: loading: lazyloading, alt: image.alt, class: 'image-text__image', widths: '240,480,600,1024,2048', sizes: '(min-width: 1200px) 650px, 45vw' }}
             {%- else -%}
               {{ 'image' | placeholder_svg_tag: "placeholder__image" }}
             {%- endif -%}
