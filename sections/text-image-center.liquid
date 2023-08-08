@@ -1,0 +1,175 @@
+{%- liquid
+    assign image = section.settings.image
+    assign main_heading = section.settings.main_heading
+    assign lazyloading = ''
+    assign lazyloadImages = section.settings.lazyload_images
+    if lazyloadImages
+    assign lazyloading = 'lazy'
+    endif
+-%}
+{% style %}
+  .main__section-{{ section.id }}{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  @media only screen and (min-width: 769px) {
+    .main__section-{{ section.id }}{
+      margin-top: {{ section.settings.margin_top }}px;
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+  }
+{% endstyle %}
+<div class="text-image-center__section main__section-{{ section.id }}">
+  <div class="page__width">
+    <div class="main__heading center-image__heading">
+      <h2>{{ main_heading }}</h2>
+    </div>
+    <div class="image-center__wrapper">
+      {% for block in section.blocks %}
+        {%- liquid 
+            assign left_heading = block.settings.left_heading
+            assign left_text = block.settings.left_text 
+        -%}
+        <div class="image-center__item left-text__block" {{ block.shopify_attributes }}>
+          {%- if left_heading != blank -%}
+            <div class="image-center__title">
+              <h4>{{ left_heading }}</h4>
+            </div>
+          {%- endif -%}
+          {%- if left_text != blank -%}
+            <div class="image-center__text rte">
+              {{ left_text }}
+            </div>
+          {%- endif -%}
+        </div>
+      {% endfor %}
+
+      <div class="image-center__item center-image__block">
+        {%- if image != blank -%}
+          {{ image | image_url: width: image.width, height: image.height | image_tag: loading: lazyloading, class: "center-image__image", widths: '240,480,600,1024,2048', sizes: '(min-width: 1200px) 650px, 45vw' }}
+        {%- else -%}
+          {{ 'image' | placeholder_svg_tag: "placeholder__Image" }}
+        {%- endif -%}
+      </div>
+      {% for block in section.blocks %}
+        {%- liquid 
+                assign right_heading = block.settings.right_heading
+                assign right_text = block.settings.right_text 
+            -%}
+        <div class="image-center__item right-text__block" {{ block.shopify_attributes }}>
+          {%- if right_heading != blank -%}
+            <div class="image-center__title">
+              <h4>{{ right_heading }}</h4>
+            </div>
+          {%- endif -%}
+          {%- if right_text != blank -%}
+            <div class="image-center__text rte">
+              {{ right_text }}
+            </div>
+          {%- endif -%}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "t:sections.text-image-center.name",
+    "class": "main__section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "main_heading",
+        "label": "t:sections.text-image-center.settings.main_heading.label",
+        "default": "Text Image Center"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "t:sections.text-image-center.settings.image.label"
+      },
+      {
+        "type": "checkbox",
+        "id": "lazyload_images",
+        "label": "t:sections.text-image-center.settings.lazyload_images.label",
+        "default": false,
+        "info": "t:sections.text-image-center.settings.lazyload_images.info"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.text-image-center.settings.header_spacing.label"
+      }, {
+        "type": "range",
+        "id": "margin_top",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "label": "t:sections.text-image-center.settings.header_spacing.top_spacing.label",
+        "default": 16
+      }, {
+        "type": "range",
+        "id": "margin_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "label": "t:sections.text-image-center.settings.header_spacing.bottom_spacing.label",
+        "default": 16
+      }
+    ],
+    "blocks": [
+      {
+        "type": "left-text",
+        "name": "t:sections.text-image-center.blocks.left-text.name",
+        "limit": 3,
+        "settings": [
+          {
+            "type": "text",
+            "id": "left_heading",
+            "label": "t:sections.text-image-center.blocks.left-text.settings.left_heading.label",
+            "default": "Text Image Center"
+          }, {
+            "type": "textarea",
+            "id": "left_text",
+            "label": "t:sections.text-image-center.blocks.left-text.settings.left_text.label",
+            "default": "Welcome To Our Store"
+          }
+        ]
+      }, {
+        "type": "right-text",
+        "name": "t:sections.text-image-center.blocks.right-text.name",
+        "limit": 3,
+        "settings": [
+          {
+            "type": "text",
+            "id": "right_heading",
+            "label": "t:sections.text-image-center.blocks.right-text.settings.right_heading.label",
+            "default": "Text Image Center"
+          }, {
+            "type": "textarea",
+            "id": "right_text",
+            "label": "t:sections.text-image-center.blocks.right-text.settings.right_text.label",
+            "default": "Welcome To Our Store"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "t:sections.text-image-center.presets.name",
+        "blocks": [
+          {
+            "type": "left-text"
+          }, {
+            "type": "right-text"
+          }, {
+            "type": "left-text"
+          }, {
+            "type": "right-text"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

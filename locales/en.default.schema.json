@@ -435,6 +435,57 @@
         }
       }
     },
+    "image-with-text": {
+      "name": "Image With Text",
+      "settings": {
+        "layout_reverse": {
+          "label": "Reverse Direction"
+        },
+        "lazyload_images": {
+          "label": "Enable LazyLoad Images",
+          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+        },
+        "header_spacing": {
+          "label": "Section Spacing",
+          "top_spacing": {
+            "label": "Spacing Top"
+          },
+          "bottom_spacing": {
+            "label": "Spacing Bottom"
+          }
+        }
+      },
+      "blocks": {
+        "image": {
+          "name": "Image",
+          "settings": {
+            "image": {
+              "label": "Image"
+            }
+          }
+        },
+        "text": {
+          "name": "Text",
+          "settings": {
+            "heading": {
+              "label": "Heading"
+            },
+            "text": {
+              "label": "Text"
+            },
+            "button_label": {
+              "label": "Button"
+            },
+            "button_link": {
+              "label": "Link"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Image With Text"
+      }
+    },
     "lookbook": {
       "name": "Lookbook",
       "settings": {
@@ -1061,6 +1112,57 @@
       },
       "presets": {
         "name": "Text With Icon"
+      }
+    },
+    "text-image-center": {
+      "name": "Text Image Center",
+      "settings": {
+        "main_heading": {
+          "label": "Heading"
+        },
+        "image": {
+          "label": "Image"
+        },
+        "lazyload_images": {
+          "label": "Enable LazyLoad Images",
+          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+        },
+        "header_spacing": {
+          "label": "Section Spacing",
+          "top_spacing": {
+            "label": "Spacing Top"
+          },
+          "bottom_spacing": {
+            "label": "Spacing Bottom"
+          }
+        }
+      },
+      "blocks": {
+        "left-text": {
+          "name": "Left Text",
+          "settings": {
+            "left_heading": {
+              "label": "Heading"
+            },
+            "left_text": {
+              "label": "Text"
+            }
+          }
+        },
+        "right-text": {
+          "name": "Left Text",
+          "settings": {
+            "right_heading": {
+              "label": "Heading"
+            },
+            "right_text": {
+              "label": "Text"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Text Image Center"
       }
     },
     "testimonials": {
