@@ -177,24 +177,18 @@
             {%- endif -%}
           </a>
         {%- else -%}
-          <ul class="icons-text__list">
-            <li class="icons-text__item">
-              <a href="{{ routes.search_url }}" title="Search" aria-label="Search" class="icon icon__search">Search</a>
-            </li>
+            <a href="{{ routes.search_url }}" title="Search" aria-label="Search" class="icon icon__search">Search</a>
             {%- if shop.customer_accounts_enabled -%}
-              <li class="icons-text__item">
                 <a href="{{ routes.account_url }}" title="Accounts" aria-label="Accounts" class="icon icon__account">Accounts</a>
-              </li>
             {%- endif -%}
-            <li class="icons-text__item">
-              <a
-                href="{{ routes.cart_url }}"
-                aria-label="Cart"
-                aria-controls="drawer"
-                title="Cart"
-                class="icon icon__cart">Cart</a>
-            </li>
-          </ul>
+            <a
+              href="{{ routes.cart_url }}"
+              aria-label="Cart"
+              aria-controls="drawer"
+              title="Cart"
+              class="icon icon__cart">
+              Cart
+            </a>
         {%- endif -%}
       </div>
     </div>
