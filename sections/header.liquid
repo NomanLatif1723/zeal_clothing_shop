@@ -64,7 +64,7 @@
               <h1 class="site__logo">
                 <a href="{{ routes.root_url }}" title="{{ shop.name }}" aria-label="{{ shop.name }}">
                   {% if header_logo %}
-                    {{ header_logo | image_url: width: desktop_logo_width.width, height: desktop_logo_width.height | image_tag: class: "site__logo-image", alt: header_logo.alt }}
+                    {{ header_logo | image_url: width: desktop_logo_width.width, height: desktop_logo_width.height | image_tag: class: "site__logo-image" }}
                   {%- else -%}
                     <span>{{ shop.name }}</span>
                   {% endif %}
