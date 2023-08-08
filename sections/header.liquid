@@ -39,6 +39,11 @@
     .site__logo-image {
       width: {{ desktop_logo_width }}px;
     }
+    {%- if header_styles == 'drawer_center' -%}
+      .section__header{
+        padding: 25px 0;
+      }
+    {%- endif -%}
   }
 {%- endstyle -%}
 <header class="section__header{% if sticky_header %} sticky__header{% endif %}">
