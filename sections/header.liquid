@@ -114,6 +114,11 @@
         </div>
       
       {%- else -%}
+        <div class="header__block navigation__hide">
+          <button class="menu-item__link menu-toggle__btn">
+            {% render 'icon-hamburger' %}
+          </button>
+        </div>
         <div class="header__block header__logo">
           {{ header_logo }}
         </div>
