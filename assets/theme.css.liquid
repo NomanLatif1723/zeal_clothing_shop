@@ -1736,8 +1736,18 @@ input[type="radio"]:checked + label {
       flex: 1;
     }
     
-    /* .header__wrapper[data-header-style= 'center_left'] .header__logo {
-      justify-content: center;
-    } */
+    .header-center__below .header__logo {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .header-center__below {
+        flex-direction: column;
+    }
+    
+    .header-center__below .header__navigation {
+        justify-content: center;
+    }
   }
   
