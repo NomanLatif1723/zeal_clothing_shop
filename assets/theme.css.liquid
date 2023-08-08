@@ -1726,11 +1726,16 @@ input[type="radio"]:checked + label {
   .header-center__below {
     flex: 0;
   }
+
+  .icon__accounts {
+    display: none;
+  }
   
   @media only screen and (max-width: 768px) {
     .desktop-menu__hide {
       display: none;
     }
+  
   }
   @media only screen and (min-width: 769px) {
     .header__navigation {
@@ -1768,6 +1773,9 @@ input[type="radio"]:checked + label {
     }
     .header__icon-container {
         flex: 0 1 auto;
+    }
+    .icon__accounts {
+      display: inline-flex;
     }
   }
   
