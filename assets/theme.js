@@ -34,6 +34,7 @@ function initSlideshowSwipers() {
 // Call the function to initialize slideshow swipers
 initSlideshowSwipers();
 
+
 // Testimonial Slider
 function initTestimonialSwipers() {
   // Find all testimonial wrappers on the page
