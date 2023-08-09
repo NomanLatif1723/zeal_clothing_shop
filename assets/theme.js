@@ -18,15 +18,15 @@ function initSlideshowSwipers() {
           nextEl: ".swiper-button-next.swiper-button-" + id,
           prevEl: ".swiper-button-prev.swiper-button-" + id,
         },
-        {%- if slideAutomation -%}
+        if(autoSlides) {
           autoplay : {
-            delay: {{ slideChangeDuration }},
+            delay: slideDuration,
             disableOnInteraction: false
           },
-          {%- endif -%}
-          pagination: {
-          el: ".swiper-pagination-{{ section.id }}.swiper-pagination",
-          clickable: true
+        }
+        pagination: {
+        el: ".swiper-pagination-{{ section.id }}.swiper-pagination",
+        clickable: true
         }
       });
     }
