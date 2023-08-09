@@ -221,7 +221,7 @@ function initFeaturedSwatches() {
   moreSwatchesBtn.forEach(btn => {
     if (btn) {
       btn.addEventListener('click', () => {
-        let hiddernSwatches = btn.closest('.color-swatch__list').querySelector('.hidden__swatches');
+        let hiddenSwatches = btn.closest('.color-swatch__list').querySelector('.hidden__swatches');
         btn.classList.add('hide');
         hiddenSwatches.classList.add('show');
       })
