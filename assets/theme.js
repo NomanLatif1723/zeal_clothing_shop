@@ -1,33 +1,32 @@
-(function() {
-  
+function Testimonials = (function() {
   function Testimonials(container) {
     this.container = container;
+    this.timeout = null;
     var sectionId = container.getAttribute('data-section-id');
-    console.log(sectionId);
-    this.slideshow = container.querySelector('#testimonials-' + sectionId);
-    this.namespace = '.main__section-' + sectionId;
+    this.slideshow = container.querySelector('#Testimonials-' + sectionId);
+    this.namespace = '.testimonial-' + sectionId;
+    this.swiper = null; // To store the Swiper instance
 
-    if (!this.slideshow) { return }
-
-    this.init();
-  }
+    if (!this.slideshow) {
+      return;
+    }
 
   Testimonials.prototype = Object.assign({}, Testimonials.prototype, {
     init: function() {
       var sectionId = this.container.getAttribute('data-section-id');
-      
-      var swiper = new Swiper("#swiper-" + sectionId, {
+
+      this.swiper = new Swiper('#swiper-' + sectionId, {
         slidesPerView: 1,
         navigation: {
-          nextEl: ".swiper-button-next.swiper-button-" + sectionId,
-          prevEl: ".swiper-button-prev.swiper-button-" + sectionId,
+          nextEl: '.swiper-button-next.swiper-button-' + sectionId,
+          prevEl: '.swiper-button-prev.swiper-button-' + sectionId,
         },
         autoplay: {
           delay: 2500,
           disableOnInteraction: false,
         },
         pagination: {
-          el: ".swiper-pagination.swiper-pagination-" + sectionId,
+          el: '.swiper-pagination.swiper-pagination-' + sectionId,
           clickable: true,
         },
         breakpoints: {
@@ -37,63 +36,52 @@
           993: {
             slidesPerView: 3,
           },
-        }
+        },
       });
 
       // Autoscroll to next slide on load to indicate more blocks
       if (this.slideshow.dataset.count > 2) {
-        this.timeout = setTimeout(function() {
-          swiper.slideNext();
+        this.timeout = setTimeout(() => {
+          this.swiper.slideNext();
         }, 1000);
       }
 
-      this.bindEvents(swiper);
+      this.bindEvents();
     },
 
-    bindEvents: function(swiper) {
-      var _this = this;
-
-      if (swiper) {
-        swiper.on('slideChange', function() {
-          clearTimeout(_this.timeout);
-          _this.timeout = setTimeout(function() {
-            swiper.slideNext();
+    bindEvents: function() {
+      if (this.swiper) {
+        this.swiper.on('slideChange', () => {
+          clearTimeout(this.timeout);
+          this.timeout = setTimeout(() => {
+            this.swiper.slideNext();
           }, 2500);
         });
 
-        swiper.on('slideChangeTransitionEnd', function() {
-          if (swiper.autoplay && !swiper.autoplay.running) {
-            swiper.autoplay.start();
-          }
-        });
-
-        this.slideshow.addEventListener('block-select', function(evt) {
-          var slide = _this.slideshow.querySelector('.testimonials-slide--' + evt.detail.blockId);
+        this.slideshow.addEventListener('block-select', (evt) => {
+          var slide = this.slideshow.querySelector('.testimonials-slide--' + evt.detail.blockId);
           var index = parseInt(slide.dataset.index);
 
-          clearTimeout(_this.timeout);
+          clearTimeout(this.timeout);
 
-          if (swiper) {
-            swiper.slideTo(index);
-            swiper.autoplay.stop();
+          if (this.swiper) {
+            this.swiper.slideTo(index);
+            this.swiper.autoplay.stop();
           }
         });
 
-        this.slideshow.addEventListener('block-deselect', function() {
-          if (swiper && swiper.autoplay && !swiper.autoplay.running) {
-            swiper.autoplay.start();
+        this.slideshow.addEventListener('block-deselect', () => {
+          if (this.swiper && this.swiper.autoplay) {
+            this.swiper.autoplay.start();
           }
         });
       }
     },
   });
 
-  // Initialize Testimonials for each container
-  var testimonialContainers = document.querySelectorAll('.testimonial-container');
-  for (var i = 0; i < testimonialContainers.length; i++) {
-    new Testimonials(testimonialContainers[i]);
-  }
+  return Testimonials;
 })();
+
 (function(){
 
 })();
