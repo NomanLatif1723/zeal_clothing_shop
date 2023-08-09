@@ -45,20 +45,20 @@ function initAnnouncementTimer() {
 initAnnouncementTimer();
 
 // Get references to the elements
-const header = document.querySelector('.section__header');
+// const header = document.querySelector('.section__header');
 
-// Function to update sticky header based on section setting and scroll position
-function updateStickyHeader() {
-  // Fetch the value of the section setting from your preferred method
-  const isSticky = header.getAttribute('data-sticky-header') // Replace with your method to get the section setting value
+// // Function to update sticky header based on section setting and scroll position
+// function updateStickyHeader() {
+//   // Fetch the value of the section setting from your preferred method
+//   const isSticky = header.getAttribute('data-sticky-header') // Replace with your method to get the section setting value
 
-  if (isSticky && window.scrollY >= header.offsetTop) {
-    header.style.position = 'sticky';
-    header.style.top = '0';
-  } else {
-    header.style.position = 'static'; // Or set to whatever default position you want
-  }
-}
+//   if (isSticky && window.scrollY >= header.offsetTop) {
+//     header.style.position = 'sticky';
+//     header.style.top = '0';
+//   } else {
+//     header.style.position = 'static'; // Or set to whatever default position you want
+//   }
+// }
 
 // Call the function initially to reflect the setting's value
 updateStickyHeader();
