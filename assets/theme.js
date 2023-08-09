@@ -57,7 +57,7 @@ function initTestimonialSwipers() {
           disableOnInteraction: false,
         },
         pagination: {
-          el: ".swiper-pagination.swiper-pagination-" + sectionId,
+          el: ".swiper-pagination.swiper-pagination-" + id,
           clickable: true,
         },
         breakpoints: {
