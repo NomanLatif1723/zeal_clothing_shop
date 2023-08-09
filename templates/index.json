@@ -323,7 +323,6 @@
     },
     "6c915974-bf41-4211-adbb-e966c2df30a9": {
       "type": "video",
-      "disabled": true,
       "settings": {
         "section_width": false,
         "height_desktop": "extended",
