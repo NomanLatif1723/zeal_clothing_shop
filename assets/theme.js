@@ -1,5 +1,5 @@
 (function(){
-var Testimonials = (function() {
+(function() {
   function Testimonials(container) {
     this.container = container;
     this.timeout;
@@ -9,6 +9,8 @@ var Testimonials = (function() {
 
     if (!this.slideshow) { return }
 
+    this.init();
+  }
 
   Testimonials.prototype = Object.assign({}, Testimonials.prototype, {
     init: function() {
@@ -44,41 +46,55 @@ var Testimonials = (function() {
           swiper.slideNext();
         }, 1000);
       }
+
+      this.bindEvents(swiper);
     },
 
-    onUnload: function() {
-      if (swiper) {
-        swiper.destroy();
-      }
-    },
-
-    onDeselect: function() {
-      if (swiper && swiper.autoplay) {
-        swiper.autoplay.start();
-      }
-    },
-
-    onBlockSelect: function(evt) {
-      var slide = this.slideshow.querySelector('.testimonials-slide--' + evt.detail.blockId);
-      var index = parseInt(slide.dataset.index);
-
-      clearTimeout(this.timeout);
+    bindEvents: function(swiper) {
+      var _this = this;
 
       if (swiper) {
-        swiper.slideTo(index);
-        swiper.autoplay.stop();
+        swiper.on('slideChange', function() {
+          clearTimeout(_this.timeout);
+          _this.timeout = setTimeout(function() {
+            swiper.slideNext();
+          }, 2500);
+        });
+
+        swiper.on('slideChangeTransitionEnd', function() {
+          if (swiper.autoplay && !swiper.autoplay.running) {
+            swiper.autoplay.start();
+          }
+        });
+
+        this.slideshow.addEventListener('block-select', function(evt) {
+          var slide = _this.slideshow.querySelector('.testimonials-slide--' + evt.detail.blockId);
+          var index = parseInt(slide.dataset.index);
+
+          clearTimeout(_this.timeout);
+
+          if (swiper) {
+            swiper.slideTo(index);
+            swiper.autoplay.stop();
+          }
+        });
+
+        this.slideshow.addEventListener('block-deselect', function() {
+          if (swiper && swiper.autoplay && !swiper.autoplay.running) {
+            swiper.autoplay.start();
+          }
+        });
       }
     },
-
-    onBlockDeselect: function() {
-      if (swiper && swiper.autoplay) {
-        swiper.autoplay.start();
-      }
-    }
   });
 
-  return Testimonials;
+  // Initialize Testimonials for each container
+  var testimonialContainers = document.querySelectorAll('.testimonial-container');
+  for (var i = 0; i < testimonialContainers.length; i++) {
+    new Testimonials(testimonialContainers[i]);
+  }
 })();
+
 
 
 })();
