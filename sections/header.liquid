@@ -84,7 +84,7 @@
           {%- endif -%}
         </div>
         <div class="header__block header__navigation">
-          {%- render 'header-nav-list',
+          {%- render 'header-nav-desktop',
             main_menu: main_menu,
             mobile_menu: mobile_menu -%}
         </div>
@@ -119,7 +119,7 @@
             {{ header_logo }}
           </div>
           <div class="header__block header__navigation">
-            {%- render 'header-nav-list', 
+            {%- render 'header-nav-desktop', 
               main_menu: main_menu,
               mobile_menu: mobile_menu -%}
           </div>
@@ -139,7 +139,7 @@
           {{ header_logo }}
         </div>
         <div class="header__block header__navigation{% if header_styles == 'left_center' %} header-nav__center{% endif %}">
-          {%- render 'header-nav-list', 
+          {%- render 'header-nav-desktop', 
             main_menu: main_menu,
             mobile_menu: mobile_menu -%}
         </div>
