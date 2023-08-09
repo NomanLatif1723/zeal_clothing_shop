@@ -177,16 +177,16 @@
             {%- endif -%}
           </a>
         {%- else -%}
-            <a href="{{ routes.search_url }}" title="Search" aria-label="Search" class="icon icon__search icon__hide">Search</a>
+            <a href="{{ routes.search_url }}" title="Search" aria-label="Search" class="icon icon__search icon__hide-mobile">Search</a>
             {%- if shop.customer_accounts_enabled -%}
-                <a href="{{ routes.account_url }}" title="Accounts" aria-label="Accounts" class="icon icon__accounts icon__hide">Accounts</a>
+                <a href="{{ routes.account_url }}" title="Accounts" aria-label="Accounts" class="icon icon__accounts icon__hide-mobile">Accounts</a>
             {%- endif -%}
             <a
               href="{{ routes.cart_url }}"
               aria-label="Cart"
               aria-controls="drawer"
               title="Cart"
-              class="icon icon__cart icon__hide">
+              class="icon icon__cart icon__hide-mobile">
               Cart
             </a>
         {%- endif -%}
