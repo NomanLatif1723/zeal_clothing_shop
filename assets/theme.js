@@ -71,16 +71,16 @@ function initCollectionListSwipers() {
         },
         pagination: {
           el: ".swiper-pagination.swiper-pagination-" + id,
-          clickable: true
+          clickable: true,
         },
         breakpoints: {
           769: {
-            slidesPerView: 3
+            slidesPerView: 3,
           },
           993: {
-            slidesPerView: 4
+            slidesPerView: 4,
           }
-        }
+        },
       }
 
       // Initialize Swiper for this section
