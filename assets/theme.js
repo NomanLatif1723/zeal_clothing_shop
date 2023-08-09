@@ -42,7 +42,6 @@ function initSlideshowSwipers() {
     }
   });
 }
-// Call the function to initialize slideshow swipers
 initSlideshowSwipers();
 
 // Collection List Grid Slider
@@ -76,7 +75,6 @@ function initBrandsSwipers() {
     }
   })
 }
-// Call the function to initialize Brands swipers
 initBrandsSwipers();
   
 // Collection List Grid Slider
@@ -122,7 +120,6 @@ function initCollectionListSwipers() {
     }
   })
 }
-// Call the function to initialize collectionlist swipers
 initCollectionListSwipers();
 
 // Testimonial Slider
@@ -172,7 +169,6 @@ function initTestimonialSwipers() {
     }
   });
 }
-// Call the function to initialize testimonial swipers
 initTestimonialSwipers();
 
 })();
