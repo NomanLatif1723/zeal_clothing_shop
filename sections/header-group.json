@@ -4,7 +4,6 @@
   "sections": {
     "announcement": {
       "type": "announcement",
-      "disabled": true,
       "settings": {
         "heading_text": "SUMMER SALES ENDS IN",
         "announcement_text": "<p>USE CODE <strong>SUMMERSALE<\/strong><\/p>",
