@@ -9,12 +9,6 @@ var Testimonials = (function() {
 
     if (!this.slideshow) { return }
 
-    function initWhenVisible({
-      element: this.container,
-      callback: this.init.bind(this),
-      threshold: 600
-    });
-  }
 
   Testimonials.prototype = Object.assign({}, Testimonials.prototype, {
     init: function() {
