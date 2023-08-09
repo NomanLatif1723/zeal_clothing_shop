@@ -1,4 +1,4 @@
-function Testimonials = (function() {
+(function() {
   function Testimonials(container) {
     this.container = container;
     this.timeout = null;
@@ -10,7 +10,7 @@ function Testimonials = (function() {
     if (!this.slideshow) {
       return;
     }
-
+  }
   Testimonials.prototype = Object.assign({}, Testimonials.prototype, {
     init: function() {
       var sectionId = this.container.getAttribute('data-section-id');
