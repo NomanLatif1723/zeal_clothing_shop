@@ -639,6 +639,7 @@
         "height_mobile": "auto",
         "sub_heading": "Sub Heading",
         "heading": "Video",
+        "video": "shopify:\/\/files\/videos\/Elementor video placeholder.mp4",
         "autoplay_video": false,
         "color_text": "#111111",
         "content_position": "center",
