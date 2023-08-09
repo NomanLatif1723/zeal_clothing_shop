@@ -64,32 +64,32 @@ function initTestimonialSwipers() {
         swiperContainer.swiper.destroy();
       }
 
-        let swiperOptions = {
-          slidesPerView: 1,
-          navigation: {
-            nextEl: ".swiper-button-next.swiper-button-" + id,
-            prevEl: ".swiper-button-prev.swiper-button-" + id,
+      let swiperOptions = {
+        slidesPerView: 1,
+        navigation: {
+          nextEl: ".swiper-button-next.swiper-button-" + id,
+          prevEl: ".swiper-button-prev.swiper-button-" + id,
+        },
+        autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination.swiper-pagination-" + id,
+          clickable: true,
+        },
+        breakpoints: {
+          601: {
+            slidesPerView: 2,
           },
-          autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
+          993: {
+            slidesPerView: 3,
           },
-          pagination: {
-            el: ".swiper-pagination.swiper-pagination-" + id,
-            clickable: true,
-          },
-          breakpoints: {
-            601: {
-              slidesPerView: 2,
-            },
-            993: {
-              slidesPerView: 3,
-            },
-          },
-        };
+        },
+      };
 
-        // Initialize Swiper for this section
-        let swiper = new Swiper('#testimonials-' + id, swiperOptions);
+      // Initialize Swiper for this section
+      let swiper = new Swiper('#testimonials-' + id, swiperOptions);
       
     }
   });
