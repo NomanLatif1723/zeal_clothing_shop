@@ -1150,7 +1150,7 @@
           }
         },
         "right-text": {
-          "name": "Left Text",
+          "name": "Right Text",
           "settings": {
             "right_heading": {
               "label": "Heading"
