@@ -1,3 +1,6 @@
+(function(){
+  
+})();
 // announcement timer 
 const timerEl = document.querySelector('.main__timer');
 
