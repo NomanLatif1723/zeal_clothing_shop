@@ -18,12 +18,10 @@ function initSlideshowSwipers() {
           nextEl: ".swiper-button-next.swiper-button-" + id,
           prevEl: ".swiper-button-prev.swiper-button-" + id,
         },
-        if(autoSlides) {
-          autoplay : {
-            delay: slideDuration,
-            disableOnInteraction: false
-          },
-        }
+        autoplay : {
+          delay: slideDuration,
+          disableOnInteraction: false
+        },
         pagination: {
         el: ".swiper-pagination-{{ section.id }}.swiper-pagination",
         clickable: true
