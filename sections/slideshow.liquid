@@ -10,7 +10,7 @@
     assign lazyloading = 'lazy'
     endif
 -%}
-<div class="slideshow">
+<div class="slideshow" data-section-id="{{ section.id }}">
   <div id="swiper-{{ section.id }}"   
     class="slideshow__slides swiper"   
     data-desktop-height="{{ desktop_height }}"  
