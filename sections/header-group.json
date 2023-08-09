@@ -43,7 +43,7 @@
         "announcement_text": "",
         "show_timer": true,
         "timer_hours": "2",
-        "timer_minutes": "30",
+        "timer_minutes": "",
         "show_socials": false
       }
     }
