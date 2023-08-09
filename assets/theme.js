@@ -42,7 +42,6 @@ function initSlideshowSwipers() {
     }
   });
 }
-
 // Call the function to initialize slideshow swipers
 initSlideshowSwipers();
 
@@ -89,6 +88,8 @@ function initCollectionListSwipers() {
     }
   })
 }
+// Call the function to initialize collectionlist swipers
+initCollectionListSwipers();
 
 // Testimonial Slider
 function initTestimonialSwipers() {
@@ -137,7 +138,6 @@ function initTestimonialSwipers() {
     }
   });
 }
-
 // Call the function to initialize testimonial swipers
 initTestimonialSwipers();
 
