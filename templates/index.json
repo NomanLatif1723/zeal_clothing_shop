@@ -65,6 +65,7 @@
     },
     "d534c664-a5a4-4f55-b829-6446be3b3cdb": {
       "type": "text-with-icon",
+      "disabled": true,
       "blocks": {
         "template--19980215124290__d534c664-a5a4-4f55-b829-6446be3b3cdb-1689579269d14e5d4e-0": {
           "type": "slide",
@@ -630,42 +631,6 @@
         "margin_top": 16,
         "margin_bottom": 16
       }
-    },
-    "ac17261f-a02a-475e-97b1-cee0ba6186f2": {
-      "type": "text-with-icon",
-      "blocks": {
-        "template--19980215124290__ac17261f-a02a-475e-97b1-cee0ba6186f2-slide-1": {
-          "type": "slide",
-          "settings": {
-            "brand_heading": "Heading",
-            "brand_text": "Welcome To Our Store"
-          }
-        },
-        "template--19980215124290__ac17261f-a02a-475e-97b1-cee0ba6186f2-slide-2": {
-          "type": "slide",
-          "settings": {
-            "brand_heading": "Heading",
-            "brand_text": "Welcome To Our Store"
-          }
-        },
-        "template--19980215124290__ac17261f-a02a-475e-97b1-cee0ba6186f2-slide-3": {
-          "type": "slide",
-          "settings": {
-            "brand_heading": "Heading",
-            "brand_text": "Welcome To Our Store"
-          }
-        }
-      },
-      "block_order": [
-        "template--19980215124290__ac17261f-a02a-475e-97b1-cee0ba6186f2-slide-1",
-        "template--19980215124290__ac17261f-a02a-475e-97b1-cee0ba6186f2-slide-2",
-        "template--19980215124290__ac17261f-a02a-475e-97b1-cee0ba6186f2-slide-3"
-      ],
-      "settings": {
-        "lazyload_images": false,
-        "margin_top": 16,
-        "margin_bottom": 16
-      }
     }
   },
   "order": [
@@ -684,7 +649,6 @@
     "92018c5b-7aa4-4095-92a7-00221b583a17",
     "7b9de0b8-2dd6-471d-8652-5e3493fedd6b",
     "749c8cce-63f0-421f-a447-8f8b3a4bfc20",
-    "ec23ba6e-97c1-4933-a005-5a626fabddf8",
-    "ac17261f-a02a-475e-97b1-cee0ba6186f2"
+    "ec23ba6e-97c1-4933-a005-5a626fabddf8"
   ]
 }
