@@ -144,7 +144,7 @@
             mobile_menu: mobile_menu -%}
         </div>
       {%- endif -%}
-      <div class="header__block header__icon-container">
+      <div class="header__block header__icon-container{% if show_icons == false %} header__icon-text{% endif %}">
         {%- if show_icons -%}
           <a
             href="{{ routes.search_url }}"
