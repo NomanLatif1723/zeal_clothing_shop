@@ -219,6 +219,7 @@ initTestimonialSwipers();
 function initVideoSection() {
   
 }
+initVideoSection();
 })();
 
 // featured Collection
