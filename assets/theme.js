@@ -1,5 +1,29 @@
 (function(){
-
+// Testimonial Slider
+  let sectionId = document.querySelector('.testimonial__wrapper').getAttribute('data-section-id')
+  var swiper = new Swiper("#testimonials-" + sectionId, {
+      slidesPerView: 1,
+      navigation: {
+        nextEl: ".swiper-button-next.swiper-button-" + sectionId,
+        prevEl: ".swiper-button-prev.swiper-button-" + sectionId,
+      },
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination.swiper-pagination-" + sectionId,
+        clickable: true,
+      },
+      breakpoints: {
+      601: {
+        slidesPerView: 2,
+      },
+      993: {
+        slidesPerView: 3,
+      },
+    },
+    });
 })();
 // announcement timer 
 const timerEl = document.querySelector('.main__timer');
