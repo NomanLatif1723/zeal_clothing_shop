@@ -1,4 +1,90 @@
 (function(){
+theme.Testimonials = (function() {
+  function Testimonials(container) {
+    this.container = container;
+    this.timeout;
+    var sectionId = container.getAttribute('data-section-id');
+    this.slideshow = container.querySelector('#Testimonials-' + sectionId);
+    this.namespace = '.testimonial-' + sectionId;
+
+    if (!this.slideshow) { return }
+
+    theme.initWhenVisible({
+      element: this.container,
+      callback: this.init.bind(this),
+      threshold: 600
+    });
+  }
+
+  Testimonials.prototype = Object.assign({}, Testimonials.prototype, {
+    init: function() {
+      var sectionId = this.container.getAttribute('data-section-id');
+      
+      var swiper = new Swiper("#swiper-" + sectionId, {
+        slidesPerView: 1,
+        navigation: {
+          nextEl: ".swiper-button-next.swiper-button-" + sectionId,
+          prevEl: ".swiper-button-prev.swiper-button-" + sectionId,
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination.swiper-pagination-" + sectionId,
+          clickable: true,
+        },
+        breakpoints: {
+          601: {
+            slidesPerView: 2,
+          },
+          993: {
+            slidesPerView: 3,
+          },
+        }
+      });
+
+      // Autoscroll to next slide on load to indicate more blocks
+      if (this.slideshow.dataset.count > 2) {
+        this.timeout = setTimeout(function() {
+          swiper.slideNext();
+        }, 1000);
+      }
+    },
+
+    onUnload: function() {
+      if (swiper) {
+        swiper.destroy();
+      }
+    },
+
+    onDeselect: function() {
+      if (swiper && swiper.autoplay) {
+        swiper.autoplay.start();
+      }
+    },
+
+    onBlockSelect: function(evt) {
+      var slide = this.slideshow.querySelector('.testimonials-slide--' + evt.detail.blockId);
+      var index = parseInt(slide.dataset.index);
+
+      clearTimeout(this.timeout);
+
+      if (swiper) {
+        swiper.slideTo(index);
+        swiper.autoplay.stop();
+      }
+    },
+
+    onBlockDeselect: function() {
+      if (swiper && swiper.autoplay) {
+        swiper.autoplay.start();
+      }
+    }
+  });
+
+  return Testimonials;
+})();
 
 
 })();
