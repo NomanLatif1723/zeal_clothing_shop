@@ -2,8 +2,10 @@
     assign desktop_height = section.settings.slide_height_desktop
     assign mobile_height = section.settings.slide_height_mobile
     assign navigation_style = section.settings.navigation_styles
-    assign slideChangeDuration = section.settings.slide_change_duration | times: 1000
     assign slideAutomation = section.settings.slide_automation
+    if slideAutomation
+      assign slideChangeDuration = section.settings.slide_change_duration | times: 1000
+    endif
     assign lazyloading = ''
     assign lazyloadImages = section.settings.lazyload_images
     if lazyloadImages
