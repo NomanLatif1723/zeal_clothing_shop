@@ -7,6 +7,8 @@ function initSlideshowSwipers() {
 
   slideshowWrapper.forEach(wrapper => {
     let id = wrapper.getAttribute('data-section-id');
+    let autoSlides = wrapper.getAttribute('data-auto-slide');
+    let slideDuration = wrapper.getAttribute('data-slide-duration');
 
     let swiperContainer = document.querySelector('#slideshow-' + id);
     if (swiperContainer) {
