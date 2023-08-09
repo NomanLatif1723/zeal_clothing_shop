@@ -261,15 +261,14 @@ function initVideoSection() {
               overlayContainer.style.display = 'block';
               externalVideoContainer.classList.add('video-container__hide');
             };
-            
           } else if (nativeVideo) {
-            poster.style.display = 'none';
-            overlayContainer.style.display = 'none';
-            nativeVideoContainer.classList.remove('video-container__hide');
-            nativeVideo.play();
+            nativeVideo.onended = function() {
+              poster.style.display = 'block';
+              overlayContainer.style.display = 'block';
+              nativeVideoContainer.classList.add('video-container__hide');
+            };
           }
         }
-        
       });
     }
   });
