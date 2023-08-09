@@ -555,35 +555,79 @@
         "margin_bottom": 16
       }
     },
-    "658cae66-2f65-498b-926e-baa7733b07b7": {
+    "749c8cce-63f0-421f-a447-8f8b3a4bfc20": {
       "type": "image-with-text",
+      "disabled": true,
       "blocks": {
-        "9695b188-dc7d-48b0-88d6-1d5fd338a5b4": {
-          "type": "text",
+        "template--19980215124290__749c8cce-63f0-421f-a447-8f8b3a4bfc20-image-1": {
+          "type": "image",
           "settings": {
-            "text_content": "left text"
           }
         },
-        "0080f9d5-840e-45cb-92cc-3f0e34656032": {
+        "template--19980215124290__749c8cce-63f0-421f-a447-8f8b3a4bfc20-text-1": {
           "type": "text",
           "settings": {
-            "text_content": "right text"
-          }
-        },
-        "41e0fd35-47c2-44a9-bf2f-99da39e791d5": {
-          "type": "text",
-          "settings": {
-            "text_content": "left text"
+            "heading": "Image With Text",
+            "text": "",
+            "button_label": "Shop Now",
+            "button_link": ""
           }
         }
       },
       "block_order": [
-        "9695b188-dc7d-48b0-88d6-1d5fd338a5b4",
-        "0080f9d5-840e-45cb-92cc-3f0e34656032",
-        "41e0fd35-47c2-44a9-bf2f-99da39e791d5"
+        "template--19980215124290__749c8cce-63f0-421f-a447-8f8b3a4bfc20-image-1",
+        "template--19980215124290__749c8cce-63f0-421f-a447-8f8b3a4bfc20-text-1"
       ],
       "settings": {
-        "image_section": "shopify:\/\/shop_images\/Rectangle77_1.jpg"
+        "layout_reverse": false,
+        "lazyload_images": false,
+        "margin_top": 16,
+        "margin_bottom": 16
+      }
+    },
+    "ec23ba6e-97c1-4933-a005-5a626fabddf8": {
+      "type": "text-image-center",
+      "blocks": {
+        "template--19980215124290__ec23ba6e-97c1-4933-a005-5a626fabddf8-left-text-1": {
+          "type": "left-text",
+          "settings": {
+            "left_heading": "Text Image Center",
+            "left_text": "Welcome To Our Store"
+          }
+        },
+        "template--19980215124290__ec23ba6e-97c1-4933-a005-5a626fabddf8-right-text-1": {
+          "type": "right-text",
+          "settings": {
+            "right_heading": "Text Image Center",
+            "right_text": "Welcome To Our Store"
+          }
+        },
+        "template--19980215124290__ec23ba6e-97c1-4933-a005-5a626fabddf8-left-text-2": {
+          "type": "left-text",
+          "settings": {
+            "left_heading": "Text Image Center",
+            "left_text": "Welcome To Our Store"
+          }
+        },
+        "template--19980215124290__ec23ba6e-97c1-4933-a005-5a626fabddf8-right-text-2": {
+          "type": "right-text",
+          "settings": {
+            "right_heading": "Text Image Center",
+            "right_text": "Welcome To Our Store"
+          }
+        }
+      },
+      "block_order": [
+        "template--19980215124290__ec23ba6e-97c1-4933-a005-5a626fabddf8-left-text-1",
+        "template--19980215124290__ec23ba6e-97c1-4933-a005-5a626fabddf8-right-text-1",
+        "template--19980215124290__ec23ba6e-97c1-4933-a005-5a626fabddf8-left-text-2",
+        "template--19980215124290__ec23ba6e-97c1-4933-a005-5a626fabddf8-right-text-2"
+      ],
+      "settings": {
+        "main_heading": "Text Image Center",
+        "lazyload_images": false,
+        "margin_top": 16,
+        "margin_bottom": 16
       }
     }
   },
@@ -602,6 +646,7 @@
     "0a5d7332-5a60-4baf-bf6a-adbba595c25e",
     "92018c5b-7aa4-4095-92a7-00221b583a17",
     "7b9de0b8-2dd6-471d-8652-5e3493fedd6b",
-    "658cae66-2f65-498b-926e-baa7733b07b7"
+    "749c8cce-63f0-421f-a447-8f8b3a4bfc20",
+    "ec23ba6e-97c1-4933-a005-5a626fabddf8"
   ]
 }
