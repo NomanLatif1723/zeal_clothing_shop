@@ -1,23 +1,54 @@
 (function(){
 
+// Slideshow
+function initSlideshowSwipers() {
+  // find all the slideshow wrappers on the page
+  let slideshowWrapper = document.querySelectorAll('.slideshow');
+
+  slideshowWrapper.forEach(wrapper => {
+    let id = wrapper.getAttribute('data-section-id');
+
+    let swiperContainer = document.querySelector('#slideshow-' + id);
+    if (swiperContainer) {
+      let swiper= new Swiper('#slideshow-' + id, {
+        slidesPerView: 1,
+        navigation: {
+          nextEl: ".swiper-button-next.swiper-button-" + id,
+          prevEl: ".swiper-button-prev.swiper-button-" + id,
+        },
+        {%- if slideAutomation -%}
+          autoplay : {
+            delay: {{ slideChangeDuration }},
+            disableOnInteraction: false
+          },
+          {%- endif -%}
+          pagination: {
+          el: ".swiper-pagination-{{ section.id }}.swiper-pagination",
+          clickable: true
+        }
+      });
+    }
+  })
+}
+     
 
 // Testimonial Slider
 function initTestimonialSwipers() {
   // Find all testimonial wrappers on the page
-  var testimonialWrappers = document.querySelectorAll('.testimonial__wrapper');
+  let testimonialWrappers = document.querySelectorAll('.testimonial__wrapper');
 
-  testimonialWrappers.forEach(function(wrapper) {
-    var sectionId = wrapper.getAttribute('data-section-id');
+  testimonialWrappers.forEach(wrapper => {
+    let id = wrapper.getAttribute('data-section-id');
 
     // Check if the Swiper container exists in this section
-    var swiperContainer = document.querySelector("#testimonials-" + sectionId);
+    let swiperContainer = document.querySelector("#testimonials-" + id);
     if (swiperContainer) {
       // Initialize Swiper for this section
-      var swiper = new Swiper("#testimonials-" + sectionId, {
+      let swiper = new Swiper("#testimonials-" + id, {
         slidesPerView: 1,
         navigation: {
-          nextEl: ".swiper-button-next.swiper-button-" + sectionId,
-          prevEl: ".swiper-button-prev.swiper-button-" + sectionId,
+          nextEl: ".swiper-button-next.swiper-button-" + id,
+          prevEl: ".swiper-button-prev.swiper-button-" + id,
         },
         autoplay: {
           delay: 2500,
