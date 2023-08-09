@@ -323,6 +323,7 @@
     },
     "6c915974-bf41-4211-adbb-e966c2df30a9": {
       "type": "video",
+      "disabled": true,
       "settings": {
         "section_width": false,
         "height_desktop": "extended",
@@ -631,23 +632,6 @@
         "margin_top": 16,
         "margin_bottom": 16
       }
-    },
-    "6af5b498-3fa1-4f10-a875-8ea3110b5591": {
-      "type": "video",
-      "settings": {
-        "section_width": true,
-        "height_desktop": "full",
-        "height_mobile": "auto",
-        "sub_heading": "Sub Heading",
-        "heading": "Video",
-        "video": "shopify:\/\/files\/videos\/Elementor video placeholder.mp4",
-        "autoplay_video": false,
-        "color_text": "#111111",
-        "content_position": "center",
-        "text_alignment": "center",
-        "margin_top": 16,
-        "margin_bottom": 16
-      }
     }
   },
   "order": [
@@ -666,7 +650,6 @@
     "92018c5b-7aa4-4095-92a7-00221b583a17",
     "7b9de0b8-2dd6-471d-8652-5e3493fedd6b",
     "749c8cce-63f0-421f-a447-8f8b3a4bfc20",
-    "ec23ba6e-97c1-4933-a005-5a626fabddf8",
-    "6af5b498-3fa1-4f10-a875-8ea3110b5591"
+    "ec23ba6e-97c1-4933-a005-5a626fabddf8"
   ]
 }
