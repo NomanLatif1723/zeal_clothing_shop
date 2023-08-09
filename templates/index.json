@@ -539,6 +539,7 @@
     },
     "7b9de0b8-2dd6-471d-8652-5e3493fedd6b": {
       "type": "video",
+      "disabled": true,
       "settings": {
         "section_width": true,
         "height_desktop": "full",
