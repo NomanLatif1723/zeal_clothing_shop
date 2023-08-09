@@ -120,6 +120,7 @@
     <div class="swiper-button-prev swiper-button-{{ section.id }}"></div>
   </div>
 </div>
+{% comment %}
 <script>
   // Slideshow
      let swiper{{ section.id | remove: '-' }} = new Swiper('#swiper-{{ section.id }}', {
@@ -140,6 +141,7 @@
     }
   });
 </script>
+{% endcomment %}
 {% schema %}
   {
     "name": "t:sections.slideshow.name",
