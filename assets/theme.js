@@ -9,7 +9,7 @@ var Testimonials = (function() {
 
     if (!this.slideshow) { return }
 
-    var initWhenVisible({
+    function initWhenVisible({
       element: this.container,
       callback: this.init.bind(this),
       threshold: 600
