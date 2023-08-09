@@ -8,30 +8,30 @@ function initSlideshowSwipers() {
   slideshowWrapper.forEach(wrapper => {
     let id = wrapper.getAttribute('data-section-id');
     let autoSlides = wrapper.getAttribute('data-auto-slide');
-    let slideDuration = wrapper.getAttribute('data-slide-duration');
+    let slideDuration = parseInt(wrapper.getAttribute('data-slide-duration')) || 2500; // Default value: 2500ms
 
     let swiperContainer = document.querySelector('#slideshow-' + id);
     if (swiperContainer) {
-      let swiper= new Swiper('#slideshow-' + id, {
+      let swiper = new Swiper('#slideshow-' + id, {
         slidesPerView: 1,
         navigation: {
           nextEl: ".swiper-button-next.swiper-button-" + id,
           prevEl: ".swiper-button-prev.swiper-button-" + id,
         },
-        autoplay : {
-          delay: slideDuration,
-          disableOnInteraction: false
+        autoplay: {
+          delay: autoSlides === 'true' ? slideDuration : 0,
+          disableOnInteraction: false,
         },
         pagination: {
-        el: ".swiper-pagination-{{ section.id }}.swiper-pagination",
-        clickable: true
+          el: ".swiper-pagination-" + id + ".swiper-pagination",
+          clickable: true,
         }
       });
     }
-  })
+  });
 }
 
-// Call the function to initialize Slideshoe swipers
+// Call the function to initialize slideshow swipers
 initSlideshowSwipers();
 
 // Testimonial Slider
