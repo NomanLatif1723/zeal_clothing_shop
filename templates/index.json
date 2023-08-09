@@ -587,6 +587,7 @@
     },
     "ec23ba6e-97c1-4933-a005-5a626fabddf8": {
       "type": "text-image-center",
+      "disabled": true,
       "blocks": {
         "template--19980215124290__ec23ba6e-97c1-4933-a005-5a626fabddf8-left-text-1": {
           "type": "left-text",
