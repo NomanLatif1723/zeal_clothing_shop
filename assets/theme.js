@@ -46,6 +46,15 @@ function initSlideshowSwipers() {
 // Call the function to initialize slideshow swipers
 initSlideshowSwipers();
 
+// Collection List Grid Slider
+function initCollectionListSwipers() {
+  // find all the collection list wrappers in page
+  let collectionListWrappers = document.querySelectorAll('.collection-list__wrapper');
+
+  collectionListWrappers.forEach(wrapper => {
+    let id = wrapper.getAttribute('data-section-id');
+  })
+}
 
 // Testimonial Slider
 function initTestimonialSwipers() {
