@@ -1,4 +1,5 @@
 (function(){
+
 // Testimonial Slider
   
 // Find all testimonial wrappers on the page
