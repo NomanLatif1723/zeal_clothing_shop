@@ -2,18 +2,18 @@
 
 
 // Testimonial Slider
-function Testimonials() {
+function initTestimonialSwipers() {
   // Find all testimonial wrappers on the page
-  let testimonialWrappers = document.querySelectorAll('.testimonial__wrapper');
-  
+  var testimonialWrappers = document.querySelectorAll('.testimonial__wrapper');
+
   testimonialWrappers.forEach(function(wrapper) {
-    let sectionId = wrapper.getAttribute('data-section-id');
-  
+    var sectionId = wrapper.getAttribute('data-section-id');
+
     // Check if the Swiper container exists in this section
-    let swiperContainer = document.querySelector("#testimonials-" + sectionId);
+    var swiperContainer = document.querySelector("#testimonials-" + sectionId);
     if (swiperContainer) {
       // Initialize Swiper for this section
-      let swiper = new Swiper("#testimonials-" + sectionId, {
+      var swiper = new Swiper("#testimonials-" + sectionId, {
         slidesPerView: 1,
         navigation: {
           nextEl: ".swiper-button-next.swiper-button-" + sectionId,
@@ -39,8 +39,9 @@ function Testimonials() {
     }
   });
 }
-Testimonials();
 
+// Call the function to initialize testimonial swipers
+initTestimonialSwipers();
 
 })();
 // announcement timer 
