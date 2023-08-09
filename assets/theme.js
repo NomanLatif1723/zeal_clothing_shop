@@ -5,7 +5,7 @@ theme.Testimonials = (function() {
     this.timeout;
     var sectionId = container.getAttribute('data-section-id');
     this.slideshow = container.querySelector('#testimonials-' + sectionId);
-    this.namespace = '.testimonial-' + sectionId;
+    this.namespace = '.main__section-' + sectionId;
 
     if (!this.slideshow) { return }
 
