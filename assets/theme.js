@@ -46,6 +46,52 @@ function initSlideshowSwipers() {
 initSlideshowSwipers();
 
 // Collection List Grid Slider
+function initBrandsSwipers() {
+  // find all the collection list wrappers in page
+  let collectionListWrappers = document.querySelectorAll('.collection-list__wrapper');
+
+  collectionListWrappers.forEach(wrapper => {
+    let id = wrapper.getAttribute('data-section-id');
+
+    // Check if the Swiper Container exists
+    let swiperContainer = document.querySelector('#brands-' + id);
+    if (swiperContainer) {
+      
+      // Destroy any previous Swiper instances for this section
+      if (swiperContainer.swiper) {
+        swiperContainer.swiper.destroy();
+      }
+
+      let swiperOptions = {
+        slidesPerView: 2,
+        navigation: {
+          nextEl: ".swiper-button-next.swiper-button-" + id,
+          prevEl: ".swiper-button-prev.swiper-button-" + id,
+        },
+        pagination: {
+          el: ".swiper-pagination.swiper-pagination-" + id,
+          clickable: true,
+        },
+        breakpoints: {
+          769: {
+            slidesPerView: 3,
+          },
+          993: {
+            slidesPerView: 4,
+          }
+        },
+      }
+
+      // Initialize Swiper for this section
+      let swiper = new Swiper('#brands-' + id, swiperOptions);
+      
+    }
+  })
+}
+// Call the function to initialize Brands swipers
+initBrandsSwipers();
+  
+// Collection List Grid Slider
 function initCollectionListSwipers() {
   // find all the collection list wrappers in page
   let collectionListWrappers = document.querySelectorAll('.collection-list__wrapper');
