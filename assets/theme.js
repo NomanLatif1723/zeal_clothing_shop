@@ -1,18 +1,36 @@
 (function(){
+// Slideshow
+     let swiper{{ section.id | remove: '-' }} = new Swiper('#swiper-{{ section.id }}', {
+    slidesPerView: 1,
+    navigation: {
+      nextEl: ".swiper-button-{{ section.id }}.swiper-button-next",
+      prevEl: ".swiper-button-{{ section.id }}.swiper-button-prev"
+    },
+    {%- if slideAutomation -%}
+      autoplay : {
+        delay: {{ slideChangeDuration }},
+        disableOnInteraction: false
+      },
+      {%- endif -%}
+      pagination: {
+      el: ".swiper-pagination-{{ section.id }}.swiper-pagination",
+      clickable: true
+    }
+  });
 
 // Testimonial Slider
   
 // Find all testimonial wrappers on the page
-var testimonialWrappers = document.querySelectorAll('.testimonial__wrapper');
+let testimonialWrappers = document.querySelectorAll('.testimonial__wrapper');
 
 testimonialWrappers.forEach(function(wrapper) {
-  var sectionId = wrapper.getAttribute('data-section-id');
+  let sectionId = wrapper.getAttribute('data-section-id');
 
   // Check if the Swiper container exists in this section
-  var swiperContainer = document.querySelector("#testimonials-" + sectionId);
+  let swiperContainer = document.querySelector("#testimonials-" + sectionId);
   if (swiperContainer) {
     // Initialize Swiper for this section
-    var swiper = new Swiper("#testimonials-" + sectionId, {
+    let swiper = new Swiper("#testimonials-" + sectionId, {
       slidesPerView: 1,
       navigation: {
         nextEl: ".swiper-button-next.swiper-button-" + sectionId,
