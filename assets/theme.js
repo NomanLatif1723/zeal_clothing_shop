@@ -1,6 +1,6 @@
 (function() {
   function Testimonials(container) {
-    this.container = container;
+    this.container = document.querySelector('.testimonial__wrapper');
     this.timeout;
     var sectionId = container.getAttribute('data-section-id');
     this.slideshow = container.querySelector('#testimonials-' + sectionId);
