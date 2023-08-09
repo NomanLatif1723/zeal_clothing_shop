@@ -1751,6 +1751,9 @@ input[type="radio"]:checked + label {
   .header__icon-container .icon__hide-mobile{
     display: none;
   }
+  .navigation__hide .icon__hide-mobile{
+    display: none;
+  }
   
   @media only screen and (max-width: 768px) {
     .desktop-menu__hide {
@@ -1798,8 +1801,11 @@ input[type="radio"]:checked + label {
     .header__icon-container .icon__hide-mobile{
       display: inline-flex;
     }
+    .navigation__hide .icon__hide-mobile{
+      display: none;
+    }
     .header__icon-container .icon__accounts {
-      display: inline-flex;
+      display: block;
     }
     .header__icon-container .icon__hide-desktop{
       display: none;
