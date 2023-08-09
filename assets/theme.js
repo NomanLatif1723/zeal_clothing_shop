@@ -5,7 +5,7 @@ function initAnnouncementTimer() {
   let announcementWrapper = document.querySelectorAll('.announcement__bar');
 
   announcementWrapper.forEach(wrapper => {
-    if (wraper) {
+    if (wrapper) {
       let id = wrapper.getAttribute('data-section-id');
       let timerContainer = wrapper.querySelector('.main__timer');
       let hours = timerContainer.getAttribute('data-hour');
