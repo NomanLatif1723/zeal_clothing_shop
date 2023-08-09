@@ -1,21 +1,27 @@
 (function(){
 // Testimonial Slider
-  let sectionId = document.querySelector('.testimonial__wrapper').getAttribute('data-section-id');
+  // Find all testimonial wrappers on the page
+var testimonialWrappers = document.querySelectorAll('.testimonial__wrapper');
+
+testimonialWrappers.forEach(function(wrapper) {
+  var sectionId = wrapper.getAttribute('data-section-id');
+  
+  // Initialize Swiper for each section
   var swiper = new Swiper("#testimonials-" + sectionId, {
-      slidesPerView: 1,
-      navigation: {
-        nextEl: ".swiper-button-next.swiper-button-" + sectionId,
-        prevEl: ".swiper-button-prev.swiper-button-" + sectionId,
-      },
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".swiper-pagination.swiper-pagination-" + sectionId,
-        clickable: true,
-      },
-      breakpoints: {
+    slidesPerView: 1,
+    navigation: {
+      nextEl: ".swiper-button-next.swiper-button-" + sectionId,
+      prevEl: ".swiper-button-prev.swiper-button-" + sectionId,
+    },
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination.swiper-pagination-" + sectionId,
+      clickable: true,
+    },
+    breakpoints: {
       601: {
         slidesPerView: 2,
       },
@@ -23,7 +29,9 @@
         slidesPerView: 3,
       },
     },
-    });
+  });
+});
+
 })();
 // announcement timer 
 const timerEl = document.querySelector('.main__timer');
