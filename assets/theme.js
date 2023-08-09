@@ -53,6 +53,36 @@ function initCollectionListSwipers() {
 
   collectionListWrappers.forEach(wrapper => {
     let id = wrapper.getAttribute('data-section-id');
+
+    // Check if the Swiper Container exists
+    let swiperContainer = document.querySelector('#collectionListSlider-' + id);
+    if (swiperContainer) {
+      
+      // Destroy any previous Swiper instances for this section
+      if (swiperContainer.swiper) {
+        swiperContainer.swiper.destroy();
+      }
+
+      let swiperOptions = {
+        slidesPerView: 2,
+        navigation: {
+          nextEl: ".swiper-button-next.swiper-button-{{ section.id }}",
+          prevEl: ".swiper-button-prev.swiper-button-{{ section.id }}"
+        },
+        pagination: {
+          el: ".swiper-pagination.swiper-pagination-{{ section.id }}",
+          clickable: true
+        },
+        breakpoints: {
+          769: {
+            slidesPerView: 3
+          },
+          993: {
+            slidesPerView: 4
+          }
+        }
+      }
+    }
   })
 }
 
