@@ -33,7 +33,7 @@
         "mobile_menu": "featured",
         "header_styles": "left",
         "sticky_header": true,
-        "show_icons": true
+        "show_icons": false
       }
     }
   },
