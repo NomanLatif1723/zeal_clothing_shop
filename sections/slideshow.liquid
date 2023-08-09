@@ -4,17 +4,13 @@
     assign navigation_style = section.settings.navigation_styles
     assign slideChangeDuration = section.settings.slide_change_duration | times: 1000
     assign slideAutomation = section.settings.slide_automation
-      assign autoSlides = false
-    if slideAutomation
-      assign autoSlides = true
-    endif
     assign lazyloading = ''
     assign lazyloadImages = section.settings.lazyload_images
     if lazyloadImages
     assign lazyloading = 'lazy'
     endif
 -%}
-<div class="slideshow" data-section-id="{{ section.id }}">
+<div class="slideshow" data-section-id="{{ section.id }}" data-auto-slide="{{ slideAutomation }}" data-slide-duration="{{ slideChangeDuration }}">
   <div id="slideshow-{{ section.id }}"   
     class="slideshow__slides swiper"   
     data-desktop-height="{{ desktop_height }}"  
