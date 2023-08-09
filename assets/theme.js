@@ -1,6 +1,50 @@
 (function(){
 
+// Slideshow
+function initSlideshowSwipers() {
+  // find all the slideshow wrappers on the page
+  let slideshowWrapper = document.querySelectorAll('.slideshow');
 
+  slideshowWrapper.forEach(wrapper => {
+    let id = wrapper.getAttribute('data-section-id');
+    let autoSlides = wrapper.getAttribute('data-auto-slide');
+    let slideDuration = parseInt(wrapper.getAttribute('data-slide-duration')) || 2500; // Default value: 2500ms
+
+    let swiperContainer = document.querySelector('#slideshow-' + id);
+    if (swiperContainer) {
+      // Destroy any previous Swiper instances for this section
+      if (swiperContainer.swiper) {
+        swiperContainer.swiper.destroy();
+      }
+
+      let swiperOptions = {
+        slidesPerView: 1,
+        navigation: {
+          nextEl: ".swiper-button-next.swiper-button-" + id,
+          prevEl: ".swiper-button-prev.swiper-button-" + id,
+        },
+        pagination: {
+          el: ".swiper-pagination-" + id + ".swiper-pagination",
+          clickable: true,
+        },
+      };
+
+      // Configure autoplay if enabled
+      if (autoSlides === 'true') {
+        swiperOptions.autoplay = {
+          delay: slideDuration,
+          disableOnInteraction: false,
+        };
+      }
+
+      // Initialize Swiper for this section
+      let swiper = new Swiper('#slideshow-' + id, swiperOptions);
+    }
+  });
+}
+
+// Call the function to initialize slideshow swipers
+initSlideshowSwipers();
 
 
 // Testimonial Slider
@@ -45,39 +89,6 @@ function initTestimonialSwipers() {
 // Call the function to initialize testimonial swipers
 initTestimonialSwipers();
 
-// Slideshow
-function initSlideshowSwipers() {
-  // find all the slideshow wrappers on the page
-  let slideshowWrapper = document.querySelectorAll('.slideshow');
-
-  slideshowWrapper.forEach(wrapper => {
-    let id = wrapper.getAttribute('data-section-id');
-    let autoSlides = wrapper.getAttribute('data-auto-slide');
-    let slideDuration = parseInt(wrapper.getAttribute('data-slide-duration')) || 2500; // Default value: 2500ms
-
-    let swiperContainer = document.querySelector('#slideshow-' + id);
-    if (swiperContainer) {
-      let swiper = new Swiper('#slideshow-' + id, {
-        slidesPerView: 1,
-        navigation: {
-          nextEl: ".swiper-button-next.swiper-button-" + id,
-          prevEl: ".swiper-button-prev.swiper-button-" + id,
-        },
-        autoplay: {
-          delay: autoSlides === 'true' ? slideDuration : 0,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination-" + id + ".swiper-pagination",
-          clickable: true,
-        }
-      });
-    }
-  });
-}
-
-// Call the function to initialize slideshow swipers
-initSlideshowSwipers();
 })();
 // announcement timer 
 const timerEl = document.querySelector('.main__timer');
