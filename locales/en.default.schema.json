@@ -372,9 +372,6 @@
             }
           }
         },
-        "sticky_header": {
-          "label": "Sticky Header"
-        },
         "show_icons": {
           "label": "Show Icons"
         }
