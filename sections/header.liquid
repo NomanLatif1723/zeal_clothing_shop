@@ -144,7 +144,7 @@
             mobile_menu: mobile_menu -%}
         </div>
       {%- endif -%}
-      <div class="header__block header__icon-container{% if show_icons == false %} header__icon-text{% endif %}">
+      <div class="header__block header__icon-container">
         {%- if show_icons -%}
           <a
             href="{{ routes.search_url }}"
@@ -177,16 +177,16 @@
             {%- endif -%}
           </a>
         {%- else -%}
-            <a href="{{ routes.search_url }}" title="Search" aria-label="Search" class="icon icon__search">Search</a>
+            <a href="{{ routes.search_url }}" title="Search" aria-label="Search" class="icon icon__search icon__hide">Search</a>
             {%- if shop.customer_accounts_enabled -%}
-                <a href="{{ routes.account_url }}" title="Accounts" aria-label="Accounts" class="icon icon__accounts">Accounts</a>
+                <a href="{{ routes.account_url }}" title="Accounts" aria-label="Accounts" class="icon icon__accounts icon__hide">Accounts</a>
             {%- endif -%}
             <a
               href="{{ routes.cart_url }}"
               aria-label="Cart"
               aria-controls="drawer"
               title="Cart"
-              class="icon icon__cart">
+              class="icon icon__cart icon__hide">
               Cart
             </a>
         {%- endif -%}
