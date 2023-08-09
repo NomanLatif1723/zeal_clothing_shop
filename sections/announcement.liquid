@@ -7,6 +7,12 @@
    assign show_socials = section.settings.show_socials
 
 -%}
+{%- style -%}
+  :root{
+    --colorAnnouncement: {{ settings.announcement_bg_color }};
+    --colorAnnouncementText: {{ settings.announcement_text_color }};
+  }
+{%- endstyle -%}
 {%- render 'announcement-bar',
    heading_text: heading_text,
    announcement_text: announcement_text,
