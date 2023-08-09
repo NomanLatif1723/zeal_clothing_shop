@@ -632,22 +632,6 @@
         "margin_top": 16,
         "margin_bottom": 16
       }
-    },
-    "2e91a763-2c0c-48ed-95be-d8fe3293d600": {
-      "type": "featured-collection",
-      "settings": {
-        "collection": "mens-wear",
-        "heading": "Featured Collection",
-        "text": "Write Small Description About Your Collection",
-        "product_per_row": 4,
-        "product_rows": 2,
-        "stack_product": true,
-        "show_view_all": false,
-        "text_alignment": "center",
-        "lazyload_images": false,
-        "margin_top": 16,
-        "margin_bottom": 16
-      }
     }
   },
   "order": [
@@ -666,7 +650,6 @@
     "92018c5b-7aa4-4095-92a7-00221b583a17",
     "7b9de0b8-2dd6-471d-8652-5e3493fedd6b",
     "749c8cce-63f0-421f-a447-8f8b3a4bfc20",
-    "ec23ba6e-97c1-4933-a005-5a626fabddf8",
-    "2e91a763-2c0c-48ed-95be-d8fe3293d600"
+    "ec23ba6e-97c1-4933-a005-5a626fabddf8"
   ]
 }
