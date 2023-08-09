@@ -253,29 +253,6 @@ document.querySelectorAll('.show-more__swatches').forEach(option => {
   })
 })
 
-// Video Section Events
-
-// const videoPlayIcon = document.querySelectorAll('.video-section__playicon');
-// videoPlayIcon.forEach(button => {
-//   button.addEventListener('click', () => {
-//       const externalVideoContainer = button.closest('.video-section__main').querySelector('.external-video__container');
-//       const nativeVideoContainer = button.closest('.video-section__main').querySelector('.native-video__container');
-//       const externalVideo = button.closest('.video-section__main').querySelector('.external-video__container iframe');
-//       const nativeVideo = button.closest('.video-section__main').querySelector('.native-video__container video');
-//       const overlayContainer = button.closest('.video-section__content');
-//       const poster = button.closest('.video-section__main').querySelector('.video__poster');
-//       if (externalVideo) {
-//         poster.style.display = 'none';
-//         overlayContainer.style.display = 'none';
-//         externalVideoContainer.classList.remove('video-container__hide');
-//       } else if (nativeVideo) {
-//         poster.style.display = 'none';
-//         overlayContainer.style.display = 'none';
-//         nativeVideoContainer.classList.remove('video-container__hide');
-//         nativeVideo.play();
-//       }
-//   })
-// })
 
 
 
