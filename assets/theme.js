@@ -67,7 +67,7 @@ function initCollectionListSwipers() {
         slidesPerView: 2,
         navigation: {
           nextEl: ".swiper-button-next.swiper-button-" + id,
-          prevEl: ".swiper-button-prev.swiper-button-" + id
+          prevEl: ".swiper-button-prev.swiper-button-" + id,
         },
         pagination: {
           el: ".swiper-pagination.swiper-pagination-" + id,
