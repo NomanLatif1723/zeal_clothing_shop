@@ -229,6 +229,7 @@ function initFeaturedSwatches() {
   })
 }
 initFeaturedSwatches();
+
 // Video Section Events
 function initVideoSection() {
   let videoPlayIcon = document.querySelectorAll('.video-section__playicon');
