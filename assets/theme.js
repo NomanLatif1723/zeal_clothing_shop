@@ -258,13 +258,13 @@ function initVideoSection() {
           if (externalVideo) {
             externalVideo.onended = function() {
               poster.style.display = 'block';
-              overlayContainer.style.display = 'block';
+              overlayContainer.style.display = 'table';
               externalVideoContainer.classList.add('video-container__hide');
             };
           } else if (nativeVideo) {
             nativeVideo.onended = function() {
               poster.style.display = 'block';
-              overlayContainer.style.display = 'block';
+              overlayContainer.style.display = 'table';
               nativeVideoContainer.classList.add('video-container__hide');
             };
           }
