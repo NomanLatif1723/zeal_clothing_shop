@@ -30,7 +30,9 @@ function initSlideshowSwipers() {
     }
   })
 }
-     
+
+// Call the function to initialize Slideshoe swipers
+initSlideshowSwipers();
 
 // Testimonial Slider
 function initTestimonialSwipers() {
