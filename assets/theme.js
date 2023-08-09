@@ -5,7 +5,41 @@ function initAnnouncementTimer() {
   let announcementWrapper = document.querySelectorAll('.announcement__bar');
 
   announcementWrapper.forEach(wrapper => {
-    let id = wrapper.getAttribute('data-section-id');
+    if (wraper) {
+      let id = wrapper.getAttribute('data-section-id');
+      let timerContainer = wrapper.querySelector('.main__timer');
+      let hours = timerContainer.getAttribute('data-hour');
+      let minutes = timerContainer.getAttribute('data-minutes');
+      function announcementTimer(hours, minutes) {
+        // Convert hours and minutes to milliseconds
+        var totalMilliseconds = (hours * 3600000) + (minutes * 60000);
+    
+        // Ensure the timer is valid
+        if (totalMilliseconds <= 0) {
+        console.log("Invalid timer duration");
+        return;
+        }
+    
+        var timerInterval = setInterval(function() {
+        // Calculate remaining hours, minutes, and seconds
+        var remainingHours = Math.floor(totalMilliseconds / 3600000);
+        var remainingMinutes = Math.floor((totalMilliseconds % 3600000) / 60000);
+        var remainingSeconds = Math.floor((totalMilliseconds % 60000) / 1000);
+        
+        timerContainer.innerHTML = `${remainingHours} : ${remainingMinutes} : ${remainingSeconds}`;
+    
+        // Reduce remaining time by 1 second
+        totalMilliseconds -= 1000;
+    
+        // Check if the timer has ended
+        if (totalMilliseconds <= 0) {
+            clearInterval(timerInterval);
+            timerContainer.innerHTML = "00 : 00 : 00";
+        }
+        }, 1000);
+      }
+      announcementTimer(hours, minutes);
+    }
   })
 }
 initAnnouncementTimer();
