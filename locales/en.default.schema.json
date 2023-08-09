@@ -372,6 +372,9 @@
             }
           }
         },
+        "sticky_header": {
+          "label": "Sticky Header"
+        },
         "show_icons": {
           "label": "Show Icons"
         }
@@ -1518,9 +1521,6 @@
     "extras": {
       "name": "Extras",
       "settings": {
-        "sticky_header": {
-          "label": "Sticky Header"
-        },
         "show_currency": {
           "label": "Show Currency Selector"
         },
