@@ -1,5 +1,10 @@
 (function(){
-
+// Announcement Bar Timer 
+function initAnnouncementTimer() {
+  // Get All Announcement Bar Wrappers 
+  let announcementWrapper = document.querySelectorAll('.announcement__bar');
+}
+initAnnouncementTimer();
 // Slideshow
 function initSlideshowSwipers() {
   // find all the slideshow wrappers on the page
