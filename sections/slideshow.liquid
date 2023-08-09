@@ -4,6 +4,10 @@
     assign navigation_style = section.settings.navigation_styles
     assign slideChangeDuration = section.settings.slide_change_duration | times: 1000
     assign slideAutomation = section.settings.slide_automation
+      assign autoSlides = false
+    if slideAutomation
+      assign autoSlides = true
+    endif
     assign lazyloading = ''
     assign lazyloadImages = section.settings.lazyload_images
     if lazyloadImages
