@@ -1,10 +1,10 @@
 (function() {
-  console.log("hy");
+  
   function Testimonials(container) {
-    this.container = document.querySelector('.testimonial__wrapper');
+    this.container = container;
     this.timeout;
     var sectionId = container.getAttribute('data-section-id');
-    
+    console.log(sectionId);
     this.slideshow = container.querySelector('#testimonials-' + sectionId);
     this.namespace = '.main__section-' + sectionId;
 
