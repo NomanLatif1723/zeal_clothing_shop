@@ -43,6 +43,7 @@ function initAnnouncementTimer() {
   })
 }
 initAnnouncementTimer();
+
 // Slideshow
 function initSlideshowSwipers() {
   // find all the slideshow wrappers on the page
@@ -214,6 +215,10 @@ function initTestimonialSwipers() {
 }
 initTestimonialSwipers();
 
+// Video Section Events
+function initVideoSection() {
+  
+}
 })();
 
 // featured Collection
