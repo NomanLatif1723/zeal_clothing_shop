@@ -259,12 +259,3 @@ function initVideoSection() {
 initVideoSection();
 
 })();
-
-
-
-
-
-    
-
-
-      
