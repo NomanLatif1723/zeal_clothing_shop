@@ -455,7 +455,6 @@
     },
     "0a5d7332-5a60-4baf-bf6a-adbba595c25e": {
       "type": "testimonials",
-      "disabled": true,
       "blocks": {
         "template--19980215124290__0a5d7332-5a60-4baf-bf6a-adbba595c25e-16897772153efbd8d2-0": {
           "type": "testimonial",
@@ -634,7 +633,6 @@
     },
     "09b4971a-8206-443e-a17c-b7bdd9edd204": {
       "type": "testimonials",
-      "disabled": true,
       "blocks": {
         "template--19980215124290__09b4971a-8206-443e-a17c-b7bdd9edd204-testimonial-1": {
           "type": "testimonial",
