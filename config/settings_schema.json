@@ -258,6 +258,12 @@
     "settings": [
       {
         "type": "checkbox",
+        "id": "sticky_header",
+        "label": "t:sections.schema_settings.extras.sticky_header.label",
+        "default": false
+      },
+      {
+        "type": "checkbox",
         "id": "show_currency",
         "label": "t:schema_settings.extras.settings.show_currency.label",
         "default": false
