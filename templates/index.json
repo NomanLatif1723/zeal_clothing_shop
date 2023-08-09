@@ -302,7 +302,7 @@
         "swipe_on_mobile": false,
         "products_count": true,
         "text_alignment": "center",
-        "collection_layout": "grid",
+        "collection_layout": "slider",
         "lazyload_images": true,
         "margin_top": 60,
         "margin_bottom": 60
