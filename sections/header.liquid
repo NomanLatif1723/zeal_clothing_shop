@@ -49,7 +49,7 @@
     {%- endif -%}
   }
 {%- endstyle -%}
-<header class="section__header{% if sticky_header %} sticky__header{% endif %}">
+<header class="section__header" data-sticky-header="{{ sticky_header }}">
   <div class="page__width">
     <div class="header__wrapper" data-header-style="{{ header_styles }}">
       {%- for block in section.blocks -%}
