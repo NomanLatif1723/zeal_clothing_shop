@@ -243,6 +243,8 @@ function initVideoSection() {
 }
 initVideoSection();
 
+console.log("hy there I am Shopify Expert")
+
 })();
 
 // featured Collection
