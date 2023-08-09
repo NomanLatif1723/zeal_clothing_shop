@@ -172,7 +172,7 @@ function initTestimonialSwipers() {
 initTestimonialSwipers();
 
 })();
-// announcement timer 
+// Announcement Bar timer 
 const timerEl = document.querySelector('.main__timer');
 
 if(timerEl){
