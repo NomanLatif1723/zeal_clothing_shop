@@ -145,16 +145,16 @@
         </div>
       {%- endif -%}
       <div class="header__block header__icon-container">
-        {%- if show_icons -%}
-          <a href="{{ routes.search_url }}" aria-label="Search" title="Search" class="icon icon__search">
+        
+          <a href="{{ routes.search_url }}" aria-label="Search" title="Search" class="icon icon__search{% unless show_icons %} icon__hide-desktop{% endunless %}">
             {%- render 'icon-search' -%}
           </a>
           {%- if shop.customer_accounts_enabled -%}
-            <a href="{{ routes.account_url }}" aria-label="Accounts" title="Accounts" class="icon icon__accounts">
+            <a href="{{ routes.account_url }}" aria-label="Accounts" title="Accounts" class="icon icon__accounts{% unless show_icons %} icon__hide-desktop{% endunless %}">
               {%- render 'icon-account' -%}
             </a>
           {%- endif -%}
-          <a href="{{ routes.cart_url }}" aria-label="Cart" title="Cart" aria-controls="drawer" class="icon icon__cart">
+          <a href="{{ routes.cart_url }}" aria-label="Cart" title="Cart" aria-controls="drawer" class="icon icon__cart{% unless show_icons %} icon__hide-desktop{% endunless %}">
             {%- if cart_icon == 'cart' -%}
               {%- render 'icon-cart' -%}
             {%- elsif cart_icon == 'bag' -%}
@@ -163,7 +163,7 @@
               {%- render 'icon-minimal-bag' -%}
             {%- endif -%}
           </a>
-        {%- else -%}
+        {%- unless show_icons -%}
             <a href="{{ routes.search_url }}" title="Search" aria-label="Search" class="icon icon__search icon__hide-mobile">Search</a>
             {%- if shop.customer_accounts_enabled -%}
                 <a href="{{ routes.account_url }}" title="Accounts" aria-label="Accounts" class="icon icon__accounts icon__hide-mobile">Accounts</a>
@@ -171,7 +171,7 @@
             <a href="{{ routes.cart_url }}" aria-label="Cart" aria-controls="drawer" title="Cart" class="icon icon__cart icon__hide-mobile">
               Cart
             </a>
-        {%- endif -%}
+        {%- endunless -%}
       </div>
     </div>
   </div>
