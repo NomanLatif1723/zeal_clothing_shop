@@ -219,7 +219,8 @@ initTestimonialSwipers();
 function initVideoSection() {
   let videoPlayIcon = document.querySelectorAll('.video-section__playicon');
   videoPlayIcon.forEach(button => {
-    button.addEventListener('click', () => {
+    if (button) {
+      button.addEventListener('click', () => {
         const externalVideoContainer = button.closest('.video-section__main').querySelector('.external-video__container');
         const nativeVideoContainer = button.closest('.video-section__main').querySelector('.native-video__container');
         const externalVideo = button.closest('.video-section__main').querySelector('.external-video__container iframe');
@@ -236,7 +237,8 @@ function initVideoSection() {
           nativeVideoContainer.classList.remove('video-container__hide');
           nativeVideo.play();
         }
-    });
+      });
+    }
   });
 }
 initVideoSection();
