@@ -35,10 +35,22 @@
         "sticky_header": true,
         "show_icons": true
       }
+    },
+    "51e315c9-edd0-46e0-9a8d-eac54483fd97": {
+      "type": "announcement",
+      "settings": {
+        "heading_text": "Welcome to our shop",
+        "announcement_text": "",
+        "show_timer": false,
+        "timer_hours": "2",
+        "timer_minutes": "30",
+        "show_socials": false
+      }
     }
   },
   "order": [
     "announcement",
-    "header"
+    "header",
+    "51e315c9-edd0-46e0-9a8d-eac54483fd97"
   ]
 }
