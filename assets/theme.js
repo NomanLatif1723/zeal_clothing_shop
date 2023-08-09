@@ -66,11 +66,11 @@ function initCollectionListSwipers() {
       let swiperOptions = {
         slidesPerView: 2,
         navigation: {
-          nextEl: ".swiper-button-next.swiper-button-{{ section.id }}",
-          prevEl: ".swiper-button-prev.swiper-button-{{ section.id }}"
+          nextEl: ".swiper-button-next.swiper-button-" + id,
+          prevEl: ".swiper-button-prev.swiper-button-" + id
         },
         pagination: {
-          el: ".swiper-pagination.swiper-pagination-{{ section.id }}",
+          el: ".swiper-pagination.swiper-pagination-" + id,
           clickable: true
         },
         breakpoints: {
@@ -82,6 +82,10 @@ function initCollectionListSwipers() {
           }
         }
       }
+
+      // Initialize Swiper for this section
+      let swiper = new Swiper('#collectionListSlider-' + id, swiperOptions);
+      
     }
   })
 }
