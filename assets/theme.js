@@ -1,4 +1,3 @@
-(function(){
 (function() {
   function Testimonials(container) {
     this.container = container;
@@ -94,8 +93,7 @@
     new Testimonials(testimonialContainers[i]);
   }
 })();
-
-
+(function(){
 
 })();
 // announcement timer 
