@@ -63,9 +63,6 @@ function initTestimonialSwipers() {
       if (swiperContainer.swiper) {
         swiperContainer.swiper.destroy();
       }
-      
-      // Initialize Swiper for this section
-      let swiper = new Swiper("#testimonials-" + id, {
 
         let swiperOptions = {
           slidesPerView: 1,
@@ -94,7 +91,6 @@ function initTestimonialSwipers() {
         // Initialize Swiper for this section
         let swiper = new Swiper('#testimonials-' + id, swiperOptions);
       
-      });
     }
   });
 }
