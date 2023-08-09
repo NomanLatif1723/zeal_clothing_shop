@@ -3,8 +3,8 @@ function Testimonials = (function() {
     this.container = container;
     this.timeout = null;
     var sectionId = container.getAttribute('data-section-id');
-    this.slideshow = container.querySelector('#Testimonials-' + sectionId);
-    this.namespace = '.testimonial-' + sectionId;
+    this.slideshow = container.querySelector('#testimonials-' + sectionId);
+    this.namespace = '.main__section-' + sectionId;
     this.swiper = null; // To store the Swiper instance
 
     if (!this.slideshow) {
