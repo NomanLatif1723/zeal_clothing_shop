@@ -1,6 +1,6 @@
 (function(){
 // Testimonial Slider
-  let sectionId = document.querySelectorAll('.testimonial__wrapper').forEach (el => el.getAttribute('data-section-id'));
+  let sectionId = document.querySelector('.testimonial__wrapper').getAttribute('data-section-id'));
   console.log("section id ", sectionId);
   var swiper = new Swiper("#testimonials-" + sectionId, {
       slidesPerView: 1,
