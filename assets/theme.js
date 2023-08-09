@@ -58,6 +58,12 @@ function initTestimonialSwipers() {
     // Check if the Swiper container exists in this section
     let swiperContainer = document.querySelector("#testimonials-" + id);
     if (swiperContainer) {
+      
+      // Destroy any previous Swiper instances for this section
+      if (swiperContainer.swiper) {
+        swiperContainer.swiper.destroy();
+      }
+      
       // Initialize Swiper for this section
       let swiper = new Swiper("#testimonials-" + id, {
         slidesPerView: 1,
