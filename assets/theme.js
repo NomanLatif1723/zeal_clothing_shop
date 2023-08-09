@@ -48,7 +48,7 @@ initSlideshowSwipers();
 // Collection List Grid Slider
 function initBrandsSwipers() {
   // find all the collection list wrappers in page
-  let collectionListWrappers = document.querySelectorAll('.collection-list__wrapper');
+  let collectionListWrappers = document.querySelectorAll('.brands__slider');
 
   collectionListWrappers.forEach(wrapper => {
     let id = wrapper.getAttribute('data-section-id');
@@ -63,22 +63,10 @@ function initBrandsSwipers() {
       }
 
       let swiperOptions = {
-        slidesPerView: 2,
+        slidesPerView: 1,
         navigation: {
           nextEl: ".swiper-button-next.swiper-button-" + id,
           prevEl: ".swiper-button-prev.swiper-button-" + id,
-        },
-        pagination: {
-          el: ".swiper-pagination.swiper-pagination-" + id,
-          clickable: true,
-        },
-        breakpoints: {
-          769: {
-            slidesPerView: 3,
-          },
-          993: {
-            slidesPerView: 4,
-          }
         },
       }
 
