@@ -11,7 +11,7 @@
     endif
 -%}
 <div class="slideshow" data-section-id="{{ section.id }}">
-  <div id="swiper-{{ section.id }}"   
+  <div id="slideshow-{{ section.id }}"   
     class="slideshow__slides swiper"   
     data-desktop-height="{{ desktop_height }}"  
     data-mobile-height="{{ mobile_height }}"
@@ -123,7 +123,7 @@
 {% comment %}
 <script>
   // Slideshow
-     let swiper{{ section.id | remove: '-' }} = new Swiper('#swiper-{{ section.id }}', {
+     let swiper{{ section.id | remove: '-' }} = new Swiper('#slideshow-{{ section.id }}', {
     slidesPerView: 1,
     navigation: {
       nextEl: ".swiper-button-{{ section.id }}.swiper-button-next",
