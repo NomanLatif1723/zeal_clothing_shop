@@ -3,6 +3,10 @@
 function initAnnouncementTimer() {
   // Get All Announcement Bar Wrappers 
   let announcementWrapper = document.querySelectorAll('.announcement__bar');
+
+  announcementWrapper.forEach(wrapper => {
+    let id = wrapper.getAttribute('data-section-id');
+  })
 }
 initAnnouncementTimer();
 // Slideshow
