@@ -1,5 +1,5 @@
 (function(){
-theme.Testimonials = (function() {
+var Testimonials = (function() {
   function Testimonials(container) {
     this.container = container;
     this.timeout;
@@ -9,7 +9,7 @@ theme.Testimonials = (function() {
 
     if (!this.slideshow) { return }
 
-    theme.initWhenVisible({
+    var initWhenVisible({
       element: this.container,
       callback: this.init.bind(this),
       threshold: 600
