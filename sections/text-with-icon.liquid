@@ -79,6 +79,7 @@
   <div class="swiper-button-next swiper-button-{{ section.id }}"></div>
   <div class="swiper-button-prev swiper-button-{{ section.id }}"></div>
 </div>
+{% comment %}
 <script>
 //  Brands slider for mobile devices
   var swiper = new Swiper("#swiper-{{ section.id }}", {
@@ -88,6 +89,7 @@
       },
     });
 </script>
+{% endcomment %}
 {% schema %}
   {
     "name": "t:sections.text-with-icon.name",
