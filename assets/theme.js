@@ -269,6 +269,8 @@ function initVideoSection() {
             };
           }
         }
+        videoPlay();
+        videoEnded();
       });
     }
   });
