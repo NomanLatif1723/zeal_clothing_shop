@@ -130,6 +130,7 @@
   </div>
 </section>
 {%- if collection_layout == 'slider' -%}
+{% comment %}
 <script>
   var swiper{{ section.id | remove: '-' }} = new Swiper("#swiper-{{ section.id }}", {
     slidesPerView: 2,
@@ -152,6 +153,7 @@
   });
 
 </script>
+  {% endcomment %}
 {%- endif -%}
 {% schema %}
   {
