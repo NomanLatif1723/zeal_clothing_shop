@@ -273,6 +273,22 @@
         "id": "show_flags",
         "label": "t:schema_settings.extras.settings.show_flags.label",
         "default": false
+      },
+      {
+        "type": "select",
+        "id": "text_direction",
+        "label": "t:schema_settings.extras.settings.text_direction.label",
+        "default": "ltr",
+        "options": [
+          {
+            "value": "ltr",
+            "label": "t:schema_settings.extras.settings.text_direction.options.ltr.label"
+          },
+          {
+            "value": "rtl",
+            "label": "t:schema_settings.extras.settings.text_direction.options.rtl.label"
+          }
+        ]
       }
     ]
   },
