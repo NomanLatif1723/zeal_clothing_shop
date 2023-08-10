@@ -1529,6 +1529,17 @@
         },
         "show_flags": {
           "label": "Show Flags"
+        },
+        "text_direction": {
+          "label": "Text Direction",
+          "options": {
+            "ltr": {
+              "label": "Left To Right"
+            },
+            "rtl": {
+              "label": "Right To Left"
+            }
+          }
         }
       }
     },
