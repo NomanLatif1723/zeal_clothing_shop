@@ -15,6 +15,7 @@
     },
     "header": {
       "type": "header",
+      "disabled": true,
       "blocks": {
         "0245aaf5-9a53-4308-a71f-a8de2161de7c": {
           "type": "logo",
