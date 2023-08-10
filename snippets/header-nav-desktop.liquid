@@ -50,7 +50,7 @@
         {%- elsif is_megamenu -%}
         <li class="mega-menu__item">
           <a class="menu-item__link" href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}
-          {%- if mega_menu != blank -%}
+          {%- if is_megamenu -%}
             {%- render 'icon-arrow-down' -%}
           {%- endif -%}
           </a>
