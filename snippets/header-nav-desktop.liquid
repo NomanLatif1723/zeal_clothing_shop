@@ -42,7 +42,7 @@
           {% endif %}
         </li>
         {%- elsif link.title == menu_item_label -%}
-        <li class="menu__item mega-menu__item">
+        <li class="mega-menu__item">
           <a class="menu-item__link" href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}
           {%- if link.links != blank -%}
             {%- render 'icon-arrow-down' -%}
