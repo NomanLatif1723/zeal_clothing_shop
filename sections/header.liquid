@@ -55,7 +55,12 @@
   <div class="page__width">
     <div class="header__wrapper" data-header-style="{{ header_styles }}">
       {%- for block in section.blocks -%}
-        
+        {%- liquid
+          assign header_logo = block.settings.header_logo
+          assign desktop_logo_width = block.settings.desktop_logo_width
+          assign mobile_logo_width = block.settings.mobile_logo_width
+          assign menu_item_label = block.settings.menu_item_label
+        -%}
         {%- case block.type -%}
           {%- when 'logo' -%}
             {%- capture header_logo -%}
