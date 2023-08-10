@@ -135,12 +135,14 @@
           {{ header_logo }}
         </div>
         <div class="header__block header__navigation{% if header_styles == 'left_center' %} header-nav__center{% endif %}">
+          {% for block in section.blocks %}
           {%- render 'header-nav-desktop', 
             main_menu: main_menu,
             mobile_menu: mobile_menu,
             menu_item_label: menu_item_label,
-            mega_menu: mega_menu
+            mega_menu: linklists[block.settings.desktop_menu]
           -%}
+          {% endfor %}
         </div>
       {%- endif -%}
       <div class="header__block header__icon-container">
