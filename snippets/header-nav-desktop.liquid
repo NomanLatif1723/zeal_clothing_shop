@@ -53,29 +53,12 @@
               <div class="page__width">
                 <div class="mega-container__flex">
                   <div class="mega-container__block mega-menu__dropdowns">
-                    <ul class="menu__list child-mega__list">
+                    <div class="child-mega__list">
                       {%- for childlink in link.links -%}
-                        <li class="child-mega__item">
-                          <a
-                            href="{{ childlink.url }}"
-                            title="{{ childlink.title }}"
-                            class="menu-item__link child-mega__item--link">{{ childlink.title }}
-                          </a>
-                          {%- if childlink.links != blank %}
-                            <ul class="menu__list grandchild-mega__list">
-                              {%- for grandchild in childlink.links -%}
-                                <li class="grandchild-menu__item">
-                                  <a
-                                    href="{{ grandchild.url }}"
-                                    title="{{ grandchild.title }}"
-                                    class="menu-item__link grandchild-mega__item--link">{{ grandchild.title }}</a>
-                                </li>
-                              {%- endfor -%}
-                            </ul>
-                          {%- endif -%}
-                        </li>
+                        <div class=""><a href="{{ childlink.url }}"><h5>{{ childlink.title }}</h5></a></div>
                       {%- endfor -%}
-                    </ul>
+                    </div>
+                    
                   </div>
                   <div class="mega-container__block mega-menu__images"></div>
                 </div>
