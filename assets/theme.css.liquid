@@ -1646,12 +1646,6 @@ input[type="radio"]:checked + label {
     justify-content: space-between;
     align-items: center;
   }
-
-  .main-menu__list {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-  }
   
   .site__logo {
     font-size: 26px;
@@ -1668,6 +1662,23 @@ input[type="radio"]:checked + label {
     padding-left: 22px;
     display: none;
   }
+
+  .navigation__hide{
+    display: flex;
+    flex: 1;
+  }
+  .header__hamburger {
+    flex: 1;
+  }
+  .header-center__below {
+    flex: 0;
+  }
+
+  .main-menu__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
      
   .menu__item {
     position: relative;
@@ -1678,16 +1689,6 @@ input[type="radio"]:checked + label {
     display: flex;
     align-items: center;
     gap: 10px;
-  }
-
-  .header__icon-container {
-    flex: 1;
-    justify-content: flex-end;
-  }
-  
-  .header__icon-container .icon {
-    padding: 12px;
-    display: inline-flex;
   }
 
   .child-menu__list {
@@ -1730,25 +1731,19 @@ input[type="radio"]:checked + label {
   .child-menu__item--link {
     justify-content: space-between;
   }
+
+  .header__icon-container {
+    flex: 1;
+    justify-content: flex-end;
+  }
   
-  .navigation__hide{
-    display: flex;
-    flex: 1;
-  }
-  .header__hamburger {
-    flex: 1;
-  }
-  .header-center__below {
-    flex: 0;
+  .header__icon-container .icon {
+    padding: 12px;
+    display: inline-flex;
   }
 
   .header__icon-container .icon__accounts {
     display: none;
-  }
-
-  .icons-text__list {
-    display: flex;
-    align-items: center;
   }
 
   .icon__hide-mobile{
