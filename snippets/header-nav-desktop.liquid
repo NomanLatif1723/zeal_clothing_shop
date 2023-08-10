@@ -54,35 +54,37 @@
             {%- render 'icon-arrow-down' -%}
           {%- endif -%}
           </a>
-          <div class="mega-menu__container">
-            <div class="page__width">
-              <div class="mega-container__flex">
-                <div class="mega-container__block mega-menu__dropdowns">
-                  <div class="mega-menu__list">
-        mega menu here 
-                    {%- for link2 in mega_menu.links -%}
-                      <div class="mega-menu__item">
-                        <a class="menu-item__link" href="{{ link2.url }}" title="{{ link2.title }}">
-                          <h5>{{ link2.title }}</h5>
-                        </a>
-                        {%- if link2.links != blank -%}
-                          <div class="child-mega__list">
-                            {%- for childlink in link2.links -%}
-                            <div class="child-mega__item">
-                              <a class="menu-item__link" href="{{ childlink.url }}" title="{{ childlink.title }}">{{ childlink.title }}</a>
+          {% if is_megamenu %}
+            <div class="mega-menu__container">
+              <div class="page__width">
+                <div class="mega-container__flex">
+                  <div class="mega-container__block mega-menu__dropdowns">
+                    <div class="mega-menu__list">
+          mega menu here 
+                      {%- for link in mega_menu.links -%}
+                        <div class="mega-menu__item">
+                          <a class="menu-item__link" href="{{ link.url }}" title="{{ link.title }}">
+                            <h5>{{ link.title }}</h5>
+                          </a>
+                          {%- if link.links != blank -%}
+                            <div class="child-mega__list">
+                              {%- for childlink in link.links -%}
+                              <div class="child-mega__item">
+                                <a class="menu-item__link" href="{{ childlink.url }}" title="{{ childlink.title }}">{{ childlink.title }}</a>
+                              </div>
+                              {%- endfor -%}
                             </div>
-                            {%- endfor -%}
-                          </div>
-                        {%- endif -%}
-                      </div>
-                    {%- endfor -%}
+                          {%- endif -%}
+                        </div>
+                      {%- endfor -%}
+                    </div>
+                    
                   </div>
-                  
+                  <div class="mega-container__block mega-menu__images"></div>
                 </div>
-                <div class="mega-container__block mega-menu__images"></div>
               </div>
             </div>
-          </div>
+          {% endif %}
         </li>
       {%- endif -%}
     {%- endfor -%}
