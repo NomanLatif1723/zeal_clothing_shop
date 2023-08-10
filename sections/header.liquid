@@ -7,6 +7,7 @@
   assign cart_icon = settings.cart_icon
 
   for block in section.blocks
+    assign header_logo = block.settings.header_logo
     assign desktop_logo_width = block.settings.desktop_logo_width
     assign mobile_logo_width = block.settings.mobile_logo_width
     assign menu_item_label = block.settings.menu_item_label
@@ -54,17 +55,12 @@
   <div class="page__width">
     <div class="header__wrapper" data-header-style="{{ header_styles }}">
       {%- for block in section.blocks -%}
-        {%- liquid
-          assign logo = block.settings.header_logo
-          assign desktop_logo_width = block.settings.desktop_logo_width
-          assign mobile_logo_width = block.settings.mobile_logo_width
-        -%}
 
             {%- capture header_logo -%}
               <h1 class="site__logo">
                 <a href="{{ routes.root_url }}" title="{{ shop.name }}" aria-label="{{ shop.name }}">
-                  {% if logo != blank %}
-                    {{ logo | image_url: width: desktop_logo_width.width, height: desktop_logo_width.height | image_tag: class: "site__logo-image" }}
+                  {% if header_logo != blank %}
+                    {{ header_logo | image_url: width: desktop_logo_width.width, height: desktop_logo_width.height | image_tag: class: "site__logo-image" }}
                   {%- else -%}
                     <span>{{ shop.name }}</span>
                   {% endif %}
