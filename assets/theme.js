@@ -48,10 +48,8 @@ initAnnouncementTimer();
 const header = document.querySelector('.section__header');
 let isSticky = false;
 let lastScrollY = 0;
-
 function updateStickyHeader() {
   const scrollY = window.scrollY;
-
   if (scrollY > lastScrollY) {
     if (!isSticky) {
       header.style.position = 'fixed';
@@ -68,41 +66,11 @@ function updateStickyHeader() {
       isSticky = false;
     }
   }
-
   lastScrollY = scrollY;
 }
 
-// Call the function initially to reflect the setting's value
-updateStickyHeader();
-
 // Update the sticky header on scroll
 window.addEventListener('scroll', updateStickyHeader);
-
-
-
-
-// Get references to the elements
-// const header = document.querySelector('.section__header');
-// function updateStickyHeader() {
-//   const isSticky = header.getAttribute('data-sticky-header');
-
-//   if (isSticky && window.scrollY >= header.offsetTop) {
-//     header.style.position = 'fixed';
-//     header.style.top = 0;
-//     header.style.left = 0;
-//     header.style.right = 0;
-//     header.style.zIndex = 99;
-    
-//   } else if (isSticky && window.scrollY <= header.offsetTop) {
-//     header.style.position = 'static';
-//   }
-// }
-
-// // Call the function initially to reflect the setting's value
-// updateStickyHeader();
-
-// // Update the sticky header on scroll
-// window.addEventListener('scroll', updateStickyHeader);
 
 // Slideshow
 function initSlideshowSwipers() {
