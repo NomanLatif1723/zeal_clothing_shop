@@ -1,15 +1,13 @@
-{% liquid
-  assign is_megamenu = false
-  for link in main_menu.links
-    assign linkTitle = link.title
-  endfor
-  if mega_menu and linkTitle == menu_item_label
-    assign is_megamenu = true
-  endif
-%}
+
 <nav class="header__menu header-desktop__menu{% if mobile_menu != blank %} desktop-menu__hide{% endif %}">
   <ul class="menu__list main-menu__list">
     {%- for link in main_menu.links -%}
+      {%- liquid
+        assign is_megamenu = false
+        if mega_menu and link.title == menu_item_label
+          assign is_megamenu = true
+        endif
+      -%}
       {%- if link.title != menu_item_label -%}
         <li class="menu__item{% if is_megamenu %} mega-menu__item{% endif %}">
           <a
