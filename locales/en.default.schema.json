@@ -399,6 +399,9 @@
               "label": "Menu Item",
               "info": "Enter Menu Title to Apply Mega Menu"
             },
+            "mega_menu": {
+              "label": "Mega Menu"
+            },
             "header_image_1": {
               "label": "Image 1",
               "promo_image": {
