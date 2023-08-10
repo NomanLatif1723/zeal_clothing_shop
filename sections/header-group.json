@@ -23,10 +23,23 @@
             "desktop_logo_width": 70,
             "mobile_logo_width": 50
           }
+        },
+        "c8e0aeb0-6efb-447f-bbc5-e1667a420949": {
+          "type": "mega-menu",
+          "settings": {
+            "menu_item_label": "",
+            "promo_image_1_subheading": "Subheading",
+            "promo_image_1_heading": "",
+            "promo_image_1_text": "Text",
+            "promo_image_2_subheading": "Subheading",
+            "promo_image_2_heading": "",
+            "promo_image_2_text": "Text"
+          }
         }
       },
       "block_order": [
-        "0245aaf5-9a53-4308-a71f-a8de2161de7c"
+        "0245aaf5-9a53-4308-a71f-a8de2161de7c",
+        "c8e0aeb0-6efb-447f-bbc5-e1667a420949"
       ],
       "settings": {
         "desktop_menu": "main-menu",
