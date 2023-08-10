@@ -1,3 +1,5 @@
+{%- for block in section.blocks -%}
+{% assign mega_menu = linklists[block.settings.desktop_menu] %}
 <nav class="header__menu header-desktop__menu{% if mobile_menu != blank %} desktop-menu__hide{% endif %}">
   <ul class="menu__list main-menu__list">
     {%- for link in main_menu.links -%}
@@ -88,6 +90,7 @@
     {%- endfor -%}
   </ul>
 </nav>
+{%- endfor -%}
 <nav class="header__menu header-mobile__menu">
   <ul class="menu__list main-menu__list">
     {%- for link in mobile_menu.links -%}
