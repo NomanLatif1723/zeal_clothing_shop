@@ -54,13 +54,15 @@ function updateStickyHeader() {
 
   if (isSticky && window.scrollY >= header.offsetTop) {
     header.style.position = 'fixed';
-    header.style.top = '0';
-    header.style.left = '0';
-    header.style.right = '0';
+    header.style.top = 0;
+    header.style.left = 0;
+    header.style.right = 0;
     header.style.zIndex = 99;
     
   } else {
-    header.style.position = 'static'; // Or set to whatever default position you want
+    header.style.position = 'static';
+    header.style.top = auto;
+    
   }
 }
 
