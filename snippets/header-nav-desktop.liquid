@@ -55,7 +55,11 @@
                   <div class="mega-container__block mega-menu__dropdowns">
                     <div class="child-mega__list">
                       {%- for childlink in link.links -%}
-                        <div class=""><a href="{{ childlink.url }}"><h5>{{ childlink.title }}</h5></a></div>
+                        <div class="child-mega__item">
+                          <a class="menu-item__link" href="{{ childlink.url }}">
+                            <h5>{{ childlink.title }}</h5>
+                          </a>
+                        </div>
                       {%- endfor -%}
                     </div>
                     
