@@ -44,33 +44,37 @@ function initAnnouncementTimer() {
 }
 initAnnouncementTimer();
 
-// Get reference to the header
-const header = document.querySelector('.section__header');
-const stickyHeader = header.getAttribute('data-sticky-header');
-if (stickyHeader == 'true') {
-  let isSticky = false;
-  let lastScrollY = 0;
-  function updateStickyHeader() {
-    const scrollY = window.scrollY;
-    if (scrollY > lastScrollY) {
-      if (!isSticky) {
-        header.classList.add('sticky__header');
-        
-        isSticky = true;
+// Sticky Header 
+function initStickyHeader() {
+  const header = document.querySelector('.section__header');
+  if (header) {
+    const stickyHeader = header.getAttribute('data-sticky-header');
+    if (stickyHeader == 'true') {
+      let isSticky = false;
+      let lastScrollY = 0;
+      function updateStickyHeader() {
+        const scrollY = window.scrollY;
+        if (scrollY > lastScrollY) {
+          if (!isSticky) {
+            header.classList.add('sticky__header');
+            
+            isSticky = true;
+          }
+        } else {
+          if (isSticky && (scrollY <= header.offsetTop || scrollY === 0)) {
+            header.classList.remove('sticky__header'); 
+            isSticky = false;
+          }
+        }
+        lastScrollY = scrollY;
       }
-    } else {
-      if (isSticky && (scrollY <= header.offsetTop || scrollY === 0)) {
-        header.classList.remove('sticky__header'); 
-        isSticky = false;
-      }
+      
+      // Update the sticky header on scroll
+      window.addEventListener('scroll', updateStickyHeader);
     }
-    lastScrollY = scrollY;
-  }
-  
-  // Update the sticky header on scroll
-  window.addEventListener('scroll', updateStickyHeader);
+  } 
 }
-
+initStickyHeader();
 
 // Slideshow
 function initSlideshowSwipers() {
