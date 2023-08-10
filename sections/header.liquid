@@ -81,9 +81,11 @@
             menu_item_label: menu_item_label
           -%}
         </div>
-        <div class="header__block header__logo">
-          {{ header_logo }}
-        </div>
+        {% for block in section.blocks %}
+          <div class="header__block header__logo">
+            {{ header_logo }}
+          </div>
+        {% endfor %}
       {%- elsif header_styles == 'drawer_center' -%}
         <div class="header__block header__hamburger">
           <button class="menu-item__link menu-toggle__btn{% unless show_icons %} icon__hide-hamburger{% endunless %}">
@@ -93,9 +95,11 @@
             <button class="menu-item__link menu-toggle__btn icon__hide-mobile">Menu</button>
           {%- endunless -%}
         </div>
-        <div class="header__block header__logo">
-          {{ header_logo }}
-        </div>
+        {% for block in section.blocks %}
+          <div class="header__block header__logo">
+            {{ header_logo }}
+          </div>
+        {% endfor %}
       {%- elsif header_styles == 'center_below' -%}
         <div class="header__block navigation__hide">
           <button class="menu-item__link menu-toggle__btn{% unless show__icons %} icon__hide-desktop{% endunless %}">
@@ -106,9 +110,11 @@
           {%- endunless -%}
         </div>
         <div class="header__block header-center__below">
-          <div class="header__block header__logo">
-            {{ header_logo }}
-          </div>
+          {% for block in section.blocks %}
+            <div class="header__block header__logo">
+              {{ header_logo }}
+            </div>
+          {% endfor %}
           <div class="header__block header__navigation">
             {%- render 'header-nav-desktop', 
               main_menu: main_menu,
@@ -127,9 +133,11 @@
             <button class="menu-item__link menu-toggle__btn icon__hide-mobile">Menu</button>
           {%- endunless -%}
         </div>
-        <div class="header__block header__logo">
-          {{ header_logo }}
-        </div>
+        {% for block in section.blocks %}
+          <div class="header__block header__logo">
+            {{ header_logo }}
+          </div>
+        {% endfor %}
         <div class="header__block header__navigation{% if header_styles == 'left_center' %} header-nav__center{% endif %}">
           {%- render 'header-nav-desktop', 
             main_menu: main_menu,
