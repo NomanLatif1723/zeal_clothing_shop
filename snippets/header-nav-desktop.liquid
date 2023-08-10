@@ -59,9 +59,6 @@
                           href="{{ childlink.url }}"
                           title="{{ childlink.title }}"
                           class="menu-item__link child-menu__item--link">{{ childlink.title }}
-                          {% if childlink.links != blank %}
-                            {% render 'icon-arrow-down' %}
-                          {% endif %}
                         </a>
                       </li>
                     {% endfor %}
