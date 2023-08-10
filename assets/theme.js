@@ -54,17 +54,13 @@ if (stickyHeader == 'true') {
     const scrollY = window.scrollY;
     if (scrollY > lastScrollY) {
       if (!isSticky) {
-        header.style.position = 'fixed';
-        header.style.top = '0';
-        header.style.left = '0';
-        header.style.right = '0';
-        header.style.zIndex = 99;
+        header.classList.add('sticky__header');
         
         isSticky = true;
       }
     } else {
       if (isSticky && (scrollY <= header.offsetTop || scrollY === 0)) {
-        header.style.position = 'static'; 
+        header.classList.remove('sticky__header'); 
         isSticky = false;
       }
     }
