@@ -343,6 +343,15 @@
     "header": {
       "name": "Header",
       "settings": {
+        "header_logo": {
+          "label": "Logo Image"
+        },
+        "desktop_logo_width": {
+          "label": "Desktop Logo Width"
+        },
+        "mobile_logo_width": {
+          "label": "Mobile Logo Width"
+        },
         "header_navigation": {
           "label": "Navigation Menus",
           "desktop_menu": {
