@@ -134,9 +134,12 @@
           {%- endunless -%}
         </div>
         {% for block in section.blocks %}
-          <div class="header__block header__logo">
-            {{ header_logo }}
-          </div>
+          {% case block.type %}
+            {% when 'logo' %}
+            <div class="header__block header__logo">
+              {{ header_logo }}
+            </div>
+          {% endcase %}
         {% endfor %}
         <div class="header__block header__navigation{% if header_styles == 'left_center' %} header-nav__center{% endif %}">
           {%- render 'header-nav-desktop', 
