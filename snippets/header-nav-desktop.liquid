@@ -50,10 +50,25 @@
           </a>
           {%- if link.links != blank -%}
             <div class="mega-menu__container">
-              <div class="mega-menu__dropdowns">
-                
+              <div class="page__width">
+                <div class="mega-menu__dropdowns">
+                  <ul class="menu__list child-menu__list">
+                    {% for childlink in link.links %}
+                      <li class="menu__item child-menu__item">
+                        <a
+                          href="{{ childlink.url }}"
+                          title="{{ childlink.title }}"
+                          class="menu-item__link child-menu__item--link">{{ childlink.title }}
+                          {% if childlink.links != blank %}
+                            {% render 'icon-arrow-down' %}
+                          {% endif %}
+                        </a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+                <div class="mega-menu__images"></div>
               </div>
-              <div class="mega-menu__images"></div>
             </div>
           {%- endif -%}
         </li>
