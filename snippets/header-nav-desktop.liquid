@@ -64,7 +64,7 @@
                         {%- for link in linklists[block.settings.mega_menu].links -%}
                           <div class="mega-menu__item">
                             <a class="mega-item__link" href="{{ link.url }}" title="{{ link.title }}">
-                              <h5>{{ link.title }}</h5>
+                              <h4>{{ link.title }}</h4>
                             </a>
                             {%- if link.links != blank -%}
                               <div class="child-mega__list">
