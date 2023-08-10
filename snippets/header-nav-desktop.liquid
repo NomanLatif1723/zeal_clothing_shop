@@ -1,6 +1,9 @@
 {% liquid
   assign is_megamenu = false
-  if mega_menu and link.title == menu_item_label
+  for link in main_menu.links
+    assign linkTitle = link.title
+  endfor
+  if mega_menu and linkTitle == menu_item_label
     assign is_megamenu = true
   endif
 %}
