@@ -8,7 +8,7 @@
           assign is_megamenu = true
         endif
       -%}
-      {%- if link.title == menu_item_label -%}
+
         <li class="menu__item{% if is_megamenu %} mega-menu__item{% endif %}">
           <a
             href="{{ link.url }}"
@@ -48,7 +48,7 @@
             </ul>
           {%- endif -%}
         </li>
-      {%- endif -%}
+
     {%- endfor -%}
   </ul>
 </nav>
