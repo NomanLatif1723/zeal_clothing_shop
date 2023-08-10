@@ -55,8 +55,13 @@
   <div class="page__width">
     <div class="header__wrapper" data-header-style="{{ header_styles }}">
       {%- for block in section.blocks -%}
+        {%- liquid
+          assign header_logo = block.settings.header_logo
+          assign desktop_logo_width = block.settings.desktop_logo_width
+          assign mobile_logo_width = block.settings.mobile_logo_width
+        -%}
 
-            {%- capture logo -%}
+            {%- capture header_logo -%}
               <h1 class="site__logo">
                 <a href="{{ routes.root_url }}" title="{{ shop.name }}" aria-label="{{ shop.name }}">
                   {% if header_logo %}
@@ -86,7 +91,7 @@
           -%}
         </div>
         <div class="header__block header__logo">
-          {{ logo }}
+          {{ header_logo }}
         </div>
       {%- elsif header_styles == 'drawer_center' -%}
         <div class="header__block header__hamburger">
@@ -98,7 +103,7 @@
           {%- endunless -%}
         </div>
         <div class="header__block header__logo">
-          {{ logo }}
+          {{ header_logo }}
         </div>
       {%- elsif header_styles == 'center_below' -%}
         <div class="header__block navigation__hide">
@@ -111,7 +116,7 @@
         </div>
         <div class="header__block header-center__below">
           <div class="header__block header__logo">
-            {{ logo }}
+            {{ header_logo }}
           </div>
           <div class="header__block header__navigation">
             {%- render 'header-nav-desktop', 
@@ -132,7 +137,7 @@
           {%- endunless -%}
         </div>
         <div class="header__block header__logo">
-          {{ logo }}
+          {{ header_logo }}
         </div>
         <div class="header__block header__navigation{% if header_styles == 'left_center' %} header-nav__center{% endif %}">
           {%- render 'header-nav-desktop', 
