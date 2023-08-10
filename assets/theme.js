@@ -46,31 +46,35 @@ initAnnouncementTimer();
 
 // Get reference to the header
 const header = document.querySelector('.section__header');
-let isSticky = false;
-let lastScrollY = 0;
-function updateStickyHeader() {
-  const scrollY = window.scrollY;
-  if (scrollY > lastScrollY) {
-    if (!isSticky) {
-      header.style.position = 'fixed';
-      header.style.top = '0';
-      header.style.left = '0';
-      header.style.right = '0';
-      header.style.zIndex = 99;
-      
-      isSticky = true;
+const stickyHeader = header.getAttribute('data-sticky-header');
+if (stickyHeader) {
+  let isSticky = false;
+  let lastScrollY = 0;
+  function updateStickyHeader() {
+    const scrollY = window.scrollY;
+    if (scrollY > lastScrollY) {
+      if (!isSticky) {
+        header.style.position = 'fixed';
+        header.style.top = '0';
+        header.style.left = '0';
+        header.style.right = '0';
+        header.style.zIndex = 99;
+        
+        isSticky = true;
+      }
+    } else {
+      if (isSticky && (scrollY <= header.offsetTop || scrollY === 0)) {
+        header.style.position = 'static'; 
+        isSticky = false;
+      }
     }
-  } else {
-    if (isSticky && (scrollY <= header.offsetTop || scrollY === 0)) {
-      header.style.position = 'static'; 
-      isSticky = false;
-    }
+    lastScrollY = scrollY;
   }
-  lastScrollY = scrollY;
+  
+  // Update the sticky header on scroll
+  window.addEventListener('scroll', updateStickyHeader);
 }
 
-// Update the sticky header on scroll
-window.addEventListener('scroll', updateStickyHeader);
 
 // Slideshow
 function initSlideshowSwipers() {
