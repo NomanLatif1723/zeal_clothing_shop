@@ -60,14 +60,14 @@
                 <div class="mega-container__block mega-menu__dropdowns">
                   <div class="mega-menu__list">
         mega menu here 
-                    {%- for link in mega_menu.links -%}
+                    {%- for link2 in mega_menu.links -%}
                       <div class="mega-menu__item">
-                        <a class="menu-item__link" href="{{ link.url }}" title="{{ link.title }}">
-                          <h5>{{ link.title }}</h5>
+                        <a class="menu-item__link" href="{{ link2.url }}" title="{{ link2.title }}">
+                          <h5>{{ link2.title }}</h5>
                         </a>
-                        {%- if link.links != blank -%}
+                        {%- if link2.links != blank -%}
                           <div class="child-mega__list">
-                            {%- for childlink in link.links -%}
+                            {%- for childlink in link2.links -%}
                             <div class="child-mega__item">
                               <a class="menu-item__link" href="{{ childlink.url }}" title="{{ childlink.title }}">{{ childlink.title }}</a>
                             </div>
