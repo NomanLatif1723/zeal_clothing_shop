@@ -46,25 +46,26 @@ initAnnouncementTimer();
 
 // Get reference to the header
 const header = document.querySelector('.section__header');
-let lastScrollY = window.scrollY;
+let isSticky = false;
+let lastScrollY = 0;
 
 function updateStickyHeader() {
-
-  const isSticky = header.getAttribute('data-sticky-header'); 
-
   const scrollY = window.scrollY;
-  const isScrollingDown = scrollY > lastScrollY;
-  lastScrollY = scrollY;
 
-  if (isSticky && isScrollingDown && scrollY >= header.offsetTop) {
-    header.style.position = 'fixed';
-    header.style.top = 0;
-    header.style.left = 0;
-    header.style.right = 0;
-    header.style.zIndex = 99;
+  if (scrollY > lastScrollY) {
+    if (!isSticky) {
+      header.style.position = 'sticky';
+      header.style.top = '0';
+      isSticky = true;
+    }
   } else {
-    header.style.position = 'static';
+    if (isSticky && (scrollY <= header.offsetTop || scrollY === 0)) {
+      header.style.position = 'static'; 
+      isSticky = false;
+    }
   }
+
+  lastScrollY = scrollY;
 }
 
 // Call the function initially to reflect the setting's value
@@ -72,6 +73,7 @@ updateStickyHeader();
 
 // Update the sticky header on scroll
 window.addEventListener('scroll', updateStickyHeader);
+
 
 
 
