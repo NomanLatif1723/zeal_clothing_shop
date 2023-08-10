@@ -46,11 +46,8 @@ initAnnouncementTimer();
 
 // Get references to the elements
 const header = document.querySelector('.section__header');
-
-// Function to update sticky header based on section setting and scroll position
 function updateStickyHeader() {
-  // Fetch the value of the section setting from your preferred method
-  const isSticky = header.getAttribute('data-sticky-header') // Replace with your method to get the section setting value
+  const isSticky = header.getAttribute('data-sticky-header');
 
   if (isSticky && window.scrollY >= header.offsetTop) {
     header.style.position = 'fixed';
@@ -62,7 +59,6 @@ function updateStickyHeader() {
   } else {
     header.style.position = 'static';
     header.style.top = 'auto';
-    
   }
 }
 
