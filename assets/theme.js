@@ -44,19 +44,28 @@ function initAnnouncementTimer() {
 }
 initAnnouncementTimer();
 
-// Get references to the elements
+  // Get reference to the header
 const header = document.querySelector('.section__header');
+let lastScrollY = window.scrollY;
+
 function updateStickyHeader() {
   const isSticky = header.getAttribute('data-sticky-header');
 
-  if (isSticky && window.scrollY >= header.offsetTop) {
-    header.style.position = 'fixed';
-    header.style.top = 0;
-    header.style.left = 0;
-    header.style.right = 0;
-    header.style.zIndex = 99;
-    
-  } else if (isSticky && window.scrollY <= header.offsetTop) {
+  const scrollY = window.scrollY;
+  const isScrollingUp = scrollY < lastScrollY;
+  lastScrollY = scrollY;
+
+  if (isSticky) {
+    if (isScrollingUp && scrollY >= header.offsetTop) {
+      header.style.position = 'fixed';
+      header.style.top = 0;
+      header.style.left = 0;
+      header.style.right = 0;
+      header.style.zIndex = 99;
+    } else {
+      header.style.position = 'static';
+    }
+  } else {
     header.style.position = 'static';
   }
 }
@@ -66,6 +75,30 @@ updateStickyHeader();
 
 // Update the sticky header on scroll
 window.addEventListener('scroll', updateStickyHeader);
+
+
+// Get references to the elements
+// const header = document.querySelector('.section__header');
+// function updateStickyHeader() {
+//   const isSticky = header.getAttribute('data-sticky-header');
+
+//   if (isSticky && window.scrollY >= header.offsetTop) {
+//     header.style.position = 'fixed';
+//     header.style.top = 0;
+//     header.style.left = 0;
+//     header.style.right = 0;
+//     header.style.zIndex = 99;
+    
+//   } else if (isSticky && window.scrollY <= header.offsetTop) {
+//     header.style.position = 'static';
+//   }
+// }
+
+// // Call the function initially to reflect the setting's value
+// updateStickyHeader();
+
+// // Update the sticky header on scroll
+// window.addEventListener('scroll', updateStickyHeader);
 
 // Slideshow
 function initSlideshowSwipers() {
