@@ -76,7 +76,7 @@
 </nav>
 <nav class="header__menu header-mobile__menu">
   <ul class="menu__list main-menu__list">
-    {% for link in mobile_menu.links %}
+    {%- for link in mobile_menu.links -%}
       <li class="menu__item">
         <a
           href="{{ link.url }}"
@@ -87,35 +87,35 @@
             {%- render 'icon-arrow-down' -%}
           {%- endif -%}
         </a>
-        {% if link.links != blank %}
+        {%- if link.links != blank -%}
           <ul class="menu__list child-menu__list">
-            {% for childlink in link.links %}
+            {%- for childlink in link.links -%}
               <li class="menu__item child-menu__item">
                 <a
                   href="{{ childlink.url }}"
                   title="{{ childlink.title }}"
                   class="menu-item__link child-menu__item--link">{{ childlink.title }}
-                  {% if childlink.links != blank %}
-                    {% render 'icon-arrow-down' %}
-                  {% endif %}
+                  {%- if childlink.links != blank -%}
+                    {%- render 'icon-arrow-down' -%}
+                  {%- endif -%}
                 </a>
-                {% if childlink.links != blank %}
+                {%- if childlink.links != blank -%}
                   <ul class="menu__list grandchild-menu__list">
-                    {% for grandchild in childlink.links %}
+                    {%- for grandchild in childlink.links -%}
                       <li class="menu__item grandchild-menu__item">
                         <a
                           href="{{ grandchild.url }}"
                           title="{{ grandchild.title }}"
                           class="menu-item__link grandchild-menu__item--link">{{ grandchild.title }}</a>
                       </li>
-                    {% endfor %}
+                    {%- endfor -%}
                   </ul>
-                {% endif %}
+                {%- endif -%}
               </li>
-            {% endfor %}
+            {%- endfor -%}
           </ul>
-        {% endif %}
+        {%- endif -%}
       </li>
-    {% endfor %}
+    {%- endfor -%}
   </ul>
 </nav>
