@@ -56,9 +56,9 @@ function updateStickyHeader() {
     header.style.right = 0;
     header.style.zIndex = 99;
     
-  } else {
+  }
+  if (isSticky && window.scrollY <= header.offsetTop) {
     header.style.position = 'static';
-    header.style.top = 'auto';
   }
 }
 
