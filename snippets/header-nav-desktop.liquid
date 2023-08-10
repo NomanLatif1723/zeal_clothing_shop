@@ -67,10 +67,7 @@
                             <a class="menu-item__link" href="{{ link.url }}" title="{{ link.title }}">
                               <h5>{{ link.title }}</h5>
                             </a>
-                            {% if link.links == blank %} 
-                          </div>
-                            {% else %}
-                            {% endif %}
+
                             {%- if link.links != blank -%}
                               <div class="child-mega__list">
                                 {%- for childlink in link.links -%}
