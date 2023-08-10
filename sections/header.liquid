@@ -83,9 +83,12 @@
           {%- endunless -%}
         </div>
         <div class="header__block header__navigation">
-          {%- render 'header-nav-desktop',
-            main_menu: main_menu,
-            mobile_menu: mobile_menu -%}
+          {%- for block in section.blocks -%}
+            {%- render 'header-nav-desktop',
+              main_menu: main_menu,
+              mobile_menu: mobile_menu 
+            -%}
+          {%- endfor -%}
         </div>
         <div class="header__block header__logo">
           {{ header_logo }}
@@ -116,9 +119,12 @@
             {{ header_logo }}
           </div>
           <div class="header__block header__navigation">
-            {%- render 'header-nav-desktop', 
-              main_menu: main_menu,
-              mobile_menu: mobile_menu -%}
+            {%- for block in section.blocks -%}
+              {%- render 'header-nav-desktop', 
+                main_menu: main_menu,
+                mobile_menu: mobile_menu 
+              -%}
+            {%- endfor -%}
           </div>
         </div>
       
@@ -135,9 +141,12 @@
           {{ header_logo }}
         </div>
         <div class="header__block header__navigation{% if header_styles == 'left_center' %} header-nav__center{% endif %}">
-          {%- render 'header-nav-desktop', 
-            main_menu: main_menu,
-            mobile_menu: mobile_menu -%}
+          {%- for block in section.blocks -%}
+            {%- render 'header-nav-desktop', 
+              main_menu: main_menu,
+              mobile_menu: mobile_menu 
+            -%}
+          {%- endfor -%}
         </div>
       {%- endif -%}
       <div class="header__block header__icon-container">
