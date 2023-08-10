@@ -61,7 +61,7 @@ function updateStickyHeader() {
     
   } else {
     header.style.position = 'static';
-    header.style.top = auto;
+    header.style.top = 'auto';
     
   }
 }
