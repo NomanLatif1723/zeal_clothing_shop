@@ -78,14 +78,11 @@
           {%- endunless -%}
         </div>
         <div class="header__block header__navigation">
-          {%- for block in section.blocks -%}
-            {%- render 'header-nav-desktop',
-              main_menu: main_menu,
-              mobile_menu: mobile_menu,
-              block: block,
-              menu_item_label: menu_item_label
-            -%}
-          {%- endfor -%}
+          {%- render 'header-nav-desktop',
+            main_menu: main_menu,
+            mobile_menu: mobile_menu,
+            menu_item_label: menu_item_label
+          -%}
         </div>
         <div class="header__block header__logo">
           {{ header_logo }}
@@ -116,14 +113,11 @@
             {{ header_logo }}
           </div>
           <div class="header__block header__navigation">
-            {%- for block in section.blocks -%}
-              {%- render 'header-nav-desktop', 
-                main_menu: main_menu,
-                mobile_menu: mobile_menu,
-                block: block,
-                menu_item_label: menu_item_label
-              -%}
-            {%- endfor -%}
+            {%- render 'header-nav-desktop', 
+              main_menu: main_menu,
+              mobile_menu: mobile_menu,
+              menu_item_label: menu_item_label
+            -%}
           </div>
         </div>
       
@@ -140,14 +134,11 @@
           {{ header_logo }}
         </div>
         <div class="header__block header__navigation{% if header_styles == 'left_center' %} header-nav__center{% endif %}">
-          {%- for block in section.blocks -%}
-            {%- render 'header-nav-desktop', 
-              main_menu: main_menu,
-              mobile_menu: mobile_menu,
-              block: block,
-              menu_item_label: block.settings.menu_item_label
-            -%}
-          {%- endfor -%}
+          {%- render 'header-nav-desktop', 
+            main_menu: main_menu,
+            mobile_menu: mobile_menu,
+            menu_item_label: menu_item_label
+          -%}
         </div>
       {%- endif -%}
       <div class="header__block header__icon-container">
