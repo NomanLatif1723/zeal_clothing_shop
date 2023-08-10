@@ -47,7 +47,7 @@ initAnnouncementTimer();
 // Get reference to the header
 const header = document.querySelector('.section__header');
 const stickyHeader = header.getAttribute('data-sticky-header');
-if (stickyHeader) {
+if (stickyHeader == 'true') {
   let isSticky = false;
   let lastScrollY = 0;
   function updateStickyHeader() {
