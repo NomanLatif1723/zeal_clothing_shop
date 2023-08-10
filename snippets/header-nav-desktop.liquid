@@ -59,6 +59,15 @@
                           <a class="menu-item__link" href="{{ childlink.url }}" title="{{ childlink.title }}">
                             <h5>{{ childlink.title }}</h5>
                           </a>
+                          {%- if childlink.links != blank -%}
+                            <div class="grandchild-mega__list">
+                              {%- for grandchild in childlink.links -%}
+                              <div class="grandchild-mega__item">
+                                <a class="menu-item__link" href="{{ grandchild.url }}" title="{{ grandchild.title }}">{{ grandchild.title }}</a>
+                              </div>
+                              {%- endfor -%}
+                            </div>
+                          {%- endif -%}
                         </div>
                       {%- endfor -%}
                     </div>
