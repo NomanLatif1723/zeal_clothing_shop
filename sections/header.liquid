@@ -61,7 +61,7 @@
           assign mobile_logo_width = block.settings.mobile_logo_width
         -%}
 
-            {%- capture header_logo -%}
+            {%- capture logo -%}
               <h1 class="site__logo">
                 <a href="{{ routes.root_url }}" title="{{ shop.name }}" aria-label="{{ shop.name }}">
                   {% if header_logo %}
