@@ -61,10 +61,10 @@
           assign mobile_logo_width = block.settings.mobile_logo_width
         -%}
 
-            {%- capture logo -%}
+            {%- capture header_logo -%}
               <h1 class="site__logo">
                 <a href="{{ routes.root_url }}" title="{{ shop.name }}" aria-label="{{ shop.name }}">
-                  {% if header_logo %}
+                  {% if header_logo != blank %}
                     {{ header_logo | image_url: width: desktop_logo_width.width, height: desktop_logo_width.height | image_tag: class: "site__logo-image" }}
                   {%- else -%}
                     <span>{{ shop.name }}</span>
