@@ -54,36 +54,34 @@
             {%- render 'icon-arrow-down' -%}
           {%- endif -%}
           </a>
-          {%- if link.links != blank -%}
-            <div class="mega-menu__container">
-              <div class="page__width">
-                <div class="mega-container__flex">
-                  <div class="mega-container__block mega-menu__dropdowns">
-                    <div class="child-mega__list">
-                      {%- for childlink in link.links -%}
-                        <div class="child-mega__item">
-                          <a class="menu-item__link" href="{{ childlink.url }}" title="{{ childlink.title }}">
-                            <h5>{{ childlink.title }}</h5>
-                          </a>
-                          {%- if childlink.links != blank -%}
-                            <div class="grandchild-mega__list">
-                              {%- for grandchild in childlink.links -%}
-                              <div class="grandchild-mega__item">
-                                <a class="menu-item__link" href="{{ grandchild.url }}" title="{{ grandchild.title }}">{{ grandchild.title }}</a>
-                              </div>
-                              {%- endfor -%}
+          <div class="mega-menu__container">
+            <div class="page__width">
+              <div class="mega-container__flex">
+                <div class="mega-container__block mega-menu__dropdowns">
+                  <div class="child-mega__list">
+                    {%- for childlink in link.links -%}
+                      <div class="child-mega__item">
+                        <a class="menu-item__link" href="{{ childlink.url }}" title="{{ childlink.title }}">
+                          <h5>{{ childlink.title }}</h5>
+                        </a>
+                        {%- if childlink.links != blank -%}
+                          <div class="grandchild-mega__list">
+                            {%- for grandchild in childlink.links -%}
+                            <div class="grandchild-mega__item">
+                              <a class="menu-item__link" href="{{ grandchild.url }}" title="{{ grandchild.title }}">{{ grandchild.title }}</a>
                             </div>
-                          {%- endif -%}
-                        </div>
-                      {%- endfor -%}
-                    </div>
-                    
+                            {%- endfor -%}
+                          </div>
+                        {%- endif -%}
+                      </div>
+                    {%- endfor -%}
                   </div>
-                  <div class="mega-container__block mega-menu__images"></div>
+                  
                 </div>
+                <div class="mega-container__block mega-menu__images"></div>
               </div>
             </div>
-          {%- endif -%}
+          </div>
         </li>
       {%- endif -%}
     {%- endfor -%}
