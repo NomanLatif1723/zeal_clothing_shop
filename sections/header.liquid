@@ -135,7 +135,7 @@
         </div>
         {% for block in section.blocks %}
           {% case block.type %}
-            {% when 'logo' or 'mega-menu' %}
+            {% when 'logo' %}
             <div class="header__block header__logo">
               {{ header_logo }}
             </div>
