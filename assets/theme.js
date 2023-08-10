@@ -50,7 +50,7 @@ let lastScrollY = window.scrollY;
 
 function updateStickyHeader() {
 
-  const isSticky = getSectionSettingValue(); 
+  const isSticky = header.getAttribute('data-sticky-header'); 
 
   const scrollY = window.scrollY;
   const isScrollingDown = scrollY > lastScrollY;
