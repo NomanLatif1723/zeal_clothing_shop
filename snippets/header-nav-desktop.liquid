@@ -54,13 +54,24 @@
                 <div class="mega-menu__dropdowns">
                   <ul class="menu__list child-mega__list">
                     {%- for childlink in link.links -%}
-                      <li class="menu__item child-mega__item">
+                      <li class="child-mega__item">
                         <a
                           href="{{ childlink.url }}"
                           title="{{ childlink.title }}"
-                          class="menu-item__link child-menu__item--link">{{ childlink.title }}
+                          class="menu-item__link child-mega__item--link">{{ childlink.title }}
                         </a>
-                        
+                        {%- if childlink.links != blank %}
+                          <ul class="menu__list grandchild-mega__list">
+                            {%- for grandchild in childlink.links -%}
+                              <li class="grandchild-menu__item">
+                                <a
+                                  href="{{ grandchild.url }}"
+                                  title="{{ grandchild.title }}"
+                                  class="menu-item__link grandchild-mega__item--link">{{ grandchild.title }}</a>
+                              </li>
+                            {%- endfor -%}
+                          </ul>
+                        {%- endif -%}
                       </li>
                     {%- endfor -%}
                   </ul>
