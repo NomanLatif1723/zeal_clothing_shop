@@ -54,21 +54,17 @@
 <header class="section__header" data-sticky-header="{{ sticky_header }}">
   <div class="page__width">
     <div class="header__wrapper" data-header-style="{{ header_styles }}">
-      {%- for block in section.blocks -%}
-
-            {%- capture header_logo -%}
-              <h1 class="site__logo">
-                <a href="{{ routes.root_url }}" title="{{ shop.name }}" aria-label="{{ shop.name }}">
-                  {% if header_logo != blank %}
-                    {{ header_logo | image_url: width: desktop_logo_width.width, height: desktop_logo_width.height | image_tag: class: "site__logo-image" }}
-                  {%- else -%}
-                    <span>{{ shop.name }}</span>
-                  {% endif %}
-                </a>
-              </h1>
-            {%- endcapture -%}
-
-      {%- endfor -%}
+      {%- capture header_logo -%}
+        <h1 class="site__logo">
+          <a href="{{ routes.root_url }}" title="{{ shop.name }}" aria-label="{{ shop.name }}">
+            {% if header_logo != blank %}
+              {{ header_logo | image_url: width: desktop_logo_width.width, height: desktop_logo_width.height | image_tag: class: "site__logo-image" }}
+            {%- else -%}
+              <span>{{ shop.name }}</span>
+            {% endif %}
+          </a>
+        </h1>
+      {%- endcapture -%}
       {%- if header_styles == 'center_left' -%}
         <div class="header__block navigation__hide">
           <button class="menu-item__link menu-toggle__btn{% unless show__icons %} icon__hide-desktop{% endunless %}">
