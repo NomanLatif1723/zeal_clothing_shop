@@ -1762,6 +1762,21 @@ input[type="radio"]:checked + label {
     cursor: pointer;
     display: inline-flex;
   }
+  /* mega menu css */
+  .mega-menu__container {
+    position: absolute;
+    z-index: 9;
+    background: white;
+    left: 0;
+    right: 0;
+    top: 68px;
+    visibility: hidden;
+    transition: visibility 0.2s ease;
+  }
+  
+  .mega-menu__item:hover .mega-menu__container {
+      visibility: visible;
+  }
   @media only screen and (max-width: 768px) {
     .desktop-menu__hide {
       display: none;
