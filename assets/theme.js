@@ -57,8 +57,11 @@ function updateStickyHeader() {
   lastScrollY = scrollY;
 
   if (isSticky && isScrollingDown && scrollY >= header.offsetTop) {
-    header.style.position = 'sticky';
-    header.style.top = '0';
+    header.style.position = 'fixed';
+    header.style.top = 0;
+    header.style.left = 0;
+    header.style.right = 0;
+    header.style.zIndex = 99;
   } else {
     header.style.position = 'static';
   }
