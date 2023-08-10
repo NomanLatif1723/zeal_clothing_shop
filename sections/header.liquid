@@ -5,13 +5,6 @@
   assign mobile_menu = linklists[section.settings.mobile_menu]
   assign header_styles = section.settings.header_styles
   assign cart_icon = settings.cart_icon
-
-  for block in section.blocks
-    assign header_logo = block.settings.header_logo
-    assign desktop_logo_width = block.settings.desktop_logo_width
-    assign mobile_logo_width = block.settings.mobile_logo_width
-    assign menu_item_label = block.settings.menu_item_label
-  endfor
 -%}
 {%- style -%}
   :root  {
@@ -58,6 +51,7 @@
           assign header_logo = block.settings.header_logo
           assign desktop_logo_width = block.settings.desktop_logo_width
           assign mobile_logo_width = block.settings.mobile_logo_width
+          assign menu_item_label = block.settings.menu_item_label
         -%}
         {%- case block.type -%}
           {%- when 'logo' -%}
@@ -89,7 +83,7 @@
               main_menu: main_menu,
               mobile_menu: mobile_menu,
               block: block,
-              menu_item_label: block.settings.menu_item_label
+              menu_item_label: menu_item_label
             -%}
           {%- endfor -%}
         </div>
@@ -127,7 +121,7 @@
                 main_menu: main_menu,
                 mobile_menu: mobile_menu,
                 block: block,
-                menu_item_label: block.settings.menu_item_label
+                menu_item_label: menu_item_label
               -%}
             {%- endfor -%}
           </div>
