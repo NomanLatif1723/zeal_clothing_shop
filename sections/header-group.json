@@ -32,7 +32,7 @@
         "desktop_menu": "main-menu",
         "mobile_menu": "featured",
         "header_styles": "drawer_center",
-        "sticky_header": false,
+        "sticky_header": true,
         "show_icons": true
       }
     }
