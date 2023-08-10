@@ -1,7 +1,7 @@
 <nav class="header__menu header-desktop__menu{% if mobile_menu != blank %} desktop-menu__hide{% endif %}">
   <ul class="menu__list main-menu__list">
     {%- for link in main_menu.links -%}
-      {%- if link.title != menu_item_label -%}
+      {%- if link.title != block.settings.menu_item_label -%}
         <li class="menu__item">
           <a
             href="{{ link.url }}"
@@ -41,7 +41,7 @@
             </ul>
           {% endif %}
         </li>
-        {%- elsif link.title == menu_item_label -%}
+        {%- elsif link.title == block.settings.menu_item_label -%}
         <li class="mega-menu__item">
           <a class="menu-item__link" href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}
           {%- if link.links != blank -%}
