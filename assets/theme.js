@@ -57,7 +57,6 @@ function initStickyHeader() {
         if (scrollY > lastScrollY) {
           if (!isSticky) {
             header.classList.add('sticky__header');
-            
             isSticky = true;
           }
         } else {
@@ -68,8 +67,6 @@ function initStickyHeader() {
         }
         lastScrollY = scrollY;
       }
-      
-      // Update the sticky header on scroll
       window.addEventListener('scroll', updateStickyHeader);
     }
   } 
