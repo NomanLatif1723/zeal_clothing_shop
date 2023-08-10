@@ -1,9 +1,5 @@
 {%- liquid
-    assign textDirection = 'ltr'
-    case request.locale.iso_code
-    when 'ar' or 'arc' or 'dv' or 'fa' or 'ha' or 'he' or 'kwh' or 'ks' or 'ku' or 'ps' or 'ur' or 'yi'
-    assign textDirection = 'rtl'
-    endcase
+    assign textDirection = settings.text_direction
 -%}
 <!doctype html>
 <html lang="{{ request.locale.iso_code }}" dir="{{ textDirection }}">
