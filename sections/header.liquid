@@ -12,6 +12,7 @@
     
   for block in section.blocks
     assign menu_item_label = block.settings.menu_item_label
+    assign mega_menu = linklists[block.settings.desktop_menu]
   endfor
 
 -%}
