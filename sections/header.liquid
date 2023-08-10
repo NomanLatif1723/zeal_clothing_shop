@@ -12,7 +12,6 @@
     
   for block in section.blocks
     assign menu_item_label = block.settings.menu_item_label
-    assign mega_menu = linklists[block.settings.desktop_menu]
   endfor
 
 -%}
@@ -139,7 +138,6 @@
             main_menu: main_menu,
             mobile_menu: mobile_menu,
             menu_item_label: menu_item_label,
-            mega_menu: linklists[block.settings.desktop_menu]
           -%}
         </div>
       {%- endif -%}
