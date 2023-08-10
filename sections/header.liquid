@@ -56,7 +56,7 @@
     <div class="header__wrapper" data-header-style="{{ header_styles }}">
       {%- for block in section.blocks -%}
 
-            {%- capture header_logo -%}
+            {%- capture logo -%}
               <h1 class="site__logo">
                 <a href="{{ routes.root_url }}" title="{{ shop.name }}" aria-label="{{ shop.name }}">
                   {% if header_logo %}
