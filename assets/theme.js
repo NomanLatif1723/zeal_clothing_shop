@@ -54,8 +54,12 @@ function updateStickyHeader() {
 
   if (scrollY > lastScrollY) {
     if (!isSticky) {
-      header.style.position = 'sticky';
+      header.style.position = 'fixed';
       header.style.top = '0';
+      header.style.left = '0';
+      header.style.right = '0';
+      header.style.zIndex = 99;
+      
       isSticky = true;
     }
   } else {
