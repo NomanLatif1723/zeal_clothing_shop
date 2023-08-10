@@ -62,6 +62,8 @@
                     <div class="mega-container__block mega-menu__dropdowns">
                       <div class="mega-menu__list">
                         {%- for link in linklists[block.settings.mega_menu].links -%}
+                          {% if link.links == blank %}
+                          {% endif %}
                           <div class="mega-menu__item">
                             <a class="menu-item__link" href="{{ link.url }}" title="{{ link.title }}">
                               <h5>{{ link.title }}</h5>
