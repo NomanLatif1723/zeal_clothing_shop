@@ -6,7 +6,6 @@
         for block in section.blocks
          if block.type == 'mega-menu' and link.title == block.settings.menu_item_label
            assign is_megamenu = true
-           assign menu_associations[link.title] = block.settings.mega_menu
            break
          endif
         endfor
@@ -73,6 +72,10 @@
                    assign promo_2_subheading = block.settings.promo_image_2_subheading
                    assign promo_2_heading = block.settings.promo_image_2_heading
                    assign promo_2_text = block.settings.promo_image_2_text
+                   if block.type == 'mega-menu' and link.title == block.settings.menu_item_label
+                     assign menu_associations[link.title] = block.settings.mega_menu
+                     break
+                   endif
                    assign associated_menu = menu_associations[link.title]
                 -%}
                 <div class="mega-menu__container">
