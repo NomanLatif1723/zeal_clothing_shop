@@ -74,7 +74,6 @@
                    assign promo_2_text = block.settings.promo_image_2_text
                    
                 -%}
-                {% if associated_menu %}
                 <div class="mega-menu__container" {{ block.shopify_attributes }}>
                   <div class="page__width">
                     <div class="mega-container__flex">
@@ -151,7 +150,6 @@
                     </div>
                   </div>
                 </div>
-          {% endif %}
               {%- endif -%}
             {%- endfor -%}
           {%- endif -%}
