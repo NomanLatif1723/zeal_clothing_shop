@@ -408,6 +408,55 @@
               "label": "Mega Menu",
               "info": "Should be Two Level Menu"
             },
+            "header_alignment": {
+              "label": "Position and Alignment"
+            },
+            "content_position": {
+              "label": "Content Position",
+              "options": {
+                "top_left": {
+                  "label": "Top Left"
+                },
+                "top_center": {
+                  "label": "Top Center"
+                },
+                "top_right": {
+                  "label": "Top Right"
+                },
+                "center_left": {
+                  "label": "Center Left"
+                },
+                "center": {
+                  "label": "Center"
+                },
+                "center_right": {
+                  "label": "Center Right"
+                },
+                "bottom_left": {
+                  "label": "Bottom Left"
+                },
+                "bottom_center": {
+                  "label": "Bottom Center"
+                },
+                "bottom_right": {
+                  "label": "Bottom Right"
+                }
+              }
+            },
+            "alignment": {
+              "label": "Text alignment",
+              "options": {
+                "left": {
+                  "label": "Left"
+                },
+                "center": {
+                  "label": "Center"
+                },
+                "right": {
+                  "label": "Right"
+                }
+              }
+            },
             "header_image_1": {
               "label": "Image 1",
               "promo_image": {
