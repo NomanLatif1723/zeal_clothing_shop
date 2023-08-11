@@ -56,7 +56,7 @@
           </a>
           {%- if is_megamenu -%}
             {%- for block in section.blocks -%}
-              {%- if block.type == 'mega-menu' -%}
+
                 {%- liquid
                    assign content_position = block.settings.content_position
                    assign text_alignment = block.settings.text_alignment
@@ -145,7 +145,7 @@
                     </div>
                   </div>
                 </div>
-              {%- endif -%}
+
             {%- endfor -%}
           {%- endif -%}
         </li>
