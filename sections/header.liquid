@@ -57,15 +57,19 @@
   <div class="page__width">
     <div class="header__wrapper" data-header-style="{{ header_styles }}">
       {%- capture header_logo -%}
-        <h1 class="site__logo">
-          <a href="{{ routes.root_url }}" title="{{ shop.name }}" aria-label="{{ shop.name }}">
-            {% if logo != blank %}
-              {{ logo | image_url: width: logo.width, height: logo.height | image_tag: class: "site__logo-image" }}
-            {%- else -%}
-              <span>{{ shop.name }}</span>
-            {% endif %}
-          </a>
-        </h1>
+        {% for block in section.blocks %}
+          {% if block.type == 'logo' %}
+            <h1 class="site__logo">
+              <a href="{{ routes.root_url }}" title="{{ shop.name }}" aria-label="{{ shop.name }}">
+                {% if logo != blank %}
+                  {{ logo | image_url: width: logo.width, height: logo.height | image_tag: class: "site__logo-image" }}
+                {%- else -%}
+                  <span>{{ shop.name }}</span>
+                {% endif %}
+              </a>
+            </h1>
+          {% endif %}
+        {% endfor %}
       {%- endcapture -%}
       {%- if header_styles == 'center_left' -%}
         <div class="header__block navigation__hide">
