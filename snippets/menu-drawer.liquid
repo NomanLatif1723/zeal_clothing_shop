@@ -18,7 +18,9 @@
     </div>
     <div class="nav-main__contents">
       {%- render 'header-nav-desktop' -%}
-      {%- render 'header-nav-mobile' -%}
+      {%- render 'header-nav-mobile'
+         mobile_menu: mobile_menu
+      -%}
     </div>
     <div class="nav-drawer__footer">
       <div class="nav-drawer-socials">
