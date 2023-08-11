@@ -5,11 +5,6 @@
   assign mobile_menu = linklists[section.settings.mobile_menu]
   assign header_styles = section.settings.header_styles
   assign cart_icon = settings.cart_icon
-  
-  for block in section.blocks
-    assign menu_item_label = block.settings.menu_item_label
-  endfor
-
 -%}
 {%- style -%}
   :root  {
@@ -33,6 +28,9 @@
     {%- endif -%}
   }
 {%- endstyle -%}
+{%- render 'menu-drawer',
+   mobile_menu: mobile_menu
+-%}
 <header class="section__header" data-sticky-header="{{ sticky_header }}">
   <div class="page__width">
     <div class="header__wrapper" data-header-style="{{ header_styles }}">
@@ -85,9 +83,7 @@
         </div>
         <div class="header__block header__navigation">
           {%- render 'header-nav-desktop',
-            main_menu: main_menu,
-            mobile_menu: mobile_menu,
-            menu_item_label: menu_item_label
+            main_menu: main_menu
           -%}
         </div>
         <div class="header__block header__logo">
@@ -120,9 +116,7 @@
           </div>
           <div class="header__block header__navigation">
             {%- render 'header-nav-desktop', 
-              main_menu: main_menu,
-              mobile_menu: mobile_menu,
-              menu_item_label: menu_item_label
+              main_menu: main_menu
             -%}
           </div>
         </div>
@@ -141,9 +135,7 @@
         </div>
         <div class="header__block header__navigation{% if header_styles == 'left_center' %} header-nav__center{% endif %}">
           {%- render 'header-nav-desktop', 
-            main_menu: main_menu,
-            mobile_menu: mobile_menu,
-            menu_item_label: menu_item_label,
+            main_menu: main_menu
           -%}
         </div>
       {%- endif -%}
