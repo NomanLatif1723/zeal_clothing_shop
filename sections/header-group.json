@@ -26,6 +26,7 @@
         },
         "bc195cfe-334e-47c2-a2ec-a30f82c55a07": {
           "type": "mega-menu",
+          "disabled": true,
           "settings": {
             "menu_item_label": "Shop",
             "mega_menu": "shop",
