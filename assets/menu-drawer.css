@@ -14,7 +14,9 @@
     visibility: hidden;
     cursor: pointer;
 }
-
+.overlay__visible{
+    visibility: visible;
+}
 .nav-content__wrapper {
     position: fixed;
     z-index: 99;
