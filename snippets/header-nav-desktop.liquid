@@ -81,7 +81,7 @@
                 {% if associated_menu %}
                       <div class="mega-container__block mega-menu__dropdowns">         
                         <div class="mega-menu__list">
-                          {%- for link in linklists[block.settings.mega_menu].links -%}
+                          {%- for link in linklists[block.settings.associated_menu].links -%}
                             <div class="mega-menu__item">
                               <a class="mega-item__link" href="{{ link.url }}" title="{{ link.title }}">
                                 <h4>{{ link.title }}</h4>
