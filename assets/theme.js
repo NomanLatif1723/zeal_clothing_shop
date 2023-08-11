@@ -73,6 +73,9 @@ function initStickyHeader() {
 }
 initStickyHeader();
 
+function initHeaderNavigation() {
+  
+}
 // Slideshow
 function initSlideshowSwipers() {
   // find all the slideshow wrappers on the page
