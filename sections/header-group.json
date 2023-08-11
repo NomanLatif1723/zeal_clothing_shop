@@ -24,21 +24,6 @@
             "mobile_logo_width": 70
           }
         },
-        "d8a51b9d-c932-4a59-89ae-3a0355b31750": {
-          "type": "mega-menu",
-          "settings": {
-            "menu_item_label": "Shop",
-            "mega_menu": "shop",
-            "content_position": "center-left",
-            "text_alignment": "left",
-            "promo_image_1_subheading": "Subheading",
-            "promo_image_1_heading": "",
-            "promo_image_1_text": "Text",
-            "promo_image_2_subheading": "Subheading",
-            "promo_image_2_heading": "",
-            "promo_image_2_text": "Text"
-          }
-        },
         "bc195cfe-334e-47c2-a2ec-a30f82c55a07": {
           "type": "mega-menu",
           "settings": {
@@ -57,7 +42,6 @@
       },
       "block_order": [
         "f21e70de-38ae-44a4-b206-4098c08d7a0e",
-        "d8a51b9d-c932-4a59-89ae-3a0355b31750",
         "bc195cfe-334e-47c2-a2ec-a30f82c55a07"
       ],
       "settings": {
