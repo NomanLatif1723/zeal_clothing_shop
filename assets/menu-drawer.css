@@ -34,3 +34,40 @@
 .drawer-open__left {
   left: 0;
 }
+
+.nav-drawer__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 25px;
+    border-bottom: 1px solid rgba(1,1,1,0.1);
+}
+
+.nav-drawer__close {
+    display: inline-flex;
+    cursor: pointer;
+}
+
+.nav-main__contents {
+    height: 100%;
+    overflow: auto;
+    padding: 15px 25px;
+}
+
+.drawer-menu__item {
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(1,1,1,0.1);
+}
+
+.drawer-menu__container {
+    display: none;
+}
+
+.drawer-child__list {
+    display: none;
+}
+
+.drawer-item__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
