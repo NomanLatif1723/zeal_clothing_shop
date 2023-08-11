@@ -42,11 +42,10 @@
     border-bottom: 1px solid rgba(1,1,1,0.1);
 }
 
-.nav-drawer__close {
-    display: inline-flex;
+.nav-icon__close {
+  display: inline-flex;
     cursor: pointer;
 }
-
 .nav-main__contents {
     height: 100%;
     overflow: auto;
