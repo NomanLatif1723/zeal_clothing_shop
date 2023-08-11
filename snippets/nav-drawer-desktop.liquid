@@ -22,7 +22,7 @@
       -%}
       {%- if is_megamenu == false -%}
         <li class="drawer-menu__item">
-          <a {% if link.links != blank %}href=""{% else %} href="{{ link.url }}"{% endif %} title="{{ link.title }}" class="menu-item__link">
+          <a {% if link.links != blank %}href=""{% else %} href="{{ link.url }}"{% endif %} title="{{ link.title }}" class="drawer-item__link">
             {{ link.title }}
             {%- if link.links != blank -%}
               {%- render 'icon-arrow-down' -%}
