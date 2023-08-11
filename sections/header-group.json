@@ -43,7 +43,6 @@
         },
         "3e3455d9-b3f0-4de2-8d3a-641329ba580b": {
           "type": "mega-menu",
-          "disabled": true,
           "settings": {
             "menu_item_label": "Blog",
             "mega_menu": "support",
