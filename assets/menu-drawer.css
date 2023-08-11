@@ -1,5 +1,6 @@
 .nav-drawer {
     position: relative;
+    z-index: 999;
 }
 
 .drawer__overlay-container {
