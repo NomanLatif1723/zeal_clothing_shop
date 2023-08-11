@@ -405,7 +405,8 @@
               "info": "Enter Menu Title to Apply Mega Menu"
             },
             "mega_menu": {
-              "label": "Mega Menu"
+              "label": "Mega Menu",
+              "info": "Should be Two Level Menu"
             },
             "header_image_1": {
               "label": "Image 1",
