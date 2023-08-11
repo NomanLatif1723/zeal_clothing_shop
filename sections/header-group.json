@@ -29,8 +29,8 @@
           "settings": {
             "menu_item_label": "Shop",
             "mega_menu": "shop",
-            "content_position": "center-left",
-            "text_alignment": "left",
+            "content_position": "center",
+            "text_alignment": "center",
             "promo_image_1_subheading": "Subheading",
             "promo_image_1_heading": "Heading",
             "promo_image_1_text": "Text",
