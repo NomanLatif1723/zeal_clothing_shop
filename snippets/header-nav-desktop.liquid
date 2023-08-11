@@ -71,13 +71,14 @@
                    assign promo_2_subheading = block.settings.promo_image_2_subheading
                    assign promo_2_heading = block.settings.promo_image_2_heading
                    assign promo_2_text = block.settings.promo_image_2_text
+                   assign associated_menu = block.settings.mega_menu
                 -%}
                 <div class="mega-menu__container">
                   <div class="page__width">
                     <div class="mega-container__flex">
                       <div class="mega-container__block mega-menu__dropdowns">         
                         <div class="mega-menu__list">
-                          {%- for link in linklists[block.settings.mega_menu].links -%}
+                          {%- for link in associated_menu.links -%}
                             <div class="mega-menu__item">
                               <a class="mega-item__link" href="{{ link.url }}" title="{{ link.title }}">
                                 <h4>{{ link.title }}</h4>
