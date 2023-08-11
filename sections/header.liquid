@@ -57,6 +57,7 @@
   <div class="page__width">
     <div class="header__wrapper" data-header-style="{{ header_styles }}">
       {% for block in section.blocks %}
+        {% assign logo = block.settings.header_logo %}
         {% if block.type == 'logo' %}
         {%- capture header_logo -%}
             <h1 class="site__logo">
