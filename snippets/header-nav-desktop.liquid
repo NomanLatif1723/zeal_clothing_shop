@@ -69,7 +69,7 @@
           </a>
           {%- if is_megamenu -%}
             {%- for block in section.blocks -%}
-              {%- if block.type == 'mega-menu' -%}
+
                 <div class="mega-menu__container" {{ block.shopify_attributes }}>
                   <div class="page__width">
                     <div class="mega-container__flex">
@@ -146,7 +146,7 @@
                     </div>
                   </div>
                 </div>
-              {%- endif -%}
+
             {%- endfor -%}
           {%- endif -%}
         </li>
