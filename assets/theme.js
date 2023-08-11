@@ -77,9 +77,11 @@ initStickyHeader();
 function initHeaderNavigation() {
   let menuDrawerBtn = document.querySelector('.menu-toggle__btn');
   let menuDrawer = document.querySelector('.nav-drawer');
+  let overlayShadow = document.querySelector('.drawer__overlay-container');
   if (menuDrawerBtn) {
     menuDrawerBtn.addEventListener('click', () => {
       menuDrawer.classList.add('drawer-open__left');
+      overlayShadow.classList.add('overlay__visible');
     })
   }
 }
