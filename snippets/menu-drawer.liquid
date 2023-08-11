@@ -19,7 +19,9 @@
       </div>
     </div>
     <div class="nav-main__contents">
-      {%- render 'header-nav-desktop' -%}
+      {%- render 'header-nav-desktop',
+         main_menu: main_menu
+      -%}
       {%- render 'header-nav-mobile'
          mobile_menu: mobile_menu
       -%}
