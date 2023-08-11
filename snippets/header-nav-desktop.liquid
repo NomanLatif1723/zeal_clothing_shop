@@ -23,7 +23,11 @@
       {%- if is_megamenu == false -%}
         <li class="menu__item">
           <a
-            href="{% if link.links != blank %}{% else %}{{ link.url }}{% endif %}"
+        {% if link.links != blank %}
+            href=""
+          {% else %}
+          href="{{ link.url }}"
+          {% endif %}
             title="{{ link.title }}"
             class="menu-item__link">
             {{ link.title }}
