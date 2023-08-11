@@ -75,14 +75,28 @@ initStickyHeader();
 
 // Header Toggle button
 function initHeaderNavigation() {
-  let menuDrawerBtn = document.querySelector('.menu-toggle__btn');
+  let openMenuDrawerBtn = document.querySelector('.menu-toggle__btn');
   let menuDrawer = document.querySelector('.nav-drawer');
   let overlayShadow = document.querySelector('.drawer__overlay-container');
-  if (menuDrawerBtn) {
-    menuDrawerBtn.addEventListener('click', () => {
+  let closeMenuDrawerBtn = document.querySelector('.nav-icon__close');
+  if (openMenuDrawerBtn) {
+    openMenuDrawerBtn.addEventListener('click', () => {
+      openMenuDrawer();
+    })
+    overlayShadow.addEventListener('click', () => {
+      closeMenuDrawer();
+    })
+    closeMenuDrawerBtn.addEventListener('click', () => {
+      closeMenuDrawer();
+    })
+    function openMenuDrawer() {
       menuDrawer.classList.add('drawer-open__left');
       overlayShadow.classList.add('overlay__visible');
-    })
+    }
+    function closeMenuDrawer() {
+      menuDrawer.classList.remove('drawer-open__left');
+      overlayShadow.classList.remove('overlay__visible');
+    }
   }
 }
 initHeaderNavigation();
