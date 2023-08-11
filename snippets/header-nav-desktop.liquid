@@ -3,9 +3,10 @@
     {%- for link in main_menu.links -%}
       {%- liquid
         assign is_megamenu = false
-        for block in link.blocks
-         if block.title == menu_item_label
+        for block in section.blocks
+         if block.type == 'mega-menu' and link.title == block.settings.menu_item_label
            assign is_megamenu = true
+            break
          endif
         endfor
        
