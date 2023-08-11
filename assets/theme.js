@@ -73,9 +73,17 @@ function initStickyHeader() {
 }
 initStickyHeader();
 
+// Header Toggle button
 function initHeaderNavigation() {
-  
+  let menuDrawerBtn = document.querySelector('.menu-toggle__btn');
+  let menuDrawer = document.querySelector('.nav-drawer');
+  if (menuDrawerBtn) {
+    menuDrawerBtn.addEventListener('click', () => {
+      menuDrawer.classList.add('drawer-open__left');
+    })
+  }
 }
+initHeaderNavigation();
 // Slideshow
 function initSlideshowSwipers() {
   // find all the slideshow wrappers on the page
