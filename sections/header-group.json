@@ -31,9 +31,11 @@
             "mega_menu": "shop",
             "content_position": "center",
             "text_alignment": "center",
+            "promo_image_1": "shopify:\/\/shop_images\/kevin-laminto-8SRK6CxLljE-unsplash_1.jpg",
             "promo_image_1_subheading": "Subheading",
             "promo_image_1_heading": "Heading",
             "promo_image_1_text": "Text",
+            "promo_image_2": "shopify:\/\/shop_images\/samanta-sokolova-ttbn8qAGCas-unsplash_1.jpg",
             "promo_image_2_subheading": "Subheading",
             "promo_image_2_heading": "Heading",
             "promo_image_2_text": "Text"
