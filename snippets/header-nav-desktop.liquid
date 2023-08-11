@@ -92,7 +92,11 @@
                     <div class="mega-container__block mega-menu__images">
                       <div class="mega-image__block">
                         <div class="mega-image__element">
-                          {{ promo_image_1 | image_url: width: promo_image_1.width, height: promo_image_1.height | image_tag: sizes: '100vw', widths: '240,600,768,1024,2048',class: 'mega-promo__image' }}
+                          {%- if promo_image_1 != blank -%}
+                            {{ promo_image_1 | image_url: width: promo_image_1.width, height: promo_image_1.height | image_tag: sizes: '100vw', widths: '240,600,768,1024,2048',class: 'mega-promo__image' }}
+                          {%- else -%}
+                            {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder__image' }}
+                          {%- endif -%}
                         </div>
                         <div class="mega-image__content">
                           <div class="mega-content__overlay">
@@ -112,7 +116,11 @@
                       </div>
                       <div class="mega-image__block">
                         <div class="mega-image__element">
+                          {%- if promo_image_2 != blank -%}
                           {{ promo_image_2 | image_url: width: promo_image_2.width, height: promo_image_2.height | image_tag: sizes: '100vw', widths: '240,600,768,1024,2048',class: 'mega-promo__image' }}
+                          {%- else -%}
+                            {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder__image' }}
+                          {%- endif -%}
                         </div>
                         <div class="mega-image__content">
                           <div class="mega-content__overlay">
