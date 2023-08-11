@@ -57,6 +57,8 @@
           {%- if is_megamenu -%}
             {%- for block in section.blocks -%}
               {%- liquid
+                 assign content_position = block.settings.content_position
+                 assign text_alignment = block.settings.text_alignment
                  assign promo_image_1 = block.settings.promo_image_1
                  assign promo_1_subheading = block.settings.promo_image_1_subheading
                  assign promo_1_heading = block.settings.promo_image_1_heading
@@ -99,8 +101,8 @@
                           {%- endif -%}
                         </div>
                         <div class="mega-image__content">
-                          <div class="mega-content__overlay">
-                            <div class="mega-content__wrapper">
+                          <div class="mega-content__overlay text__position-{{ content_position }}">
+                            <div class="mega-content__wrapper text__align-{{ text_alignment }}">
                               {%- if promo_1_subheading != blank -%}
                                 <div class="mega-overlay__subheading">{{ promo_1_subheading }}</div>
                               {%- endif -%}
@@ -123,8 +125,8 @@
                           {%- endif -%}
                         </div>
                         <div class="mega-image__content">
-                          <div class="mega-content__overlay">
-                            <div class="mega-content__wrapper">
+                          <div class="mega-content__overlay text__position-{{ content_position }}">
+                            <div class="mega-content__wrapper text__align-{{ text_alignment }}">
                               {%- if promo_2_subheading != blank -%}
                                 <div class="mega-overlay__subheading">{{ promo_2_subheading }}</div>
                               {%- endif -%}
