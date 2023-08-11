@@ -1,3 +1,4 @@
+{{ 'menu-drawer.css' | asset_url | stylesheet_tag }}
 {%- liquid
   assign menu_drawer_position = 'left'
   assign textDirection = settings.text_direction
@@ -5,6 +6,7 @@
     assign menu_drawer_position = 'right'
   endif
 -%}
+
 <div class="nav-drawer menu_drawer__{{ menu_drawer_position }}">
   <div class="drawer__overlay-container"></div>
   <div class="nav-content__wrapper">
