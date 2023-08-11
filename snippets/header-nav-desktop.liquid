@@ -6,7 +6,17 @@
         for block in section.blocks
          if block.type == 'mega-menu' and link.title == block.settings.menu_item_label
            assign is_megamenu = true
-           assign associated_menu = block.settings.mega_menu
+           assign mega_menu = block.settings.mega_menu
+           assign content_position = block.settings.content_position
+           assign text_alignment = block.settings.text_alignment
+           assign promo_image_1 = block.settings.promo_image_1
+           assign promo_1_subheading = block.settings.promo_image_1_subheading
+           assign promo_1_heading = block.settings.promo_image_1_heading
+           assign promo_1_text = block.settings.promo_image_2_text
+           assign promo_image_2 = block.settings.promo_image_2
+           assign promo_2_subheading = block.settings.promo_image_2_subheading
+           assign promo_2_heading = block.settings.promo_image_2_heading
+           assign promo_2_text = block.settings.promo_image_2_text
          endif
         endfor
        
@@ -61,25 +71,12 @@
           {%- if is_megamenu -%}
             {%- for block in section.blocks -%}
               {%- if block.type == 'mega-menu' -%}
-                {%- liquid
-                   assign content_position = block.settings.content_position
-                   assign text_alignment = block.settings.text_alignment
-                   assign promo_image_1 = block.settings.promo_image_1
-                   assign promo_1_subheading = block.settings.promo_image_1_subheading
-                   assign promo_1_heading = block.settings.promo_image_1_heading
-                   assign promo_1_text = block.settings.promo_image_2_text
-                   assign promo_image_2 = block.settings.promo_image_2
-                   assign promo_2_subheading = block.settings.promo_image_2_subheading
-                   assign promo_2_heading = block.settings.promo_image_2_heading
-                   assign promo_2_text = block.settings.promo_image_2_text
-                   
-                -%}
                 <div class="mega-menu__container" {{ block.shopify_attributes }}>
                   <div class="page__width">
                     <div class="mega-container__flex">
                       <div class="mega-container__block mega-menu__dropdowns">         
                         <div class="mega-menu__list">
-                          {%- for link in associated_menu.links -%}
+                          {%- for link in mega_menu.links -%}
                             <div class="mega-menu__item">
                               <a class="mega-item__link" href="{{ link.url }}" title="{{ link.title }}">
                                 <h4>{{ link.title }}</h4>
