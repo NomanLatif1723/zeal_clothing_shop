@@ -44,8 +44,9 @@
 
 .nav-icon__close {
   display: inline-flex;
-    cursor: pointer;
+  cursor: pointer;
 }
+
 .nav-main__contents {
     height: 100%;
     overflow: auto;
