@@ -78,7 +78,8 @@
                 <div class="mega-menu__container">
                   <div class="page__width">
                     <div class="mega-container__flex">
-                      <div class="mega-container__block mega-menu__dropdowns">
+                {% if associated_menu %}
+                      <div class="mega-container__block mega-menu__dropdowns">         
                         <div class="mega-menu__list">
                           {%- for link in linklists[block.settings.mega_menu].links -%}
                             <div class="mega-menu__item">
@@ -98,6 +99,7 @@
                           {%- endfor -%}
                         </div>
                       </div>
+                {% endif %}
                       <div class="mega-container__block mega-menu__images">
                         <div class="mega-image__block">
                           <div class="mega-image__element">
