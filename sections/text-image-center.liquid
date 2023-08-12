@@ -6,6 +6,12 @@
     if lazyloadImages
     assign lazyloading = 'lazy'
     endif
+    for block in section.blocks
+      assign left_heading = block.settings.left_heading
+      assign left_text = block.settings.left_text 
+      assign right_heading = block.settings.right_heading
+      assign right_text = block.settings.right_text
+    endfor
 -%}
 {% style %}
   .main__section-{{ section.id }}{
@@ -19,6 +25,7 @@
     }
   }
 {% endstyle %}
+
 <div class="text-image-center__section main__section-{{ section.id }}">
   <div class="page__width">
     <div class="main__heading center-image__heading">
@@ -26,11 +33,7 @@
     </div>
     <div class="image-center__wrapper">
       <div class="image-center__item left-text__block">
-        {%- for block in section.blocks -%}
-          {%- liquid 
-              assign left_heading = block.settings.left_heading
-              assign left_text = block.settings.left_text 
-          -%}
+
           <div class="image-text__content" {{ block.shopify_attributes }}>
               {%- if left_heading != blank -%}
                 <div class="image-center__title">
@@ -43,7 +46,7 @@
                 </div>
               {%- endif -%}
           </div>
-        {%- endfor -%}
+
       </div>
       <div class="image-center__item center-image__block">
         {%- if image != blank -%}
@@ -53,11 +56,7 @@
         {%- endif -%}
       </div>
       <div class="image-center__item right-text__block">
-         {% for block in section.blocks %}
-          {%- liquid 
-              assign right_heading = block.settings.right_heading
-              assign right_text = block.settings.right_text 
-          -%}
+
            <div class="image-text__content" {{ block.shopify_attributes }}> 
             {%- if right_heading != blank -%}
               <div class="image-center__title">
@@ -70,7 +69,7 @@
               </div>
             {%- endif -%}
           </div>
-        {% endfor %}
+
       </div>
     </div>
   </div>
