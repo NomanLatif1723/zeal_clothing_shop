@@ -77,15 +77,11 @@ initStickyHeader();
 function initHeaderNavigation() {
   let openMenuDrawerBtn = document.querySelector('.menu-toggle__btn');
   let menuDrawer = document.querySelector('.nav-drawer');
-  let menuDrawerleft = document.querySelector('.menu_drawer__left');
-  
   let overlayShadow = document.querySelector('.drawer__overlay-container');
   let closeMenuDrawerBtn = document.querySelector('.nav-icon__close');
   if (openMenuDrawerBtn) {
     openMenuDrawerBtn.addEventListener('click', () => {
-      if (document.querySelector('.nav-drawer').classList.contains('menu_drawer__left')) {
-        openMenuDrawer();
-      }
+      openMenuDrawer();
     })
     overlayShadow.addEventListener('click', () => {
       closeMenuDrawer();
@@ -94,7 +90,12 @@ function initHeaderNavigation() {
       closeMenuDrawer();
     })
     function openMenuDrawer() {
-      menuDrawer.classList.add('drawer-open__left');
+      if (menuDrawer.classList.contains('menu_drawer__left')) {
+        menuDrawer.classList.add('drawer-open__left');
+      } else {
+        menuDrawer.classList.add('drawer-open__right');
+      }
+      
       overlayShadow.classList.add('overlay__visible');
     }
     function closeMenuDrawer() {
