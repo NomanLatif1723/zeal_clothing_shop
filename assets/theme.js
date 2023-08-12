@@ -80,7 +80,7 @@ function initHeaderNavigation() {
   let overlayShadow = document.querySelector('.drawer__overlay-container');
   let closeMenuDrawerBtn = document.querySelector('.nav-icon__close');
 
-  let menuItem = menuDrawer.querySelectorAll('.drawer-menu__item');
+  let menuItem = menuDrawer.querySelectorAll('.drawer-item__link');
   
   if (openMenuDrawerBtn) {
     openMenuDrawerBtn.addEventListener('click', () => {
@@ -108,14 +108,10 @@ function initHeaderNavigation() {
 
   // Drawer Item Click Function 
   menuItem.forEach(item => {
-    item.addEventListener('click', () => {
+    item.addEventListener('click', (event) => {
+      event.preventdefault();
       let hasDropdown = item.querySelector('.drawer__list');
       let linkTag = item.querySelector('.drawer-item__link');
-      if (hasDropdown) {
-        linkTag.addEventListener('click', (event) => {
-          event.preventDefault();
-        })
-      }
     })
   })
 }
