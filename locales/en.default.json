@@ -15,7 +15,8 @@
       "general": {
         "navigation": "Menu",
         "account": "Account",
-        "login": "Log In"
+        "login": "Log In",
+        "cart": "Cart"
       }
     },
     "search": {
