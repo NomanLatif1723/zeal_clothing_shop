@@ -40,7 +40,8 @@
       "sold_out": "Sold Out"
     },
     "onboarding": {
-      "product_title": "Example Product"
+      "product_title": "Example Product",
+      "product_price": "$30"
     }
   },
   "social-media": {
