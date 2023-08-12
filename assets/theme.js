@@ -79,6 +79,7 @@ function initHeaderNavigation() {
   let menuDrawer = document.querySelector('.nav-drawer');
   let overlayShadow = document.querySelector('.drawer__overlay-container');
   let closeMenuDrawerBtn = document.querySelector('.nav-icon__close');
+  let bodyContainer = document.querySelector('body');
 
   let menuItem = document.querySelectorAll('.menu-item__link');
   
@@ -99,10 +100,12 @@ function initHeaderNavigation() {
         menuDrawer.classList.add('drawer-open__right');
       }
       overlayShadow.classList.add('overlay__visible');
+      bodyContainer.classList.add('drawer__opening');
     }
     function closeMenuDrawer() {
       menuDrawer.classList.remove('drawer-open__left');
       overlayShadow.classList.remove('overlay__visible');
+      bodyContainer.classList.remove('drawer__opening');
     }
   }
 
