@@ -72,7 +72,9 @@
 .drawer-child__list {
     display: none;
 }
-
+.show__dropdown{
+  display: block;
+}
 .drawer-menu__item .menu-item__link {
     padding: 18px 0;
     justify-content: space-between;
