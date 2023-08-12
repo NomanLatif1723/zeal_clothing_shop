@@ -31,10 +31,18 @@
   transition: all 0.5s ease;
 }
 
+.menu_drawer__right {
+  right: -100%;
+  transition: all 0.5s ease;
+}
+
 .drawer-open__left {
   left: 0;
 }
 
+.drawer-open__right {
+  right: 0;
+}
 .nav-drawer__header {
     display: flex;
     justify-content: space-between;
