@@ -102,3 +102,12 @@
 .drawer-menu__images {
     padding: 30px 0;
 }
+
+.nav-drawer__footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: #111111;
+}
