@@ -25,25 +25,26 @@
       <h2>{{ main_heading }}</h2>
     </div>
     <div class="image-center__wrapper">
-      {% for block in section.blocks %}
-        {%- liquid 
-            assign left_heading = block.settings.left_heading
-            assign left_text = block.settings.left_text 
-        -%}
-        <div class="image-center__item left-text__block" {{ block.shopify_attributes }}>
-          {%- if left_heading != blank -%}
-            <div class="image-center__title">
-              <h4>{{ left_heading }}</h4>
+        <div class="image-center__item left-text__block">
+          {%- for block in section.blocks -%}
+            {%- liquid 
+                assign left_heading = block.settings.left_heading
+                assign left_text = block.settings.left_text 
+            -%}
+            <div class="left-text__content" {{ block.shopify_attributes }}>
+                {%- if left_heading != blank -%}
+                  <div class="image-center__title">
+                    <h4>{{ left_heading }}</h4>
+                  </div>
+                {%- endif -%}
+                {%- if left_text != blank -%}
+                  <div class="image-center__text rte">
+                    {{ left_text }}
+                  </div>
+                {%- endif -%}
             </div>
-          {%- endif -%}
-          {%- if left_text != blank -%}
-            <div class="image-center__text rte">
-              {{ left_text }}
-            </div>
-          {%- endif -%}
+          {%- endfor -%}
         </div>
-      {% endfor %}
-
       <div class="image-center__item center-image__block">
         {%- if image != blank -%}
           {{ image | image_url: width: image.width, height: image.height | image_tag: loading: lazyloading, class: "center-image__image", widths: '240,480,600,1024,2048', sizes: '(min-width: 1200px) 650px, 45vw' }}
