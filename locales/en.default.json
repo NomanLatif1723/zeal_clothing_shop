@@ -48,5 +48,13 @@
     "general": {
       "social_label": "Join Us On {{ social }}"
     }
+  },
+  "blogs": {
+    "article": {
+      "title": "Example Article Title",
+      "content": "Example Article Content",
+      "date": "25 Apr 2023",
+      "tag": "Fashion"
+    }
   }
 }
