@@ -85,15 +85,15 @@
                   </div>
                   <div class="grid__item-text">
                     <div class="article__type-date">
-                      <h4>Fashion</h4><span class="article__date">
-                        {%- if show_date -%}25 Apr 2023{%- endif -%}
+                      <h4>{{ 'blogs.article.tag' | t }}</h4><span class="article__date">
+                        {%- if show_date -%}{{ 'blogs.article.date' | t }}{%- endif -%}
                       </span>
                     </div>
                     <div class="main__heading article__title">
-                      <h3>Example Article Title</h3>
+                      <h3>{{ 'blogs.article.title' | t }}</h3>
                     </div>
                     <div class="article__content rte">
-                      Example Article Content
+                      {{ 'blogs.article.content' | t }}
                     </div>
                   </div>
                 </div>
@@ -107,8 +107,8 @@
           <div class="view__all-btn">
             <a
               class="btn btn__primary btn__link"
-              href=""
-              title="View All">View All</a>
+              href="#"
+              title="{{ 'blogs.article.view_all_text' | t }}">{{ 'blogs.article.view_all_text' | t }}</a>
           </div>
         </div>
       {%- endif -%}
