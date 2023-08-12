@@ -75,7 +75,6 @@
 
 .drawer-menu__item .menu-item__link {
     padding: 18px 0;
-    display: flex;
-    align-items: center;
     justify-content: space-between;
+    gap: initial;
 }
