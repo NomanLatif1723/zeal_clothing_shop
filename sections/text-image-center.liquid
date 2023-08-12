@@ -30,7 +30,29 @@
       <h2>{{ main_heading }}</h2>
     </div>
     <div class="image-center__wrapper">
-      <div class="image-center__item center-image__block">       
+      <div class="image-center__item left-text__block">
+        {%- for block in section.blocks -%}
+          {%- liquid 
+              assign left_heading = block.settings.left_heading
+              assign left_text = block.settings.left_text 
+          -%}
+          {%- if block.type == 'left-text' -%}
+            <div class="image-text__content" {{ block.shopify_attributes }}>
+                {%- if left_heading != blank -%}
+                  <div class="image-center__title">
+                    <h4>{{ left_heading }}</h4>
+                  </div>
+                {%- endif -%}
+                {%- if left_text != blank -%}
+                  <div class="image-center__text rte">
+                    {{ left_text }}
+                  </div>
+                {%- endif -%}
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+       <div class="image-center__item center-image__block">       
         {%- if image != blank -%}
           {% comment %}
             {{ image | image_url: width: image.width, height: image.height | image_tag: loading: lazyloading, class: "center-image__image", widths: '240,480,600,1024,2048', sizes: '100vw' }}
@@ -53,28 +75,6 @@
         {%- else -%}
           {{ 'image' | placeholder_svg_tag: "placeholder__image" }}
         {%- endif -%}
-      </div>
-      <div class="image-center__item left-text__block">
-        {%- for block in section.blocks -%}
-          {%- liquid 
-              assign left_heading = block.settings.left_heading
-              assign left_text = block.settings.left_text 
-          -%}
-          {%- if block.type == 'left-text' -%}
-            <div class="image-text__content" {{ block.shopify_attributes }}>
-                {%- if left_heading != blank -%}
-                  <div class="image-center__title">
-                    <h4>{{ left_heading }}</h4>
-                  </div>
-                {%- endif -%}
-                {%- if left_text != blank -%}
-                  <div class="image-center__text rte">
-                    {{ left_text }}
-                  </div>
-                {%- endif -%}
-            </div>
-          {%- endif -%}
-        {%- endfor -%}
       </div>
       <div class="image-center__item right-text__block">
          {% for block in section.blocks %}
