@@ -20,7 +20,7 @@
     "collection_image_size": "portrait",
     "show_language": false,
     "show_flags": false,
-    "text_direction": "rtl",
+    "text_direction": "ltr",
     "favicon": "shopify:\/\/shop_images\/Vector.svg",
     "image_size": "square",
     "show_quick_view": true,
