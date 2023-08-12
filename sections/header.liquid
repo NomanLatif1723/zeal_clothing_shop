@@ -163,13 +163,18 @@
             {%- endif -%}
           </a>
         {%- unless show_icons -%}
-            <a href="{{ routes.search_url }}" title="Search" aria-label="Search" class="icon icon__search icon__hide-mobile">Search</a>
+            <a href="{{ routes.search_url }}" title="{{ 'sections.search.title' | t }}" aria-label="{{ 'sections.search.title' | t }}" class="icon icon__search icon__hide-mobile">{{ 'sections.search.title' | t }}</a>
             {%- if shop.customer_accounts_enabled -%}
-                <a href="{{ routes.account_url }}" title="Accounts" aria-label="Accounts" class="icon icon__accounts icon__hide-mobile">Accounts</a>
+                <a href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}"
+                  class="icon icon__accounts icon__hide-mobile">
+                  {% if customer %}
+                    {{ 'sections.header.general.login' | t }}
+                  {% else %}
+                    {{ 'sections.header.general.account' | t }}
+                  {% endif %}
+                </a>
             {%- endif -%}
-            <a href="{{ routes.cart_url }}" aria-label="Cart" aria-controls="drawer" title="Cart" class="icon icon__cart icon__hide-mobile">
-              Cart
-            </a>
+            <a href="{{ routes.cart_url }}" aria-controls="drawer" class="icon icon__cart icon__hide-mobile">{{ 'sections.header.general.cart' | t }}</a>
         {%- endunless -%}
       </div>
     </div>
