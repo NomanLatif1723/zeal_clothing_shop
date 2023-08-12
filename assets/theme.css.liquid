@@ -2025,9 +2025,17 @@ input[type="radio"]:checked + label {
 }
 
 .center-image__block {
-    order: 2;
+    display: none;
 }
 
 .center-image__image {
     object-fit: cover;
+}
+@media only screen and (min-width: 1201px) {
+  .desktop__hide{
+    display: none;
+  }
+  .center-image__block {
+    display: block;
+  }
 }
