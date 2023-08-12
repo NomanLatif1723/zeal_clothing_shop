@@ -110,8 +110,7 @@ function initHeaderNavigation() {
   menuItem.forEach(item => {
     item.addEventListener('click', (event) => {
       event.preventdefault();
-      let hasDropdown = item.querySelector('.drawer__list');
-      let linkTag = item.querySelector('.drawer-item__link');
+      let hasDropdown = item.closest('.drawer-menu__item').querySelector('.drawer__list');
     })
   })
 }
