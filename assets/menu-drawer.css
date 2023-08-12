@@ -63,6 +63,8 @@
 
 .main-drawer__list > .drawer-menu__item {
     border-bottom: 1px solid rgba(1,1,1,0.1);
+    font-size: 16px;
+    font-weight: 700;
 }
 
 .drawer-menu__container {
@@ -79,10 +81,4 @@
     padding: 18px 0;
     justify-content: space-between;
     gap: initial;
-    font-size: 14px;
-    font-weight: 400;
-}
-.drawer-menu__item > .menu-item__link{
-  font-size: 16px;
-  font-weight: 700;
 }
