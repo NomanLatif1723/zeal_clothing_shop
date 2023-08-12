@@ -67,7 +67,7 @@
           {%- if is_megamenu -%}
             <div class="drawer__list drawer-menu__container" {{ block.shopify_attributes }}>
               <div class="drawer-container__flex">
-                <div class="drawer-container__block drawer-menu__dropdowns">         
+                <div class="drawer-menu__dropdowns">         
                   <div class="drawer-menu__list">
                     {%- for link in mega_menu.links -%}
                       <div class="drawer-menu__item">
@@ -90,7 +90,7 @@
                     {%- endfor -%}
                   </div>
                 </div>
-                <div class="drawer-container__block drawer-menu__images">
+                <div class="drawer-menu__images">
                   <div class="drawer-image__block">
                     <div class="mega-image__element">
                       {%- if promo_image_1 != blank -%}
