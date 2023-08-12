@@ -90,7 +90,7 @@ function initHeaderNavigation() {
       closeMenuDrawer();
     })
     function openMenuDrawer() {
-      if (menuDrawer.classList.contains('menu_drawer__left')) {
+      if (menuDrawer.classList.contains('menu-drawer__left')) {
         menuDrawer.classList.add('drawer-open__left');
       } else {
         menuDrawer.classList.add('drawer-open__right');
