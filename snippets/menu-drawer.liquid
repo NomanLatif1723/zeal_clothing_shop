@@ -26,6 +26,11 @@
       {%- render 'header-nav-mobile'
          mobile_menu: mobile_menu
       -%}
+      <div class="drawer-menu__item">
+        <a class="menu-item__link" href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}" title="Accounts">
+          Accounts
+        </a>
+      </div>
     </div>
     <div class="nav-drawer__footer">
       <div class="nav-drawer-socials">
