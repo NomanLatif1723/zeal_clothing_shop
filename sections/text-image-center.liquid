@@ -31,7 +31,7 @@
               assign left_heading = block.settings.left_heading
               assign left_text = block.settings.left_text 
           -%}
-          <div class="left-text__content" {{ block.shopify_attributes }}>
+          <div class="image-text__content" {{ block.shopify_attributes }}>
               {%- if left_heading != blank -%}
                 <div class="image-center__title">
                   <h4>{{ left_heading }}</h4>
@@ -58,7 +58,7 @@
               assign right_heading = block.settings.right_heading
               assign right_text = block.settings.right_text 
           -%}
-           <div class="right-text__content" {{ block.shopify_attributes }}> 
+           <div class="image-text__content" {{ block.shopify_attributes }}> 
             {%- if right_heading != blank -%}
               <div class="image-center__title">
                 <h4>{{ right_heading }}</h4>
