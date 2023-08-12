@@ -23,7 +23,7 @@
   top: 0;
   background: white;
   height: 100vh;
-  width: 450px;
+  width: calc(100% - 30px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -121,4 +121,9 @@
 }
 .nav-drawer-socials .icon {
     fill: #111111;
+}
+@media only screen and (min-width: 481px) {
+  .nav-content__wrapper {
+    width: 450px;
+  }
 }
