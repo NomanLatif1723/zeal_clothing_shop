@@ -1959,7 +1959,6 @@ input[type="radio"]:checked + label {
     display: flex;
     align-items: center;
     padding-top: 20px;
-    gap: 25px;
 }
 
 .center-image__heading {
@@ -2023,4 +2022,15 @@ input[type="radio"]:checked + label {
 
 .image-text__content:last-child {
     padding: 0;
+}
+
+.center-image__block {
+    max-height: 450px;
+    height: 100%;
+    overflow: hidden;
+    padding: 0 25px;
+}
+
+.center-image__block img {
+    object-fit: cover;
 }
