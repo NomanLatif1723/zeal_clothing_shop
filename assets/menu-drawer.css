@@ -61,7 +61,7 @@
     padding: 15px 25px;
 }
 
-.main-drawer__list .drawer-menu__item {
+.main-drawer__list > .drawer-menu__item {
     border-bottom: 1px solid rgba(1,1,1,0.1);
 }
 
