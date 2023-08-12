@@ -77,7 +77,7 @@
                         {%- endif -%}
                       </a>
                       {%- if link.links != blank -%}
-                        <div class="drawer-child__list">
+                        <div class="drawer__list drawer-child__list">
                           {%- for childlink in link.links -%}
                           <div class="drawer-mega__item">
                             <a class="menu-item__link" href="{{ childlink.url }}" title="{{ childlink.title }}">{{ childlink.title }}</a>
