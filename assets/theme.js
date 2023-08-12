@@ -77,11 +77,13 @@ initStickyHeader();
 function initHeaderNavigation() {
   let openMenuDrawerBtn = document.querySelector('.menu-toggle__btn');
   let menuDrawer = document.querySelector('.nav-drawer');
+  let menuDrawerleft = document.querySelector('.menu_drawer__left');
+  
   let overlayShadow = document.querySelector('.drawer__overlay-container');
   let closeMenuDrawerBtn = document.querySelector('.nav-icon__close');
   if (openMenuDrawerBtn) {
     openMenuDrawerBtn.addEventListener('click', () => {
-      if (menuDrawer.classList.contain('menu_drawer__left')) {
+      if (menuDrawerleft) {
         openMenuDrawer();
       }
     })
