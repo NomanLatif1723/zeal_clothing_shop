@@ -12,9 +12,14 @@
       "header_announcement": "Announcement Bar"
     },
     "header": {
-      "navigation": {
-        "title": "Menu"
+      "general": {
+        "navigation": "Menu",
+        "account": "Account",
+        "login": "Log In"
       }
+    },
+    "search": {
+      "title": "Search"
     }
   },
   "collections": {
