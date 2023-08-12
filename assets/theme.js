@@ -83,7 +83,7 @@ function initHeaderNavigation() {
   let closeMenuDrawerBtn = document.querySelector('.nav-icon__close');
   if (openMenuDrawerBtn) {
     openMenuDrawerBtn.addEventListener('click', () => {
-      if (document.querySelector('.nav-drawer').classList.contain('menu_drawer__left')) {
+      if (document.querySelector('.nav-drawer').classList.contains('menu_drawer__left')) {
         openMenuDrawer();
       }
     })
