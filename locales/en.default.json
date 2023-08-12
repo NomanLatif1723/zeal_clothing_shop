@@ -45,7 +45,7 @@
   },
   "social-media": {
     "general": {
-      "social_label": "Join Us on {{ social }}"
+      "social_label": "Join Us On {{ social }}"
     }
   }
 }
