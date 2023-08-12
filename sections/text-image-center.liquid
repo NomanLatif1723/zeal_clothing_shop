@@ -50,9 +50,9 @@
       </div>
       <div class="image-center__item center-image__block">
         {%- if image != blank -%}
-
-          {{ image | image_url: width: image.width, height: image.height | image_tag: loading: lazyloading, class: "center-image__image", widths: '240,480,600,1024,2048', sizes: '100vw' }}
-
+          {% comment %}
+            {{ image | image_url: width: image.width, height: image.height | image_tag: loading: lazyloading, class: "center-image__image", widths: '240,480,600,1024,2048', sizes: '100vw' }}
+          {% endcomment %}
         {%- else -%}
           {{ 'image' | placeholder_svg_tag: "placeholder__image" }}
         {%- endif -%}
