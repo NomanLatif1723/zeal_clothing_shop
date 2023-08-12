@@ -61,8 +61,8 @@
       {%- unless blog.empty? or blog.articles.size == 0 -%}
         <div class="grid blog__grid">
           {%- for article in blog.articles limit: posts_to_show -%}
-            {%- render 'article-item' 
-              , article: article,
+            {%- render 'article-item',
+              article: article,
               blog: blog,
               imageAspectRatio: imageAspectRatio,
               show_date: show_date,
