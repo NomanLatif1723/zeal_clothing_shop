@@ -1,7 +1,7 @@
 <nav class="header__menu header-mobile__menu">
   <ul class="menu__list main-menu__list">
     {%- for link in mobile_menu.links -%}
-      <li class="menu__item">
+      <li class="drawer-menu__item">
         <a
           href="{{ link.url }}"
           title="{{ link.title }}"
@@ -12,25 +12,25 @@
           {%- endif -%}
         </a>
         {%- if link.links != blank -%}
-          <ul class="menu__list child-menu__list">
+          <ul class="drawer__list drawer-child__list">
             {%- for childlink in link.links -%}
-              <li class="menu__item child-menu__item">
+              <li class="drawer-menu__item drawer-child__item">
                 <a
                   href="{{ childlink.url }}"
                   title="{{ childlink.title }}"
-                  class="menu-item__link child-menu__item--link">{{ childlink.title }}
+                  class="menu-item__link drawer-child__item--link">{{ childlink.title }}
                   {%- if childlink.links != blank -%}
                     {%- render 'icon-arrow-down' -%}
                   {%- endif -%}
                 </a>
                 {%- if childlink.links != blank -%}
-                  <ul class="menu__list grandchild-menu__list">
+                  <ul class="drawer__list drawer-grandchild__list">
                     {%- for grandchild in childlink.links -%}
-                      <li class="menu__item grandchild-menu__item">
+                      <li class="drawer-menu__item drawer-grandchild__item">
                         <a
                           href="{{ grandchild.url }}"
                           title="{{ grandchild.title }}"
-                          class="menu-item__link grandchild-menu__item--link">{{ grandchild.title }}</a>
+                          class="menu-item__link drawer-grandchild__item--link">{{ grandchild.title }}</a>
                       </li>
                     {%- endfor -%}
                   </ul>
