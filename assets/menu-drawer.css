@@ -72,6 +72,7 @@
 }
 
 .drawer-child__list {
+    margin-top: -10px;
     display: none;
 }
 .show__dropdown{
@@ -81,4 +82,15 @@
     padding: 18px 0;
     justify-content: space-between;
     gap: initial;
+}
+
+.drawer-child__list >li {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.drawer-child__list .menu-item__link {
+    padding: 10px 15px;
+    text-transform: capitalize;
+    letter-spacing: 0.7px;
 }
