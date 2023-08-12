@@ -163,6 +163,51 @@
         "margin_bottom": 60
       }
     },
+    "ec23ba6e-97c1-4933-a005-5a626fabddf8": {
+      "type": "text-image-center",
+      "blocks": {
+        "template--19980215124290__ec23ba6e-97c1-4933-a005-5a626fabddf8-left-text-1": {
+          "type": "left-text",
+          "settings": {
+            "left_heading": "Text Image Center",
+            "left_text": "Welcome To Our Store"
+          }
+        },
+        "template--19980215124290__ec23ba6e-97c1-4933-a005-5a626fabddf8-right-text-1": {
+          "type": "right-text",
+          "settings": {
+            "right_heading": "Text Image Center",
+            "right_text": "Welcome To Our Store"
+          }
+        },
+        "template--19980215124290__ec23ba6e-97c1-4933-a005-5a626fabddf8-left-text-2": {
+          "type": "left-text",
+          "settings": {
+            "left_heading": "Text Image Center",
+            "left_text": "Welcome To Our Store"
+          }
+        },
+        "template--19980215124290__ec23ba6e-97c1-4933-a005-5a626fabddf8-right-text-2": {
+          "type": "right-text",
+          "settings": {
+            "right_heading": "Text Image Center",
+            "right_text": "Welcome To Our Store"
+          }
+        }
+      },
+      "block_order": [
+        "template--19980215124290__ec23ba6e-97c1-4933-a005-5a626fabddf8-left-text-1",
+        "template--19980215124290__ec23ba6e-97c1-4933-a005-5a626fabddf8-right-text-1",
+        "template--19980215124290__ec23ba6e-97c1-4933-a005-5a626fabddf8-left-text-2",
+        "template--19980215124290__ec23ba6e-97c1-4933-a005-5a626fabddf8-right-text-2"
+      ],
+      "settings": {
+        "main_heading": "Text Image Center",
+        "lazyload_images": false,
+        "margin_top": 16,
+        "margin_bottom": 16
+      }
+    },
     "b2c49c1e-4880-4b9e-90e7-0135ddd0a9b9": {
       "type": "richtext",
       "blocks": {
@@ -585,57 +630,13 @@
         "margin_top": 16,
         "margin_bottom": 16
       }
-    },
-    "ec23ba6e-97c1-4933-a005-5a626fabddf8": {
-      "type": "text-image-center",
-      "blocks": {
-        "template--19980215124290__ec23ba6e-97c1-4933-a005-5a626fabddf8-left-text-1": {
-          "type": "left-text",
-          "settings": {
-            "left_heading": "Text Image Center",
-            "left_text": "Welcome To Our Store"
-          }
-        },
-        "template--19980215124290__ec23ba6e-97c1-4933-a005-5a626fabddf8-right-text-1": {
-          "type": "right-text",
-          "settings": {
-            "right_heading": "Text Image Center",
-            "right_text": "Welcome To Our Store"
-          }
-        },
-        "template--19980215124290__ec23ba6e-97c1-4933-a005-5a626fabddf8-left-text-2": {
-          "type": "left-text",
-          "settings": {
-            "left_heading": "Text Image Center",
-            "left_text": "Welcome To Our Store"
-          }
-        },
-        "template--19980215124290__ec23ba6e-97c1-4933-a005-5a626fabddf8-right-text-2": {
-          "type": "right-text",
-          "settings": {
-            "right_heading": "Text Image Center",
-            "right_text": "Welcome To Our Store"
-          }
-        }
-      },
-      "block_order": [
-        "template--19980215124290__ec23ba6e-97c1-4933-a005-5a626fabddf8-left-text-1",
-        "template--19980215124290__ec23ba6e-97c1-4933-a005-5a626fabddf8-right-text-1",
-        "template--19980215124290__ec23ba6e-97c1-4933-a005-5a626fabddf8-left-text-2",
-        "template--19980215124290__ec23ba6e-97c1-4933-a005-5a626fabddf8-right-text-2"
-      ],
-      "settings": {
-        "main_heading": "Text Image Center",
-        "lazyload_images": false,
-        "margin_top": 16,
-        "margin_bottom": 16
-      }
     }
   },
   "order": [
     "99f1f786-cfa8-4d76-bd14-7dcb32939b9f",
     "d534c664-a5a4-4f55-b829-6446be3b3cdb",
     "82c03348-6eae-4f16-8533-d3ae96f7f7c5",
+    "ec23ba6e-97c1-4933-a005-5a626fabddf8",
     "b2c49c1e-4880-4b9e-90e7-0135ddd0a9b9",
     "eb20ecc0-4470-4624-b140-f1161cf8823f",
     "211390c4-4881-4386-992f-62907dc8d4a0",
@@ -647,7 +648,6 @@
     "0a5d7332-5a60-4baf-bf6a-adbba595c25e",
     "92018c5b-7aa4-4095-92a7-00221b583a17",
     "7b9de0b8-2dd6-471d-8652-5e3493fedd6b",
-    "749c8cce-63f0-421f-a447-8f8b3a4bfc20",
-    "ec23ba6e-97c1-4933-a005-5a626fabddf8"
+    "749c8cce-63f0-421f-a447-8f8b3a4bfc20"
   ]
 }
