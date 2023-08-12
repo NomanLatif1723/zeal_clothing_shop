@@ -64,6 +64,7 @@
 .drawer-menu__item {
     padding: 18px 0;
     border-bottom: 1px solid rgba(1,1,1,0.1);
+    cursor: pointer;
 }
 
 .drawer-menu__container {
