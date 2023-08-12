@@ -30,12 +30,12 @@
 }
 
 .menu-drawer__left {
-  left: -100%;
+  left: -200%;
   transition: all 0.5s ease;
 }
 
 .menu-drawer__right {
-  right: -100%;
+  right: -200%;
   transition: all 0.5s ease;
 }
 
