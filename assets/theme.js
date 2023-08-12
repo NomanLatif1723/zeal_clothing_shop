@@ -114,7 +114,7 @@ function initHeaderNavigation() {
       if (dropdownList) {
         event.preventDefault();
         dropdownList.classList.toggle('show__dropdown');
-        dropdownList.classList.toggle('icon__rotate');
+        iconArrow.classList.toggle('icon__rotate');
       }
     })
   })
