@@ -55,7 +55,8 @@
       "content": "Example Article Content",
       "date": "25 Apr 2023",
       "tag": "Fashion",
-      "view_all_text": "View All"
+      "view_all_text": "View All",
+      "read_more_text": "Read More.."
     }
   }
 }
