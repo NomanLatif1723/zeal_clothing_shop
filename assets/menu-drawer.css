@@ -91,3 +91,14 @@
     font-weight: 400;
     font-size: 14px;
 }
+
+.drawer-image__block {
+    position: relative;
+    height: 40vh;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.drawer-menu__images {
+    padding: 30px 0;
+}
