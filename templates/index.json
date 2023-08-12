@@ -169,37 +169,53 @@
         "template--19980215124290__ec23ba6e-97c1-4933-a005-5a626fabddf8-left-text-1": {
           "type": "left-text",
           "settings": {
-            "left_heading": "Text Image Center",
-            "left_text": "Welcome To Our Store"
-          }
-        },
-        "template--19980215124290__ec23ba6e-97c1-4933-a005-5a626fabddf8-right-text-1": {
-          "type": "right-text",
-          "settings": {
-            "right_heading": "Text Image Center",
-            "right_text": "Welcome To Our Store"
+            "left_heading": "Reduced Stress",
+            "left_text": "Tight clothes can be constricting and uncomfortable, leading to increased stress and anxiety. Loose clothes, on the other hand, can promote relaxation and ease tension."
           }
         },
         "template--19980215124290__ec23ba6e-97c1-4933-a005-5a626fabddf8-left-text-2": {
           "type": "left-text",
           "settings": {
-            "left_heading": "Text Image Center",
-            "left_text": "Welcome To Our Store"
+            "left_heading": "Enhanced Mobility",
+            "left_text": "Loose clothes provide more freedom of movement and flexibility, which can be important during physical activity or exercise."
+          }
+        },
+        "3a12469f-4a43-411e-858b-d77c22f6720f": {
+          "type": "left-text",
+          "settings": {
+            "left_heading": "Greater Range of Motion",
+            "left_text": "It allow for a greater range of motion, making them a good choice for activities such as yoga or dance, where flexibility and freedom of movement are important."
           }
         },
         "template--19980215124290__ec23ba6e-97c1-4933-a005-5a626fabddf8-right-text-2": {
           "type": "right-text",
           "settings": {
-            "right_heading": "Text Image Center",
-            "right_text": "Welcome To Our Store"
+            "right_heading": "Improved Comfort",
+            "right_text": "Loose clothes allow for increased air flow and decreased restriction, which can lead to improved comfort, especially during hot weather or physical activity."
+          }
+        },
+        "template--19980215124290__ec23ba6e-97c1-4933-a005-5a626fabddf8-right-text-1": {
+          "type": "right-text",
+          "settings": {
+            "right_heading": "Reduced Skin Irritation",
+            "right_text": "Tight-fitting clothes can cause skin irritation or chafing, while loose clothes can help prevent these issues by reducing friction."
+          }
+        },
+        "3b90a647-a358-491a-82ba-4407d41d142f": {
+          "type": "right-text",
+          "settings": {
+            "right_heading": "Increased Confidence",
+            "right_text": "Loose clothes can help people feel more comfortable and confident in their own skin, especially if they are self-conscious about their body shape or size."
           }
         }
       },
       "block_order": [
         "template--19980215124290__ec23ba6e-97c1-4933-a005-5a626fabddf8-left-text-1",
-        "template--19980215124290__ec23ba6e-97c1-4933-a005-5a626fabddf8-right-text-1",
         "template--19980215124290__ec23ba6e-97c1-4933-a005-5a626fabddf8-left-text-2",
-        "template--19980215124290__ec23ba6e-97c1-4933-a005-5a626fabddf8-right-text-2"
+        "3a12469f-4a43-411e-858b-d77c22f6720f",
+        "template--19980215124290__ec23ba6e-97c1-4933-a005-5a626fabddf8-right-text-2",
+        "template--19980215124290__ec23ba6e-97c1-4933-a005-5a626fabddf8-right-text-1",
+        "3b90a647-a358-491a-82ba-4407d41d142f"
       ],
       "settings": {
         "main_heading": "Text Image Center",
