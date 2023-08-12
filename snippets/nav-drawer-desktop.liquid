@@ -66,76 +66,74 @@
           </a>
           {%- if is_megamenu -%}
             <div class="drawer__list drawer-menu__container" {{ block.shopify_attributes }}>
-              <div class="drawer-container__flex">
-                <div class="drawer-menu__dropdowns">         
-                  <div class="drawer-menu__list">
-                    {%- for link in mega_menu.links -%}
-                      <div class="drawer-menu__item">
-                        <a class="menu-item__link" href="{{ link.url }}" title="{{ link.title }}">
-                          {{ link.title }}
-                          {%- if link.links != blank -%}
-                            {%- render 'icon-arrow-down' -%}
-                          {%- endif -%}
-                        </a>
+              <div class="drawer-menu__dropdowns">         
+                <div class="drawer-menu__list">
+                  {%- for link in mega_menu.links -%}
+                    <div class="drawer-menu__item">
+                      <a class="menu-item__link" href="{{ link.url }}" title="{{ link.title }}">
+                        {{ link.title }}
                         {%- if link.links != blank -%}
-                          <div class="drawer-child__list">
-                            {%- for childlink in link.links -%}
-                            <div class="drawer-mega__item">
-                              <a class="menu-item__link" href="{{ childlink.url }}" title="{{ childlink.title }}">{{ childlink.title }}</a>
-                            </div>
-                            {%- endfor -%}
+                          {%- render 'icon-arrow-down' -%}
+                        {%- endif -%}
+                      </a>
+                      {%- if link.links != blank -%}
+                        <div class="drawer-child__list">
+                          {%- for childlink in link.links -%}
+                          <div class="drawer-mega__item">
+                            <a class="menu-item__link" href="{{ childlink.url }}" title="{{ childlink.title }}">{{ childlink.title }}</a>
                           </div>
+                          {%- endfor -%}
+                        </div>
+                      {%- endif -%}
+                    </div>
+                  {%- endfor -%}
+                </div>
+              </div>
+              <div class="drawer-menu__images">
+                <div class="drawer-image__block">
+                  <div class="mega-image__element">
+                    {%- if promo_image_1 != blank -%}
+                      {{ promo_image_1 | image_url: width: promo_image_1.width, height: promo_image_1.height | image_tag: sizes: '100vw', widths: '240,600,768,1024,2048',class: 'mega-promo__image' }}
+                    {%- else -%}
+                      {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder__image' }}
+                    {%- endif -%}
+                  </div>
+                  <div class="mega-image__content">
+                    <div class="mega-content__overlay text__position-{{ content_position }}">
+                      <div class="mega-content__wrapper text__align-{{ text_alignment }}">
+                        {%- if promo_1_subheading != blank -%}
+                          <div class="mega-overlay__subheading">{{ promo_1_subheading }}</div>
+                        {%- endif -%}
+                        {%- if promo_1_heading != blank -%}
+                          <div class="main__heading mega-overlay__heading"><h2>{{ promo_1_heading }}</h2></div>
+                        {%- endif -%}
+                        {%- if promo_1_text != blank -%}
+                          <div class="mega-overlay__text">{{ promo_1_text }}</div>
                         {%- endif -%}
                       </div>
-                    {%- endfor -%}
+                    </div>
                   </div>
                 </div>
-                <div class="drawer-menu__images">
-                  <div class="drawer-image__block">
-                    <div class="mega-image__element">
-                      {%- if promo_image_1 != blank -%}
-                        {{ promo_image_1 | image_url: width: promo_image_1.width, height: promo_image_1.height | image_tag: sizes: '100vw', widths: '240,600,768,1024,2048',class: 'mega-promo__image' }}
-                      {%- else -%}
-                        {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder__image' }}
-                      {%- endif -%}
-                    </div>
-                    <div class="mega-image__content">
-                      <div class="mega-content__overlay text__position-{{ content_position }}">
-                        <div class="mega-content__wrapper text__align-{{ text_alignment }}">
-                          {%- if promo_1_subheading != blank -%}
-                            <div class="mega-overlay__subheading">{{ promo_1_subheading }}</div>
-                          {%- endif -%}
-                          {%- if promo_1_heading != blank -%}
-                            <div class="main__heading mega-overlay__heading"><h2>{{ promo_1_heading }}</h2></div>
-                          {%- endif -%}
-                          {%- if promo_1_text != blank -%}
-                            <div class="mega-overlay__text">{{ promo_1_text }}</div>
-                          {%- endif -%}
-                        </div>
-                      </div>
-                    </div>
+                <div class="drawer-image__block">
+                  <div class="mega-image__element">
+                    {%- if promo_image_2 != blank -%}
+                    {{ promo_image_2 | image_url: width: promo_image_2.width, height: promo_image_2.height | image_tag: sizes: '100vw', widths: '240,600,768,1024,2048',class: 'mega-promo__image' }}
+                    {%- else -%}
+                      {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder__image' }}
+                    {%- endif -%}
                   </div>
-                  <div class="drawer-image__block">
-                    <div class="mega-image__element">
-                      {%- if promo_image_2 != blank -%}
-                      {{ promo_image_2 | image_url: width: promo_image_2.width, height: promo_image_2.height | image_tag: sizes: '100vw', widths: '240,600,768,1024,2048',class: 'mega-promo__image' }}
-                      {%- else -%}
-                        {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder__image' }}
-                      {%- endif -%}
-                    </div>
-                    <div class="mega-image__content">
-                      <div class="mega-content__overlay text__position-{{ content_position }}">
-                        <div class="mega-content__wrapper text__align-{{ text_alignment }}">
-                          {%- if promo_2_subheading != blank -%}
-                            <div class="mega-overlay__subheading">{{ promo_2_subheading }}</div>
-                          {%- endif -%}
-                          {%- if promo_2_heading != blank -%}
-                            <div class="main__heading mega-overlay__heading"><h2>{{ promo_2_heading }}</h2></div>
-                          {%- endif -%}
-                          {%- if promo_2_text != blank -%}
-                            <div class="mega-overlay__text">{{ promo_2_text }}</div>
-                          {%- endif -%}
-                        </div>
+                  <div class="mega-image__content">
+                    <div class="mega-content__overlay text__position-{{ content_position }}">
+                      <div class="mega-content__wrapper text__align-{{ text_alignment }}">
+                        {%- if promo_2_subheading != blank -%}
+                          <div class="mega-overlay__subheading">{{ promo_2_subheading }}</div>
+                        {%- endif -%}
+                        {%- if promo_2_heading != blank -%}
+                          <div class="main__heading mega-overlay__heading"><h2>{{ promo_2_heading }}</h2></div>
+                        {%- endif -%}
+                        {%- if promo_2_text != blank -%}
+                          <div class="mega-overlay__text">{{ promo_2_text }}</div>
+                        {%- endif -%}
                       </div>
                     </div>
                   </div>
