@@ -107,7 +107,17 @@ function initHeaderNavigation() {
   }
 
   // Drawer Item Click Function 
-
+  menuItem.forEach(item => {
+    item.addEventListener('click', () => {
+      let hasDropdown = item.querySelector('.drawer__list');
+      let linkTag = item.querySelector('.drawer-item__link');
+      if (hasDropdown) {
+        linkTag.addEventListener('click', (event) => {
+          event.preventDefault();
+        })
+      }
+    })
+  })
 }
 initHeaderNavigation();
 // Slideshow
