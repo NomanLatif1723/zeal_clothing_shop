@@ -1,11 +1,6 @@
 {
   "general": {
   },
-  "header": {
-    "navigation": {
-      "title": "Menu"
-    }
-  },
   "newsletter": {
     "newsletter_form": {
       "email_placeholder": "Enter Your Email",
@@ -15,6 +10,11 @@
   "sections": {
     "announcement-bar": {
       "header_announcement": "Announcement Bar"
+    },
+    "header": {
+      "navigation": {
+        "title": "Menu"
+      }
     }
   },
   "collections": {
