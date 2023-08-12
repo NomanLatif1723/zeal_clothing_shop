@@ -89,10 +89,10 @@
         </a>
       </div>
       <div class="grid-product__price">
-        <span class="visually__hidden">{{ 'general.products.regular_price' | t }}</span>
+        <span class="visually__hidden">{{ 'products.price.regular_price' | t }}</span>
         <span class="product__sale-price">{{ product.price | money_without_trailing_zeros }}</span>
         {%- unless product.compare_at_price > product.price -%}
-          <span class="visually__hidden">{{ 'general.products.compare_price' | t }}</span>
+          <span class="visually__hidden">{{ 'products.price.compare_price' | t }}</span>
           <span class="product__compare-price">{{ product.compare_at_price | money_without_trailing_zeros }}</span>
         {%- endunless -%}
       </div>
@@ -103,9 +103,9 @@
     </div>
     <div class="grid__badge">
       {%- if product.available -%}
-        <span class="badge sale__badge{% if settings.sale_badge_color contains '#f' %} badge-color__dark{% else %} badge-color__light{% endif %}">{{ 'collections.products.on_sale' | t }}</span>
+        <span class="badge sale__badge{% if settings.sale_badge_color contains '#f' %} badge-color__dark{% else %} badge-color__light{% endif %}">{{ 'products.badges.on_sale' | t }}</span>
       {% else %}
-        <span class="badge soldout__badge{% if settings.soldout_badge_color contains '#f' %} badge-color__dark{% else %} badge-color__light{% endif %}">{{ 'collections.products.sold_out' | t }}</span>
+        <span class="badge soldout__badge{% if settings.soldout_badge_color contains '#f' %} badge-color__dark{% else %} badge-color__light{% endif %}">{{ 'products.badges.sold_out' | t }}</span>
       {%- endif -%}
     </div>
   </div>
