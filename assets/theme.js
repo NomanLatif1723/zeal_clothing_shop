@@ -112,7 +112,7 @@ function initHeaderNavigation() {
       let dropdownList = item.closest('.drawer-menu__item').querySelector('.drawer__list');
       if (dropdownList) {
         event.preventDefault();
-        dropdownList.style.display = 'block';
+        dropdownList.classList.toggle('show__dropdown');
       }
     })
   })
