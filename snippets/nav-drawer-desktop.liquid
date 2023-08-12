@@ -72,7 +72,10 @@
                     {%- for link in mega_menu.links -%}
                       <div class="drawer-menu__item">
                         <a class="menu-item__link" href="{{ link.url }}" title="{{ link.title }}">
-                          <h4>{{ link.title }}</h4>
+                          {{ link.title }}
+                          {%- if link.links != blank -%}
+                            {%- render 'icon-arrow-down' -%}
+                          {%- endif -%}
                         </a>
                         {%- if link.links != blank -%}
                           <div class="drawer-child__list">
