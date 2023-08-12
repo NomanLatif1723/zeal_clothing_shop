@@ -74,6 +74,7 @@
 }
 
 .drawer-menu__container {
+    padding-left: 15px;
     display: none;
 }
 
