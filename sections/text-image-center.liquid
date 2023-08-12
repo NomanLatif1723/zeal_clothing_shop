@@ -49,7 +49,7 @@
         {%- if image != blank -%}
           {{ image | image_url: width: image.width, height: image.height | image_tag: loading: lazyloading, class: "center-image__image", widths: '240,480,600,1024,2048', sizes: '(min-width: 1200px) 650px, 45vw' }}
         {%- else -%}
-          {{ 'image' | placeholder_svg_tag: "placeholder__Image" }}
+          {{ 'image' | placeholder_svg_tag: "placeholder__image" }}
         {%- endif -%}
       </div>
       <div class="image-center__item right-text__block">
