@@ -79,6 +79,9 @@ function initHeaderNavigation() {
   let menuDrawer = document.querySelector('.nav-drawer');
   let overlayShadow = document.querySelector('.drawer__overlay-container');
   let closeMenuDrawerBtn = document.querySelector('.nav-icon__close');
+
+  let menuItem = menuDrawer.querySelector('.drawer-menu__item');
+  
   if (openMenuDrawerBtn) {
     openMenuDrawerBtn.addEventListener('click', () => {
       openMenuDrawer();
@@ -95,7 +98,6 @@ function initHeaderNavigation() {
       } else {
         menuDrawer.classList.add('drawer-open__right');
       }
-      
       overlayShadow.classList.add('overlay__visible');
     }
     function closeMenuDrawer() {
@@ -103,6 +105,19 @@ function initHeaderNavigation() {
       overlayShadow.classList.remove('overlay__visible');
     }
   }
+
+  // Drawer Item Click Function 
+  menuItem.forEach(item => {
+    item.addEventListener('click', () => {
+      let hasDropdown = item.querySelector('.drawer__list');
+      let linkTag = item.querySelector('.drawer-item__link');
+      if (hasDropdown) {
+        linkTag.addEventListener('click', (event) => {
+          event.preventDefault();
+        })
+      }
+    })
+  })
 }
 initHeaderNavigation();
 // Slideshow
