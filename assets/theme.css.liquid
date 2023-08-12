@@ -1956,11 +1956,7 @@ input[type="radio"]:checked + label {
   /* Image Center Text Section */
 
   .image-center__wrapper {
-    display: flex;
-    flex-wrap: wrap;
     padding-top: 20px;
-    margin-left: -15px;
-    margin-right: -15px;
 }
 
 .center-image__heading {
@@ -2030,11 +2026,18 @@ input[type="radio"]:checked + label {
 .center-image__image {
     object-fit: cover;
 }
+@media only screen and (min-width: 769px) {
+   .image-center__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
 @media only screen and (min-width: 769) and (max-width: 1200px) {
   .image-text__content {
     padding-bottom: 40px;
   }
-
 }
 @media only screen and (min-width: 1201px) {
   .center-image__block {
