@@ -109,7 +109,7 @@ function initHeaderNavigation() {
   // Drawer Item Click Function 
   menuItem.forEach(item => {
     item.addEventListener('click', (event) => {
-      event.preventdefault();
+      event.preventDefault();
       let hasDropdown = item.closest('.drawer-menu__item').querySelector('.drawer__list');
     })
   })
