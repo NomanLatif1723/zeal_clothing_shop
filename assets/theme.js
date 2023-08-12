@@ -110,7 +110,7 @@ function initHeaderNavigation() {
   menuItem.forEach(item => {
     item.addEventListener('click', (event) => {
       let dropdownList = item.closest('.drawer-menu__item').querySelector('.drawer__list');
-      let iconArrow = item.closest('.drawer-menu__item').querySelector('.icon__arrow');
+      let iconArrow = item.querySelector('.icon__arrow');
       if (dropdownList) {
         event.preventDefault();
         dropdownList.classList.toggle('show__dropdown');
