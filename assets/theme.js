@@ -90,7 +90,12 @@ function initHeaderNavigation() {
       closeMenuDrawer();
     })
     function openMenuDrawer() {
-      menuDrawer.classList.add('drawer-open__left');
+      if (menuDrawer.classList.contain('menu_drawer__left')) {
+        menuDrawer.classList.add('drawer-open__left');
+      } else {
+        menuDrawer.classList.add('drawer-open__right');
+      }
+      
       overlayShadow.classList.add('overlay__visible');
     }
     function closeMenuDrawer() {
