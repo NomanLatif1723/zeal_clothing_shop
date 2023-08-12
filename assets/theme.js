@@ -103,7 +103,11 @@ function initHeaderNavigation() {
       bodyContainer.classList.add('drawer__opening');
     }
     function closeMenuDrawer() {
-      menuDrawer.classList.remove('drawer-open__left');
+      if (menuDrawer.classList.contains('menu-drawer__left')) {
+        menuDrawer.classList.remove('drawer-open__left');
+      } else {
+        menuDrawer.classList.remove('drawer-open__right');
+      }
       overlayShadow.classList.remove('overlay__visible');
       bodyContainer.classList.remove('drawer__opening');
     }
