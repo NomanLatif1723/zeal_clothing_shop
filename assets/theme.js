@@ -109,9 +109,10 @@ function initHeaderNavigation() {
   // Drawer Item Click Function 
   menuItem.forEach(item => {
     item.addEventListener('click', (event) => {
-      let hasDropdown = item.closest('.drawer-menu__item').querySelector('.drawer__list');
-      if (hasDropdown) {
+      let dropdownList = item.closest('.drawer-menu__item').querySelector('.drawer__list');
+      if (dropdownList) {
         event.preventDefault();
+        dropdownList.style.display = 'block';
       }
     })
   })
