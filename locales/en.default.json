@@ -1,6 +1,11 @@
 {
   "general": {
   },
+  "header": {
+    "navigation": {
+      "title": "Menu"
+    }
+  },
   "newsletter": {
     "newsletter_form": {
       "email_placeholder": "Enter Your Email",
