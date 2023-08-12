@@ -26,12 +26,12 @@
   width: 450px;
 }
 
-.menu_drawer__left {
+.menu-drawer__left {
   left: -100%;
   transition: all 0.5s ease;
 }
 
-.menu_drawer__right {
+.menu-drawer__right {
   right: -100%;
   transition: all 0.5s ease;
 }
