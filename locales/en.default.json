@@ -28,6 +28,11 @@
       "all_collection": "View All"
     }
   },
+  "collection-list": {
+    "general": {
+      "title": "Example Collection"
+    }
+  },
   "homepage": {
   },
   "products": {
