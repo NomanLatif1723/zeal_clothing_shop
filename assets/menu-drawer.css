@@ -107,6 +107,11 @@
 }
 
 .nav-drawer__footer {
-    padding: 20px;
-    background: #111111;
+    padding: 30px 25px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(1,1,1,0.3);
+}
+.nav-drawer-socials .icon {
+    fill: #111111;
 }
