@@ -80,7 +80,7 @@ function initHeaderNavigation() {
   let overlayShadow = document.querySelector('.drawer__overlay-container');
   let closeMenuDrawerBtn = document.querySelector('.nav-icon__close');
 
-  let menuItem = menuDrawer.querySelector('.drawer-menu__item');
+  let menuItem = menuDrawer.querySelectorAll('.drawer-menu__item');
   
   if (openMenuDrawerBtn) {
     openMenuDrawerBtn.addEventListener('click', () => {
