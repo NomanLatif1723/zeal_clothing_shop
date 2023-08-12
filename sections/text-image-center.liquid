@@ -1,6 +1,9 @@
 {%- liquid
     assign image = section.settings.image
     assign main_heading = section.settings.main_heading
+    assign button_label = section.settings.button_label
+    assign button_link = section.settings.button_link
+    
     assign lazyloading = ''
     assign lazyloadImages = section.settings.lazyload_images
     if lazyloadImages
@@ -124,7 +127,9 @@
       </div>
     </div>
     <div class="center-image_btn--container">
-      <a href="" class="btn btn__primary btn__link btn-image__center"></a>
+      {% if button_label != blank %}
+        <a href="{{ button_link }}" class="btn btn__primary btn__link btn-image__center" title="{{ button_label }}">{{ button_label }}</a>
+      {% endif %}
     </div>
   </div>
 </div>
@@ -143,6 +148,17 @@
         "type": "image_picker",
         "id": "image",
         "label": "t:sections.text-image-center.settings.image.label"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "label": "t:sections.text-image-center.settings.button_label.label",
+        "default": "Button"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "t:sections.text-image-center.settings.button_link.label"
       },
       {
         "type": "checkbox",
