@@ -57,10 +57,11 @@
   display: inline-flex;
   cursor: pointer;
 }
-
+.icon__arrow{
+  transition: all 0.3s linear;
+}
 .icon__rotate{
   transform:rotate(180deg);
-  transition: all 0.3s linear;
 }
 .nav-main__contents {
     height: 100%;
