@@ -1956,7 +1956,6 @@ input[type="radio"]:checked + label {
   /* Image Center Text Section */
 
   .image-center__wrapper {
-    display: flex;
     padding-top: 20px;
 }
 
@@ -2029,7 +2028,9 @@ input[type="radio"]:checked + label {
     object-fit: cover;
 }
 @media only screen and (min-width: 1201px) {
-  
+  .image-center__wrapper {
+    display: flex;
+  }
   .center-image__block {
     display: block;
   }
