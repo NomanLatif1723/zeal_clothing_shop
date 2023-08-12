@@ -558,7 +558,6 @@
     },
     "749c8cce-63f0-421f-a447-8f8b3a4bfc20": {
       "type": "image-with-text",
-      "disabled": true,
       "blocks": {
         "template--19980215124290__749c8cce-63f0-421f-a447-8f8b3a4bfc20-image-1": {
           "type": "image",
@@ -579,6 +578,7 @@
         "template--19980215124290__749c8cce-63f0-421f-a447-8f8b3a4bfc20-image-1",
         "template--19980215124290__749c8cce-63f0-421f-a447-8f8b3a4bfc20-text-1"
       ],
+      "disabled": true,
       "settings": {
         "layout_reverse": false,
         "lazyload_images": false,
@@ -588,7 +588,6 @@
     },
     "ec23ba6e-97c1-4933-a005-5a626fabddf8": {
       "type": "text-image-center",
-      "disabled": true,
       "blocks": {
         "template--19980215124290__ec23ba6e-97c1-4933-a005-5a626fabddf8-left-text-1": {
           "type": "left-text",
