@@ -82,8 +82,8 @@
         "ae4f98d2-7b52-4e7d-aebf-bd7536ab48ca"
       ],
       "settings": {
-        "desktop_menu": "main-menu",
-        "mobile_menu": "shop",
+        "desktop_menu": "",
+        "mobile_menu": "",
         "header_styles": "left",
         "sticky_header": true,
         "show_icons": true
