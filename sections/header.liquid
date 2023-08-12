@@ -163,7 +163,7 @@
             {%- endif -%}
           </a>
         {%- unless show_icons -%}
-            <a href="{{ routes.search_url }}" title="{{ 'sections.search.title' | t }}" aria-label="{{ 'sections.search.title' | t }}" class="icon icon__search icon__hide-mobile">{{ 'sections.search.title' | t }}</a>
+            <a href="{{ routes.search_url }}" class="icon icon__search icon__hide-mobile">{{ 'sections.search.title' | t }}</a>
             {%- if shop.customer_accounts_enabled -%}
                 <a href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}"
                   class="icon icon__accounts icon__hide-mobile">
