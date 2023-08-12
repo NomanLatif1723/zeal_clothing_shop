@@ -42,5 +42,10 @@
     "onboarding": {
       "product_title": "Example Product"
     }
+  },
+  "social-media": {
+    "general": {
+      "social_label": "Join Us on {{ social }}"
+    }
   }
 }
