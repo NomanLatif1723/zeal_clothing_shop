@@ -81,7 +81,9 @@ function initHeaderNavigation() {
   let closeMenuDrawerBtn = document.querySelector('.nav-icon__close');
   if (openMenuDrawerBtn) {
     openMenuDrawerBtn.addEventListener('click', () => {
-      openMenuDrawer();
+      if (menuDrawer.classList.contain('menu_drawer__left')) {
+        openMenuDrawer();
+      }
     })
     overlayShadow.addEventListener('click', () => {
       closeMenuDrawer();
@@ -90,12 +92,7 @@ function initHeaderNavigation() {
       closeMenuDrawer();
     })
     function openMenuDrawer() {
-      if (menuDrawer.classList.contain('menu_drawer__left')) {
-        menuDrawer.classList.add('drawer-open__left');
-      } else {
-        menuDrawer.classList.add('drawer-open__right');
-      }
-      
+      menuDrawer.classList.add('drawer-open__left');
       overlayShadow.classList.add('overlay__visible');
     }
     function closeMenuDrawer() {
