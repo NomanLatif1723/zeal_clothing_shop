@@ -741,6 +741,18 @@ button {
   .article__date {
     font-size: 13px;
     color: #01010199;
+    position: relative;
+    padding-left: 20px;
+  }
+  .article__date:before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 15px;
+    left: 0;
+    background: #111111;
+    top: 50%;
+    transform: translateY(-50%);
   }
   .article__title {
     padding-bottom: 10px;
