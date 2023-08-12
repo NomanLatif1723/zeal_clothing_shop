@@ -22,7 +22,7 @@
       -%}
       {%- if is_megamenu == false -%}
         <li class="drawer-menu__item">
-          <a href="{{ link.url }}" title="{{ link.title }}" class="drawer-item__link">
+          <a href="{{ link.url }}" title="{{ link.title }}" class="menu-item__link">
             {{ link.title }}
             {%- if link.links != blank -%}
               {%- render 'icon-arrow-down' -%}
@@ -35,7 +35,7 @@
                   <a
                     href="{{ childlink.url }}"
                     title="{{ childlink.title }}"
-                    class="drawer-item__link drawer-menu__item--link">{{ childlink.title }}
+                    class="menu-item__link drawer-menu__item--link">{{ childlink.title }}
                     {%- if childlink.links != blank -%}
                       {%- render 'icon-arrow-down' -%}
                     {%- endif -%}
@@ -47,7 +47,7 @@
                           <a
                             href="{{ grandchild.url }}"
                             title="{{ grandchild.title }}"
-                            class="drawer-item__link drawer-grandchild__item--link">{{ grandchild.title }}</a>
+                            class="menu-item__link drawer-grandchild__item--link">{{ grandchild.title }}</a>
                         </li>
                       {%- endfor -%}
                     </ul>
@@ -59,7 +59,7 @@
         </li>
         {%- elsif is_megamenu -%}
         <li class="drawer-menu__item">
-          <a class="drawer-item__link" href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}
+          <a class="menu-item__link" href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}
           {%- if is_megamenu -%}
             {%- render 'icon-arrow-down' -%}
           {%- endif -%}
@@ -71,14 +71,14 @@
                   <div class="drawer-menu__list">
                     {%- for link in mega_menu.links -%}
                       <div class="drawer-menu__item">
-                        <a class="drawer-item__link" href="{{ link.url }}" title="{{ link.title }}">
+                        <a class="menu-item__link" href="{{ link.url }}" title="{{ link.title }}">
                           <h4>{{ link.title }}</h4>
                         </a>
                         {%- if link.links != blank -%}
                           <div class="drawer-child__list">
                             {%- for childlink in link.links -%}
                             <div class="drawer-mega__item">
-                              <a class="drawer-item__link" href="{{ childlink.url }}" title="{{ childlink.title }}">{{ childlink.title }}</a>
+                              <a class="menu-item__link" href="{{ childlink.url }}" title="{{ childlink.title }}">{{ childlink.title }}</a>
                             </div>
                             {%- endfor -%}
                           </div>
