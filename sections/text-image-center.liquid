@@ -32,18 +32,20 @@
               assign left_heading = block.settings.left_heading
               assign left_text = block.settings.left_text 
           -%}
-          <div class="image-text__content" {{ block.shopify_attributes }}>
-              {%- if left_heading != blank -%}
-                <div class="image-center__title">
-                  <h4>{{ left_heading }}</h4>
-                </div>
-              {%- endif -%}
-              {%- if left_text != blank -%}
-                <div class="image-center__text rte">
-                  {{ left_text }}
-                </div>
-              {%- endif -%}
-          </div>
+          {%- if block.type == 'left-text' -%}
+            <div class="image-text__content" {{ block.shopify_attributes }}>
+                {%- if left_heading != blank -%}
+                  <div class="image-center__title">
+                    <h4>{{ left_heading }}</h4>
+                  </div>
+                {%- endif -%}
+                {%- if left_text != blank -%}
+                  <div class="image-center__text rte">
+                    {{ left_text }}
+                  </div>
+                {%- endif -%}
+            </div>
+          {%- endif -%}
         {%- endfor -%}
       </div>
       <div class="image-center__item center-image__block">
@@ -59,18 +61,20 @@
               assign right_heading = block.settings.right_heading
               assign right_text = block.settings.right_text 
           -%}
-           <div class="image-text__content" {{ block.shopify_attributes }}> 
-            {%- if right_heading != blank -%}
-              <div class="image-center__title">
-                <h4>{{ right_heading }}</h4>
-              </div>
-            {%- endif -%}
-            {%- if right_text != blank -%}
-              <div class="image-center__text rte">
-                {{ right_text }}
-              </div>
-            {%- endif -%}
-          </div>
+           {%- if block.type == 'right-text' -%}
+             <div class="image-text__content" {{ block.shopify_attributes }}> 
+              {%- if right_heading != blank -%}
+                <div class="image-center__title">
+                  <h4>{{ right_heading }}</h4>
+                </div>
+              {%- endif -%}
+              {%- if right_text != blank -%}
+                <div class="image-center__text rte">
+                  {{ right_text }}
+                </div>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
         {% endfor %}
       </div>
     </div>
