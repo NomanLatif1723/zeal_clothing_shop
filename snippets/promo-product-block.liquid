@@ -5,7 +5,7 @@
     assign default = 'large'
     assign sizes = '(min-width: 1200px) 650px, 45vw'
 -%}
-<div class="promotional-grid__container promo-product__wrapper{% if bannerBackgroundColor contains '#f' %} text__dark{% else %} text__light{% endif %}">
+<div class="promotional-grid__container promo-product__wrapper{% if promoBackgroundColor contains '#f' %} text__dark{% else %} text__light{% endif %}">
   <div class="page__width">
     <div class="promo-product__flex">
       <div class="promo-flex__item promo-product__text">
@@ -25,7 +25,7 @@
           </div>
         {%- endif -%}
         {%- if promo_text != blank -%}
-          <div class="promo-product__description rte{% if bannerBackgroundColor contains '#fff' or bannerBackgroundColor contains '#f' %} text__dark{% else %} text__light{% endif %}">
+          <div class="promo-product__description rte{% if promoBackgroundColor contains '#f' %} text__dark{% else %} text__light{% endif %}">
             {{ promo_text }}
           </div>
         {%- endif -%}
@@ -53,7 +53,7 @@
           <div class="promo-btn__container">
             <a
               href="{{ promo_button_link }}"
-              class="btn btn__link promo-product__btn{% if bannerBackgroundColor contains '#f' %} btn__primary{% else %} btn__inverse-bg{% endif %}"
+              class="btn btn__link promo-product__btn{% if promoBackgroundColor contains '#f' %} btn__primary{% else %} btn__inverse-bg{% endif %}"
               title="{{ promo_button_label }}">{{ promo_button_label }}</a>
           </div>
         {% endif %}
