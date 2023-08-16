@@ -16,7 +16,7 @@
           </div>
         {%- endif -%}
         {%- if show_collection_price -%}
-          <div class="promo-collection__price">
+          <div class="promo__price promo-collection__price">
             <span class="visually__hidden">{{ 'products.price.regular_price' | t }}</span>
             <span class="product__sale-price">{{ promo_product.price | money }}</span>
             {%- unless promo_product.compare_at_price > promo_product.price -%}
@@ -26,7 +26,7 @@
           </div>
         {%- endif -%}
         {%- if collection_text != blank -%}
-          <div class="promo-collection__description rte">
+          <div class="promo__description promo-collection__description rte">
             {{ collection_text }}
           </div>
         {%- endif -%}
