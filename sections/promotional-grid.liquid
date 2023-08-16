@@ -1,3 +1,11 @@
+{%- liquid
+   
+   assign lazyloading = ''
+   assign lazyloadImages = section.settings.lazyload_images
+   if lazyloadImages
+     assign lazyloading = 'lazy'
+   endif
+-%}
 {%- style -%}
   .main__section-{{ section.id }}{
     margin-top: 30px;
@@ -75,6 +83,13 @@
     "name": "t:sections.promotional-grid.name",
     "class": "main__section",
     "settings": [
+      {
+        "type": "checkbox",
+        "id": "lazyload_images",
+        "label": "t:sections.promotional-grid.settings.lazyload_images.label",
+        "default": false,
+        "info": "t:sections.promotional-grid.settings.lazyload_images.info"
+      },
       {
         "type": "header",
         "content": "t:sections.promotional-grid.settings.header_spacing.label"
