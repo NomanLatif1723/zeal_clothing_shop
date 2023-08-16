@@ -427,7 +427,7 @@
             "promo_text": "Description Text",
             "promo_button_label": "Button",
             "promo_button_link": "",
-            "show_price": false,
+            "show_price": true,
             "show_timer": false,
             "promo_background_color": "#f1f3f4"
           }
