@@ -24,17 +24,19 @@
       <div class="promotional-grid__item promotional-item-{{ block.id }}">
         {%- case block.type -%}
           {%- when 'banner' -%}
-          <div class="promotional-grid__container promotional-banner__wrapper {% if bannerBackgroundColor contains '#fff' or bannerBackgroundColor contains '#f' %}text__dark{% else %}text__light{% endif %}">
-            {%- render 'promo-banner',
-               bannerBackgroundColor: block.settings.banner_background_color,
-               banner_heading: block.settings.banner_heading,
-               banner_text: block.settings.banner_text,
-               banner_button1: block.settings.banner_button_1,
-               banner_link1: block.settings.banner_button_link_1,
-               banner_button2: block.settings.banner_button_2,
-               banner_link2: block.settings.banner_button_link_2
-            -%}
-          </div>
+            {%- if block.type == 'banner' -%}
+              <div class="promotional-grid__container promotional-banner__wrapper {% if bannerBackgroundColor contains '#fff' or bannerBackgroundColor contains '#f' %}text__dark{% else %}text__light{% endif %}">
+                {%- render 'promo-banner',
+                   bannerBackgroundColor: block.settings.banner_background_color,
+                   banner_heading: block.settings.banner_heading,
+                   banner_text: block.settings.banner_text,
+                   banner_button1: block.settings.banner_button_1,
+                   banner_link1: block.settings.banner_button_link_1,
+                   banner_button2: block.settings.banner_button_2,
+                   banner_link2: block.settings.banner_button_link_2
+                -%}
+              </div>
+            {%- endif -%}
           {%- when 'product' -%}
           {%- render 'promo-product-block',
             
