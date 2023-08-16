@@ -49,11 +49,17 @@
              promo_button_link: block.settings.promo_button_link,
              show_price: block.settings.show_price,
              show_timer: block.settings.show_timer
-            
           -%}
           {%- when 'collection' -%}
           {%- render 'promo-collection-block',
-            
+             collectionBackgroundColor: collectionBackgroundColor,
+             promo_collection: block.settings.promo_collection,
+             collection_heading: block.settings.collection_heading,
+             collection_text: block.settings.collection_text,
+             collection_button_label: block.settings.collection_button_label,
+             collection_button_link: block.settings.collection_button_link,
+             show_collection_price: block.settings.show_collection_price,
+             show_collection_timer: block.settings.show_collection_timer
           -%}
 
 
