@@ -2054,12 +2054,26 @@ input[type="radio"]:checked + label {
   }
 }
 
+/* Image With Text Section */
+.image__block {
+    padding-bottom: 15px;
+}
+
+.image-text__button--container .btn {
+    text-align: center;
+}
+
+.image-text__heading h2 {
+    text-transform: capitalize;
+}
 @media only screen and (min-width: 769px) {
   .image-text__wrapper {
     display: flex;
     align-items: center;
   }
-  
+  .image__block {
+    padding-bottom: 0;
+  }
   .text__block {
       padding-left: 60px;
   }
