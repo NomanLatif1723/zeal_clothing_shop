@@ -444,7 +444,7 @@
             "show_collection_price": false,
             "show_collection_timer": false,
             "timer_duration": "",
-            "collection_background_color": "#111111"
+            "collection_background_color": "#f1f3f4"
           }
         }
       },
