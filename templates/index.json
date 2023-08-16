@@ -421,6 +421,7 @@
         },
         "65759f6c-a32b-49a7-a282-f148b442a606": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "promo_product": "",
             "promo_heading": "Heading",
@@ -429,12 +430,12 @@
             "promo_button_link": "",
             "show_price": false,
             "show_timer": false,
-            "promo_background_color": "#111111",
-            "block_width": "full"
+            "promo_background_color": "#111111"
           }
         },
         "a456e5ec-2c29-4b2e-9d43-7edb7cbe604b": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "promo_collection": "",
             "collection_heading": "Heading",
@@ -443,8 +444,7 @@
             "collection_button_link": "",
             "show_collection_price": false,
             "show_collection_timer": false,
-            "collection_background_color": "#111111",
-            "block_width": "full"
+            "collection_background_color": "#111111"
           }
         }
       },
