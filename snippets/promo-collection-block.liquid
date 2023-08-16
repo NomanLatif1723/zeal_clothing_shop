@@ -6,7 +6,7 @@
     assign default = 'large'
     assign sizes = '(min-width: 1200px) 650px, 45vw'
 -%}
-<div class="promotional-grid__container promo-collection__wrapper">
+<div class="promotional-grid__container promo-collection__wrapper{% if collectionBackgroundColor contains '#f' %} text__dark{% else %} text__light{% endif %}">
   <div class="page__width">
     <div class="promo__flex promo-collection__flex">
       <div class="promo-collection__text">
@@ -26,7 +26,7 @@
           </div>
         {%- endif -%}
         {%- if collection_text != blank -%}
-          <div class="promo__description promo-collection__description rte">
+          <div class="promo__description promo-collection__description rte{% if collectionBackgroundColor contains '#f' %} text__dark{% else %} text__light{% endif %}">
             {{ collection_text }}
           </div>
         {%- endif -%}
@@ -54,7 +54,7 @@
           <div class="promo-btn__container">
             <a
               href="{{ collection_button_link }}"
-              class="btn btn__link btn__primary promo-product__btn"
+              class="btn btn__link promo-product__btn{% if collectionBackgroundColor contains '#f' %} btn__primary{% else %} btn-text__light{% endif %}"
               title="{{ collection_button_label }}">{{ collection_button_label }}</a>
           </div>
         {% endif %}
