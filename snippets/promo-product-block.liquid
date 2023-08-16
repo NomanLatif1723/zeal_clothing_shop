@@ -18,10 +18,10 @@
           <div class="promo-product__price">
             <span class="visually__hidden">{{ 'products.price.regular_price' | t }}</span>
             <span class="product__sale-price">{{ promo_product.price | money }}</span>
-            {%- unless promo_product.compare_at_price > promo_product.price -%}
+            {%- if promo_product.compare_at_price > promo_product.price -%}
               <span class="visually__hidden">{{ 'products.price.compare_price' | t }}</span>
               <span class="product__compare-price">{{ promo_product.compare_at_price | money }}</span>
-            {%- endunless -%}
+            {%- endif -%}
           </div>
         {%- endif -%}
         {%- if promo_text != blank -%}
