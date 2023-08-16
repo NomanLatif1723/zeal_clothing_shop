@@ -692,8 +692,8 @@
             "promo_text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
             "promo_button_label": "Buy Now",
             "promo_button_link": "shopify:\/\/products\/loose-wool-suit",
-            "show_price": false,
-            "show_timer": false,
+            "show_price": true,
+            "show_timer": true,
             "timer_duration": "",
             "promo_background_color": "#f1f3f4"
           }
