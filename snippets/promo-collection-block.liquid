@@ -100,8 +100,12 @@
             </div>
           {%- endif -%}
         {%- else -%}
-          {{ 'product-1' | placeholder_svg_tag: 'placeholder__image' }}
-          {{ 'product-2' | placeholder_svg_tag: 'placeholder__image' }}
+          <div class="sale-image__container">
+            {{ 'product-1' | placeholder_svg_tag: 'placeholder__image' }}
+          </div>
+          <div class="sale-image__container">
+            {{ 'product-2' | placeholder_svg_tag: 'placeholder__image' }}
+          </div>
         {%- endif -%}
 
       </div>
