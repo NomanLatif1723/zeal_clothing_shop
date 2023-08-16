@@ -5,7 +5,7 @@
     assign default = 'large'
     assign sizes = '(min-width: 1200px) 650px, 45vw'
 -%}
-<div class="promotional-grid__container promo-product__wrapper">
+<div class="promotional-grid__container promo-product__wrapper{% if bannerBackgroundColor contains '#fff' or bannerBackgroundColor contains '#f' %} text__dark{% else %}text__light{% endif %}">
   <div class="page__width">
     <div class="promo-product__flex">
       <div class="promo-flex__item promo-product__text">
