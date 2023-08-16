@@ -40,28 +40,31 @@
               -%}
             {%- endif -%}
           {%- when 'product' -%}
-          {%- render 'promo-product-block',
-             promoBackgroundColor: promoBackgroundColor,
-             promo_product: block.settings.promo_product,
-             promo_heading: block.settings.promo_heading,
-             promo_text: block.settings.promo_text,
-             promo_button_label: block.settings.promo_button_label,
-             promo_button_link: block.settings.promo_button_link,
-             show_price: block.settings.show_price,
-             show_timer: block.settings.show_timer
-          -%}
+          {%- if block.type == 'product' -%}
+            {%- render 'promo-product-block',
+               promoBackgroundColor: promoBackgroundColor,
+               promo_product: block.settings.promo_product,
+               promo_heading: block.settings.promo_heading,
+               promo_text: block.settings.promo_text,
+               promo_button_label: block.settings.promo_button_label,
+               promo_button_link: block.settings.promo_button_link,
+               show_price: block.settings.show_price,
+               show_timer: block.settings.show_timer
+            -%}
+          {%- endif -%}
           {%- when 'collection' -%}
-          {%- render 'promo-collection-block',
-             collectionBackgroundColor: collectionBackgroundColor,
-             promo_collection: block.settings.promo_collection,
-             collection_heading: block.settings.collection_heading,
-             collection_text: block.settings.collection_text,
-             collection_button_label: block.settings.collection_button_label,
-             collection_button_link: block.settings.collection_button_link,
-             show_collection_price: block.settings.show_collection_price,
-             show_collection_timer: block.settings.show_collection_timer
-          -%}
-
+          {%- if block.type == 'collection' -%}
+            {%- render 'promo-collection-block',
+               collectionBackgroundColor: collectionBackgroundColor,
+               promo_collection: block.settings.promo_collection,
+               collection_heading: block.settings.collection_heading,
+               collection_text: block.settings.collection_text,
+               collection_button_label: block.settings.collection_button_label,
+               collection_button_link: block.settings.collection_button_link,
+               show_collection_price: block.settings.show_collection_price,
+               show_collection_timer: block.settings.show_collection_timer
+            -%}
+          {%- endif -%}
 
         {%- endcase -%}
       </div>
