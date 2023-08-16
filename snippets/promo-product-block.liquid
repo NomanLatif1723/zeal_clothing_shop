@@ -61,7 +61,7 @@
       <div class="promo-flex__item promo-product__image">
         {% if productImage != blank %}
           <img
-            class="center-image__image"
+            class="promo-product__image"
             src="{{ productImage | img_url: default }}"
             srcset="
                       {{ productImage | img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
