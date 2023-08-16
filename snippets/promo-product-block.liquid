@@ -53,7 +53,7 @@
           <div class="promo-btn__container">
             <a
               href="{{ promo_button_link }}"
-              class="btn btn__link promo-product__btn{% if promoBackgroundColor contains '#f' %}btn__primary{% else %}btn-text__light{% endif %}"
+              class="btn btn__link promo-product__btn{% if promoBackgroundColor contains '#f' %} btn__primary{% else %} btn-text__light{% endif %}"
               title="{{ promo_button_label }}">{{ promo_button_label }}</a>
           </div>
         {% endif %}
