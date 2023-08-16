@@ -15,7 +15,11 @@
   <div class="promotional-grid">
     {%- for block in section.blocks -%}
       {%- style -%}
-        {%- assign bannerBackgroundColor = block.settings.banner_background_color -%}
+        {%- liquid
+           assign bannerBackgroundColor = block.settings.banner_background_color
+           assign promoBackgroundColor = block.settings.promo_background_color
+           assign collectionBackgroundColor = block.settings.collection_background_color
+        -%}
         .promotional-item-{{ block.id }} .promotional-banner__wrapper {
           background: #9d1339;
           background: {{ bannerBackgroundColor }};
@@ -37,6 +41,14 @@
             {%- endif -%}
           {%- when 'product' -%}
           {%- render 'promo-product-block',
+             promoBackgroundColor: promoBackgroundColor,
+             promo_product: block.settings.promo_product,
+             promo_heading: block.settings.promo_heading,
+             promo_text: block.settings.promo_text,
+             promo_button_label: block.settings.promo_button_label,
+             promo_button_link: block.settings.promo_button_link,
+             show_price: block.settings.show_price,
+             show_timer: block.settings.show_timer
             
           -%}
           {%- when 'collection' -%}
