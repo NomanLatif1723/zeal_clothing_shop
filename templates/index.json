@@ -418,10 +418,40 @@
             "banner_button_link_2": "shopify:\/\/collections\/womens-shorts",
             "banner_background_color": "#9d1339"
           }
+        },
+        "65759f6c-a32b-49a7-a282-f148b442a606": {
+          "type": "product",
+          "settings": {
+            "promo_product": "",
+            "promo_heading": "Heading",
+            "promo_text": "Description Text",
+            "promo_button_label": "Button",
+            "promo_button_link": "",
+            "show_price": false,
+            "show_timer": false,
+            "promo_background_color": "#111111",
+            "block_width": "full"
+          }
+        },
+        "a456e5ec-2c29-4b2e-9d43-7edb7cbe604b": {
+          "type": "collection",
+          "settings": {
+            "promo_collection": "",
+            "collection_heading": "Heading",
+            "collection_text": "Description Text",
+            "collection_button_label": "Button",
+            "collection_button_link": "",
+            "show_collection_price": false,
+            "show_collection_timer": false,
+            "collection_background_color": "#111111",
+            "block_width": "full"
+          }
         }
       },
       "block_order": [
-        "b71874c4-6c86-417e-87de-1853939421d4"
+        "b71874c4-6c86-417e-87de-1853939421d4",
+        "65759f6c-a32b-49a7-a282-f148b442a606",
+        "a456e5ec-2c29-4b2e-9d43-7edb7cbe604b"
       ],
       "settings": {
         "margin_top": 60,
