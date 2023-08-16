@@ -64,7 +64,7 @@
             {%- if block.type == 'collection' -%}
               {%- render 'promo-collection-block',
                  collectionBackgroundColor: collectionBackgroundColor,
-                 promo_collection: block.settings.promo_collection,
+                 promo_collection: collections[block.settings.promo_collection],
                  collection_heading: block.settings.collection_heading,
                  collection_text: block.settings.collection_text,
                  collection_button_label: block.settings.collection_button_label,
