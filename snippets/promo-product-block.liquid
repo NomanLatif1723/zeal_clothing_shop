@@ -15,7 +15,7 @@
           </div>
         {%- endif -%}
         {%- if show_price and promo_product != blank -%}
-          <div class="promo-product__price">
+          <div class="promo__price promo-product__price">
             <span class="visually__hidden">{{ 'products.price.regular_price' | t }}</span>
             <span class="product__sale-price">{{ promo_product.price | money }}</span>
             {%- if promo_product.compare_at_price > promo_product.price -%}
@@ -25,7 +25,7 @@
           </div>
         {%- endif -%}
         {%- if promo_text != blank -%}
-          <div class="promo-product__description rte{% if promoBackgroundColor contains '#f' %} text__dark{% else %} text__light{% endif %}">
+          <div class="promo__description promo-product__description rte{% if promoBackgroundColor contains '#f' %} text__dark{% else %} text__light{% endif %}">
             {{ promo_text }}
           </div>
         {%- endif -%}
