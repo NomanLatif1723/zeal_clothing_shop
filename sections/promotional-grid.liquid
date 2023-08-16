@@ -26,7 +26,7 @@
           {%- when 'banner' -%}
             {%- if block.type == 'banner' -%}
                 {%- render 'promo-banner',
-                   bannerBackgroundColor: block.settings.banner_background_color,
+                   bannerBackgroundColor: bannerBackgroundColor,
                    banner_heading: block.settings.banner_heading,
                    banner_text: block.settings.banner_text,
                    banner_button1: block.settings.banner_button_1,
