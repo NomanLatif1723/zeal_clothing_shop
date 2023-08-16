@@ -419,20 +419,6 @@
             "banner_background_color": "#9d1339"
           }
         },
-        "65759f6c-a32b-49a7-a282-f148b442a606": {
-          "type": "product",
-          "settings": {
-            "promo_product": "loose-wool-suit",
-            "promo_heading": "loose wool suit",
-            "promo_text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-            "promo_button_label": "Buy Now",
-            "promo_button_link": "shopify:\/\/products\/loose-wool-suit",
-            "show_price": true,
-            "show_timer": true,
-            "timer_duration": "24",
-            "promo_background_color": "#f1f3f4"
-          }
-        },
         "a456e5ec-2c29-4b2e-9d43-7edb7cbe604b": {
           "type": "collection",
           "settings": {
@@ -446,12 +432,26 @@
             "timer_duration": "",
             "collection_background_color": "#f1f3f4"
           }
+        },
+        "65759f6c-a32b-49a7-a282-f148b442a606": {
+          "type": "product",
+          "settings": {
+            "promo_product": "loose-wool-suit",
+            "promo_heading": "loose wool suit",
+            "promo_text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            "promo_button_label": "Buy Now",
+            "promo_button_link": "shopify:\/\/products\/loose-wool-suit",
+            "show_price": true,
+            "show_timer": true,
+            "timer_duration": "24",
+            "promo_background_color": "#f1f3f4"
+          }
         }
       },
       "block_order": [
         "b71874c4-6c86-417e-87de-1853939421d4",
-        "65759f6c-a32b-49a7-a282-f148b442a606",
-        "a456e5ec-2c29-4b2e-9d43-7edb7cbe604b"
+        "a456e5ec-2c29-4b2e-9d43-7edb7cbe604b",
+        "65759f6c-a32b-49a7-a282-f148b442a606"
       ],
       "settings": {
         "lazyload_images": false,
@@ -674,12 +674,67 @@
         "template--19980215124290__749c8cce-63f0-421f-a447-8f8b3a4bfc20-image-1",
         "template--19980215124290__749c8cce-63f0-421f-a447-8f8b3a4bfc20-text-1"
       ],
-      "disabled": true,
       "settings": {
         "layout_reverse": false,
         "lazyload_images": true,
         "margin_top": 60,
         "margin_bottom": 60
+      }
+    },
+    "8fdfff96-b244-46b9-8bf7-7bbd2dfd07c6": {
+      "type": "promotional-grid",
+      "blocks": {
+        "template--19980215124290__8fdfff96-b244-46b9-8bf7-7bbd2dfd07c6-banner-1": {
+          "type": "banner",
+          "disabled": true,
+          "settings": {
+            "banner_heading": "Banner Promotion",
+            "banner_text": "Welcome to Our Shop",
+            "banner_button_1": "Shop This",
+            "banner_button_link_1": "",
+            "banner_button_2": "Shop All",
+            "banner_button_link_2": "",
+            "banner_background_color": "#f1f3f4"
+          }
+        },
+        "template--19980215124290__8fdfff96-b244-46b9-8bf7-7bbd2dfd07c6-product-1": {
+          "type": "product",
+          "settings": {
+            "promo_product": "",
+            "promo_heading": "Heading",
+            "promo_text": "Description Text",
+            "promo_button_label": "Button",
+            "promo_button_link": "",
+            "show_price": false,
+            "show_timer": false,
+            "timer_duration": "",
+            "promo_background_color": "#111111"
+          }
+        },
+        "template--19980215124290__8fdfff96-b244-46b9-8bf7-7bbd2dfd07c6-collection-1": {
+          "type": "collection",
+          "settings": {
+            "promo_collection": "",
+            "collection_heading": "Heading",
+            "collection_text": "Description Text",
+            "collection_button_label": "Button",
+            "collection_button_link": "",
+            "show_collection_price": false,
+            "show_collection_timer": false,
+            "timer_duration": "",
+            "collection_background_color": "#111111"
+          }
+        }
+      },
+      "block_order": [
+        "template--19980215124290__8fdfff96-b244-46b9-8bf7-7bbd2dfd07c6-banner-1",
+        "template--19980215124290__8fdfff96-b244-46b9-8bf7-7bbd2dfd07c6-product-1",
+        "template--19980215124290__8fdfff96-b244-46b9-8bf7-7bbd2dfd07c6-collection-1"
+      ],
+      "settings": {
+        "lazyload_images": false,
+        "margin_top": 16,
+        "margin_bottom": 16
       }
     }
   },
@@ -699,6 +754,7 @@
     "0a5d7332-5a60-4baf-bf6a-adbba595c25e",
     "92018c5b-7aa4-4095-92a7-00221b583a17",
     "7b9de0b8-2dd6-471d-8652-5e3493fedd6b",
-    "749c8cce-63f0-421f-a447-8f8b3a4bfc20"
+    "749c8cce-63f0-421f-a447-8f8b3a4bfc20",
+    "8fdfff96-b244-46b9-8bf7-7bbd2dfd07c6"
   ]
 }
