@@ -16,56 +16,25 @@
     {%- for block in section.blocks -%}
       {%- style -%}
         {%- assign bannerBackgroundColor = block.settings.banner_background_color -%}
-        .promotional-item-{{ block.id }} .promotional-banner__wrapper {
+        .promotional-item-{{ block.id }}.promotional-banner__wrapper {
           background: #9d1339;
-          background: {{ bannerBackgroundColor }};
+          background: {{ bannerBackgroundColor }}
+          ;
         }
       {%- endstyle -%}
       <div class="promotional-grid__item promotional-item-{{ block.id }}">
         {%- case block.type -%}
           {%- when 'banner' -%}
-          <div class="promotional-grid__container promotional-banner__wrapper {% if bannerBackgroundColor contains '#fff' or bannerBackgroundColor contains '#f' %}text__dark{% else %}text__light{% endif %}">
-            <div class="page__width">
-              <div class="promotional-banner__content">
-                <div class="banner-text__container">
-                  {%- if block.settings.banner_heading != blank -%}
-                    <div class="main__heading banner__heading">
-                      <h2>{{ block.settings.banner_heading }}</h2>
-                    </div>
-                  {%- endif -%}
-
-                  {%- if block.settings.banner_text != blank -%}
-                    <div class="banner__text">
-                      {{ block.settings.banner_text }}
-                    </div>
-                  {%- endif -%}
-                </div>
-                <div class="banner-button__wrapper">
-                  {%- if block.settings.banner_button_1 != blank -%}
-                    <a
-                      class="btn btn__link btn__block"
-                      href="{{ block.settings.banner_button_link_1 }}"
-                      title="{{ block.settings.banner_button_1 }}">
-                      {{ block.settings.banner_button_1 }}
-                    </a>
-                  {%- endif -%}
-                  {%- if block.settings.banner_button_2 != blank -%}
-                    <a
-                      class="btn btn__link btn__outline {% if bannerBackgroundColor contains '#fff' or bannerBackgroundColor contains '#f' %}btn-text__dark{% else %}btn-text__light{% endif %}"
-                      href="{{ block.settings.banner_button_link_2 }}"
-                      title="{{ block.settings.banner_button_2 }}">
-                      {{ block.settings.banner_button_2 }}
-                    </a>
-                  {%- endif -%}
-                </div>
-              </div>
-            </div>
-          </div>
+          {%- render 'promo-banner' 
+            , block: block,
+            bannerBackgroundColor: bannerBackgroundColor -%}
 
           {%- when 'product' -%}
-
+          {%- render 'promo-product-block' 
+            , block: block -%}
           {%- when 'collection' -%}
-
+          {% render 'promo-collection-block' 
+           , block: block %}
 
 
         {%- endcase -%}
