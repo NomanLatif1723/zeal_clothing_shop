@@ -644,7 +644,7 @@
         "template--19980215124290__749c8cce-63f0-421f-a447-8f8b3a4bfc20-text-1"
       ],
       "settings": {
-        "layout_reverse": true,
+        "layout_reverse": false,
         "lazyload_images": true,
         "margin_top": 60,
         "margin_bottom": 60
