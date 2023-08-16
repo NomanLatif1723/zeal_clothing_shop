@@ -644,9 +644,9 @@
       ],
       "settings": {
         "layout_reverse": false,
-        "lazyload_images": false,
-        "margin_top": 16,
-        "margin_bottom": 16
+        "lazyload_images": true,
+        "margin_top": 60,
+        "margin_bottom": 60
       }
     }
   },
