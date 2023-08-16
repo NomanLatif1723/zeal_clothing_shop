@@ -429,6 +429,7 @@
             "promo_button_link": "shopify:\/\/products\/loose-wool-suit",
             "show_price": true,
             "show_timer": true,
+            "timer_duration": "24",
             "promo_background_color": "#f1f3f4"
           }
         },
@@ -443,6 +444,7 @@
             "collection_button_link": "",
             "show_collection_price": false,
             "show_collection_timer": false,
+            "timer_duration": "",
             "collection_background_color": "#111111"
           }
         }
