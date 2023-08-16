@@ -36,6 +36,11 @@
           background: #F1F3F4;
           background: {{ promoBackgroundColor }};
         }
+
+        .promotional-item-{{ block.id }} .promo-collection__wrapper {
+          background: #F1F3F4;
+          background: {{ collectionBackgroundColor }};
+        }
         
       {%- endstyle -%}
       <div class="promotional-grid__item promotional-item-{{ block.id }}">
