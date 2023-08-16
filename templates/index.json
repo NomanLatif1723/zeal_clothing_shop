@@ -701,15 +701,15 @@
         "template--19980215124290__8fdfff96-b244-46b9-8bf7-7bbd2dfd07c6-collection-1": {
           "type": "collection",
           "settings": {
-            "promo_collection": "",
+            "promo_collection": "promo-collection",
             "collection_heading": "Heading",
-            "collection_text": "Description Text",
-            "collection_button_label": "Button",
-            "collection_button_link": "",
-            "show_collection_price": false,
-            "show_collection_timer": false,
+            "collection_text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            "collection_button_label": "Buy Now",
+            "collection_button_link": "shopify:\/\/collections\/promo-collection",
+            "show_collection_price": true,
+            "show_collection_timer": true,
             "timer_duration": "",
-            "collection_background_color": "#111111"
+            "collection_background_color": "#f1f3f4"
           }
         }
       },
