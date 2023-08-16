@@ -441,8 +441,8 @@
             "collection_text": "Lorem Ipsum is simply dummy of the printing and typesetting industry. Lorem Ipsum has been text the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
             "collection_button_label": "Buy Now",
             "collection_button_link": "shopify:\/\/collections\/glasses",
-            "show_collection_price": false,
-            "show_collection_timer": false,
+            "show_collection_price": true,
+            "show_collection_timer": true,
             "timer_duration": "",
             "collection_background_color": "#f1f3f4"
           }
