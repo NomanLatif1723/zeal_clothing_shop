@@ -1,1 +1,85 @@
-product block
+{%- liquid 
+    assign productImage  = promo_product.featured_media.preview_image
+
+    assign ratio = 0.75
+    assign default = 'large'
+    assign sizes = '(min-width: 1200px) 650px, 45vw'
+-%}
+<div class="promotional-grid__container promo-product__wrapper">
+  <div class="page__width">
+    <div class="promo-product__flex">
+      <div class="promo-flex__item promo-product__text">
+        {%- if promo_heading != blank -%}
+          <div class="main__heading promo-product__heading">
+            <h2>{{ promo_heading }}</h2>
+          </div>
+        {%- endif -%}
+        {%- if show_price -%}
+          <div class="promo-product__price">
+            <span class="visually__hidden">{{ 'products.price.regular_price' | t }}</span>
+            <span class="product__sale-price">{{ promo_product.price | money }}</span>
+            {%- unless promo_product.compare_at_price > promo_product.price -%}
+              <span class="visually__hidden">{{ 'products.price.compare_price' | t }}</span>
+              <span class="product__compare-price">{{ promo_product.compare_at_price | money }}</span>
+            {%- endunless -%}
+          </div>
+        {%- endif -%}
+        {%- if promo_text != blank -%}
+          <div class="promo-product__description rte">
+            {{ promo_text }}
+          </div>
+        {%- endif -%}
+        {%- if show_timer -%}
+          <div class="promo-timer__wrapper">
+            <div class="timer__item timer__days">
+              <span>365</span>
+              <span>Days</span>
+            </div>
+            <div class="timer__item timer__hours">
+              <span>20</span>
+              <span>Hours</span>
+            </div>
+            <div class="timer__item timer__minutes">
+              <span>39</span>
+              <span>Min</span>
+            </div>
+            <div class="timer__item timer__seconds">
+              <span>36</span>
+              <span>Sec</span>
+            </div>
+          </div>
+        {%- endif -%}
+        {% if promo_button_label != blank %}
+          <div class="promo-btn__container">
+            <a
+              href="{{ promo_button_link }}"
+              class="btn btn__link btn__primary promo-product__btn"
+              title="{{ promo_button_label }}">{{ promo_button_label }}</a>
+          </div>
+        {% endif %}
+      </div>
+      <div class="promo-flex__item promo-product__image">
+        {% if productImage != blank %}
+          <img
+            class="center-image__image"
+            src="{{ productImage | img_url: default }}"
+            srcset="
+                      {{ productImage | img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
+                      {{ productImage | img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
+                      {{ productImage | img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
+                      {{ productImage | img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
+                      {{ productImage | img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
+                          "
+            width="{{ productImage.width }}"
+            height="{{ productImage.height }}"
+            loading="{{ lazyloading }}"
+            sizes="{{ sizes }}"
+            alt="{{ productImage.alt }}">
+        {% else %}
+          {{ 'product-1' | placeholder_svg_tag: 'placeholder__image' }}
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+</div>

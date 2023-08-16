@@ -1,1 +1,112 @@
-collection block
+{%- liquid 
+    assign collection_image_1  = promo_collection.product[0].featured_media.preview_image
+    assign collection_image_2  = promo_collection.product[1].featured_media.preview_image
+
+    assign ratio = 0.75
+    assign default = 'large'
+    assign sizes = '(min-width: 1200px) 650px, 45vw'
+-%}
+<div class="promotional-grid__container promo-collection__wrapper">
+  <div class="page__width">
+    <div class="promo-collection__flex">
+      <div class="promo-collection__text">
+        {%- if collection_heading != blank -%}
+          <div class="main__heading promo-collection__heading">
+            <h2>{{ collection_heading }}</h2>
+          </div>
+        {%- endif -%}
+        {%- if show_collection_price -%}
+          <div class="promo-collection__price">
+            <span class="visually__hidden">{{ 'products.price.regular_price' | t }}</span>
+            <span class="product__sale-price">{{ promo_product.price | money }}</span>
+            {%- unless promo_product.compare_at_price > promo_product.price -%}
+              <span class="visually__hidden">{{ 'products.price.compare_price' | t }}</span>
+              <span class="product__compare-price">{{ promo_product.compare_at_price | money }}</span>
+            {%- endunless -%}
+          </div>
+        {%- endif -%}
+        {%- if collection_text != blank -%}
+          <div class="promo-collection__description rte">
+            {{ collection_text }}
+          </div>
+        {%- endif -%}
+        {%- if show_collection_timer -%}
+          <div class="promo-timer__wrapper">
+            <div class="timer__item timer__days">
+              <span>365</span>
+              <span>Days</span>
+            </div>
+            <div class="timer__item timer__hours">
+              <span>20</span>
+              <span>Hours</span>
+            </div>
+            <div class="timer__item timer__minutes">
+              <span>39</span>
+              <span>Min</span>
+            </div>
+            <div class="timer__item timer__seconds">
+              <span>36</span>
+              <span>Sec</span>
+            </div>
+          </div>
+        {%- endif -%}
+        {% if collection_button_label != blank %}
+          <div class="promo-btn__container">
+            <a
+              href="{{ collection_button_link }}"
+              class="btn btn__link btn__primary promo-product__btn"
+              title="{{ collection_button_label }}">{{ collection_button_label }}</a>
+          </div>
+        {% endif %}
+      </div>
+      <div class="promo-collection__image">
+        {%- if promo_collection != blank -%}
+          {%- if collection_image_1 != blank -%}
+            <div class="sale-image__container">
+              <img
+                class="center-image__image"
+                src="{{ collection_image_1 | img_url: default }}"
+                srcset="
+                                      {{ collection_image_1 | img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
+                                      {{ collection_image_1 | img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
+                                      {{ collection_image_1 | img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
+                                      {{ collection_image_1 | img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
+                                      {{ collection_image_1 | img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
+                                          "
+                width="{{ collection_image_1.width }}"
+                height="{{ collection_image_1.height }}"
+                loading="{{ lazyloading }}"
+                sizes="{{ sizes }}"
+                alt="{{ collection_image_1.alt }}">
+            </div>
+          {%- endif -%}
+          {%- if collection_image_2 != blank -%}
+            <div class="sale-image__container">
+              <img
+                class="center-image__image"
+                src="{{ collection_image_2 | img_url: default }}"
+                srcset="
+                                      {{ collection_image_2 | img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
+                                      {{ collection_image_2 | img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
+                                      {{ collection_image_2 | img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
+                                      {{ collection_image_2 | img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
+                                      {{ collection_image_2 | img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
+                                          "
+                width="{{ collection_image_2.width }}"
+                height="{{ collection_image_1.height }}"
+                loading="{{ lazyloading }}"
+                sizes="{{ sizes }}"
+                alt="{{ collection_image_2.alt }}">
+            </div>
+          {%- endif -%}
+        {%- else -%}
+          {%- capture count -%}
+            {%- cycle 1, 2 -%}
+          {%- endcapture -%}
+          {{ 'product-' | append: count | placeholder_svg_tag: 'placeholder__image' }}
+        {%- endif -%}
+
+      </div>
+    </div>
+  </div>
+</div>
