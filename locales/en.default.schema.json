@@ -748,18 +748,6 @@
             },
             "promo_background_color": {
               "label": "Background"
-            },
-            "layout_width": {
-              "label": "Width",
-              "small": {
-                "label": "Small"
-              },
-              "medium": {
-                "label": "Medium"
-              },
-              "full": {
-                "label": "Full Screen"
-              }
             }
           }
         },
@@ -789,18 +777,6 @@
             },
             "collection_background_color": {
               "label": "Background"
-            },
-            "layout_width": {
-              "label": "Width",
-              "small": {
-                "label": "Small"
-              },
-              "medium": {
-                "label": "Medium"
-              },
-              "full": {
-                "label": "Full Screen"
-              }
             }
           }
         }
