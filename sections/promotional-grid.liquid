@@ -1,5 +1,4 @@
 {%- liquid
-   
    assign lazyloading = ''
    assign lazyloadImages = section.settings.lazyload_images
    if lazyloadImages
@@ -57,7 +56,8 @@
                  promo_button_label: block.settings.promo_button_label,
                  promo_button_link: block.settings.promo_button_link,
                  show_price: block.settings.show_price,
-                 show_timer: block.settings.show_timer
+                 show_timer: block.settings.show_timer,
+                 lazyloading: lazyloading
               -%}
             {%- endif -%}
           {%- when 'collection' -%}
@@ -70,7 +70,8 @@
                  collection_button_label: block.settings.collection_button_label,
                  collection_button_link: block.settings.collection_button_link,
                  show_collection_price: block.settings.show_collection_price,
-                 show_collection_timer: block.settings.show_collection_timer
+                 show_collection_timer: block.settings.show_collection_timer,
+                 lazyloading: lazyloading
               -%}
             {%- endif -%}
         {%- endcase -%}
