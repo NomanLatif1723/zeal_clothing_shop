@@ -745,8 +745,7 @@
               "label": "Show Timer"
             },
             "timer_duration": {
-              "label": "Timer Duration",
-              "info": "Provide Timer Durations for Days Hours and Minutes"
+              "label": "Timer Duration"
             },
             "button_label": {
               "label": "Button"
@@ -778,8 +777,7 @@
               "label": "Show Timer"
             },
             "timer_duration": {
-              "label": "Timer Duration",
-              "info": "Provide Timer Durations for Days Hours and Minutes"
+              "label": "Timer Duration"
             },
             "button_label": {
               "label": "Button"
