@@ -1,6 +1,6 @@
 {%- liquid 
-    assign collection_image_1  = promo_collection.product[0].featured_media.preview_image
-    assign collection_image_2  = promo_collection.product[1].featured_media.preview_image
+    assign collection_image_1  = collections[promo_collection].product[0].featured_media.preview_image
+    assign collection_image_2  = collections[promo_collection].product[1].featured_media.preview_image
 
     assign ratio = 0.75
     assign default = 'large'
