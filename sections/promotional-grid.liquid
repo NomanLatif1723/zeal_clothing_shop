@@ -26,6 +26,7 @@
           {%- when 'banner' -%}
           <div class="promotional-grid__container promotional-banner__wrapper {% if bannerBackgroundColor contains '#fff' or bannerBackgroundColor contains '#f' %}text__dark{% else %}text__light{% endif %}">
             {%- render 'promo-banner',
+               bannerBackgroundColor: bannerBackgroundColor,
                banner_heading: block.settings.banner_heading,
                banner_text: block.settings.banner_text,
                banner_button1: block.settings.banner_button_1,
