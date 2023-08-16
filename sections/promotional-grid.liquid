@@ -31,6 +31,12 @@
           background: #9d1339;
           background: {{ bannerBackgroundColor }};
         }
+
+        .promotional-item-{{ block.id }} .promo-product__wrapper {
+          background: #F1F3F4;
+          background: {{ promoBackgroundColor }};
+        }
+        
       {%- endstyle -%}
       <div class="promotional-grid__item promotional-item-{{ block.id }}">
         {%- case block.type -%}
