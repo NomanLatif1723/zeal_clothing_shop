@@ -25,7 +25,7 @@
           </div>
         {%- endif -%}
         {%- if promo_text != blank -%}
-          <div class="promo-product__description rte">
+          <div class="promo-product__description rte{% if bannerBackgroundColor contains '#f' %} text__dark{% else %} text__light{% endif %}">
             {{ promo_text }}
           </div>
         {%- endif -%}
