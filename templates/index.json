@@ -626,15 +626,16 @@
         "template--19980215124290__749c8cce-63f0-421f-a447-8f8b3a4bfc20-image-1": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/pexels-dellon-thomas-1228626_1.jpg"
           }
         },
         "template--19980215124290__749c8cce-63f0-421f-a447-8f8b3a4bfc20-text-1": {
           "type": "text",
           "settings": {
-            "heading": "Image With Text",
-            "text": "",
-            "button_label": "Shop Now",
-            "button_link": ""
+            "heading": "Comfort and Style, Together at Last",
+            "text": "<p>At Zeal, we believe that fashion and comfort should never be mutually exclusive. That's why we've curated a collection of loose-fitting clothing that combines the best of both worlds. Browse our collection today and discover the perfect balance of comfort and style.<\/p>",
+            "button_label": "Shop collection",
+            "button_link": "shopify:\/\/collections"
           }
         }
       },
