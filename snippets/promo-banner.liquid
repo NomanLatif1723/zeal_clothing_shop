@@ -1,37 +1,35 @@
-<div class="promotional-grid__container promotional-banner__wrapper {% if bannerBackgroundColor contains '#fff' or bannerBackgroundColor contains '#f' %}text__dark{% else %}text__light{% endif %}">
-  <div class="page__width">
-    <div class="promotional-banner__content">
-      <div class="banner-text__container">
-        {%- if banner_heading != blank -%}
-          <div class="main__heading banner__heading">
-            <h2>{{ banner_heading }}</h2>
-          </div>
-        {%- endif -%}
+<div class="page__width">
+  <div class="promotional-banner__content">
+    <div class="banner-text__container">
+      {%- if banner_heading != blank -%}
+        <div class="main__heading banner__heading">
+          <h2>{{ banner_heading }}</h2>
+        </div>
+      {%- endif -%}
 
-        {%- if banner_text != blank -%}
-          <div class="banner__text">
-            {{ banner_text }}
-          </div>
-        {%- endif -%}
-      </div>
-      <div class="banner-button__wrapper">
-        {%- if banner_button1 != blank -%}
-          <a
-            class="btn btn__link btn__block"
-            href="{{ banner_link1 }}"
-            title="{{ banner_button1 }}">
-            {{ banner_button1 }}
-          </a>
-        {%- endif -%}
-        {%- if banner_button2 != blank -%}
-          <a
-            class="btn btn__link btn__outline {% if bannerBackgroundColor contains '#fff' or bannerBackgroundColor contains '#f' %}btn-text__dark{% else %}btn-text__light{% endif %}"
-            href="{{ banner_link2 }}"
-            title="{{ banner_button2 }}">
-            {{ banner_button2 }}
-          </a>
-        {%- endif -%}
-      </div>
+      {%- if banner_text != blank -%}
+        <div class="banner__text">
+          {{ banner_text }}
+        </div>
+      {%- endif -%}
+    </div>
+    <div class="banner-button__wrapper">
+      {%- if banner_button1 != blank -%}
+        <a
+          class="btn btn__link btn__block"
+          href="{{ banner_link1 }}"
+          title="{{ banner_button1 }}">
+          {{ banner_button1 }}
+        </a>
+      {%- endif -%}
+      {%- if banner_button2 != blank -%}
+        <a
+          class="btn btn__link btn__outline {% if bannerBackgroundColor contains '#fff' or bannerBackgroundColor contains '#f' %}btn-text__dark{% else %}btn-text__light{% endif %}"
+          href="{{ banner_link2 }}"
+          title="{{ banner_button2 }}">
+          {{ banner_button2 }}
+        </a>
+      {%- endif -%}
     </div>
   </div>
 </div>
