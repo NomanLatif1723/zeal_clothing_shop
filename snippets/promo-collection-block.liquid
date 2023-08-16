@@ -64,7 +64,7 @@
           {%- if collection_image_1 != blank -%}
             <div class="sale-image__container">
               <img
-                class="promo-collection__image"
+                class=""
                 src="{{ collection_image_1 | img_url: default }}"
                 srcset="
                   {{ collection_image_1 | img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
@@ -83,7 +83,7 @@
           {%- if collection_image_2 != blank -%}
             <div class="sale-image__container">
               <img
-                class="promo-collection__image"
+                class=""
                 src="{{ collection_image_2 | img_url: default }}"
                 srcset="
                   {{ collection_image_2 | img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
