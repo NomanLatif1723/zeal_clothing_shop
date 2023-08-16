@@ -687,11 +687,11 @@
         "template--19980215124290__8fdfff96-b244-46b9-8bf7-7bbd2dfd07c6-product-1": {
           "type": "product",
           "settings": {
-            "promo_product": "",
-            "promo_heading": "Heading",
-            "promo_text": "Description Text",
-            "promo_button_label": "Button",
-            "promo_button_link": "",
+            "promo_product": "loose-wool-suit",
+            "promo_heading": "loose wool suit",
+            "promo_text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            "promo_button_label": "Buy Now",
+            "promo_button_link": "shopify:\/\/products\/loose-wool-suit",
             "show_price": false,
             "show_timer": false,
             "timer_duration": "",
