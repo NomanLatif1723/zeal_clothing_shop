@@ -741,11 +741,61 @@
             "show_price": {
               "label": "Show Price"
             },
-            "show_timer": {
-              "label": "Show Timer"
-            },
-            "timer_duration": {
-              "label": "Timer Duration"
+            "header_timer": {
+              "label": "Timer",
+              "show_timer": {
+                "label": "Show Timer"
+              },
+              "year": {
+                "label": "Year"
+              },
+              "month": {
+                "label": "Month",
+                "options": {
+                  "01": {
+                    "label": "January"
+                  },
+                  "02": {
+                    "label": "Febrary"
+                  },
+                  "03": {
+                    "label": "March"
+                  },
+                  "04": {
+                    "label": "April"
+                  },
+                  "05": {
+                    "label": "May"
+                  },
+                  "06": {
+                    "label": "June"
+                  },
+                  "07": {
+                    "label": "July"
+                  },
+                  "08": {
+                    "label": "August"
+                  },
+                  "09": {
+                    "label": "September"
+                  },
+                  "10": {
+                    "label": "October"
+                  },
+                  "11": {
+                    "label": "November"
+                  },
+                  "12": {
+                    "label": "December"
+                  }
+                }
+              },
+              "hour": {
+                "label": "Hour"
+              },
+              "minutes": {
+                "label": "Minute"
+              }
             },
             "button_label": {
               "label": "Button"
