@@ -364,15 +364,11 @@ initVideoSection();
 
 // Countdown Timer For Promotional Grid and Product Page
 function initCountdown() {
-  // Set the target date for the countdown (replace with your desired date)
   const targetDate = new Date("2023-12-31").getTime();
-
-  // Update the countdown every second
   const countdownInterval = setInterval(() => {
       const currentDate = new Date().getTime();
       const timeLeft = targetDate - currentDate;
-
-      // Calculate days, hours, minutes, and seconds
+    
       const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
       const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
@@ -387,7 +383,10 @@ function initCountdown() {
       // If the countdown is over, clear the interval
       if (timeLeft < 0) {
           clearInterval(countdownInterval);
-          document.getElementById("countdown").innerHTML = "Countdown expired";
+          document.querySelector(".timer__days").innerHTML = '00';
+      document.querySelector(".timer__hours").innerHTML = '00';
+      document.querySelector(".timer__minutes").innerHTML = '00';
+      document.querySelector(".timer__seconds").innerHTML = '00';
       }
   }, 1000); // Update every second
 }
