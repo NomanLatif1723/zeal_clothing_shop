@@ -29,18 +29,6 @@
             <h2>{{ collection_heading }}</h2>
           </div>
         {%- endif -%}
-        {% comment %}
-        {%- if show_collection_price and promo_collection != blank -%}
-          <div class="promo__price promo-collection__price">
-            <span class="visually__hidden">{{ 'products.price.regular_price' | t }}</span>
-            <span class="product__sale-price">{{ promo_collection.products[0].price | money }}</span>
-            {%- if promo_collection.products[0].compare_at_price > promo_collection.products[0].price -%}
-              <span class="visually__hidden">{{ 'products.price.compare_price' | t }}</span>
-              <span class="product__compare-price">{{ promo_collection.products[0].compare_at_price | money }}</span>
-            {%- endif -%}
-          </div>
-        {%- endif -%}
-        {% endcomment %}
         {%- if collection_text != blank -%}
           <div class="promo__description promo-collection__description rte{% if collectionBackgroundColor contains '#f' %} text__dark{% else %} text__light{% endif %}">
             {{ collection_text }}
