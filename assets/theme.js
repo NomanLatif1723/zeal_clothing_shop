@@ -404,5 +404,4 @@ function initCountdown() {
   }
 }
 initCountdown();
-  console.log("hy");
 })();
