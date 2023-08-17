@@ -366,7 +366,7 @@ initVideoSection();
 function initCountdown() {
   let countdownWrapper = document.querySelectorAll('.promo-product__wrapper[data-countdown]');
   countdownWrapper.forEach(wrapper => {
-    countdownCalculate();
+    countdownCalculate(wrapper);
   })
   function countdownCalculate() {
     let years = wrapper.getAttribute('data-year');
