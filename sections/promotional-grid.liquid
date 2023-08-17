@@ -48,13 +48,8 @@
           {%- when 'banner' -%}
             {%- if block.type == 'banner' -%}
               {%- render 'promo-banner',
-                 bannerBackgroundColor: bannerBackgroundColor,
-                 banner_heading: block.settings.banner_heading,
-                 banner_text: block.settings.banner_text,
-                 banner_button1: block.settings.banner_button_1,
-                 banner_link1: block.settings.banner_button_link_1,
-                 banner_button2: block.settings.banner_button_2,
-                 banner_link2: block.settings.banner_button_link_2
+                 block: block,
+                 bannerBackgroundColor: bannerBackgroundColor
               -%}
             {%- endif -%}
           {%- when 'product' -%}
