@@ -696,7 +696,7 @@
             "promo_button_link": "shopify:\/\/products\/loose-wool-suit",
             "show_price": true,
             "show_timer": true,
-            "timer_duration": "",
+            "timer_duration": "2017, 01,02",
             "promo_background_color": "#f1f3f4"
           }
         },
