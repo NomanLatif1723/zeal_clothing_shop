@@ -776,7 +776,7 @@
       "settings": {
         "custom_content": "<h2>Custom content<\/h2><p>Use this advanced section to build your own layouts or to add custom HTML, Liquid, or scripts.<\/p>",
         "margin_top": 60,
-        "margin_bottom": 0
+        "margin_bottom": 60
       }
     }
   },
