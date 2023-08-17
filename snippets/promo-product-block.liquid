@@ -1,9 +1,17 @@
-{%- liquid 
-    assign productImage  = promo_product.featured_media.preview_image
-
-    assign ratio = 0.75
-    assign default = 'large'
-    assign sizes = '(min-width: 1200px) 650px, 45vw'
+{%- liquid
+   assign promo_product = all_products[block.settings.promo_product]
+   assign promo_heading = block.settings.promo_heading
+   assign promo_text = block.settings.promo_text
+   assign promo_button_label = block.settings.promo_button_label
+   assign promo_button_link = block.settings.promo_button_link
+   assign show_price = block.settings.show_price
+   assign show_timer = block.settings.show_timer
+   assign timer_duration = block.settings.timer_duration
+   assign productImage  = promo_product.featured_media.preview_image
+    
+   assign ratio = 0.75
+   assign default = 'large'
+   assign sizes = '(min-width: 1200px) 650px, 45vw'
 -%}
 <div data-block-id="{{ block.id }}" class="promotional-grid__container promo-product__wrapper{% if promoBackgroundColor contains '#f' %} text__dark{% else %} text__light{% endif %}">
   <div class="page__width">
