@@ -374,6 +374,7 @@ function initCountdown() {
     let days = wrapper.getAttribute('data-day');
     let hours = wrapper.getAttribute('data-hour');
     let minutes = wrapper.getAttribute('data-minute');
+    let timerMessage = wrapper.querySelector('.timer__message');
 
     let endDate = `${years}-${months}-${days} ${hours}:${minutes}`;
     let targetDate = new Date(endDate).getTime();
@@ -399,6 +400,7 @@ function initCountdown() {
           wrapper.querySelector(".timer__hours").innerHTML = '00';
           wrapper.querySelector(".timer__minutes").innerHTML = '00';
           wrapper.querySelector(".timer__seconds").innerHTML = '00';
+          timerMessage.classList.add('timer-message__visible');
         }
     }, 1000);
   }
