@@ -366,7 +366,6 @@ initVideoSection();
 function initCountdown() {
   let countdownWrapper = document.querySelectorAll('[data-countdown]');
   countdownWrapper.forEach(wrapper => {
-    console.log(wrapper);
     let years = wrapper.getAttribute('data-year');
     let months = wrapper.getAttribute('data-month');
     let days = wrapper.getAttribute('data-day');
