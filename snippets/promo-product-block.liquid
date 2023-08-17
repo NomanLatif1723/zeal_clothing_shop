@@ -6,14 +6,19 @@
    assign promo_button_link = block.settings.promo_button_link
    assign show_price = block.settings.show_price
    assign show_timer = block.settings.show_timer
-   assign timer_duration = block.settings.timer_duration
+   assign year = block.settings.year
+   assign month = block.settings.month
+   assign day = block.settings.day
+   assign hour = block.settings.hour
+   assign minute = block.settings.minute
    assign productImage  = promo_product.featured_media.preview_image
     
    assign ratio = 0.75
    assign default = 'large'
    assign sizes = '(min-width: 1200px) 650px, 45vw'
 -%}
-<div data-block-id="{{ block.id }}" class="promotional-grid__container promo-product__wrapper{% if promoBackgroundColor contains '#f' %} text__dark{% else %} text__light{% endif %}">
+<div class="promotional-grid__container promo-product__wrapper{% if promoBackgroundColor contains '#f' %} text__dark{% else %} text__light{% endif %}"
+  data-year="{{ year }}" data-month="{{ month }}" data-day="{{ day }}" data-hour="{{ hour }}" data-minute="{{ minute }}">
   <div class="page__width">
     <div class="promo__flex">
       <div class="promo-flex__item promo-product__text">
