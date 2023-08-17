@@ -2224,3 +2224,31 @@ input[type="radio"]:checked + label {
       width: 50%;
   }
 }
+
+/* Image Comparison Section */
+.image-comparison__wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.image-comparison__btn-container {
+    text-align: center;
+}
+
+.image-comparison__text-block {
+    background: #FCF2EA;
+    padding: 30px 15px;
+}
+
+.image-comparison__text {
+    padding-bottom: 35px;
+}
+@media only screen and (min-width: 769px) {
+  .image-comparison__wrapper {
+    flex-direction: row;
+    align-items: center;
+  }
+  .image-comparison__item{
+    width: 50%;
+  }
+}
