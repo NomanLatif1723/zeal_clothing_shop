@@ -22,6 +22,7 @@
             <h2>{{ collection_heading }}</h2>
           </div>
         {%- endif -%}
+        {% comment %}
         {%- if show_collection_price and promo_collection != blank -%}
           <div class="promo__price promo-collection__price">
             <span class="visually__hidden">{{ 'products.price.regular_price' | t }}</span>
@@ -32,6 +33,7 @@
             {%- endif -%}
           </div>
         {%- endif -%}
+        {% endcomment %}
         {%- if collection_text != blank -%}
           <div class="promo__description promo-collection__description rte{% if collectionBackgroundColor contains '#f' %} text__dark{% else %} text__light{% endif %}">
             {{ collection_text }}
