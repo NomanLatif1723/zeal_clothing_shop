@@ -60,6 +60,7 @@
           {%- when 'product' -%}
             {%- if block.type == 'product' -%}
               {%- render 'promo-product-block',
+                 block: block,
                  promoBackgroundColor: promoBackgroundColor,
                  promo_product: all_products[block.settings.promo_product],
                  promo_heading: block.settings.promo_heading,
