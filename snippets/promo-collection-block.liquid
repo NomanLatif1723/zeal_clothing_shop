@@ -4,7 +4,11 @@
    assign collection_text = block.settings.collection_text
    assign collection_button_label = block.settings.collection_button_label
    assign collection_button_link = block.settings.collection_button_link
-   assign show_collection_timer = block.settings.show_collection_timer
+   assign year = block.settings.years
+   assign month = block.settings.months
+   assign day = block.settings.days
+   assign hour = block.settings.hours
+   assign minute = block.settings.minutes
    assign collection_image_1  = promo_collection.products[0].featured_media.preview_image
    assign collection_image_2  = promo_collection.products[1].featured_media.preview_image
 
@@ -13,7 +17,7 @@
    assign sizes = '(min-width: 1200px) 650px, 45vw'
 -%}
 <div class="promotional-grid__container promo-collection__wrapper{% if collectionBackgroundColor contains '#f' %} text__dark{% else %} text__light{% endif %}"
-  data-month="{{ month }}" data-day="{{ day }}" data-hour="{{ hour }}" data-minute="{{ minute }}" data-countdown>
+  data-year="{{ year }}" data-month="{{ month }}" data-day="{{ day }}" data-hour="{{ hour }}" data-minute="{{ minute }}" data-countdown>
   <div class="page__width">
     <div class="promo__flex promo-collection__flex">
       <div class="promo-collection__text">
