@@ -274,11 +274,31 @@
             ]
           },
           {
-            "type": "number",
+            "type": "range",
             "id": "day",
+            "min": 1,
+            "max": 31,
+            "step": 1,
             "label": "Day",
-            "default": 31,
-            "info": "Must be Between 1 to 31"
+            "default": 31
+          },
+          {
+            "type": "range",
+            "id": "hours",
+            "min": 1,
+            "max": 24,
+            "step": 1,
+            "label": "Hour",
+            "default": 12
+          },
+          {
+            "type": "range",
+            "id": "minutes",
+            "min": 1,
+            "max": 60,
+            "step": 1,
+            "label": "Minute",
+            "default": 12
           },
           {
             "type": "text",
