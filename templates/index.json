@@ -706,11 +706,11 @@
             "show_price": true,
             "promo_background_color": "#f1f3f4",
             "show_timer": true,
-            "years": 2024,
+            "years": 2023,
             "months": "08",
-            "days": 31,
-            "hours": 12,
-            "minutes": 12,
+            "days": 17,
+            "hours": 17,
+            "minutes": 8,
             "timer_completion_message": "<p>Timer Expired<\/p>"
           }
         },
