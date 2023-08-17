@@ -60,12 +60,12 @@
                 class="image-compare__image"
                 src="{{ before_image | img_url: default }}"
                 srcset="
-                          {{ before_image | img_url: 'medium' }} {%- if ratio < 1 -%}{{ 240 | times: ratio | round }}{%- else -%}240{%- endif -%}w,
-                          {{ before_image | img_url: 'large' }} {%- if ratio < 1 -%}{{ 480 | times: ratio | round }}{%- else -%}480{%- endif -%}w,
-                          {{ before_image | img_url: 'grande' }} {%- if ratio < 1 -%}{{ 600 | times: ratio | round }}{%- else -%}600{%- endif -%}w,
-                          {{ before_image | img_url: '1024x1024' }} {%- if ratio < 1 -%}{{ 1024 | times: ratio | round }}{%- else -%}1024{%- endif -%}w,
-                          {{ before_image | img_url: '2048x2048' }} {%- if ratio < 1 -%}{{ 2048 | times: ratio | round }}{%- else -%}2048{%- endif -%}w
-                      "
+                    {{ before_image | img_url: 'medium' }} {%- if ratio < 1 -%}{{ 240 | times: ratio | round }}{%- else -%}240{%- endif -%}w,
+                    {{ before_image | img_url: 'large' }} {%- if ratio < 1 -%}{{ 480 | times: ratio | round }}{%- else -%}480{%- endif -%}w,
+                    {{ before_image | img_url: 'grande' }} {%- if ratio < 1 -%}{{ 600 | times: ratio | round }}{%- else -%}600{%- endif -%}w,
+                    {{ before_image | img_url: '1024x1024' }} {%- if ratio < 1 -%}{{ 1024 | times: ratio | round }}{%- else -%}1024{%- endif -%}w,
+                    {{ before_image | img_url: '2048x2048' }} {%- if ratio < 1 -%}{{ 2048 | times: ratio | round }}{%- else -%}2048{%- endif -%}w
+                "
                 width="{{ before_image.width }}"
                 height="{{ before_image.height }}"
                 loading="{{ lazyloading }}"
@@ -79,12 +79,12 @@
                 class="image-compare__image"
                 src="{{ after_image | img_url: default }}"
                 srcset="
-                      {{ after_image | img_url: 'medium' }} {%- if ratio < 1 -%}{{ 240 | times: ratio | round }}{%- else -%}240{%- endif -%}w,
-                      {{ after_image | img_url: 'large' }} {%- if ratio < 1 -%}{{ 480 | times: ratio | round }}{%- else -%}480{%- endif -%}w,
-                      {{ after_image | img_url: 'grande' }} {%- if ratio < 1 -%}{{ 600 | times: ratio | round }}{%- else -%}600{%- endif -%}w,
-                      {{ after_image | img_url: '1024x1024' }} {%- if ratio < 1 -%}{{ 1024 | times: ratio | round }}{%- else -%}1024{%- endif -%}w,
-                      {{ after_image | img_url: '2048x2048' }} {%- if ratio < 1 -%}{{ 2048 | times: ratio | round }}{%- else -%}2048{%- endif -%}w
-                  "
+                    {{ after_image | img_url: 'medium' }} {%- if ratio < 1 -%}{{ 240 | times: ratio | round }}{%- else -%}240{%- endif -%}w,
+                    {{ after_image | img_url: 'large' }} {%- if ratio < 1 -%}{{ 480 | times: ratio | round }}{%- else -%}480{%- endif -%}w,
+                    {{ after_image | img_url: 'grande' }} {%- if ratio < 1 -%}{{ 600 | times: ratio | round }}{%- else -%}600{%- endif -%}w,
+                    {{ after_image | img_url: '1024x1024' }} {%- if ratio < 1 -%}{{ 1024 | times: ratio | round }}{%- else -%}1024{%- endif -%}w,
+                    {{ after_image | img_url: '2048x2048' }} {%- if ratio < 1 -%}{{ 2048 | times: ratio | round }}{%- else -%}2048{%- endif -%}w
+                "
                 width="{{ after_image.width }}"
                 height="{{ after_image.height }}"
                 loading="{{ lazyloading }}"
