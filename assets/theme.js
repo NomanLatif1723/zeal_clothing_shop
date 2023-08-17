@@ -364,8 +364,11 @@ initVideoSection();
 
 // Countdown Timer For Promotional Grid and Product Page
 function initCountdown() {
-  let countdownWrapper = document.querySelectorAll('[data-countdown]');
+  let countdownWrapper = document.querySelectorAll('.promo-product__wrapper[data-countdown]');
   countdownWrapper.forEach(wrapper => {
+    countdownCalculate();
+  })
+  function countdownCalculate() {
     let years = wrapper.getAttribute('data-year');
     let months = wrapper.getAttribute('data-month');
     let days = wrapper.getAttribute('data-day');
@@ -398,7 +401,7 @@ function initCountdown() {
           wrapper.querySelector(".timer__seconds").innerHTML = '00';
         }
     }, 1000);
-  })  
+  }
 }
 initCountdown();
 })();
