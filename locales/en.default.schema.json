@@ -773,9 +773,6 @@
             "show_price": {
               "label": "Show Price"
             },
-            "show_timer": {
-              "label": "Show Timer"
-            },
             "timer_duration": {
               "label": "Timer Duration"
             },
