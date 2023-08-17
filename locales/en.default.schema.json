@@ -823,8 +823,8 @@
             "promo_collection_text": {
               "label": "Text"
             },
-            "show_price": {
-              "label": "Show Price"
+            "show_timer": {
+              "label": "Show Timer"
             },
             "header_timer": {
               "label": "Timer",
