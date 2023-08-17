@@ -740,7 +740,7 @@
       "settings": {
         "lazyload_images": false,
         "margin_top": 60,
-        "margin_bottom": 0
+        "margin_bottom": 60
       }
     },
     "9bf713f2-c83f-4537-b1b8-93f4de7dc591": {
@@ -776,7 +776,7 @@
       "settings": {
         "custom_content": "<h2>Custom content<\/h2><p>Use this advanced section to build your own layouts or to add custom HTML, Liquid, or scripts.<\/p>",
         "margin_top": 60,
-        "margin_bottom": 60
+        "margin_bottom": 0
       }
     }
   },
