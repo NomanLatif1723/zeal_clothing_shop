@@ -380,7 +380,6 @@ function initCountdown() {
       document.querySelector(".timer__minutes").innerHTML = minutes;
       document.querySelector(".timer__seconds").innerHTML = seconds;
 
-      // If the countdown is over, clear the interval
       if (timeLeft < 0) {
           clearInterval(countdownInterval);
           document.querySelector(".timer__days").innerHTML = '00';
@@ -388,7 +387,7 @@ function initCountdown() {
       document.querySelector(".timer__minutes").innerHTML = '00';
       document.querySelector(".timer__seconds").innerHTML = '00';
       }
-  }, 1000); // Update every second
+  }, 1000);
 }
 initCountdown();
 })();
