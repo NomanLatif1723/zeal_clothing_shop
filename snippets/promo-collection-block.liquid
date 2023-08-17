@@ -72,9 +72,8 @@
         {%- if promo_collection != blank -%}
           {%- if collection_image_1 != blank -%}
             <div class="sale-image__container">
-              <a href="{{ promo_collection.products[0].url }}">
+              <a href="{{ promo_collection.products[0].url }}" title="{{ promo_collection.products[0].title }}">
                 <img
-                  class=""
                   src="{{ collection_image_1 | img_url: default }}"
                   srcset="
                     {{ collection_image_1 | img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
@@ -93,9 +92,8 @@
           {%- endif -%}
           {%- if collection_image_2 != blank -%}
             <div class="sale-image__container">
-              <a href="{{ promo_collection.products[1].url }}">
+              <a href="{{ promo_collection.products[1].url }}" title="{{ promo_collection.products[1].title }}">
                 <img
-                  class=""
                   src="{{ collection_image_2 | img_url: default }}"
                   srcset="
                     {{ collection_image_2 | img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
