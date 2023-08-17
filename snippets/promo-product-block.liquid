@@ -80,21 +80,23 @@
       </div>
       <div class="promo-flex__item promo-product__image">
         {% if productImage != blank %}
-          <img
-            class="promo-product__image"
-            src="{{ productImage | img_url: default }}"
-            srcset="
-              {{ productImage | img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
-              {{ productImage | img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
-              {{ productImage | img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
-              {{ productImage | img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
-              {{ productImage | img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
-            "
-            width="{{ productImage.width }}"
-            height="{{ productImage.height }}"
-            loading="{{ lazyloading }}"
-            sizes="{{ sizes }}"
-            alt="{{ productImage.alt }}">
+          <a href="{{ promo_product.url }}">
+            <img
+              class="promo-product__image"
+              src="{{ productImage | img_url: default }}"
+              srcset="
+                {{ productImage | img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
+                {{ productImage | img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
+                {{ productImage | img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
+                {{ productImage | img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
+                {{ productImage | img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
+              "
+              width="{{ productImage.width }}"
+              height="{{ productImage.height }}"
+              loading="{{ lazyloading }}"
+              sizes="{{ sizes }}"
+              alt="{{ productImage.alt }}">
+          </a>
         {% else %}
           {{ 'product-1' | placeholder_svg_tag: 'placeholder__image' }}
         {% endif %}
