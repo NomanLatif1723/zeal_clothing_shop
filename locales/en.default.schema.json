@@ -798,6 +798,9 @@
               },
               "minutes": {
                 "label": "Minute"
+              },
+              "timer_completion_message": {
+                "label": "Completion Message"
               }
             },
             "button_label": {
@@ -880,6 +883,9 @@
               },
               "minutes": {
                 "label": "Minute"
+              },
+              "timer_completion_message": {
+                "label": "Completion Message"
               }
             },
             "button_label": {
