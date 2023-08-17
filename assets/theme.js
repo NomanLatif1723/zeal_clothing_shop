@@ -376,6 +376,7 @@ function initCountdown() {
     let minutes = wrapper.getAttribute('data-minute');
 
     let endDate = `${years}-${months}-${days}${hours}:${minutes}`;
+    console.log(endDate);
     let targetDate = new Date(endDate).getTime();
 
     let countdownInterval = setInterval(() => {
