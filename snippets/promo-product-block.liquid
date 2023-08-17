@@ -62,6 +62,9 @@
                 <span>Sec</span>
               </div>
             </div>
+            {%- if completion_message != blank -%}
+              <div class="timer-message__complete">{{ completion_message }}</div>
+            {%- endif -%}
           </div>
         {%- endif -%}
         {% if promo_button_label != blank %}
