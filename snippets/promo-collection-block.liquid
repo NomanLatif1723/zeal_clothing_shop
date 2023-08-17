@@ -20,8 +20,7 @@
    assign default = 'large'
    assign sizes = '(min-width: 1200px) 650px, 45vw'
 -%}
-<div class="promotional-grid__container promo-collection__wrapper{% if collectionBackgroundColor contains '#f' %} text__dark{% else %} text__light{% endif %}"
-  data-year="{{ year }}" data-month="{{ month }}" data-day="{{ day }}" data-hour="{{ hour }}" data-minute="{{ minute }}" data-countdown>
+<div class="promotional-grid__container promo-collection__wrapper{% if collectionBackgroundColor contains '#f' %} text__dark{% else %} text__light{% endif %}">
   <div class="page__width">
     <div class="promo__flex promo-collection__flex">
       <div class="promo-collection__text">
@@ -48,7 +47,7 @@
           </div>
         {%- endif -%}
         {%- if show_collection_timer and promo_collection != blank -%}
-          <div class="promo-timer__banner">
+          <div class="promo-timer__banner" data-year="{{ year }}" data-month="{{ month }}" data-day="{{ day }}" data-hour="{{ hour }}" data-minute="{{ minute }}" data-countdown>
             <div class="promo-timer__wrapper">
               <div class="timer__item">
                 <span class="timer__days">10</span>
@@ -68,7 +67,7 @@
               </div>
             </div>
             {%- if completion_message != blank -%}
-              <div class="timer-message__complete">{{ completion_message }}</div>
+              <div class="timer-message__complete rte">{{ completion_message }}</div>
             {%- endif -%}
           </div>
         {%- endif -%}
