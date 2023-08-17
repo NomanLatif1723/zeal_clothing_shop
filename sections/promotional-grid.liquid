@@ -341,21 +341,109 @@
             "label": "t:sections.promotional-grid.blocks.collection.settings.button_link.label"
           },
           {
-            "type": "checkbox",
-            "id": "show_collection_timer",
-            "label": "t:sections.promotional-grid.blocks.collection.settings.show_timer.label",
-            "default": false
-          },
-          {
-            "type": "text",
-            "id": "timer_duration",
-            "label": "t:sections.promotional-grid.blocks.collection.settings.timer_duration.label"
-          },
-          {
             "type": "color",
             "id": "collection_background_color",
             "label": "t:sections.promotional-grid.blocks.collection.settings.collection_background_color.label",
             "default": "#111111"
+          },
+          {
+            "type": "header",
+            "content": "t:sections.promotional-grid.blocks.collection.settings.header_timer.label"
+          },
+          {
+            "type": "checkbox",
+            "id": "show_collection_timer",
+            "label": "t:sections.promotional-grid.blocks.collection.settings.header_timer.show_timer.label",
+            "default": false
+          },
+          {
+            "type": "number",
+            "id": "year",
+            "label": "t:sections.promotional-grid.blocks.collection.settings.header_timer.year.label",
+            "default": 2024
+          },
+          {
+            "type": "select",
+            "id": "month",
+            "label": "t:sections.promotional-grid.blocks.collection.settings.header_timer.month.label",
+            "default": "08",
+            "options": [
+              {
+                "value": "01",
+                "label": "t:sections.promotional-grid.blocks.collection.settings.header_timer.month.options.01.label"
+              },
+              {
+                "value": "02",
+                "label": "t:sections.promotional-grid.blocks.collection.settings.header_timer.month.options.02.label"
+              },
+              {
+                "value": "03",
+                "label": "t:sections.promotional-grid.blocks.collection.settings.header_timer.month.options.03.label"
+              },
+              {
+                "value": "04",
+                "label": "t:sections.promotional-grid.blocks.collection.settings.header_timer.month.options.04.label"
+              },
+              {
+                "value": "05",
+                "label": "t:sections.promotional-grid.blocks.collection.settings.header_timer.month.options.05.label"
+              },
+              {
+                "value": "06",
+                "label": "t:sections.promotional-grid.blocks.collection.settings.header_timer.month.options.06.label"
+              },
+              {
+                "value": "07",
+                "label": "t:sections.promotional-grid.blocks.collection.settings.header_timer.month.options.07.label"
+              },
+              {
+                "value": "08",
+                "label": "t:sections.promotional-grid.blocks.collection.settings.header_timer.month.options.08.label"
+              },
+              {
+                "value": "09",
+                "label": "t:sections.promotional-grid.blocks.collection.settings.header_timer.month.options.09.label"
+              },
+              {
+                "value": "10",
+                "label": "t:sections.promotional-grid.blocks.collection.settings.header_timer.month.options.10.label"
+              },
+              {
+                "value": "11",
+                "label": "t:sections.promotional-grid.blocks.collection.settings.header_timer.month.options.11.label"
+              },
+              {
+                "value": "12",
+                "label": "t:sections.promotional-grid.blocks.collection.settings.header_timer.month.options.12.label"
+              }
+            ]
+          },
+          {
+            "type": "range",
+            "id": "day",
+            "min": 1,
+            "max": 31,
+            "step": 1,
+            "label": "t:sections.promotional-grid.blocks.collection.settings.header_timer.day.label",
+            "default": 31
+          },
+          {
+            "type": "range",
+            "id": "hours",
+            "min": 0,
+            "max": 23,
+            "step": 1,
+            "label": "t:sections.promotional-grid.blocks.collection.settings.header_timer.hour.label",
+            "default": 12
+          },
+          {
+            "type": "range",
+            "id": "minutes",
+            "min": 1,
+            "max": 60,
+            "step": 1,
+            "label": "t:sections.promotional-grid.blocks.collection.settings.header_timer.minutes.label",
+            "default": 12
           }
         ]
       }
