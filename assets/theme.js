@@ -365,7 +365,7 @@ initVideoSection();
 // Countdown Timer For Promotional Grid and Product Page
 function initCountdown() {
   // Set the target date for the countdown (replace with your desired date)
-  const targetDate = new Date("2023-12-31T23:59:59").getTime();
+  const targetDate = new Date("2023-12-31").getTime();
 
   // Update the countdown every second
   const countdownInterval = setInterval(() => {
