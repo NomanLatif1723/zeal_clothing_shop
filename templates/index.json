@@ -729,7 +729,7 @@
             "days": 17,
             "hours": 1,
             "minutes": 5,
-            "timer_completion_message": ""
+            "timer_completion_message": "<p>Timer Completed<\/p>"
           }
         }
       },
