@@ -385,10 +385,10 @@ function initCountdown() {
         const second = Math.floor((timeLeft % (1000 * 60)) / 1000);
   
         // Display the countdown
-        wrapper.querySelector(".timer__days").innerHTML = days;
-        wrapper.querySelector(".timer__hours").innerHTML = hours;
-        wrapper.querySelector(".timer__minutes").innerHTML = minutes;
-        wrapper.querySelector(".timer__seconds").innerHTML = seconds;
+        wrapper.querySelector(".timer__days").innerHTML = day;
+        wrapper.querySelector(".timer__hours").innerHTML = hour;
+        wrapper.querySelector(".timer__minutes").innerHTML = minute;
+        wrapper.querySelector(".timer__seconds").innerHTML = second;
   
         if (timeLeft < 0) {
           clearInterval(countdownInterval);
