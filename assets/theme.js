@@ -366,14 +366,14 @@ initVideoSection();
 function initCountdown() {
   let countdownWrapper = document.querySelectorAll('.promo-product__wrapper[data-countdown]');
   countdownWrapper.forEach(wrapper => {
-    countdownCalculate(item);
+    countdownCalculate(wrapper);
   })
-  function countdownCalculate(item) {
-    let years = item.getAttribute('data-year');
-    let months = item.getAttribute('data-month');
-    let days = item.getAttribute('data-day');
-    let hours = item.getAttribute('data-hour');
-    let minutes = item.getAttribute('data-minute');
+  function countdownCalculate(wrapper) {
+    let years = wrapper.getAttribute('data-year');
+    let months = wrapper.getAttribute('data-month');
+    let days = wrapper.getAttribute('data-day');
+    let hours = wrapper.getAttribute('data-hour');
+    let minutes = wrapper.getAttribute('data-minute');
 
     let endDate = `${years}-${months}-${days}${hours}:${minutes}`;
     let targetDate = new Date(endDate).getTime();
@@ -388,17 +388,17 @@ function initCountdown() {
         const second = Math.floor((timeLeft % (1000 * 60)) / 1000);
   
         // Display the countdown
-        item.querySelector(".timer__days").innerHTML = day;
-        item.querySelector(".timer__hours").innerHTML = hour;
-        item.querySelector(".timer__minutes").innerHTML = minute;
-        item.querySelector(".timer__seconds").innerHTML = second;
+        wrapper.querySelector(".timer__days").innerHTML = day;
+        wrapper.querySelector(".timer__hours").innerHTML = hour;
+        wrapper.querySelector(".timer__minutes").innerHTML = minute;
+        wrapper.querySelector(".timer__seconds").innerHTML = second;
   
         if (timeLeft < 0) {
           clearInterval(countdownInterval);
-          item.querySelector(".timer__days").innerHTML = '00';
-          item.querySelector(".timer__hours").innerHTML = '00';
-          item.querySelector(".timer__minutes").innerHTML = '00';
-          item.querySelector(".timer__seconds").innerHTML = '00';
+          wrapper.querySelector(".timer__days").innerHTML = '00';
+          wrapper.querySelector(".timer__hours").innerHTML = '00';
+          wrapper.querySelector(".timer__minutes").innerHTML = '00';
+          wrapper.querySelector(".timer__seconds").innerHTML = '00';
         }
     }, 1000);
   }
