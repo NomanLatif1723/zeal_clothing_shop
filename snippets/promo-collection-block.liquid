@@ -1,10 +1,17 @@
-{%- liquid 
-    assign collection_image_1  = promo_collection.products[0].featured_media.preview_image
-    assign collection_image_2  = promo_collection.products[1].featured_media.preview_image
+{%- liquid
+   assign promo_collection = collections[block.settings.promo_collection]
+   assign collection_heading = block.settings.collection_heading
+   assign collection_text = block.settings.collection_text
+   assign collection_button_label = block.settings.collection_button_label
+   assign collection_button_link = block.settings.collection_button_link
+   assign show_collection_price = block.settings.show_collection_price
+   assign show_collection_timer = block.settings.show_collection_timer
+   assign collection_image_1  = promo_collection.products[0].featured_media.preview_image
+   assign collection_image_2  = promo_collection.products[1].featured_media.preview_image
 
-    assign ratio = 0.75
-    assign default = 'large'
-    assign sizes = '(min-width: 1200px) 650px, 45vw'
+   assign ratio = 0.75
+   assign default = 'large'
+   assign sizes = '(min-width: 1200px) 650px, 45vw'
 -%}
 <div class="promotional-grid__container promo-collection__wrapper{% if collectionBackgroundColor contains '#f' %} text__dark{% else %} text__light{% endif %}">
   <div class="page__width">
