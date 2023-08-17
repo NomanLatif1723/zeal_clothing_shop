@@ -815,7 +815,7 @@
           "name": "Collection",
           "settings": {
             "promo_collection": {
-              "label": "Product"
+              "label": "Collection"
             },
             "promo_collection_heading": {
               "label": "Heading"
