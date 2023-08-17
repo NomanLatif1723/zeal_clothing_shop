@@ -379,7 +379,10 @@ function initCountdown() {
       const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
       // Display the countdown
-      document.querySelector(".timer__days").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+      document.querySelector(".timer__days").innerHTML = days;
+      document.querySelector(".timer__hours").innerHTML = hours;
+      document.querySelector(".timer__minutes").innerHTML = minutes;
+      document.querySelector(".timer__seconds").innerHTML = seconds;
 
       // If the countdown is over, clear the interval
       if (timeLeft < 0) {
