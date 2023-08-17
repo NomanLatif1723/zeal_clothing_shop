@@ -47,7 +47,7 @@
           </div>
         {%- endif -%}
         {%- if show_collection_timer and promo_collection != blank -%}
-          <div class="promo-timer__banner" data-year="{{ year }}" data-month="{{ month }}" data-day="{{ day }}" data-hour="{{ hour }}" data-minute="{{ minute }}" data-countdown>
+          <div class="promo-timer__banner" data-year="{{ year }}" data-month="{{ month }}" data-day="{{ day }}" data-hour="{{ hour }}" data-minute="{{ minute }}" data-message="{{ completion_message }}" data-countdown>
             <div class="promo-timer__wrapper">
               <div class="timer__item">
                 <span class="timer__days">10</span>
@@ -67,7 +67,7 @@
               </div>
             </div>
             {%- if completion_message != blank -%}
-              <div class="timer-message__complete rte">{{ completion_message }}</div>
+              <div class="timer__message rte">{{ completion_message }}</div>
             {%- endif -%}
           </div>
         {%- endif -%}
