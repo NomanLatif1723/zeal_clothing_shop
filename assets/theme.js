@@ -364,30 +364,41 @@ initVideoSection();
 
 // Countdown Timer For Promotional Grid and Product Page
 function initCountdown() {
-  const targetDate = new Date("2023-12-31").getTime();
-  const countdownInterval = setInterval(() => {
-      const currentDate = new Date().getTime();
-      const timeLeft = targetDate - currentDate;
-    
-      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+  let countdownWrapper = document.querySelectorAll('[data-countdown]');
+  countdownWrapper.forEach(wrapper => {
+    let years = wrapper.getAttribute('data-year');
+    let months = wrapper.getAttribute('data-month');
+    let days = wrapper.getAttribute('data-day');
+    let hours = wrapper.getAttribute('data-hour');
+    let minutes = wrapper.getAttribute('data-minute');
 
-      // Display the countdown
-      document.querySelector(".timer__days").innerHTML = days;
-      document.querySelector(".timer__hours").innerHTML = hours;
-      document.querySelector(".timer__minutes").innerHTML = minutes;
-      document.querySelector(".timer__seconds").innerHTML = seconds;
+    let endDate = `${years}-${months}-${days}${hours}:${minutes}`;
+    let targetDate = new Date(endDate).getTime();
 
-      if (timeLeft < 0) {
+    let countdownInterval = setInterval(() => {
+        let currentDate = new Date().getTime();
+        let timeLeft = targetDate - currentDate;
+      
+        const day = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hour = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minute = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const second = Math.floor((timeLeft % (1000 * 60)) / 1000);
+  
+        // Display the countdown
+        wrapper.querySelector(".timer__days").innerHTML = days;
+        wrapper.querySelector(".timer__hours").innerHTML = hours;
+        wrapper.querySelector(".timer__minutes").innerHTML = minutes;
+        wrapper.querySelector(".timer__seconds").innerHTML = seconds;
+  
+        if (timeLeft < 0) {
           clearInterval(countdownInterval);
-          document.querySelector(".timer__days").innerHTML = '00';
-      document.querySelector(".timer__hours").innerHTML = '00';
-      document.querySelector(".timer__minutes").innerHTML = '00';
-      document.querySelector(".timer__seconds").innerHTML = '00';
-      }
-  }, 1000);
+          wrapper.querySelector(".timer__days").innerHTML = '00';
+          wrapper.querySelector(".timer__hours").innerHTML = '00';
+          wrapper.querySelector(".timer__minutes").innerHTML = '00';
+          wrapper.querySelector(".timer__seconds").innerHTML = '00';
+        }
+    }, 1000);
+  })  
 }
 initCountdown();
 })();
