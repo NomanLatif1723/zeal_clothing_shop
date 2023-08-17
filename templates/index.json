@@ -434,7 +434,8 @@
             "months": "08",
             "days": 31,
             "hours": 12,
-            "minutes": 12
+            "minutes": 12,
+            "timer_completion_message": ""
           }
         },
         "65759f6c-a32b-49a7-a282-f148b442a606": {
@@ -453,7 +454,8 @@
             "months": "08",
             "days": 31,
             "hours": 12,
-            "minutes": 12
+            "minutes": 12,
+            "timer_completion_message": ""
           }
         }
       },
@@ -708,7 +710,8 @@
             "months": "08",
             "days": 31,
             "hours": 12,
-            "minutes": 12
+            "minutes": 12,
+            "timer_completion_message": "<p>Timer Expired<\/p>"
           }
         },
         "template--19980215124290__8fdfff96-b244-46b9-8bf7-7bbd2dfd07c6-collection-1": {
@@ -725,7 +728,8 @@
             "months": "08",
             "days": 17,
             "hours": 1,
-            "minutes": 5
+            "minutes": 5,
+            "timer_completion_message": ""
           }
         }
       },
