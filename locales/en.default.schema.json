@@ -790,6 +790,9 @@
                   }
                 }
               },
+              "day": {
+                "label": "Day"
+              },
               "hour": {
                 "label": "Hour"
               },
