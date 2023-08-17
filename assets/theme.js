@@ -364,7 +364,7 @@ initVideoSection();
 
 // Countdown Timer For Promotional Grid and Product Page
 function initCountdown() {
-  let countdownWrapper = document.querySelectorAll('.promo-product__wrapper[data-countdown]');
+  let countdownWrapper = document.querySelectorAll('[data-countdown]');
   countdownWrapper.forEach(wrapper => {
     countdownCalculate(wrapper);
   })
