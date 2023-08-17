@@ -396,10 +396,10 @@ function initCountdown() {
   
         if (timeLeft < 0) {
           clearInterval(countdownInterval);
-          // wrapper.querySelector(".timer__days").innerHTML = '00';
-          // wrapper.querySelector(".timer__hours").innerHTML = '00';
-          // wrapper.querySelector(".timer__minutes").innerHTML = '00';
-          // wrapper.querySelector(".timer__seconds").innerHTML = '00';
+          wrapper.querySelector(".timer__days").innerHTML = '10';
+          wrapper.querySelector(".timer__hours").innerHTML = '12';
+          wrapper.querySelector(".timer__minutes").innerHTML = '20';
+          wrapper.querySelector(".timer__seconds").innerHTML = '59';
           timerMessage.classList.add('timer-message__visible');
         }
     }, 1000);
