@@ -1,0 +1,64 @@
+{%- liquid
+   assign custom_content = section.settings.custom_content
+-%}
+{%- style -%}
+  .main__section-{{ section.id }}{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  @media only screen and (min-width: 769px) {
+    .main__section-{{ section.id }}{
+      margin-top: {{ section.settings.margin_top }}px;
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<section class="custom-content main__section-{{ section.id }}">
+  <div class="page__width">
+    <div class="custom-content__wrapper">
+      {%- if custom_content != blank -%}
+        {{ custom_content }}
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "t:sections.custom-content.name",
+    "class": "main__section",
+    "settings": [
+      {
+        "type": "liquid",
+        "id": "custom_content",
+        "label": "t:sections.custom-content.settings.custom_content.label",
+        "default": "Custom Content Here"
+      }, {
+        "type": "header",
+        "content": "t:sections.custom-content.settings.header_spacing.label"
+      }, {
+        "type": "range",
+        "id": "margin_top",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "label": "t:sections.custom-content.settings.header_spacing.top_spacing.label",
+        "default": 16
+      }, {
+        "type": "range",
+        "id": "margin_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "label": "t:sections.custom-content.settings.header_spacing.bottom_spacing.label",
+        "default": 16
+      }
+    ],
+    "presets": [
+      {
+        "name": "t:sections.custom-content.presets.name"
+      }
+    ]
+  }
+{% endschema %}

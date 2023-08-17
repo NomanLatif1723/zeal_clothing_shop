@@ -1,0 +1,208 @@
+{%- liquid
+  assign lazyloading = ''
+  assign lazyloadImages = section.settings.lazyload_images
+  if lazyloadImages
+  assign lazyloading = 'lazy'
+  endif
+
+  assign ratio = 0.75
+  assign default = 'large'
+  assign sizes = '(min-width: 1200px) 650px, 45vw'
+-%}
+{%- style -%}
+  .main__section-{{ section.id }}{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  @media only screen and (min-width: 769px) {
+    .main__section-{{ section.id }}{
+      margin-top: {{ section.settings.margin_top }}px;
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<section class="image-comparison main__section-{{ settings.id }}">
+  <div class="page__width">
+    <div class="image-comparison__wrapper">
+      {%- for block in section.blocks -%}
+        {%- liquid
+          assign compare_heading = block.settings.compare_heading
+          assign compare_text = block.settings.compare_text
+          assign button_heading = block.settings.button_heading
+          assign button_link = block.settings.button_link
+          assign before_image = block.settings.before_image
+          assign after_image = block.settings.after_image
+        -%}
+        {%- case block.type -%}
+          {%- when 'text' -%}
+          <div class="image-comparison__item image-comparison__text-block">
+            {%- if compare_heading != blank -%}
+              <div class="main__heading image-comparison__heading">
+                <h2>{{ compare_heading }}</h2>
+              </div>
+            {%- endif -%}
+            {%- if compare_text != blank -%}
+              <div class="image-comparison__text rte">{{ compare_text }}</div>
+            {%- endif -%}
+            {%- if button_heading != blank -%}
+              <div class="image-comparison__btn-container">
+                <a
+                  href="{{ button_link }}"
+                  class="btn btn__link btn__primary"
+                  title="{{ button_heading }}">{{ button_heading }}</a>
+              </div>
+            {%- endif -%}
+          </div>
+          {%- when 'compare-image' -%}
+          <div class="image-comparison__item image-comparison__image-block">
+            {%- if before_image != blank -%}
+              <img
+                class="image-compare__image"
+                src="{{ before_image | img_url: default }}"
+                srcset="
+                          {{ before_image | img_url: 'medium' }} {%- if ratio < 1 -%}{{ 240 | times: ratio | round }}{%- else -%}240{%- endif -%}w,
+                          {{ before_image | img_url: 'large' }} {%- if ratio < 1 -%}{{ 480 | times: ratio | round }}{%- else -%}480{%- endif -%}w,
+                          {{ before_image | img_url: 'grande' }} {%- if ratio < 1 -%}{{ 600 | times: ratio | round }}{%- else -%}600{%- endif -%}w,
+                          {{ before_image | img_url: '1024x1024' }} {%- if ratio < 1 -%}{{ 1024 | times: ratio | round }}{%- else -%}1024{%- endif -%}w,
+                          {{ before_image | img_url: '2048x2048' }} {%- if ratio < 1 -%}{{ 2048 | times: ratio | round }}{%- else -%}2048{%- endif -%}w
+                      "
+                width="{{ before_image.width }}"
+                height="{{ before_image.height }}"
+                loading="{{ lazyloading }}"
+                sizes="{{ sizes }}"
+                alt="{{ before_image.alt }}">
+            {%- else -%}
+              {{ 'image' | placeholder_svg_tag: "placeholder__image" }}
+            {%- endif -%}
+            {%- if after_image != blank -%}
+              <img
+                class="image-compare__image"
+                src="{{ after_image | img_url: default }}"
+                srcset="
+                      {{ after_image | img_url: 'medium' }} {%- if ratio < 1 -%}{{ 240 | times: ratio | round }}{%- else -%}240{%- endif -%}w,
+                      {{ after_image | img_url: 'large' }} {%- if ratio < 1 -%}{{ 480 | times: ratio | round }}{%- else -%}480{%- endif -%}w,
+                      {{ after_image | img_url: 'grande' }} {%- if ratio < 1 -%}{{ 600 | times: ratio | round }}{%- else -%}600{%- endif -%}w,
+                      {{ after_image | img_url: '1024x1024' }} {%- if ratio < 1 -%}{{ 1024 | times: ratio | round }}{%- else -%}1024{%- endif -%}w,
+                      {{ after_image | img_url: '2048x2048' }} {%- if ratio < 1 -%}{{ 2048 | times: ratio | round }}{%- else -%}2048{%- endif -%}w
+                  "
+                width="{{ after_image.width }}"
+                height="{{ after_image.height }}"
+                loading="{{ lazyloading }}"
+                sizes="{{ sizes }}"
+                alt="{{ after_image.alt }}">
+            {%- else -%}
+              {{ 'image' | placeholder_svg_tag: "placeholder__image" }}
+            {%- endif -%}
+            <input
+              type="range"
+              min="0"
+              max="100"
+              value="50"
+              aria-label="Percentage of before photo shown"
+              class="slider" />
+            <div class="slider-line" aria-hidden="true"></div>
+            <div class="slider-button" aria-hidden="true">
+              {%- render 'icon-compare-arrow' -%}
+            </div>
+          </div>
+        {%- endcase -%}
+
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "t:sections.image-comparison.name",
+    "class": "main__section",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "lazyload_images",
+        "label": "t:sections.image-comparison.settings.lazyload_images.label",
+        "default": false,
+        "info": "t:sections.image-comparison.settings.lazyload_images.info"
+      }, {
+        "type": "header",
+        "content": "t:sections.image-comparison.settings.header_spacing.label"
+      }, {
+        "type": "range",
+        "id": "margin_top",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "label": "t:sections.image-comparison.settings.header_spacing.top_spacing.label",
+        "default": 16
+      }, {
+        "type": "range",
+        "id": "margin_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "label": "t:sections.image-comparison.settings.header_spacing.bottom_spacing.label",
+        "default": 16
+      }
+    ],
+    "blocks": [
+      {
+        "type": "text",
+        "name": "t:sections.image-comparison.blocks.text.name",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "compare_heading",
+            "label": "t:sections.image-comparison.blocks.text.settings.compare_heading.label",
+            "default": "Image Comparison"
+          }, {
+            "type": "textarea",
+            "id": "compare_text",
+            "label": "t:sections.image-comparison.blocks.text.settings.compare_text.label",
+            "default": "Image Comparison Description"
+          }, {
+            "type": "text",
+            "id": "button_heading",
+            "label": "t:sections.image-comparison.blocks.text.settings.button_heading.label",
+            "default": "Buy Now"
+          }, {
+            "type": "url",
+            "id": "button_link",
+            "label": "t:sections.image-comparison.blocks.text.settings.button_link.label"
+          }
+        ]
+      }, {
+        "type": "compare-image",
+        "name": "t:sections.image-comparison.blocks.compare-image.name",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "before_image",
+            "label": "t:sections.image-comparison.blocks.compare-image.settings.before_image.label"
+          }, {
+            "type": "image_picker",
+            "id": "after_image",
+            "label": "t:sections.image-comparison.blocks.compare-image.settings.after_image.label"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "t:sections.image-comparison.presets.name",
+        "blocks": [
+          {
+            "type": "text"
+          }, {
+            "type": "compare-image"
+          }
+        ]
+      }
+    ],
+    "disabled_on": {
+      "groups": ["header", "footer"]
+    }
+  }
+{% endschema %}

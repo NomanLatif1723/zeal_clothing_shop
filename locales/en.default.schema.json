@@ -192,6 +192,26 @@
         "name": "Collection List"
       }
     },
+    "custom-content": {
+      "name": "Custom Liquid",
+      "settings": {
+        "custom_content": {
+          "label": "Liquid"
+        },
+        "header_spacing": {
+          "label": "Section Spacing",
+          "top_spacing": {
+            "label": "Spacing Top"
+          },
+          "bottom_spacing": {
+            "label": "Spacing Bottom"
+          }
+        }
+      },
+      "presets": {
+        "name": "Custom Liquid"
+      }
+    },
     "featured-collection": {
       "name": "Featured Collection",
       "settings": {
@@ -540,6 +560,57 @@
       },
       "presets": {
         "name": "Image With Text"
+      }
+    },
+    "image-comparison": {
+      "name": "Image Comparison",
+      "settings": {
+        "lazyload_images": {
+          "label": "Enable LazyLoad Images",
+          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+        },
+        "header_spacing": {
+          "label": "Section Spacing",
+          "top_spacing": {
+            "label": "Spacing Top"
+          },
+          "bottom_spacing": {
+            "label": "Spacing Bottom"
+          }
+        }
+      },
+      "blocks": {
+        "text": {
+          "name": "Text",
+          "settings": {
+            "compare_heading": {
+              "label": "Heading"
+            },
+            "compare_text": {
+              "label": "Text"
+            },
+            "button_heading": {
+              "label": "Button"
+            },
+            "button_link": {
+              "label": "Link"
+            }
+          }
+        },
+        "compare-image": {
+          "name": "Comapre Image",
+          "settings": {
+            "before_image": {
+              "label": "Before Image"
+            },
+            "after_image": {
+              "label": "After Image"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Image Comaprison"
       }
     },
     "lookbook": {
