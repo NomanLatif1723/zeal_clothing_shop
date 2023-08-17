@@ -56,42 +56,50 @@
           {%- when 'compare-image' -%}
           <div class="image-comparison__item image-comparison__image-block">
             {%- if before_image != blank -%}
-              <img
-                class="image-compare__image"
-                src="{{ before_image | img_url: default }}"
-                srcset="
-                    {{ before_image | img_url: 'medium' }} {%- if ratio < 1 -%}{{ 240 | times: ratio | round }}{%- else -%}240{%- endif -%}w,
-                    {{ before_image | img_url: 'large' }} {%- if ratio < 1 -%}{{ 480 | times: ratio | round }}{%- else -%}480{%- endif -%}w,
-                    {{ before_image | img_url: 'grande' }} {%- if ratio < 1 -%}{{ 600 | times: ratio | round }}{%- else -%}600{%- endif -%}w,
-                    {{ before_image | img_url: '1024x1024' }} {%- if ratio < 1 -%}{{ 1024 | times: ratio | round }}{%- else -%}1024{%- endif -%}w,
-                    {{ before_image | img_url: '2048x2048' }} {%- if ratio < 1 -%}{{ 2048 | times: ratio | round }}{%- else -%}2048{%- endif -%}w
-                "
-                width="{{ before_image.width }}"
-                height="{{ before_image.height }}"
-                loading="{{ lazyloading }}"
-                sizes="{{ sizes }}"
-                alt="{{ before_image.alt }}">
+              <div class="compare__image before__Image">
+                <img
+                  class="image-compare__image"
+                  src="{{ before_image | img_url: default }}"
+                  srcset="
+                      {{ before_image | img_url: 'medium' }} {%- if ratio < 1 -%}{{ 240 | times: ratio | round }}{%- else -%}240{%- endif -%}w,
+                      {{ before_image | img_url: 'large' }} {%- if ratio < 1 -%}{{ 480 | times: ratio | round }}{%- else -%}480{%- endif -%}w,
+                      {{ before_image | img_url: 'grande' }} {%- if ratio < 1 -%}{{ 600 | times: ratio | round }}{%- else -%}600{%- endif -%}w,
+                      {{ before_image | img_url: '1024x1024' }} {%- if ratio < 1 -%}{{ 1024 | times: ratio | round }}{%- else -%}1024{%- endif -%}w,
+                      {{ before_image | img_url: '2048x2048' }} {%- if ratio < 1 -%}{{ 2048 | times: ratio | round }}{%- else -%}2048{%- endif -%}w
+                  "
+                  width="{{ before_image.width }}"
+                  height="{{ before_image.height }}"
+                  loading="{{ lazyloading }}"
+                  sizes="{{ sizes }}"
+                  alt="{{ before_image.alt }}">
+              </div>
             {%- else -%}
-              {{ 'image' | placeholder_svg_tag: "placeholder__image" }}
+              <div class="compare__image before__Image">
+                {{ 'image' | placeholder_svg_tag: "placeholder__image" }}
+              </div>
             {%- endif -%}
             {%- if after_image != blank -%}
-              <img
-                class="image-compare__image"
-                src="{{ after_image | img_url: default }}"
-                srcset="
-                    {{ after_image | img_url: 'medium' }} {%- if ratio < 1 -%}{{ 240 | times: ratio | round }}{%- else -%}240{%- endif -%}w,
-                    {{ after_image | img_url: 'large' }} {%- if ratio < 1 -%}{{ 480 | times: ratio | round }}{%- else -%}480{%- endif -%}w,
-                    {{ after_image | img_url: 'grande' }} {%- if ratio < 1 -%}{{ 600 | times: ratio | round }}{%- else -%}600{%- endif -%}w,
-                    {{ after_image | img_url: '1024x1024' }} {%- if ratio < 1 -%}{{ 1024 | times: ratio | round }}{%- else -%}1024{%- endif -%}w,
-                    {{ after_image | img_url: '2048x2048' }} {%- if ratio < 1 -%}{{ 2048 | times: ratio | round }}{%- else -%}2048{%- endif -%}w
-                "
-                width="{{ after_image.width }}"
-                height="{{ after_image.height }}"
-                loading="{{ lazyloading }}"
-                sizes="{{ sizes }}"
-                alt="{{ after_image.alt }}">
+              <div class="compare__image after__Image">
+                <img
+                  class="image-compare__image"
+                  src="{{ after_image | img_url: default }}"
+                  srcset="
+                      {{ after_image | img_url: 'medium' }} {%- if ratio < 1 -%}{{ 240 | times: ratio | round }}{%- else -%}240{%- endif -%}w,
+                      {{ after_image | img_url: 'large' }} {%- if ratio < 1 -%}{{ 480 | times: ratio | round }}{%- else -%}480{%- endif -%}w,
+                      {{ after_image | img_url: 'grande' }} {%- if ratio < 1 -%}{{ 600 | times: ratio | round }}{%- else -%}600{%- endif -%}w,
+                      {{ after_image | img_url: '1024x1024' }} {%- if ratio < 1 -%}{{ 1024 | times: ratio | round }}{%- else -%}1024{%- endif -%}w,
+                      {{ after_image | img_url: '2048x2048' }} {%- if ratio < 1 -%}{{ 2048 | times: ratio | round }}{%- else -%}2048{%- endif -%}w
+                  "
+                  width="{{ after_image.width }}"
+                  height="{{ after_image.height }}"
+                  loading="{{ lazyloading }}"
+                  sizes="{{ sizes }}"
+                  alt="{{ after_image.alt }}">
+              </div>
             {%- else -%}
-              {{ 'image' | placeholder_svg_tag: "placeholder__image" }}
+              <div class="compare__image after__Image">
+                {{ 'image' | placeholder_svg_tag: "placeholder__image" }}
+              </div>
             {%- endif -%}
             <input
               type="range"
