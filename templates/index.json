@@ -428,10 +428,10 @@
             "collection_text": "Lorem Ipsum is simply dummy of the printing and typesetting industry. Lorem Ipsum has been text the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
             "collection_button_label": "Buy Now",
             "collection_button_link": "shopify:\/\/collections\/glasses",
-            "show_collection_price": true,
+            "collection_background_color": "#f1f3f4",
             "show_collection_timer": true,
-            "timer_duration": "",
-            "collection_background_color": "#f1f3f4"
+            "hours": 12,
+            "minutes": 12
           }
         },
         "65759f6c-a32b-49a7-a282-f148b442a606": {
@@ -444,9 +444,10 @@
             "promo_button_label": "Buy Now",
             "promo_button_link": "shopify:\/\/products\/loose-wool-suit",
             "show_price": true,
+            "promo_background_color": "#f1f3f4",
             "show_timer": true,
-            "timer_duration": "24",
-            "promo_background_color": "#f1f3f4"
+            "hours": 12,
+            "minutes": 12
           }
         }
       },
@@ -695,9 +696,10 @@
             "promo_button_label": "Buy Now",
             "promo_button_link": "shopify:\/\/products\/loose-wool-suit",
             "show_price": true,
+            "promo_background_color": "#f1f3f4",
             "show_timer": true,
-            "timer_duration": "2017, 01,02",
-            "promo_background_color": "#f1f3f4"
+            "hours": 12,
+            "minutes": 12
           }
         },
         "template--19980215124290__8fdfff96-b244-46b9-8bf7-7bbd2dfd07c6-collection-1": {
@@ -708,10 +710,10 @@
             "collection_text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
             "collection_button_label": "Buy Now",
             "collection_button_link": "shopify:\/\/collections\/promo-collection",
-            "show_collection_price": true,
+            "collection_background_color": "#f1f3f4",
             "show_collection_timer": true,
-            "timer_duration": "",
-            "collection_background_color": "#f1f3f4"
+            "hours": 6,
+            "minutes": 5
           }
         }
       },
