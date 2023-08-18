@@ -419,7 +419,7 @@ function initComparison() {
     wrapper.addEventListener('mouseup', () => handleMouseUp());
     wrapper.addEventListener('touchend', () => handleMouseUp());
     wrapper.addEventListener('mouseleave', () => handleMouseLeave());
-    wrapper.addEventListener('mousedown', () => handleMouserDown(event));
+    wrapper.addEventListener('mousedown', () => handleMouseDown(event));
     wrapper.addEventListener('touchstart', () => handleMouseDown(event));
     function handleMouserMove(event) {
       if (isdraggable) return;
