@@ -428,7 +428,7 @@ function initComparison() {
       } else if (mouseX > sliderWidth) {
         mouseX = sliderWidth;
       }
-      compareImageWrapper.style.width = `calc${(1- mouseX/sliderWidth) * 100} - 20px %`;
+      compareImageWrapper.style.width = `calc${(1- mouseX/sliderWidth) * 100}% - 20px`;
       compareButton.style.left = `${(mouseX/sliderWidth) * 100}%`;
     }
   })
