@@ -1,4 +1,5 @@
 {%- liquid
+   assign heading = section.settings.heading
    assign custom_content = section.settings.custom_content
 -%}
 {%- style -%}
@@ -16,8 +17,15 @@
 <section class="custom-content main__section-{{ section.id }}">
   <div class="page__width">
     <div class="custom-content__wrapper">
+      {%- if heading != blank -%}
+        <div class="main__heading custom-content__heading">
+          <h2>{{ heading }}</h2>
+        </div>
+      {%- endif -%}
       {%- if custom_content != blank -%}
-        {{ custom_content }}
+        <div class="custom-content__text">
+          {{ custom_content }}
+        </div>
       {%- endif -%}
     </div>
   </div>
