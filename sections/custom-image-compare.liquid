@@ -181,7 +181,6 @@ nav.social {
 }
 </style>
 <script>
-  $(document).ready(function() {
 	
 	// If the comparison slider is present on the page lets initialise it, this is good you will include this in the main js to prevent the code from running when not needed
 	if ($(".comparison-slider")[0]) {
@@ -200,7 +199,7 @@ nav.social {
 			compSlider.find(".resize img").css({ width: compSliderWidth });
 		});
 	}
-});
+
 
 // This is where all the magic happens
 // This is a modified version of the pen from Ege Görgülü - https://codepen.io/bamf/pen/jEpxOX - and you should check it out too.
