@@ -2,6 +2,7 @@
    assign heading = section.settings.heading
    assign subheading = section.settings.subheading
    assign custom_content = section.settings.custom_content
+   assign text_alignment = section.settings.text_alignment
 -%}
 {%- style -%}
   .main__section-{{ section.id }}{
@@ -17,7 +18,7 @@
 {%- endstyle -%}
 <section class="custom-content main__section-{{ section.id }}">
   <div class="page__width">
-    <div class="custom-content__wrapper">
+    <div class="custom-content__wrapper text__align-{{ text_alignment }}">
       {%- if subheading != blank -%}
         <div class="sub__heading">
           {{ subheading }}
@@ -58,6 +59,28 @@
         "id": "custom_content",
         "label": "t:sections.custom-content.settings.custom_content.label",
         "default": "<p>Use this advanced section to build your own layouts or to add custom HTML, Liquid, or scripts.</p>"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.text-image-center.settings.header_alignment.label"
+      },
+      {
+        "type": "select",
+        "id": "text_alignment",
+        "label": "t:sections.text-image-center.settings.header_alignment.alignment.label",
+        "options": [
+          {
+            "value": "left",
+            "label": "t:sections.text-image-center.settings.header_alignment.alignment.options.left.label"
+          }, {
+            "value": "center",
+            "label": "t:sections.text-image-center.settings.header_alignment.alignment.options.center.label"
+          }, {
+            "value": "right",
+            "label": "t:sections.text-image-center.settings.header_alignment.alignment.options.right.label"
+          }
+        ],
+        "default": "center"
       },
       {
         "type": "header",
