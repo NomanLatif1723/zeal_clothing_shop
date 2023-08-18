@@ -36,22 +36,24 @@
         {%- case block.type -%}
           {%- when 'text' -%}
           <div class="image-comparison__item image-comparison__text-block">
-            {%- if compare_heading != blank -%}
-              <div class="main__heading image-comparison__heading">
-                <h2>{{ compare_heading }}</h2>
-              </div>
-            {%- endif -%}
-            {%- if compare_text != blank -%}
-              <div class="image-comparison__text rte">{{ compare_text }}</div>
-            {%- endif -%}
-            {%- if button_heading != blank -%}
-              <div class="image-comparison__btn-container">
-                <a
-                  href="{{ button_link }}"
-                  class="btn btn__link btn__primary"
-                  title="{{ button_heading }}">{{ button_heading }}</a>
-              </div>
-            {%- endif -%}
+            <div class="image-comparison__text-content">
+              {%- if compare_heading != blank -%}
+                <div class="main__heading image-comparison__heading">
+                  <h2>{{ compare_heading }}</h2>
+                </div>
+              {%- endif -%}
+              {%- if compare_text != blank -%}
+                <div class="image-comparison__text rte">{{ compare_text }}</div>
+              {%- endif -%}
+              {%- if button_heading != blank -%}
+                <div class="image-comparison__btn-container">
+                  <a
+                    href="{{ button_link }}"
+                    class="btn btn__link btn__primary"
+                    title="{{ button_heading }}">{{ button_heading }}</a>
+                </div>
+              {%- endif -%}
+            </div>
           </div>
           {%- when 'compare-image' -%}
           <div class="image-comparison__item image-comparison__image-block">
