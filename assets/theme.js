@@ -414,14 +414,14 @@ function initComparison() {
     let compareButton = wrapper.querySelector('.compare__button');
     let compareImageWrapper = wrapper.querySelector('.after__Image');
     let isdraggable = false;
-    wrapper.addEventListener('mousemove', () => sliderMove(event));
-    wrapper.addEventListener('touchmove', () => sliderMove(event));
-    wrapper.addEventListener('mouseup', () => mouseUp());
-    wrapper.addEventListener('touchend', () => mouseUp());
-    wrapper.addEventListener('mouseleave', () => mouseLeave());
-    wrapper.addEventListener('mousedown', () => mouseDown(event));
-    wrapper.addEventListener('touchstart', () => mouseDown(event));
-    function sliderMove(event) {
+    wrapper.addEventListener('mousemove', () => handleMouserMove(event));
+    wrapper.addEventListener('touchmove', () => handleMouseMove(event));
+    wrapper.addEventListener('mouseup', () => handleMouseUp());
+    wrapper.addEventListener('touchend', () => handleMouseUp());
+    wrapper.addEventListener('mouseleave', () => handleMouseLeave());
+    wrapper.addEventListener('mousedown', () => handleMouseDown(event));
+    wrapper.addEventListener('touchstart', () => handleMouseDown(event));
+    function handleMouserMove(event) {
       if (isdraggable) return;
       let sliderLeftX = wrapper.offsetLeft;
       let sliderWidth = wrapper.clientWidth;
@@ -434,17 +434,17 @@ function initComparison() {
       compareImageWrapper.style.width = `${(1- mouseX/sliderWidth) * 100}%`;
       compareButton.style.left = `${(mouseX/sliderWidth) * 100}%`;
     }
-    function mouseUp() {
+    function handleMouseUp() {
       if (!isdraggable) {
         isdraggable = true;
       }
     }
-    function mouseLeave() {
+    function handleMouseLeave() {
       if (isdraggable) {
         isdraggable = false;
       }
     }
-    function mouseDown(event) {
+    function handleMouseDown(event) {
       if (isdraggable) {
         isdraggable = false;
       }
