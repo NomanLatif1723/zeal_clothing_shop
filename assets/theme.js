@@ -423,6 +423,9 @@ function initComparison() {
     wrapper.addEventListener('mouseleave', () => {
       mouseLeave();
     })
+    wrapper.addEventListener('mousedown', () => {
+      mouseDown();
+    })
     wrapper.addEventListener('touchmove', () => {
       sliderMove(event);
     })
@@ -445,6 +448,11 @@ function initComparison() {
       }
     }
     function mouseLeave() {
+      if (isdraggable) {
+        isdraggable = false;
+      }
+    }
+    function mouseDown() {
       if (isdraggable) {
         isdraggable = false;
       }
