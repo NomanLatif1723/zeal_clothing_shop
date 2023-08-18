@@ -414,6 +414,9 @@ function initComparison() {
     let compareButton = wrapper.querySelector('.compare__button');
     let compareImageWrapper = wrapper.querySelector('.after__Image');
     wrapper.addEventListener('mousemove', (event) => {
+      sliderMove();
+    })
+    function sliderMove(event) {
       let sliderLeftX = wrapper.offsetLeft;
       let sliderWidth = wrapper.clientWidth;
       let mouseX = event.clientX - sliderLeftX;
@@ -424,7 +427,7 @@ function initComparison() {
       }
       compareImageWrapper.style.width = `${(1- mouseX/sliderWidth) * 100}%`;
       compareButton.style.left = `${(mouseX/sliderWidth) * 100}%`;
-    })
+    }
   })
 }
 initComparison();
