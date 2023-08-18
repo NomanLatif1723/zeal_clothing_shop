@@ -776,7 +776,7 @@
     "9913ff1c-3076-4a2f-ba8f-22edb1d6e44e": {
       "type": "custom-content",
       "settings": {
-        "custom_content": "<h2>Custom content<\/h2><p>Use this advanced section to build your own layouts or to add custom HTML, Liquid, or scripts.<\/p>",
+        "custom_content": "<p>Use this advanced section to build your own layouts or to add custom HTML, Liquid, or scripts.<\/p>",
         "margin_top": 60,
         "margin_bottom": 60
       }
