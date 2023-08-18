@@ -2242,6 +2242,12 @@ input[type="radio"]:checked + label {
     vertical-align: middle;
     display: table-cell;
 }
+
+.image-comparison__heading h2 {
+    font-size: 20px;
+    line-height: 30px;
+}
+  
 .image-comparison__btn-container {
     text-align: center;
 }
@@ -2252,10 +2258,18 @@ input[type="radio"]:checked + label {
 @media only screen and (min-width: 769px) {
   .image-comparison__wrapper {
     flex-direction: row;
+    flex-wrap: wrap;
     height: 560px;
   }
   .image-comparison__item{
     width: 50%;
+  }
+  .image-comparison__text-block{
+    padding: 90px;
+  }
+  .image-comparison__heading h2 {
+    font-size: 28px;
+    line-height: 45px;
   }
   .image-comparison__image-block {
     position: relative;
