@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-* {box-sizing: border-box;}
-
 .img-comp-container {
   position: relative;
   height: 200px; /*should be the same height as the images*/
@@ -34,6 +28,19 @@
   border-radius: 50%;
 }
 </style>
+
+<h1>Compare Two Images</h1>
+
+<p>Click and slide the blue slider to compare two images:</p>
+
+<div class="img-comp-container">
+  <div class="img-comp-img">
+    <img src="https://cdn.shopify.com/s/files/1/0794/3716/8962/files/luke-braswell-8BxRYuPkzkU-unsplash.jpg?v=1692350624" width="300" height="200">
+  </div>
+  <div class="img-comp-img img-comp-overlay">
+    <img src="https://cdn.shopify.com/s/files/1/0794/3716/8962/files/vahid-kanani-8zvgJMD0pTg-unsplash_1.jpg?v=1692198274" width="300" height="200">
+  </div>
+</div>
 <script>
 function initComparisons() {
   var x, i;
@@ -111,27 +118,6 @@ function initComparisons() {
     }
   }
 }
-</script>
-</head>
-<body>
-
-<h1>Compare Two Images</h1>
-
-<p>Click and slide the blue slider to compare two images:</p>
-
-<div class="img-comp-container">
-  <div class="img-comp-img">
-    <img src="https://cdn.shopify.com/s/files/1/0794/3716/8962/files/luke-braswell-8BxRYuPkzkU-unsplash.jpg?v=1692350624" width="300" height="200">
-  </div>
-  <div class="img-comp-img img-comp-overlay">
-    <img src="https://cdn.shopify.com/s/files/1/0794/3716/8962/files/vahid-kanani-8zvgJMD0pTg-unsplash_1.jpg?v=1692198274" width="300" height="200">
-  </div>
-</div>
-
-<script>
-/*Execute a function that will execute an image compare function for each element with the img-comp-overlay class:*/
 initComparisons();
 </script>
 
-</body>
-</html>
