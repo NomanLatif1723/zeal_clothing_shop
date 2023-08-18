@@ -423,9 +423,7 @@ function initComparison() {
     wrapper.addEventListener('mouseleave', () => {
       mouseLeave(event);
     })
-    wrapper.addEventListener('mousedown', () => {
-      mouseDown(event);
-    })
+
     wrapper.addEventListener('touchmove', () => {
       sliderMove(event);
     })
