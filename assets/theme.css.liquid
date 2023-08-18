@@ -2271,20 +2271,18 @@ input[type="radio"]:checked + label {
     justify-content: center;
     cursor: pointer;
 }
-.slider-button:before {
-    content: '';
-    position: absolute;
-    width: 2px;
-    background: white;
-    height: 261px;
-    bottom: 38px;
-}
+.slider-button:before,
 .slider-button:after {
     content: '';
     position: absolute;
-    height: 261px;
     width: 2px;
     background: white;
+    height: 221px;
+}
+.slider-button:before{
+    bottom: 38px;
+}
+.slider-button:after {
     top: 38px;
 }
 .before__Image {
@@ -2303,6 +2301,10 @@ input[type="radio"]:checked + label {
   }
   .image-comparison__image-block {
     height: 560px;
+  }
+  .slider-button:before,
+  .slider-button:after {
+    height: 261px;
   }
 }
 @media only screen and (min-width: 1201px) {
