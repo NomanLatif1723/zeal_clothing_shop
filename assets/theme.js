@@ -361,16 +361,7 @@ function initVideoSection() {
   });
 }
 initVideoSection();
-function initComparison() {
-  let compareWrapper = document.querySelectorAll('[data-compare-image]');
-  compareWrapper.forEach(wrapper => {
-    let compareButton = wrapper.querySelector('.compare__button');
-    let compareImageWrapper = wrapper.querySelector('.after__Image');
-    console.log(compareImageWrapper);
-    console.log(compareButton);
-  })
-}
-initComparison();
+
 // Countdown Timer For Promotional Grid and Product Page
 function initCountdown() {
   let countdownWrapper = document.querySelectorAll('[data-countdown]');
@@ -417,7 +408,15 @@ function initCountdown() {
 initCountdown();
 
 // Image Comparison 
+function initComparison() {
+  let compareWrapper = document.querySelectorAll('[data-compare-image]');
+  compareWrapper.forEach(wrapper => {
+    let compareButton = wrapper.querySelector('.compare__button');
+    let compareImageWrapper = wrapper.querySelector('.after__Image');
+    console.log(compareImageWrapper);
+    console.log(compareButton);
+  })
+}
+initComparison();
 
-
-  console.log('Hy There');
 })();
