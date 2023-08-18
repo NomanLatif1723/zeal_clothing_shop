@@ -2,8 +2,13 @@
   "type": "header",
   "name": "Popups",
   "sections": {
+    "age-verification": {
+      "type": "age-verification-popup",
+      "settings": {
+      }
+    }
   },
   "order": [
-
+    "age-verification"
   ]
 }
