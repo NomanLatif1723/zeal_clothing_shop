@@ -413,7 +413,10 @@ function initComparison() {
   compareWrapper.forEach(wrapper => {
     let compareButton = wrapper.querySelector('.compare__button');
     let compareImageWrapper = wrapper.querySelector('.after__Image');
-    wrapper.addEventListener('mousemove', (event) => {
+    wrapper.addEventListener('mousemove', () => {
+      sliderMove();
+    })
+    wrapper.addEventListener('touchmove', () => {
       sliderMove();
     })
     function sliderMove(event) {
