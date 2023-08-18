@@ -2229,7 +2229,7 @@ input[type="radio"]:checked + label {
 .image-comparison__wrapper {
     display: flex;
     flex-direction: column-reverse;
-    height: 280px;
+    flex-wrap: wrap;
 }
 .image-comparison__text-block {
     background: #FCF2EA;
@@ -2242,6 +2242,7 @@ input[type="radio"]:checked + label {
 }
 .image-comparison__image-block {
   position: relative;
+  height: 280px;
 }
 .image-comparison__heading h2 {
     font-size: 20px;
@@ -2294,13 +2295,14 @@ input[type="radio"]:checked + label {
 @media only screen and (min-width: 769px) {
   .image-comparison__wrapper {
     flex-direction: row;
-    flex-wrap: wrap;
-    height: 560px;
+    /* height: 560px; */
   }
   .image-comparison__text-block{
     padding: 50px;
   }
-  
+  .image-comparison__image-block {
+    height: 560px;
+  }
 }
 @media only screen and (min-width: 1201px) {
   .image-comparison__text-block{
