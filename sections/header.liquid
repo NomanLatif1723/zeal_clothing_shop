@@ -75,7 +75,7 @@
       {% endfor %}
       {%- if header_styles == 'center_left' -%}
         <div class="header__block navigation__hide">
-          <button class="menu-toggle__btn{% unless show__icons %} icon__hide-desktop{% endunless %}">
+          <button class="menu-toggle__btn{% unless show_icons %} icon__hide-desktop{% endunless %}">
             {% render 'icon-hamburger' %}
           </button>
           {%- unless show_icons -%}
@@ -105,7 +105,7 @@
         </div>
       {%- elsif header_styles == 'center_below' -%}
         <div class="header__block navigation__hide">
-          <button class="menu-toggle__btn{% unless show__icons %} icon__hide-desktop{% endunless %}">
+          <button class="menu-toggle__btn{% unless show_icons %} icon__hide-desktop{% endunless %}">
             {% render 'icon-hamburger' %}
           </button>
           {%- unless show_icons -%}
