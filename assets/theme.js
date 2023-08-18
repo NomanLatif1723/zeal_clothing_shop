@@ -413,8 +413,11 @@ function initComparison() {
   compareWrapper.forEach(wrapper => {
     let compareButton = wrapper.querySelector('.compare__button');
     let compareImageWrapper = wrapper.querySelector('.after__Image');
-    console.log(compareImageWrapper);
-    console.log(compareButton);
+    wrapper.addEventListener('mousemove', (event) => {
+      let sliderLeftX = wrapper.offsetLeft;
+      let sliderWidth = wrapper.clientWidth;
+      let mouseX = event.clientX - sliderLeftX;
+    })
   })
 }
 initComparison();
