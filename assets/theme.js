@@ -422,7 +422,7 @@ function initComparison() {
       } else if (mouseX > sliderWidth) {
         mouseX = sliderWidth;
       }
-      console.log(mouseX);
+      compareImageWrapper.style.width = `${sliderWidth - mouseX}px`;
     })
   })
 }
