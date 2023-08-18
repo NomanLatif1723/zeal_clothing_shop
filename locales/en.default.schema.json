@@ -1088,17 +1088,20 @@
     "richtext": {
       "name": "Rich Text",
       "settings": {
-        "alignment": {
-          "label": "Text alignment",
-          "options": {
-            "left": {
-              "label": "Left"
-            },
-            "center": {
-              "label": "Center"
-            },
-            "right": {
-              "label": "Right"
+        "header_alignment": {
+          "label": "Alignment",
+          "alignment": {
+            "label": "Text alignment",
+            "options": {
+              "left": {
+                "label": "Left"
+              },
+              "center": {
+                "label": "Center"
+              },
+              "right": {
+                "label": "Right"
+              }
             }
           }
         },
