@@ -415,10 +415,12 @@ function initComparison() {
     let compareImageWrapper = wrapper.querySelector('.after__Image');
     let isdraggable = false;
     wrapper.addEventListener('mousemove', () => sliderMove(event));
+    wrapper.addEventListener('touchmove', () => sliderMove(event));
     wrapper.addEventListener('mouseup', () => mouseUp());
+    wrapper.addEventListener('touchend', () => mouseUp());
     wrapper.addEventListener('mouseleave', () => mouseLeave());
     wrapper.addEventListener('mousedown', () => mouseDown(event));
-    wrapper.addEventListener('touchmove', () => sliderMove(event));
+    wrapper.addEventListener('touchstart', () => mouseDown(event));
     function sliderMove(event) {
       if (isdraggable) return;
       let sliderLeftX = wrapper.offsetLeft;
