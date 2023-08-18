@@ -21,6 +21,10 @@
     },
     "search": {
       "title": "Search"
+    },
+    "image-comparison": {
+      "label_before": "Before",
+      "label_after": "After"
     }
   },
   "collections": {
