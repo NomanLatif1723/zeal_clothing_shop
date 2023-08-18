@@ -448,7 +448,7 @@ function initComparison() {
       if (isdraggable) {
         isdraggable = false;
       }
-      sliderMove(event)
+      handleMouserMove(event)
     }
     
   })
