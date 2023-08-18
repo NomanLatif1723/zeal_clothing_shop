@@ -417,7 +417,11 @@ function initComparison() {
       let sliderLeftX = wrapper.offsetLeft;
       let sliderWidth = wrapper.clientWidth;
       let mouseX = event.clientX - sliderLeftX;
-      console.log(mouseX)
+      if (mouseX < 0) {
+        mouseX = 0;
+      } else if (mouseX > sliderWidth) {
+        mouseX = sliderWidth;
+      }
     })
   })
 }
