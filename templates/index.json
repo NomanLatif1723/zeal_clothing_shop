@@ -758,7 +758,8 @@
         "template--19980215124290__9bf713f2-c83f-4537-b1b8-93f4de7dc591-compare-image-1": {
           "type": "compare-image",
           "settings": {
-            "before_image": "shopify:\/\/shop_images\/luke-braswell-8BxRYuPkzkU-unsplash.jpg"
+            "before_image": "shopify:\/\/shop_images\/luke-braswell-8BxRYuPkzkU-unsplash.jpg",
+            "after_image": "shopify:\/\/shop_images\/vahid-kanani-8zvgJMD0pTg-unsplash_1.jpg"
           }
         }
       },
