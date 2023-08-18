@@ -418,13 +418,13 @@ function initComparison() {
       sliderMove(event);
     })
     wrapper.addEventListener('mouseup', () => {
-      mouseUp();
+      mouseUp(event);
     })
     wrapper.addEventListener('mouseleave', () => {
-      mouseLeave();
+      mouseLeave(event);
     })
     wrapper.addEventListener('mousedown', () => {
-      mouseDown();
+      mouseDown(event);
     })
     wrapper.addEventListener('touchmove', () => {
       sliderMove(event);
@@ -442,17 +442,17 @@ function initComparison() {
       compareImageWrapper.style.width = `calc${(1- mouseX/sliderWidth) * 100}%`;
       compareButton.style.left = `${(mouseX/sliderWidth) * 100}%`;
     }
-    function mouseUp() {
+    function mouseUp(event) {
       if (!isdraggable) {
         isdraggable = true;
       }
     }
-    function mouseLeave() {
+    function mouseLeave(event) {
       if (isdraggable) {
         isdraggable = false;
       }
     }
-    function mouseDown() {
+    function mouseDown(event) {
       if (isdraggable) {
         isdraggable = false;
       }
