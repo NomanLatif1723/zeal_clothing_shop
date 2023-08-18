@@ -195,6 +195,9 @@
     "custom-content": {
       "name": "Custom Liquid",
       "settings": {
+        "subheading": {
+          "label": "Subheading"
+        },
         "heading": {
           "label": "Heading"
         },
