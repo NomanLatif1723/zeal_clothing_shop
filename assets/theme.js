@@ -406,4 +406,13 @@ function initCountdown() {
   }
 }
 initCountdown();
+
+// Image Comparison 
+function initComparison() {
+  let compareWrapper = document.querySelectorAll('[data-compare-image]');
+  compareWrapper.forEach(wrapper => {
+    let compareButton = wrapper.querySelector('.slider-button')
+  })
+}
+initComparison();
 })();
