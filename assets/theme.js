@@ -411,8 +411,13 @@ initCountdown();
 function initComparison() {
   let compareWrapper = document.querySelectorAll('[data-compare-image]');
   compareWrapper.forEach(wrapper => {
-    let compareButton = wrapper.querySelector('.slider-button')
+    let compareButton = wrapper.querySelector('.compare__button');
+    let compareImageWrapper = wrapper.querySelector('.after__Image');
+    console.log(compareImageWrapper);
+    console.log(compareButton);
   })
 }
 initComparison();
+
+  console.log('Hy There');
 })();
