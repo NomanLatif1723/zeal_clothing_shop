@@ -2231,13 +2231,15 @@ input[type="radio"]:checked + label {
     flex-direction: column-reverse;
 }
 
-.image-comparison__btn-container {
-    text-align: center;
-}
-
 .image-comparison__text-block {
     background: #FCF2EA;
     padding: 30px 15px;
+    display: table;
+}
+
+.image-comparison__text-content {
+    vertical-align: middle;
+    display: table-cell;
 }
 
 .image-comparison__text {
@@ -2254,7 +2256,9 @@ input[type="radio"]:checked + label {
   .image-comparison__image-block {
     position: relative;
   }
-  
+  .image-comparison__btn-container {
+    text-align: center;
+  }
   .compare__image {
       position: absolute;
       top: 0;
@@ -2264,8 +2268,5 @@ input[type="radio"]:checked + label {
       height: 100%;
       width: 100%;
   }
-  
-  .image-comparison__text-block {
-      
-  }
+
 }
