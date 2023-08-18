@@ -1323,34 +1323,34 @@
           "bottom_spacing": {
             "label": "Spacing Bottom"
           }
-        },
-        "blocks": {
-          "slide": {
-            "name": "Slide",
-            "settings": {
-              "slide_logo_label": {
-                "label": "Logo"
-              },
-              "slide_heading": {
-                "label": "Heading"
-              },
-              "slide_text": {
-                "label": "Text"
-              },
-              "header_alignment": {
-                "label": "Alignment",
-                "alignment": {
-                  "label": "Text alignment",
-                  "options": {
-                    "left": {
-                      "label": "Left"
-                    },
-                    "center": {
-                      "label": "Center"
-                    },
-                    "right": {
-                      "label": "Right"
-                    }
+        }
+      },
+      "blocks": {
+        "slide": {
+          "name": "Slide",
+          "settings": {
+            "slide_logo_label": {
+              "label": "Logo"
+            },
+            "slide_heading": {
+              "label": "Heading"
+            },
+            "slide_text": {
+              "label": "Text"
+            },
+            "header_alignment": {
+              "label": "Alignment",
+              "alignment": {
+                "label": "Text alignment",
+                "options": {
+                  "left": {
+                    "label": "Left"
+                  },
+                  "center": {
+                    "label": "Center"
+                  },
+                  "right": {
+                    "label": "Right"
                   }
                 }
               }
