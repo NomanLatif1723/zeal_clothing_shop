@@ -57,29 +57,29 @@
           </div>
           {%- when 'compare-image' -%}
           <div class="image-comparison__item image-comparison__image-block" data-compare-image>
-            {%- if before_image != blank -%}
-              <div class="compare__image before__Image">
-                <img
-                  class="image-compare__image"
-                  src="{{ before_image | img_url: default }}"
-                  srcset="
-                      {{ before_image | img_url: 'medium' }} {%- if ratio < 1 -%}{{ 240 | times: ratio | round }}{%- else -%}240{%- endif -%}w,
-                      {{ before_image | img_url: 'large' }} {%- if ratio < 1 -%}{{ 480 | times: ratio | round }}{%- else -%}480{%- endif -%}w,
-                      {{ before_image | img_url: 'grande' }} {%- if ratio < 1 -%}{{ 600 | times: ratio | round }}{%- else -%}600{%- endif -%}w,
-                      {{ before_image | img_url: '1024x1024' }} {%- if ratio < 1 -%}{{ 1024 | times: ratio | round }}{%- else -%}1024{%- endif -%}w,
-                      {{ before_image | img_url: '2048x2048' }} {%- if ratio < 1 -%}{{ 2048 | times: ratio | round }}{%- else -%}2048{%- endif -%}w
-                  "
-                  width="{{ before_image.width }}"
-                  height="{{ before_image.height }}"
-                  loading="{{ lazyloading }}"
-                  sizes="{{ sizes }}"
-                  alt="{{ before_image.alt }}">
-              </div>
-            {%- else -%}
-              <div class="compare__image before__Image">
-                {{ 'image' | placeholder_svg_tag: "placeholder__image" }}
-              </div>
-            {%- endif -%}
+            <div class="compare__image before__Image">
+              {%- if before_image != blank -%}
+                  <img
+                    class="image-compare__image"
+                    src="{{ before_image | img_url: default }}"
+                    srcset="
+                        {{ before_image | img_url: 'medium' }} {%- if ratio < 1 -%}{{ 240 | times: ratio | round }}{%- else -%}240{%- endif -%}w,
+                        {{ before_image | img_url: 'large' }} {%- if ratio < 1 -%}{{ 480 | times: ratio | round }}{%- else -%}480{%- endif -%}w,
+                        {{ before_image | img_url: 'grande' }} {%- if ratio < 1 -%}{{ 600 | times: ratio | round }}{%- else -%}600{%- endif -%}w,
+                        {{ before_image | img_url: '1024x1024' }} {%- if ratio < 1 -%}{{ 1024 | times: ratio | round }}{%- else -%}1024{%- endif -%}w,
+                        {{ before_image | img_url: '2048x2048' }} {%- if ratio < 1 -%}{{ 2048 | times: ratio | round }}{%- else -%}2048{%- endif -%}w
+                    "
+                    width="{{ before_image.width }}"
+                    height="{{ before_image.height }}"
+                    loading="{{ lazyloading }}"
+                    sizes="{{ sizes }}"
+                    alt="{{ before_image.alt }}">
+              {%- else -%}
+                  {{ 'image' | placeholder_svg_tag: "placeholder__image" }}
+  
+              {%- endif -%}
+              <span class="compare__label before__label">{{ 'sections.image-comparison.label_before' | t }}</span>
+            </div>
             <div class="compare__image after__Image">
               {%- if after_image != blank -%}
                 <img
@@ -100,9 +100,8 @@
               {%- else -%}
                   {{ 'image' | placeholder_svg_tag: "placeholder__image" }}
               {%- endif -%}
+              <span class="compare__label after__label">{{ 'sections.image-comparison.label_after' | t }}</span>
             </div>
-            <span class="compare__label before__label">{{ 'sections.image-comparison.label_before' | t }}</span>
-            <span class="compare__label after__label">{{ 'sections.image-comparison.label_after' | t }}</span>
             <div class="compare__button" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
                 <circle cx="19" cy="19" r="14.5" fill="#F1D7D1" stroke="white"/>
