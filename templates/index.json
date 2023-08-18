@@ -796,6 +796,8 @@
         "template--19980215124290__7e2e7089-26f7-47d1-9107-a7fb38347d38-compare-image-1": {
           "type": "compare-image",
           "settings": {
+            "before_image": "shopify:\/\/shop_images\/pexels-dellon-thomas-1228626_1.jpg",
+            "after_image": "shopify:\/\/shop_images\/black-white-minimal-portrait_4_1.jpg"
           }
         }
       },
