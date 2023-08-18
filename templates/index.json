@@ -780,6 +780,11 @@
         "margin_top": 60,
         "margin_bottom": 60
       }
+    },
+    "35191a91-4783-444e-86d1-3051f4a7737f": {
+      "type": "custom-image-compare",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -801,6 +806,7 @@
     "749c8cce-63f0-421f-a447-8f8b3a4bfc20",
     "8fdfff96-b244-46b9-8bf7-7bbd2dfd07c6",
     "9bf713f2-c83f-4537-b1b8-93f4de7dc591",
-    "9913ff1c-3076-4a2f-ba8f-22edb1d6e44e"
+    "9913ff1c-3076-4a2f-ba8f-22edb1d6e44e",
+    "35191a91-4783-444e-86d1-3051f4a7737f"
   ]
 }
