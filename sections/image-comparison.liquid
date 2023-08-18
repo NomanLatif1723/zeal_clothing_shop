@@ -80,8 +80,8 @@
                 {{ 'image' | placeholder_svg_tag: "placeholder__image" }}
               </div>
             {%- endif -%}
-            {%- if after_image != blank -%}
-              <div class="compare__image after__Image">
+            <div class="compare__image after__Image">
+              {%- if after_image != blank -%}
                 <img
                   class="image-compare__image"
                   src="{{ after_image | img_url: default }}"
@@ -97,12 +97,10 @@
                   loading="{{ lazyloading }}"
                   sizes="{{ sizes }}"
                   alt="{{ after_image.alt }}">
-              </div>
-            {%- else -%}
-              <div class="compare__image after__Image">
-                {{ 'image' | placeholder_svg_tag: "placeholder__image" }}
-              </div>
-            {%- endif -%}
+              {%- else -%}
+                  {{ 'image' | placeholder_svg_tag: "placeholder__image" }}
+              {%- endif -%}
+            </div>
             <span class="compare__label before__label">{{ 'sections.image-comparison.label_before' | t }}</span>
             <span class="compare__label after__label">{{ 'sections.image-comparison.label_after' | t }}</span>
             <div class="compare__button" aria-hidden="true">
