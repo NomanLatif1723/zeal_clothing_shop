@@ -414,10 +414,10 @@ function initComparison() {
     let compareButton = wrapper.querySelector('.compare__button');
     let compareImageWrapper = wrapper.querySelector('.after__Image');
     wrapper.addEventListener('mousemove', () => {
-      sliderMove();
+      sliderMove(event);
     })
     wrapper.addEventListener('touchmove', () => {
-      sliderMove();
+      sliderMove(event);
     })
     function sliderMove(event) {
       let sliderLeftX = wrapper.offsetLeft;
