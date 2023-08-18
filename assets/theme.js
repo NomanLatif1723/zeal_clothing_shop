@@ -413,16 +413,21 @@ function initComparison() {
   compareWrapper.forEach(wrapper => {
     let compareButton = wrapper.querySelector('.compare__button');
     let compareImageWrapper = wrapper.querySelector('.after__Image');
+    let isdraggable = false;
     wrapper.addEventListener('mousemove', () => {
       sliderMove(event);
+    })
+    wrapper.addEventListener('mouseup', () => {
+      mouseUp();
     })
     wrapper.addEventListener('touchmove', () => {
       sliderMove(event);
     })
     function sliderMove(event) {
+      if (isdraggable) return;
       let sliderLeftX = wrapper.offsetLeft;
       let sliderWidth = wrapper.clientWidth;
-      let mouseX = event.clientX - sliderLeftX;
+      let mouseX = (event.clientX || event.touches[0].clientX) - sliderLeftX;
       if (mouseX < 0) {
         mouseX = 0;
       } else if (mouseX > sliderWidth) {
@@ -431,6 +436,12 @@ function initComparison() {
       compareImageWrapper.style.width = `calc${(1- mouseX/sliderWidth) * 100}%`;
       compareButton.style.left = `${(mouseX/sliderWidth) * 100}%`;
     }
+    function mouseUp() {
+      if (!isdraggable) {
+        isdraggable = true;
+      }
+    }
+    
   })
 }
 initComparison();
