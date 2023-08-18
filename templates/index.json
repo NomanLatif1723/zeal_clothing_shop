@@ -767,6 +767,7 @@
         "template--19980215124290__9bf713f2-c83f-4537-b1b8-93f4de7dc591-text-1",
         "template--19980215124290__9bf713f2-c83f-4537-b1b8-93f4de7dc591-compare-image-1"
       ],
+      "disabled": true,
       "settings": {
         "lazyload_images": true,
         "margin_top": 60,
