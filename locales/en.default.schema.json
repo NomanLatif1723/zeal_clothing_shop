@@ -1336,6 +1336,23 @@
               },
               "slide_text": {
                 "label": "Text"
+              },
+              "header_alignment": {
+                "label": "Alignment",
+                "alignment": {
+                  "label": "Text alignment",
+                  "options": {
+                    "left": {
+                      "label": "Left"
+                    },
+                    "center": {
+                      "label": "Center"
+                    },
+                    "right": {
+                      "label": "Right"
+                    }
+                  }
+                }
               }
             }
           }
