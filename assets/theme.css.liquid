@@ -2459,6 +2459,11 @@ input[type="radio"]:checked + label {
     top: 0;
     background: #efb8b8;
 }
+@media only screen and (min-width: 481px) {
+  .newsletter-popup__modal{
+    max-width: 600px;
+  }
+}
 @media only screen and (min-width: 992px) {
   .newsletter-popup__content {
     display: flex;
@@ -2475,6 +2480,6 @@ input[type="radio"]:checked + label {
     left: 50%;
     transform: translate(-50%,-50%);
     max-width: 600px;
-    margin: 0 auto;
+    margin: inherit;
   }
 }
