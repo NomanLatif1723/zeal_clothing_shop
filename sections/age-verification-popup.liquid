@@ -22,10 +22,10 @@
       {%- endif -%}
       <div class="age-verifier__btn-container">
         {%- if cancel_button_label != blank -%}
-          <a href="" class="btn btn__link btn__cancel-btn">{{ cancel_button_label }}</a>
+          <button class="btn btn__link btn__cancel-btn">{{ cancel_button_label }}</button>
         {%- endif -%}
         {%- if confirm_button_label != blank -%}
-          <a href="" class="btn btn__link btn__primary btn__confirm-btn">{{ confirm_button_label }}</a>
+          <button class="btn btn__link btn__primary btn__confirm-btn">{{ confirm_button_label }}</button>
         {%- endif -%}
       </div>
     </div>
@@ -42,7 +42,7 @@
       {%- endif -%}
       <div class="age-verifier__btn-container">
         {%- if declined_button_label != blank -%}
-          <a href="" class="btn btn__link btn__return-btn">{{ declined_button_label }}</a>
+          <button class="btn btn__link btn__return-btn">{{ declined_button_label }}</button>
         {%- endif -%}
       </div>
     </div>
