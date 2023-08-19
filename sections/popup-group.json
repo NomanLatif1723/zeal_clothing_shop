@@ -1,14 +1,26 @@
 {
   "type": "header",
-  "name": "Popups",
+  "name": "t:sections.popup-group.name",
   "sections": {
     "age-verification": {
       "type": "age-verification-popup",
       "settings": {
       }
+    },
+    "newsletter-popup": {
+      "type": "newsletter-popup",
+      "settings": {
+      }
+    },
+    "event-popup": {
+      "type": "events-popup",
+      "settings": {
+      }
     }
   },
   "order": [
-    "age-verification"
+    "age-verification",
+    "newsletter-popup",
+    "event-popup"
   ]
 }

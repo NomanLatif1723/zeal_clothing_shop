@@ -1,12 +1,121 @@
+{%- liquid
+  assign newsletter_image = section.settings.newsletter_image
+  assign newsletter_subheading = section.settings.newsletter_subheading
+  assign newsletter_heading = section.settings.newsletter_heading
+  assign newsletter_text = section.settings.newsletter_text
+  assign newsletter_button_label = section.settings.newsletter_button_label
+  assign show_popup = section.settings.show_popup
+
+  assign ratio = 0.75
+  assign default = 'grande'
+  assign sizes = '(min-width: 1200px) 650px, 45vw'
+
+  assign lazyloading = ''
+  assign lazyloadImages = section.settings.lazyload_images
+  if lazyloadImages
+  assign lazyloading = 'lazy'
+  endif
+-%}
+<newsletter-popup class="newsletter-popup">
+  <div class="newsletter-popup__modal">
+    <div class="newsletter-popup__content">
+      <div class="newsletter-popup__image-container">
+        {%- if newsletter_image != blank -%}
+          <img
+            src="{{ newsletter_image | img_url: default }}"
+            srcset="
+              {{ newsletter_image | product_img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
+              {{ newsletter_image | product_img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
+              {{ newsletter_image | product_img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
+              {{ newsletter_image | product_img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
+              {{ newsletter_image | product_img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
+              "
+            width="{{ newsletter_image.width }}"
+            height="{{ newsletter_image.height }}"
+            loading="{{ lazyloading }}"
+            sizes="{{ sizes }}"
+            alt="{{ newsletter_image.alt }}" />
+        {%- else -%}
+          {{ 'image' | placeholder_svg_tag: "placeholder__image" }}
+        {%- endif -%}
+      </div>
+      <div class="newsletter-popup__text-container">
+        {%- if newsletter_subheading != blank -%}
+          <div class="sub__heading newsletter-popup__subheading">
+            {{ newsletter_subheading }}
+          </div>
+        {%- endif -%}
+        {%- if newsletter_heading != blank -%}
+          <div class="main__heading newsletter-popup__heading">
+            <h2>{{ newsletter_heading }}</h2>
+          </div>
+        {%- endif -%}
+        {%- if newsletter_text != blank -%}
+          <div class="newsletter-popup__text rte">
+            {{ newsletter_text }}
+          </div>
+        {%- endif -%}
+        <div class="newsletter-popup-form">
+          {%- render 'newsletter-form' 
+            , newsletter_button_label: newsletter_button_label -%}
+        </div>
+        {%- if show_popup -%}
+          <div class="show-newsletter__popup">
+            <input
+              type="checkbox"
+              name="show Popup"
+              id="show-popup">
+            <label for="show-popup">{{ 'popups.newsletter-popup.show_popup' | t }}</label>
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+    <button class="close__modal close-modal__newsletter--popup">
+      {%- render 'icon-close' -%}
+    </button>
+  </div>
+</newsletter-popup>
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "t:sections.newsletter-popup.name",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "newsletter_image",
+        "label": "t:sections.newsletter-popup.settings.newsletter_image.label"
+      },
+      {
+        "type": "text",
+        "id": "newsletter_subheading",
+        "label": "t:sections.newsletter-popup.settings.newsletter_subheading.label",
+        "default": "Subheading"
+      },
+      {
+        "type": "text",
+        "id": "newsletter_heading",
+        "label": "t:sections.newsletter-popup.settings.newsletter_heading.label",
+        "default": "Newsletter"
+      },
+      {
+        "type": "richtext",
+        "id": "newsletter_text",
+        "label": "t:sections.newsletter-popup.settings.newsletter_text.label"
+      }, {
+        "type": "text",
+        "id": "newsletter_button_label",
+        "label": "t:sections.newsletter-popup.settings.newsletter_button_label.label",
+        "default": "Submit"
+      }, {
+        "type": "checkbox",
+        "id": "show_popup",
+        "label": "t:sections.newsletter-popup.settings.show_popup.label",
+        "default": false
+      }, {
+        "type": "checkbox",
+        "id": "lazyload_images",
+        "label": "t:sections.newsletter-popup.settings.lazyload_images.label",
+        "default": false
+      }
+    ]
   }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}

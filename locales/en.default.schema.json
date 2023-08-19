@@ -1,10 +1,13 @@
 {
   "sections": {
     "header-group": {
-      "name": "Header Group"
+      "name": "Header"
     },
     "footer-group": {
-      "name": "Footer Group"
+      "name": "Footer"
+    },
+    "popup-group": {
+      "name": "Popups"
     },
     "announcement-bar": {
       "name": "Announcement Bar",
@@ -33,6 +36,38 @@
       },
       "presets": {
         "name": "Announcement Bar"
+      }
+    },
+    "age-verification-popup": {
+      "name": "Age verification",
+      "settings": {
+        "age_verifier_heading": {
+          "label": "Age Verifier Heading"
+        },
+        "age_verifier_text": {
+          "label": "Age Verifier Text"
+        },
+        "header_confirmation": {
+          "label": "Age Confirmation Buttons",
+          "cancel_button_label": {
+            "label": "Cancel Button Label"
+          },
+          "confirm_button_label": {
+            "label": "Confirm Button Label"
+          }
+        },
+        "header_declined": {
+          "label": "Declined Content",
+          "declined_heading": {
+            "label": "Heading"
+          },
+          "declined_text": {
+            "label": "Text"
+          },
+          "declined_button_label": {
+            "label": "Return Button Label"
+          }
+        }
       }
     },
     "blog-posts": {
@@ -233,6 +268,97 @@
       },
       "presets": {
         "name": "Custom Liquid"
+      }
+    },
+    "events-popup": {
+      "name": "Events Popup",
+      "settings": {
+        "heading": {
+          "label": "Heading"
+        },
+        "first_subheading": {
+          "label": "Top Subheading"
+        },
+        "announcement_text": {
+          "label": "Announcement Text"
+        },
+        "second_subheading": {
+          "label": "Subheading Bottom"
+        },
+        "confirm_button_label": {
+          "label": "Confirm Button Label"
+        },
+        "cancel_button_label": {
+          "label": "Cancel Button Label"
+        },
+        "additional_text": {
+          "label": "Additional Text"
+        },
+        "show_socials": {
+          "label": "Show Socials"
+        },
+        "header_timer": {
+          "label": "Timer",
+          "show_timer": {
+            "label": "Show Timer"
+          },
+          "year": {
+            "label": "Year"
+          },
+          "month": {
+            "label": "Month",
+            "options": {
+              "01": {
+                "label": "January"
+              },
+              "02": {
+                "label": "Febrary"
+              },
+              "03": {
+                "label": "March"
+              },
+              "04": {
+                "label": "April"
+              },
+              "05": {
+                "label": "May"
+              },
+              "06": {
+                "label": "June"
+              },
+              "07": {
+                "label": "July"
+              },
+              "08": {
+                "label": "August"
+              },
+              "09": {
+                "label": "September"
+              },
+              "10": {
+                "label": "October"
+              },
+              "11": {
+                "label": "November"
+              },
+              "12": {
+                "label": "December"
+              }
+            }
+          },
+          "day": {
+            "label": "Day"
+          },
+          "hour": {
+            "label": "Hour"
+          },
+          "minutes": {
+            "label": "Minute"
+          },
+          "timer_completion_message": {
+            "label": "Completion Message"
+          }
+        }
       }
     },
     "featured-collection": {
@@ -768,6 +894,32 @@
       },
       "presets": {
         "name": "Newsletter"
+      }
+    },
+    "newsletter-popup": {
+      "name": "Newsletter Popup",
+      "settings": {
+        "newsletter_image": {
+          "label": "Image"
+        },
+        "newsletter_subheading": {
+          "label": "Subheading"
+        },
+        "newsletter_heading": {
+          "label": "Heading"
+        },
+        "newsletter_text": {
+          "label": "Text"
+        },
+        "newsletter_button_label": {
+          "label": "Button Label"
+        },
+        "show_popup": {
+          "label": "Enable Show Popup"
+        },
+        "lazyload_images": {
+          "label": "Enable LazyLoad Images"
+        }
       }
     },
     "promotional-grid": {

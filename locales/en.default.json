@@ -27,6 +27,11 @@
       "label_after": "After"
     }
   },
+  "popups": {
+    "newsletter-popup": {
+      "show_popup": "Do not show this popup again."
+    }
+  },
   "collections": {
     "general": {
       "all_collection": "View All"

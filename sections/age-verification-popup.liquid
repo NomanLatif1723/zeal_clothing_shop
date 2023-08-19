@@ -1,12 +1,103 @@
+{%- liquid
+  assign age_verifier_heading = section.settings.age_verifier_heading
+  assign age_verifier_text = section.settings.age_verifier_text
+  assign cancel_button_label = section.settings.cancel_button_label
+  assign confirm_button_label = section.settings.confirm_button_label
+  assign declined_heading = section.settings.declined_heading
+  assign declined_text = section.settings.declined_text
+  assign declined_button_label = section.settings.declined_button_label
+-%}
+<age-verifier class="age-verifier">
+  <div class="age-verifier__modal">
+    <div class="age-verifier__content">
+      {%- if age_verifier_heading != blank -%}
+        <div class="main__heading age-verifier__heading">
+          <h2>{{ age_verifier_heading }}</h2>
+        </div>
+      {%- endif -%}
+      {%- if age_verifier_text != blank -%}
+        <div class="age-verifier__text rte">
+          {{ age_verifier_text }}
+        </div>
+      {%- endif -%}
+      <div class="age-verifier__btn-container">
+        {%- if cancel_button_label != blank -%}
+          <a href="" class="btn btn__link btn__cancel-btn">{{ cancel_button_label }}</a>
+        {%- endif -%}
+        {%- if confirm_button_label != blank -%}
+          <a href="" class="btn btn__link btn__primary btn__confirm-btn">{{ confirm_button_label }}</a>
+        {%- endif -%}
+      </div>
+    </div>
+    <div class="age-verifier__content-declined">
+      {%- if declined_heading != blank -%}
+        <div class="main__heading age-verifier__heading">
+          <h2>{{ declined_heading }}</h2>
+        </div>
+      {%- endif -%}
+      {%- if declined_text != blank -%}
+        <div class="age-verifier__text rte">
+          {{ declined_text }}
+        </div>
+      {%- endif -%}
+      <div class="age-verifier__btn-container">
+        {%- if declined_button_label != blank -%}
+          <a href="" class="btn btn__link btn__return-btn">{{ declined_button_label }}</a>
+        {%- endif -%}
+      </div>
+    </div>
+    <button class="close__modal close-modal__age--verifier">
+      {%- render 'icon-close' -%}
+    </button>
+  </div>
+</age-verifier>
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "t:sections.age-verification-popup.name",
+    "settings": [
+      {
+        "type": "text",
+        "id": "age_verifier_heading",
+        "label": "t:sections.age-verification-popup.settings.age_verifier_heading.label",
+        "default": "Age Verification"
+      },
+      {
+        "type": "richtext",
+        "id": "age_verifier_text",
+        "label": "t:sections.age-verification-popup.settings.age_verifier_text.label"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.age-verification-popup.settings.header_confirmation.label"
+      },
+      {
+        "type": "text",
+        "id": "cancel_button_label",
+        "label": "t:sections.age-verification-popup.settings.header_confirmation.cancel_button_label.label",
+        "default": "Cancel"
+      }, {
+        "type": "text",
+        "id": "confirm_button_label",
+        "label": "t:sections.age-verification-popup.settings.header_confirmation.confirm_button_label.label",
+        "default": "Confirm"
+      }, {
+        "type": "header",
+        "content": "t:sections.age-verification-popup.settings.header_declined.label"
+      }, {
+        "type": "text",
+        "id": "declined_heading",
+        "label": "t:sections.age-verification-popup.settings.header_declined.declined_heading.label",
+        "default": "Age Verification Declined"
+      }, {
+        "type": "richtext",
+        "id": "declined_text",
+        "label": "t:sections.age-verification-popup.settings.header_declined.declined_text.label"
+      }, {
+        "type": "text",
+        "id": "declined_button_label",
+        "label": "t:sections.age-verification-popup.settings.header_declined.declined_button_label.label",
+        "default": "Back To Age Verifier"
+      }
+    ]
   }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}

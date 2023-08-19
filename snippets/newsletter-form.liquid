@@ -1,12 +1,12 @@
-{% form 'customer' %}
-  {% if form.posted_successfully? %}
+{%- form 'customer' -%}
+  {%- if form.posted_successfully? -%}
     <div class="message success__message">
       <span>Your form is submitted successfully</span>
     </div>
-  {% endif %}
-  {% if form.errors %}
+  {%- endif -%}
+  {%- if form.errors -%}
     {{ form.errors | default_errors }}
-  {% endif %}
+  {%- endif -%}
   <div class="newsletter__input-group">
     <input
       type="email"
@@ -19,13 +19,17 @@
     <button
       type="submit"
       id="newsletter_form-submit-{{ section.id }}"
-      class="btn btn__secondary">
-      {% if section.settings.button_label != blank %}
+      class="btn{% if newsletter_button_label or confirm_button_label %} btn__primary{% else %} btn__secondary{% endif %}">
+      {%- if section.settings.button_label != blank -%}
         {{ section.settings.button_label }}
-      {% else %}
+      {%- elsif newsletter_button_label != blank -%}
+        {{ newsletter_button_label }}
+      {%- elsif confirm_button_label != blank -%}
+        {{ confirm_button_label }}
+      {%- else -%}
         {{ 'newsletter.newsletter_form.submit_text' | t }}
-      {% endif %}
+      {%- endif -%}
     </button>
   </div>
 
-{% endform %}
+{%- endform -%}
