@@ -31,12 +31,12 @@
     "event-popup": {
       "type": "events-popup",
       "settings": {
-        "heading": "Announce Your Event",
-        "first_subheading": "Subheading",
+        "heading": "announce your event",
+        "first_subheading": "get Upto",
         "announcement_text": "15% Off",
-        "second_subheading": "Subheading",
-        "confirm_button_label": "Confirm",
-        "cancel_button_label": "Cancel",
+        "second_subheading": "Offer ends in:",
+        "confirm_button_label": "NOTIFY ME ghjghj",
+        "cancel_button_label": "No Thanks",
         "additional_text": "",
         "show_socials": false,
         "show_collection_timer": false,
