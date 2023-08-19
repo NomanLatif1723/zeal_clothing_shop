@@ -2,17 +2,6 @@
   "type": "header",
   "name": "t:sections.popup-group.name",
   "sections": {
-    "announcement": {
-      "type": "announcement",
-      "settings": {
-        "heading_text": "SUMMER SALES ENDS IN",
-        "announcement_text": "<p>USE CODE <strong>SUMMERSALE<\/strong><\/p>",
-        "show_timer": true,
-        "timer_hours": "2",
-        "timer_minutes": "30",
-        "show_socials": true
-      }
-    },
     "age-verification": {
       "type": "age-verification-popup",
       "settings": {
@@ -30,7 +19,6 @@
     }
   },
   "order": [
-    "announcement",
     "age-verification",
     "newsletter-popup",
     "event-popup"
