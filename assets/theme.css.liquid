@@ -2411,7 +2411,8 @@ input[type="radio"]:checked + label {
     transform: translate(-50%,-50%);
     /* z-index: 99; */
     background: white;
-    max-width: 600px;
+    max-width: calc(100% - 40px);
+    margin: 5% auto;
     padding: 10px;
 }
 .newsletter-popup__text-container {
@@ -2471,5 +2472,9 @@ input[type="radio"]:checked + label {
   }
   .newsletter-popup__text-container{
     padding: 40px 0;
+  }
+  .newsletter-popup__modal{
+    max-width: 600px;
+    margin: 0 auto;
   }
 }
