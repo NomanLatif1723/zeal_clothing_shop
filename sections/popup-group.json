@@ -5,18 +5,46 @@
     "age-verification": {
       "type": "age-verification-popup",
       "settings": {
+        "age_verifier_heading": "ARE YOU IN THE RIGHT PLACE ?",
+        "age_verifier_text": "<p>please verify that you are over 18 years old to access the website.<\/p>",
+        "cancel_button_label": "Cancel",
+        "confirm_button_label": "Confirm",
+        "declined_heading": "Age Verification Declined",
+        "declined_text": "",
+        "declined_button_label": "Back To Age Verifier"
       }
     },
     "newsletter-popup": {
       "type": "newsletter-popup",
       "disabled": true,
       "settings": {
+        "newsletter_subheading": "Subheading",
+        "newsletter_heading": "Newsletter",
+        "newsletter_text": "",
+        "newsletter_button_label": "Submit",
+        "show_popup": false,
+        "lazyload_images": false
       }
     },
     "event-popup": {
       "type": "events-popup",
       "disabled": true,
       "settings": {
+        "heading": "Announce Your Event",
+        "first_subheading": "Subheading",
+        "announcement_text": "15% Off",
+        "second_subheading": "Subheading",
+        "confirm_button_label": "Confirm",
+        "cancel_button_label": "Cancel",
+        "additional_text": "",
+        "show_socials": false,
+        "show_collection_timer": false,
+        "years": 2024,
+        "months": "08",
+        "days": 31,
+        "hours": 12,
+        "minutes": 12,
+        "timer_completion_message": ""
       }
     }
   },
