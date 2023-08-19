@@ -45,7 +45,7 @@
         "days": 31,
         "hours": 12,
         "minutes": 12,
-        "timer_completion_message": ""
+        "timer_completion_message": "<p>Timer Expires<\/p>"
       }
     }
   },
