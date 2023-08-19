@@ -18,10 +18,10 @@
     "newsletter-popup": {
       "type": "newsletter-popup",
       "settings": {
-        "newsletter_subheading": "Subheading",
-        "newsletter_heading": "Newsletter",
-        "newsletter_text": "",
-        "newsletter_button_label": "Submit",
+        "newsletter_subheading": "gET upto 15% off",
+        "newsletter_heading": "Subscribe to our Newsletter",
+        "newsletter_text": "<p>Subscribe to our email newsletter today to receive update on the latest news.<\/p>",
+        "newsletter_button_label": "SUBSCRIBE",
         "show_popup": false,
         "lazyload_images": false
       }
