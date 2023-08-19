@@ -2333,3 +2333,63 @@ input[type="radio"]:checked + label {
 .custom-content__heading {
     padding-bottom: 30px;
 }
+
+/* Age Verification Popup */
+.age-verifier:before {
+    content: '';
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    background: black;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.4;
+}
+
+.age-verifier__modal {
+    position: fixed;
+    z-index: 9;
+    background: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 60px;
+}
+
+.close__modal {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+}
+
+.age-verifier__content-declined {
+    display: none;
+}
+
+.age-verifier__content {
+    text-align: center;
+}
+
+.close__modal svg {
+    width: 12px;
+    height: 12px;
+}
+
+.btn__cancel-btn {
+    border: 1px solid rgba(1,1,1,0.1);
+}
+
+.age-verifier__btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.age-verifier__heading h2 {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.age-verifier__heading {
+    padding-bottom: 20px;
+}
