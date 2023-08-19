@@ -22,7 +22,7 @@
         "newsletter_heading": "Subscribe to our Newsletter",
         "newsletter_text": "<p>Subscribe to our email newsletter today to receive update on the latest news.<\/p>",
         "newsletter_button_label": "SUBSCRIBE",
-        "show_popup": false,
+        "show_popup": true,
         "lazyload_images": false
       }
     },
