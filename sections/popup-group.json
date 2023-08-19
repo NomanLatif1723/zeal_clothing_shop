@@ -4,16 +4,19 @@
   "sections": {
     "age-verification": {
       "type": "age-verification-popup",
+      "disabled": true,
       "settings": {
       }
     },
     "newsletter-popup": {
       "type": "newsletter-popup",
+      "disabled": true,
       "settings": {
       }
     },
     "event-popup": {
       "type": "events-popup",
+      "disabled": true,
       "settings": {
       }
     }
