@@ -50,8 +50,8 @@
                   {{ lookbookImage | product_img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
                   {{ lookbookImage | product_img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
                 "
-                width="{{ image.width }}"
-                height="{{ image.height }}"
+                width="{{ lookbookImage.width }}"
+                height="{{ lookbookImage.height }}"
                 loading="{{ lazyloading }}"
                 sizes="{{ sizes }}"
                 alt= "{{ lookbookImage.alt }}"
