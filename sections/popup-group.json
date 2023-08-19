@@ -17,7 +17,6 @@
     },
     "newsletter-popup": {
       "type": "newsletter-popup",
-      "disabled": true,
       "settings": {
         "newsletter_subheading": "Subheading",
         "newsletter_heading": "Newsletter",
