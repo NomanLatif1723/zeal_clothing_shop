@@ -18,6 +18,7 @@
     "newsletter-popup": {
       "type": "newsletter-popup",
       "settings": {
+        "newsletter_image": "shopify:\/\/shop_images\/jeffery-erhunse-dBwrTc-2AD8-unsplash_3.jpg",
         "newsletter_subheading": "gET upto 15% off",
         "newsletter_heading": "Subscribe to our Newsletter",
         "newsletter_text": "<p>Subscribe to our email newsletter today to receive update on the latest news.<\/p>",
