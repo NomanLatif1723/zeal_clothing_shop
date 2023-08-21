@@ -16,7 +16,7 @@
   assign minute = section.settings.minutes
   assign completion_message = section.settings.timer_completion_message
 %}
-<events-popup class="events-popup">
+<events-popup class="events-popup" data-popup-modal>
   <div class="events-popup__modal">
     <div class="events-popup__content">
       {% if heading != blank %}
