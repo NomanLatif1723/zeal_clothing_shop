@@ -8,7 +8,6 @@
               <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="white">
             </svg>
           </button>
-  
           <ul id="CountryList" role="list" class="disclosure__list">
             {% for country in localization.available_countries %}
               <li class="disclosure__item" tabindex="-1">
@@ -18,13 +17,30 @@
               </li>
             {% endfor %}
           </ul>
-  
           <input type="hidden" name="country_code" value="{{ localization.country.iso_code }}">
         </div>
       </div>
     {% endif %}
     {% if show_currency %}
-      <div class="currency__wrapper"></div>
+      <div class="currency__wrapper">
+        <div class="disclosure">
+          <button type="button" class="disclosure__button" aria-expanded="false" aria-controls="CountryList">
+            <svg aria-hidden="true" width="10" height="10" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="white">
+            </svg>
+          </button>
+          <ul id="CountryList" role="list" class="disclosure__list">
+            {% for country in localization.available_countries %}
+              <li class="disclosure__item" tabindex="-1">
+                <a href="#"{% if country.iso_code == localization.country.iso_code %} aria-current="true"{% endif %} data-value="{{ country.iso_code }}">
+                  ({{ country.currency.iso_code }} {{ country.currency.symbol }})
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+          <input type="hidden" name="country_code" value="{{ localization.country.iso_code }}">
+        </div>
+      </div>
     {% endif %}
   {% endform %}
 </div>
