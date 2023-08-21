@@ -1,21 +1,14 @@
 {%- liquid 
-assign locale_selector = false
-assign currency_selector = false
-assign show_locale = false
-assign show_currency = false
+  assign show_locale = false
+  assign show_currency = false
 
-if settings.show_language and shop.enabled_locales.size > 1
-assign locale_selector = true 
-endif
-
-if settings.show_currencies and shop.enabled_currencies.size > 1
-assign currency_selector = true 
-endif
-
-if currency_selector or locale_selector
-assign show_locale = true 
-assign show_currency = true
-endif
+  if settings.show_language and shop.enabled_locales.size > 1
+    assign show_locale = true 
+  endif
+  
+  if settings.show_currencies and shop.enabled_currencies.size > 1
+    assign show_currency = true 
+  endif
 -%}
 <div class="announcement__bar" data-section-id="{{ section.id }}">
   <div class="page__width">
@@ -41,9 +34,9 @@ endif
       </div>
       <div class="language__currency-container">
         {%- render 'localization',
-         locale_selector: locale_selector,
-         currency_selector: currency_selector,
-         show_flags: settings.show_flags 
+           show_locale: show_locale,
+           show_currency: show_currency,
+           show_flags: settings.show_flags 
         -%}
       </div>
     </div>
