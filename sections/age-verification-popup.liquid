@@ -7,7 +7,7 @@
   assign declined_text = section.settings.declined_text
   assign declined_button_label = section.settings.declined_button_label
 -%}
-<age-verifier class="age-verifier">
+<age-verifier class="age-verifier" data-popup-modal>
   <div class="age-verifier__modal">
     <div class="age-verifier__content">
       {%- if age_verifier_heading != blank -%}
