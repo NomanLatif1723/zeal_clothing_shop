@@ -522,7 +522,7 @@ function initNewsletterPopup() {
         const shouldShowPopup = () => !storageType(consentPropertyName);
         const saveToStorage = () => storageType.getItem(consentPropertyName, true);
 
-        if (shouldShowPopup) {
+        if (shouldShowPopup(storageType)) {
           saveToStorage(consentPropertyName);
         }
         console.log("hy");
