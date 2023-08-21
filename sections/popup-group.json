@@ -4,6 +4,7 @@
   "sections": {
     "age-verification": {
       "type": "age-verification-popup",
+      "disabled": true,
       "settings": {
         "age_verifier_heading": "ARE YOU IN THE RIGHT PLACE ?",
         "age_verifier_text": "<p>please verify that you are over 18 years old to access the website.<\/p>",
@@ -16,6 +17,7 @@
     },
     "newsletter-popup": {
       "type": "newsletter-popup",
+      "disabled": true,
       "settings": {
         "newsletter_image": "shopify:\/\/shop_images\/jeffery-erhunse-dBwrTc-2AD8-unsplash_3.jpg",
         "newsletter_subheading": "gET upto 15% off",
@@ -28,6 +30,7 @@
     },
     "event-popup": {
       "type": "events-popup",
+      "disabled": true,
       "settings": {
         "heading": "announce your event",
         "first_subheading": "get Upto",
