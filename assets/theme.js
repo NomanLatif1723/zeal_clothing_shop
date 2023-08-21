@@ -521,15 +521,17 @@ function initNewsletterPopup() {
     const shouldShowPopup = () => !storageType.getItem(consentPropertyName);
     const saveToStorage = () => storageType.setItem(consentPropertyName, true);
 
-    // if (shouldShowPopup(storageType)) {
-    //   newsletterPopup.classList.add('popup__hidden');
-    // }
+    if (shouldShowPopup(storageType)) {
+      newsletterPopup.classList.remove('popup__hidden');
+
+      hidePopupInput.addEventListener('change', () => {
+        if (hidePopupInput.checked) {
+          showOnlyOnce();
+        }
+      })
+    }
     
-    hidePopupInput.addEventListener('change', () => {
-      if (hidePopupInput.checked) {
-        showOnlyOnce();
-      }
-    })
+    
     function showOnlyOnce() {
       saveToStorage(storageType);
     }
