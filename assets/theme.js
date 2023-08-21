@@ -456,38 +456,41 @@ function initComparison() {
 initComparison();
 
 function initageVerificationPopUp() {
-  const cookieStorage = {
-    getItem: (item) => {
-        const cookies = document.cookie
-            .split(';')
-            .map(cookie => cookie.split('='))
-            .reduce((acc, [key, value]) => ({ ...acc, [key.trim()]: value }), {});
-        return cookies[item];
-    },
-    setItem: (item, value) => {
-        document.cookie = `${item}=${value};`
-    }
-}
-  const storageType  = localStorage;
-  const consentPropertyName = 'age-verification-consent';
-
-  const shouldShowPopup = () => !storageType.getItem(consentPropertyName);
-  const saveToStorage = () => storageType.setItem(consentPropertyName, true);
-
-  window.onload = () => {
-    const ageVerifierPopup = document.querySelector('.age-verifier');
-    const confirmAgeBtn = document.querySelector('.btn__confirm-btn');
-    if (confirmAgeBtn) {
-      confirmAgeBtn.addEventListener('click', () => {
-        saveToStorage(storageType);
-        ageVerifierPopup.classList.add('popup__hidden');
-      })
-    }
-    
-    if (shouldShowPopup(storageType)) {
-      ageVerifierPopup.classList.remove('popup__hidden');
+  const ageVerifierPopup = document.querySelector('.age-verifier');
+  if (ageVerifierPopup) {
+      const cookieStorage = {
+      getItem: (item) => {
+          const cookies = document.cookie
+              .split(';')
+              .map(cookie => cookie.split('='))
+              .reduce((acc, [key, value]) => ({ ...acc, [key.trim()]: value }), {});
+          return cookies[item];
+      },
+      setItem: (item, value) => {
+          document.cookie = `${item}=${value};`
+      }
+  }
+    const storageType  = localStorage;
+    const consentPropertyName = 'age-verification-consent';
+  
+    const shouldShowPopup = () => !storageType.getItem(consentPropertyName);
+    const saveToStorage = () => storageType.setItem(consentPropertyName, true);
+  
+    window.onload = () => {
+      const confirmAgeBtn = document.querySelector('.btn__confirm-btn');
+      if (confirmAgeBtn) {
+        confirmAgeBtn.addEventListener('click', () => {
+          saveToStorage(storageType);
+          ageVerifierPopup.classList.add('popup__hidden');
+        })
+      }
+      
+      if (shouldShowPopup(storageType)) {
+        ageVerifierPopup.classList.remove('popup__hidden');
+      }
     }
   }
+  
 }
 initageVerificationPopUp();
 
