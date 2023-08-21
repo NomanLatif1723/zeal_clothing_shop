@@ -477,11 +477,13 @@ function initageVerificationPopUp() {
   window.onload = () => {
     const ageVerifierPopup = document.querySelector('.age-verifier');
     const confirmAgeBtn = document.querySelector('.btn__confirm-btn');
-
-    confirmAgeBtn.addEventListener('click', () => {
-      saveToStorage(storageType);
-      ageVerifierPopup.classList.add('popup__hidden');
-    })
+    if (confirmAgeBtn) {
+      confirmAgeBtn.addEventListener('click', () => {
+        saveToStorage(storageType);
+        ageVerifierPopup.classList.add('popup__hidden');
+      })
+    }
+    
     if (shouldShowPopup(storageType)) {
       ageVerifierPopup.classList.remove('popup__hidden');
     }
