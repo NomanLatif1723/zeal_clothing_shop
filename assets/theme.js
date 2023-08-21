@@ -458,9 +458,9 @@ initComparison();
 function initModalPopup() {
   let popupModal = document.querySelectorAll('[data-popup-modal]');
   popupModal.forEach(popup => {
-    let closeModalBtn = popupModal.querySelector('.close__modal');
+    let closeModalBtn = popup.querySelector('.close__modal');
     closeModalBtn.addEventListener('click', () => {
-      this.closest(popupModal).style.display = 'none';
+      this.closest(popup).style.display = 'none';
     })
   })
 }
