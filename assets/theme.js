@@ -455,4 +455,14 @@ function initComparison() {
 }
 initComparison();
 
+function initModalPopup() {
+  let popupModal = document.querySelectorAll('[data-popup-modal]');
+  popupModal.forEach(popup => {
+    let closeModalBtn = popupModal.querySelector('.close__modal');
+    closeModalBtn.addEventListener('click', () => {
+      this.closest(popupModal).style.display = 'none';
+    })
+  })
+}
+initModalPopup();
 })();
