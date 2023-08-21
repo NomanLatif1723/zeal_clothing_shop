@@ -479,6 +479,7 @@ function initageVerificationPopUp() {
     window.onload = () => {
       const confirmBtn = document.querySelector('.btn__confirm-btn');
       const cancelBtn = document.querySelector('.btn__cancel-btn');
+      const returnBackBtn = document.querySelector('.btn__cancel-btn');
       const popupContent = document.querySelector('.age-verifier__content');
       const declinedContent = document.querySelector('.age-verifier__content-declined');
       
