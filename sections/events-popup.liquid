@@ -1,4 +1,4 @@
-{% liquid
+{%- liquid
   assign heading = section.settings.heading
   assign first_subheading = section.settings.first_subheading
   assign announcement_text = section.settings.announcement_text
@@ -15,33 +15,33 @@
   assign hour = section.settings.hours
   assign minute = section.settings.minutes
   assign completion_message = section.settings.timer_completion_message
-%}
+-%}
 <events-popup class="events-popup" data-popup-modal>
   <div class="events-popup__modal">
     <div class="events-popup__content">
-      {% if heading != blank %}
+      {%- if heading != blank -%}
         <div class="main__heading events-popup__heading">
           <h2>{{ heading }}</h2>
         </div>
-      {% endif %}
+      {%- endif -%}
       <div class="events-popup__announcement">
-        {% if first_subheading != blank %}
+        {%- if first_subheading != blank -%}
           <div class="sub__heading events__subheading">
             {{ first_subheading }}
           </div>
-        {% endif %}
-        {% if announcement_text != blank %}
+        {%- endif -%}
+        {%- if announcement_text != blank -%}
           <div class="events-offer__text">
             {{ announcement_text }}
           </div>
-        {% endif %}
-        {% if second_subheading != blank %}
+        {%- endif -%}
+        {%- if second_subheading != blank -%}
           <div class="sub__heading events__subheading">
             {{ second_subheading }}
           </div>
-        {% endif %}
+        {%- endif -%}
       </div>
-      {% if show_timer %}
+      {%- if show_timer -%}
         <div
           class="promo-timer__banner"
           data-year="{{ year }}"
@@ -73,23 +73,24 @@
             <div class="timer__message rte">{{ completion_message }}</div>
           {%- endif -%}
         </div>
-      {% endif %}
+      {%- endif -%}
       <div class="events-popup-newsletter">
-        {% render 'newsletter-form' 
-         , confirm_button_label: confirm_button_label %}
-        {% if cancel_button_label != blank %}
+        {%- render 'newsletter-form',
+           confirm_button_label: confirm_button_label 
+        -%}
+        {%- if cancel_button_label != blank -%}
           <div class="popup-cancel__btn">
             <button>{{ cancel_button_label }}</button>
           </div>
-        {% endif %}
-        {% if additional_text != blank %}
+        {%- endif -%}
+        {%- if additional_text != blank -%}
           <div class="popup-addtional__text rte">{{ additional_text }}</div>
         {% endif %}
       </div>
       <div class="events-popup__socials">
-        {% if show_socials %}
-          {% render 'social-icons' %}
-        {% endif %}
+        {%- if show_socials -%}
+          {%- render 'social-icons' -%}
+        {%- endif -%}
       </div>
     </div>
     <button class="close__modal close-modal__events--popup">
