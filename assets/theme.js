@@ -514,14 +514,15 @@ function initNewsletterPopup() {
   const newsletterPopup = document.querySelector('.newsletter-popup');
   if (newsletterPopup) {
     const hidePopupInput = document.querySelector('.show-newsletter__popup input');
+
+    const storageType = localStorage;
+    const consentPropertyName = 'newsletter-consent';
+
+    const shouldShowPopup = () => !storageType.getItem(consentPropertyName);
+    const saveToStorage = () => storageType.setItem(consentPropertyName, true);
+    
     hidePopupInput.addEventListener('change', () => {
       if (hidePopupInput.checked) {
-        const storageType = localStorage;
-        const consentPropertyName = 'newsletter-consent';
-
-        const shouldShowPopup = () => !storageType.getItem(consentPropertyName);
-        const saveToStorage = () => storageType.setItem(consentPropertyName, true);
-
         if (shouldShowPopup(storageType)) {
           saveToStorage(consentPropertyName);
         }
