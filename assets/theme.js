@@ -520,12 +520,14 @@ function initNewsletterPopup() {
 
     const shouldShowPopup = () => !storageType.getItem(consentPropertyName);
     const saveToStorage = () => storageType.setItem(consentPropertyName, true);
+
+    if (shouldShowPopup(storageType)) {
+      newsletterPopup.classList.remove('popup__hidden');
+    }
     
     hidePopupInput.addEventListener('change', () => {
       if (hidePopupInput.checked) {
-        if (shouldShowPopup(storageType)) {
-          saveToStorage(consentPropertyName);
-        }
+        
       }
     })
   }
