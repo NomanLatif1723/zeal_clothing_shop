@@ -470,7 +470,7 @@ function initageVerificationPopUp() {
           document.cookie = `${item}=${value};`
       }
   }
-    const storageType  = sessionStorage;
+    const storageType  = cookieStorage;
     const consentPropertyName = 'age-verification-consent';
   
     const shouldShowPopup = () => !storageType.getItem(consentPropertyName);
