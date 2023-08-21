@@ -513,7 +513,7 @@ initageVerificationPopUp();
 function initNewsletterPopup() {
   const newsletterPopup = document.querySelector('.newsletter-popup');
   if (newsletterPopup) {
-    const hidePopupInput = document.querySelector('.show-newsletter__popup input');
+    const hidePopupInput = document.querySelector('.show-newsletter__popup input.checked');
     hidePopupInput.addEventListener('change', () => {
       console.log("hello");
     })
