@@ -523,7 +523,7 @@ function initNewsletterPopup() {
 
     window.onload = () => {
       if (shouldShowPopup(storageType)) {
-        newsletterPopup.classList.add('popup__hidden');
+        newsletterPopup.classList.remove('popup__hidden');
       }
     }
 
