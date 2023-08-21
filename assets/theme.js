@@ -521,20 +521,21 @@ function initNewsletterPopup() {
     const shouldShowPopup = () => !storageType.getItem(consentPropertyName);
     const saveToStorage = () => storageType.setItem(consentPropertyName, true);
 
-    if (shouldShowPopup(storageType)) {
-      newsletterPopup.classList.remove('popup__hidden');
-
-      hidePopupInput.addEventListener('change', () => {
-        if (hidePopupInput.checked) {
-          showOnlyOnce();
-        }
-      })
-      function showOnlyOnce() {
-        saveToStorage(storageType);
-        newsletterPopup.classList.add('popup__hidden');
+    window.onload = () => {
+      if (shouldShowPopup(storageType)) {
+        newsletterPopup.classList.remove('popup__hidden');
       }
     }
-    
+
+    hidePopupInput.addEventListener('change', () => {
+      if (hidePopupInput.checked) {
+        showOnlyOnce();
+      }
+    })
+    function showOnlyOnce() {
+      saveToStorage(storageType);
+      newsletterPopup.classList.add('popup__hidden');
+    }
   }
 }
 initNewsletterPopup();
