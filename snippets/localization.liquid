@@ -1,5 +1,5 @@
-<div class="locale__currency-wrapper">
-  {% form 'localization', id: 'localization', class: 'locales' %}
+{% form 'localization', id: 'localization', class: 'locales' %}
+  <div class="locale__currency-wrapper">
     {% if show_locale %}
       <div class="locale__wrapper">
         <div class="disclosure">
@@ -42,5 +42,5 @@
         </div>
       </div>
     {% endif %}
-  {% endform %}
-</div>
+  </div>
+{% endform %}
