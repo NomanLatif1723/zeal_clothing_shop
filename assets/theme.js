@@ -521,20 +521,14 @@ function initNewsletterPopup() {
     const shouldShowPopup = () => !storageType.getItem(consentPropertyName);
     const saveToStorage = () => storageType.setItem(consentPropertyName, true);
 
-    window.onload = () => {
-      if (shouldShowPopup(storageType)) {
-        newsletterPopup.classList.remove('popup__hidden');
-      }
+    if (shouldShowPopup(storageType)) {
+      newsletterPopup.classList.remove('popup__hidden');
     }
-
     hidePopupInput.addEventListener('change', () => {
       if (hidePopupInput.checked) {
-        showOnlyOnce();
+        saveToStorage(storageType);
       }
     })
-    function showOnlyOnce() {
-      saveToStorage(storageType);
-    }
   }
 }
 initNewsletterPopup();
