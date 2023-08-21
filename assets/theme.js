@@ -522,12 +522,13 @@ function initNewsletterPopup() {
     const saveToStorage = () => storageType.setItem(consentPropertyName, true);
 
     if (shouldShowPopup(storageType)) {
-      newsletterPopup.classList.add('popup__hidden');
+      newsletterPopup.classList.remove('popup__hidden');
     }
     
     hidePopupInput.addEventListener('change', () => {
       if (hidePopupInput.checked) {
         saveToStorage(storageType);
+        newsletterPopup.classList.add('popup__hidden');
       }
     })
   }
