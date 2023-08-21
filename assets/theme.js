@@ -408,7 +408,7 @@ function initCountdown() {
 initCountdown();
 
 // Image Comparison 
-function initComparison() {
+function initImageComparison() {
   let compareWrapper = document.querySelectorAll('[data-compare-image]');
   compareWrapper.forEach(wrapper => {
     let compareButton = wrapper.querySelector('.compare__button');
@@ -453,7 +453,7 @@ function initComparison() {
     
   })
 }
-initComparison();
+initImageComparison();
 
 function initageVerificationPopUp() {
   const ageVerifierPopup = document.querySelector('.age-verifier');
