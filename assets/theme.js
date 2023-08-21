@@ -465,4 +465,5 @@ function initModalPopup() {
   })
 }
 initModalPopup();
+confirm("Hello How are you")
 })();
