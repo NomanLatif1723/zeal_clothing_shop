@@ -1,5 +1,8 @@
 {
   "general": {
+    "accessibility": {
+      "close-modal": "Close Modal"
+    }
   },
   "newsletter": {
     "newsletter_form": {
