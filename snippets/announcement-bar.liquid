@@ -2,11 +2,11 @@
   assign show_locale = false
   assign show_currency = false
 
-  if settings.show_language and shop.enabled_locales.size > 1
+  if settings.show_language or shop.enabled_locales.size > 1
     assign show_locale = true 
   endif
   
-  if settings.show_currencies and shop.enabled_currencies.size > 1
+  if settings.show_currencies or shop.enabled_currencies.size > 1
     assign show_currency = true 
   endif
 -%}
