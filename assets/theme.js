@@ -455,6 +455,7 @@ function initImageComparison() {
 }
 initImageComparison();
 
+// Age Verification Popup 
 function initageVerificationPopUp() {
   const ageVerifierPopup = document.querySelector('.age-verifier');
   if (ageVerifierPopup) {
@@ -510,6 +511,7 @@ function initageVerificationPopUp() {
 }
 initageVerificationPopUp();
 
+// Newsletter Popup
 function initNewsletterPopup() {
   const newsletterPopup = document.querySelector('.newsletter-popup');
   if (newsletterPopup) {
@@ -533,6 +535,7 @@ function initNewsletterPopup() {
 }
 initNewsletterPopup();
 
+//  General Modal Button Events 
 function initModalPopup() {
   let popupModal = document.querySelectorAll('[data-popup-modal]');
   popupModal.forEach(popup => {
