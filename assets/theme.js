@@ -531,6 +531,7 @@ function initNewsletterPopup() {
       })
       function showOnlyOnce() {
         saveToStorage(storageType);
+        newsletterPopup.classList.add('popup__hidden');
       }
     }
     
