@@ -479,7 +479,7 @@ function initageVerificationPopUp() {
     window.onload = () => {
       const confirmBtn = document.querySelector('.btn__confirm-btn');
       const cancelBtn = document.querySelector('.btn__cancel-btn');
-      const returnBackBtn = document.querySelector('.btn__cancel-btn');
+      const returnBackBtn = document.querySelector('.btn__return-btn');
       const popupContent = document.querySelector('.age-verifier__content');
       const declinedContent = document.querySelector('.age-verifier__content-declined');
       
@@ -493,6 +493,12 @@ function initageVerificationPopUp() {
         cancelBtn.addEventListener('click', () => {
           popupContent.classList.add('content__hidden');
           declinedContent.classList.remove('content__hidden');
+        })
+      }
+      if (returnBackBtn) {
+        returnBackBtn.addEventListener('click', () => {
+          popupContent.classList.remove('content__hidden');
+          declinedContent.classList.add('content__hidden');
         })
       }
       if (shouldShowPopup(storageType)) {
