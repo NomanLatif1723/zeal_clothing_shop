@@ -478,7 +478,7 @@ function initageVerificationPopUp() {
     const ageVerifierPopup = document.querySelector('.age-verifier');
     const confirmAgeBtn = ageVerifierPopup.querySelector('.btn__confirm-btn');
 
-    confirmAgeBtn.addEventListener('click', () {
+    confirmAgeBtn.addEventListener('click', () => {
       saveToStorage(storageType);
       ageVerifierPopup.classList.add('popup__hidden');
     })
