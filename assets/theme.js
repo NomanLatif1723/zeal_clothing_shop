@@ -510,6 +510,17 @@ function initageVerificationPopUp() {
 }
 initageVerificationPopUp();
 
+function initNewsletterPopup() {
+  const newsletterPopup = document.querySelector('.newsletter-popup');
+  if (newsletterPopup) {
+    const hidePopupInput = document.querySelector('.show-newsletter__popup input');
+    hidePopupInput.addEventListener('change', () => {
+      console.log("hello");
+    })
+  }
+}
+initNewsletterPopup();
+
 function initModalPopup() {
   let popupModal = document.querySelectorAll('[data-popup-modal]');
   popupModal.forEach(popup => {
