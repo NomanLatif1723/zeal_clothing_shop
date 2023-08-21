@@ -526,7 +526,6 @@ function initNewsletterPopup() {
         if (shouldShowPopup(storageType)) {
           saveToStorage(consentPropertyName);
         }
-        console.log("hy");
       }
     })
   }
