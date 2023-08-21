@@ -537,9 +537,17 @@ function initModalPopup() {
   let popupModal = document.querySelectorAll('[data-popup-modal]');
   popupModal.forEach(popup => {
     let closeModalBtn = popup.querySelector('.close__modal');
-    closeModalBtn.addEventListener('click', () => {
-      closeModalBtn.closest('[data-popup-modal]').classList.add('popup__hidden');
-    })
+    let eventCancelBtn = popup.querySelector('.popup-cancel__btn button');
+    if (closeModalBtn) {
+        closeModalBtn.addEventListener('click', () => {
+        closeModalBtn.closest('[data-popup-modal]').classList.add('popup__hidden');
+      })
+    }
+    if (eventCancelBtn) {
+      eventCancelBtn.addEventListener('click', () => {
+        eventCancelBtn.closest('[data-popup-modal]').classList.add('popup__hidden');
+      })
+    }
   })
 }
 initModalPopup();
