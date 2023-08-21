@@ -523,7 +523,7 @@ function initNewsletterPopup() {
 
     window.onload = () => {
       if (shouldShowPopup(storageType)) {
-        newsletterPopup.classList.remove('popup__hidden');
+        newsletterPopup.classList.add('popup__hidden');
       }
     }
 
@@ -534,7 +534,6 @@ function initNewsletterPopup() {
     })
     function showOnlyOnce() {
       saveToStorage(storageType);
-      newsletterPopup.classList.add('popup__hidden');
     }
   }
 }
