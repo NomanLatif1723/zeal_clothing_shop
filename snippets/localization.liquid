@@ -2,10 +2,24 @@
 <div class="locale__currency-wrapper">
   {% form 'localization' %}
     {% if show_locale %}
-      <div class="locale__wrapper"></div>
+      <div class="locale__wrapper">
+        <ul>
+          <li>English</li>
+          <li>Urdu</li>
+          <li>French</li>
+          <li>German</li>
+        </ul>
+      </div>
     {% endif %}
     {% if show_currency %}
-      <div class="currency__wrapper"></div>
+      <div class="currency__wrapper">
+         <ul>
+          <li>Madina Munavra</li>
+          <li>Makkah Mukarma</li>
+          <li>Pakistan</li>
+          <li>Saudia Arabia</li>
+        </ul>
+      </div>
     {% endif %}
   {% endform %}
 </div>
