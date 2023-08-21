@@ -513,9 +513,11 @@ initageVerificationPopUp();
 function initNewsletterPopup() {
   const newsletterPopup = document.querySelector('.newsletter-popup');
   if (newsletterPopup) {
-    const hidePopupInput = document.querySelector('.show-newsletter__popup input.checked');
+    const hidePopupInput = document.querySelector('.show-newsletter__popup input');
     hidePopupInput.addEventListener('change', () => {
-      console.log("hello");
+      if (hidePopupInput.checked) {
+        console.log("hy");
+      }
     })
   }
 }
