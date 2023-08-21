@@ -664,7 +664,7 @@
       "name": "Image With Text",
       "settings": {
         "layout_reverse": {
-          "label": "Reverse Direction"
+          "label": "Image Right"
         },
         "lazyload_images": {
           "label": "Enable LazyLoad Images",
