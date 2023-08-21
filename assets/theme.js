@@ -477,14 +477,23 @@ function initageVerificationPopUp() {
     const saveToStorage = () => storageType.setItem(consentPropertyName, true);
   
     window.onload = () => {
-      const confirmAgeBtn = document.querySelector('.btn__confirm-btn');
-      if (confirmAgeBtn) {
-        confirmAgeBtn.addEventListener('click', () => {
+      const confirmBtn = document.querySelector('.btn__confirm-btn');
+      const cancelBtn = document.querySelector('.btn__cancel-btn');
+      const popupContent = document.querySelector('.age-verifier__content');
+      const declinedContent = document.querySelector('.age-verifier__content-declined');
+      
+      if (confirmBtn) {
+        confirmBtn.addEventListener('click', () => {
           saveToStorage(storageType);
           ageVerifierPopup.classList.add('popup__hidden');
         })
       }
-      
+      if (cancelBtn) {
+        cancelBtn.addEventListener('click', () => {
+          popupContent.classList.add('content__hidden');
+          declinedContent.classList.remove('content__hidden');
+        })
+      }
       if (shouldShowPopup(storageType)) {
         ageVerifierPopup.classList.remove('popup__hidden');
       }
