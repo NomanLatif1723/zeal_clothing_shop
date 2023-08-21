@@ -10,7 +10,7 @@
         "cancel_button_label": "Cancel",
         "confirm_button_label": "Confirm",
         "declined_heading": "Age Verification Declined",
-        "declined_text": "",
+        "declined_text": "<p>Come Back Later When You're Old Enough to visit the site<\/p>",
         "declined_button_label": "Back To Age Verifier"
       }
     },
