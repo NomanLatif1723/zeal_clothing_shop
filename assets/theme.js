@@ -475,11 +475,15 @@ function initageVerificationPopUp() {
   const saveToStorage = () => storageType.setItem(consentPropertyName, true);
 
   window.onload = () => {
+    const ageVerifierPopup = document.querySelector('.age-verifier');
+    const confirmAgeBtn = ageVerifierPopup.querySelector('.btn__confirm-btn');
+
+    confirmAgeBtn.addEventListener('click', () {
+      saveToStorage(storageType);
+      ageVerifierPopup.classList.add('popup__hidden');
+    })
     if (shouldShowPopup(storageType)) {
-      const consent = confirm('Agree to Our Terms And Conditions');
-      if (consent) {
-        saveToStorage(storageType);
-      }
+      ageVerifierPopup.classList.remove('popup__hidden');
     }
   }
 }
