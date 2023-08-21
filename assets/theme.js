@@ -529,12 +529,11 @@ function initNewsletterPopup() {
           showOnlyOnce();
         }
       })
+      function showOnlyOnce() {
+        saveToStorage(storageType);
+      }
     }
     
-    
-    function showOnlyOnce() {
-      saveToStorage(storageType);
-    }
   }
 }
 initNewsletterPopup();
