@@ -516,6 +516,15 @@ function initNewsletterPopup() {
     const hidePopupInput = document.querySelector('.show-newsletter__popup input');
     hidePopupInput.addEventListener('change', () => {
       if (hidePopupInput.checked) {
+        const storageType = localStorage;
+        const consentPropertyName = 'newsletter-consent';
+
+        const shouldShowPopup = !storageType(consentPropertyName);
+        const saveToStorage = storageType.getItem(consentPropertyName);
+
+        if (shouldShowPopup) {
+          saveToStorage(consentPropertyName);
+        }
         console.log("hy");
       }
     })
