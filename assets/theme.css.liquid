@@ -329,6 +329,11 @@ button {
   .language__currency-container {
     display: none;
   }
+  @media only screen and (max-width: 950px) {
+    .announcement__wrapper {
+      justify-content: center;
+    }
+  }
   @media only screen and (min-width: 769px) {
     .main__announcement-banner {
       display: flex;
@@ -339,7 +344,9 @@ button {
     .announcement__wrapper {
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
       justify-content: space-between;
+      gap: 15px;
     }
     .announcement__heading {
       padding-bottom: 0;
