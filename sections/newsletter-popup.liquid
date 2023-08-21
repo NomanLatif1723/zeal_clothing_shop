@@ -5,10 +5,6 @@
   assign newsletter_text = section.settings.newsletter_text
   assign newsletter_button_label = section.settings.newsletter_button_label
   assign show_popup = section.settings.show_popup
-  assign newsletter_popup = false
-  if show_popup
-    assign newsletter_popup = true
-  endif
 
   assign ratio = 0.75
   assign default = 'grande'
@@ -20,7 +16,7 @@
   assign lazyloading = 'lazy'
   endif
 -%}
-<newsletter-popup class="newsletter-popup{% if customer %} popup__hidden{% endif %}" data-newsletter-popup="{{ newsletter_popup }}" data-popup-modal>
+<newsletter-popup class="newsletter-popup{% if customer %} popup__hidden{% endif %}" data-popup-modal>
   <div class="newsletter-popup__modal">
     <div class="newsletter-popup__content">
       <div class="newsletter-popup__item newsletter-popup__image-container">    
