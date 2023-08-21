@@ -258,20 +258,25 @@ button {
   .locale__currency-wrapper {
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 30px;
   }
-  
-  li.disclosure__item a {
+  .disclosure__button {
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-flex;
+  }
+  .disclosure__item a {
       color: white;
       font-size: 13px;
   }
-  
-  .disclosure {
+  /* .disclosure {
       display: flex;
       flex-direction: row-reverse;
       gap: 6px;
       align-items: center;
-  }
+  } */
 
   /* Announcement Bar  */
   .announcement__bar {
