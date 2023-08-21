@@ -528,8 +528,6 @@ function initNewsletterPopup() {
     hidePopupInput.addEventListener('change', () => {
       if (hidePopupInput.checked) {
         saveToStorage(storageType);
-      } else {
-        newsletterPopup.classList.add('popup__hidden');
       }
     })
     
