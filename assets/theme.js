@@ -527,7 +527,7 @@ function initNewsletterPopup() {
     
     hidePopupInput.addEventListener('change', () => {
       if (hidePopupInput.checked) {
-        
+        saveToStorage(storageType);
       }
     })
   }
