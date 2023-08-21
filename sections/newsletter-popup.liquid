@@ -5,6 +5,10 @@
   assign newsletter_text = section.settings.newsletter_text
   assign newsletter_button_label = section.settings.newsletter_button_label
   assign show_popup = section.settings.show_popup
+  assign newsletter_popup = false
+  if show_popup
+    assign newsletter_popup = true
+  endif
 
   assign ratio = 0.75
   assign default = 'grande'
