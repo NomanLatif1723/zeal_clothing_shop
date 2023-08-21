@@ -520,7 +520,7 @@ function initNewsletterPopup() {
         const consentPropertyName = 'newsletter-consent';
 
         const shouldShowPopup = !storageType(consentPropertyName);
-        const saveToStorage = storageType.getItem(consentPropertyName);
+        const saveToStorage = storageType.getItem(consentPropertyName, true);
 
         if (shouldShowPopup) {
           saveToStorage(consentPropertyName);
