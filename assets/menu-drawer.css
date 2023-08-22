@@ -116,7 +116,8 @@
 .nav-drawer__footer {
     padding: 25px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
     border-top: 1px solid rgba(1,1,1,0.1);
 }
@@ -134,5 +135,11 @@
 @media only screen and (min-width: 481px) {
   .nav-content__wrapper {
     width: 450px;
+  }
+}
+@media only screen and (min-width: 381px) {
+  .nav-drawer__footer {
+    justify-content: space-between;
+
   }
 }
