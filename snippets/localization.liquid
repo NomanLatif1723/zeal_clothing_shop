@@ -23,6 +23,7 @@
       </div>
     {% endif %}
     {% if show_currency %}
+      {% comment %}
       <div class="currency__wrapper">
         <div class="disclosure">
           <button type="button" class="disclosure__button" aria-expanded="false" aria-controls="CurrencyList">
@@ -49,6 +50,8 @@
           <input id="currencyId" type="hidden" name="currency_code" value="{{ form.current_currency.iso_code }}">
         </div>
       </div>
+      {% endcomment %}
     {% endif %}
   </div>
+    
 {% endform %}
