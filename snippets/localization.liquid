@@ -23,6 +23,7 @@
     {% endif %}
     {% if show_currency %}
       <div class="currency__wrapper">
+        {% comment %}
         <div class="disclosure">
           <button type="button" class="disclosure__button" aria-expanded="false" aria-controls="CountryList">
             <svg aria-hidden="true" width="10" height="10" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
@@ -40,6 +41,18 @@
           </ul>
           <input type="hidden" name="country_code" value="{{ localization.country.iso_code }}">
         </div>
+      {% endcomment %}
+      {% form 'currency' %}
+        <select name="currency">
+          {% for currency in shop.enabled_currencies %}
+            {% if currency == cart.currency %}
+              <option selected="true">{{currency.iso_code}} {{currency.symbol}}</option>
+              {% else %}
+              <option>{{currency.iso_code}}</option>
+            {% endif %}
+          {% endfor %}
+        </select>
+      {% endform %}
       </div>
     {% endif %}
   </div>
