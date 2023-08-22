@@ -25,13 +25,7 @@
       </div>
     {%- endif -%}
   {%- endform -%}
-  {%- if show_currency -%}
-    <div class="currency__wrapper">
-      {% form 'currency' %}
-        {{ form | currency_selector }}
-      {% endform %}
-    </div>
-  {%- endif -%}
+
 </localization-form>
 {% comment %}
 {% form 'localization', id: 'localization_form', class: 'localization_form' %}
