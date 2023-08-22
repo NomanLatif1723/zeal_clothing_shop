@@ -124,6 +124,12 @@
     width: 22px;
     height: 22px;
 }
+.nav-drawer-locales .disclosure__button{
+  color: var(--colorBody);
+}
+.nav-drawer-locales .disclosure__button svg{
+  fill: var(--colorBody);
+}
 @media only screen and (min-width: 481px) {
   .nav-content__wrapper {
     width: 450px;
