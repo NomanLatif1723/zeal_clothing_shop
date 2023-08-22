@@ -555,16 +555,14 @@ function initModalPopup() {
 }
 initModalPopup();
 
-  
-let localizationForm = document.querySelectorAll('.localization_form');
-localizationForm.forEach(localeForm => {
+let localizationForm = document.querySelector('.localization_form');
+  if (localizationForm) {
     let localeBtn = document.querySelectorAll('.disclosure__button');
     localeBtn.forEach(button => {
       button.addEventListener('click', () => {
         button.closest('.disclosure').querySelector('.disclosure__list').toggleAttribute('hidden');
       })
     })
-})
-
-
+  }
+  
 })();
