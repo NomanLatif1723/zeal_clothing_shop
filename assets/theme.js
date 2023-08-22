@@ -589,14 +589,14 @@ initModalPopup();
       panel: this.querySelector('ul'),
     };
     this.elements.button.forEach(btn => {btn.addEventListener('click', this.openSelector.bind(this))});
-    this.elements.button.addEventListener('focusout', this.closeSelector.bind(this));
+    this.elements.button.forEach(btn => {btn.addEventListener('focusout', this.closeSelector.bind(this))});
     this.addEventListener('keyup', this.onContainerKeyUp.bind(this));
 
     this.querySelectorAll('a').forEach(item => item.addEventListener('click', this.onItemClick.bind(this)));
   }
 
   hidePanel() {
-    this.elements.button.setAttribute('aria-expanded', 'false');
+    this.elements.button.forEach(btn => {btn.setAttribute('aria-expanded', 'false')});
     this.elements.panel.setAttribute('hidden', true);
   }
 
