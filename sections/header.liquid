@@ -17,21 +17,7 @@
     color: #ffffff;
     color: var(--headerText);
   }
-  .header__logo{
-    width: {{ mobile_logo_width }}px;
-    flex: 0 0 {{ mobile_logo_width }}px;
-  }
-  .site__logo-image {
-    width: {{ mobile_logo_width }}px;
-  }
   @media only screen and (min-width: 769px) {
-    .header__logo{
-      width: {{ desktop_logo_width }}px;
-      flex: 0 0 {{ desktop_logo_width }}px
-    }
-    .site__logo-image {
-      width: {{ desktop_logo_width }}px;
-    }
     {%- if header_styles == 'drawer_center' -%}
       .section__header{
         padding: 16px 0;
@@ -55,8 +41,25 @@
           assign desktop_logo_width = block.settings.desktop_logo_width
           assign mobile_logo_width = block.settings.mobile_logo_width
         %}
-        
         {% if block.type == 'logo' %}
+          {% style %}
+          .header__logo{
+            width: {{ mobile_logo_width }}px;
+            flex: 0 0 {{ mobile_logo_width }}px;
+          }
+          .site__logo-image {
+            width: {{ mobile_logo_width }}px;
+          }
+          @media only screen and (min-width: 769px) {
+            .header__logo{
+              width: {{ desktop_logo_width }}px;
+              flex: 0 0 {{ desktop_logo_width }}px
+            }
+            .site__logo-image {
+              width: {{ desktop_logo_width }}px;
+            }
+          }
+        {% endstyle %}
         {%- capture header_logo -%}
             <h1 class="site__logo">
               <a href="{{ routes.root_url }}" title="{{ shop.name }}" aria-label="{{ shop.name }}">
