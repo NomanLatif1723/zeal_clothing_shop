@@ -601,7 +601,6 @@ class LocalizationForm extends HTMLElement {
       this.hidePanel();
     }
   }
-  console.log("hy");
 }
 
 customElements.define('localization-form', LocalizationForm);
