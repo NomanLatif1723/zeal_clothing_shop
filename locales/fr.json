@@ -393,5 +393,269 @@
         "link_expired": "Le lien a expiré"
       }
     }
+  },
+  "customer_accounts": {
+    "orders": {
+      "order_list": {
+        "sort": {
+          "order_number": {
+            "descending": "Numéro de commande (de haut en bas)"
+          },
+          "order_total": {
+            "ascending": "Total de la commande (de bas en haut)",
+            "descending": "Total de la commande (décroissant)"
+          }
+        },
+        "filter_title": "Filtre",
+        "filter": {
+          "clear_section": "Effacer la section",
+          "clear_all": "Tout effacer",
+          "apply": "Appliquer",
+          "date": {
+            "start_date": "Date de début",
+            "end_date": "Date de fin",
+            "title": "Date de commande",
+            "today": "Aujourd'hui",
+            "last_7_days": "Les 7 derniers jours",
+            "last_30_days": "Les 30 derniers jours",
+            "last_90_days": "90 derniers jours",
+            "last_365_days": "12 derniers mois",
+            "custom": "Coutume"
+          }
+        },
+        "table_view": "Afficher la vue tableau",
+        "show_order_actions_accessibility_label": "Afficher les actions de commande pour la commande {{name}}"
+      },
+      "order_status": {
+        "attempted_delivery_label": "Tentative de livraison",
+        "attempted_delivery_description": "La tentative de livraison a échoué.",
+        "confirmed_description": "Nous avons reçu votre commande.",
+        "on_its_way_description": "Cette cargaison est en route.",
+        "out_for_delivery_description": "Cet envoi est en cours de livraison.",
+        "preparing_for_shipping_label": "Préparation pour l'expédition",
+        "preparing_for_shipping_description": "Ces articles sont en cours de préparation pour l'expédition.",
+        "ready_for_pickup_label": "Prêt pour le ramassage",
+        "ready_for_pickup_description": "Ces articles sont prêts à être récupérés. Veuillez apporter votre confirmation de commande lorsque vous récupérez votre commande.",
+        "ready_for_pickup_location": "Votre commande est prête à être récupérée sur place",
+        "picked_up_label": "Ramassé",
+        "picked_up_description": "Ces objets ont été ramassés.",
+        "canceled_description": "Votre commande a été annulée le {{date}} .",
+        "canceled_label": "Annulé",
+        "canceled_title": "Votre commande a été annulée",
+        "come_back": "Revenez sur cette page pour des mises à jour sur l'état de votre envoi.",
+        "company_tracking_number": "{{company}} numéro de suivi :",
+        "confirmed_label": "Confirmé",
+        "confirmed_title": "Votre commande est confirmée",
+        "confirmed_description_pickup": "Vous recevrez un e-mail lorsque votre commande sera prête à être récupérée.",
+        "confirmed_description_digital": "Vous recevrez un e-mail lorsque votre commande sera prête.",
+        "confirmed_description_gift_card_text": "Vous recevrez un SMS lorsque votre commande sera prête.",
+        "delivered_description": "Cet envoi a été livré.",
+        "delivered_label": "Livré",
+        "delivered_title": "Votre envoi a été livré",
+        "delivered_description_digital": "Votre commande est terminée.",
+        "delivered_description_gift_card": {
+          "one": "La carte cadeau a été envoyée par email.",
+          "other": "Les cartes cadeaux ont été envoyées par email."
+        },
+        "delivered_description_gift_card_text": {
+          "one": "La carte cadeau a été envoyée par SMS.",
+          "other": "Les cartes cadeaux ont été envoyées par SMS."
+        },
+        "gift_card_label": {
+          "one": "Carte cadeau",
+          "other": "Cartes cadeaux"
+        },
+        "gift_card_resend": {
+          "one": "Ré-envoyer l'email",
+          "other": "Renvoyer des e-mails"
+        },
+        "gift_card_resend_text": {
+          "one": "Renvoyer le texte",
+          "other": "Renvoyer des textes"
+        },
+        "gift_resend_success": {
+          "one": "Carte cadeau renvoyée",
+          "other": "Cartes-cadeaux renvoyées"
+        },
+        "gift_resend_failure": {
+          "one": "Un problème est survenu lors du renvoi de votre carte-cadeau. Réessayez ou contactez-nous.",
+          "other": "Un problème est survenu lors du renvoi de vos cartes-cadeaux. Réessayez ou contactez-nous."
+        },
+        "gift_card_resend_description": {
+          "one": "S'il n'a pas été reçu, renvoyez l'e-mail ou",
+          "other": "S'ils n'ont pas été reçus, renvoyez les e-mails ou"
+        },
+        "gift_card_resend_description_text": {
+          "one": "S'il n'a pas été reçu, renvoyez le texte ou",
+          "other": "S'ils n'ont pas été reçus, renvoyez les SMS ou"
+        },
+        "confirmed_gift_card_additional_description": {
+          "one": "La carte-cadeau sera envoyée dans un e-mail séparé.",
+          "other": "Chaque carte-cadeau sera envoyée dans un e-mail séparé."
+        },
+        "confirmed_gift_card_additional_description_text": {
+          "one": "La carte-cadeau sera envoyée dans un texte séparé.",
+          "other": "Chaque carte-cadeau sera envoyée dans un texte séparé."
+        },
+        "estimated_delivery": "Livraison estimée {{date}}",
+        "in_review_description": "Nous vous ferons savoir si nous avons besoin de plus d'informations ou lorsque votre commande sera confirmée.",
+        "in_review_label": "En revue",
+        "in_review_title": "Votre commande est en cours d'examen",
+        "last_updated": "Dernière mise à jour {{date}}",
+        "multiple_shipments_label": "Expéditions multiples",
+        "no_tracking_number": "Il n'y a pas de numéro de suivi pour cet envoi.",
+        "on_its_way_label": "Sur son chemin",
+        "on_its_way_title": "Votre envoi est en route",
+        "out_for_delivery_label": "En cours de livraison",
+        "out_for_delivery_title": "Votre envoi est en cours de livraison",
+        "resume_tracking": "Suivi des CV",
+        "submitted_label": "Soumis",
+        "submitted_description": "Vérifiez les détails de la commande et du paiement.",
+        "track_shipment": "Suivi de livraison",
+        "request_return": "Demander un retour",
+        "view_order_for_details": "Voir la commande pour plus de détails"
+      },
+      "status_mark_as_delivered": "Marquer comme livré",
+      "status_title": "Statut de la commande",
+      "buy_again": "Acheter à nouveau",
+      "buy_again_accessibility_label": "Acheter à nouveau pour la commande {{orderId}}",
+      "manage": "Gérer",
+      "manage_accessiblity_label": "Gérer la commande {{orderId}}",
+      "group_title_label": "Fait partie de : {{groupTitle}}",
+      "havent_received_your_delivery": "Vous n'avez pas reçu votre livraison ?",
+      "didnt_pick_up_order": "Vous n'avez pas récupéré votre commande ?",
+      "if_you_didnt_receive_this": "Si vous ne l'avez pas reçu,",
+      "if_not_received": {
+        "one": "S'il n'a pas été reçu,",
+        "other": "S'ils n'ont pas été reçus,"
+      },
+      "let_us_know": "Faites le nous savoir",
+      "contact_us": "Contactez-nous."
+    },
+    "order_details": {
+      "shipment_timeline": {
+        "expand_events_label": "Afficher les détails",
+        "expand_events_accessibility_label": "Afficher les détails d'expédition de la commande",
+        "hide_events_label": "Cacher les détails"
+      },
+      "logged_in_account_no_permission_to_order": "Vous êtes connecté en tant que {{email}} . Ce compte n'est pas autorisé à gérer cette commande.",
+      "log_in_to_a_different_account": "Connectez-vous à un autre compte"
+    },
+    "addresses": {
+      "add_button": "Ajoutez l'adresse",
+      "add_button_text": "Ajouter",
+      "add_button_accessibility_label": "Ajoutez l'adresse",
+      "back_button": "Dos",
+      "back_button_accessibility_label": "Retour à l'édition de l'adresse {{address}}",
+      "add_address_banner": "Ajouter des adresses à utiliser lors du paiement",
+      "no_addresses_banner": "Aucune adresse ajoutée",
+      "address_deleted_notification": "Adresse supprimée",
+      "cancel_adding_address_accessibility_label": "Annuler l'ajout d'adresse",
+      "cancel_deletion_button": "Annuler",
+      "cancel_deletion_button_accessibility_label": "Annuler la suppression {{address}}",
+      "default_address": {
+        "title": "Adresse par défaut",
+        "title_accessibility_label": "Adresse par défaut : {{address}}"
+      },
+      "delete_button": "Supprimer",
+      "delete_button_accessibility_label": "Supprimer {{address}}",
+      "delete_confirmation_button": "Supprimer l'adresse",
+      "delete_confirmation_button_accessibility_label": "Supprimer {{address}}",
+      "delete_confirmation_message": "Supprimer l'adresse ? Les commandes existantes ne sont pas affectées.",
+      "delete_confirmation_title": "Supprimer l'adresse ?",
+      "delete_confirmation_description": "Les commandes existantes ne sont pas affectées.",
+      "edit_button": "Modifier",
+      "edit_button_accessibility_label": "Modifier {{address}}",
+      "edit_section_accessibility_label": "Modifier {{address}}",
+      "edit_modal_title": {
+        "default": "Modifier l'adresse",
+        "billing": "Modifier l'adresse de facturation",
+        "shipping": "Modifier l'adresse de livraison"
+      },
+      "loading_accessibility_message": "Adresse de chargement",
+      "loading_addresses_accessibility_message": "Chargement des adresses",
+      "loading_billing_accessibility_message": "Chargement de l'adresse de facturation",
+      "loading_finished_accessibility_message": "Une nouvelle page d'adresses a été chargée",
+      "loading_shipping_accessibility_message": "Chargement de l'adresse de livraison",
+      "pagination": {
+        "load_more": "Charger plus",
+        "load_more_accessibility_label": "Charger plus d'adresses"
+      },
+      "save_new_address_accessibility_label": "Enregistrer l'adresse",
+      "title": "Adresses",
+      "billing_address_dropdown_placeholder": "Adresse de facturation"
+    },
+    "address_form": {
+      "attention_help_text": "Le nom d'une personne ou d'un service",
+      "auto_complete_close_accessibility_label": "Fermer les suggestions",
+      "billing_address": "Utiliser comme adresse de facturation",
+      "cancel": "Annuler",
+      "cancel_accessibility_label": "Annuler la modification de l'adresse {{address}}",
+      "creation_success_notification": "Adresse ajoutée",
+      "default_address": "Ceci est mon adresse par défaut",
+      "default_address_creation_success_notification": "Adresse par défaut ajoutée",
+      "default_address_update_success_notification": "Adresse par défaut mise à jour",
+      "loading_add_form_accessibility_message": "Chargement du nouveau formulaire d'adresse",
+      "loading_edit_form_accessibility_message": "Chargement du formulaire de modification d'adresse",
+      "loading_form_accessibility_message": "Chargement du formulaire d'adresse",
+      "loading_finished_accessibility_message": "Le formulaire d'adresse a été chargé",
+      "save": "Sauvegarder",
+      "save_accessibility_label": "Enregistrer l'adresse {{address}}",
+      "section_title_accessibility_label": "Ajoutez l'adresse",
+      "update_success_notification": "Adresse mise à jour"
+    },
+    "B2B": {
+      "account_information": {
+        "company_card_name_label": "Nom de l'entreprise",
+        "company_card_section_accessibility_label": "Entreprise"
+      },
+      "locations": {
+        "contact_email": "E-mail",
+        "contact_list_title": "Personnes",
+        "contact_name": "Nom",
+        "contact_permissions": "Autorisations",
+        "contact_phone_number": "Numéro de téléphone",
+        "location_picker_label": "Nom de la localisation",
+        "location_picker_accessibility_label": "Nom de l'emplacement : {{locationName}}",
+        "net_payment_terms_description": "{{name}} : paiements dus dans les {{numberOfDays}} jours",
+        "own_role_contact_name": "Toi",
+        "pagination": {
+          "load_more": "Charger plus",
+          "load_more_accessibility_label": "Charger plus d'emplacements"
+        },
+        "payment_details_title": "Détails de paiement",
+        "payment_terms": "Modalités de paiement",
+        "permissions_label": "Vos autorisations",
+        "permissions_title": "Autorisations",
+        "section_title": "Emplacement",
+        "shipping_address_required": "Ajoutez une adresse de livraison à cet emplacement pour commencer à passer des commandes.",
+        "staff_and_permissions_title": "Personnel et autorisations",
+        "tax_details_title": "Détails fiscaux",
+        "tax_id": "Numéro d'identification fiscale",
+        "tax_exemptions": "Exonérations fiscales",
+        "multiple_tax_exemptions": "{{taxExemptionsCount}} de plus",
+        "multiple_tax_exemptions_and": "et",
+        "tax_exemptions_modal_close": "Fermer",
+        "taxes_none": "Aucun",
+        "tax_exemption_not_applicable": "N \/ A",
+        "tax_exemptions_modal_button_accessibility_label": "Voir toutes les exonérations fiscales"
+      },
+      "location_selection": {
+        "continue_to_store": "Continuer à stocker",
+        "description": "Si vous avez déjà des articles dans votre panier, la modification des emplacements peut affecter les prix et les quantités du panier.",
+        "list_accessibility_label": "Liste des emplacements",
+        "list_item_without_address_accessibility_label": "{{name}} : Pas d'adresse",
+        "list_loading_accessibility_message": "Chargement de la liste des lieux",
+        "list_loading_address_accessibility_message": "Chargement de l'adresse pour {{locationName}}",
+        "list_loading_finished_accessibility_message": "La liste des emplacements a été chargée",
+        "loading_store_accessibility_message": "Aller au magasin",
+        "no_location_title": "Commandes personnelles uniquement",
+        "no_location_description": "Vous n'êtes plus autorisé à passer des commandes pour {{company}} . Vous pouvez toujours passer des commandes personnelles.",
+        "no_locations_found": "Aucun lieu trouvé",
+        "search": "Rechercher un lieu",
+        "search_location_title": "Sélectionnez un emplacement",
+        "selection_cancel_button": "Annuler"
+      }
+    }
   }
 }
