@@ -24,7 +24,7 @@
           <div class="main__text">{{ announcement_text }}</div>
         {%- endif -%}
       </div>
-      {% if show_locale %}
+      {% if show_locale or show_currency %}
         <div class="language__currency-container">
           {%- render 'localization',
              show_locale: show_locale,
