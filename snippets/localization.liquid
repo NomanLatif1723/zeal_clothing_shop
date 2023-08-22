@@ -35,6 +35,9 @@
             {% for currency in shop.enabled_currencies %}
               <li class="disclosure__item" tabindex="-1">
                 <a href="#" aria-current="true" data-value="{{ currency.iso_code }}">
+                  {%- if show_flags -%}
+                    <span class="currency-flag currency-flag--{{ currency.iso_code | downcase }}" data-flag="{{ currency.iso_code }}" aria-hidden="true"></span>
+                  {%- endif -%}
                   ({{ currency.iso_code }} {{ currency.symbol }})
                 </a>
               </li>
