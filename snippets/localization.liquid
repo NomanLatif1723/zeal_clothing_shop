@@ -25,7 +25,7 @@
           </div>
         </div>
       {%- endif -%}
-      {%- if show_currency -%}
+      {%- if localization.available_currencies.size > 1 -%}
         <div class="currency__wrapper">
           <div class="disclosure">
             <button type="button" class="disclosure__button" aria-expanded="false" aria-controls="CurrencyList">
