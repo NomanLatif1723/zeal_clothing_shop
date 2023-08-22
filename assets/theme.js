@@ -558,11 +558,23 @@ initModalPopup();
 let localizationForm = document.querySelector('.localization_form');
   if (localizationForm) {
     let localeBtn = document.querySelectorAll('.disclosure__button');
-    localeBtn.forEach(button => {
-      button.addEventListener('click', () => {
-        button.closest('.disclosure').querySelector('.disclosure__list').toggleAttribute('hidden');
+    let localeLink = document.querySelectorAll('.disclosure__item a');
+    if (localeBtn) {
+      localeBtn.forEach(button => {
+        button.addEventListener('click', () => {
+          button.closest('.disclosure').querySelector('.disclosure__list').toggleAttribute('hidden');
+        })
       })
-    })
+    }
+    if (localeLink) {
+      localeLink.forEach(button => {
+        button.addEventListener('click', (event) => {
+          event.preventDefault();
+          localizationForm.submit();
+        })
+      })
+    }
+    
   }
   
 })();
