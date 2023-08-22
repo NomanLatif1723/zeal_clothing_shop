@@ -573,7 +573,7 @@ let localizationForm = document.querySelector('.localization_form');
         button.addEventListener('click', (event) => {
           localeFormInput.value = button.getAttribute('data-value');
           currencyFormInput.value = button.getAttribute('data-value');
-          localizationForm.submit();
+          // localizationForm.submit();
         })
       })
     }
