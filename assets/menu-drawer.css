@@ -119,6 +119,7 @@
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
+    gap: 20px;
     border-top: 1px solid rgba(1,1,1,0.1);
 }
 .nav-drawer-socials .icon {
@@ -140,6 +141,6 @@
 @media only screen and (min-width: 381px) {
   .nav-drawer__footer {
     justify-content: space-between;
-
+    gap: 0;
   }
 }
