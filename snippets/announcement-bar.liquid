@@ -24,13 +24,15 @@
           <div class="main__text">{{ announcement_text }}</div>
         {%- endif -%}
       </div>
-      <div class="language__currency-container">
-        {%- render 'localization',
-           show_locale: show_locale,
-           show_currency: show_currency,
-           show_flags: settings.show_flags 
-        -%}
-      </div>
+      {% if show_locale %}
+        <div class="language__currency-container">
+          {%- render 'localization',
+             show_locale: show_locale,
+             show_currency: show_currency,
+             show_flags: settings.show_flags 
+          -%}
+        </div>
+      {% endif %}
     </div>
   </div>
 </div>
