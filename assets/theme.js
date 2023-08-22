@@ -557,7 +557,7 @@ initModalPopup();
 let localeBtn = document.querySelectorAll('.disclosure__button');
     localeBtn.forEach(button => {
       button.addEventListener('click', () => {
-        button.closest('.disclosure').querySelector('.disclosure__list').removeAttribute('hidden');
+        button.closest('.disclosure').querySelector('.disclosure__list').toggleAttribute('hidden');
       })
     })
   
