@@ -559,6 +559,7 @@ let localizationForm = document.querySelector('.localization_form');
   if (localizationForm) {
     let localeBtn = document.querySelectorAll('.disclosure__button');
     let localeLink = document.querySelectorAll('.disclosure__item a');
+    let localeFormInput = document.querySelectorAll('#localeId');
     if (localeBtn) {
       localeBtn.forEach(button => {
         button.addEventListener('click', () => {
@@ -569,8 +570,9 @@ let localizationForm = document.querySelector('.localization_form');
     if (localeLink) {
       localeLink.forEach(button => {
         button.addEventListener('click', (event) => {
-          button.getAttribute('data-value') = button.querySelector('input').value;
-          
+          localeFormInput.forEach(input => {
+            input.value = button.getAttribute('data-value');
+          })
           localizationForm.submit();
         })
       })
