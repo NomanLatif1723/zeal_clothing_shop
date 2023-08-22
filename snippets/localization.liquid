@@ -1,30 +1,29 @@
 <localization-form class="locale__currency-wrapper">
-  {%- form 'localization' -%}
-    {%- if show_locale -%}
-      <div class="locale__wrapper">
-        <div class="disclosure">
-          <button type="button" class="disclosure__button" aria-expanded="false" aria-controls="LanguageList">
-            {{ localization.language.endonym_name | capitalize }}
-  
-            <svg aria-hidden="true" width="10" height="10" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" ></path>
-            </svg>
-          </button>
-  
-          <ul id="LanguageList" role="list" class="disclosure__list" hidden>
-            {%- for language in localization.available_languages -%}
-              <li class="disclosure__item" tabindex="-1">
-                <a href="#"{% if language.iso_code == localization.language.iso_code %} aria-current="true"{% endif %} hreflang="{{ language.iso_code }}" lang="{{ language.iso_code }}" data-value="{{ language.iso_code }}">
-                  {{ language.endonym_name | capitalize }}
-                </a>
-              </li>
-            {%- endfor -%}
-          </ul>
-          <input type="hidden" name="language_code" value="{{ localization.language.iso_code }}">
-        </div>
+  {%-if show_locale -%}
+    {% form 'localization' %}
+      <div class="disclosure">
+        <button type="button" class="disclosure__button" aria-expanded="false" aria-controls="LanguageList">
+          {{ localization.language.endonym_name | capitalize }}
+
+          <svg aria-hidden="true" width="10" height="10" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z">
+          </svg>
+        </button>
+
+        <ul id="LanguageList" role="list" class="disclosure__list" hidden>
+          {% for language in localization.available_languages %}
+            <li class="disclosure__item" tabindex="-1">
+              <a href="#"{% if language.iso_code == localization.language.iso_code %} aria-current="true"{% endif %} hreflang="{{ language.iso_code }}" lang="{{ language.iso_code }}" data-value="{{ language.iso_code }}">
+                {{ language.endonym_name | capitalize }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+
+        <input type="hidden" name="language_code" value="{{ localization.language.iso_code }}">
       </div>
-    {%- endif -%}
-  {%- endform -%}
+    {% endform %}
+  {%- endif -%}
   {%- if show_currency -%}
     <div class="currency__wrapper">
       {% form 'currency' %}
