@@ -556,9 +556,6 @@ function initModalPopup() {
 initModalPopup();
 
 let localizationForm = document.querySelector('#localization_form');
-  localizationForm.addEventListener('submit', () => {
-    console.log("form submitted");
-  })
   if (localizationForm) {
     let localeBtn = document.querySelectorAll('.disclosure__button');
     let localeLink = document.querySelectorAll('.disclosure__item a');
@@ -577,7 +574,7 @@ let localizationForm = document.querySelector('#localization_form');
           event.preventDefault();
           localeFormInput.value = button.getAttribute('data-value');
           currencyFormInput.value = button.getAttribute('data-value');
-          localizationForm.submit();
+          localizationForm.submit(button.getAttribute('data-value'));
         })
       })
     }
