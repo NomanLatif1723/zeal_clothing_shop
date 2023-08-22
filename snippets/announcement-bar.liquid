@@ -6,7 +6,7 @@
     assign show_locale = true 
   endif
   
-  if settings.show_currency or localization.available_currencies.size > 1
+  if settings.show_currency and localization.available_currencies.size > 1
     assign show_currency = true 
   endif
 -%}
