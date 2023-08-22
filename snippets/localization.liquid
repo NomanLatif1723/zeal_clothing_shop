@@ -15,7 +15,7 @@
             <ul id="LanguageList" role="list" class="disclosure__list" hidden>
               {%- for language in localization.available_languages -%}
                 <li class="disclosure__item" tabindex="-1">
-                  <a href="#"{% if language.iso_code == localization.language.iso_code %} aria-current="true"{% endif %} href lang="{{ language.iso_code }}" lang="{{ language.iso_code }}" data-value="{{ language.iso_code }}">
+                  <a href="#"{% if language.iso_code == localization.language.iso_code %} aria-current="true"{% endif %} hreflang="{{ language.iso_code }}" lang="{{ language.iso_code }}" data-value="{{ language.iso_code }}">
                     {{ language.endonym_name | capitalize }}
                   </a>
                 </li>
@@ -39,7 +39,7 @@
             <ul id="LanguageList" role="list" class="disclosure__list" hidden>
               {%- for currency in localization.available_countries -%}
                 <li class="disclosure__item" tabindex="-1">
-                  <a href="#"{% if currency.iso_code == localization.currency.iso_code %} aria-current="true"{% endif %} href lang="{{ currency.iso_code }}" lang="{{ currency.iso_code }}" data-value="{{ currency.iso_code }}">
+                  <a href="#"{% if currency.iso_code == localization.currency.iso_code %} aria-current="true"{% endif %} hreflang="{{ currency.iso_code }}" lang="{{ currency.iso_code }}" data-value="{{ currency.iso_code }}">
                     ({{ currency.iso_code }} {{ currency.symbol }})
                   </a>
                 </li>
