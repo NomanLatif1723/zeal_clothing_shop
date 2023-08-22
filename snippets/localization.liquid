@@ -9,21 +9,20 @@
             </svg>
           </button>
           <ul id="CountryList" role="list" class="disclosure__list">
-            {% for country in localization.available_countries %}
+            {% for locale in shop.published_locales %}
               <li class="disclosure__item" tabindex="-1">
-                <a href="#"{% if country.iso_code == localization.country.iso_code %} aria-current="true"{% endif %} data-value="{{ country.iso_code }}">
-                  {{ country.name }}
+                <a href="#"  data-value="{{ locale.iso_code }}">
+                  {{ locale.endonym_name }}
                 </a>
               </li>
             {% endfor %}
           </ul>
-          <input type="hidden" name="country_code" value="{{ localization.country.iso_code }}">
+          <input type="hidden" name="country_code" value="{{ locale.iso_code }}">
         </div>
       </div>
     {% endif %}
     {% if show_currency %}
       <div class="currency__wrapper">
-        {% comment %}
         <div class="disclosure">
           <button type="button" class="disclosure__button" aria-expanded="false" aria-controls="CountryList">
             <svg aria-hidden="true" width="10" height="10" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
@@ -39,20 +38,8 @@
               </li>
             {% endfor %}
           </ul>
-          <input type="hidden" name="country_code" value="{{ localization.country.iso_code }}">
+          <input type="hidden" name="currency_code" value="{{ localization.country.iso_code }}">
         </div>
-      {% endcomment %}
-      {% form 'currency' %}
-        <select name="currency">
-          {% for currency in shop.enabled_currencies %}
-            {% if currency == cart.currency %}
-              <option selected="true">{{currency.iso_code}} {{currency.symbol}}</option>
-              {% else %}
-              <option>{{currency.iso_code}}</option>
-            {% endif %}
-          {% endfor %}
-        </select>
-      {% endform %}
       </div>
     {% endif %}
   </div>
