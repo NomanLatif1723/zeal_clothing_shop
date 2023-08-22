@@ -586,7 +586,7 @@ initModalPopup();
     this.elements = {
       input: this.querySelector('input[name="language_code"], input[name="country_code"], input[name="currency_code"]'),
       button: this.querySelectorAll('button'),
-      panel: this.querySelectorAll('ul'),
+      panel: this.querySelector('ul'),
     };
     this.elements.button.forEach(btn => {btn.addEventListener('click', this.openSelector.bind(this))});
     this.elements.button.forEach(btn => {btn.addEventListener('focusout', this.closeSelector.bind(this))});
@@ -597,7 +597,7 @@ initModalPopup();
 
   hidePanel() {
     this.elements.button.forEach(btn => {btn.setAttribute('aria-expanded', 'false')});
-    this.elements.panel.forEach(panel => { panel.setAttribute('hidden', true)});
+    this.elements.panel.setAttribute('hidden', true);
   }
 
   onContainerKeyUp(event) {
@@ -616,7 +616,7 @@ initModalPopup();
 
   openSelector() {
     this.elements.button.forEach(btn => { btn.focus()});
-    this.elements.panel.forEach(panel => { panel.toggleAttribute('hidden')});
+    this.elements.panel.toggleAttribute('hidden');
     this.elements.button.forEach(btn => { btn.setAttribute('aria-expanded', (this.elements.button.forEach(btn => { btn.getAttribute('aria-expanded')}) === 'false').toString())});
   }
 
