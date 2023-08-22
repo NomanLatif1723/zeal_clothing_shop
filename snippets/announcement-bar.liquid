@@ -1,14 +1,6 @@
 {%- liquid 
-  assign show_locale = false
-  assign show_currency = false
-
-  if settings.show_language and localization.available_languages.size > 1
-    assign show_locale = true 
-  endif
-  
-  if settings.show_currency or localization.available_currencies.size > 1
-    assign show_currency = true 
-  endif
+  assign show_locale = settings.show_language
+  assign show_currency = settings.show_currency
 -%}
 <div class="announcement__bar" data-section-id="{{ section.id }}">
   <div class="page__width">
