@@ -561,6 +561,7 @@ localizationForm.forEach(localeForm => {
     let localeBtn = document.querySelectorAll('.disclosure__button');
     localeBtn.forEach(button => {
       button.addEventListener('click', () => {
+        console.log("hy");
         button.closest('.disclosure').querySelector('.disclosure__list').toggleAttribute('hidden');
       })
     })
