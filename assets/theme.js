@@ -636,8 +636,8 @@ function currencyFormSubmit(event) {
   event.target.form.submit();
 }
 
-document.querySelectorAll('.shopify-currency-form select').forEach(function(element) {
-  element.addEventListener('change', currencyFormSubmit);
+document.querySelectorAll('.shopify-currency-form .disclosure__item').forEach(function(element) {
+  element.addEventListener('click', currencyFormSubmit);
 });
   
 })();
