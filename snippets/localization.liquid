@@ -1,5 +1,6 @@
 <localization-form>
-  {% if localization.available_languages.size > 1 and show_locale %}
+  {% if show_locale %}
+  {% if localization.available_languages.size > 1 %}
     {% form 'localization' %}
       <div class="disclosure">
         <button type="button" class="disclosure__button" aria-expanded="false" aria-controls="LanguageList">
@@ -23,6 +24,7 @@
         <input type="hidden" name="language_code" value="{{ localization.language.iso_code }}">
       </div>
     {% endform %}
+  {% endif %}
   {% endif %}
 </localization-form>
 
