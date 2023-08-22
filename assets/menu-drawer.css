@@ -133,6 +133,10 @@
 .nav-drawer-locales .disclosure__button svg{
   fill: var(--colorBodyText);
 }
+.nav-drawer-locales .disclosure__list {
+    bottom: 100%;
+    top: auto;
+}
 @media only screen and (min-width: 481px) {
   .nav-content__wrapper {
     width: 450px;
