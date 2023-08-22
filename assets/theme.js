@@ -571,6 +571,7 @@ let localizationForm = document.querySelector('.localization_form');
     if (localeLink) {
       localeLink.forEach(button => {
         button.addEventListener('click', (event) => {
+          event.preventDefault();
           localeFormInput.value = button.getAttribute('data-value');
           currencyFormInput.value = button.getAttribute('data-value');
           localizationForm.submit();
