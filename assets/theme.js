@@ -556,6 +556,9 @@ function initModalPopup() {
 initModalPopup();
 
 let localizationForm = document.querySelector('#localization_form');
+  localizationForm.addEventListener('submit', () => {
+    console.log("form submitted");
+  })
   if (localizationForm) {
     let localeBtn = document.querySelectorAll('.disclosure__button');
     let localeLink = document.querySelectorAll('.disclosure__item a');
