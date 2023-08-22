@@ -554,22 +554,19 @@ function initModalPopup() {
   })
 }
 initModalPopup();
-let localeBtn = document.querySelectorAll('.disclosure__button');
+
+  
+let localizationForm = document.querySelectorAll('.localization_form');
+localizationForm.forEach(localeForm => {
+  if (localeForm) {
+    let localeBtn = document.querySelectorAll('.disclosure__button');
     localeBtn.forEach(button => {
       button.addEventListener('click', () => {
         button.closest('.disclosure').querySelector('.disclosure__list').toggleAttribute('hidden');
       })
     })
-  
-// let localizationForm = document.querySelectorAll('.localization_form');
-// localizationForm.forEach(localeForm => {
-//   if (localeForm) {
-//     let localeBtn = document.querySelector('.disclosure__button');
-//     localeBtn.addEventListener('click', () => {
-//       localeBtn.closest('.disclosure').querySelector('.disclosure__list').removeAttribute('hidden');
-//     })
-//   }
-// })
+  }
+})
 
 
 })();
