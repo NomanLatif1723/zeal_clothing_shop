@@ -617,7 +617,7 @@ initModalPopup();
   openSelector() {
     this.elements.button.forEach(btn => { btn.focus()});
     this.elements.panel.toggleAttribute('hidden');
-    this.elements.button.forEach(btn => { btn.setAttribute('aria-expanded', (this.elements.button.getAttribute('aria-expanded') === 'false').toString())});
+    this.elements.button.forEach(btn => { btn.setAttribute('aria-expanded', (this.elements.button.forEach(btn => { btn.getAttribute('aria-expanded')}) === 'false').toString())});
   }
 
   closeSelector(event) {
