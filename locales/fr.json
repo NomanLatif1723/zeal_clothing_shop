@@ -170,7 +170,87 @@
             "other": "%{count} éléments"
           }
         },
-        "alternative_payment_currency_total": "Facturé à %{amount_due}"
+        "alternative_payment_currency_total": "Facturé à %{amount_due}",
+        "title": "Récapitulatif de la commande",
+        "group_title_label": "Fait partie de \"%{group_title}\"",
+        "order_name_label": "Commande %{nom}",
+        "shopping_cart_label": "Panier",
+        "discount_title": "Rabais",
+        "discount_title_stacking": {
+          "one": "Rabais",
+          "other": "Réductions"
+        },
+        "discount_order_stacking": {
+          "one": "Remise de commande",
+          "other": "Réductions sur les commandes"
+        },
+        "discount_label": "Code de réduction",
+        "discount_placeholder": "Code de réduction",
+        "gift_card_title": "Carte cadeau",
+        "gift_card_label": "Carte cadeau",
+        "gift_card_placeholder": "Carte cadeau",
+        "gift_card_and_discount_title": "Chèque cadeau ou code de réduction",
+        "gift_card_and_discount_label": "Chèque cadeau ou code de réduction",
+        "gift_card_and_discount_placeholder": "Chèque cadeau ou code de réduction",
+        "remove_gift_card_label": "Carte-cadeau transparente",
+        "remove_discount_label": "Supprimer la remise",
+        "free_shipping_discount_label": "Livraison gratuite",
+        "applied_free_shipping_discount_label": "Appliqué",
+        "apply_discount_button_label": "Appliquer",
+        "applied_discount_message": "%{amount} sur le prix total de la commande",
+        "discount_has_been_applied": "La réduction a été appliquée",
+        "discount_has_been_removed": "La remise a été supprimée",
+        "gift_card_has_been_applied": "La carte-cadeau a été appliquée",
+        "gift_card_has_been_removed": "La carte-cadeau a été supprimée",
+        "gift_card_subscriptions_notice": "Les cartes-cadeaux ne s'appliqueront qu'à votre premier paiement",
+        "discount_already_applied": "Une remise a été appliquée à cette commande. Vous ne pouvez pas ajouter une autre réduction.",
+        "cart_does_not_meet_discount_requirements_notice": "Le code de réduction <strong style=\"text-transform:uppercase\">%{code}<\/strong> n'est pas valable pour les articles de votre panier",
+        "discount_requires_customer_notice": "Entrez vos informations d'expédition pour appliquer le code de réduction <strong style=\"text-transform:uppercase\">%{code}<\/strong>",
+        "customer_does_not_meet_discount_requirements_notice": "Le code de réduction <strong style=\"text-transform:uppercase\">%{code}<\/strong> n'est pas disponible pour vous en ce moment",
+        "shipping_information_does_not_meet_discount_requirements_notice": "Le code de réduction <strong style=\"text-transform:uppercase\">%{code}<\/strong> n'est pas disponible pour votre adresse de livraison",
+        "customer_already_used_once_per_customer_discount_notice": "Le code de réduction <strong style=\"text-transform:uppercase\">%{code}<\/strong> a déjà été utilisé",
+        "subtotal_label": "Total",
+        "shipping_label": "Expédition",
+        "pickup_label": "Ramasser",
+        "no_pickup_location": "Le ramassage n'est pas disponible pour cette commande. Choisissez un autre mode de livraison.",
+        "tip_label": "Conseil",
+        "calculating_shipping": "Calculateur…",
+        "calculating": "Calculateur…",
+        "shipping_default_value": "Calculé à l'étape suivante",
+        "shipping_pending_message": "Pas encore disponible",
+        "shipping_policy_link": "Les frais de livraison",
+        "taxes_label": "Impôts",
+        "estimated_taxes_label": "Impôts estimés",
+        "information_estimated_taxes_label": "Taxes (estimées)",
+        "estimated_taxes_finalization_tooltip_content": "La taxe finale et le total seront confirmés par e-mail ou SMS après avoir passé votre commande.",
+        "order_total_label": "Total de la commande",
+        "total_outstanding_label": "Montant à payer",
+        "free_total_label": "Gratuit",
+        "paid_label": "Payé",
+        "payment_due_label": "Paiement dû",
+        "vat_label_html": "Dont %{amount} de taxes",
+        "discount_and_gift_card_savings_notice": "Après %{discount_amount} de réductions et %{gift_card_amount} de cartes-cadeaux",
+        "discount_savings_notice": "Après %{discount_amount} de remises",
+        "gift_card_savings_notice": "Après %{gift_card_amount} en cartes-cadeaux",
+        "cost_table_title": "Résumé des coûts",
+        "price_label": "Prix",
+        "quantity_label": "Quantité",
+        "product_change_label": "Changement",
+        "product_image_label": "Image du produit",
+        "scroll_order_summary": "Faites défiler pour plus d'articles",
+        "expand_order_summary": "Afficher le récapitulatif de la commande",
+        "collapse_order_summary": "Masquer le récapitulatif de la commande",
+        "original_price": "Prix ​​d'origine",
+        "sale_price": "Prix ​​de vente",
+        "total_updated_label": "Prix ​​total mis à jour :",
+        "order_total_updated_label": "Total mis à jour",
+        "total_already_paid_label": "Déjà payé",
+        "unit_price": {
+          "accessible_separator": "par"
+        },
+        "gift_card_ending": "Carte-cadeau se terminant par %{last_characters}",
+        "estimated_tax_label": "Taxe estimée",
+        "multiple_shipping_lines_label": "Total d'expédition"
       },
       "shipping": {
         "title": "Expédition",
@@ -451,7 +531,17 @@
         "no_stores_found": "Aucun magasin trouvé",
         "could_not_resolve_address": "Votre adresse n'a pas pu être localisée. Réessayez ou utilisez une autre adresse",
         "paginator": {
-          "accessibility_label": "Pagination de ramassage local"
+          "accessibility_label": "Pagination de ramassage local",
+          "previous": "Page précédente",
+          "next": "Page suivante",
+          "label": {
+            "one": "%{first} - %{last} de %{count} magasin",
+            "other": "%{first} - %{last} magasins sur %{count}"
+          }
+        },
+        "reveal_more_label": {
+          "one": "Afficher %{count} emplacement supplémentaire",
+          "other": "Afficher %{count} emplacements supplémentaires"
         }
       },
       "localized_fields": {
@@ -539,6 +629,123 @@
         "card_fields_unavailable_html": {
           "one": "Les paiements par carte de crédit et de débit ne sont pas disponibles pour le moment.<br> <a href=\"%{current_url}\">Actualisez cette page<\/a> ou réessayez plus tard."
         }
+      },
+      "stock": {
+        "unpurchasable_product_generic": {
+          "title": "Produit non achetable",
+          "header": "Certains articles ont été supprimés de votre panier",
+          "message": "Ces articles ne sont pas disponibles.",
+          "status_column_header": "Pas disponible"
+        },
+        "unshippable_product": {
+          "title": "Pas de livraison disponible",
+          "header": {
+            "one": "Aucune livraison disponible pour %{count} article",
+            "other": "Aucune livraison disponible pour %{count} articles"
+          },
+          "message": {
+            "one": "Cet article sera supprimé de votre panier car aucun mode de livraison n'est disponible pour votre adresse.",
+            "other": "Ces articles seront supprimés de votre panier car aucun mode de livraison n'est disponible pour votre adresse."
+          },
+          "status_column_header": "Pas de livraison"
+        }
+      },
+      "contextual_availability": {
+        "title": {
+          "one": "Produit indisponible",
+          "other": "Produits indisponibles"
+        },
+        "products_not_available": {
+          "one": "Ce produit sera supprimé de votre panier car il n'est pas disponible dans votre pays\/région.",
+          "other": "Ces produits seront supprimés de votre panier car ils ne sont pas disponibles dans votre pays\/région."
+        },
+        "all_products_in_cart_unavailable": {
+          "one": "Ce produit n'est pas disponible dans votre pays\/région.",
+          "other": "Ces produits ne sont pas disponibles dans votre pays\/région."
+        },
+        "unavailable_label": "Indisponible"
+      },
+      "deliverability": {
+        "not_deliverable": {
+          "title": {
+            "one": "Aucune livraison disponible pour %{count} article",
+            "other": "Aucune livraison disponible pour %{count} articles"
+          },
+          "message": {
+            "one": "Cet article sera supprimé de votre panier car aucun mode de livraison n'est disponible pour votre adresse.",
+            "other": "Ces articles seront supprimés de votre panier car aucun mode de livraison n'est disponible pour votre adresse."
+          },
+          "label": "Pas de livraison"
+        }
+      },
+      "captcha": {
+        "title": "Remplissez le CAPTCHA pour continuer",
+        "errors": {
+          "not_solved": "Remplissez le CAPTCHA pour continuer"
+        }
+      },
+      "discount_errors": {
+        "generic_error": "Votre commande n'a pas pu être traitée car votre code de réduction n'est plus disponible. Vérifiez le total de votre commande et réessayez."
+      },
+      "wallets": {
+        "return_to_store": "Retour au magasin",
+        "redirect_hint": "Il vous sera demandé de vous connecter avec {{walletName}} .",
+        "logged_in": "Connecté à {{email}}",
+        "shipping_line_label": "Expédition",
+        "payment_in_progress_title": "Paiement en cours",
+        "payment_in_progress_body": "Votre paiement est en cours de traitement. Votre commande sera bientôt finalisée.",
+        "call_to_action": "Payer avec {{walletName}}",
+        "redirection_notice": "Après avoir cliqué sur \" {{buttonLabel}} \", vous serez redirigé vers {{walletName}} pour finaliser votre achat en toute sécurité.",
+        "errors": {
+          "unavailable": {
+            "title": "{{walletName}} non disponible",
+            "description": "{{walletName}} n'était pas disponible. Utilisez un autre mode de paiement ou réessayez plus tard.",
+            "instructions": "Il y a eu un problème avec {{walletName}} . Retournez en magasin pour réessayer ou vérifiez d'une autre manière."
+          },
+          "generic": "Il y a eu un problème avec {{walletName}} . Réessayez ou utilisez un autre mode de paiement.",
+          "terminal": "Il y a eu un problème avec {{walletName}} . Veuillez utiliser un autre mode de paiement.",
+          "detour": {
+            "stock_problems": "Certains articles ne sont plus disponibles. Fermez {{walletName}} et réessayez.",
+            "price_change": "Les prix de certains articles ont changé. Fermez {{walletName}} pour vérifier votre commande et réessayez.",
+            "queue": "Vous avez été placé dans une file d'attente pour payer. Fermez {{walletName}} pour continuer."
+          },
+          "unsupported": {
+            "address": "Le marchand ne peut pas livrer à cette adresse",
+            "postal_code": "Cet emplacement n'est pas pris en charge"
+          },
+          "outdated": {
+            "shipping_method": "Les options d'expédition ont changé pour votre commande. Vérifiez votre sélection."
+          },
+          "invalid": {
+            "shipping_address": "Entrez une adresse de livraison valide",
+            "billing_address": "Entrez une adresse de facturation valide",
+            "shipping_option": "Choisissez une option d'expédition valide",
+            "email": "Entrer un email valide",
+            "zone": "Entrez un état\/province valide",
+            "postal_code": "Entrez un code postal valide",
+            "reduction_code": "Saisissez un code de réduction ou une carte-cadeau valide"
+          },
+          "missing": {
+            "first_name": "Entrez un prénom",
+            "last_name": "Entrez un nom de famille",
+            "address1": "Entrer une adresse",
+            "address2": "Entrez dans un appartement, une suite, etc.",
+            "city": "Entrez une ville",
+            "province": "Sélectionnez un état \/ province",
+            "country": "Sélectionnez un pays\/une région",
+            "zip": "Entrez un code postal \/ code postal",
+            "phone": "Entrer un numéro de téléphone"
+          },
+          "formatting": {
+            "name_contains_emojis": "Supprimer les emoji de votre nom",
+            "postal_code_contains_emoji": "Supprimer les emoji de votre code postal",
+            "first_name_too_long": "Le prénom contient trop de lettres",
+            "last_name_too_long": "Le nom de famille contient trop de lettres"
+          }
+        }
+      },
+      "note": {
+        "length_exceeds_maximum": "Réduisez la taille de la note à 5000 caractères ou moins."
       }
     },
     "errors": {
@@ -607,7 +814,25 @@
             "shopify_support_link_text": "Assistance Shopify"
           }
         }
-      }
+      },
+      "blank": "ne peut pas être vide",
+      "blocked_address": "Cet emplacement n'est pas pris en charge.",
+      "credit_card_session_expired": "L'autorisation de carte de crédit a expiré, veuillez saisir à nouveau vos informations de paiement. Votre carte n'a pas été débitée.",
+      "empty": "ne peut pas être vide",
+      "invalid_email": "Doit être une adresse e-mail valide",
+      "discount_disabled": "Cette réduction a été désactivée",
+      "discount_expired": "Cette réduction n'est plus valable",
+      "discount_limit_reached": "Cette réduction a atteint sa limite d'utilisation",
+      "discount_not_found": "Impossible de trouver une remise valide correspondant au code saisi",
+      "customer_already_used_once_per_customer_discount_notice": "Cette réduction a atteint sa limite d'utilisation",
+      "gift_card_already_applied": "Le code a déjà été appliqué à votre paiement",
+      "gift_card_code_invalid": "Le code est invalide",
+      "gift_card_currency_mismatch": "Votre carte-cadeau est en %{gift_card_currency}. Contactez-nous pour le faire réémettre en %{checkout_currency}.",
+      "gift_card_depleted": "Il n'y a plus de fonds sur cette carte-cadeau",
+      "gift_card_disabled": "La carte-cadeau est désactivée",
+      "gift_card_expired": "La carte-cadeau est expirée",
+      "invalid": "est invalide",
+      "bad_domain": "contient un nom de domaine invalide"
     },
     "notices": {
       "customer": {
@@ -808,6 +1033,50 @@
         "two_to_four_hours": "Généralement prêt en 4 heures",
         "immediately": "Prêt pour le ramassage maintenant",
         "next_day": "Prêt pour le ramassage le lendemain"
+      }
+    },
+    "pagination": {
+      "previous": "Précédent",
+      "next": "Suivant"
+    },
+    "links": {
+      "powered_by_shopify": "Propulsé par Shopify",
+      "learn_more": "Apprendre encore plus"
+    },
+    "feed": {
+      "more": "Plus"
+    },
+    "attributes": {
+      "email": "e-mail",
+      "password": "mot de passe",
+      "password_confirmation": "La validation du mot de passe",
+      "first_name": "prénom",
+      "last_name": "nom de famille",
+      "body": "corps",
+      "signature": "Adresse"
+    },
+    "addresses": {
+      "zip_code": "Code postal",
+      "postal_code": "Code Postal",
+      "postcode": "Code postal",
+      "pincode": "Code PIN",
+      "state": "État",
+      "state_and_territory": "État\/territoire",
+      "county": "Comté",
+      "emirate": "Émirat",
+      "governorate": "Gouvernorat",
+      "confirm": "Êtes-vous sûr de vouloir supprimer cette adresse ?"
+    },
+    "collections": {
+      "sorting": {
+        "manual": "En vedette",
+        "best_selling": "Meilleure vente",
+        "az": "Par ordre alphabétique, AZ",
+        "za": "Par ordre alphabétique, ZA",
+        "price_ascending": "Prix ​​croissant",
+        "price_descending": "Prix, décroissant",
+        "date_ascending": "Date, ancienne à nouvelle",
+        "date_descending": "Date, nouveau à ancien"
       }
     }
   },
