@@ -580,7 +580,7 @@ initModalPopup();
 //     }
     
 //   }
- class LocalizationForm extends HTMLElement {
+class LocalizationForm extends HTMLElement {
   constructor() {
     super();
     this.elements = {
@@ -629,5 +629,6 @@ initModalPopup();
 }
 
 customElements.define('localization-form', LocalizationForm);
+
   
 })();
