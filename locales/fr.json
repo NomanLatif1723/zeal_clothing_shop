@@ -247,8 +247,38 @@
           "prepaid_initial_order_discounted_with_per_delivery_price": "Premier frais d'expédition %{discounted_shipping_price} %{prepaid_delivery_frequency} (%{discounted_cost_per_delivery})",
           "prepaid_initial_order_discounted_with_renewal": "Premier coût d'expédition %{discounted_shipping_price} %{prepaid_delivery_frequency}, puis %{shipping_price} %{billing_cycle}",
           "prepaid_initial_order_discounted_with_per_delivery_price_and_renewal": "Premier coût d'expédition %{discounted_shipping_price} %{prepaid_delivery_frequency} (%{discounted_cost_per_delivery}), puis %{shipping_price} %{billing_cycle}",
-          "shipping_price_included": "Inclus"
-        }
+          "shipping_price_included": "Inclus",
+          "recurring_order_shipping_price": "suivi de %{recurring_order_shipping_price}",
+          "first_order_shipping_price_included": "Première commande incluse, suivie de %{recurring_order_shipping_price}",
+          "first_order_different_shipping_price": "%{first_order_shipping_price} (%{per_delivery_price} par livraison), suivi de %{recurring_order_shipping_price}",
+          "first_n_order_free": {
+            "one": "Première commande gratuite",
+            "other": "%{count} premières commandes gratuites"
+          },
+          "free_for_first_n_order": {
+            "one": "Pour la première commande",
+            "other": "Pour les %{count} premières commandes"
+          }
+        },
+        "one_time_purchase_shipping": "Expédition unique",
+        "address2_add_label": "Ajoutez un appartement, une suite, etc.",
+        "duties_and_taxes_title": "Droits et taxes",
+        "shipping_information_required_notice": "Les informations d'expédition sont requises. {{link}} .",
+        "shipping_information_redirect_link": "Entrez vos informations ici",
+        "loading_progressive_rates": "Recherche de tarifs supplémentaires…",
+        "no_other_methods_available": "Aucune autre méthode disponible",
+        "duties_and_taxes_options": {
+          "ddu_title": "Payer à la livraison",
+          "ddu_caption": "Des frais supplémentaires peuvent s'appliquer",
+          "ddp_title": "Payez maintenant",
+          "ddp_caption": "Pas de frais supplémentaires à la livraison"
+        },
+        "shipping_method_combinations": {
+          "with_separator": "%{reste}, %{actuel},",
+          "combination": "%{rest} et %{current}"
+        },
+        "shipping_used_as_billing_notice": "Celle-ci sera également utilisée comme adresse de facturation pour cette commande.",
+        "address_update": "Mettre à jour l'adresse"
       },
       "subscriptions": {
         "recurring_totals_with_policies": {
@@ -422,6 +452,92 @@
         "could_not_resolve_address": "Votre adresse n'a pas pu être localisée. Réessayez ou utilisez une autre adresse",
         "paginator": {
           "accessibility_label": "Pagination de ramassage local"
+        }
+      },
+      "localized_fields": {
+        "additional_information": {
+          "title": "Informations Complémentaires"
+        }
+      },
+      "payment": {
+        "amazon_payments_label": "Paiement Amazon",
+        "amazon_payments_login_hint": "Il vous sera demandé de vous connecter avec Amazon.",
+        "amazon_payments_logout": "Se déconnecter d'Amazon Pay",
+        "amazon_payments_failed_mfa_challenge": "Le mode de paiement sélectionné n'a pas pu être utilisé. Sélectionnez une autre méthode ou contactez votre banque ou l'émetteur de votre carte.",
+        "amazon_payments_abandoned_mfa_challenge": "Votre paiement n'a pas pu être effectué. Essayez un autre mode de paiement ou contactez votre banque ou l'émetteur de votre carte.",
+        "amazon_payments_could_not_enqueue_authorize": "Un problème est survenu lors du traitement de votre paiement. Réessayez ou utilisez un autre mode de paiement.",
+        "title": "Paiement",
+        "amount_left_to_pay_label": "Paiement dû :",
+        "discount_button_action_label": "Appliquer le code de réduction",
+        "gift_card_code_label": "Code carte cadeau",
+        "apply_gift_card_button_label": "Appliquer",
+        "gift_card_balance_label": "Équilibre:",
+        "supported_card_brands_more_label": "et plus…",
+        "detected_card_brand": "Marque de carte détectée : {brand}",
+        "credit_card_vaulting_sign_in_banner_title": "Enregistrez votre carte de crédit",
+        "credit_card_vaulting_sign_in_banner_info": "Connectez-vous ou créez un compte pour enregistrer votre carte de crédit pour de futurs achats.",
+        "credit_card_vaulting_sign_in_banner_button_label": "Se connecter",
+        "ftd_vault_credit_card_label": "Enregistrer cette carte de crédit sur mon compte pour un paiement plus rapide",
+        "card_number_label": "Numéro de carte",
+        "card_number_placeholder": "Numéro de carte",
+        "card_pay_with": "Payer avec:",
+        "card_security_notice": "Toutes les transactions sont sécurisées et cryptées.",
+        "card_security_vault_notice": "Nous avons besoin de vos coordonnées pour les paiements futurs. Toutes les transactions sont sécurisées et cryptées.",
+        "card_information_notice": "Toutes les transactions sont sécurisées et cryptées. Les informations de carte de crédit ne sont jamais stockées.",
+        "name_on_card_label": "Nom sur la carte",
+        "name_on_card_placeholder": "Nom sur la carte",
+        "card_expired": "Expiré",
+        "card_expiry_label": "Date d'expiration (MM \/ AA)",
+        "card_expiry_placeholder": "Date d'expiration (MM \/ AA)",
+        "credit_card_start_month": "Mois de début",
+        "credit_card_start_year": "Année de début",
+        "delete_customer_mandate_modal_title": "Supprimer cette carte de paiement ?",
+        "delete_customer_mandate_modal_body": "Si vous supprimez cette carte, vous devrez l'ajouter à nouveau avant de l'utiliser pour les paiements.",
+        "delete_customer_mandate_modal_confirm": "Supprimer la carte",
+        "delete_customer_mandate_modal_cancel": "Annuler",
+        "card_verification_value_label": "Code de sécurité",
+        "card_verification_value_placeholder": "Code de sécurité",
+        "card_verification_confirm": "À des fins de vérification, veuillez entrer le code de sécurité de votre carte.",
+        "card_expiry_date_explanation": "Date d'expiration de la carte au format : mois, mois, année, année",
+        "card_expiration_month_label": "Mois d'expiration",
+        "card_expiration_year_label": "Année d'expiration",
+        "card_verification_value_explanation": "Code de sécurité à 3 chiffres qui se trouve généralement au dos de votre carte. Les cartes American Express ont un code à 4 chiffres situé sur le devant.",
+        "card_verification_value_explanation_amex": "Code de sécurité à 4 chiffres au recto de votre carte",
+        "card_verification_value_explanation_other": "Code de sécurité à 3 chiffres au dos de votre carte",
+        "card_start_label": "Date d'émission (MM \/ AA)",
+        "card_start_placeholder": "Date d'émission (MM \/ AA)",
+        "card_issue_number_label": "Numéro de série",
+        "card_issue_number_placeholder": "Numéro de série",
+        "card_change_label": "Changement",
+        "card_update_label": "Mettre à jour la carte",
+        "ends_with_label": "se terminant par %{last_digits}",
+        "masked_digits_label": "•••• %{derniers chiffres}",
+        "payment_method_saved": "Mode de paiement enregistré",
+        "card_vaulted_company_location": "Carte enregistrée pour cet emplacement",
+        "expiry_long": "(Expire le %{mois}\/%{année})",
+        "expiry_short": "(Exp %{mois}\/%{année})",
+        "saved_by_payment_method": "Économisé par %{payment_method}",
+        "pay_with_payment_method": "Payez avec %{payment_method}",
+        "different_credit_card_label": "Utiliser une autre carte de crédit",
+        "same_billing_address_label": "Même que l'adresse d'expédition",
+        "different_billing_address_label": "Utiliser une adresse de facturation différente",
+        "billing_address_associated_with_mandate": "Utiliser l'adresse associée au moyen de paiement",
+        "billing_address_associated_with_mandate_info": "Si vous souhaitez modifier votre adresse de facturation, veuillez supprimer et ressaisir les détails de votre carte de crédit",
+        "free_order_notice_html": "Votre commande est <strong>gratuite<\/strong> . Aucun paiement n'est requis.",
+        "express_checkout_free_order": "Vous ne serez pas facturé pour une commande gratuite",
+        "order_covered_by_gift_cards_notice": {
+          "one": "Votre commande est couverte par votre carte cadeau.",
+          "other": "Votre commande est couverte par vos cartes cadeaux."
+        },
+        "offsite_gateway_redirect_hint": "Après avoir cliqué sur \"%{button_label}\", vous serez redirigé vers %{gateway_label} pour finaliser votre achat en toute sécurité.",
+        "receiver_payment_experience_hint": "Après avoir passé votre commande, vous recevrez les détails du paiement. Effectuez le paiement chez Multibanco ou en ligne dans les %{due_days} jours.",
+        "billing_address_title": "Adresse de facturation",
+        "billing_address_description": "Sélectionnez l'adresse qui correspond à votre carte ou à votre mode de paiement.",
+        "billing_address_description_no_shipping_address": "Entrez l'adresse qui correspond à votre carte ou à votre mode de paiement.",
+        "no_js_credit_card_fields_redirect_hint": "Vous serez redirigé pour ajouter vos informations de paiement.",
+        "card_fields_container_prefix": "Conteneur de terrain pour :",
+        "card_fields_unavailable_html": {
+          "one": "Les paiements par carte de crédit et de débit ne sont pas disponibles pour le moment.<br> <a href=\"%{current_url}\">Actualisez cette page<\/a> ou réessayez plus tard."
         }
       }
     },
@@ -983,6 +1099,108 @@
       "loading_message": "Chargement",
       "log_out_link": "Se déconnecter",
       "logout_overlay_label": "Vous déconnecter..."
+    },
+    "payment_methods": {
+      "add_payment_method": {
+        "billing_address": {
+          "title": "Adresse de facturation",
+          "add_billing_address_button": "Ajouter nouveau",
+          "add_billing_address_button_accessibility_label": "Ajouter une nouvelle adresse de facturation",
+          "choose_billing_address_from_list_button": "Choisissez dans la liste",
+          "choose_billing_address_from_list_button_accessibility_label": "Choisissez une adresse de facturation dans la liste",
+          "missing_billing_address_error_message": "Veuillez indiquer une adresse de facturation"
+        }
+      }
+    },
+    "payment_method_brands": {
+      "discover": "Découvrir",
+      "unionpay": "Union Pay",
+      "shoppay": "Boutique Payer",
+      "applepay": "Payer Apple",
+      "paypal": "Pay Pal"
+    },
+    "shop_policies": {
+      "legal_notice": "Mention légale",
+      "privacy_policy": "Politique de confidentialité",
+      "refund_policy": "Politique de remboursement",
+      "shipping_policy": "Politique d'expédition",
+      "subscription_policy": "Politique d'abonnement",
+      "terms_of_sale": "Conditions de vente",
+      "terms_of_service": "Conditions d'utilisation"
+    }
+  },
+  "sections": {
+    "announcement-bar": {
+      "header_announcement": "Barre d'annonce"
+    },
+    "header": {
+      "general": {
+        "account": "Compte",
+        "login": "Se connecter",
+        "cart": "Chariot"
+      }
+    },
+    "search": {
+      "title": "Recherche"
+    },
+    "image-comparison": {
+      "label_before": "Avant",
+      "label_after": "Après"
+    }
+  },
+  "general": {
+    "accessibility": {
+      "close-modal": "Fermer Modal"
+    }
+  },
+  "newsletter": {
+    "newsletter_form": {
+      "email_placeholder": "Entrer votre Email",
+      "submit_text": "Soumettre"
+    }
+  },
+  "popups": {
+    "newsletter-popup": {
+      "show_popup": "Ne plus afficher cette fenêtre contextuelle."
+    }
+  },
+  "collections": {
+    "general": {
+      "all_collection": "Voir tout"
+    }
+  },
+  "collection-list": {
+    "general": {
+      "title": "Exemple de collecte"
+    }
+  },
+  "products": {
+    "price": {
+      "regular_price": "Prix ​​habituel",
+      "compare_price": "Prix ​​de comparaison"
+    },
+    "badges": {
+      "on_sale": "Vente",
+      "sold_out": "Épuisé"
+    },
+    "onboarding": {
+      "product_title": "Exemple de produit",
+      "product_price": "30 $"
+    }
+  },
+  "social-media": {
+    "general": {
+      "social_label": "Rejoignez-nous sur {{ social }}"
+    }
+  },
+  "blogs": {
+    "article": {
+      "title": "Exemple de titre d'article",
+      "content": "Exemple de contenu d'article",
+      "date": "25 avril 2023",
+      "tag": "Mode",
+      "view_all_text": "Voir tout",
+      "read_more_text": "En savoir plus.."
     }
   }
 }
