@@ -604,7 +604,7 @@ initModalPopup();
     if (event.code.toUpperCase() !== 'ESCAPE') return;
 
     this.hidePanel();
-    this.elements.button.focus();
+    this.elements.button.forEach(btn => { btn.focus()});
   }
 
   onItemClick(event) {
@@ -615,9 +615,9 @@ initModalPopup();
   }
 
   openSelector() {
-    this.elements.button.focus();
+    this.elements.button.forEach(btn => { btn.focus()});
     this.elements.panel.toggleAttribute('hidden');
-    this.elements.button.setAttribute('aria-expanded', (this.elements.button.getAttribute('aria-expanded') === 'false').toString());
+    this.elements.button.forEach(btn => { btn.setAttribute('aria-expanded', (this.elements.button.getAttribute('aria-expanded') === 'false').toString())});
   }
 
   closeSelector(event) {
