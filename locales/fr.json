@@ -1071,7 +1071,139 @@
         "no_locations_found": "Aucun lieu trouvé",
         "search": "Rechercher un lieu",
         "search_location_title": "Sélectionnez un emplacement",
-        "selection_cancel_button": "Annuler"
+        "selection_cancel_button": "Annuler",
+        "selection_confirmation_button": "Choisissez l'emplacement",
+        "title": "Pour quel emplacement achetez-vous ?",
+        "clear_search": "Effacer la recherche",
+        "try_new_search": "Essayez une nouvelle recherche"
+      },
+      "addresses": {
+        "add_billing_address_button": "Ajouter une adresse de facturation",
+        "add_billing_address_section_accessibility_label": "Ajouter une adresse de facturation",
+        "add_shipping_address_button": "Ajouter une adresse de livraison",
+        "add_shipping_address_section_accessibility_label": "Ajouter une adresse de livraison",
+        "billing_address_card_title": "Adresse de facturation",
+        "cancel_adding_billing_address_accessibility_label": "Annuler l'ajout de l'adresse de facturation",
+        "cancel_adding_shipping_address_accessibility_label": "Annuler l'ajout de l'adresse de livraison",
+        "save_new_billing_address_accessibility_label": "Enregistrer l'adresse de facturation",
+        "save_new_shipping_address_accessibility_label": "Enregistrer l'adresse de livraison",
+        "shipping_address_card_title": "Adresse de livraison"
+      },
+      "orders": {
+        "draft_order_list": {
+          "hide_all": "Cacher tout",
+          "show_all": "Afficher tout",
+          "hide_all_accessibility_label": "Masquer toutes les commandes en cours de révision",
+          "show_all_accessibility_label": "Afficher toutes les commandes en cours d'examen",
+          "show_all_orders_in_review": "Afficher toutes les commandes en cours d'examen",
+          "show_less_orders_in_review": "Afficher moins de commandes en révision",
+          "title": "En attente",
+          "pending_tab_accessibility_label": {
+            "no_pending_orders": "Vous n'avez aucune commande en attente",
+            "pending_orders": {
+              "one": "Vous avez {{count}} commande en attente",
+              "other": "Vous avez {{count}} commandes en attente"
+            },
+            "more_than_pagination_length": "Vous avez plus de {{count}} commandes en attente"
+          },
+          "pending_orders_count_more_than_pagination_length": "{{count}} +",
+          "pagination": {
+            "nav_accessibility_label": "Boutons de navigation Commandes en révision"
+          }
+        },
+        "order_list_column_headers_location": "Emplacement",
+        "removed_company_contact_tooltip": "Retiré de l'entreprise"
+      },
+      "draft_order_details": {
+        "draft_order_subtitle": "Confirmé {{date}} de la commande {{draftOrderName}}",
+        "loading": "Chargement des détails de la commande",
+        "loading_finished_accessibility_message": "Les détails de la commande ont été chargés",
+        "payment_status": {
+          "pending": {
+            "banner_overdue": {
+              "one": "Votre paiement est en retard de {{count}} jours",
+              "other": "Votre paiement est en retard de {{count}} jours"
+            },
+            "banner_due": {
+              "one": "Votre paiement est dû dans {{count}} jour",
+              "other": "Votre paiement est dû dans {{count}} jours"
+            },
+            "banner_due_today": "Votre paiement est dû aujourd'hui",
+            "title": "Paiement dû",
+            "title_with_date": "Paiement dû le {{date}}",
+            "title_due_on_receipt": "Le paiement n'est pas encore dû",
+            "title_due_on_fulfillment": "Paiement dû à l'exécution",
+            "description_overdue": "Votre paiement est en retard.",
+            "description_partially_paid": "Cette commande a été partiellement payée. Vous avez un solde restant.",
+            "description_authorized": "Votre mode de paiement sera débité à la date d'échéance, ou vous pouvez payer maintenant.",
+            "description_due_on_receipt": "Vous recevrez une facture lorsque le paiement est dû.",
+            "description_due_on_fulfillment": "Le paiement est dû une fois que tous les articles de cette commande sont remplis."
+          },
+          "draft": {
+            "description": "Les modalités de paiement sont décidées lors de la confirmation de la commande.",
+            "title": "Paiement pas encore dû",
+            "in_review": {
+              "description": "Les modalités de paiement sont décidées lors de la confirmation de la commande.",
+              "title": "Paiement pas encore dû"
+            },
+            "submitted": {
+              "description": "Soumettez le paiement pour confirmer cette commande.",
+              "title": "Payer pour confirmer"
+            }
+          },
+          "paid": {
+            "title": "Payé",
+            "title_with_date": "Payé le {{date}}",
+            "description": "Votre commande est entièrement payée."
+          },
+          "refund": {
+            "title": "Remboursé",
+            "title_with_date": "Remboursé le {{date}}",
+            "description_full_refund": "Vous avez reçu un remboursement complet pour cette commande.",
+            "description_single_refund": "Vous avez reçu un remboursement partiel pour cette commande.",
+            "description_multiple_refunds": "Vous avez reçu des remboursements partiels pour cette commande."
+          },
+          "canceled": {
+            "title": "Paiement annulé",
+            "description": "Vous n'avez pas été débité."
+          },
+          "pay_now": "Payez maintenant",
+          "pay_now_accessibility_label": "Payez maintenant pour la commande {{orderName}}",
+          "title": "Statut de paiement"
+        },
+        "order_timeline": {
+          "expand_events_label": "Afficher les détails",
+          "expand_events_accessibility_label": "Afficher les détails de la commande préliminaire",
+          "hide_events_label": "Cacher les détails",
+          "hide_events_accessibility_label": "Masquer les détails de la commande préliminaire"
+        },
+        "subtitle": "Soumis le {{date}}",
+        "title": "Commandez {{name}}"
+      },
+      "payment_methods": {
+        "payment_delete": {
+          "description_without_replacement": "Ce mode de paiement ne sera plus disponible pour les futurs achats à partir de cet emplacement.",
+          "description_with_replacement": "La suppression de ce mode de paiement affectera les paiements préautorisés pour cet emplacement. Remplacez-le par un autre mode de paiement pour continuer à recevoir les commandes à venir."
+        },
+        "payment_details": {
+          "order_label": "Commandez {{name}}",
+          "draft_label": "Brouillon de commande {{name}}"
+        }
+      },
+      "purchase_order_number": {
+        "add_accessibility_label": "Ajouter un numéro de bon de commande",
+        "add_modal_title": "Ajouter un numéro de bon de commande",
+        "cancel": "Annuler",
+        "close_modal_accessibility_label": "Fermer le numéro de bon de commande modal",
+        "discard": "Jeter",
+        "discard_changes_modal_title": "Annuler les modifications?",
+        "edit_accessibility_label": "Modifier le numéro de bon de commande",
+        "edit_modal_title": "Modifier le numéro de bon de commande",
+        "empty_state": "Pas de numéro de bon de commande",
+        "modal_po_number_input_label": "Numéro de bon de commande",
+        "modal_po_number_input_max_length_error": "Les numéros de bon de commande ont un maximum de {{maxLength}} caractères.",
+        "save": "Sauvegarder",
+        "title": "PO # {{poNumber}}"
       }
     },
     "enable_javascript": "Pour afficher votre compte, activez JavaScript dans les paramètres de votre navigateur ou connectez-vous avec un autre navigateur.",
@@ -1127,6 +1259,35 @@
       "subscription_policy": "Politique d'abonnement",
       "terms_of_sale": "Conditions de vente",
       "terms_of_service": "Conditions d'utilisation"
+    },
+    "errors": {
+      "address_deletion_error": {
+        "description": "Un problème est survenu lors de la suppression de cette adresse. Réessayez ou actualisez la page."
+      },
+      "addresses_loading_issue": {
+        "description": "Erreur de connexion. Vérifiez votre connexion Internet et réessayez."
+      },
+      "banner_title": {
+        "one": "Il y a {{count}} erreur",
+        "other": "Il y a {{count}} erreurs"
+      },
+      "failed_address_creation": {
+        "description": "Un problème est survenu lors de la création de votre adresse. Essayez d'actualiser cette page ou vérifiez votre connexion Internet."
+      },
+      "failed_address_update": {
+        "description": "Un problème est survenu lors de la mise à jour de votre adresse. Essayez d'actualiser cette page ou vérifiez votre connexion Internet."
+      },
+      "load_orders_error": {
+        "title": "Impossible de charger les commandes",
+        "description": "Réessayez ou revenez plus tard.",
+        "retry_button": "Recommencez"
+      },
+      "load_paypal_error": {
+        "description": "Il y a un problème lors du chargement de PayPal. Veuillez réessayer."
+      },
+      "no_access": {
+        "back_to_authentication_link": "Connectez-vous à un autre compte"
+      }
     }
   },
   "sections": {
