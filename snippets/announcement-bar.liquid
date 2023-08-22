@@ -2,7 +2,7 @@
   assign show_locale = false
   assign show_currency = false
 
-  if settings.show_language and shop.enabled_locales.size > 1
+  if settings.show_language and localization.available_languages.size > 1
     assign show_locale = true 
   endif
   
