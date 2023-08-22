@@ -585,10 +585,10 @@ initModalPopup();
     super();
     this.elements = {
       input: this.querySelector('input[name="language_code"], input[name="country_code"], input[name="currency_code"]'),
-      button: this.querySelector('button'),
+      button: this.querySelectorAll('button'),
       panel: this.querySelector('ul'),
     };
-    this.elements.button.addEventListener('click', this.openSelector.bind(this));
+    this.elements.button.forEach(btn => {btn.addEventListener('click', this.openSelector.bind(this))});
     this.elements.button.addEventListener('focusout', this.closeSelector.bind(this));
     this.addEventListener('keyup', this.onContainerKeyUp.bind(this));
 
