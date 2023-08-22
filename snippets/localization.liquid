@@ -37,7 +37,7 @@
             </button>
     
             <ul id="LanguageList" role="list" class="disclosure__list" hidden>
-              {%- for currency in localization.available_currencies -%}
+              {%- for currency in shop.enabled_currencies -%}
                 <li class="disclosure__item" tabindex="-1">
                   <a href="#"{% if currency.iso_code == localization.currency.iso_code %} aria-current="true"{% endif %} hreflang="{{ currency.iso_code }}" lang="{{ currency.iso_code }}" data-value="{{ currency.iso_code }}">
                     ({{ currency.iso_code }} {{ currency.symbol }})
