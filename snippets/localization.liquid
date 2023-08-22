@@ -1,5 +1,5 @@
 <localization-form>
-  {% if show_locale %}
+  {% if localization.available_languages.size > 1 %}
     {% form 'localization' %}
       <div class="disclosure">
         <button type="button" class="disclosure__button" aria-expanded="false" aria-controls="LanguageList">
