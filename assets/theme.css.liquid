@@ -348,7 +348,7 @@ button {
   .language__currency-container {
     display: none;
   }
-  
+
   @media only screen and (min-width: 769px) {
     .main__announcement-banner {
       display: flex;
@@ -371,9 +371,16 @@ button {
     }
     .social__container {
       display: block;
+      flex: 0 1 100%;
+      text-align: left;
     }
     .language__currency-container {
       display: block;
+    }
+  }
+  @media only screen and (min-width: 951px){
+    .social__container {
+      flex: 0 1 auto;
     }
   }
   /* @media only screen and (min-width: 951px) {
