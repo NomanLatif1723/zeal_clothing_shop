@@ -569,6 +569,8 @@ let localizationForm = document.querySelector('.localization_form');
     if (localeLink) {
       localeLink.forEach(button => {
         button.addEventListener('click', (event) => {
+          button.getAttribute('data-value') = button.querySelector('input').value;
+          
           localizationForm.submit();
         })
       })
