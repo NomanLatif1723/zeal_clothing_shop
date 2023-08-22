@@ -555,6 +555,7 @@ function initModalPopup() {
 }
 initModalPopup();
 class LocalizationForm extends HTMLElement {
+  console.log("hy");
   constructor() {
     super();
     this.elements = {
