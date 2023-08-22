@@ -558,7 +558,7 @@ initModalPopup();
 const localizationForm = document.querySelectorAll('.localization_form');
 localizationForm.forEach(localeForm => {
   if (localeForm) {
-    const localeBtn = localeForm.querySelector('.disclosure__button');
+    const localeBtn = document.querySelector('.disclosure__button');
     const localeDropdown = localeForm.querySelector('.disclosure__list');
     localeBtn.addEventListener('click', () => {
       localeDropdown.toggleAttribute('hidden');
