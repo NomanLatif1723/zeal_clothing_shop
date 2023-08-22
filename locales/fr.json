@@ -418,7 +418,27 @@
             "one": ", puis %{count} paiement à %{total_price}",
             "other": ", puis %{count} paiements à %{total_price} chacun"
           }
-        }
+        },
+        "recurring_total_intervals": {
+          "day": {
+            "one": "jour",
+            "other": "%{count} jours"
+          },
+          "week": {
+            "one": "semaine",
+            "other": "%{count} semaines"
+          },
+          "month": {
+            "one": "mois",
+            "other": "%{count} mois"
+          },
+          "year": {
+            "one": "année",
+            "other": "%{count} ans"
+          }
+        },
+        "recurring_totals": "%{total_price} tous les %{intervalle}",
+        "recurring_totals_with_initial_order_shipping_discount": "Premier paiement %{total_price_with_discount}, puis %{recurring_total}"
       },
       "customer_payment_methods": {
         "page_title": "Méthodes de payement",
@@ -848,6 +868,139 @@
         "save_my_information_label": "Conservez ces informations pour la prochaine fois",
         "invalid_address": "L'adresse sélectionnée n'est pas valide. %{update_address_link} ou sélectionnez une autre adresse.",
         "incomplete_address": "L'adresse sélectionnée est incomplète. %{update_address_link} ou sélectionnez une autre adresse."
+      },
+      "thank_you": {
+        "gift_card_text_title": {
+          "one": "La carte cadeau a été envoyée par SMS",
+          "other": "Les cartes cadeaux ont été envoyées par SMS"
+        },
+        "resend_gift_cards_by_email": "Ré-envoyer l'email",
+        "resend_gift_cards_by_text": "Renvoyer le SMS",
+        "gift_card_resent_confirmation": {
+          "one": "La carte-cadeau a été renvoyée.",
+          "other": "Les cartes-cadeaux ont été renvoyées."
+        },
+        "gift_card_resend_failure": {
+          "one": "Un problème est survenu lors du renvoi de votre carte-cadeau. Réessayez ou contactez-nous.",
+          "other": "Un problème est survenu lors du renvoi de vos cartes-cadeaux. Réessayez ou contactez-nous."
+        }
+      },
+      "review": {
+        "title": "Revoir",
+        "review_title": "Vérifier la commande",
+        "checkout_as_guest": "Commander en tant qu'invité",
+        "blocks": {
+          "billing_address_title": "Facturation",
+          "shipping_address_title": "Envoyez à",
+          "shipping_method_title": "Méthode",
+          "payment_method_title": "Paiement",
+          "change_link_label": "Changement",
+          "change_contact_method_link_label": "Modifier les coordonnées",
+          "change_billing_address_link_label": "Modifier l'adresse de facturation",
+          "change_shipping_address_link_label": "Changer l'adresse de livraison",
+          "change_shipping_method_link_label": "Changer le mode d'expédition",
+          "change_payment_method_link_label": "Changer la méthode de paiement",
+          "pick_up_in_store_shipping_method_html": "Retrait en magasin · %{location_name}",
+          "purchase_order_number_title": "Numéro de bon de commande",
+          "change_purchase_order_number_label": "Modifier le numéro de bon de commande",
+          "change_delivery_method_link_label": "Changer le mode de livraison",
+          "no_address": "(Pas d'adresse)",
+          "no_purchase_order_number": "(Pas de numéro de bon de commande)",
+          "due_after_order_reviewed_html": "Dû après vérification de la commande"
+        },
+        "block_title": "Vérifiez vos informations"
+      },
+      "marketing": {
+        "accept_marketing_checkbox_label": "Envoyez-moi des nouvelles et des offres",
+        "post_accept_marketing_checkbox_label": "Vous êtes abonné pour recevoir des actualités et des offres par e-mail",
+        "pending_accept_marketing_checkbox_label": "Vérifiez votre e-mail pour confirmer votre abonnement aux actualités et aux offres",
+        "accept_sms_checkbox_label": "Textez-moi avec des nouvelles et des offres",
+        "sms": {
+          "disclaimer": {
+            "privacy_policy": "politique de confidentialité",
+            "terms_of_service": "Conditions d'utilisation",
+            "description_html": "En vous inscrivant par SMS, vous acceptez de recevoir des messages marketing automatisés récurrents, y compris des rappels de panier, au numéro de téléphone fourni. Le consentement n'est pas une condition d'achat. Répondez STOP pour vous désabonner. Répondez AIDE pour obtenir de l'aide. La fréquence des messages varie. Des frais de messagerie et de données peuvent s'appliquer. Consultez nos %{privacy_policy_link} et %{terms_of_service_link}.",
+            "description_transactional_html": "Vous pouvez recevoir des messages texte liés à la confirmation de commande et aux mises à jour d'expédition. Répondez STOP pour vous désabonner. Répondez AIDE pour obtenir de l'aide. La fréquence des messages varie. Des frais de messagerie et de données peuvent s'appliquer. Consultez nos %{privacy_policy_modal_link} et %{terms_of_service_modal_link}."
+          },
+          "mobile_phone_number": "numéro de téléphone portable",
+          "get_offers_by_text": "Recevez des offres par SMS"
+        },
+        "unsubscribe": {
+          "title": "Vous vous êtes désabonné",
+          "description": "Vous ne recevrez plus de rappels de panier de notre part."
+        },
+        "accept_shop_pay_marketing_checkbox_label": "Inscrivez-moi pour recevoir des nouvelles et des offres de ce magasin"
+      },
+      "shop_policies": {
+        "refund_policy": "Politique de remboursement",
+        "privacy_policy": "Politique de confidentialité",
+        "terms_of_service": "Conditions d'utilisation",
+        "legal_notice": "Mention légale",
+        "shipping_policy": "Politique d'expédition",
+        "terms_of_sale": "Conditions de vente",
+        "subscription_policy": "Politique d'abonnement",
+        "purchase_options_policy": "Politique d'options d'achat",
+        "contact_information": "Coordonnées",
+        "purchase_options_cancellation_policy": "Politique d'annulation"
+      },
+      "mor_policies": {
+        "terms_and_conditions": "Termes et conditions du marchand attitré",
+        "privacy_policy": "Politique de confidentialité du marchand officiel"
+      },
+      "markets": {
+        "invalid_market_manager_error": "Vérifiez vos coordonnées avant de finaliser le paiement"
+      },
+      "notifications": {
+        "title": "Avis"
+      },
+      "order_payment_collection": {
+        "custom_line_item_description": "Montant à payer pour la commande %{order_name}",
+        "changes_summary": {
+          "added": {
+            "one": "Ajoutée",
+            "other": "%{count} ajouté"
+          },
+          "removed": "Supprimé",
+          "subtracted": "%{count} supprimé",
+          "returned": "%{count} renvoyé"
+        },
+        "additional_payment_requested": "Le paiement de %{total_outstanding} est nécessaire",
+        "checkout_review_and_pay": "Votre commande %{order_name} a été mise à jour. Passez en revue ces modifications, puis payez pour confirmer votre commande.",
+        "order_updated_on": "Votre commande a été mise à jour le %{last_edited_at}.",
+        "order_review_and_pay": "Votre commande a été mise à jour. Passez en revue et payez pour confirmer votre commande.",
+        "pay_now": "Payez maintenant"
+      },
+      "change_currency": {
+        "credit_card_will_be_charged_html": "Votre carte de crédit sera débitée %{amount}",
+        "payment_total_label": "Paiement total",
+        "change_currency_link": "Passer à %{currency_name}",
+        "card_provider_fx_charges_warning": "Votre fournisseur de carte peut facturer des frais sur les transactions %{currency_code}.",
+        "currency_not_supported_by_shop": "La devise que vous avez sélectionnée n'est plus disponible. Tous les prix sont maintenant en %{currency_code}."
+      },
+      "change_country": {
+        "cart_updated_based_on_country": "Votre panier a été mis à jour en fonction de votre pays de livraison.",
+        "cart_and_currency_updated_based_on_country": "Votre panier et votre devise ont été mis à jour en fonction de votre pays de livraison."
+      },
+      "change_cart_localization": {
+        "verify_shipping_address": "Votre pays\/région a été mis à jour. Entrez votre adresse de livraison pour continuer le paiement."
+      },
+      "tips": {
+        "title": "Ajouter un pourboire",
+        "description": "Montrez votre soutien à l'équipe de %{shop_name}",
+        "presets_description": "Sélectionnez un pourcentage de pourboire",
+        "custom_label": "Conseil personnalisé",
+        "add_tip": "Ajouter un pourboire",
+        "update_tip": "Conseil de mise à jour",
+        "message": "Merci, nous l'apprécions.",
+        "preset_label": "%{tip_percent} %",
+        "no_tip_label": "Aucun"
+      },
+      "open_graph_meta_tag": {
+        "title_with_products": {
+          "zero": "Achetez %{product_name}",
+          "one": "Achetez %{product_name} et %{count} autre article",
+          "other": "Achetez %{product_name} et %{count} autres articles"
+        }
       }
     },
     "errors": {
@@ -1612,7 +1765,122 @@
           "choose_billing_address_from_list_button": "Choisissez dans la liste",
           "choose_billing_address_from_list_button_accessibility_label": "Choisissez une adresse de facturation dans la liste",
           "missing_billing_address_error_message": "Veuillez indiquer une adresse de facturation"
+        },
+        "title": "Ajouter un mode de paiement",
+        "payment_method_added_confirmation": "Mode de paiement ajouté"
+      },
+      "title": "Méthodes de payement",
+      "add_payment_method_button": "Ajouter un mode de paiement",
+      "add_payment_method_banner": "Ajoutez un mode de paiement pour un paiement plus rapide ou des services préautorisés",
+      "no_payment_methods_banner": "Aucun moyen de paiement ajouté",
+      "edit_payment_method_button_accessibility_label": "Modifier {{paymentMethodName}} se terminant par {{lastDigits}}",
+      "edit_payment_method_brand_button_accessibility_label": "Modifier {{paymentMethodName}}",
+      "delete_payment_method_button": "Supprimer",
+      "delete_payment_method_button_accessibility_label": "Supprimer {{paymentMethodName}}",
+      "back_button": "Dos",
+      "back_button_accessibility_label": "Retour à {{paymentMethodStepTitle}}",
+      "generic_card": "Carte",
+      "expiration_warning_button_accessibility_label": "Afficher l'avertissement d'expiration pour {{paymentMethodName}} se terminant par {{lastDigits}}",
+      "expires_soon": "Cette carte expire bientôt",
+      "expired": "Cette carte est arrivée à expiration",
+      "card_update_consent": "Ce mode de paiement sera enregistré pour de futurs achats.",
+      "digital_wallet_title": "Portefeuille numérique",
+      "credit_or_debit_card_title": "carte de crédit ou de débit",
+      "google_pay": {
+        "loading": "Chargement de Google Pay",
+        "errors": {
+          "generic": "Il y a eu un problème avec Google Pay. Réessayez ou utilisez un autre mode de paiement.",
+          "missing_billing_address": "Google Pay nécessite une adresse de facturation. Veuillez en ajouter un à votre compte."
         }
+      },
+      "apple_pay": {
+        "loading": "Chargement d'Apple Pay",
+        "errors": {
+          "generic": "Il y a eu un problème avec Apple Pay. Réessayez ou utilisez un autre mode de paiement.",
+          "not_available": "Apple Pay n'est pas disponible sur cet appareil.",
+          "missing_billing_address": "Apple Pay nécessite une adresse de facturation. Veuillez en ajouter un à votre compte."
+        }
+      },
+      "payment_details": {
+        "title": "Détails du mode de paiement",
+        "credit_card_details_accessibility_label": "se terminant par {{lastDigits}}",
+        "billing_title": "Adresse de facturation",
+        "card_info_title": "Informations sur la carte",
+        "payment_method_expiring_on": "Expire le {{expiryDate}}",
+        "payment_method_expired_on": "Expiré le {{expiryDate}}",
+        "preauthorized_payments": "Paiements préautorisés",
+        "close_payment_modal": "Fermer",
+        "close_payment_modal_accessibility_label": "Fermer les détails du mode de paiement modal",
+        "payment_method_not_found_error": "Impossible de trouver le mode de paiement",
+        "payment_details_loading": "Chargement des détails du mode de paiement",
+        "pre_authorized_payments": "Paiements préautorisés",
+        "total_amount_of_subscription_line_items_left": "et {{total}} de plus",
+        "total_amount_of_subscription_line_items_left_accessibility_label": "{{totalItems}} éléments au total, affichant {{totalItemsToDisplay}} éléments.",
+        "next_payment_due": "Prochain paiement dû {{dueDateInMonthDayYear}}",
+        "edit_payment_method_button": "Modifier",
+        "edit_payment_method_button_accessibility_label": "Modifier le mode de paiement se terminant par {{lastDigits}}",
+        "loading_shop_pay": "Chargement de la boutique Payer",
+        "invalid_payment_method": "Mode de paiement invalide",
+        "invalid_payment_method_message": "Utilisez une nouvelle carte de crédit pour continuer à recevoir les commandes à venir.",
+        "replace_payment_method": "Remplacer le mode de paiement"
+      },
+      "edit_payment_method": {
+        "title": "Modifier le mode de paiement",
+        "save_payment_method_button": "Sauvegarder",
+        "cancel_edit_payment_method_button": "Annuler",
+        "payment_method_updated_toast": "Mode de paiement mis à jour",
+        "billing_address": "Adresse de facturation",
+        "billing_address_add_new": "Ajouter nouveau",
+        "billing_address_choose_from_list": "Choisissez dans la liste",
+        "future_purchases_notice": "Ce mode de paiement sera enregistré pour de futurs achats."
+      },
+      "card_fields": {
+        "card_number_label": "Numéro de carte",
+        "card_number_placeholder": "Numéro de carte",
+        "name_on_card_label": "Nom sur la carte",
+        "name_on_card_placeholder": "Nom sur la carte",
+        "card_expiry_label": "Date d'expiration (MM \/ AA)",
+        "card_expiry_placeholder": "Date d'expiration (MM \/ AA)",
+        "card_verification_value_label": "Code de sécurité",
+        "card_verification_value_placeholder": "Code de sécurité",
+        "card_start_label": "Date d'émission (MM \/ AA)",
+        "card_start_placeholder": "Date d'émission (MM \/ AA)",
+        "tooltip": {
+          "tooltip_accessibility_label": "Plus d'information",
+          "card_verification_value_explanation_amex": "Code de sécurité à 4 chiffres au recto de votre carte",
+          "card_verification_value_explanation_other": "Code de sécurité à 3 chiffres au dos de votre carte",
+          "card_verification_value_explanation": "Code de sécurité à 3 chiffres qui se trouve généralement au dos de votre carte. Les cartes American Express ont un code à 4 chiffres situé sur le devant.",
+          "card_security_notice": "Toutes les transactions sont sécurisées et cryptées."
+        },
+        "field_errors": {
+          "credit_card_name_invalid": "Entrez votre nom exactement comme il est écrit sur votre carte",
+          "credit_card_number_invalid": "Entrez un numéro de carte valide",
+          "credit_card_expiry_invalid": "Entrez une date d'expiration de carte valide",
+          "credit_card_verification_value_blank": "Entrez le CVV ou le code de sécurité sur votre carte"
+        }
+      },
+      "payment_delete": {
+        "title": "Supprimer le mode de paiement",
+        "description_without_replacement": "Ce mode de paiement ne sera plus disponible pour les achats futurs.",
+        "description_with_replacement": "La suppression de ce mode de paiement affectera les paiements préautorisés. Vous pouvez éventuellement le remplacer par un autre mode de paiement pour continuer à recevoir les commandes à venir.",
+        "warning_message_with_replacement": {
+          "with_pending_orders_and_subscriptions": "La suppression de ce mode de paiement affectera les paiements préautorisés. À moins que vous ne sélectionniez un autre mode de paiement, ce mode de paiement sera toujours facturé pour tout solde impayé sur les commandes existantes. La sélection d'un mode de paiement alternatif vous permettra de recevoir les commandes d'abonnement à venir sans interruption.",
+          "with_pending_orders": "La suppression de ce mode de paiement le supprimera de votre compte et ne sera plus disponible pour de futurs achats. À moins que vous ne sélectionniez un autre mode de paiement, il sera toujours facturé pour tout solde impayé sur les commandes existantes.",
+          "with_subscriptions": "La suppression de ce mode de paiement affectera les paiements préautorisés. Remplacez-le par un autre mode de paiement pour continuer à recevoir les commandes à venir."
+        },
+        "warning_message_without_replacement": {
+          "with_pending_orders_and_subscriptions": "La suppression de ce mode de paiement affectera les paiements préautorisés. Ce mode de paiement sera toujours facturé pour tout solde impayé sur les commandes existantes, mais vous ne recevrez pas les commandes d'abonnement à venir. Ajoutez un mode de paiement alternatif pour continuer à recevoir des commandes d'abonnement.",
+          "with_pending_orders": "La suppression de ce mode de paiement le supprimera de votre compte et ne sera plus disponible pour de futurs achats. Il sera toujours facturé pour tout solde impayé sur les commandes existantes.",
+          "with_subscriptions": "La suppression de ce mode de paiement affectera les paiements préautorisés. Ajoutez un mode de paiement alternatif pour continuer à recevoir les commandes à venir."
+        },
+        "payment_method_selector_placeholder": "Sélectionnez un mode de paiement de remplacement (facultatif)",
+        "payment_method_selector_no_alternative_payment": "Pas de méthode de remplacement",
+        "replace_method_with_new_method_description": "Votre {{currentPaymentMethodName}} sera supprimé et remplacé par votre {{newPaymentMethodName}} .",
+        "error_when_deleting": "Nous nous excusons, mais quelque chose s'est mal passé et nous n'avons pas pu supprimer ce mode de paiement. S'il vous plaît réessayer plus tard ou actualisez la page.",
+        "delete_and_replace_button": "Supprimer et remplacer",
+        "delete_and_replace_button_accessibility_label": "Supprimez {{currentPaymentMethodName}} et remplacez-le par {{newPaymentMethodName}} .",
+        "deleted_successfully": "Mode de paiement supprimé avec succès.",
+        "loading_available_payment_methods_accessibility_label": "Chargement des modes de paiement disponibles"
       }
     },
     "payment_method_brands": {
@@ -1657,8 +1925,25 @@
         "description": "Il y a un problème lors du chargement de PayPal. Veuillez réessayer."
       },
       "no_access": {
-        "back_to_authentication_link": "Connectez-vous à un autre compte"
-      }
+        "back_to_authentication_link": "Connectez-vous à un autre compte",
+        "description": "Vous n'êtes pas enregistré en tant que client B2B avec {{shopName}}",
+        "title": "Pas d'accès"
+      },
+      "no_access_to_locations": {
+        "description": "Vous n'avez accès à aucun lieu"
+      },
+      "not_found": {
+        "description": "Vérifiez l'URL ou réessayez dans quelques minutes.",
+        "title": "Il y a un problème lors du chargement de cette page"
+      },
+      "order_not_found": {
+        "description": "Cette commande n'existe pas ou vous n'êtes pas autorisé à la consulter.",
+        "title": "Commande introuvable"
+      },
+      "profile_update_error": {
+        "description": "Un problème est survenu lors de la mise à jour de votre profil. Essayez d'actualiser cette page ou vérifiez votre connexion Internet."
+      },
+      "retry_action_label": "Recommencez"
     }
   },
   "sections": {
