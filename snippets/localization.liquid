@@ -31,10 +31,10 @@
             </svg>
           </button>
           <ul id="CountryList" role="list" class="disclosure__list">
-            {% for country in localization.available_countries %}
+            {% for currency in shop.enabled_currencies %}
               <li class="disclosure__item" tabindex="-1">
-                <a href="#"{% if country.iso_code == localization.country.iso_code %} aria-current="true"{% endif %} data-value="{{ country.iso_code }}">
-                  ({{ country.currency.iso_code }} {{ country.currency.symbol }})
+                <a href="#" aria-current="true" data-value="{{ currency.iso_code }}">
+                  ({{ currency.iso_code }} {{ currency.symbol }})
                 </a>
               </li>
             {% endfor %}
