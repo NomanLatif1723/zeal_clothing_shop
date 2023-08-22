@@ -18,7 +18,7 @@
               </li>
             {% endfor %}
           </ul>
-          <input type="hidden" name="country_code" value="{{ locale.iso_code }}">
+          <input type="hidden" name="country_code" value="{{ form.current_locale.iso_code }}">
         </div>
       </div>
     {% endif %}
