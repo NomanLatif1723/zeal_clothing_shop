@@ -125,10 +125,10 @@
     height: 22px;
 }
 .nav-drawer-locales .disclosure__button{
-  color: var(--colorBody);
+  color: var(--colorBodyText);
 }
 .nav-drawer-locales .disclosure__button svg{
-  fill: var(--colorBody);
+  fill: var(--colorBodyText);
 }
 @media only screen and (min-width: 481px) {
   .nav-content__wrapper {
