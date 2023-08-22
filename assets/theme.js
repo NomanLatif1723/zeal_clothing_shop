@@ -584,7 +584,7 @@ initModalPopup();
   constructor() {
     super();
     this.elements = {
-      input: this.querySelector('input[name="language_code"], input[name="country_code"], input[name="currency_code"]'),
+      input: this.querySelector('input[name="language_code"], input[name="country_code"]'),
       button: this.querySelector('button'),
       panel: this.querySelector('ul'),
     };
