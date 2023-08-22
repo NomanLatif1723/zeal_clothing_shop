@@ -559,10 +559,9 @@ let localizationForm = document.querySelectorAll('.localization_form');
 localizationForm.forEach(localeForm => {
   if (localeForm) {
     let localeBtn = document.querySelectorAll('.disclosure__button');
-    let localeDropdown = localeForm.querySelector('.disclosure__list');
     localeBtn.forEach(button => {
       button.addEventListener('click', () => {
-        localeDropdown.toggleAttribute('hidden');
+        button.closest('.disclosure').querySelector('.disclosure__list').toggleAttribute('hidden');
       })
     })
       
