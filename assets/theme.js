@@ -558,14 +558,11 @@ initModalPopup();
 let localizationForm = document.querySelectorAll('.localization_form');
 localizationForm.forEach(localeForm => {
   if (localeForm) {
-    let localeBtn = document.querySelectorAll('.disclosure__button');
-    localeBtn.forEach(button => {
-      button.addEventListener('click', () => {
-        console.log("hy");
-        button.closest('.disclosure').querySelector('.disclosure__list').toggleAttribute('hidden');
-      })
+    let localeBtn = document.querySelector('.disclosure__button');
+    localeBtn.addEventListener('click', () => {
+      console.log("hy");
+      localeBtn.closest('.disclosure').querySelector('.disclosure__list').toggleAttribute('hidden');
     })
-      
   }
 })
 
