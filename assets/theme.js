@@ -554,16 +554,22 @@ function initModalPopup() {
   })
 }
 initModalPopup();
-
-let localizationForm = document.querySelectorAll('.localization_form');
-localizationForm.forEach(localeForm => {
-  if (localeForm) {
-    let localeBtn = document.querySelector('.disclosure__button');
-    localeBtn.addEventListener('click', () => {
-      localeBtn.closest('.disclosure').querySelector('.disclosure__list').removeAttribute('hidden');
+let localeBtn = document.querySelectorAll('.disclosure__button');
+    localeBtn.forEach(button => {
+      button.addEventListener('click', () => {
+        localeBtn.closest('.disclosure').querySelector('.disclosure__list').removeAttribute('hidden');
+      })
     })
-  }
-})
+  
+// let localizationForm = document.querySelectorAll('.localization_form');
+// localizationForm.forEach(localeForm => {
+//   if (localeForm) {
+//     let localeBtn = document.querySelector('.disclosure__button');
+//     localeBtn.addEventListener('click', () => {
+//       localeBtn.closest('.disclosure').querySelector('.disclosure__list').removeAttribute('hidden');
+//     })
+//   }
+// })
 
 
 })();
