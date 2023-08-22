@@ -555,30 +555,30 @@ function initModalPopup() {
 }
 initModalPopup();
 
-let localizationForm = document.querySelector('#localization_form');
-  if (localizationForm) {
-    let localeBtn = document.querySelectorAll('.disclosure__button');
-    let localeLink = document.querySelectorAll('.disclosure__item a');
-    let localeFormInput = document.querySelector('#localeId');
-    let currencyFormInput = document.querySelector('#localeId');
-    if (localeBtn) {
-      localeBtn.forEach(button => {
-        button.addEventListener('click', () => {
-          button.closest('.disclosure').querySelector('.disclosure__list').toggleAttribute('hidden');
-        })
-      })
-    }
-    if (localeLink) {
-      localeLink.forEach(button => {
-        button.addEventListener('click', (event) => {
-          event.preventDefault();
-          localeFormInput.value = button.getAttribute('data-value');
-          currencyFormInput.value = button.getAttribute('data-value');
-          // localizationForm.submit();
-        })
-      })
-    }
+// let localizationForm = document.querySelector('#localization_form');
+//   if (localizationForm) {
+//     let localeBtn = document.querySelectorAll('.disclosure__button');
+//     let localeLink = document.querySelectorAll('.disclosure__item a');
+//     let localeFormInput = document.querySelector('#localeId');
+//     let currencyFormInput = document.querySelector('#localeId');
+//     if (localeBtn) {
+//       localeBtn.forEach(button => {
+//         button.addEventListener('click', () => {
+//           button.closest('.disclosure').querySelector('.disclosure__list').toggleAttribute('hidden');
+//         })
+//       })
+//     }
+//     if (localeLink) {
+//       localeLink.forEach(button => {
+//         button.addEventListener('click', (event) => {
+//           event.preventDefault();
+//           localeFormInput.value = button.getAttribute('data-value');
+//           currencyFormInput.value = button.getAttribute('data-value');
+//           // localizationForm.submit();
+//         })
+//       })
+//     }
     
-  }
+//   }
   
 })();
