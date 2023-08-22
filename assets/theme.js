@@ -580,6 +580,8 @@ initModalPopup();
 //     }
     
 //   }
+  
+// Localization Language and Currency Selector 
 class LocalizationForm extends HTMLElement {
   constructor() {
     super();
