@@ -32,7 +32,7 @@
         <div class="disclosure currency__wrapper">
           <button type="button" class="disclosure__button" aria-expanded="false" aria-controls="CountryList">
             {%- if show_flags -%}
-              <span class="disclosure__item-flags">{{ localization.country.currency | image_url: width: 20 | image_tag }}</span>
+              <span class="disclosure__item-flags">{{ localization.country | image_url: width: 20 | image_tag }}</span>
             {%- endif -%}
             ({{ localization.country.currency.iso_code }} {{ localization.country.currency.symbol }})
             <svg aria-hidden="true" width="10" height="10" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
