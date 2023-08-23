@@ -5,6 +5,11 @@
     if lazyloadImages
     assign lazyloading = 'lazy'
     endif
+
+    assign ratio = 0.75
+    assign default = 'large'
+    assign sizes = '(min-width: 1200px) 650px, 45vw'
+    
 -%}
 {% style %}
   .main__section-{{ section.id }}{
@@ -33,7 +38,24 @@
           {%- when 'image' -%}
           <div class="image-text__item image__block" {{ block.shopify_attributes }}>
             {%- if image != blank -%}
+              {% comment %}
               {{ image | image_url: width: image.width, height: image.height | image_tag: loading: lazyloading, class: 'image-text__image', widths: '240,480,600,1024,2048', sizes: '(min-width: 1200px) 650px, 45vw' }}
+              {% endcomment %}
+              <img    
+                class="image-text__image"
+                src="{{ image | img_url: default }}"
+                srcset="
+                    {{ image | img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
+                    {{ image | img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
+                    {{ image | img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
+                    {{ image | img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
+                    {{ image | img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
+                "
+                width="{{ image.width }}"
+                height="{{ image.height }}"
+                loading= "{{ lazyloading }}"
+                sizes="{{ sizes }}"
+                alt="{{ image.alt }}">
             {%- else -%}
               {{ 'image' | placeholder_svg_tag: "placeholder__image" }}
             {%- endif -%}
