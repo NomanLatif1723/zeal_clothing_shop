@@ -60,7 +60,7 @@
       ],
       "settings": {
         "show_copyright": true,
-        "footer_copyright_text": "All rights reserved",
+        "footer_copyright_text": "All rights reserved.",
         "show_payment_icons": true,
         "lazyload_images": true
       }
