@@ -28,7 +28,7 @@
           <input type="hidden" name="language_code" value="{{ localization.language.iso_code }}">
         </div>
       {%- endif -%}
-      {%- if localization.available_countries.size >= 1 -%}
+      {%- if localization.available_countries.size > 1 -%}
         <div class="disclosure currency__wrapper">
           <button type="button" class="disclosure__button" aria-expanded="false" aria-controls="CountryList">
             {%- if show_flags -%}
