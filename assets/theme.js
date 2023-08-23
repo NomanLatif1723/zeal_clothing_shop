@@ -632,12 +632,12 @@ class LocalizationForm extends HTMLElement {
 
 customElements.define('localization-form', LocalizationForm);
 
-function currencyFormSubmit(event) {
-  event.target.form.submit();
-}
+// function currencyFormSubmit(event) {
+//   event.target.form.submit();
+// }
 
-document.querySelectorAll('.shopify-currency-form .disclosure__item').forEach(function(element) {
-  element.addEventListener('click', currencyFormSubmit);
-});
+// document.querySelectorAll('.shopify-currency-form .disclosure__item').forEach(function(element) {
+//   element.addEventListener('click', currencyFormSubmit);
+// });
   
 })();
