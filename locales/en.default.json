@@ -22,6 +22,12 @@
         "cart": "Cart"
       }
     },
+    "footer": {
+      "copyright": {
+        "text": "Copyright 2023",
+        "powered_by_text": "Powered By Shopify"
+      }
+    },
     "search": {
       "title": "Search"
     },
