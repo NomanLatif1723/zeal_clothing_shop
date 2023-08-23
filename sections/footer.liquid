@@ -142,11 +142,11 @@
         <div class="copyright__bar-wrapper">
           {%- if section.settings.show_copyright -%}
             <div class="copyright__text rte">
-              Copyright 2023 {{ shop.name }},
+              {{ 'sections.footer.copyright.text' | t }} {{ shop.name }},
               {%- if section.settings.footer_copyright_text != blank -%}
                 {{ section.settings.footer_copyright_text }}
               {%- endif -%}
-              Powered By Shopify
+              {{ 'sections.footer.copyright.powered_by_text' | t }}
             </div>
           {%- endif -%}
           {%- if section.settings.show_payment_icons -%}
