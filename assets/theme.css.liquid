@@ -642,9 +642,16 @@ button {
   .footer__newsletter-container {
     padding: 15px 0 20px;
   }
+  .payment__icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding-top: 15px;
+  }
   .icon__payment-item {
     display: inline-flex;
-    padding: 0 6px;
 }
   @media only screen and (min-width: 769px) and(max-width:959px) {
     .site__grid-item {
@@ -701,6 +708,9 @@ button {
     .copyright__bar-wrapper {
       display: flex;
       justify-content: space-between;
+    }
+    .payment__icons {
+      padding-top: 0;
     }
   }
   /* Testimonial Section */
