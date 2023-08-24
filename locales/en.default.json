@@ -1,13 +1,164 @@
 {
+  "blogs": {
+    "article": {
+      "title": "Example Article Title",
+      "content": "Example Article Content",
+      "date": "25 Apr 2023",
+      "tag": "Fashion",
+      "view_all_text": "View All",
+      "read_more_text": "Read More.."
+    }
+  },
+  "collections": {
+    "general": {
+      "all_collection": "View All"
+    }
+  },
+  "collection-list": {
+    "general": {
+      "title": "Example Collection"
+    }
+  },
+  "contact": {
+    "form": {
+      "success_mesage": "Your Form Has Been Posted SuccessFully. We'll Get Back To You Asap.",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone Number",
+      "comment": "Comment",
+      "submit": "Send"
+    }
+  },
+  "customers": {
+    "account": {
+      "title": "Accounts",
+      "details": "Account Details",
+      "view_addresses": "View Addresses"
+    },
+    "activate_account": {
+      "title": "Activate Your Account",
+      "sub_text": "Create Your Password to Activate Your Account",
+      "submit": "Activate Account",
+      "password": "Password",
+      "confirm_password": "Confirm Password",
+      "cancel": "Back",
+      "show_password": "Show"
+    },
+    "addresses": {
+      "title": "Addresses",
+      "add_address": "Add Address",
+      "edit_address": "Edit",
+      "none": "No Addresses Found",
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "phone": "Phone Number",
+      "company": "Company",
+      "address1": "Address1",
+      "address2": "Address2",
+      "province": "Province",
+      "country": "Country",
+      "city": "City",
+      "postal_code": "Postal/Zip Code",
+      "add_new": "Add Address",
+      "cancel": "Back",
+      "update": "Update Address",
+      "confirm_delete": "Are you sure you want to delete this address?",
+      "set_default": "Set as Default Address",
+      "default": "Default",
+      "edit": "Edit",
+      "add": "Add Address",
+      "delete": "Delete"
+    },
+    "login": {
+      "title": "Login",
+      "email": "Email Address",
+      "password": "Password",
+      "submit": "Continue",
+      "forget_password": "Forget Your Password",
+      "create_account": "Create an Account",
+      "show_password": "Show",
+      "guest_title": "Guest Login",
+      "guest_submit": "Continue as Guest"
+    },
+    "logout": {
+      "title": "Logout"
+    },
+    "orders": {
+      "title": "Your Orders",
+      "order_number": "Order",
+      "order_name": "Order Name",
+      "date": "Date",
+      "payment_status": "Payment Status",
+      "fulfilment_status": "Fulfilment Status",
+      "total": "Total",
+      "no_orders_yet": "You haven't placed any Orders yet."
+    },
+    "order": {
+
+    },
+    "recover_password": {
+      "title": "Forgot Your Password",
+      "sub_text": "Enter your email address, and we'll send you a link to reset your password.",
+      "submit": "Reset Password",
+      "email": "Email Address",
+      "cancel": "Back",
+      "success_mesage":"We've sent you an email with a link to update your password."
+    },
+    "register": {
+      "title": "Create An Account",
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "email": "Email Address",
+      "password": "Password",
+      "show_password": "Show",
+      "submit": "Create Account",
+      "login_user": "Already Have an Account/Login"
+    },
+    "reset_password": {
+      "title": "Reset Your Password",
+      "sub_text": "Enter a new Password for Your Account",
+      "submit": "Reset Password",
+      "password": "Password",
+      "confirm_password": "Confirm Password",
+      "cancel": "Back",
+      "show_password": "Show"
+    }
+  },
   "general": {
     "accessibility": {
       "close-modal": "Close Modal"
+    },
+    "404": {
+      "text": "404 Error",
+      "sub_text": "Oops! It looks like the page you were trying to reach doesn't exist. We're sorry for the inconvenience. Please use the navigation menu or search bar to find what you're looking for. Or, if you're feeling adventurous, why not explore our latest collections and discover something new? Thank you for visiting our website!",
+      "shop_collection": "BACK TO HOME"
     }
+  },
+  "homepage": {
   },
   "newsletter": {
     "newsletter_form": {
       "email_placeholder": "Enter Your Email",
       "submit_text": "Submit"
+    }
+  },
+  "popups": {
+    "newsletter-popup": {
+      "show_popup": "Do not show this popup again."
+    }
+  },
+  "products": {
+    "price": {
+      "regular_price": "Regular Price",
+      "compare_price": "Comapre Price"
+    },
+    "badges": {
+      "on_sale": "Sale",
+      "sold_out": "Sold Out"
+    },
+    "onboarding": {
+      "product_title": "Example Product",
+      "product_price": "$30"
     }
   },
   "sections": {
@@ -36,50 +187,10 @@
       "label_after": "After"
     }
   },
-  "popups": {
-    "newsletter-popup": {
-      "show_popup": "Do not show this popup again."
-    }
-  },
-  "collections": {
-    "general": {
-      "all_collection": "View All"
-    }
-  },
-  "collection-list": {
-    "general": {
-      "title": "Example Collection"
-    }
-  },
-  "homepage": {
-  },
-  "products": {
-    "price": {
-      "regular_price": "Regular Price",
-      "compare_price": "Comapre Price"
-    },
-    "badges": {
-      "on_sale": "Sale",
-      "sold_out": "Sold Out"
-    },
-    "onboarding": {
-      "product_title": "Example Product",
-      "product_price": "$30"
-    }
-  },
   "social-media": {
     "general": {
       "social_label": "Join Us On {{ social }}"
     }
-  },
-  "blogs": {
-    "article": {
-      "title": "Example Article Title",
-      "content": "Example Article Content",
-      "date": "25 Apr 2023",
-      "tag": "Fashion",
-      "view_all_text": "View All",
-      "read_more_text": "Read More.."
-    }
   }
+  
 }

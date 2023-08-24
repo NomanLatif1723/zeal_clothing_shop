@@ -270,6 +270,133 @@
         "name": "Custom Liquid"
       }
     },
+    "contact-header": {
+      "name": "Contact Header",
+      "settings": {
+        "contact_header_text": {
+          "label": "Heading"
+        },
+        "contact_header_image": {
+          "label": "Background Image"
+        },
+        "lazyload_images": {
+          "label": "Enable LazyLoad Images"
+        },
+        "header_spacing": {
+          "label": "Section Spacing",
+          "top_spacing": {
+            "label": "Spacing Top"
+          },
+          "bottom_spacing": {
+            "label": "Spacing Bottom"
+          }
+        }
+      }
+    },
+    "customer-activate-account": {
+      "name": "Activate Account",
+      "settings": {
+        "header_spacing": {
+          "label": "Section Spacing",
+          "top_spacing": {
+            "label": "Spacing Top"
+          },
+          "bottom_spacing": {
+            "label": "Spacing Bottom"
+          }
+        }
+      }
+    },
+    "customer-account": {
+      "name": "Customer Account",
+      "settings": {
+        "header_spacing": {
+          "label": "Section Spacing",
+          "top_spacing": {
+            "label": "Spacing Top"
+          },
+          "bottom_spacing": {
+            "label": "Spacing Bottom"
+          }
+        }
+      }
+    },
+    "customer-addresses": {
+      "name": "Customer Addresses",
+      "settings": {
+        "addresses_per_row": {
+          "label": "Address Per Row"
+        },
+        "header_spacing": {
+          "label": "Section Spacing",
+          "top_spacing": {
+            "label": "Spacing Top"
+          },
+          "bottom_spacing": {
+            "label": "Spacing Bottom"
+          }
+        }
+      }
+    },
+    "customer-login": {
+      "name": "Customer Login",
+      "settings": {
+        "header_spacing": {
+          "label": "Section Spacing",
+          "top_spacing": {
+            "label": "Spacing Top"
+          },
+          "bottom_spacing": {
+            "label": "Spacing Bottom"
+          }
+        }
+      }
+    },
+    "customer-registration": {
+      "name": "Register",
+      "settings": {
+        "additional_text": {
+          "label": "Additional Text"
+        },
+        "header_spacing": {
+          "label": "Section Spacing",
+          "top_spacing": {
+            "label": "Spacing Top"
+          },
+          "bottom_spacing": {
+            "label": "Spacing Bottom"
+          }
+        }
+      }
+    },
+    "customer-reset_password": {
+      "name": "Reset Password",
+      "settings": {
+        "header_spacing": {
+          "label": "Section Spacing",
+          "top_spacing": {
+            "label": "Spacing Top"
+          },
+          "bottom_spacing": {
+            "label": "Spacing Bottom"
+          }
+        }
+      }
+    },
+    "customer-order": {
+      "name": "Customer Order",
+      "settings": {
+        "header_spacing": {
+          "label": "Section Spacing",
+          "top_spacing": {
+            "label": "Spacing Top"
+          },
+          "bottom_spacing": {
+            "label": "Spacing Bottom"
+          }
+        }
+      }
+    },
     "events-popup": {
       "name": "Events Popup",
       "settings": {
@@ -848,6 +975,112 @@
       },
       "presets": {
         "name": "Marquee Text"
+      }
+    },
+    "main-contact": {
+      "name": "Contact Form",
+      "settings": {
+        "main_heading": {
+          "label": "Heading"
+        },
+        "header_personal_info": {
+          "label": "Personal Information",
+          "info_heading": {
+            "label": "Heading"
+          },
+          "info_text": {
+            "label": "Text"
+          }
+        },
+        "header_spacing": {
+          "label": "Section Spacing",
+          "top_spacing": {
+            "label": "Spacing Top"
+          },
+          "bottom_spacing": {
+            "label": "Spacing Bottom"
+          }
+        }
+      },
+      "blocks": {
+        "address_block": {
+          "name": "Address",
+          "settings": {
+            "heading": {
+              "label": "Heading"
+            },
+            "text": {
+              "label": "Text"
+            }
+          }
+        },
+        "number_block": {
+          "name": "Phone Number",
+          "settings": {
+            "heading": {
+              "label": "Heading"
+            },
+            "text": {
+              "label": "Text"
+            }
+          }
+        },
+        "email_block": {
+          "name": "Email",
+          "settings": {
+            "heading": {
+              "label": "Heading"
+            },
+            "text": {
+              "label": "Text"
+            }
+          }
+        },
+        "schedule_block": {
+          "name": "Schedule",
+          "settings": {
+            "heading": {
+              "label": "Heading"
+            },
+            "text": {
+              "label": "Text"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Contact Form"
+      }
+    },
+    "main-page": {
+      "name": "Page",
+      "settings": {
+        "header_alignment": {
+          "label": "Alignment",
+          "alignment": {
+            "label": "Text alignment",
+            "options": {
+              "left": {
+                "label": "Left"
+              },
+              "center": {
+                "label": "Center"
+              },
+              "right": {
+                "label": "Right"
+              }
+            }
+          }
+        },
+        "header_spacing": {
+          "label": "Section Spacing",
+          "top_spacing": {
+            "label": "Spacing Top"
+          },
+          "bottom_spacing": {
+            "label": "Spacing Bottom"
+          }
+        }
       }
     },
     "newsletter": {
@@ -1820,6 +2053,9 @@
       "presets": {
         "name": "Video"
       }
+    },
+    "404": {
+      "name": "404 Page"
     }
   },
   "schema_settings": {
@@ -1980,6 +2216,9 @@
               "label": "Right To Left"
             }
           }
+        },
+        "show_breadcrumbs": {
+          "label": "Show Breadcrumbs"
         }
       }
     },

@@ -1,12 +1,114 @@
+{%- style -%}
+  .main__section-{{ section.id }}{
+    margin-top: {{ section.settings.margin_top | times: 0.5 | round: 0 }}px;
+    margin-bottom: {{ section.settings.margin_bottom | times: 0.5 | round: 0 }}px;
+  }
+  @media only screen and (min-width: 769px) {
+    .main__section-{{ section.id }}{
+      margin-top: {{ section.settings.margin_top }}px;
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<div class="customer-account__wrapper main_section-{{ section.id }}">
+  <div class="page__width">
+    <div class="form__header account-form__header">
+      <h4>{{ 'customers.account.title' | t }}</h4>
+      <a href="{{ routes.account_logout_url }}"title="{{ 'customers.logout.title' | t }}">{{ 'customers.logout.title' | t }}</a>
+    </div>
+    <order-form id="orderForm">
+      <div class="form__grid">
+        {%- paginate customer.orders by 10 -%}
+          <div class="form__grid-item">
+            <div class="form__header">
+              <h4>{{ 'customers.orders.title' | t }}</h4>
+            </div>
+            {%- if customer.orders.size == 0 -%}
+              <div>{{ 'customers.orders.no_orders_yet' | t }}</div>
+            {%- else -%}
+              <table role="table" class="orders__table">
+                <thead>
+                  <tr>
+                    <th>{{ 'customers.orders.order_number' | t }}</th>
+                    <th>{{ 'customers.orders.order_name' | t }}</th>
+                    <th>{{ 'customers.orders.date' | t }}</th>
+                    <th>{{ 'customers.orders.payment_status' | t }}</th>
+                    <th>{{ 'customers.orders.fulfilment_status' | t }}</th>
+                    <th>{{ 'customers.orders.total' | t }}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for order in customer.orders %}
+                    <tr>
+                      <td>
+                        <a href="{{ order.customer_url  }}" title="">{{ order.order_number }}</a>
+                      </td>
+                      <td>
+                        <a href="{{ order.customer_url  }}" title="">{{ order.name }}</a>
+                      </td>
+                      <td>
+                        <span>{{ order.created_at | date: '%d %b %Y' }}</span>
+                      </td>
+                      <td>
+                        <span>{{ order.financial_status_label }}</span>
+                      </td>
+                      <td>
+                        <span>{{ order.fulfillment_status_label }}</span>
+                      </td>
+                      <td>
+                        <span>{{ order.total_price }}</span>
+                      </td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            {%- endif -%}
+          </div>
+          {%- if paginate.pages > 1 -%}
+            {%- render 'pagination', paginate: paginate -%}
+          {%- endif -%}
+        {%- endpaginate -%}
+        <div class="form__grid-item form__addresses-container">
+          <div class="form__header">
+            <h4>{{ 'customers.account.details' | t }}</h4>
+          </div>
+          <div>{{ customer.name }}</div>
+          {{ customer.default_address | format_address }}
+          <a href="{{ routes.account_addresses_url }}">
+            {{ 'customers.account.view_addresses' | t }} ({{ customer.addresses_count }})
+          </a>
+        </div>
+      </div>
+    </order-form>
+  </div>
+</div>
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "t:sections.customer-account.name",
+    "class": "main__section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "t:sections.customer-account.settings.header_spacing.label"
+      }, {
+        "type": "range",
+        "id": "margin_top",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "label": "t:sections.customer-account.settings.header_spacing.top_spacing.label",
+        "default": 16
+      }, {
+        "type": "range",
+        "id": "margin_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "label": "t:sections.customer-account.settings.header_spacing.bottom_spacing.label",
+        "default": 16
+      }
+    ]
   }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}

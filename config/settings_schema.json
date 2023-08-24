@@ -289,6 +289,12 @@
             "label": "t:schema_settings.extras.settings.text_direction.options.rtl.label"
           }
         ]
+      },
+      {
+        "type": "checkbox",
+        "id": "show_breadcrumbs",
+        "label": "t:schema_settings.extras.settings.show_breadcrumbs.label",
+        "default": false
       }
     ]
   },

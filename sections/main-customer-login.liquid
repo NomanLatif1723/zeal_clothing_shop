@@ -1,12 +1,145 @@
+{%- style -%}
+  .main__section-{{ section.id }}{
+    margin-top: {{ section.settings.margin_top | times: 0.5 | round: 0 }}px;
+    margin-bottom: {{ section.settings.margin_bottom | times: 0.5 | round: 0 }}px;
+  }
+  @media only screen and (min-width: 769px) {
+    .main__section-{{ section.id }}{
+      margin-top: {{ section.settings.margin_top }}px;
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<div class="login__wrapper main__section-{{ section.id }}">
+  <div class="page__width">
+    <div class="customer-form__container">
+      <div id="loginForm">
+        <div class="form__header">
+          <h4>{{ 'customers.login.title' | t }}</h4>
+        </div>
+        <div class="form__content">
+          {%- form 'customer_login' -%}
+            {{ form.errors | default_errors }}
+            <div class="form__group">
+              <label for="email" class="form__label">{{ 'customers.login.email' | t }}</label>
+              <input
+                type="email"
+                id="email"
+                name="customer[email]"
+                class="form__input"
+                required
+                aria-label="{{ 'customers.login.email' | t }}"
+                autofocus
+                autocomplete="off"
+                autocapitalize="off">
+            </div>
+            <div class="form__group password__group">
+              <label for="password" class="form__label">{{ 'customers.login.password' | t }}</label>
+              <input
+                type="password"
+                id="password"
+                name="customer[password]"
+                class="form__input"
+                required
+                value="">
+              <span class="password__toggle-btn">{{ 'customers.login.show_password' | t }}</span>
+            </div>
+            <div class="form__submit">
+              <button
+                type="submit"
+                class="btn btn__link btn__primary"
+                aria-label="{{ 'customers.login.submit' | t }}">{{ 'customers.login.submit' | t }}</button>
+            </div>
+            <div class="form__links-container">
+              <a href="#" title="{{ 'customers.login.forget_password' | t }}">{{ 'customers.login.forget_password' | t }}</a>
+              <a href="#" title="{{ 'customers.login.create_account' | t }}">{{ 'customers.login.create_account' | t }}</a>
+            </div>
+          {%- endform -%}
+        </div>
+      </div>
+      <div id="recoverPasswordForm" class="hidden">
+        <div class="form__header">
+          <h4>{{ 'customers.recover_password.title' | t }}</h4>
+        </div>
+        <div class="form__header_text rte">
+          {{ 'customers.recover_password.sub_text' | t }}
+        </div>
+        <div class="form__content">
+          {% form 'recover_customer_password' %}
+            {%- if form.posted_successfully? -%}
+              <p class="success__message">{{ 'customers.recover_password.success_mesage' | t }}</p>
+            {%- endif -%}
+            {{ form.errors | default_errors }}
+            <div class="form__group">
+              <label for="email" class="form__label">{{ 'customers.recover_password.email' | t }}</label>
+              <input
+                type="email"
+                id="email"
+                name="customer[email]"
+                class="form__input"
+                required
+                aria-label="{{ 'customers.recover_password.email' | t }}"
+                autofocus
+                autocomplete="off"
+                autocapitalize="off">
+            </div>
+            <div class="form__submit">
+              <button
+                type="submit"
+                class="btn btn__link btn__primary"
+                aria-label="{{ 'customers.recover_password.submit' | t }}">{{ 'customers.recover_password.submit' | t }}</button>
+            </div>
+            <a href="#" title="{{ 'customers.recover_password.cancel' | t }}">{{ 'customers.recover_password.cancel' | t }}</a>
+          {% endform %}
+        </div>
+      </div>
+      {%- if shop.checkout.guest_login -%}
+        <div id="guestLoginForm">
+          <div class="form__header">
+            <h4>{{ 'customers.login.guest_title' | t }}</h4>
+          </div>
+          <div class="form__content">
+            {%- form 'guest_login' -%}
+              <div class="form__submit">
+                <button
+                  type="submit"
+                  class="btn btn__link btn__primary"
+                  aria-label="{{ 'customers.login.guest_submit' | t }}">{{ 'customers.login.guest_submit' | t }}</button>
+              </div>
+            {%- endform -%}
+          </div>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "t:sections.customer-login.name",
+    "class": "main__section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "t:sections.customer-login.settings.header_spacing.label"
+      }, {
+        "type": "range",
+        "id": "margin_top",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "label": "t:sections.customer-login.settings.header_spacing.top_spacing.label",
+        "default": 16
+      }, {
+        "type": "range",
+        "id": "margin_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "label": "t:sections.customer-login.settings.header_spacing.bottom_spacing.label",
+        "default": 16
+      }
+    ]
   }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}

@@ -1,0 +1,78 @@
+{%- style -%}
+  .main__section-{{ section.id }}{
+    margin-top: {{ section.settings.margin_top | times: 0.5 | round: 0 }}px;
+    margin-bottom: {{ section.settings.margin_bottom | times: 0.5 | round: 0 }}px;
+  }
+  @media only screen and (min-width: 769px) {
+    .main__section-{{ section.id }}{
+      margin-top: {{ section.settings.margin_top }}px;
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<div class="main__section-{{ section.id }}">
+  <div class="page__width">
+    <div class="page-content__wrapper text__align-{{ section.settings.text_alignment }}">
+      <div class="main__heading">
+        <h2>{{ page.title | escape }}</h2>
+      </div>
+      <div class="rte">
+        {{ page.content }}
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "t:sections.main-page.name",
+    "class": "main__section",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "t:sections.main-page.settings.header_alignment.label"
+      },
+      {
+        "type": "select",
+        "id": "text_alignment",
+        "label": "t:sections.main-page.settings.header_alignment.alignment.label",
+        "options": [
+          {
+            "value": "left",
+            "label": "t:sections.main-page.settings.header_alignment.alignment.options.left.label"
+          }, {
+            "value": "center",
+            "label": "t:sections.main-page.settings.header_alignment.alignment.options.center.label"
+          }, {
+            "value": "right",
+            "label": "t:sections.main-page.settings.header_alignment.alignment.options.right.label"
+          }
+        ],
+        "default": "center"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.main-page.settings.header_spacing.label"
+      },
+      {
+        "type": "range",
+        "id": "margin_top",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "label": "t:sections.main-page.settings.header_spacing.top_spacing.label",
+        "default": 16
+      }, {
+        "type": "range",
+        "id": "margin_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "label": "t:sections.main-page.settings.header_spacing.bottom_spacing.label",
+        "default": 16
+      }
+    ]
+  }
+{% endschema %}

@@ -1,12 +1,349 @@
+{%- liquid
+  assign per_row = section.settings.addresses_per_row
+  case per_row   
+  when 1
+    assign itemWidth = ''
+  when 2
+    assign itemWidth = 'block__item--half'
+  when 3
+    assign itemWidth = 'block__item--auto block__item--one-third'
+  when 4
+    assign itemWidth = 'block__item--auto block__item--one-fourth'
+  when 5
+    assign itemWidth = 'block__item--auto block__item--one-fifth'
+  endcase
+-%}
+{%- style -%}
+  .main__section-{{ section.id }}{
+    margin-top: {{ section.settings.margin_top | times: 0.5 | round: 0 }}px;
+    margin-bottom: {{ section.settings.margin_bottom | times: 0.5 | round: 0 }}px;
+  }
+  @media only screen and (min-width: 769px) {
+    .main__section-{{ section.id }}{
+      margin-top: {{ section.settings.margin_top }}px;
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<div class="customer-addresses__wrapper main__section-{{ section.id }}">
+  <div class="page__width">
+    <div class="addresses-form__container">
+      <div class="form__header form__grid">
+        <h2>{{ 'customers.addresses.title' | t }}</h2>
+        <button class="btn btn__link btn__primary" aria-label="{{ 'customers.addresses.add' | t }}">{{ 'customers.addresses.add' | t }}</button>
+      </div>
+      <div id="addNewAddressForm">
+        {%- form 'customer_address', customer.new_address -%}
+          <div class="form__header">
+            <h2>{{ 'customers.addresses.add_address' | t }}</h2>
+          </div>
+          <div class="form__grid">
+            <div class="form__group">
+              <label for="new[first_name]" class="form__label">{{ 'customers.addresses.first_name' | t }}</label>
+              <input
+                type="text"
+                id="new[first_name]"
+                name="customer[first_name]"
+                value="{{ form.first_name }}"
+                class="form__input"
+                aria-label="{{ 'customers.addresses.first_name' | t }}">
+            </div>
+            <div class="form__group">
+              <label for="new[last_name]" class="form__label">{{ 'customers.addresses.last_name' | t }}</label>
+              <input
+                type="text"
+                id="new[last_name]"
+                name="customer[last_name]"
+                value="{{ form.last_name }}"
+                class="form__input"
+                aria-label="{{ 'customers.addresses.last_name' | t }}">
+            </div>
+          </div>
+          <div class="form__grid">
+            <div class="form__group">
+              <label for="new[phone]" class="form__label">{{ 'customers.addresses.phone' | t }}</label>
+              <input
+                type="tel"
+                id="new[phone]"
+                name="customer[phone]"
+                value="{{ form.phone }}"
+                class="form__input"
+                aria-label="{{ 'customers.addresses.phone' | t }}">
+            </div>
+            <div class="form__group">
+              <label for="new[company]" class="form__label">{{ 'customers.addresses.company' | t }}</label>
+              <input
+                type="text"
+                id="new[company]"
+                name="customer[company]"
+                value="{{ form.company }}"
+                class="form__input"
+                aria-label="{{ 'customers.addresses.company' | t }}">
+            </div>
+          </div>
+          <div class="form__group">
+            <label for="new[address1]" class="form__label">{{ 'customers.addresses.address1' | t }}</label>
+            <input
+              type="text"
+              id="new[address1]"
+              name="customer[address1]"
+              value="{{ form.address1 }}"
+              class="form__input"
+              aria-label="{{ 'customers.addresses.address1' | t }}">
+          </div>
+          <div class="form__group">
+            <label for="new[address2]" class="form__label">{{ 'customers.addresses.address2' | t }}</label>
+            <input
+              type="text"
+              id="new[address2]"
+              name="customer[address2]"
+              value="{{ form.address2 }}"
+              class="form__input"
+              aria-label="{{ 'customers.addresses.address2' | t }}">
+          </div>
+          <div class="form__grid">
+            <div class="form__group">
+              <label for="new[province]" class="form__label">{{ 'customers.addresses.province' | t }}</label>
+              <input
+                type="text"
+                id="new[province]"
+                name="customer[province]"
+                value="{{ form.province }}"
+                class="form__input"
+                aria-label="{{ 'customers.addresses.province' | t }}">
+            </div>
+            <div class="form__group">
+              <label for="new[country]" class="form__label">{{ 'customers.addresses.country' | t }}</label>
+              <select
+                id="new[country"
+                name="customer[country]"
+                class="form__input"
+                aria-label="{{ 'customers.addresses.country' | t }}">{{ country_option_tags }}</select>
+            </div>
+          </div>
+          <div class="form__grid">
+            <div class="form__group">
+              <label for="new[city]" class="form__label">{{ 'customers.addresses.city' | t }}</label>
+              <input
+                type="text"
+                id="new[city]"
+                name="customer[city]"
+                value="{{ form.city }}"
+                class="form__input"
+                aria-label="{{ 'customers.addresses.city' | t }}">
+            </div>
+            <div class="form__group">
+              <label for="new[postal_code]" class="form__label">{{ 'customers.addresses.postal_code' | t }}</label>
+              <input
+                type="text"
+                id="new[postal_code]"
+                name="customer[postal_code]"
+                value="{{ form.postal_code }}"
+                class="form__input"
+                aria-label="{{ 'customers.addresses.postal_code' | t }}">
+            </div>
+          </div>
+          <div class="form__group">
+            {{ form.set_as_default_checkbox }}
+            <label for="address_default_address_new" class="form__label">{{ 'customers.addresses.set_default' | t }}</label>
+          </div>
+          <div class="form__buttons">
+            <button class="btn btn__link btn__primary" aria-label="{{ 'customers.addresses.add_new' | t }}">{{ 'customers.addresses.add_new' | t }}</button>
+            <button class="btn btn__link btn__outline" area-label="{{ 'customers.addresses.cancel' | t }}">{{ 'customers.addresses.cancel' | t }}</button>
+          </div>
+        {%- endform -%}
+      </div>
+      {%- paginate customer.addresses by 12 -%}
+        <div class="addresses-grid">
+          {%- for address in customer.addresses -%}
+            {%- if customer.addresses != 0 -%}
+              <div class="address-grid__item {{ itemWidth }}">
+                {%- if address == customer.default_address -%}
+                  <h4>{{ 'customers.addresses.default' | t }}</h4>
+                {%- endif -%}
+                <p>{{ address | format_address }}</p>
+                <div class="form__buttons">
+                  <button class="btn btn__link btn__primary address-btn__edit" aria-label="{{ 'customers.addresses.edit' }}">{{ 'customers.addresses.edit' }}</button>
+                  <form method="post" action="{{ address.url }}">
+                    <input
+                      type="hidden"
+                      name="_method"
+                      value="delete">
+                    <button
+                      class="btn btn__link btn__outline address-btn__delete"
+                      data-confirm-message="{{ 'customers.addresses.confirm_delete' | t }}"
+                      aria-label="{{ 'customers.addresses.delete' }}">{{ 'customers.addresses.delete' }}</button>
+                  </form>
+                </div>
+                <div id="editAddressForm">
+                  {%- form 'customer_address', address -%}
+                    <div class="form__header">
+                      <h2>{{ 'customers.addresses.edit' | t }}</h2>
+                    </div>
+                    <div class="form__grid">
+                      <div class="form__group">
+                        <label for="edit-{{ form.id }}[first_name]" class="form__label">{{ 'customers.addresses.first_name' | t }}</label>
+                        <input
+                          type="text"
+                          id="edit-{{ form.id }}[first_name]"
+                          name="customer[first_name]"
+                          value="{{ form.first_name }}"
+                          class="form__input"
+                          aria-label="{{ 'customers.addresses.first_name' | t }}">
+                      </div>
+                      <div class="form__group">
+                        <label for="edit-{{ form.id }}[last_name]" class="form__label">{{ 'customers.addresses.last_name' | t }}</label>
+                        <input
+                          type="text"
+                          id="edit-{{ form.id }}[last_name]"
+                          name="customer[last_name]"
+                          value="{{ form.last_name }}"
+                          class="form__input"
+                          aria-label="{{ 'customers.addresses.last_name' | t }}">
+                      </div>
+                    </div>
+                    <div class="form__grid">
+                      <div class="form__group">
+                        <label for="edit-{{ form.id }}[phone]" class="form__label">{{ 'customers.addresses.phone' | t }}</label>
+                        <input
+                          type="tel"
+                          id="edit-{{ form.id }}[phone]"
+                          name="customer[phone]"
+                          value="{{ form.phone }}"
+                          class="form__input"
+                          aria-label="{{ 'customers.addresses.phone' | t }}">
+                      </div>
+                      <div class="form__group">
+                        <label for="edit-{{ form.id }}[company]" class="form__label">{{ 'customers.addresses.company' | t }}</label>
+                        <input
+                          type="text"
+                          id="edit-{{ form.id }}[company]"
+                          name="customer[company]"
+                          value="{{ form.company }}"
+                          class="form__input"
+                          aria-label="{{ 'customers.addresses.company' | t }}">
+                      </div>
+                    </div>
+                    <div class="form__group">
+                      <label for="edit-{{ form.id }}[address1]" class="form__label">{{ 'customers.addresses.address1' | t }}</label>
+                      <input
+                        type="text"
+                        id="edit-{{ form.id }}[address1]"
+                        name="customer[address1]"
+                        value="{{ form.address1 }}"
+                        class="form__input"
+                        aria-label="{{ 'customers.addresses.address1' | t }}">
+                    </div>
+                    <div class="form__group">
+                      <label for="edit-{{ form.id }}[address2]" class="form__label">{{ 'customers.addresses.address2' | t }}</label>
+                      <input
+                        type="text"
+                        id="edit-{{ form.id }}[address2]"
+                        name="customer[address2]"
+                        value="{{ form.address2 }}"
+                        class="form__input"
+                        aria-label="{{ 'customers.addresses.address2' | t }}">
+                    </div>
+                    <div class="form__grid">
+                      <div class="form__group">
+                        <label for="edit-{{ form.id }}[province]" class="form__label">{{ 'customers.addresses.province' | t }}</label>
+                        <input
+                          type="text"
+                          id="edit-{{ form.id }}[province]"
+                          name="customer[province]"
+                          value="{{ form.province }}"
+                          class="form__input"
+                          aria-label="{{ 'customers.addresses.province' | t }}">
+                      </div>
+                      <div class="form__group">
+                        <label for="edit-{{ form.id }}[country]" class="form__label">{{ 'customers.addresses.country' | t }}</label>
+                        <select
+                          id="edit-{{ form.id }}[country"
+                          name="customer[country]"
+                          class="form__input"
+                          aria-label="{{ 'customers.addresses.country' | t }}">{{ country_option_tags }}</select>
+                      </div>
+                    </div>
+                    <div class="form__grid">
+                      <div class="form__group">
+                        <label for="edit-{{ form.id }}[city]" class="form__label">{{ 'customers.addresses.city' | t }}</label>
+                        <input
+                          type="text"
+                          id="edit-{{ form.id }}[city]"
+                          name="customer[city]"
+                          value="{{ form.city }}"
+                          class="form__input"
+                          aria-label="{{ 'customers.addresses.city' | t }}">
+                      </div>
+                      <div class="form__group">
+                        <label for="edit-{{ form.id }}[postal_code]" class="form__label">{{ 'customers.addresses.postal_code' | t }}</label>
+                        <input
+                          type="text"
+                          id="edit-{{ form.id }}[postal_code]"
+                          name="customer[postal_code]"
+                          value="{{ form.postal_code }}"
+                          class="form__input"
+                          aria-label="{{ 'customers.addresses.postal_code' | t }}">
+                      </div>
+                    </div>
+                    <div class="form__group">
+                      {{ form.set_as_default_checkbox }}
+                      <label for="address_default_address_new" class="form__label">{{ 'customers.addresses.set_default' | t }}</label>
+                    </div>
+                    <div class="form__buttons">
+                      <button class="btn btn__link btn__primary" aria-label="{{ 'customers.addresses.update' | t }}">{{ 'customers.addresses.add_new' | t }}</button>
+                      <button class="btn btn__link btn__outline" area-label="{{ 'customers.addresses.cancel' | t }}">{{ 'customers.addresses.cancel' | t }}</button>
+                    </div>
+                  {%- endform -%}
+                </div>
+              </div>
+            {%- else -%}
+              {{ 'customers.addresses.none' | t }}
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+        {%- if paginate.pages > 1 -%}
+          {%- render 'pagination', paginate: paginate -%}
+        {%- endif -%}
+      {%- endpaginate -%}
+    </div>
+  </div>
+</div>
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "t:sections.customer-addresses.name",
+    "class": "main__section",
+    "settings": [
+      {
+        "type": "range",
+        "id": "addresses_per_row",
+        "label": "t:sections.customer-addresses.settings.addresses_per_row.label",
+        "default": 4,
+        "min": 1,
+        "max": 5,
+        "step": 1
+      }, {
+        "type": "header",
+        "content": "t:sections.customer-addresses.settings.header_spacing.label"
+      }, {
+        "type": "range",
+        "id": "margin_top",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "label": "t:sections.customer-addresses.settings.header_spacing.top_spacing.label",
+        "default": 16
+      }, {
+        "type": "range",
+        "id": "margin_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "label": "t:sections.customer-addresses.settings.header_spacing.bottom_spacing.label",
+        "default": 16
+      }
+    ]
   }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
