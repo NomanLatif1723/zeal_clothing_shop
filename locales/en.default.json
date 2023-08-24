@@ -58,7 +58,7 @@
       "province": "Province",
       "country": "Country",
       "city": "City",
-      "postal_code": "Postal/Zip Code",
+      "postal_code": "Postal\/Zip Code",
       "add_new": "Add Address",
       "cancel": "Back",
       "update": "Update Address",
@@ -94,7 +94,6 @@
       "no_orders_yet": "You haven't placed any Orders yet."
     },
     "order": {
-
     },
     "recover_password": {
       "title": "Forgot Your Password",
@@ -102,7 +101,7 @@
       "submit": "Reset Password",
       "email": "Email Address",
       "cancel": "Back",
-      "success_mesage":"We've sent you an email with a link to update your password."
+      "success_mesage": "We've sent you an email with a link to update your password."
     },
     "register": {
       "title": "Create An Account",
@@ -112,7 +111,7 @@
       "password": "Password",
       "show_password": "Show",
       "submit": "Create Account",
-      "login_user": "Already Have an Account/Login"
+      "login_user": "Already Have an Account\/Login"
     },
     "reset_password": {
       "title": "Reset Your Password",
@@ -192,5 +191,4 @@
       "social_label": "Join Us On {{ social }}"
     }
   }
-  
 }

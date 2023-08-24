@@ -52,7 +52,7 @@
             </div>
             <div class="form__links-container">
               <a href="#" title="{{ 'customers.login.forget_password' | t }}">{{ 'customers.login.forget_password' | t }}</a>
-              <a href="#" title="{{ 'customers.login.create_account' | t }}">{{ 'customers.login.create_account' | t }}</a>
+              <a href="{{ routes.account_register_url }}" title="{{ 'customers.login.create_account' | t }}">{{ 'customers.login.create_account' | t }}</a>
             </div>
           {%- endform -%}
         </div>
