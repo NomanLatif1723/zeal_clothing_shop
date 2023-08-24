@@ -175,7 +175,7 @@
                       aria-label="{{ 'customers.addresses.delete' | t }}">{{ 'customers.addresses.delete' | t }}</button>
                   </form>
                 </div>
-                <div id="editAddressForm">
+                <div id="editAddressForm" class="hidden">
                   {%- form 'customer_address', address -%}
                     <div class="form__header">
                       <h2>{{ 'customers.addresses.edit' | t }}</h2>
