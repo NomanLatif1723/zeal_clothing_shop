@@ -21,8 +21,8 @@
           {%- form 'customer_login' -%}
             {{ form.errors | default_errors }}
             <div class="form__group">
-              <label for="email" class="form__label">{{ 'customers.login.email' | t }}</label>
-              <input type="email" id="email" name="customer[email]" class="form__input" required aria-label="{{ 'customers.login.email' | t }}" autofocus autocomplete="off" autocapitalize="off">
+              <label for="email[login]" class="form__label">{{ 'customers.login.email' | t }}</label>
+              <input type="email" id="email[login]" name="customer[email]" class="form__input" required aria-label="{{ 'customers.login.email' | t }}" autofocus autocomplete="off" autocapitalize="off">
             </div>
             <div class="form__group password__group">
               <label for="password" class="form__label">{{ 'customers.login.password' | t }}</label>
@@ -53,8 +53,8 @@
             {%- endif -%}
             {{ form.errors | default_errors }}
             <div class="form__group">
-              <label for="email" class="form__label">{{ 'customers.recover_password.email' | t }}</label>
-              <input type="email" id="email" name="customer[email]" class="form__input" required aria-label="{{ 'customers.recover_password.email' | t }}" autofocus autocomplete="off" autocapitalize="off">
+              <label for="email[recover]" class="form__label">{{ 'customers.recover_password.email' | t }}</label>
+              <input type="email" id="email[recover]" name="customer[email]" class="form__input" required aria-label="{{ 'customers.recover_password.email' | t }}" autofocus autocomplete="off" autocapitalize="off">
             </div>
             <div class="form__submit">
               <button type="submit" class="btn btn__link btn__primary" aria-label="{{ 'customers.recover_password.submit' | t }}">{{ 'customers.recover_password.submit' | t }}</button>
