@@ -26,96 +26,96 @@
         {%- if info_text != blank -%}
           <div class="contact-info__text rte">{{ info_text }}</div>
         {%- endif -%}
-        <div class="">
-        {%- for block in section.blocks -%}
-          {%- if block.type == 'address_block' -%}
-            {%- liquid
-                assign address_heading = block.settings.address_heading
-                assign address_text = block.settings.address_text
-            -%}
-            <div class="contact-block__info-flex">
-              <div class="contact-block__icon">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.292893 7.29289C-0.0976311 7.68342 -0.0976311 8.31658 0.292893 8.70711C0.683417 9.09763 1.31658 9.09763 1.70711 8.70711L2 8.41421V15C2 15.5523 2.44772 16 3 16H5C5.55228 16 6 15.5523 6 15V13C6 12.4477 6.44772 12 7 12H9C9.55229 12 10 12.4477 10 13V15C10 15.5523 10.4477 16 11 16H13C13.5523 16 14 15.5523 14 15V8.41421L14.2929 8.70711C14.6834 9.09763 15.3166 9.09763 15.7071 8.70711C16.0976 8.31658 16.0976 7.68342 15.7071 7.29289L8.70711 0.292893Z" fill="#111111" />
-                </svg>
+        <div class="contact-block__info-grid">
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'address_block' -%}
+              {%- liquid
+                  assign address_heading = block.settings.address_heading
+                  assign address_text = block.settings.address_text
+              -%}
+              <div class="contact-block__info-flex">
+                <div class="contact-block__icon">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.292893 7.29289C-0.0976311 7.68342 -0.0976311 8.31658 0.292893 8.70711C0.683417 9.09763 1.31658 9.09763 1.70711 8.70711L2 8.41421V15C2 15.5523 2.44772 16 3 16H5C5.55228 16 6 15.5523 6 15V13C6 12.4477 6.44772 12 7 12H9C9.55229 12 10 12.4477 10 13V15C10 15.5523 10.4477 16 11 16H13C13.5523 16 14 15.5523 14 15V8.41421L14.2929 8.70711C14.6834 9.09763 15.3166 9.09763 15.7071 8.70711C16.0976 8.31658 16.0976 7.68342 15.7071 7.29289L8.70711 0.292893Z" fill="#111111"></path>
+                  </svg>
+                </div>
+                <div class="contact-block__info-item">
+                  {%- if address_heading != blank -%}
+                    <div class="contact-block__heading"><h4>{{ address_heading }}</h4></div>
+                  {%- endif -%}
+                  {%- if address_text != blank -%}
+                    <div class="contact-block__text rte">{{ address_text }}</div>
+                  {%- endif -%}
+                </div>
               </div>
-              <div class="contact-block__info-item">
-                {%- if address_heading != blank -%}
-                  <div class="contact-block__heading"><h4>{{ address_heading }}</h4></div>
-                {%- endif -%}
-                {%- if address_text != blank -%}
-                  <div class="contact-block__text rte">{{ address_text }}</div>
-                {%- endif -%}
+            {%- endif -%}
+            {%- if block.type == 'number_block' -%}
+              {%- liquid
+                  assign phone_heading = block.settings.phone_heading
+                  assign phone_text = block.settings.phone_text
+              -%}
+              <div class="contact-block__info-flex">
+                <div class="contact-block__icon">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M0 1C0 0.447715 0.447715 0 1 0H3.15287C3.64171 0 4.0589 0.353413 4.13927 0.835601L4.87858 5.27147C4.95075 5.70451 4.73206 6.13397 4.3394 6.3303L2.79126 7.10437C3.90756 9.87832 6.12168 12.0924 8.89563 13.2087L9.6697 11.6606C9.86603 11.2679 10.2955 11.0492 10.7285 11.1214L15.1644 11.8607C15.6466 11.9411 16 12.3583 16 12.8471V15C16 15.5523 15.5523 16 15 16H13C5.8203 16 0 10.1797 0 3V1Z" fill="#111111"></path>
+                  </svg>
+                </div>
+                <div class="contact-block__info-item">
+                  {%- if phone_heading != blank -%}
+                    <div class="contact-block__heading"><h4>{{ phone_heading }}</h4></div>
+                  {%- endif -%}
+                  {%- if phone_text != blank -%}
+                    <div class="contact-block__text rte">{{ phone_text }}</div>
+                  {%- endif -%}
+                </div>
               </div>
-            </div>
-          {%- endif -%}
-          {%- if block.type == 'number_block' -%}
-            {%- liquid
-                assign phone_heading = block.settings.phone_heading
-                assign phone_text = block.settings.phone_text
-            -%}
-            <div class="contact-block__info-flex">
-              <div class="contact-block__icon">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M0 1C0 0.447715 0.447715 0 1 0H3.15287C3.64171 0 4.0589 0.353413 4.13927 0.835601L4.87858 5.27147C4.95075 5.70451 4.73206 6.13397 4.3394 6.3303L2.79126 7.10437C3.90756 9.87832 6.12168 12.0924 8.89563 13.2087L9.6697 11.6606C9.86603 11.2679 10.2955 11.0492 10.7285 11.1214L15.1644 11.8607C15.6466 11.9411 16 12.3583 16 12.8471V15C16 15.5523 15.5523 16 15 16H13C5.8203 16 0 10.1797 0 3V1Z" fill="#111111" />
-                </svg>
+            {%- endif -%}
+            {%- if block.type == 'email_block' -%}
+              {%- liquid
+                  assign email_heading = block.settings.email_heading
+                  assign email_text = block.settings.email_text
+              -%}
+              <div class="contact-block__info-flex">
+                <div class="contact-block__icon">
+                  <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
+                    <path d="M0.00333343 1.88355L7.99995 5.88186L15.9967 1.8835C15.9363 0.833152 15.0655 0 14 0H2C0.934518 0 0.0636347 0.833179 0.00333343 1.88355Z" fill="#111111"></path>
+                    <path d="M16 4.1179L7.99995 8.11793L0 4.11796V10C0 11.1046 0.895431 12 2 12H14C15.1046 12 16 11.1046 16 10V4.1179Z" fill="#111111"></path>
+                  </svg>
+                </div>
+                <div class="contact-block__info-item">
+                  {%- if email_heading != blank -%}
+                    <div class="contact-block__heading"><h4>{{ email_heading }}</h4></div>
+                  {%- endif -%}
+                  {%- if email_text != blank -%}
+                    <div class="contact-block__text rte">{{ email_text }}</div>
+                  {%- endif -%}
+                </div>
               </div>
-              <div class="contact-block__info-item">
-                {%- if phone_heading != blank -%}
-                  <div class="contact-block__heading"><h4>{{ phone_heading }}</h4></div>
-                {%- endif -%}
-                {%- if phone_text != blank -%}
-                  <div class="contact-block__text rte">{{ phone_text }}</div>
-                {%- endif -%}
+            {%- endif -%}
+            {%- if block.type == 'schedule_block' -%}
+              {%- liquid
+                  assign schedule_heading = block.settings.schedule_heading
+                  assign schedule_text = block.settings.schedule_text
+              -%}
+              <div class="contact-block__info-flex">
+                <div class="contact-block__icon">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM9 4C9 3.44772 8.55229 3 8 3C7.44772 3 7 3.44772 7 4V8C7 8.26522 7.10536 8.51957 7.29289 8.70711L10.1213 11.5355C10.5118 11.9261 11.145 11.9261 11.5355 11.5355C11.9261 11.145 11.9261 10.5118 11.5355 10.1213L9 7.58579V4Z"
+                      fill="#111111"></path>
+                  </svg>
+                </div>
+                <div class="contact-block__info-item">
+                  {%- if schedule_heading != blank -%}
+                    <div class="contact-block__heading"><h4>{{ schedule_heading }}</h4></div>
+                  {%- endif -%}
+                  {%- if schedule_text != blank -%}
+                    <div class="contact-block__text rte">{{ schedule_text }}</div>
+                  {%- endif -%}
+                </div>
               </div>
-            </div>
-          {%- endif -%}
-          {%- if block.type == 'email_block' -%}
-            {%- liquid
-                assign email_heading = block.settings.email_heading
-                assign email_text = block.settings.email_text
-            -%}
-            <div class="contact-block__info-flex">
-              <div class="contact-block__icon">
-                <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
-                  <path d="M0.00333343 1.88355L7.99995 5.88186L15.9967 1.8835C15.9363 0.833152 15.0655 0 14 0H2C0.934518 0 0.0636347 0.833179 0.00333343 1.88355Z" fill="#111111"></path>
-                  <path d="M16 4.1179L7.99995 8.11793L0 4.11796V10C0 11.1046 0.895431 12 2 12H14C15.1046 12 16 11.1046 16 10V4.1179Z" fill="#111111"></path>
-                </svg>
-              </div>
-              <div class="contact-block__info-item">
-                {%- if email_heading != blank -%}
-                  <div class="contact-block__heading"><h4>{{ email_heading }}</h4></div>
-                {%- endif -%}
-                {%- if email_text != blank -%}
-                  <div class="contact-block__text rte">{{ email_text }}</div>
-                {%- endif -%}
-              </div>
-            </div>
-          {%- endif -%}
-          {%- if block.type == 'schedule_block' -%}
-            {%- liquid
-                assign schedule_heading = block.settings.schedule_heading
-                assign schedule_text = block.settings.schedule_text
-            -%}
-            <div class="contact-block__info-flex">
-              <div class="contact-block__icon">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM9 4C9 3.44772 8.55229 3 8 3C7.44772 3 7 3.44772 7 4V8C7 8.26522 7.10536 8.51957 7.29289 8.70711L10.1213 11.5355C10.5118 11.9261 11.145 11.9261 11.5355 11.5355C11.9261 11.145 11.9261 10.5118 11.5355 10.1213L9 7.58579V4Z"
-                    fill="#111111"></path>
-                </svg>
-              </div>
-              <div class="contact-block__info-item">
-                {%- if schedule_heading != blank -%}
-                  <div class="contact-block__heading"><h4>{{ schedule_heading }}</h4></div>
-                {%- endif -%}
-                {%- if schedule_text != blank -%}
-                  <div class="contact-block__text rte">{{ schedule_text }}</div>
-                {%- endif -%}
-              </div>
-            </div>
-          {%- endif -%}
-        {%- endfor -%}
+            {%- endif -%}
+          {%- endfor -%}
         </div>
       </div>
       <div class="contact-form__item contact-form__main-wrapper">
