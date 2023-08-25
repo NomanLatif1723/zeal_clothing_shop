@@ -4,6 +4,7 @@
       "type": "contact-form-header",
       "settings": {
         "contact_header_text": "Unleash your comfort and style.",
+        "contact_header_image": "shopify:\/\/shop_images\/8d594142-6cc7-44f9-bb4f-87c313910a1c_1.jpg",
         "lazyload_images": false,
         "margin_top": 60,
         "margin_bottom": 60
