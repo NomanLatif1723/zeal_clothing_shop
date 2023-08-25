@@ -1,12 +1,53 @@
 {
-    "sections": {
-      "main": {
-        "type": "main-contact",
-        "settings": {
+  "sections": {
+    "main": {
+      "type": "main-contact",
+      "blocks": {
+        "90c0b46b-e548-49cf-a55c-a01a9cc33bc8": {
+          "type": "address_block",
+          "settings": {
+            "address_heading": "Address",
+            "address_text": "<p>3876 Maple Avenue, Riverside, California<\/p>"
+          }
+        },
+        "a000ec6b-400b-43ed-a6be-acfe2369b1ef": {
+          "type": "number_block",
+          "settings": {
+            "phone_heading": "Address",
+            "phone_text": ""
+          }
+        },
+        "812d474c-d186-46b4-9f24-10d4b210a72b": {
+          "type": "email_block",
+          "settings": {
+            "email_heading": "Address",
+            "email_text": ""
+          }
+        },
+        "ee856c18-e9da-4e0c-aa02-2288f4c6aaa1": {
+          "type": "schedule_block",
+          "settings": {
+            "schedule_heading": "Address",
+            "schedule_text": ""
+          }
         }
+      },
+      "block_order": [
+        "90c0b46b-e548-49cf-a55c-a01a9cc33bc8",
+        "a000ec6b-400b-43ed-a6be-acfe2369b1ef",
+        "812d474c-d186-46b4-9f24-10d4b210a72b",
+        "ee856c18-e9da-4e0c-aa02-2288f4c6aaa1"
+      ],
+      "settings": {
+        "main_heading": "Contact Us",
+        "info_heading": "Address",
+        "info_text": "",
+        "margin_top": 16,
+        "margin_bottom": 16
       }
-    },
-    "order": [
-      "main"
-    ]
+    }
+  },
+  "order": [
+    "main"
+  ]
 }
