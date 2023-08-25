@@ -15,7 +15,7 @@
     }
   }
 {%- endstyle -%}
-{{ 'contact-form.css' | stylesheet_tag | asset_url }}
+{{ 'contact-form.css' | asset_url | stylesheet_tag }}
 <div class="contact__wrapper main__section-{{ section.id }}">
   <div class="page__width">
     <div class="contact-form__container">
