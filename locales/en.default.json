@@ -86,7 +86,6 @@
     "orders": {
       "title": "Your Orders",
       "order_number": "Order",
-      "order_name": "Order Name",
       "date": "Date",
       "payment_status": "Payment Status",
       "fulfilment_status": "Fulfilment Status",
