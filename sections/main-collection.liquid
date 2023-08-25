@@ -15,7 +15,6 @@
       </select>
 
       {% comment %} collection filters {% endcomment %}
-      {% render 'collection_filter', collection: collection %}
     <div data-next-url="{{ paginate.next.url }}" class="product__wrapper collection__wrapper">
       {% for product in collection.products %}
         {% render 'product-item', product: product %}
