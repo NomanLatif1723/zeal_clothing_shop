@@ -1,5 +1,10 @@
 {
   "sections": {
+    "header": {
+      "type": "contact-form-header",
+      "settings": {
+      }
+    },
     "main": {
       "type": "main-contact",
       "blocks": {
@@ -48,6 +53,7 @@
     }
   },
   "order": [
+    "header",
     "main"
   ]
 }
