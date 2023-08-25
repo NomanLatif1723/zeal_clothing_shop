@@ -1,6 +1,7 @@
 {%- liquid
     assign header_text = section.settings.contact_header_text
     assign header_image = section.settings.contact_header_image
+    assign text_color = section.settings.text_color
 
     assign lazyloading = ''
     assign lazyloadImages = section.settings.lazyload_images
@@ -16,6 +17,9 @@
   .main__section-{{ section.id }}{
     margin-top: 30px;
     margin-bottom: 30px;
+  }
+  .main__section-{{ section.id }} .contact-page__text-content {
+    color: {{ text_color }};
   }
   @media only screen and (min-width: 769px) {
     .main__section-{{ section.id }}{
