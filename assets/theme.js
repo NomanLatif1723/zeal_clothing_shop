@@ -653,8 +653,10 @@ function initCustomerForms() {
     })
   }
   if (backBtn) {
-    button.addEventListener('click', () => {
-      history.back();
+    button.addEventListener('click', (event) => {
+      event.preventDefault();
+      loginForm.classList.remove('hidden');
+      recoverPasswordForm.classList.add('hidden');
     })
   }
 }
