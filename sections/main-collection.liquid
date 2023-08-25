@@ -1,0 +1,71 @@
+  <div class="page__width">
+    <div class="collection__title"><h2>{{ collection.title }}</h2></div>
+    {% assign products_to_show = section.settings.products_to_show %}
+    {% paginate collection.products by products_to_show %}
+
+      {% comment %} collection sorting {% endcomment %}
+      <select id="sort-by">
+        {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
+    
+        {% for option in collection.sort_options %}
+          <option value="{{ option.value }}" {% if option.value == sort_by %}selected="selected"{% endif %}>
+            {{ option.name }}
+          </option>
+        {% endfor %}
+      </select>
+
+      {% comment %} collection filters {% endcomment %}
+      {% render 'collection_filter', collection: collection %}
+    <div data-next-url="{{ paginate.next.url }}" class="product__wrapper collection__wrapper">
+      {% for product in collection.products %}
+        {% render 'product-item', product: product %}
+      {% endfor %}
+      </div>
+      <div class="load__more btn">
+        <a class="load__more--btn" onclick="loadMoreProducts()">Load More</a>
+        <div class="load__more--spinner"></div>
+      </div>
+      {% comment %} {{ paginate | default_pagination }} {% endcomment %}
+    {% endpaginate %}
+  </div>
+  <script>
+  Shopify.queryParams = {};
+
+  // Preserve existing query parameters
+  if (location.search.length) {
+    var params = location.search.substr(1).split('&');
+
+    for (var i = 0; i < params.length; i++) {
+      var keyValue = params[i].split('=');
+
+      if (keyValue.length) {
+        Shopify.queryParams[decodeURIComponent(keyValue[0])] = decodeURIComponent(keyValue[1]);
+      }
+    }
+  }
+
+  // Update sort_by query parameter on select change
+  document.querySelector('#sort-by').addEventListener('change', function(e) {
+    var value = e.target.value;
+
+    Shopify.queryParams.sort_by = value;
+    location.search = new URLSearchParams(Shopify.queryParams).toString();
+  });
+</script>
+  {% schema %} 
+  {
+    "name": "Collection Grid",
+    "settings": [
+      {
+        "type": "range",
+        "id": "products_to_show",
+        "label": "Product To Show",
+        "min": 2,
+        "max": 20,
+        "default": 4,
+        "step": 1
+      }
+        
+    ]
+  }
+   {% endschema %}
