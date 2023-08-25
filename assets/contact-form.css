@@ -52,7 +52,12 @@ label.form__label {
     gap: 15px;
     padding-bottom: 25px;
 }
-
+.contact-form__item {
+    padding-bottom: 30px;
+}
+.contact-block__info-flex:last-child {
+    padding: 0;
+}
 .contact-info__text {
     padding-bottom: 30px;
 }
@@ -64,6 +69,7 @@ label.form__label {
   }
   .contact-form__item {
     width: 50%;
+    padding: 0;
   }
   .form__grid {
     display: flex;
