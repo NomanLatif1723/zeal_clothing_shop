@@ -2822,16 +2822,17 @@ table {
 .orders__container{
     padding-bottom: 20px;
 }
-.orders__table thead {
-    display: none;
-}
-
 .orders__table td, .orders__table th {
     display: block;
     padding: 20px 15px;
     background: #ffffff;
     text-align: right;
     width: 100%;
+}
+@media only screen and (max-width: 768px) {
+  .orders__table thead {
+    display: none;
+  }
 }
 @media only screen and (min-width: 769px) {
   .account-form__grid {
@@ -2849,8 +2850,5 @@ table {
   }
   .orders__table td, .orders__table th {
     text-align: center;
-  }
-  .orders__table thead {
-    display: block;
   }
 }
