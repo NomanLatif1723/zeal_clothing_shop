@@ -1,7 +1,7 @@
 /* Contact Form Header */
 .contact-page__text-content h1 {
-    font-size: 40px;
-    line-height: 80px;
+    font-size: 20px;
+    line-height: 2em;
     text-transform: uppercase;
     letter-spacing: 0.2em;
 }
@@ -27,9 +27,18 @@
     text-align: center;
     padding: 30px;
 }
+@media only screen and (min-width: 381px) {
+  .contact-page__text-content h1 {
+    font-size: 30px;
+  }
+}
+
 @media only screen and (min-width: 769px) {
   .contact-page__wrapper {
     height: 300px;
+  }
+  .contact-page__text-content h1 {
+    font-size: 40px;
   }
 }
 /* Contact Form */
