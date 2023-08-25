@@ -639,5 +639,19 @@ customElements.define('localization-form', LocalizationForm);
 // document.querySelectorAll('.shopify-currency-form .disclosure__item').forEach(function(element) {
 //   element.addEventListener('click', currencyFormSubmit);
 // });
+
+function initCustomerForms() {
+  const forgetPasswordBtn = document.querySelector('.forget-password__btn');
+  const loginForm = document.querySelector('#loginForm');
+  const recoverPasswordForm = document.querySelector('#recoverPasswordForm');
+  if (forgetPasswordBtn) {
+    forgetPasswordBtn.addEventListener('click', (event) => {
+      event.preventDefault();
+      loginForm.classList.add('hidden');
+      recoverPasswordForm.classList.remove('hidden');
+    })
+  }
+}
+initCustomerForms();
   
 })();
