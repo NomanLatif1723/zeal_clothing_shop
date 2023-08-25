@@ -3,6 +3,8 @@
     "main": {
       "type": "main-customer-account",
       "settings": {
+        "margin_top": 60,
+        "margin_bottom": 60
       }
     }
   },
