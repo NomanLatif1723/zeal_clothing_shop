@@ -42,7 +42,7 @@
   }
 }
 /* Contact Form */
-.form__input {
+.contact-form__grid .form__input {
     background: white;
     border: none;
 }
@@ -50,19 +50,9 @@
     padding: 35px 25px;
     background: #F1F3F4;
 }
-/* .form__group {
-    padding-bottom: 20px;
-} */
-
 .contact-main__heading {
     padding-bottom: 20px;
 }
-
-/* .form__label {
-    padding-bottom: 10px;
-    display: block;
-} */
-
 .contact-block__info-flex {
     display: flex;
     gap: 15px;
@@ -77,14 +67,6 @@
 .contact-info__text {
     padding-bottom: 30px;
 }
-/* ::placeholder {
-    font-size: 14px;
-    font-family: var(--bodyTextFont),sans-serif;
-}
-
-.form__submit .btn {
-    padding: 14px 42px;
-} */
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
   .contact-block__info-grid {
     display: flex;
@@ -111,11 +93,11 @@
   .contact-form__item {
     width: 50%;
   }
-  .form__grid {
+  .contact-form__grid {
     display: flex;
     gap: 20px;
   }
-  .form__grid .form__group {
+  .contact-form__grid .form__group {
     width: 50%;
   }
   
