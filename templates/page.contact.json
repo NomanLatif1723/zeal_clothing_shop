@@ -40,8 +40,8 @@
       ],
       "settings": {
         "main_heading": "Contact Us",
-        "info_heading": "Address",
-        "info_text": "",
+        "info_heading": "Our information",
+        "info_text": "<p>We value your feedback and want to make sure your experience with our brand is the best it can be. If you have any questions, comments, or concerns, please fill out the form and we'll get back to you as soon as possible.<\/p>",
         "margin_top": 16,
         "margin_bottom": 16
       }
