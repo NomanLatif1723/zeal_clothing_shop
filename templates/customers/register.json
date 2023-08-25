@@ -3,6 +3,9 @@
     "main": {
       "type": "main-customer-register",
       "settings": {
+        "additional_text": "<p>We're committed to providing you with the latest news and updates about our loose wear clothing. To stay up-to-date with our new collections, promotions, and events, we collect email addresses from our customers. We promise to use your information responsibly and respect your privacy. <\/p><p>By submitting your email address, you'll be the first to know about exclusive deals and offers, so you can elevate your style and comfort with ease. Thank you for trusting us with your information, and we look forward to keeping in touch!<\/p><p>You may unsubscribe at any time.<\/p><p>To find out more, Please visit our privacy policy.<\/p>",
+        "margin_top": 60,
+        "margin_bottom": 60
       }
     }
   },
