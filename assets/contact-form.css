@@ -56,7 +56,7 @@ label.form__label {
 .contact-info__text {
     padding-bottom: 30px;
 }
-@media only screena and (min-width: 769px){
+@media only screen and (min-width: 769px){
   .contact-form__container {
     display: flex;
     gap: 50px;
