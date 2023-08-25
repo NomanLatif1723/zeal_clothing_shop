@@ -3,6 +3,10 @@
     "header": {
       "type": "contact-form-header",
       "settings": {
+        "contact_header_text": "Unleash your comfort and style.",
+        "lazyload_images": false,
+        "margin_top": 60,
+        "margin_bottom": 60
       }
     },
     "main": {
