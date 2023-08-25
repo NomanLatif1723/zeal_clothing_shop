@@ -132,20 +132,20 @@
             {{ form.errors | default_errors }}
             <div class="form__grid">
               <div class="form__group">
-                <label for="name" class="form__label hidden">{{ 'contact.form.name' | t }}</label>
+                <label for="name" class="form__label visually__hidden">{{ 'contact.form.name' | t }}</label>
                 <input type="text" id="name" name="contact[name]" placeholder="{{ 'contact.form.name' | t }}" value="{%- if customer -%}{{ customer.name }}{%- endif -%}" class="form__input" required aria-label="{{ 'contact.form.name' | t }}">
               </div>
               <div class="form__group">
-                <label for="email" class="form__label hidden">{{ 'contact.form.email' | t }}</label>
+                <label for="email" class="form__label visually__hidden">{{ 'contact.form.email' | t }}</label>
                 <input type="email" id="email" name="contact[email]" placeholder="{{ 'contact.form.email' | t }}" value="{%- if customer -%}{{ customer.email }}{%- endif -%}" class="form__input" required aria-label="{{ 'contact.form.email' | t }}">
               </div>
             </div>
             <div class="form__group">
-              <label for="phone" class="form__label hidden">{{ 'contact.form.phone' | t }}</label>
+              <label for="phone" class="form__label visually__hidden">{{ 'contact.form.phone' | t }}</label>
               <input type="tel" id="phone" name="contact[phone]" placeholder="{{ 'contact.form.phone' | t }}" class="form__input" required aria-label="{{ 'contact.form.phone' | t }}">
             </div>
             <div class="form__group">
-              <label for="message" class="form__label hidden">{{ 'contact.form.comment' | t }}</label>
+              <label for="message" class="form__label visually__hidden">{{ 'contact.form.comment' | t }}</label>
               <textarea class="form__input" name="contact[comment]" placeholder="{{ 'contact.form.comment' | t }}" id="message" required aria-label="{{ 'contact.form.comment' | t }}"></textarea>
             </div>
             <div class="form__submit">
