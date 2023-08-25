@@ -1,4 +1,10 @@
 /* Contact Form Header */
+.contact-page__text-content h1 {
+    font-size: 40px;
+    line-height: 80px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
 .contact-page__image-container {
     position: absolute;
     width: 100%;
