@@ -644,7 +644,7 @@ function initCustomerForms() {
   const forgetPasswordBtn = document.querySelector('.forget-password__btn');
   const loginForm = document.querySelector('#loginForm');
   const recoverPasswordForm = document.querySelector('#recoverPasswordForm');
-  const backBtn = document.querySelectorAll('.back__btn');
+  const backBtn = document.querySelector('.back__btn');
   if (forgetPasswordBtn) {
     forgetPasswordBtn.addEventListener('click', (event) => {
       event.preventDefault();
@@ -652,13 +652,11 @@ function initCustomerForms() {
       recoverPasswordForm.classList.remove('hidden');
     })
   }
-  backBtn.forEach(button => {
-    if (button) {
-      button.addEventListener('click', () => {
-        history.back();
-      })
-    }
-  })
+  if (backBtn) {
+    button.addEventListener('click', () => {
+      history.back();
+    })
+  }
 }
 initCustomerForms();
   
