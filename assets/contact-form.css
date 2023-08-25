@@ -65,13 +65,14 @@ label.form__label {
   .contact-block__info-grid {
     display: flex;
     flex-wrap: wrap;
+    row-gap: 25px;
   }
   
   .contact-block__info-flex {
       width: 50%;
   }
-  .contact-block__info-flex:last-child {
-    padding-bottom: inherit;
+  .contact-block__info-flex {
+    padding-bottom: 0;
   }
 }
 @media only screen and (min-width: 1201px){
