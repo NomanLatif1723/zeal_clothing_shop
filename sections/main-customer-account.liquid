@@ -69,7 +69,7 @@
           </div>
           <div>{{ customer.name }}</div>
          <div class="rte"> {{ customer.default_address | format_address }}</div>
-          <a class="btn btn__link" href="{{ routes.account_addresses_url }}">
+          <a class="btn__link" href="{{ routes.account_addresses_url }}">
             {{ 'customers.account.view_addresses' | t }} ({{ customer.addresses_count }})
           </a>
         </div>
