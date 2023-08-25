@@ -2816,16 +2816,22 @@ table {
     background: #111111;
     width: 100%;
 }
-th,td {
-    padding: 20px 15px;
-    background: #ffffff;
-    text-align: center;
-}
 .account-form__grid {
     padding-top: 20px;
 }
 .orders__container{
     padding-bottom: 20px;
+}
+.orders__table thead {
+    display: none;
+}
+
+.orders__table td, .orders__table th {
+    display: block;
+    padding: 20px 15px;
+    background: #ffffff;
+    text-align: right;
+    width: 100%;
 }
 @media only screen and (min-width: 769px) {
   .account-form__grid {
@@ -2840,5 +2846,8 @@ th,td {
   .orders__container{
     width: 70%;
     padding: 0;
+  }
+  .orders__table td, .orders__table th {
+    text-align: center;
   }
 }
