@@ -13,22 +13,22 @@
         "a000ec6b-400b-43ed-a6be-acfe2369b1ef": {
           "type": "number_block",
           "settings": {
-            "phone_heading": "Address",
-            "phone_text": ""
+            "phone_heading": "Phone Number",
+            "phone_text": "<p>+92 334 0034575<\/p>"
           }
         },
         "812d474c-d186-46b4-9f24-10d4b210a72b": {
           "type": "email_block",
           "settings": {
-            "email_heading": "Address",
-            "email_text": ""
+            "email_heading": "Email",
+            "email_text": "<p>nomanlatif1723@gmail.com<\/p>"
           }
         },
         "ee856c18-e9da-4e0c-aa02-2288f4c6aaa1": {
           "type": "schedule_block",
           "settings": {
-            "schedule_heading": "Address",
-            "schedule_text": ""
+            "schedule_heading": "Schedule",
+            "schedule_text": "<p>Mon - Sat 8:00 AM - 6:00 PM<\/p>"
           }
         }
       },
