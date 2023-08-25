@@ -50,18 +50,18 @@
     padding: 35px 25px;
     background: #F1F3F4;
 }
-.form__group {
+/* .form__group {
     padding-bottom: 20px;
-}
+} */
 
 .contact-main__heading {
     padding-bottom: 20px;
 }
 
-label.form__label {
+/* .form__label {
     padding-bottom: 10px;
     display: block;
-}
+} */
 
 .contact-block__info-flex {
     display: flex;
@@ -77,14 +77,14 @@ label.form__label {
 .contact-info__text {
     padding-bottom: 30px;
 }
-::placeholder {
+/* ::placeholder {
     font-size: 14px;
     font-family: var(--bodyTextFont),sans-serif;
 }
 
 .form__submit .btn {
     padding: 14px 42px;
-}
+} */
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
   .contact-block__info-grid {
     display: flex;
