@@ -54,24 +54,12 @@
             {{ form.errors | default_errors }}
             <div class="form__group">
               <label for="email" class="form__label">{{ 'customers.recover_password.email' | t }}</label>
-              <input
-                type="email"
-                id="email"
-                name="customer[email]"
-                class="form__input"
-                required
-                aria-label="{{ 'customers.recover_password.email' | t }}"
-                autofocus
-                autocomplete="off"
-                autocapitalize="off">
+              <input type="email" id="email" name="customer[email]" class="form__input" required aria-label="{{ 'customers.recover_password.email' | t }}" autofocus autocomplete="off" autocapitalize="off">
             </div>
             <div class="form__submit">
-              <button
-                type="submit"
-                class="btn btn__link btn__primary"
-                aria-label="{{ 'customers.recover_password.submit' | t }}">{{ 'customers.recover_password.submit' | t }}</button>
+              <button type="submit" class="btn btn__link btn__primary" aria-label="{{ 'customers.recover_password.submit' | t }}">{{ 'customers.recover_password.submit' | t }}</button>
             </div>
-            <a href="#" title="{{ 'customers.recover_password.cancel' | t }}">{{ 'customers.recover_password.cancel' | t }}</a>
+            <a class="form__links" href="#" title="{{ 'customers.recover_password.cancel' | t }}">{{ 'customers.recover_password.cancel' | t }}</a>
           {% endform %}
         </div>
       </div>
