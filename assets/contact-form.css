@@ -42,7 +42,7 @@
   }
 }
 /* Contact Form */
-.contact-form__grid .form__input {
+.contact-form .form__input {
     background: white;
     border: none;
 }
