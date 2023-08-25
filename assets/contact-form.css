@@ -70,6 +70,9 @@ label.form__label {
   .contact-block__info-flex {
       width: 50%;
   }
+  .contact-block__info-flex:last-child {
+    padding-bottom: inherit;
+  }
 }
 @media only screen and (min-width: 1201px){
   .contact-form__container {
