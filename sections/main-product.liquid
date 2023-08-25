@@ -1,7 +1,40 @@
+<!-- form content -->
+
+<div class="product__wrapper">
+  <div class="product__item">
+    <div class="product__image">
+      <img
+        width=""
+        height=""
+        loading="lazy"
+        src="{{ product.featured_image | image_url: width: 1200 }}"
+        alt="{{ product.alt }}" />
+    </div>
+    <div class="product__title">
+      <h1>{{ product.title }}</h1>
+    </div>
+  </div>
+</div>
+
+{% form 'product', product %}
+  <select name="id">
+    {% for variant in product.variants %}
+      <option value="{{ variant.id }}"{% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %}>
+        {{ variant.title }} - {{ variant.price | money }}
+      </option>
+    {% endfor %}
+  </select>
+
+  <input
+    type="text"
+    name="quantity"
+    min="1"
+    value="1">
+  <button type="submit">Add to Cart</button>
+{% endform %}
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Section name"
   }
 {% endschema %}
 
