@@ -71,7 +71,7 @@
     display: block;
 }
 .contact-form .btn__link {
-    display: inline-block;
+    width: auto;
 }
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
   .contact-block__info-grid {
