@@ -42,7 +42,7 @@
             <div class="form__submit">
               <button type="submit" class="btn btn__link btn__primary" aria-label="{{ 'customers.register.submit' | t }}">{{ 'customers.register.submit' | t }}</button>
             </div>
-            <a class="form__link text__center" href="{{ routes.account_login_url }}" title="{{ 'customers.register.login_user' | t }}">{{ 'customers.register.login_user' | t }}</a>
+            <a class="form__links text__center" href="{{ routes.account_login_url }}" title="{{ 'customers.register.login_user' | t }}">{{ 'customers.register.login_user' | t }}</a>
             {%- assign additional_text = section.settings.additional_text -%}
             {%- if additional_text != blank -%}
               <div class="register-form__text rte">
