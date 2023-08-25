@@ -25,6 +25,7 @@
     display: table-cell;
     vertical-align: middle;
     text-align: center;
+    padding: 30px;
 }
 @media only screen and (min-width: 769px) {
   .contact-page__wrapper {
