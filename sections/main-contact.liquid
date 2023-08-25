@@ -121,16 +121,16 @@
       <div class="contact-form__item contact-form__main-wrapper">
         {%- if main_heading != blank -%}
           <div class="main__heading contact-main__heading"><h2>{{ main_heading }}</h2></div>
-        {%- endif -%}
+        {%- endif -%}  
         <div class="contact-form">
           {%- form 'contact', id: "contact_form" -%}
             {%- if form.posted_successfully? -%}
               <p class="success__message">
                 {{ 'contact.form.success_mesage' | t }}
               </p>
-            {%- endif -%}
+            {%- endif -%}     
             {{ form.errors | default_errors }}
-            <div class="form__grid contact-form__grid">
+            <div class="form__grid contact-form__grid">              
               <div class="form__group">
                 <label for="name" class="form__label visually__hidden">{{ 'contact.form.name' | t }}</label>
                 <input type="text" id="name" name="contact[name]" placeholder="{{ 'contact.form.name' | t }}" value="{%- if customer -%}{{ customer.name }}{%- endif -%}" class="form__input" required aria-label="{{ 'contact.form.name' | t }}">
