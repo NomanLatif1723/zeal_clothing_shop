@@ -61,6 +61,16 @@ label.form__label {
 .contact-info__text {
     padding-bottom: 30px;
 }
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .contact-block__info-grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .contact-block__info-flex {
+      width: 50%;
+  }
+}
 @media only screen and (min-width: 1201px){
   .contact-form__container {
     display: flex;
