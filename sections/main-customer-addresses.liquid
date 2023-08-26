@@ -30,7 +30,7 @@
     <div class="addresses-form__container">
       <div class="form__header account-form__header">
         <h2>{{ 'customers.addresses.title' | t }}</h2>
-        <button class="btn btn__link btn__primary btn__add-address" aria-label="{{ 'customers.addresses.add' | t }}">{{ 'customers.addresses.add' | t }}</button>
+        <button class="btn btn__link btn__primary address-btn__add" aria-label="{{ 'customers.addresses.add' | t }}">{{ 'customers.addresses.add' | t }}</button>
       </div>
       <div id="addNewAddressForm" class="hidden">
         {%- form 'customer_address', customer.new_address -%}
