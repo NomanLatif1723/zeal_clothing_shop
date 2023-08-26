@@ -1,5 +1,6 @@
 <localization-form>
-  {%- form 'localization', id: "localizationForm" -%}
+  {% assign localizationFormId = 'localizationForm-' | append: section.id %}
+  {%- form 'localization', id: localizationFormId -%}
     <div class="disclosure__wrapper">
       {%- if localization.available_languages.size > 1 -%}
         <div class="disclosure locale__wrapper">
