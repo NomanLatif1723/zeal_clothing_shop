@@ -5,7 +5,7 @@
       "settings": {
         "heading": "Collection List",
         "collection_per_row": 5,
-        "all_collections": true,
+        "all_collections": false,
         "swipe_on_mobile": false,
         "products_count": true,
         "text_alignment": "center",
