@@ -1,9 +1,9 @@
 <div class="orders__wrapper">
   <div class="page__width">
     <div class="form__header">
-      <h4>{{ 'customers.account.title' | t }}</h4>
-      <a class="logout__container" href="{{ routes.account_logout_url }}"title="{{ 'customers.logout.title' | t }}">
-        {{ 'customers.logout.title' | t }}
+      <h4>{{ 'customers.order.title' | t: name: order.name }}</h4>
+      <a class="logout__container" href="{{ routes.account_logout_url }}"title="{{ 'customers.order.return_url' | t }}">
+        {{ 'customers.order.return_url' | t }}
       </a>
     </div>
   </div>
