@@ -652,7 +652,7 @@ function initCustomerForms() {
   const formContainer = document.querySelectorAll('[data-form]');
   formContainer.forEach(form => {
     if (form) {
-      const backBtn = document.querySelector('.back__btn');
+      const backBtn = form.querySelector('.back__btn');
       if (backBtn) {
         backBtn.addEventListener('click', (event) => {
           event.preventDefault();
