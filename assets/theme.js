@@ -656,7 +656,7 @@ function initCustomerForms() {
       if (backBtn) {
         backBtn.addEventListener('click', (event) => {
           event.preventDefault();
-          backBtn.closest('[data-form]').classList.remove('hidden');
+          backBtn.closest('[data-form]').classList.add('hidden');
         })
       }
     }
