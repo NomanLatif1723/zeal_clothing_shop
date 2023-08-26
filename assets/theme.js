@@ -689,7 +689,7 @@ function initCustomerForms() {
         const confirmMessage = deleteBtn.getAttribute('data-confirm-message');
         if (confirm(confirmMessage || 'Are you sure you wish to delete this address?')) {
 
-            window.postLink('/account/addresses/' + formId, {parameters: {_method: 'delete'}});
+            deleteBtn.postLink('/account/addresses/' + formId, {parameters: {_method: 'delete'}});
         }
       })
     }
