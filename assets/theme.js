@@ -667,6 +667,16 @@ function initCustomerForms() {
       document.querySelector('#addNewAddressForm').classList.remove('hidden');
     })
   }
+  if (editAddressBtn) {
+    editAddressBtn.addEventListener('click', () => {
+      document.querySelector('#editAddressForm').classList.remove('hidden');
+    })
+  }
+  if (deleteAddressBtn) {
+    deleteAddressBtn.addEventListener('click', () => {
+      confirm('Are You sure You want to delete this Address?');
+    })
+  }
 }
 initCustomerForms();
   
