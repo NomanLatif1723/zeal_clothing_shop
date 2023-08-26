@@ -13,7 +13,7 @@
         {{ 'customers.logout.title' | t }}
       </a>
     </div>
-    <order-form id="orderForm">
+    <orders-list id="ordersList">
       <div class="account-form__grid">
         {%- paginate customer.orders by 10 -%}
           <div class="form__grid-item orders__container">
@@ -62,7 +62,7 @@
           </a>
         </div>
       </div>
-    </order-form>
+    </orders-list>
   </div>
 </div>
 {% schema %}
