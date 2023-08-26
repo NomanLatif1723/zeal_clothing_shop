@@ -685,6 +685,7 @@ function initCustomerForms() {
   if (deleteAddressBtn) {
     deleteAddressBtn.addEventListener('click', () => {
       confirm('Are You sure You want to delete this Address?');
+      
     })
   }
 }
