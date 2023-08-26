@@ -11,10 +11,10 @@
     assign sizes = '(min-width: 1200px) 650px, 45vw'
     
 -%}
-{% style %}
+{%- style -%}
   .main__section-{{ section.id }}{
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: {{ section.settings.margin_top | times: 0.5 | round: 0 }}px;
+    margin-bottom: {{ section.settings.margin_bottom | times: 0.5 | round: 0 }}px;
   }
   @media only screen and (min-width: 769px) {
     .main__section-{{ section.id }}{
@@ -22,7 +22,7 @@
       margin-bottom: {{ section.settings.margin_bottom }}px;
     }
   }
-{% endstyle %}
+{%- endstyle -%}
 <section class="image-text__section main__section-{{ section.id }}">
   <div class="page__width">
     <div class="image-text__wrapper{% if layout_reverse %} image-text__reverse{% endif %}">
