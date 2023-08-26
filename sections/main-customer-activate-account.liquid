@@ -51,7 +51,9 @@
                 class="btn btn__link btn__primary"
                 aria-label="{{ 'customers.activate_account.submit' | t }}">{{ 'customers.activate_account.submit' | t }}</button>
             </div>
-            <a class="text__center" href="{{ routes.account_login_url }}" title="{{ 'customers.activate_account.cancel' | t }}">{{ 'customers.activate_account.cancel' | t }}</a>
+            <div class="text__center">
+              <a class="form__links" href="{{ routes.account_login_url }}" title="{{ 'customers.activate_account.cancel' | t }}">{{ 'customers.activate_account.cancel' | t }}</a>
+            </div>
           {% endform %}
         </div>
       </div>
