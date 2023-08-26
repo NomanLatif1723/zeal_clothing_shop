@@ -184,6 +184,17 @@
 {% schema %}
   {
     "name": "t:sections.customer-addresses.name",
-    "class": "customer__forms"
+    "class": "customer__forms",
+    "settings": [
+      {
+        "type": "range",
+        "id": "addresses_per_row",
+        "label": "t:sections.customer-addresses.settings.addresses_per_row.label",
+        "default": 4,
+        "min": 1,
+        "max": 5,
+        "step": 1
+      }
+    ]
   }
 {% endschema %}
