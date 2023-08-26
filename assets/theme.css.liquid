@@ -2877,20 +2877,11 @@ table {
     letter-spacing: 0.2em;
     padding-bottom: 10px;
 }
-
 .address-grid__item .form__buttons {
     padding-top: 20px;
 }
-
 .address-grid__item {
     padding-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.addresses-grid {
-    display: flex;
 }
 #editAddressForm {
     position: fixed;
@@ -2915,4 +2906,16 @@ table {
   top: 14px;
   padding: 10px;
   cursor: pointer;
+}
+@media only screen and (min-width: 769px) {
+  .addresses-grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .address-grid__item {
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
