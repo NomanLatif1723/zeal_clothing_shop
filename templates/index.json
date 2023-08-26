@@ -71,7 +71,8 @@
           "settings": {
             "brand_logo": "shopify:\/\/shop_images\/delivery-fast_1.svg",
             "brand_heading": "Free Standard Delivery",
-            "brand_text": "Get your loose-wearing clothing delivered for Free, wherever you are."
+            "brand_text": "Get your loose-wearing clothing delivered for Free, wherever you are.",
+            "text_alignment": "center"
           }
         },
         "template--19980215124290__d534c664-a5a4-4f55-b829-6446be3b3cdb-1689579269d14e5d4e-1": {
@@ -79,7 +80,8 @@
           "settings": {
             "brand_logo": "shopify:\/\/shop_images\/Vector.svg",
             "brand_heading": "Free In store Returns",
-            "brand_text": "Shop with confidence knowing that returns are always free and easy."
+            "brand_text": "Shop with confidence knowing that returns are always free and easy.",
+            "text_alignment": "center"
           }
         },
         "template--19980215124290__d534c664-a5a4-4f55-b829-6446be3b3cdb-1689579269d14e5d4e-2": {
@@ -87,7 +89,8 @@
           "settings": {
             "brand_logo": "shopify:\/\/shop_images\/security_1.svg",
             "brand_heading": "100% Secure Checkout",
-            "brand_text": "Shop with peace of mind knowing that your information is safe and secure."
+            "brand_text": "Shop with peace of mind knowing that your information is safe and secure.",
+            "text_alignment": "center"
           }
         }
       },
@@ -222,6 +225,7 @@
         "image": "shopify:\/\/shop_images\/black-white-minimal-portrait_4_1.jpg",
         "button_label": "Buy Now",
         "button_link": "shopify:\/\/collections",
+        "text_alignment": "center",
         "lazyload_images": true,
         "margin_top": 60,
         "margin_bottom": 60
@@ -776,7 +780,56 @@
     "9913ff1c-3076-4a2f-ba8f-22edb1d6e44e": {
       "type": "custom-content",
       "settings": {
+        "subheading": "Sub Heading",
+        "heading": "Custom Content",
         "custom_content": "<p>Use this advanced section to build your own layouts or to add custom HTML, Liquid, or scripts.<\/p>",
+        "text_alignment": "center",
+        "margin_top": 60,
+        "margin_bottom": 60
+      }
+    },
+    "c9d4b637-1e16-4b9e-8993-6eab77d74c0a": {
+      "type": "main-contact",
+      "blocks": {
+        "template--19980215124290__c9d4b637-1e16-4b9e-8993-6eab77d74c0a-address_block-1": {
+          "type": "address_block",
+          "settings": {
+            "address_heading": "Address",
+            "address_text": ""
+          }
+        },
+        "template--19980215124290__c9d4b637-1e16-4b9e-8993-6eab77d74c0a-number_block-1": {
+          "type": "number_block",
+          "settings": {
+            "phone_heading": "Phone Number",
+            "phone_text": ""
+          }
+        },
+        "79ebe3b8-a98c-41ab-9ba0-d0b197a069a8": {
+          "type": "email_block",
+          "settings": {
+            "email_heading": "Email",
+            "email_text": ""
+          }
+        },
+        "1577e4c6-aa02-4034-a6dc-c9284660324f": {
+          "type": "schedule_block",
+          "settings": {
+            "schedule_heading": "Schedule",
+            "schedule_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19980215124290__c9d4b637-1e16-4b9e-8993-6eab77d74c0a-address_block-1",
+        "template--19980215124290__c9d4b637-1e16-4b9e-8993-6eab77d74c0a-number_block-1",
+        "79ebe3b8-a98c-41ab-9ba0-d0b197a069a8",
+        "1577e4c6-aa02-4034-a6dc-c9284660324f"
+      ],
+      "settings": {
+        "main_heading": "Contact Us",
+        "info_heading": "Personal Information",
+        "info_text": "",
         "margin_top": 60,
         "margin_bottom": 60
       }
@@ -801,6 +854,7 @@
     "749c8cce-63f0-421f-a447-8f8b3a4bfc20",
     "8fdfff96-b244-46b9-8bf7-7bbd2dfd07c6",
     "9bf713f2-c83f-4537-b1b8-93f4de7dc591",
-    "9913ff1c-3076-4a2f-ba8f-22edb1d6e44e"
+    "9913ff1c-3076-4a2f-ba8f-22edb1d6e44e",
+    "c9d4b637-1e16-4b9e-8993-6eab77d74c0a"
   ]
 }
