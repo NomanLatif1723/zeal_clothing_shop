@@ -94,7 +94,8 @@
     },
     "order": {
       "title": "Order {{ name }}",
-      "return_url": "Back To Accounts"
+      "return_url": "Back To Accounts",
+      "sub_text": "Order Details"
     },
     "recover_password": {
       "title": "Forgot Your Password",
