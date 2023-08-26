@@ -795,28 +795,28 @@
           "type": "address_block",
           "settings": {
             "address_heading": "Address",
-            "address_text": ""
+            "address_text": "<p>3876 Maple Avenue, Riverside, California<\/p>"
           }
         },
         "template--19980215124290__c9d4b637-1e16-4b9e-8993-6eab77d74c0a-number_block-1": {
           "type": "number_block",
           "settings": {
             "phone_heading": "Phone Number",
-            "phone_text": ""
+            "phone_text": "<p>+92 334 0034575<\/p>"
           }
         },
         "79ebe3b8-a98c-41ab-9ba0-d0b197a069a8": {
           "type": "email_block",
           "settings": {
             "email_heading": "Email",
-            "email_text": ""
+            "email_text": "<p>nomanlatif1723@gmail.com<\/p>"
           }
         },
         "1577e4c6-aa02-4034-a6dc-c9284660324f": {
           "type": "schedule_block",
           "settings": {
             "schedule_heading": "Schedule",
-            "schedule_text": ""
+            "schedule_text": "<p>Mon - Sat 8:00 AM - 6:00 PM<\/p>"
           }
         }
       },
