@@ -645,7 +645,7 @@ function initCustomerForms() {
   const loginForm = document.querySelector('#loginForm');
   const recoverPasswordForm = document.querySelector('#recoverPasswordForm');
   const addAddressBtn = document.querySelector('.address-btn__add');
-  const editAddressBtn = document.querySelector('.address-btn__edit');
+  const editAddressBtn = document.querySelectorAll('.address-btn__edit');
   const deleteAddressBtn = document.querySelector('.address-btn__delete');
   
 
@@ -680,11 +680,14 @@ function initCustomerForms() {
       document.querySelector('#addNewAddressForm').classList.remove('hidden');
     })
   }
-  if (editAddressBtn) {
-    editAddressBtn.addEventListener('click', () => {
-      document.querySelector('#editAddressForm').classList.remove('hidden');
-    })
-  }
+  editAddressBtn.forEach(editBtn => {
+    if (editBtn) {
+      editBtn.addEventListener('click', () => {
+        document.querySelector('#editAddressForm').classList.remove('hidden');
+      })
+    }
+  })
+  
   if (deleteAddressBtn) {
     deleteAddressBtn.addEventListener('click', () => {
       confirm('Are You sure You want to delete this Address?');
