@@ -827,9 +827,9 @@
         "1577e4c6-aa02-4034-a6dc-c9284660324f"
       ],
       "settings": {
-        "main_heading": "Contact Us",
-        "info_heading": "Personal Information",
-        "info_text": "",
+        "main_heading": "Get in touch",
+        "info_heading": "Our information",
+        "info_text": "<p>We value your feedback and want to make sure your experience with our brand is the best it can be. If you have any questions, comments, or concerns, please fill out the form and we'll get back to you as soon as possible.<\/p>",
         "margin_top": 60,
         "margin_bottom": 60
       }
