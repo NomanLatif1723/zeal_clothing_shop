@@ -647,7 +647,20 @@ function initCustomerForms() {
   const addAddressBtn = document.querySelector('.address-btn__add');
   const editAddressBtn = document.querySelector('.address-btn__edit');
   const deleteAddressBtn = document.querySelector('.address-btn__delete');
-  const backBtn = document.querySelector('.back__btn');
+  
+
+  const formContainer = document.querySelectorAll('[data-form]');
+  formContainer.forEach(form => {
+    if (form) {
+      const backBtn = form.querySelector('.back__btn');
+      if (backBtn) {
+        backBtn.addEventListener('click', (event) => {
+          event.preventDefault();
+          backBtn.closest(form).classList.remove('hidden');
+        })
+      }
+    }
+  })
   if (forgetPasswordBtn) {
     forgetPasswordBtn.addEventListener('click', (event) => {
       event.preventDefault();
@@ -655,13 +668,13 @@ function initCustomerForms() {
       recoverPasswordForm.classList.remove('hidden');
     })
   }
-  if (backBtn) {
-    backBtn.addEventListener('click', (event) => {
-      event.preventDefault();
-      loginForm.classList.remove('hidden');
-      recoverPasswordForm.classList.add('hidden');
-    })
-  }
+  // if (backBtn) {
+  //   backBtn.addEventListener('click', (event) => {
+  //     event.preventDefault();
+  //     loginForm.classList.remove('hidden');
+  //     recoverPasswordForm.classList.add('hidden');
+  //   })
+  // }
   if (addAddressBtn) {
     addAddressBtn.addEventListener('click', () => {
       document.querySelector('#addNewAddressForm').classList.remove('hidden');
