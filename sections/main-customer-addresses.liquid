@@ -30,7 +30,7 @@
     <div class="addresses-form__container">
       <div class="form__header account-form__header">
         <h2>{{ 'customers.addresses.title' | t }}</h2>
-        <button class="btn btn__link btn__primary" aria-label="{{ 'customers.addresses.add' | t }}">{{ 'customers.addresses.add' | t }}</button>
+        <button class="btn btn__link btn__primary btn__add-address" aria-label="{{ 'customers.addresses.add' | t }}">{{ 'customers.addresses.add' | t }}</button>
       </div>
       <div id="addNewAddressForm" class="hidden">
         {%- form 'customer_address', customer.new_address -%}
@@ -93,7 +93,7 @@
           </div>
           <div class="form__buttons">
             <button class="btn btn__link btn__primary" aria-label="{{ 'customers.addresses.add_new' | t }}">{{ 'customers.addresses.add_new' | t }}</button>
-            <button class="btn btn__link btn__outline" area-label="{{ 'customers.addresses.cancel' | t }}">{{ 'customers.addresses.cancel' | t }}</button>
+            <button class="btn btn__link btn__outline back__btn" area-label="{{ 'customers.addresses.cancel' | t }}">{{ 'customers.addresses.cancel' | t }}</button>
           </div>
         {%- endform -%}
       </div>
@@ -211,8 +211,8 @@
                       <label for="address_default_address_new" class="form__label">{{ 'customers.addresses.set_default' | t }}</label>
                     </div>
                     <div class="form__buttons">
-                      <button class="btn btn__link btn__primary" aria-label="{{ 'customers.addresses.update' | t }}">{{ 'customers.addresses.add_new' | t }}</button>
-                      <button class="btn btn__link btn__outline" area-label="{{ 'customers.addresses.cancel' | t }}">{{ 'customers.addresses.cancel' | t }}</button>
+                      <button class="btn btn__link btn__primary" aria-label="{{ 'customers.addresses.update' | t }}">{{ 'customers.addresses.update' | t }}</button>
+                      <button class="btn btn__link btn__outline back__btn" area-label="{{ 'customers.addresses.cancel' | t }}">{{ 'customers.addresses.cancel' | t }}</button>
                     </div>
                   {%- endform -%}
                 </div>
