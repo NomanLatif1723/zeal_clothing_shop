@@ -4,7 +4,7 @@
       "type": "collection-list",
       "settings": {
         "heading": "Collection List",
-        "collection_per_row": 4,
+        "collection_per_row": 5,
         "all_collections": true,
         "swipe_on_mobile": false,
         "products_count": true,
