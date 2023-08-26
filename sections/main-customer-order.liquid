@@ -1,5 +1,12 @@
 <div class="orders__wrapper">
-  <div class="page__width"></div>
+  <div class="page__width">
+    <div class="form__header">
+      <h4>{{ 'customers.account.title' | t }}</h4>
+      <a class="logout__container" href="{{ routes.account_logout_url }}"title="{{ 'customers.logout.title' | t }}">
+        {{ 'customers.logout.title' | t }}
+      </a>
+    </div>
+  </div>
 </div>
 {% schema %}
   {
