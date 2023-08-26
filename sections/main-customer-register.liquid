@@ -1,16 +1,4 @@
-{%- style -%}
-  .main__section-{{ section.id }}{
-    margin-top: {{ section.settings.margin_top | times: 0.5 | round: 0 }}px;
-    margin-bottom: {{ section.settings.margin_bottom | times: 0.5 | round: 0 }}px;
-  }
-  @media only screen and (min-width: 769px) {
-    .main__section-{{ section.id }}{
-      margin-top: {{ section.settings.margin_top }}px;
-      margin-bottom: {{ section.settings.margin_bottom }}px;
-    }
-  }
-{%- endstyle -%}
-<div class="registration__wrapper main__section-{{ section.id }}">
+<div class="registration__wrapper">
   <div class="page__width">
     <div class="customer-form__container">
       <div id="registrationForm">
@@ -60,33 +48,12 @@
 {% schema %}
   {
     "name": "t:sections.customer-registration.name",
-    "class": "main__section",
+    "class": "customer__forms",
     "settings": [
       {
         "type": "richtext",
         "id": "additional_text",
         "label": "t:sections.customer-registration.settings.additional_text.label"
-      }, {
-        "type": "header",
-        "content": "t:sections.customer-registration.settings.header_spacing.label"
-      }, {
-        "type": "range",
-        "id": "margin_top",
-        "min": 0,
-        "max": 100,
-        "step": 2,
-        "unit": "px",
-        "label": "t:sections.customer-registration.settings.header_spacing.top_spacing.label",
-        "default": 16
-      }, {
-        "type": "range",
-        "id": "margin_bottom",
-        "min": 0,
-        "max": 100,
-        "step": 2,
-        "unit": "px",
-        "label": "t:sections.customer-registration.settings.header_spacing.bottom_spacing.label",
-        "default": 16
       }
     ]
   }
