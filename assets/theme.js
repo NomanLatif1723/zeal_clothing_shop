@@ -647,7 +647,6 @@ function initCustomerForms() {
   const addAddressBtn = document.querySelector('.address-btn__add');
   const editAddressBtn = document.querySelectorAll('.address-btn__edit');
   const deleteAddressBtn = document.querySelector('.address-btn__delete');
-  const loginFormWrapper = document.querySelector('.login__wrapper');
 
   const formContainer = document.querySelectorAll('[data-form]');
   formContainer.forEach(form => {
@@ -671,13 +670,6 @@ function initCustomerForms() {
       recoverPasswordForm.classList.remove('hidden');
     })
   }
-  // if (backBtn) {
-  //   backBtn.addEventListener('click', (event) => {
-  //     event.preventDefault();
-  //     loginForm.classList.remove('hidden');
-  //     recoverPasswordForm.classList.add('hidden');
-  //   })
-  // }
   if (addAddressBtn) {
     addAddressBtn.addEventListener('click', () => {
       document.querySelector('#addNewAddressForm').classList.remove('hidden');
@@ -690,15 +682,10 @@ function initCustomerForms() {
       })
     }
   })
-  
-  // if (deleteAddressBtn) {
-  //   deleteAddressBtn.addEventListener('click', () => {
-  //     confirm('Are You sure You want to delete this Address?');
-  //   })
-  // }
-  function confirmDelete() {
-    const confirmMessage = document.querySelector('[data-confirm-message]');
-    confirm(confirmMessage);
+  if (deleteAddressBtn) {
+    deleteAddressBtn.addEventListener('click', () => {
+      confirm('Are You sure You want to delete this Address?');
+    })
   }
 }
 initCustomerForms();
