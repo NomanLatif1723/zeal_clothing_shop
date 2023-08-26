@@ -647,7 +647,7 @@ function initCustomerForms() {
   const addAddressBtn = document.querySelector('.address-btn__add');
   const editAddressBtn = document.querySelectorAll('.address-btn__edit');
   const deleteAddressBtn = document.querySelector('.address-btn__delete');
-  
+  const loginFormWrapper = document.querySelector('.login__wrapper');
 
   const formContainer = document.querySelectorAll('[data-form]');
   formContainer.forEach(form => {
@@ -657,6 +657,9 @@ function initCustomerForms() {
         backBtn.addEventListener('click', (event) => {
           event.preventDefault();
           backBtn.closest('[data-form]').classList.add('hidden');
+          if (loginForm) {
+            loginForm.classList.remove('hidden');
+          }
         })
       }
     }
