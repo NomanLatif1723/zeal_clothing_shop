@@ -644,6 +644,9 @@ function initCustomerForms() {
   const forgetPasswordBtn = document.querySelector('.forget-password__btn');
   const loginForm = document.querySelector('#loginForm');
   const recoverPasswordForm = document.querySelector('#recoverPasswordForm');
+  const addAddressBtn = document.querySelector('.address-btn__add');
+  const editAddressBtn = document.querySelector('.address-btn__edit');
+  const deleteAddressBtn = document.querySelector('.address-btn__delete');
   const backBtn = document.querySelector('.back__btn');
   if (forgetPasswordBtn) {
     forgetPasswordBtn.addEventListener('click', (event) => {
@@ -657,6 +660,11 @@ function initCustomerForms() {
       event.preventDefault();
       loginForm.classList.remove('hidden');
       recoverPasswordForm.classList.add('hidden');
+    })
+  }
+  if (addAddressBtn) {
+    addAddressBtn.addEventListener('click', () => {
+      document.querySelector('#addNewAddressForm').classList.remove('hidden');
     })
   }
 }
