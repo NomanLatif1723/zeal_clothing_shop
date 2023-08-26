@@ -189,6 +189,12 @@
     </div>
   </div>
 </div>
+<script>
+  function confirmDelete() {
+    const confirmMessage = document.querySelector('[data-confirm-message]');
+    confirm('Are you sure');
+  }
+</script>
 {% schema %}
   {
     "name": "t:sections.customer-addresses.name",
