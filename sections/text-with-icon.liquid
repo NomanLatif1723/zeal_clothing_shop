@@ -5,10 +5,10 @@
     assign lazyloading = 'lazy'
     endif
 -%}
-<style>
+{%- style -%}
   .main__section-{{ section.id }}{
-    margin-top: 0;
-    margin-bottom: 30px;
+    margin-top: {{ section.settings.margin_top | times: 0.5 | round: 0 }}px;
+    margin-bottom: {{ section.settings.margin_bottom | times: 0.5 | round: 0 }}px;
   }
   @media only screen and (min-width: 769px) {
     .main__section-{{ section.id }}{
@@ -16,7 +16,7 @@
       margin-bottom: {{ section.settings.margin_bottom }}px;
     }
   }
-</style>
+{%- endstyle -%}
 <div class="text__image-container main__section-{{ section.id }} text__container-desktop">
   <div class="text__image-wrapper">
     {%- for block in section.blocks -%}
