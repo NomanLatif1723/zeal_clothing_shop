@@ -689,8 +689,7 @@ function initCustomerForms() {
         const formId = deleteBtn.closest('.address-grid__item').querySelector('#editAddressForm');
         const confirmMessage = deleteBtn.getAttribute('data-confirm-message');
         if (confirm(confirmMessage || 'Are you sure you wish to delete this address?')) {
-
-            deleteBtn.postLink('/account/addresses/' + formId, {parameters: {_method: 'delete'}});
+           document.getElementById('deleteAddressForm').submit();
         }
       })
     }
