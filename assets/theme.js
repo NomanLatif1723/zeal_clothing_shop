@@ -686,10 +686,10 @@ function initCustomerForms() {
     if (deleteBtn) {
       deleteBtn.addEventListener('click', (event) => {
         event.preventDefault();
-        const formId = deleteBtn.closest('.address-grid__item').querySelector('#editAddressForm');
+        const deleteFormId = document.getElementById('deleteAddressForm');
         const confirmMessage = deleteBtn.getAttribute('data-confirm-message');
         if (confirm(confirmMessage || 'Are you sure you wish to delete this address?')) {
-           document.getElementById('deleteAddressForm').submit();
+           deleteFormId.submit();
         }
       })
     }
