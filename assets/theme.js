@@ -684,7 +684,8 @@ function initCustomerForms() {
   })
   deleteAddressBtn.forEach(deleteBtn => {
     if (deleteBtn) {
-      deleteBtn.addEventListener('click', () => {
+      deleteBtn.addEventListener('click', (event) => {
+        event.preventDefault();
         const formId = deleteBtn.closest('.address-grid__item').querySelector('#editAddressForm');
         const confirmMessage = deleteBtn.getAttribute('data-confirm-message');
         if (confirm(confirmMessage || 'Are you sure you wish to delete this address?')) {
