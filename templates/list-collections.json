@@ -14,9 +14,61 @@
         "margin_top": 60,
         "margin_bottom": 60
       }
+    },
+    "c9966c34-1b04-4f5e-a31e-7cb3970fd159": {
+      "type": "collection-list",
+      "blocks": {
+        "template--20774404129090__c9966c34-1b04-4f5e-a31e-7cb3970fd159-collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_heading": "Collection Title"
+          }
+        },
+        "template--20774404129090__c9966c34-1b04-4f5e-a31e-7cb3970fd159-collection-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_heading": "Collection Title"
+          }
+        },
+        "template--20774404129090__c9966c34-1b04-4f5e-a31e-7cb3970fd159-collection-3": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_heading": "Collection Title"
+          }
+        },
+        "template--20774404129090__c9966c34-1b04-4f5e-a31e-7cb3970fd159-collection-4": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_heading": "Collection Title"
+          }
+        }
+      },
+      "block_order": [
+        "template--20774404129090__c9966c34-1b04-4f5e-a31e-7cb3970fd159-collection-1",
+        "template--20774404129090__c9966c34-1b04-4f5e-a31e-7cb3970fd159-collection-2",
+        "template--20774404129090__c9966c34-1b04-4f5e-a31e-7cb3970fd159-collection-3",
+        "template--20774404129090__c9966c34-1b04-4f5e-a31e-7cb3970fd159-collection-4"
+      ],
+      "settings": {
+        "heading": "Collection List",
+        "collection_per_row": 4,
+        "all_collections": true,
+        "swipe_on_mobile": false,
+        "products_count": true,
+        "text_alignment": "center",
+        "collection_layout": "grid",
+        "lazyload_images": false,
+        "margin_top": 16,
+        "margin_bottom": 16
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "c9966c34-1b04-4f5e-a31e-7cb3970fd159"
   ]
 }
