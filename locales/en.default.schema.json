@@ -294,108 +294,35 @@
       }
     },
     "customer-activate-account": {
-      "name": "Activate Account",
-      "settings": {
-        "header_spacing": {
-          "label": "Section Spacing",
-          "top_spacing": {
-            "label": "Spacing Top"
-          },
-          "bottom_spacing": {
-            "label": "Spacing Bottom"
-          }
-        }
-      }
+      "name": "Activate Account"
     },
     "customer-account": {
-      "name": "Customer Account",
-      "settings": {
-        "header_spacing": {
-          "label": "Section Spacing",
-          "top_spacing": {
-            "label": "Spacing Top"
-          },
-          "bottom_spacing": {
-            "label": "Spacing Bottom"
-          }
-        }
-      }
+      "name": "Customer Account"
     },
     "customer-addresses": {
       "name": "Customer Addresses",
       "settings": {
         "addresses_per_row": {
           "label": "Address Per Row"
-        },
-        "header_spacing": {
-          "label": "Section Spacing",
-          "top_spacing": {
-            "label": "Spacing Top"
-          },
-          "bottom_spacing": {
-            "label": "Spacing Bottom"
-          }
         }
       }
     },
     "customer-login": {
-      "name": "Customer Login",
-      "settings": {
-        "header_spacing": {
-          "label": "Section Spacing",
-          "top_spacing": {
-            "label": "Spacing Top"
-          },
-          "bottom_spacing": {
-            "label": "Spacing Bottom"
-          }
-        }
-      }
+      "name": "Customer Login"
     },
     "customer-registration": {
       "name": "Register",
       "settings": {
         "additional_text": {
           "label": "Additional Text"
-        },
-        "header_spacing": {
-          "label": "Section Spacing",
-          "top_spacing": {
-            "label": "Spacing Top"
-          },
-          "bottom_spacing": {
-            "label": "Spacing Bottom"
-          }
         }
       }
     },
     "customer-reset_password": {
-      "name": "Reset Password",
-      "settings": {
-        "header_spacing": {
-          "label": "Section Spacing",
-          "top_spacing": {
-            "label": "Spacing Top"
-          },
-          "bottom_spacing": {
-            "label": "Spacing Bottom"
-          }
-        }
-      }
+      "name": "Reset Password"
     },
     "customer-order": {
-      "name": "Customer Order",
-      "settings": {
-        "header_spacing": {
-          "label": "Section Spacing",
-          "top_spacing": {
-            "label": "Spacing Top"
-          },
-          "bottom_spacing": {
-            "label": "Spacing Bottom"
-          }
-        }
-      }
+      "name": "Customer Order"
     },
     "events-popup": {
       "name": "Events Popup",
