@@ -6,8 +6,8 @@
 -%}
 {%- style -%}
   .main__section-{{ section.id }}{
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: {{ section.settings.margin_top | times: 0.5 | round: 0 }}px;
+    margin-bottom: {{ section.settings.margin_bottom | times: 0.5 | round: 0 }}px;
   }
   @media only screen and (min-width: 769px) {
     .main__section-{{ section.id }}{
