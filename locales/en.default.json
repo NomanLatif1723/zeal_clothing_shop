@@ -93,7 +93,8 @@
       "no_orders_yet": "You haven't placed any Orders yet."
     },
     "order": {
-      "title": "Order {{ name }}"
+      "title": "Order {{ name }}",
+      "return_url": "Back To Accounts"
     },
     "recover_password": {
       "title": "Forgot Your Password",
