@@ -641,8 +641,6 @@ customElements.define('localization-form', LocalizationForm);
 // });
 
 function initCustomerForms() {
-  customerAddressesForm();
-  
   const forgetPasswordBtn = document.querySelector('.forget-password__btn');
   const loginForm = document.querySelector('#loginForm');
   const recoverPasswordForm = document.querySelector('#recoverPasswordForm');
@@ -699,7 +697,7 @@ function initCustomerForms() {
       }
     })
   }
-  
+  customerAddressesForm();
 }
 initCustomerForms();
   
