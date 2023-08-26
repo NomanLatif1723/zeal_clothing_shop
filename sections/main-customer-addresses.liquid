@@ -105,7 +105,7 @@
                 {%- if address == customer.default_address -%}
                   <h4>{{ 'customers.addresses.default' | t }}</h4>
                 {%- endif -%}
-                <p>{{ address | format_address }}</p>
+                <div class="rte">{{ address | format_address }}</div>
                 <div class="form__buttons">
                   <button class="btn btn__link btn__primary address-btn__edit" aria-label="{{ 'customers.addresses.edit' | t }}">{{ 'customers.addresses.edit' | t }}</button>
                   <!-- <form method="post" action="{{ address.url }}"> -->
