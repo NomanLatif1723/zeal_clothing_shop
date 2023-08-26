@@ -6,6 +6,47 @@
         {{ 'customers.order.return_url' | t }}
       </a>
     </div>
+    <orders-item id="ordersItem">
+      <div class="account-form__grid">
+        <div class="form__grid-item orders__container">
+          <div class="form__header">
+            <h4>{{ 'customers.order.title' | t }}</h4>
+          </div>
+          <table role="table" class="orders__table">
+            <thead>
+              <tr>
+                <th>{{ 'customers.orders.order_number' | t }}</th>
+                <th>{{ 'customers.orders.date' | t }}</th>
+                <th>{{ 'customers.orders.payment_status' | t }}</th>
+                <th>{{ 'customers.orders.fulfilment_status' | t }}</th>
+                <th>{{ 'customers.orders.total' | t }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for order in customer.orders %}
+                <tr>
+                  <td><label class="label__hidden">{{ 'customers.orders.order_number' | t }}</label><a href="{{ order.customer_url  }}">{{ order.name }}</a></td>
+                  <td><label class="label__hidden">{{ 'customers.orders.date' | t }}</label><span>{{ order.created_at | date: '%d %b %Y' }}</span></td>
+                  <td><label class="label__hidden">{{ 'customers.orders.payment_status' | t }}</label><span>{{ order.financial_status_label }}</span></td>
+                  <td><label class="label__hidden">{{ 'customers.orders.fulfilment_status' | t }}</label><span>{{ order.fulfillment_status_label }}</span></td>
+                  <td><label class="label__hidden">{{ 'customers.orders.total' | t }}</label><span>{{ order.total_price }}</span></td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        <div class="form__grid-item form__addresses-container">
+          <div class="form__header">
+            <h4>{{ 'customers.account.details' | t }}</h4>
+          </div>
+          <div class="customer__header">{{ customer.name }}</div>
+         <div class="rte"> {{ customer.default_address | format_address }}</div>
+          <a class="btn__link" href="{{ routes.account_addresses_url }}">
+            {{ 'customers.account.view_addresses' | t }} ({{ customer.addresses_count }})
+          </a>
+        </div>
+      </div>
+    </orders-item>
   </div>
 </div>
 {% schema %}
