@@ -688,10 +688,14 @@ function initCustomerForms() {
     }
   })
   
-  if (deleteAddressBtn) {
-    deleteAddressBtn.addEventListener('click', () => {
-      confirm('Are You sure You want to delete this Address?');
-    })
+  // if (deleteAddressBtn) {
+  //   deleteAddressBtn.addEventListener('click', () => {
+  //     confirm('Are You sure You want to delete this Address?');
+  //   })
+  // }
+  function confirmDelete() {
+    const confirmMessage = document.querySelector('[data-confirm-message]');
+    confirm(confirmMessage);
   }
 }
 initCustomerForms();
