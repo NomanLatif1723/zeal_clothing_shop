@@ -802,14 +802,14 @@
           "type": "number_block",
           "settings": {
             "phone_heading": "Phone Number",
-            "phone_text": "<p>+92 334 0034575<\/p>"
+            "phone_text": "<p>+92 111 222 4444<\/p>"
           }
         },
         "79ebe3b8-a98c-41ab-9ba0-d0b197a069a8": {
           "type": "email_block",
           "settings": {
             "email_heading": "Email",
-            "email_text": "<p>nomanlatif1723@gmail.com<\/p>"
+            "email_text": "<p>Example1723@gmail.com<\/p>"
           }
         },
         "1577e4c6-aa02-4034-a6dc-c9284660324f": {
