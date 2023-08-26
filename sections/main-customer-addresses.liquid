@@ -41,50 +41,50 @@
             <div class="form__group">
               <label for="new[first_name]" class="form__label">{{ 'customers.addresses.first_name' | t }}</label>
               <input
-                type="text" id="new[first_name]" name="customer[first_name]" value="{{ form.first_name }}" class="form__input" aria-label="{{ 'customers.addresses.first_name' | t }}">
+                type="text" id="new[first_name]" name="address[first_name]" value="{{ form.first_name }}" class="form__input" aria-label="{{ 'customers.addresses.first_name' | t }}">
             </div>
             <div class="form__group">
               <label for="new[last_name]" class="form__label">{{ 'customers.addresses.last_name' | t }}</label>
-              <input type="text" id="new[last_name]" name="customer[last_name]" value="{{ form.last_name }}" class="form__input" aria-label="{{ 'customers.addresses.last_name' | t }}">
+              <input type="text" id="new[last_name]" name="address[last_name]" value="{{ form.last_name }}" class="form__input" aria-label="{{ 'customers.addresses.last_name' | t }}">
             </div>
           </div>
           <div class="form__grid">
             <div class="form__group">
               <label for="new[phone]" class="form__label">{{ 'customers.addresses.phone' | t }}</label>
               <input
-                type="tel" id="new[phone]" name="customer[phone]" value="{{ form.phone }}" class="form__input" aria-label="{{ 'customers.addresses.phone' | t }}">
+                type="tel" id="new[phone]" name="address[phone]" value="{{ form.phone }}" class="form__input" aria-label="{{ 'customers.addresses.phone' | t }}">
             </div>
             <div class="form__group">
               <label for="new[company]" class="form__label">{{ 'customers.addresses.company' | t }}</label>
-              <input type="text" id="new[company]" name="customer[company]" value="{{ form.company }}" class="form__input" aria-label="{{ 'customers.addresses.company' | t }}">
+              <input type="text" id="new[company]" name="address[company]" value="{{ form.company }}" class="form__input" aria-label="{{ 'customers.addresses.company' | t }}">
             </div>
           </div>
           <div class="form__group">
             <label for="new[address1]" class="form__label">{{ 'customers.addresses.address1' | t }}</label>
-            <input type="text" id="new[address1]" name="customer[address1]" value="{{ form.address1 }}" class="form__input" aria-label="{{ 'customers.addresses.address1' | t }}">
+            <input type="text" id="new[address1]" name="address[address1]" value="{{ form.address1 }}" class="form__input" aria-label="{{ 'customers.addresses.address1' | t }}">
           </div>
           <div class="form__group">
             <label for="new[address2]" class="form__label">{{ 'customers.addresses.address2' | t }}</label>
-            <input type="text" id="new[address2]" name="customer[address2]" value="{{ form.address2 }}" class="form__input" aria-label="{{ 'customers.addresses.address2' | t }}">
+            <input type="text" id="new[address2]" name="address[address2]" value="{{ form.address2 }}" class="form__input" aria-label="{{ 'customers.addresses.address2' | t }}">
           </div>
           <div class="form__grid">
             <div class="form__group">
               <label for="new[province]" class="form__label">{{ 'customers.addresses.province' | t }}</label>
-              <input type="text" id="new[province]" name="customer[province]" value="{{ form.province }}" class="form__input" aria-label="{{ 'customers.addresses.province' | t }}">
+              <input type="text" id="new[province]" name="address[province]" value="{{ form.province }}" class="form__input" aria-label="{{ 'customers.addresses.province' | t }}">
             </div>
             <div class="form__group">
               <label for="new[country]" class="form__label">{{ 'customers.addresses.country' | t }}</label>
-              <select id="new[country" name="customer[country]" class="form__input" aria-label="{{ 'customers.addresses.country' | t }}">{{ country_option_tags }}</select>
+              <select id="new[country" name="address[country]" class="form__input" aria-label="{{ 'customers.addresses.country' | t }}">{{ country_option_tags }}</select>
             </div>
           </div>
           <div class="form__grid">
             <div class="form__group">
               <label for="new[city]" class="form__label">{{ 'customers.addresses.city' | t }}</label>
-              <input type="text" id="new[city]" name="customer[city]" value="{{ form.city }}" class="form__input" aria-label="{{ 'customers.addresses.city' | t }}">
+              <input type="text" id="new[city]" name="address[city]" value="{{ form.city }}" class="form__input" aria-label="{{ 'customers.addresses.city' | t }}">
             </div>
             <div class="form__group">
               <label for="new[postal_code]" class="form__label">{{ 'customers.addresses.postal_code' | t }}</label>
-              <input type="text" id="new[postal_code]" name="customer[postal_code]" value="{{ form.postal_code }}" class="form__input" aria-label="{{ 'customers.addresses.postal_code' | t }}">
+              <input type="text" id="new[postal_code]" name="address[zip]" value="{{ form.postal_code }}" class="form__input" aria-label="{{ 'customers.addresses.postal_code' | t }}">
             </div>
           </div>
           <div class="form__group">
@@ -121,49 +121,49 @@
                     <div class="form__grid">
                       <div class="form__group">
                         <label for="edit-{{ form.id }}[first_name]" class="form__label">{{ 'customers.addresses.first_name' | t }}</label>
-                        <input type="text" id="edit-{{ form.id }}[first_name]" name="customer[first_name]" value="{{ form.first_name }}" class="form__input" aria-label="{{ 'customers.addresses.first_name' | t }}">
+                        <input type="text" id="edit-{{ form.id }}[first_name]" name="address[first_name]" value="{{ form.first_name }}" class="form__input" aria-label="{{ 'customers.addresses.first_name' | t }}">
                       </div>
                       <div class="form__group">
                         <label for="edit-{{ form.id }}[last_name]" class="form__label">{{ 'customers.addresses.last_name' | t }}</label>
-                        <input type="text" id="edit-{{ form.id }}[last_name]" name="customer[last_name]" value="{{ form.last_name }}" class="form__input" aria-label="{{ 'customers.addresses.last_name' | t }}">
+                        <input type="text" id="edit-{{ form.id }}[last_name]" name="address[last_name]" value="{{ form.last_name }}" class="form__input" aria-label="{{ 'customers.addresses.last_name' | t }}">
                       </div>
                     </div>
                     <div class="form__grid">
                       <div class="form__group">
                         <label for="edit-{{ form.id }}[phone]" class="form__label">{{ 'customers.addresses.phone' | t }}</label>
-                        <input type="tel" id="edit-{{ form.id }}[phone]" name="customer[phone]" value="{{ form.phone }}" class="form__input" aria-label="{{ 'customers.addresses.phone' | t }}">
+                        <input type="tel" id="edit-{{ form.id }}[phone]" name="address[phone]" value="{{ form.phone }}" class="form__input" aria-label="{{ 'customers.addresses.phone' | t }}">
                       </div>
                       <div class="form__group">
                         <label for="edit-{{ form.id }}[company]" class="form__label">{{ 'customers.addresses.company' | t }}</label>
-                        <input type="text" id="edit-{{ form.id }}[company]" name="customer[company]" value="{{ form.company }}" class="form__input" aria-label="{{ 'customers.addresses.company' | t }}">
+                        <input type="text" id="edit-{{ form.id }}[company]" name="address[company]" value="{{ form.company }}" class="form__input" aria-label="{{ 'customers.addresses.company' | t }}">
                       </div>
                     </div>
                     <div class="form__group">
                       <label for="edit-{{ form.id }}[address1]" class="form__label">{{ 'customers.addresses.address1' | t }}</label>
-                      <input type="text" id="edit-{{ form.id }}[address1]" name="customer[address1]" value="{{ form.address1 }}" class="form__input" aria-label="{{ 'customers.addresses.address1' | t }}">
+                      <input type="text" id="edit-{{ form.id }}[address1]" name="address[address1]" value="{{ form.address1 }}" class="form__input" aria-label="{{ 'customers.addresses.address1' | t }}">
                     </div>
                     <div class="form__group">
                       <label for="edit-{{ form.id }}[address2]" class="form__label">{{ 'customers.addresses.address2' | t }}</label>
-                      <input type="text" id="edit-{{ form.id }}[address2]" name="customer[address2]" value="{{ form.address2 }}" class="form__input" aria-label="{{ 'customers.addresses.address2' | t }}">
+                      <input type="text" id="edit-{{ form.id }}[address2]" name="address[address2]" value="{{ form.address2 }}" class="form__input" aria-label="{{ 'customers.addresses.address2' | t }}">
                     </div>
                     <div class="form__grid">
                       <div class="form__group">
                         <label for="edit-{{ form.id }}[province]" class="form__label">{{ 'customers.addresses.province' | t }}</label>
-                        <input type="text" id="edit-{{ form.id }}[province]" name="customer[province]" value="{{ form.province }}" class="form__input" aria-label="{{ 'customers.addresses.province' | t }}">
+                        <input type="text" id="edit-{{ form.id }}[province]" name="address[province]" value="{{ form.province }}" class="form__input" aria-label="{{ 'customers.addresses.province' | t }}">
                       </div>
                       <div class="form__group">
                         <label for="edit-{{ form.id }}[country]" class="form__label">{{ 'customers.addresses.country' | t }}</label>
-                        <select id="edit-{{ form.id }}[country" name="customer[country]" class="form__input" aria-label="{{ 'customers.addresses.country' | t }}">{{ country_option_tags }}</select>
+                        <select id="edit-{{ form.id }}[country" name="address[country]" class="form__input" aria-label="{{ 'customers.addresses.country' | t }}">{{ country_option_tags }}</select>
                       </div>
                     </div>
                     <div class="form__grid">
                       <div class="form__group">
                         <label for="edit-{{ form.id }}[city]" class="form__label">{{ 'customers.addresses.city' | t }}</label>
-                        <input  type="text" id="edit-{{ form.id }}[city]" name="customer[city]" value="{{ form.city }}" class="form__input" aria-label="{{ 'customers.addresses.city' | t }}">
+                        <input  type="text" id="edit-{{ form.id }}[city]" name="address[city]" value="{{ form.city }}" class="form__input" aria-label="{{ 'customers.addresses.city' | t }}">
                       </div>
                       <div class="form__group">
                         <label for="edit-{{ form.id }}[postal_code]" class="form__label">{{ 'customers.addresses.postal_code' | t }}</label>
-                        <input type="text" id="edit-{{ form.id }}[postal_code]" name="customer[postal_code]" value="{{ form.postal_code }}" class="form__input" aria-label="{{ 'customers.addresses.postal_code' | t }}">
+                        <input type="text" id="edit-{{ form.id }}[postal_code]" name="address[zip]" value="{{ form.postal_code }}" class="form__input" aria-label="{{ 'customers.addresses.postal_code' | t }}">
                       </div>
                     </div>
                     <div class="form__group">
