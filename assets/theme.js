@@ -646,7 +646,7 @@ function initCustomerForms() {
   const recoverPasswordForm = document.querySelector('#recoverPasswordForm');
   const addAddressBtn = document.querySelector('.address-btn__add');
   const editAddressBtn = document.querySelectorAll('.address-btn__edit');
-  const deleteAddressBtn = document.querySelector('.address-btn__delete');
+  const deleteAddressBtn = document.querySelectorAll('.address-btn__delete');
 
   const formContainer = document.querySelectorAll('[data-form]');
   formContainer.forEach(form => {
@@ -682,12 +682,20 @@ function initCustomerForms() {
       })
     }
   })
-  if (deleteAddressBtn) {
-    deleteAddressBtn.addEventListener('click', () => {
-      confirm('Are You sure You want to delete this Address?');
-      
-    })
-  }
+  deleteAddressBtn.forEach(deleteBtn => {
+    if (deleteBtn) {
+      deleteBtn.addEventListener('click', () => {
+        const formId = deleteBtn.closest('.address-grid__item').querySelector('#editAddressForm');
+        const confirmMessage = deleteBtn.getAttribute('data-confirm-message');
+        if (confirm(confirmMessage || 'Are you sure you wish to delete this address?')) {
+          if (Shopify) {
+            Shopify.postLink('/account/addresses/' + formId, {parameters: {_method: 'delete'}});
+          }
+        }
+      })
+    }
+  })
+  
 }
 initCustomerForms();
   
