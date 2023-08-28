@@ -1,57 +1,143 @@
+{%- liquid
+  assign show_filtering =  section.settings.show_filtering
+  assign show_sorting =  section.settings.show_sorting
+  assign show_breadcrumbs = settings.show_breadcrumbs
+  assign textAlignment = section.settings.text_alignment 
+  assign products_per_row = section.settings.product_per_row
+  assign products_to_show = section.settings.products_to_show
+  assign product_limit = products_per_row | times: products_to_show
+  case products_per_row   
+  when 1
+    assign itemWidth = ''
+  when 2
+    assign itemWidth = 'block__item--half'
+  when 3
+    assign itemWidth = 'block__item--auto block__item--one-third'
+  when 4
+    assign itemWidth = 'block__item--auto block__item--one-fourth'
+  when 5
+    assign itemWidth = 'block__item--auto block__item--one-fifth'
+  endcase
+
+  assign lazyloading = ''
+  assign lazyloadImages = section.settings.lazyload_images
+  if lazyloadImages
+    assign lazyloading = 'lazy'
+  endif
+-%}
+<div class="catalog-content__wrapper">
   <div class="page__width">
-    <div class="collection__title"><h2>{{ collection.title }}</h2></div>
-    {% assign products_to_show = section.settings.products_to_show %}
-    {% paginate collection.products by products_to_show %}
-
-      {% comment %} collection sorting {% endcomment %}
-      <select id="sort-by">
-        {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
-    
-        {% for option in collection.sort_options %}
-          <option value="{{ option.value }}" {% if option.value == sort_by %}selected="selected"{% endif %}>
-            {{ option.name }}
-          </option>
-        {% endfor %}
-      </select>
-
-      {% comment %} collection filters {% endcomment %}
-    <div data-next-url="{{ paginate.next.url }}" class="product__wrapper collection__wrapper">
-      {% for product in collection.products %}
-        {% render 'product-item', product: product %}
-      {% endfor %}
+    <div class="catalog__wrapper">
+      {%- if show_filtering -%}
+        <div class="collection-grid__item block__item--one-fifth">
+          {% render 'filter-facets' %}
+        </div>
+      {%- endif -%}
+      <div class="catalog-list__banner">
+        {%- for block in section.blocks -%}
+          {%- liquid
+              assign banner_heading = block.settings.banner_heading
+              assign banner_button = block.setting.banner_button
+              assign banner_link = block.settings.banner_link
+              assign banner_image = block.settings.banner_image
+              assign ratio = 0.75
+              assign default = 'grande'
+              assign sizes = '(min-width: 1200px) 650px, 45vw'
+          -%}
+          {%- if block.type == 'banner' -%}
+          <div class="catalog-header__banner">
+            <div class="header-banner__text">
+              {%- if banner_heading != blank -%}
+                <div class="main__heading">
+                  <h2>{{ banner_heading }}</h2>
+                </div>
+              {%- endif -%}
+              {%- if banner_button != blank -%}
+              <a href="{{ banner_link }}" class="btn btn__link btn__outline" title="{{ banner_button }}">{{ banner_button }}</a>
+              {%- endif -%}
+            </div>
+            <div class="header-banner__image">
+              {%- if banner_image != blank -%}
+<img
+src="{{ banner_image | img_url: default }}"
+srcset="
+  {{ banner_image | img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
+  {{ banner_image | img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
+  {{ banner_image | img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
+  {{ banner_image | img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
+  {{ banner_image | img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
+"
+width="{{ banner_image.width }}"
+height="{{ banner_image.height }}"
+loading="{{ lazyloading }}"
+sizes="{{ sizes }}"
+alt= "{{ banner_image.alt }}"
+/>
+                {%- else -%}
+                  {{ 'lifestyle-1' | placeholder_svg_tag: "placeholder__image" }}
+              {%- endif -%}
+            </div>
+          </div>
+          {%- endif -%}
+        {%- endfor -%}
+        
+        <div class="catalog__header">
+          <div class="catalog-title__container">
+            <div class="main__heading">
+              <h2>{{ collection.title }}</h2>
+            </div>
+            {%- if show_breadcrumbs -%}
+            <nav role="navigation" aria-label="breadcrumb">
+              <ul class="breadcrumb__list">
+                  <li class="breadcrumb__item">
+                      <a href="{{ routes.root_url }}" title="Home">Home</a>
+                  </li>
+                  <li class="breadcrumb__item" aria-current="page">
+                      <span>{{ collection.title }}</span>
+                  </li>
+              </ul>
+          </nav>
+            {%- endif -%}
+          </div>
+          <div class="catalog-sorting__container">
+            <div class="catalog-product_count">
+            </div>
+            {% if show_sorting %}
+            <div class="catalog__sorting">
+              <select id="sort-by">
+                {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
+                {% for option in collection.sort_options %}
+                  <option value="{{ option.value }}" {% if option.value == sort_by %}selected="selected"{% endif %}>
+                    {{ option.name }}
+                  </option>
+                {% endfor %}
+              </select>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+        {%- paginate collection.products by products_to_show -%}
+          <div class="collection-grid">
+            {%- for product in collection.products limit: product_limit -%}
+              {%- render 'product-item' 
+                , section: section,
+                textAlignment: textAlignment,
+                products_per_row: products_per_row,
+                product: product,
+                lazyloading: lazyloading,
+                itemWidth: itemWidth -%}
+            {%- endfor -%}
+          </div>
+          {%- if paginate.pages > 1 -%}
+            {%- render 'pagination', paginate: paginate -%}
+          {%- endif -%}
+        {%- endpaginate -%}
       </div>
-      <div class="load__more btn">
-        <a class="load__more--btn" onclick="loadMoreProducts()">Load More</a>
-        <div class="load__more--spinner"></div>
-      </div>
-      {% comment %} {{ paginate | default_pagination }} {% endcomment %}
-    {% endpaginate %}
+
+    </div>
   </div>
-  <script>
-  Shopify.queryParams = {};
-
-  // Preserve existing query parameters
-  if (location.search.length) {
-    var params = location.search.substr(1).split('&');
-
-    for (var i = 0; i < params.length; i++) {
-      var keyValue = params[i].split('=');
-
-      if (keyValue.length) {
-        Shopify.queryParams[decodeURIComponent(keyValue[0])] = decodeURIComponent(keyValue[1]);
-      }
-    }
-  }
-
-  // Update sort_by query parameter on select change
-  document.querySelector('#sort-by').addEventListener('change', function(e) {
-    var value = e.target.value;
-
-    Shopify.queryParams.sort_by = value;
-    location.search = new URLSearchParams(Shopify.queryParams).toString();
-  });
-</script>
-  {% schema %} 
+</div>
+{% schema %}
   {
     "name": "Collection Grid",
     "settings": [
@@ -59,12 +145,87 @@
         "type": "range",
         "id": "products_to_show",
         "label": "Product To Show",
+        "min": 8,
+        "max": 50,
+        "default": 12,
+        "step": 1
+      },
+      {
+        "type": "range",
+        "id": "products_per_row",
+        "label": "Product Per Row",
         "min": 2,
-        "max": 20,
+        "max": 5,
         "default": 4,
         "step": 1
+      },
+      {
+        "type": "header",
+        "content": "Sorting and Filtering"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_sorting",
+        "label": "Show Sorting",
+        "default": false
+      }, {
+        "type": "checkbox",
+        "id": "show_filtering",
+        "label": "Show filters",
+        "info": "[Customize filters](/admin/menus)",
+        "default": false
+      }, {
+        "type": "select",
+        "id": "text_alignment",
+        "label": "t:sections.featured-collection.settings.header_alignment.alignment.label",
+        "options": [
+          {
+            "value": "left",
+            "label": "t:sections.featured-collection.settings.header_alignment.alignment.options.left.label"
+          }, {
+            "value": "center",
+            "label": "t:sections.featured-collection.settings.header_alignment.alignment.options.center.label"
+          }, {
+            "value": "right",
+            "label": "t:sections.featured-collection.settings.header_alignment.alignment.options.right.label"
+          }
+        ],
+        "default": "center"
+      }, {
+        "type": "checkbox",
+        "id": "lazyload_images",
+        "label": "t:sections.slideshow.settings.lazyload_images.label",
+        "default": false,
+        "info": "t:sections.slideshow.settings.lazyload_images.info"
       }
-        
+    ],
+    "blocks": [
+      {
+        "type": "banner",
+        "name": "Banner",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "banner_image",
+            "label": "Image"
+          }, {
+            "type": "text",
+            "id": "banner_heading",
+            "label": "Heading",
+            "default": "Catalog"
+          }, {
+            "type": "text",
+            "id": "banner_button",
+            "label": "Button",
+            "default": "Shop Now"
+          }, {
+            "type": "url",
+            "id": "banner_link",
+            "label": "Link"
+          }
+        ]
+      }
     ]
   }
-   {% endschema %}
+{% endschema %}
