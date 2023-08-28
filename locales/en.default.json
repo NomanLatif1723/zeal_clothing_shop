@@ -138,6 +138,10 @@
     },
     "breadcrumbs": {
       "home": "Home"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next"
     }
   },
   "homepage": {
