@@ -18,6 +18,12 @@
   when 5
     assign itemWidth = 'block__item--auto block__item--one-fifth'
   endcase
+  
+  assign lazyloading = ''
+  assign lazyloadImages = section.settings.lazyload_images
+  if lazyloadImages
+  assign lazyloading = 'lazy'
+  endif
 -%}
 {%- style -%}
   .main__section-{{ section.id }}{
@@ -76,7 +82,7 @@
               products_per_row: products_per_row,
               product: product,
               collection: collection,
-              lazyloadImages: section.settings.lazyload_images,
+              lazyloading: lazyloading,
               itemWidth: itemWidth
             -%}
           {%- endfor -%}

@@ -14,10 +14,10 @@
     assign imageAspectRatio = "16/9"
     endcase
 
-   assign image = product.featured_image
-   assign ratio = 0.75
-   assign default = 'grande'
-   assign sizes = '(min-width: 1200px) 650px, 45vw'
+     assign image = product.featured_image
+     assign ratio = 0.75
+     assign default = 'grande'
+     assign sizes = '(min-width: 1200px) 650px, 45vw'
 -%}
 <div class="collection-grid__item {{ itemWidth }} {% if stackProduct == false %}list-scroller__item{% endif %}">
   <div class="featured-grid__content">
