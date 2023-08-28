@@ -104,7 +104,7 @@
             </div>
             {% if show_sorting %}
             <div class="catalog__sorting">
-              <select id="sort-by">
+              <select id="sort-by" class="rte">
                 {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
                 {% for option in collection.sort_options %}
                   <option value="{{ option.value }}" {% if option.value == sort_by %}selected="selected"{% endif %}>
