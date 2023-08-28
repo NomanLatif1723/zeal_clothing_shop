@@ -45,18 +45,6 @@
           -%}
           {%- if block.type == 'banner' -%}
           <div class="catalog-header__banner">
-            <div class="header-banner__text">
-              <div class="header-banner__shadow">
-                {%- if banner_heading != blank -%}
-                  <div class="banner__heading">
-                    <h1>{{ banner_heading }}</h1>
-                  </div>
-                {%- endif -%}
-                {%- if banner_button != blank -%}
-                <a href="{{ banner_link }}" class="btn btn__link btn__outline" title="{{ banner_button }}">{{ banner_button }}</a>
-                {%- endif -%}
-              </div>
-            </div>
             <div class="header-banner__image">
               {%- if banner_image != blank -%}
                 <img
@@ -77,6 +65,18 @@
                 {%- else -%}
                   {{ 'lifestyle-1' | placeholder_svg_tag: "placeholder__image" }}
               {%- endif -%}
+            </div>
+            <div class="header-banner__text">
+              <div class="header-banner__shadow">
+                {%- if banner_heading != blank -%}
+                  <div class="banner__heading">
+                    <h1>{{ banner_heading }}</h1>
+                  </div>
+                {%- endif -%}
+                {%- if banner_button != blank -%}
+                <a href="{{ banner_link }}" class="btn btn__link btn__outline" title="{{ banner_button }}">{{ banner_button }}</a>
+                {%- endif -%}
+              </div>
             </div>
           </div>
           {%- endif -%}
