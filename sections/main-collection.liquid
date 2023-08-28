@@ -87,9 +87,9 @@
             </div>
             {%- if show_breadcrumbs -%}
             <nav role="navigation" aria-label="breadcrumb">
-              <ul class="breadcrumb__list rte">
+              <ul class="breadcrumb__list">
                   <li class="breadcrumb__item">
-                      <a class="rte" href="{{ routes.root_url }}" title="Home">{{ 'general.breadcrumbs.home' | t }}</a>
+                      <a href="{{ routes.root_url }}" title="Home">{{ 'general.breadcrumbs.home' | t }}</a>
                   </li>
                   <li class="breadcrumb__item" aria-current="page">
                       <span>{{ collection.title }}</span>
