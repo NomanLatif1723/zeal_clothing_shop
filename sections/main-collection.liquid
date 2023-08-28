@@ -67,7 +67,7 @@
               {%- endif -%}
             </div>
             <div class="header-banner__text">
-              {% comment %} <div class="header-banner__shadow"> {% endcomment %}
+              <div class="header-banner__shadow">
                 {%- if banner_heading != blank -%}
                   <div class="banner__heading">
                     <h1>{{ banner_heading }}</h1>
@@ -76,7 +76,7 @@
                 {%- if banner_button != blank -%}
                 <a href="{{ banner_link }}" class="btn btn__link btn__outline" title="{{ banner_button }}">{{ banner_button }}</a>
                 {%- endif -%}
-              <!-- </div> -->
+              </div>
             </div>
           </div>
           {%- endif -%}
