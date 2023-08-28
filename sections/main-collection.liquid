@@ -46,14 +46,16 @@
           {%- if block.type == 'banner' -%}
           <div class="catalog-header__banner">
             <div class="header-banner__text">
-              {%- if banner_heading != blank -%}
-                <div class="main__heading">
-                  <h2>{{ banner_heading }}</h2>
-                </div>
-              {%- endif -%}
-              {%- if banner_button != blank -%}
-              <a href="{{ banner_link }}" class="btn btn__link btn__outline" title="{{ banner_button }}">{{ banner_button }}</a>
-              {%- endif -%}
+              <div class="header-banner__shadow">
+                {%- if banner_heading != blank -%}
+                  <div class="main__heading">
+                    <h2>{{ banner_heading }}</h2>
+                  </div>
+                {%- endif -%}
+                {%- if banner_button != blank -%}
+                <a href="{{ banner_link }}" class="btn btn__link btn__outline" title="{{ banner_button }}">{{ banner_button }}</a>
+                {%- endif -%}
+              </div>
             </div>
             <div class="header-banner__image">
               {%- if banner_image != blank -%}
