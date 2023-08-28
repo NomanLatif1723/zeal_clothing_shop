@@ -119,11 +119,12 @@ alt= "{{ banner_image.alt }}"
         {%- paginate collection.products by products_to_show -%}
           <div class="collection-grid">
             {%- for product in collection.products limit: product_limit -%}
-              {%- render 'product-item' 
-                , section: section,
+              {%- render 'product-item',
+                section: section,
                 textAlignment: textAlignment,
                 products_per_row: products_per_row,
                 product: product,
+                collection: collection,
                 lazyloading: lazyloading,
                 itemWidth: itemWidth -%}
             {%- endfor -%}
