@@ -719,11 +719,15 @@ Shopify.queryParams = {};
   }
 
   // Update sort_by query parameter on select change
-  document.querySelector('#sort-by').addEventListener('change', function(e) {
-    var value = e.target.value;
-
-    Shopify.queryParams.sort_by = value;
-    location.search = new URLSearchParams(Shopify.queryParams).toString();
-  });
+  const sortContainer = document.querySelector('#sort-by');
+  if (sortContainer) {
+    sortContainer.addEventListener('change', function(e) {
+      var value = e.target.value;
+  
+      Shopify.queryParams.sort_by = value;
+      location.search = new URLSearchParams(Shopify.queryParams).toString();
+    });
+  }
+  
   
 })();
