@@ -11,7 +11,8 @@
   },
   "collections": {
     "general": {
-      "all_collection": "View All"
+      "all_collection": "View All",
+      "product_count": "Results"
     }
   },
   "collection-list": {
