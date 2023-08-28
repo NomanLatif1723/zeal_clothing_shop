@@ -12,7 +12,7 @@
   "collections": {
     "general": {
       "all_collection": "View All",
-      "product_count": "Results"
+      "products_count": "{{ products_count }} Results"
     }
   },
   "collection-list": {
