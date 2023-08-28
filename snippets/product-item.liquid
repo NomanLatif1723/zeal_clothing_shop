@@ -14,12 +14,6 @@
     assign imageAspectRatio = "16/9"
     endcase
 
-    assign lazyloading = ''
-    assign lazyloadImages = lazyloadImages
-    if lazyloadImages
-    assign lazyloading = 'lazy'
-    endif
-
    assign image = product.featured_image
    assign ratio = 0.75
    assign default = 'grande'
