@@ -101,7 +101,7 @@
           </div>
           <div class="catalog-sorting__container">
             <div class="catalog-product_count">
-              {{ collection.products_count }}
+              {{ 'collections.general.products_count' | t: products_count:collection.products_count }}
             </div>
             {% if show_sorting %}
             <div class="catalog__sorting">
