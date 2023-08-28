@@ -92,7 +92,7 @@
       </div>
 
       {%- if settings.show_color_swatches and product.variants.size > 1 -%}
-        {% render 'product-options-swatches', product: product %}
+        {%- render 'product-options-swatches', product: product -%}
       {%- endif -%}
     </div>
     <div class="grid__badge">
