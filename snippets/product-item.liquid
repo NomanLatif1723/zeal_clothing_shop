@@ -91,7 +91,7 @@
         {%- endif -%}
       </div>
 
-      {%- if settings.show_color_swatches -%}
+      {%- if settings.show_color_swatches and product.has_only_default_variant -%}
         {% render 'product-options-swatches', product: product %}
       {%- endif -%}
     </div>
