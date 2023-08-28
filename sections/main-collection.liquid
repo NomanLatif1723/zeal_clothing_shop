@@ -58,21 +58,21 @@
             </div>
             <div class="header-banner__image">
               {%- if banner_image != blank -%}
-<img
-src="{{ banner_image | img_url: default }}"
-srcset="
-  {{ banner_image | img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
-  {{ banner_image | img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
-  {{ banner_image | img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
-  {{ banner_image | img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
-  {{ banner_image | img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
-"
-width="{{ banner_image.width }}"
-height="{{ banner_image.height }}"
-loading="{{ lazyloading }}"
-sizes="{{ sizes }}"
-alt= "{{ banner_image.alt }}"
-/>
+                <img
+                src="{{ banner_image | img_url: default }}"
+                srcset="
+                  {{ banner_image | img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
+                  {{ banner_image | img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
+                  {{ banner_image | img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
+                  {{ banner_image | img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
+                  {{ banner_image | img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
+                "
+                width="{{ banner_image.width }}"
+                height="{{ banner_image.height }}"
+                loading="{{ lazyloading }}"
+                sizes="{{ sizes }}"
+                alt= "{{ banner_image.alt }}"
+                />
                 {%- else -%}
                   {{ 'lifestyle-1' | placeholder_svg_tag: "placeholder__image" }}
               {%- endif -%}
@@ -118,7 +118,7 @@ alt= "{{ banner_image.alt }}"
         </div>
         {%- paginate collection.products by products_to_show -%}
           <div class="collection-grid">
-            {%- for product in collection.products limit: product_limit -%}
+            {%- for product in collection.products limit: products_to_show -%}
               {%- render 'product-item',
                 section: section,
                 textAlignment: textAlignment,
@@ -126,7 +126,8 @@ alt= "{{ banner_image.alt }}"
                 product: product,
                 collection: collection,
                 lazyloading: lazyloading,
-                itemWidth: itemWidth -%}
+                itemWidth: itemWidth 
+              -%}
             {%- endfor -%}
           </div>
           {%- if paginate.pages > 1 -%}
