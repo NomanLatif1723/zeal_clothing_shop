@@ -7,50 +7,52 @@
     assign default = 'grande'
     assign sizes = '(min-width: 1200px) 650px, 45vw'
 -%}
-<collection-item class="collection-grid__item{% if collection_layout == 'slider' %} swiper-slide{% else %} {{ itemWidth }}{% endif %}{% if swipe_on_mobile %} collection-item__scroll{% endif %}">
+<collection-item class="collection-grid__item{% if collection_layout == 'slider' %} swiper-slide{% else %} {{ itemWidth }}{% endif %}{% if swipe_on_mobile and collection_layout == 'grid' %} collection-item__scroll{% endif %}">
   <div class="collection-grid__content">
-    <div class="collection-grid__image " style="aspect-ratio: {{ imageAspectRatio }};">
-      <img
-          class="collection__image"
-          src="{{ collection_image | img_url: default }}"
-          srcset="
-              {{ collection_image | img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
-              {{ collection_image | img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
-              {{ collection_image | img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
-              {{ collection_image | img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
-              {{ collection_image | img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
-          "
-          width="{{ collection_image.width }}"
-          height="{{ collection_image.height }}"
-          loading="{{ lazyloading }}"
-          sizes="{{ sizes }}"
-          alt="{{ collection_image.alt }}" />
-      {%- if settings.overlay_style == false -%}
-        <div class="overlay-box__container text__align-{{ textAlignment }}">
-          <div class="collection-grid__text">
-            <div class="collection-grid__title">
-              <h4>{{ collection.title }}</h4>
-            </div>
-            {%- if products_count -%}
-              <div class="collection-grid-count">
-                <span>({{ collection.all_products_count }})</span>
+    <a href="{{ collection.url }}" title="{{ collection.title }}">
+      <div class="collection-grid__image " style="aspect-ratio: {{ imageAspectRatio }};">
+        <img
+            class="collection__image"
+            src="{{ collection_image | img_url: default }}"
+            srcset="
+                {{ collection_image | img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
+                {{ collection_image | img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
+                {{ collection_image | img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
+                {{ collection_image | img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
+                {{ collection_image | img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
+            "
+            width="{{ collection_image.width }}"
+            height="{{ collection_image.height }}"
+            loading="{{ lazyloading }}"
+            sizes="{{ sizes }}"
+            alt="{{ collection_image.alt }}" />
+        {%- if settings.overlay_style == false -%}
+          <div class="overlay-box__container text__align-{{ textAlignment }}">
+            <div class="collection-grid__text">
+              <div class="collection-grid__title">
+                <h4>{{ collection.title }}</h4>
               </div>
-            {%- endif -%}
-          </div>
-        </div>
-      {%- endif -%}
-    </div>
-    {%- if settings.overlay_style -%}
-      <div class="collection-grid__text text__align-{{ textAlignment }}">   
-        <div class="collection-grid__title">
-          <h4>{{ collection.title }}</h4>
-        </div>
-        {%- if products_count -%}
-          <div class="collection-grid-count">
-            <span>({{ collection.all_products_count }})</span>
+              {%- if products_count -%}
+                <div class="collection-grid-count">
+                  <span>({{ collection.all_products_count }})</span>
+                </div>
+              {%- endif -%}
+            </div>
           </div>
         {%- endif -%}
       </div>
-    {%- endif -%}
+      {%- if settings.overlay_style -%}
+        <div class="collection-grid__text text__align-{{ textAlignment }}">   
+          <div class="collection-grid__title">
+            <h4>{{ collection.title }}</h4>
+          </div>
+          {%- if products_count -%}
+            <div class="collection-grid-count">
+              <span>({{ collection.all_products_count }})</span>
+            </div>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </a>
   </div>
 </collection-item>
