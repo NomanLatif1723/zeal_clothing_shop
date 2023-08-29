@@ -5,7 +5,7 @@
     assign filter_drawer_position = 'right'
   endif
 -%}
-<div class="filter-drawer__{{ filter_drawer_position }}">
+<div class="filter-drawer filter-drawer__{{ filter_drawer_position }}">
   <div class="drawer__overlay-container"></div>
   <form class="filter-form >
     {%- for filter in collection.filters -%}
