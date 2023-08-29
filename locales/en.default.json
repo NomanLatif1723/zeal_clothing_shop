@@ -141,8 +141,7 @@
     },
     "pagination": {
       "previous": "Previous",
-      "next": "Next",
-      "items_count_html": "Showing <span>{{ start_point }} - {{ end_point }}<\/span> of {{ total_products }}"
+      "next": "Next"
     }
   },
   "homepage": {
