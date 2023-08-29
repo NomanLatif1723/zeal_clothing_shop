@@ -10,13 +10,11 @@
 <div class="nav-drawer menu-drawer__{{ menu_drawer_position }}">
   <div class="drawer__overlay-container"></div>
   <div class="nav-content__wrapper">
-    <div class="nav-drawer__header">
-      <div class="nav-drawer__title">{{ 'sections.header.general.navigation' | t }}</div>
-      <div class="nav-drawer__close">
-        <button class="nav-icon__close">
-          {%- render 'icon-close' -%}
-        </button>
-      </div>
+    <div class="drawer__header">
+      <div class="drawer__title">{{ 'sections.header.general.navigation' | t }}</div>
+      <button class="drawer-icon__close nav-icon__close">
+        {%- render 'icon-close' -%}
+      </button>
     </div>
     <div class="nav-main__contents">
       {%- render 'nav-drawer-desktop',
