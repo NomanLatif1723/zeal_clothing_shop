@@ -37,10 +37,6 @@
   display: inline-flex;
   cursor: pointer;
 } */
-
-.drawer__opening{
-  overflow-y: hidden;
-}
 .icon__rotate{
   transform:rotate(180deg);
 }
