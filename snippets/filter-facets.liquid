@@ -1,20 +1,18 @@
 <form class="filter-form">
   {%- for filter in collection.filters -%}
-    <details class="filter-group">
-      <summary class="filter-group-summary">
+    <aside class="filter-group">
+      <div class="filter-group__item">
         <div>
           <span>{{ filter.label }}</span>
-
+          {%- render 'icon-arrow-down' -%}
           {%- if filter.active_values.size > 0 -%}
             <span>({{ filter.active_values.size }})</span>
           {%- endif -%}
         </div>
-      </summary>
+      </div>
 
       <div class="filter-group-display">
         <div class="filter-group-display__header">
-          <span class="filter-group-display__header-selected">{{ filter.active_values.size }} selected</span>
-
           {%- if filter.active_values.size > 0 -%}
             <a href="{{ filter.url_to_remove }}" class="filter-group-display__header-reset">Reset</a>
           {%- endif -%}
@@ -63,7 +61,7 @@
           </div>
         {%- endcase -%}
       </div>
-    </details>
+    </aside>
   {%- endfor -%}
 
   <div class="active-filters">
