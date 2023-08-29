@@ -22,7 +22,7 @@
           {%- when 'boolean' or 'list' -%}
           <ul class="filter-group__dropdown--list">
             {%- for filter_value in filter.values -%}
-              <li class="filter-group__dropdown--list-item">
+              <li class="filter-group__dropdown--list-item{% if forloop.index > 4 %} hidden{% endif %}">
                 <label class="form__label" for="Filter-{{ filter.param_name }}-{{ forloop.index }}">
                   <input
                     class="form__input"
