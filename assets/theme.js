@@ -734,10 +734,9 @@ function initCollections() {
   }
   function collectionFilters() {
     const filterItem = document.querySelectorAll('.filter-group__item');
-    const filterGroup = document.querySelector('.filter-group');
     filterItem.forEach(item => {
       item.addEventListener('click', (event) => {
-        event.target.closest(filterGroup).querySelector('.filter-group__dropdown').classList.toggle('hidden');
+        event.target.closest('.filter-group').querySelector('.filter-group__dropdown').classList.toggle('hidden');
       })
     })
   }
