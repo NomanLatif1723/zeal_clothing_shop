@@ -22,6 +22,8 @@
           {%- when 'boolean' or 'list' -%}
           <ul class="filter-group__dropdown--list">
             {%- for filter_value in filter.values -%}
+              {%- assign limit = 5 -%}
+              {%- if limit > 0 -%}
               <li class="filter-group__dropdown--list-item">
                 <label class="form__label" for="Filter-{{ filter.param_name }}-{{ forloop.index }}">
                   <input
@@ -35,6 +37,8 @@
                     <span>({{ filter_value.count }})</span>
                   </label>
               </li>
+              {%- assign limit = limit | minus: 1 -%}
+              {%- endif -%}
             {%- endfor -%}
           </ul>
 
