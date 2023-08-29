@@ -21,8 +21,8 @@
         {%- case filter.type -%}
           {%- when 'boolean' or 'list' -%}
           <ul class="filter-group__dropdown--list">
-            {%- for filter_value in filter.values -%}
-              <li class="filter-group__dropdown--list-item{% if forloop.index > 4 %} hidden{% endif %}">
+            {%- for filter_value in filter.values limit: 4 -%}
+              <li class="filter-group__dropdown--list-item">
                 <label class="form__label" for="Filter-{{ filter.param_name }}-{{ forloop.index }}">
                   <input
                     class="form__input"
@@ -35,7 +35,11 @@
                     <span>({{ filter_value.count }})</span>
                   </label>
               </li>
+            {% if filter.values > 4 %}
+              <button>show more</button>
+              {% endif %}
             {%- endfor -%}
+          
           </ul>
 
           <div class="filter-group__dropdown--submit">
