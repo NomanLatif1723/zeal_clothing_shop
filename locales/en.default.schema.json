@@ -876,7 +876,8 @@
             "label": "Show Sorting"
           },
           "show_filtering": {
-            "label": "Show Filters"
+            "label": "Show Filters",
+            "info": "[Customize filters](\/admin\/menus)"
           },
           "show_collection_count": {
             "label": "Show Collection Count"
