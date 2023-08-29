@@ -30,7 +30,7 @@
           {%- case filter.type -%}
             {%- when 'boolean' or 'list' -%}
             <ul class="filter-group__dropdown--list">
-              {%- for filter_value in filter.values-%}
+              {%- for filter_value in filter.values -%}
                 <li class="filter-group__dropdown--list-item">
                   <label class="form__label" for="Filter-{{ filter.param_name }}-{{ forloop.index }}">
                     <input
