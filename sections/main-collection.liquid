@@ -162,12 +162,12 @@
 </div>
 {% schema %}
   {
-    "name": "Collection Grid",
+    "name": "t:sections.main-collection.name",
     "settings": [
       {
         "type": "range",
         "id": "products_to_show",
-        "label": "Product To Show",
+        "label": "t:sections.main-collection.products_to_show.label",
         "min": 8,
         "max": 50,
         "default": 12,
@@ -176,7 +176,7 @@
       {
         "type": "range",
         "id": "products_per_row",
-        "label": "Product Per Row",
+        "label": "t:sections.main-collection.products_per_row.label",
         "min": 2,
         "max": 5,
         "default": 4,
@@ -184,45 +184,45 @@
       },
       {
         "type": "header",
-        "content": "Sorting and Filtering"
+        "content": "t:sections.main-collection.header_sorting.label"
       },
       {
         "type": "checkbox",
         "id": "show_sorting",
-        "label": "Show Sorting",
+        "label": "t:sections.main-collection.header_sorting.show_sorting.label",
         "default": false
       },
       {
         "type": "checkbox",
         "id": "show_filtering",
-        "label": "Show filters",
+        "label": "t:sections.main-collection.header_sorting.show_filtering.label",
         "info": "[Customize filters](/admin/menus)",
         "default": false
       },
       {
         "type": "checkbox",
         "id": "show_collection_count",
-        "label": "Show Collection Count",
+        "label": "t:sections.main-collection.header_sorting.show_collection_count.label",
         "default": false
       },
       {
         "type": "header",
-        "content": "t:sections.featured-collection.settings.header_alignment.label"
+        "content": "t:sections.main-collection.settings.header_alignment.label"
       },
       {
         "type": "select",
         "id": "text_alignment",
-        "label": "t:sections.featured-collection.settings.header_alignment.alignment.label",
+        "label": "t:sections.main-collection.settings.header_alignment.alignment.label",
         "options": [
           {
             "value": "left",
-            "label": "t:sections.featured-collection.settings.header_alignment.alignment.options.left.label"
+            "label": "t:sections.main-collection.settings.header_alignment.alignment.options.left.label"
           }, {
             "value": "center",
-            "label": "t:sections.featured-collection.settings.header_alignment.alignment.options.center.label"
+            "label": "t:sections.main-collection.settings.header_alignment.alignment.options.center.label"
           }, {
             "value": "right",
-            "label": "t:sections.featured-collection.settings.header_alignment.alignment.options.right.label"
+            "label": "t:sections.main-collection.settings.header_alignment.alignment.options.right.label"
           }
         ],
         "default": "center"
@@ -230,13 +230,13 @@
       {
         "type": "checkbox",
         "id": "lazyload_images",
-        "label": "t:sections.slideshow.settings.lazyload_images.label",
+        "label": "t:sections.main-collection.settings.lazyload_images.label",
         "default": false,
-        "info": "t:sections.slideshow.settings.lazyload_images.info"
+        "info": "t:sections.main-collection.settings.lazyload_images.info"
       },
       {
         "type": "header",
-        "content": "t:sections.featured-collection.settings.header_spacing.label"
+        "content": "t:sections.main-collection.settings.header_spacing.label"
       },
       {
         "type": "range",
@@ -245,7 +245,7 @@
         "max": 100,
         "step": 2,
         "unit": "px",
-        "label": "t:sections.featured-collection.settings.header_spacing.top_spacing.label",
+        "label": "t:sections.main-collection.settings.header_spacing.top_spacing.label",
         "default": 16
       },
       {
@@ -255,7 +255,7 @@
         "max": 100,
         "step": 2,
         "unit": "px",
-        "label": "t:sections.featured-collection.settings.header_spacing.bottom_spacing.label",
+        "label": "t:sections.main-collection.settings.header_spacing.bottom_spacing.label",
         "default": 16
       }
     ],
