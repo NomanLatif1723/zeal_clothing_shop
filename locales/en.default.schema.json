@@ -913,6 +913,23 @@
         }
       },
       "blocks": {
+        "banner": {
+          "name": "Banner",
+          "settings": {
+            "banner_image": {
+              "label": "Image"
+            },
+            "banner_heading": {
+              "label": "Heading"
+            },
+            "banner_button": {
+              "label": "Button"
+            },
+            "banner_link": {
+              "label": "Link"
+            }
+          }
+        }
       }
     },
     "marquee-text": {
