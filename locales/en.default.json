@@ -13,7 +13,8 @@
     "general": {
       "all_collection": "View All",
       "products_count": "{{ products_count }} Results",
-      "fiter_collection": "Filter\/Sort"
+      "fiter_collection": "Filter\/Sort",
+      "filter_drawer": "Filter and Sort"
     }
   },
   "collection-list": {
