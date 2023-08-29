@@ -23,7 +23,7 @@
           <ul class="filter-group__dropdown--list">
             {%- assign limit = 5 -%}
               {%- if limit > 0 -%}
-            {%- for filter_value in filter.values -%}
+            {%- for filter_value in filter.values limit: limit-%}
               
               <li class="filter-group__dropdown--list-item">
                 <label class="form__label" for="Filter-{{ filter.param_name }}-{{ forloop.index }}">
