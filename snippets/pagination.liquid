@@ -4,12 +4,12 @@
     {{ 'general.pagination.items_count_html' | t: start_point: paginate.current_offset | plus: 1, end_point: paginate.current_offset | plus: paginate.page_size, total_products: collection.all_products_count }}
     {% endcomment %}
     {% if paginate.next.is_link %}
-      Showing products {{ paginate.current_offset | plus: 1 }} - {{ paginate.current_offset | plus: paginate.page_size }} of {{ collection.all_products_count }}
+      Showing <strong>{{ paginate.current_offset | plus: 1 }} - {{ paginate.current_offset | plus: paginate.page_size }}</strong> of {{ collection.all_products_count }}
     {% else %}
     {% capture itemsOnCurrentPage %}
       {{ collection.all_products_count | minus: paginate.current_offset }}
     {% endcapture %}
-      Showing products {{ paginate.current_offset | plus: 1 }} - {{ paginate.current_offset | plus: itemsOnCurrentPage }} of {{ collection.all_products_count }}
+      Showing <strong>{{ paginate.current_offset | plus: 1 }} - {{ paginate.current_offset | plus: itemsOnCurrentPage }}</strong> of {{ collection.all_products_count }}
     {% endif %}
   </div>
   <div class="pagination-right__container">
