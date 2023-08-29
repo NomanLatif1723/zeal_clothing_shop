@@ -745,7 +745,7 @@ function initCollections() {
     })
     if (filterBtn) {
       filterBtn.addEventListener('click', () => {
-        
+        const filterModal = document.querySelector('.filter-drawer');
       })
     }
   }
