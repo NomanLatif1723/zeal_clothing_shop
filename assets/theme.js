@@ -735,6 +735,7 @@ function initCollections() {
   function collectionFilters() {
     const filterItem = document.querySelectorAll('.filter-group__item');
     const filterBtn = document.querySelector('.filter__btn');
+    const filterDrawer = document.querySelector('.filter-drawer');
     filterItem.forEach(item => {
         item.addEventListener('click', (event) => {
           event.target.closest('.filter-group').querySelector('.filter-group__dropdown').classList.toggle('hidden');
@@ -743,8 +744,11 @@ function initCollections() {
     })
     if (filterBtn) {
       filterBtn.addEventListener('click', () => {
-        const filterModal = document.querySelector('.filter-drawer');
+        openFilterDrawer();
       })
+      function openFilterDrawer() {
+        filterDrawer.classList.add('drawer-open__left');
+      }
     }
   }
 }
