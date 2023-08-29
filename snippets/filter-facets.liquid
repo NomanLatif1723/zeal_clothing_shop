@@ -35,7 +35,7 @@
                     <span>({{ filter_value.count }})</span>
                   </label>
               </li>
-            {% if filter.values > 4 %}
+            {% if filter_value.value > 4 %}
               <button>show more</button>
               {% endif %}
             {%- endfor -%}
