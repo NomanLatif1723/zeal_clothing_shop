@@ -737,7 +737,7 @@ function initCollections() {
     let filterBtn = document.querySelector('.filter__btn');
     let filterDrawer = document.querySelector('.filter-drawer');
     let overlayShadow = document.querySelector('.drawer__overlay-container');
-    let closeMenuDrawerBtn = document.querySelector('.filter-icon__close');
+    let closefilterDrawerBtn = document.querySelector('.filter-icon__close');
     let bodyContainer = document.querySelector('body');
     filterItem.forEach(item => {
         item.addEventListener('click', (event) => {
