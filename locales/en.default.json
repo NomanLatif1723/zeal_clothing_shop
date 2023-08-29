@@ -14,7 +14,8 @@
       "all_collection": "View All",
       "products_count": "{{ products_count }} Results",
       "fiter_collection": "Filter\/Sort",
-      "filter_drawer": "Filter and Sort"
+      "filter_drawer": "Filter By",
+      "sort_drawer": "Sort By"
     }
   },
   "collection-list": {
