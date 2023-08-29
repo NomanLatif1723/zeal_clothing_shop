@@ -28,7 +28,7 @@
     "show_quick_view": true,
     "show_color_swatches": true,
     "show_vendor": false,
-    "show_second_image": false,
+    "show_second_image": true,
     "sale_badge_color": "#9d1339",
     "soldout_badge_color": "#a6a9ab",
     "social_facebook_url": "facebook.com",
