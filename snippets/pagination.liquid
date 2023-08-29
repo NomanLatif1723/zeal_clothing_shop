@@ -1,6 +1,6 @@
 <div class="pagination__wrapper">
   <div class="pagination-left__container">
-    Showing <span>{{ paginate.current_offset }} - {{ paginate.items }}</span> of {{ paginate.items }}
+    {{ 'general.pagination.items_count_html' | t: start_point: paginate.current_offset, end_point: , total_products: paginate.items }}
   </div>
   <div class="pagination-right__container">
     {%- if paginate.previous -%}
