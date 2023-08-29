@@ -21,8 +21,9 @@
           <ul class="filter-group__dropdown--list">
             {%- for filter_value in filter.values -%}
               <li class="filter-group__dropdown--list-item">
-                <label for="Filter-{{ filter.param_name }}-{{ forloop.index }}">
+                <label class="form__label" for="Filter-{{ filter.param_name }}-{{ forloop.index }}">
                   <input
+                    class="form__input"
                     type="checkbox"
                     name="{{ filter_value.param_name }}"
                     value="{{ filter_value.value }}"
@@ -39,18 +40,14 @@
           {%- when 'price_range' -%}
           <div class="filter-group__dropdown--price-range">
             <div class="filter-group__dropdown--price-range-from">
+              <label class="form__label" for="Filter-{{ filter.min_value.param_name }}">From</label>
               <span>{{ cart.currency.symbol }}</span>
-
-              <input name="{{ filter.min_value.param_name }}"id="Filter-{{ filter.min_value.param_name }}"{% if filter.min_value.value -%}value="{{ filter.min_value.value | money_without_currency | replace: ',', '' }}"{%- endif %}type="number"placeholder="0"min="0"max="{{ filter.range_max | money_without_currency | replace: ',', '' }}">
-
-              <label for="Filter-{{ filter.min_value.param_name }}">From</label>
+              <input class="form__input" name="{{ filter.min_value.param_name }}"id="Filter-{{ filter.min_value.param_name }}"{% if filter.min_value.value -%}value="{{ filter.min_value.value | money_without_currency | replace: ',', '' }}"{%- endif %}type="number"placeholder="0"min="0"max="{{ filter.range_max | money_without_currency | replace: ',', '' }}">
             </div>
             <div class="filter-group__dropdown--price-range-to">
+              <label class="form__label" for="Filter-{{ filter.max_value.param_name }}">To</label>
               <span>{{ cart.currency.symbol }}</span>
-
-              <input name="{{ filter.max_value.param_name }}"id="Filter-{{ filter.max_value.param_name }}"{% if filter.max_value.value -%}value="{{ filter.max_value.value | money_without_currency | replace: ',', '' }}"{%- endif %}type="number"placeholder="{{ filter.range_max | money_without_currency | replace: ',', '' }}"min="0"max="{{ filter.range_max | money_without_currency | replace: ',', '' }}">
-
-              <label for="Filter-{{ filter.max_value.param_name }}">To</label>
+              <input class="form__input" name="{{ filter.max_value.param_name }}"id="Filter-{{ filter.max_value.param_name }}"{% if filter.max_value.value -%}value="{{ filter.max_value.value | money_without_currency | replace: ',', '' }}"{%- endif %}type="number"placeholder="{{ filter.range_max | money_without_currency | replace: ',', '' }}"min="0"max="{{ filter.range_max | money_without_currency | replace: ',', '' }}">
             </div>
           </div>
 
