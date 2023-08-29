@@ -21,10 +21,7 @@
         {%- case filter.type -%}
           {%- when 'boolean' or 'list' -%}
           <ul class="filter-group__dropdown--list">
-            {%- assign limit = 5 -%}
-              {%- if limit > 0 -%}
-            {%- for filter_value in filter.values limit: limit-%}
-              
+            {%- for filter_value in filter.values-%}
               <li class="filter-group__dropdown--list-item">
                 <label class="form__label" for="Filter-{{ filter.param_name }}-{{ forloop.index }}">
                   <input
@@ -39,8 +36,6 @@
                   </label>
               </li>
             {%- endfor -%}
-                {%- assign limit = limit | minus: 1 -%}
-              {%- endif -%}
           </ul>
 
           <div class="filter-group__dropdown--submit">
