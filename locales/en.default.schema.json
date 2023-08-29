@@ -864,6 +864,24 @@
     "main-collection": {
       "name": "Collection Grid",
       "settings": {
+        "products_to_show": {
+          "label": "Products To Show"
+        },
+        "products_per_row": {
+          "label": "Products Per Row"
+        },
+        "header_sorting": {
+          "label": "Sorting and Filtering",
+          "show_sorting": {
+            "label": "Show Sorting"
+          },
+          "show_filtering": {
+            "label": "Show Filters"
+          },
+          "show_collection_count": {
+            "label": "Show Collection Count"
+          }
+        },
         "header_alignment": {
           "label": "Alignment",
           "alignment": {
@@ -882,8 +900,7 @@
           }
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Enable LazyLoad Images"
         },
         "header_spacing": {
           "label": "Section Spacing",
