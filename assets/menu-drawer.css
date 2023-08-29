@@ -26,7 +26,7 @@
   right: -200%;
   transition: all 0.5s ease;
 }
-.nav-drawer__header {
+/* .nav-drawer__header {
     display: flex;
     justify-content: space-between;
     padding: 30px 25px;
@@ -36,7 +36,7 @@
 .nav-icon__close {
   display: inline-flex;
   cursor: pointer;
-}
+} */
 
 .drawer__opening{
   overflow-y: hidden;
