@@ -53,11 +53,9 @@
           <div class="filter-drawer filter-drawer__{{ filter_drawer_position }}">
             <div class="drawer__header">
               <div class="drawer__title">{{ 'collections.general.fiter_collection' | t }}</div>
-              <div class="drawer__close">
-                <button class="drawer-icon__close filter-icon__close">
-                  {%- render 'icon-close' -%}
-                </button>
-              </div>
+              <button class="drawer-icon__close filter-icon__close">
+                {%- render 'icon-close' -%}
+              </button>
             </div>
             {% render 'filter-facets' %}
           </div>
