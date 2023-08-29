@@ -4,9 +4,11 @@
       <div class="filter-group__item">
         <span>{{ filter.label }}</span>
         {%- render 'icon-arrow-down' -%}
+        {% comment %}
         {%- if filter.active_values.size > 0 -%}
           <span>({{ filter.active_values.size }})</span>
         {%- endif -%}
+        {% endcomment %}
       </div>
 
       <div class="filter-group__dropdown hidden">
