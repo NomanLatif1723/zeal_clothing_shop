@@ -11,7 +11,7 @@
         {% endcomment %}
       </div>
 
-      <div class="filter-group__dropdown{% if forloop.index > 3 %} hidden{% endif %}">
+      <div class="filter-group__dropdown{% if forloop.index > 5 %} hidden{% endif %}">
         <div class="filter-group__dropdown--header">
           {%- if filter.active_values.size > 0 -%}
             <a href="{{ filter.url_to_remove }}" class="filter-group__dropdown--header-reset">Reset</a>
