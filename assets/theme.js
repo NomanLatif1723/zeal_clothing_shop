@@ -737,6 +737,7 @@ function initCollections() {
     filterItem.forEach(item => {
       item.addEventListener('click', (event) => {
         event.target.closest('.filter-group').querySelector('.filter-group__dropdown').classList.toggle('hidden');
+        event.target.closest('.filter-group').querySelector('.icon__arrow').classList.toggle('icon__rotate');
       })
     })
   }
