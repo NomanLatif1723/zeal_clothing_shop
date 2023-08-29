@@ -5,7 +5,7 @@
     assign site_drawer_position = 'right'
   endif
 -%}
-<form class="filter-form">
+<form class="filter-form site-drawer__{{ site_drawer_position }}">
   {%- for filter in collection.filters -%}
     <aside class="filter-group">
       <div class="filter-group__item">
