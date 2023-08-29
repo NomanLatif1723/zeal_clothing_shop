@@ -755,7 +755,7 @@ function initCollections() {
         })
       }
       function openFilterDrawer() {
-        if (filterDrawer.classList.contains('menu-drawer__left')) {
+        if (filterDrawer.classList.contains('filter-drawer__left')) {
           filterDrawer.classList.add('drawer-open__left');
         } else {
           filterDrawer.classList.add('drawer-open__right');
@@ -764,7 +764,7 @@ function initCollections() {
         bodyContainer.classList.add('drawer__opening');
       }
       function closeFilterDrawer() {
-        if (filterDrawer.classList.contains('menu-drawer__left')) {
+        if (filterDrawer.classList.contains('filter-drawer__left')) {
           filterDrawer.classList.remove('drawer-open__left');
         } else {
           filterDrawer.classList.remove('drawer-open__right');
