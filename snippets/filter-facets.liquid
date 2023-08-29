@@ -1,8 +1,8 @@
 {%- liquid
-  assign filter_drawer_position = 'left'
+  assign site_drawer_position = 'left'
   assign textDirection = settings.text_direction
   if textDirection == 'rtl'
-    assign filter_drawer_position = 'right'
+    assign site_drawer_position = 'right'
   endif
 -%}
 <form class="filter-form">
