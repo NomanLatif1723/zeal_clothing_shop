@@ -24,6 +24,13 @@
   if lazyloadImages
     assign lazyloading = 'lazy'
   endif
+
+  assign filter_drawer_position = 'left'
+  assign textDirection = settings.text_direction
+  if textDirection == 'rtl'
+    assign filter_drawer_position = 'right'
+  endif
+  
 -%}
 {%- style -%}
   .main__section-{{ section.id }}{
@@ -42,7 +49,10 @@
     <div class="catalog__wrapper">
       {%- if show_filtering -%}
         <div class="catalog-filter__block">
-          {% render 'filter-facets' %}
+          <div class="drawer__overlay-container"></div>
+          <div class="filter-drawer filter-drawer__{{ filter_drawer_position }}">
+            {% render 'filter-facets' %}
+          </div>
         </div>
       {%- endif -%}
       <div class="{% if show_filtering %}catalog-list__banner{% endif %}">
