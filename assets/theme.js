@@ -754,6 +754,11 @@ function initCollections() {
           closeFilterDrawer();
         })
       }
+      if (closefilterDrawerBtn) {
+        closefilterDrawerBtn.addEventListener('click', () => {
+          closeFilterDrawer();
+        })
+      }
       function openFilterDrawer() {
         if (filterDrawer.classList.contains('filter-drawer__left')) {
           filterDrawer.classList.add('drawer-open__left');
