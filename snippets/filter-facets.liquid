@@ -2,13 +2,11 @@
   {%- for filter in collection.filters -%}
     <aside class="filter-group">
       <div class="filter-group__item">
-        <div>
-          <span>{{ filter.label }}</span>
-          {%- render 'icon-arrow-down' -%}
-          {%- if filter.active_values.size > 0 -%}
-            <span>({{ filter.active_values.size }})</span>
-          {%- endif -%}
-        </div>
+        <span>{{ filter.label }}</span>
+        {%- render 'icon-arrow-down' -%}
+        {%- if filter.active_values.size > 0 -%}
+          <span>({{ filter.active_values.size }})</span>
+        {%- endif -%}
       </div>
 
       <div class="filter-group-display">
