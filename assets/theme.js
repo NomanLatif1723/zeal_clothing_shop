@@ -736,12 +736,10 @@ function initCollections() {
     const filterItem = document.querySelectorAll('.filter-group__item');
     const filterBtn = document.querySelector('.filter__btn');
     filterItem.forEach(item => {
-      if (item) {
         item.addEventListener('click', (event) => {
           event.target.closest('.filter-group').querySelector('.filter-group__dropdown').classList.toggle('hidden');
           event.target.closest('.filter-group').querySelector('.icon__arrow').classList.toggle('icon__rotate');
         })
-      }
     })
     if (filterBtn) {
       filterBtn.addEventListener('click', () => {
