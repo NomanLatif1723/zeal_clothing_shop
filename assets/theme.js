@@ -703,31 +703,46 @@ function initCustomerForms() {
 initCustomerForms();
 
 // Collection Sorting
-Shopify.queryParams = {};
-
-  // Preserve existing query parameters
-  if (location.search.length) {
-    var params = location.search.substr(1).split('&');
-
-    for (var i = 0; i < params.length; i++) {
-      var keyValue = params[i].split('=');
-
-      if (keyValue.length) {
-        Shopify.queryParams[decodeURIComponent(keyValue[0])] = decodeURIComponent(keyValue[1]);
+function initCollections() {
+  collectionSort();
+  collectionFilters();
+  function collectionSort() {
+    Shopify.queryParams = {};
+    // Preserve existing query parameters
+    if (location.search.length) {
+      var params = location.search.substr(1).split('&');
+  
+      for (var i = 0; i < params.length; i++) {
+        var keyValue = params[i].split('=');
+  
+        if (keyValue.length) {
+          Shopify.queryParams[decodeURIComponent(keyValue[0])] = decodeURIComponent(keyValue[1]);
+        }
       }
     }
-  }
-
-  // Update sort_by query parameter on select change
-  const sortContainer = document.querySelector('#sort-by');
-  if (sortContainer) {
-    sortContainer.addEventListener('change', function(e) {
-      var value = e.target.value;
   
-      Shopify.queryParams.sort_by = value;
-      location.search = new URLSearchParams(Shopify.queryParams).toString();
-    });
+    // Update sort_by query parameter on select change
+    const sortContainer = document.querySelector('#sort-by');
+    if (sortContainer) {
+      sortContainer.addEventListener('change', function(e) {
+        var value = e.target.value;
+    
+        Shopify.queryParams.sort_by = value;
+        location.search = new URLSearchParams(Shopify.queryParams).toString();
+      });
+    }
   }
+  function collectionFilters() {
+    const filterItem = document.querySelectorAll('.filter-group__item');
+    filterItem.forEach(item => {
+      item.addEventListener('click', (event) => {
+        event.target.closest('.filter-group').querySelector('.filter-group__dropdown').classList.toggle('hidden');
+      })
+    })
+  }
+}
+initCollections();
+
   
   
 })();
