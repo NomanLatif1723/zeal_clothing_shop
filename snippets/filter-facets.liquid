@@ -7,9 +7,9 @@
 -%}
 <div class="filter-drawer filter-drawer__{{ filter_drawer_position }}">
   <div class="drawer__overlay-container"></div>
-  <form class="filter-form >
+  <form class="filter-form" >
     {%- for filter in collection.filters -%}
-      <aside class="filter-group">
+      <aside class="filter-group__dropdown">
         <div class="filter-group__item">
           <span>{{ filter.label }}</span>
           {%- render 'icon-arrow-down' -%}
