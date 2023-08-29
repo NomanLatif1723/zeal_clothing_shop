@@ -733,9 +733,12 @@ function initCollections() {
     }
   }
   function collectionFilters() {
-    const filterItem = document.querySelectorAll('.filter-group__item');
-    const filterBtn = document.querySelector('.filter__btn');
-    const filterDrawer = document.querySelector('.filter-drawer');
+    let filterItem = document.querySelectorAll('.filter-group__item');
+    let filterBtn = document.querySelector('.filter__btn');
+    let filterDrawer = document.querySelector('.filter-drawer');
+    let overlayShadow = document.querySelector('.drawer__overlay-container');
+    let closeMenuDrawerBtn = document.querySelector('.nav-icon__close');
+    let bodyContainer = document.querySelector('body');
     filterItem.forEach(item => {
         item.addEventListener('click', (event) => {
           event.target.closest('.filter-group').querySelector('.filter-group__dropdown').classList.toggle('hidden');
@@ -746,10 +749,31 @@ function initCollections() {
       filterBtn.addEventListener('click', () => {
         openFilterDrawer();
       })
+      if (overlayShadow) {
+        overlayShadow.addEventListener('click', () => {
+          closeFilterDrawer();
+        })
+      }
       function openFilterDrawer() {
-        filterDrawer.classList.add('drawer-open__left');
+        if (filterDrawer.classList.contains('menu-drawer__left')) {
+          filterDrawer.classList.add('drawer-open__left');
+        } else {
+          filterDrawer.classList.add('drawer-open__right');
+        }
+        overlayShadow.classList.add('overlay__visible');
+        bodyContainer.classList.add('drawer__opening');
+      }
+      function closeFilterDrawer() {
+        if (filterDrawer.classList.contains('menu-drawer__left')) {
+          filterDrawer.classList.remove('drawer-open__left');
+        } else {
+          filterDrawer.classList.remove('drawer-open__right');
+        }
+        overlayShadow.classList.remove('overlay__visible');
+        bodyContainer.classList.remove('drawer__opening');
       }
     }
+    
   }
 }
 initCollections();
