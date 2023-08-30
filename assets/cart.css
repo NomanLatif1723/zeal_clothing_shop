@@ -60,7 +60,6 @@ input[type=number] {
     padding: 20px 25px;
     box-shadow: 0px 1px 4px 2px rgba(1,1,1,0.1);
 }
-
 .cart__summary h3 {
     text-transform: uppercase;
     font-weight: bold;
@@ -70,7 +69,6 @@ input[type=number] {
     font-size: 16px;
     line-height: 20px;
 }
-
 .cart__total-price {
     display: flex;
     justify-content: space-between;
@@ -81,16 +79,13 @@ input[type=number] {
     font-size: 14px;
     line-height: 16px;
 }
-
 .cart__shipping-text h4 {
     text-transform: uppercase;
     padding-bottom: 10px;
 }
-
 .cart__shipping-text {
     padding-bottom: 70px;
 }
-
 .cart__terms-checkbox {
     padding-bottom: 20px;
     font-size: 13px;
@@ -99,11 +94,12 @@ input[type=number] {
     align-items: center;
     gap: 15px;
 }
-
+.cart__item-image a {
+    height: 100%;
+}
 .cart__terms-checkbox input {
     width: auto;
 }
-
 .cart__checkout-wrapper .btn__link {
     width: 100%;
 }
