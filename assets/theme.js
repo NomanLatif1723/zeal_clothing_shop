@@ -782,7 +782,23 @@ function initCollections() {
   }
 }
 initCollections();
-
-  
+// FAQ'S Section 
+function initHandleQuestions() {
+  let questionWrapper = document.querySelectorAll('.faq__wrapper');
+  questionWrapper.forEach(wrapper => {
+    if (wrapper) {
+      let id = wrapper.getAttribute('data-section-id');
+      let questionBtn = wrapper.querySelectorAll('.faq-question__header');
+      questionBtn.forEach(btn => {
+        btn.addEventListener('click', (event) => {
+          event.target.closest('.faq-question__item').querySelector('.faq-question__dropdown').classList.toggle('hidden');
+          event.target.closest('.faq-question__item').querySelector('.icon__plus').classList.toggle('hidden');
+          event.target.closest('.faq-question__item').querySelector('.icon__minus').classList.toggle('hidden');
+        })
+      })
+    }
+  })
+}
+initHandleQuestions();
   
 })();
