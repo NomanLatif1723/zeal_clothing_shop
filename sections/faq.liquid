@@ -1,6 +1,7 @@
 {%- liquid
     assign faq_heading = section.settings.faq_heading
     assign faq_text = section.settings.faq_text
+    assign textAlignment = section.settings.text_alignment 
 -%}
 {%- style -%}
   .main__section-{{ section.id }}{
@@ -17,7 +18,7 @@
 <div class="faq__wrapper main__section-{{ section.id }}">
   <div class="page__width">
     <div class="faq__banner">
-      <div class="faq__header">
+      <div class="faq__header text__align-{{ textAlignment }}">
         {%- if faq_heading != blank -%}
           <div class="main__heading">
             <h2>{{ faq_heading }}</h2>
