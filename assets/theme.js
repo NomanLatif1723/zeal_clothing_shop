@@ -806,11 +806,14 @@ initHandleQuestions();
 // Cart Events
 function initHandleCart() {
   let cartBtn = document.querySelector('.icon__cart');
+  let cartType = cartBtn.getAttribute('[data-cart-type]');
   let cartDrawer = document.querySelector('[data-cart-modal]');
   if (cartBtn) {
     cartBtn.addEventListener('click', (event) => {
-      event.preventDefault();
-        cartDrawer.classList.remove('hidden');
+      if (cartType == 'drawer' || cartType == 'popup') {
+        event.preventDefault();
+      }
+      cartDrawer.classList.remove('hidden');
     })
   }
 }
