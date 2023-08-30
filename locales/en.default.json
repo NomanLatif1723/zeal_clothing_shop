@@ -9,6 +9,24 @@
       "read_more_text": "Read More.."
     }
   },
+  "cart": {
+    "general": {
+      "title": "Your Cart",
+      "empty_cart": "Your Cart is Empty",
+      "continue_shopping": "Continue Shopping",
+      "add_note": "Add Note",
+      "remove": "Remove",
+      "final_line_price": "Subtotal: {{ final_line_price }}",
+      "note": "Cart Note",
+      "summary": "Order Summary",
+      "total":"Subtotal",
+      "shipping": "Shipping",
+      "shipping_text": "Shipping and tax calculated at checkout.",
+      "checkout": "Checkout",
+      "terms_at_checkout": "I agree with Terms and Conditions",
+      "discount": "Discounts"
+    }
+  },
   "collections": {
     "general": {
       "all_collection": "View All",

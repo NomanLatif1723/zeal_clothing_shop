@@ -1135,6 +1135,31 @@
         }
       }
     },
+    "main-cart": {
+      "name": "Cart",
+      "settings": {
+        "show_vendor": {
+          "label": "Show Vendor"
+        },
+        "header_alignment": {
+          "label": "Alignment",
+          "alignment": {
+            "label": "Text alignment",
+            "options": {
+              "left": {
+                "label": "Left"
+              },
+              "center": {
+                "label": "Center"
+              },
+              "right": {
+                "label": "Right"
+              }
+            }
+          }
+        }
+      }
+    },
     "newsletter": {
       "name": "Newsletter",
       "settings": {
