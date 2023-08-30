@@ -64,7 +64,9 @@
                     </div>
                     <div class="cart-quantity__wrapper">
                       <div class="line__item-quantity">
-                        <input name="updates[]" value="{{ item.quantity }}" />
+                        {% comment %}
+                          <input name="updates[]" value="{{ item.quantity }}" />
+                        {% endcomment %}
                         <a href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | minus : 1 }}">&#8722;</a>
                         <input  id="qty-cart" type="number" value="{{ item.quantity }}" readonly="">
                         <a href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | plus : 1 }}">&#43;</a>
