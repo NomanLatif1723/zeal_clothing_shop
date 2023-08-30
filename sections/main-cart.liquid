@@ -81,7 +81,7 @@
             <div class="cart-btn__container">
               <div class="cart__note-container">
                 {%- if show_note -%}
-                  <button class="btn__cart-note" aria-label="{{ 'cart.general.add_note' | t }}">{{ 'cart.general.add_note' | t }}</button>
+                  <button class="btn__link form__links" class="btn__cart-note" aria-label="{{ 'cart.general.add_note' | t }}">{{ 'cart.general.add_note' | t }}</button>
                   <div class="cart__note hidden">
                     <label class="form__label" for="CartNote">{{ 'cart.general.note' | t }}</label>
                     <textarea name="note" class="form__input" id="CartNote">{{ cart.note }}</textarea>
