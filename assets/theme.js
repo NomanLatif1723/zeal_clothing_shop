@@ -793,16 +793,15 @@ function initHandleQuestions() {
           event.target.closest('.faq-question__item').querySelector('.faq-question__dropdown').classList.toggle('hidden');
           event.target.closest('.faq-question__item').querySelector('.icon__plus').classList.toggle('hidden');
           event.target.closest('.faq-question__item').querySelector('.icon__minus').classList.toggle('hidden');
-          event.target.firstElement.click();
         })
       })
+      document.addEventListener('DOMContentLoaded', () => {
+  console.log("loaded");
+  document.querySelector('.faq__item-1').click();
+})
     }
   })
 }
 initHandleQuestions();
 
 })();
-document.addEventListener('DOMContentLoaded', () => {
-  console.log("loaded");
-  document.querySelector('.faq__item-1').click();
-})
