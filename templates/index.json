@@ -833,6 +833,43 @@
         "margin_top": 60,
         "margin_bottom": 60
       }
+    },
+    "f249ce19-4e8a-4a13-977d-7b0bbe5aaf13": {
+      "type": "faq",
+      "blocks": {
+        "template--19980215124290__f249ce19-4e8a-4a13-977d-7b0bbe5aaf13-question-1": {
+          "type": "question",
+          "settings": {
+            "question": "Any Question?",
+            "answer": "<p>We offer free in-store returns for all of our products within 30 days of purchase. Items must be in their original condition with tags attached for a full refund.<\/p>"
+          }
+        },
+        "template--19980215124290__f249ce19-4e8a-4a13-977d-7b0bbe5aaf13-question-2": {
+          "type": "question",
+          "settings": {
+            "question": "Any Question?",
+            "answer": ""
+          }
+        },
+        "template--19980215124290__f249ce19-4e8a-4a13-977d-7b0bbe5aaf13-question-3": {
+          "type": "question",
+          "settings": {
+            "question": "Any Question?",
+            "answer": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19980215124290__f249ce19-4e8a-4a13-977d-7b0bbe5aaf13-question-1",
+        "template--19980215124290__f249ce19-4e8a-4a13-977d-7b0bbe5aaf13-question-2",
+        "template--19980215124290__f249ce19-4e8a-4a13-977d-7b0bbe5aaf13-question-3"
+      ],
+      "settings": {
+        "faq_heading": "FAQ",
+        "faq_text": "",
+        "margin_top": 16,
+        "margin_bottom": 16
+      }
     }
   },
   "order": [
@@ -855,6 +892,7 @@
     "8fdfff96-b244-46b9-8bf7-7bbd2dfd07c6",
     "9bf713f2-c83f-4537-b1b8-93f4de7dc591",
     "9913ff1c-3076-4a2f-ba8f-22edb1d6e44e",
-    "c9d4b637-1e16-4b9e-8993-6eab77d74c0a"
+    "c9d4b637-1e16-4b9e-8993-6eab77d74c0a",
+    "f249ce19-4e8a-4a13-977d-7b0bbe5aaf13"
   ]
 }
