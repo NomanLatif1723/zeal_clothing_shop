@@ -8,6 +8,13 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+.cart-btn__container {
+    display: flex;
+    justify-content: space-between;
+}
+.main__cart {
+    margin: 30px 0;
+}
 .cart__main {
     display: flex;
     justify-content: space-between;
@@ -47,4 +54,9 @@ input[type=number] {
     align-items: center;
     border: 1px solid;
     padding: 10px;
+}
+@media only screen and (min-width: 769px) {
+  .main__cart {
+    margin: 60px 0;
+  }
 }
