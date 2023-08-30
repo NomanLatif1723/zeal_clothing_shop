@@ -475,6 +475,42 @@
         "name": "Featured Collection"
       }
     },
+    "faq": {
+      "name": "FAQ",
+      "settings": {
+        "faq_heading": {
+          "label": "Heading"
+        },
+        "faq_text": {
+          "label": "Text"
+        },
+        "header_spacing": {
+          "label": "Section Spacing",
+          "top_spacing": {
+            "label": "Spacing Top"
+          },
+          "bottom_spacing": {
+            "label": "Spacing Bottom"
+          }
+        }
+      },
+      "blocks": {
+        "question": {
+          "name": "Question",
+          "settings": {
+            "question": {
+              "label": "Question"
+            },
+            "answer": {
+              "label": "Text"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "FAQ"
+      }
+    },
     "footer": {
       "name": "Footer",
       "settings": {
