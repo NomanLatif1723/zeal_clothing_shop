@@ -787,7 +787,6 @@ function initHandleQuestions() {
   let questionWrapper = document.querySelectorAll('.faq__wrapper');
   questionWrapper.forEach(wrapper => {
     if (wrapper) {
-      let id = wrapper.getAttribute('data-section-id');
       let questionBtn = wrapper.querySelectorAll('.faq-question__header');
       questionBtn.forEach(btn => {
         btn.addEventListener('click', (event) => {
