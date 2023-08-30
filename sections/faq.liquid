@@ -30,14 +30,24 @@
       <div class="faq__content">
         {%- for block in section.blocks -%}
           {%- liquid
-                        assign question = block.settings.question
-                        assign answer = block.settings.answer
-                    -%}
+              assign question = block.settings.question
+              assign answer = block.settings.answer
+          -%}
           <div class="faq-question__item">
             <div class="faq-question__header">
               {%- if question != blank -%}
                 <h3>{{ question }}</h3>
               {%- endif -%}
+              <div class="icon__plus">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M7 1.5V7M7 7V12.5M7 7H12.5M7 7L1.5 7" stroke="#707070" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+              <div class="icon__minus hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="2" viewBox="0 0 14 2" fill="none">
+                  <path d="M12.5 1H1.5" stroke="#707070" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+                </svg>
+              </div>
             </div>
             <div class="faq-question__dropdown{% if forloop.index > 1 %} hidden{% endif %}">
               {% if answer != blank %}
