@@ -50,7 +50,7 @@
                 </svg>
               </div>
             </div>
-            <div class="faq-question__dropdown hidden">
+            <div class="faq-question__dropdown faq__item-{{ forloop.index }} hidden">
               {% if answer != blank %}
                 <div class="rte">{{ answer }}</div>
               {% endif %}
