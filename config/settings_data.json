@@ -14,6 +14,7 @@
     "footer_text": "#ffffff",
     "heading_font_family": "lato_n6",
     "body_font_family": "futura_n4",
+    "cart_type": "popup",
     "cart_icon": "bag",
     "overlay_style": false,
     "show_first_product": false,
