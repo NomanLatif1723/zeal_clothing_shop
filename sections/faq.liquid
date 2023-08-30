@@ -34,7 +34,7 @@
               assign question = block.settings.question
               assign answer = block.settings.answer
           -%}
-          <div class="faq-question__item">
+          <div class="faq-question__item faq__item-{{ forloop.index }}">
             <div class="faq-question__header">
               {%- if question != blank -%}
                 <h3>{{ question }}</h3>
@@ -50,7 +50,7 @@
                 </svg>
               </div>
             </div>
-            <div class="faq-question__dropdown faq__item-{{ forloop.index }} hidden">
+            <div class="faq-question__dropdown hidden">
               {% if answer != blank %}
                 <div class="rte">{{ answer }}</div>
               {% endif %}
