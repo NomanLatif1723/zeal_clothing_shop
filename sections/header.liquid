@@ -32,6 +32,11 @@
    main_menu: main_menu,
    mobile_menu: mobile_menu
 -%}
+{%- if settings.cart_type == 'drawer' -%}
+{%- render 'cart-drawer' -%}
+  {%- elsif settings.cart_type == 'popup' -%}
+  {%- render 'cart-popup' -%}
+{%- endif -%}
 <header class="section__header" data-sticky-header="{{ sticky_header }}">
   <div class="page__width">
     <div class="header__wrapper" data-header-style="{{ header_styles }}">
