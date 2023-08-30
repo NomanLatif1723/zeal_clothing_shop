@@ -149,7 +149,7 @@
             {%- render 'icon-search' -%}
           </a>
           {%- if shop.customer_accounts_enabled -%}
-            <a href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}"
+            <a href="#{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}"
               aria-label="{% if customer %}{{ 'sections.header.general.login' | t }}{% else %}{{ 'sections.header.general.account' | t }}{% endif %}"
               title="{% if customer %}{{ 'sections.header.general.login' | t }}{% else %}{{ 'sections.header.general.account' | t }}{% endif %}" 
               class="icon icon__accounts{% unless show_icons %} icon__hide-desktop{% endunless %}">
@@ -177,7 +177,7 @@
                   {% endif %}
                 </a>
             {%- endif -%}
-            <a href="{%- if settings.cart_type == 'page' -%}{{ routes.cart_url }}{%- endif -%}" aria-label="{{ 'sections.header.general.cart' | t }}" class="icon icon__cart icon__hide-mobile">{{ 'sections.header.general.cart' | t }}</a>
+            <a href="#{%- if settings.cart_type == 'page' -%}{{ routes.cart_url }}{%- endif -%}" aria-label="{{ 'sections.header.general.cart' | t }}" class="icon icon__cart icon__hide-mobile">{{ 'sections.header.general.cart' | t }}</a>
         {%- endunless -%}
       </div>
     </div>
