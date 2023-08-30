@@ -797,7 +797,7 @@ function initHandleQuestions() {
       })
       document.addEventListener('DOMContentLoaded', () => {
   console.log("loaded");
-  document.querySelector('.faq__item-1').click();
+  document.querySelector('.faq__item-1 .faq-question__header').click();
 })
     }
   })
