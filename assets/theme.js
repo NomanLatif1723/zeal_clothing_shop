@@ -814,4 +814,6 @@ function initHandleCart() {
     })
   }
 }
+initHandleCart();
+  
 })();
