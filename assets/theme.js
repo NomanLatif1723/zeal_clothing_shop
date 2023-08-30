@@ -802,5 +802,6 @@ initHandleQuestions();
 
 })();
 document.addEventListener('DOMContentLoaded', () => {
+  console.log("loaded");
   document.querySelector('.faq__item-1').click();
 })
