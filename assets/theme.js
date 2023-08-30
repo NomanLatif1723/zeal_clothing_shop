@@ -806,7 +806,7 @@ initHandleQuestions();
 // Cart Events
 function initHandleCart() {
   let cartBtn = document.querySelector('.icon__cart');
-  let cartDrawer = document.querySelector('data-cart-modal');
+  let cartDrawer = document.querySelector('[data-cart-modal]');
   if (cartBtn) {
     cartBtn.addEventListener('click', (event) => {
       event.preventDefault();
