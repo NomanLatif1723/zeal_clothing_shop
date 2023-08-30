@@ -18,20 +18,12 @@
               <div class="cart__item-block">
                   <div class="cart__item-image">
                   <a href="{{ item.url }}">
-                    <img
-                    src="{{ item.image | image_url: width: 200 }}"
-                    alt="{{ item.image.alt }}"
-                    width="{{ item.image.width }}"
-                    height="{{ item.image.height }}"
-                    loading="lazy" />
+                    <img src="{{ item.image | image_url: width: 200 }}" alt="{{ item.image.alt }}" width="{{ item.image.width }}" height="{{ item.image.height }}" loading="lazy" />
                   </a>  
-                  
                   </div>
                   <div class="cart__item-content">
                     {%- if show_vendor -%}
-                      <div class="grid-product__vendor">
-                        {{ item.product.vendor }}
-                      </div>
+                      <div class="grid-product__vendor">{{ item.product.vendor }}</div>
                     {%- endif -%}
                     <div class="cart__item-title">
                       <h3>{{ item.title }}</h3>
