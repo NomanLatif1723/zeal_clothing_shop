@@ -793,6 +793,7 @@ function initHandleQuestions() {
           event.target.closest('.faq-question__item').querySelector('.faq-question__dropdown').classList.toggle('hidden');
           event.target.closest('.faq-question__item').querySelector('.icon__plus').classList.toggle('hidden');
           event.target.closest('.faq-question__item').querySelector('.icon__minus').classList.toggle('hidden');
+          event.target.firstElement.click();
         })
       })
     }
