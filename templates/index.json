@@ -890,7 +890,7 @@
       ],
       "settings": {
         "faq_heading": "FAQ",
-        "faq_text": "",
+        "faq_text": "<p>Find answers to your questions about our products, policies, and more.<\/p>",
         "margin_top": 16,
         "margin_bottom": 16
       }
