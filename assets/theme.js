@@ -799,5 +799,8 @@ function initHandleQuestions() {
   })
 }
 initHandleQuestions();
-  
+
 })();
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelector('.faq__item-1').click();
+})
