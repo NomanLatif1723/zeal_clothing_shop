@@ -19,7 +19,7 @@
       "final_line_price": "Subtotal: {{ final_line_price }}",
       "note": "Cart Note",
       "summary": "Order Summary",
-      "total":"Subtotal",
+      "total": "Subtotal",
       "shipping": "Shipping",
       "shipping_text": "Shipping and tax calculated at checkout.",
       "checkout": "Checkout",
