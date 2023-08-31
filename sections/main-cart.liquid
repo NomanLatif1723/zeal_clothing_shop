@@ -65,7 +65,7 @@
                         <a href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | plus : 1 }}">&#43;</a>
                       </div>
                       <div class="line__item-final--price">
-                        {{ 'cart.general.final_line_price' | t: final_line_price: line_item.original_line_price | money }}
+                        {{ 'cart.general.final_line_price' | t: final_line_price: cart.items_subtotal_price | money }}
                       </div>
                     </div>
                   </div>
