@@ -27,7 +27,7 @@
       "discount": "Discounts",
       "note_placeholder": "Any special instructions for your order?",
       "free_shipping_eligible": "You are away from free shipping by ",
-      "free_shipping_success": "Congratulations! You qualify for free shipping on orders over {{ amount }}"
+      "free_shipping_success_html": "Congratulations! You qualify for free shipping on orders over {{ amount }}"
     }
   },
   "collections": {
