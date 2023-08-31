@@ -746,6 +746,9 @@
               },
               "text": {
                 "label": "Text"
+              },
+              "link": {
+                "label": "Link"
               }
             },
             "header_image_2": {
@@ -761,6 +764,9 @@
               },
               "text": {
                 "label": "Text"
+              },
+              "link": {
+                "label": "Link"
               }
             }
           }
