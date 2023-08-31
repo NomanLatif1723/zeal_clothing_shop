@@ -26,7 +26,7 @@
       "terms_at_checkout": "I agree with Terms and Conditions",
       "discount": "Discounts",
       "note_placeholder": "Any special instructions for your order?",
-      "free_shipping_eligible": "You are {{ free_shipping_threshold }} away from free shipping."
+      "free_shipping_eligible": "You are {{ currency }}{{ free_shipping_threshold }} away from free shipping."
     }
   },
   "collections": {
