@@ -139,6 +139,9 @@ input[type=number] {
     align-items: center;
     gap: 4px;
 }
+.cart__note {
+    padding-top: 20px;
+}
 @media only screen and (min-width: 769px) {
   .main__cart {
     margin: 60px 0;
