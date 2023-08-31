@@ -129,6 +129,13 @@ input[type=number] {
     padding-bottom: 20px;
     font-size: 12px;
 }
+.cart__item-remove {
+    font-size: 13px;
+    color: #9D1339;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
 @media only screen and (min-width: 769px) {
   .main__cart {
     margin: 60px 0;
