@@ -822,7 +822,7 @@ function initHandleCart() {
   if (cartNotebtn) {
     cartNotebtn.addEventListener('click', (event) => {
       event.preventDefault();
-      cartNote.classList.add('hidden');
+      cartNote.classList.toggle('hidden');
     })
   }
 }
