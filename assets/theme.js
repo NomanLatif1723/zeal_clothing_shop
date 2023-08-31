@@ -719,16 +719,14 @@ function initCustomerForms() {
   customerAddressesForm();
 
   function showPassword(event) {
-    let password = event.target.closest('.password__group').querySelector('input[type="password"]');
-    let type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-    password.setAttribute('type', type);
+    event.target.closest('.password__group').querySelector('input[type="password"]').setAttribute('type', 'text');
+    // let type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    // password.setAttribute('type', type);
     event.target.closest('.password__group').querySelector('.password__show-btn').classList.add('hidden');
     event.target.closest('.password__group').querySelector('.password__hide-btn').classList.remove('hidden');
   }
   function hidePassword(event) {
-    let password = event.target.closest('.password__group').querySelector('input[type="password"]');
-    let type = password.getAttribute('type') === 'text' ? 'password' : 'text';
-    password.setAttribute('type', type);
+    event.target.closest('.password__group').querySelector('input[type="password"]').setAttribute('type', 'password');
     event.target.closest('.password__group').querySelector('.password__show-btn').classList.remove('hidden');
     event.target.closest('.password__group').querySelector('.password__hide-btn').classList.add('hidden');
   }
