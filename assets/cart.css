@@ -169,7 +169,7 @@ input[type=number] {
     transform-origin: left;
     
 }
-.desktop__hidden {
+.cart__item-title.desktop__hidden {
     padding-bottom: 20px;
 }
 @media only screen and (min-width: 769px) {
