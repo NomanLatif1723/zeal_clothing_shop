@@ -646,7 +646,7 @@ function initCustomerForms() {
   const loginForm = document.querySelector('#loginForm');
   const recoverPasswordForm = document.querySelector('#recoverPasswordForm');
   const formContainer = document.querySelectorAll('[data-form]');
-  const passwordToggleBtn = document.querySelectorAll('.password__toggle-btn');
+  const passwordToggleBtn = document.querySelectorAll('.password__show-btn');
   
   formContainer.forEach(form => {
     if (form) {
