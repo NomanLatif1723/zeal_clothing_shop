@@ -16,6 +16,7 @@
     "body_font_family": "futura_n4",
     "cart_type": "page",
     "cart_icon": "bag",
+    "is_free_shipping_bar": true,
     "additional_checkout_buttons": true,
     "show_terms": true,
     "show_note": true,
