@@ -646,6 +646,9 @@ function initCustomerForms() {
   const loginForm = document.querySelector('#loginForm');
   const recoverPasswordForm = document.querySelector('#recoverPasswordForm');
   const formContainer = document.querySelectorAll('[data-form]');
+  const passwordToggleBtn = document.querySelectorAll('.password__toggle-btn');
+  const password = document.querySelectorAll('input[type="password"]');
+  
   formContainer.forEach(form => {
     if (form) {
       const backBtn = form.querySelector('.back__btn');
@@ -665,6 +668,14 @@ function initCustomerForms() {
       event.preventDefault();
       loginForm.classList.add('hidden');
       recoverPasswordForm.classList.remove('hidden');
+    })
+  }
+
+  if (passwordToggleBtn) {
+    passwordToggleBtn.forEach(btn => {
+      btn.addEventListener('click', () => {
+        
+      })
     })
   }
   
@@ -699,6 +710,10 @@ function initCustomerForms() {
     })
   }
   customerAddressesForm();
+
+  function passwordToggle() {
+    
+  }
 }
 initCustomerForms();
 
@@ -782,6 +797,7 @@ function initCollections() {
   }
 }
 initCollections();
+
 // FAQ'S Section 
 function initHandleQuestions() {
   let questionWrapper = document.querySelectorAll('.faq__wrapper');
