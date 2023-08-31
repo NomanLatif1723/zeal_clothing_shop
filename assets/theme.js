@@ -713,7 +713,7 @@ function initCustomerForms() {
   function passwordToggle(event) {
     const password = event.target.closest('.password__group').querySelector('input[type="password"]');
     const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-    password.setAttribute('type', type);
+    password.toggleAttribute('type', type);
   }
 }
 initCustomerForms();
