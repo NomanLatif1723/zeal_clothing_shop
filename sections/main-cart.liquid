@@ -7,8 +7,11 @@
      assign threshold = threshold_total | money
    endif
 -%}
-        
-
+{% style %}
+  :root {
+    --progress: 1;
+  }
+{% endstyle %}
 <div class="main-cart__wrapper">
   <div class="page__width">
     <div class="cart__header text__align-{{ section.settings.text_alignment }}">
