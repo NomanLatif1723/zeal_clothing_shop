@@ -1,8 +1,23 @@
 {{ 'cart.css' | asset_url | stylesheet_tag }}
+{%- liquid
+   assign free_shipping = false
+   if settings.is_free_shipping_bar and settings.free_shipping_threshold != ''
+     assign free_shipping = true
+   endif
+-%}
+        
+
 <div class="main-cart__wrapper">
   <div class="page__width">
     <div class="cart__header text__align-{{ section.settings.text_alignment }}">
       <div class="main__heading cart__main-heading"><h2>{{ 'cart.general.title' | t }}</h2></div>
+      {% if settings.is_free_shipping_bar %}
+        {% if cart.total_price >= settings.free_shipping_threshold %}
+          <div class="free-shipping-bar">
+            <p>Congratulations! You qualify for free shipping on orders over {{ settings.free_shipping_threshold | money }}</p>
+          </div>
+        {% endif %}
+      {% endif %}
     </div>
     {%- if cart.item_count > 0 -%}
       {%- form 'cart', cart -%}
