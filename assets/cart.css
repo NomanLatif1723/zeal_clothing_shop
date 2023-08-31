@@ -53,7 +53,7 @@ input[type=number] {
     display: flex;
     align-items: center;
     border: 1px solid;
-    padding: 10px;
+    padding: 10px 17px;
 }
 .cart__summary {
     height: 100%;
@@ -110,6 +110,23 @@ input[type=number] {
 .cart__empty-message .rte {
     padding-bottom: 10px;
     font-size: 20px;
+}
+.line__item-final--price strong {
+    color: #111111;
+    padding-left: 6px;
+}
+.line__item-final--price strong {
+    color: #111111;
+    padding-left: 6px;
+}
+.cart__item-title h3 {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+}
+.cart__item-price {
+    padding-bottom: 20px;
+    font-size: 12px;
 }
 @media only screen and (min-width: 769px) {
   .main__cart {
