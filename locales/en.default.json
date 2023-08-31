@@ -12,7 +12,7 @@
   "cart": {
     "general": {
       "title": "Your Cart",
-      "empty_cart": "Your Cart is Empty",
+      "empty_cart": "Your Cart is currently Empty",
       "continue_shopping": "Continue Shopping",
       "add_note": "Add Note",
       "remove": "Remove",
