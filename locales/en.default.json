@@ -24,7 +24,8 @@
       "shipping_text": "Shipping and tax calculated at checkout.",
       "checkout": "Checkout",
       "terms_at_checkout": "I agree with Terms and Conditions",
-      "discount": "Discounts"
+      "discount": "Discounts",
+      "note_placeholder": "Any special instructions for your order?"
     }
   },
   "collections": {
