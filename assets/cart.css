@@ -18,9 +18,8 @@ input[type=number] {
 .cart__main-heading{
   padding-bottom: 20px;
 }
-
 .cart__items {
-    flex: 1 1 auto;
+  padding-bottom: 35px;
 }
 .cart__item-block {
     display: flex;
@@ -175,5 +174,8 @@ input[type=number] {
     display: flex;
     justify-content: space-between;
     gap: 30px;
+  }
+  .cart__items {
+    flex: 1 1 auto;
   }
 }
