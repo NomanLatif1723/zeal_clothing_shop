@@ -103,6 +103,13 @@ input[type=number] {
 .cart__checkout-wrapper .btn__link {
     width: 100%;
 }
+.cart__empty-message {
+    text-align: center;
+    padding: 20px 0;
+}
+.cart__empty-message .main__heading {
+    padding-bottom: 20px;
+}
 @media only screen and (min-width: 769px) {
   .main__cart {
     margin: 60px 0;
