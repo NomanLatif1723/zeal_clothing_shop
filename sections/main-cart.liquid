@@ -1,14 +1,7 @@
 {{ 'cart.css' | asset_url | stylesheet_tag }}
-{%- liquid
-  assign textAlignment = section.settings.text_alignment
-  assign show_note = settings.show_note
-  assign show_vendor = section.settings.show_vendor
-  assign additional_checkout_buttons = settings.additional_checkout_buttons
-  assign show_terms = settings.show_terms
--%}
 <div class="main-cart__wrapper">
   <div class="page__width">
-    <div class="cart__header text__align-{{ textAlignment }}">
+    <div class="cart__header text__align-{{ section.settings.text_alignment }}">
       <div class="main__heading"><h2>{{ 'cart.general.title' | t }}</h2></div>
     </div>
     {%- if cart.item_count > 0 -%}
@@ -23,7 +16,7 @@
                   </a>  
                   </div>
                   <div class="cart__item-content">
-                    {%- if show_vendor -%}
+                    {%- if section.settings.show_vendor -%}
                       <div class="grid-product__vendor">{{ item.product.vendor }}</div>
                     {%- endif -%}
                     <div class="cart__item-title">
@@ -80,7 +73,7 @@
             {%- endfor -%}
             <div class="cart-btn__container">
               <div class="cart__note-container">
-                {%- if show_note -%}
+                {%- if settings.show_note -%}
                   <button class="btn__link form__links" class="btn__cart-note" aria-label="{{ 'cart.general.add_note' | t }}">{{ 'cart.general.add_note' | t }}</button>
                   <div class="cart__note hidden">
                     <label class="form__label" for="CartNote">{{ 'cart.general.note' | t }}</label>
@@ -110,7 +103,7 @@
               <h4>{{ 'cart.general.shipping' | t }}</h4>
               <div class="rte">{{ 'cart.general.shipping_text' | t }}</div>
             </div>
-            {%- if show_terms -%}
+            {%- if settings.show_terms -%}
               <div class="cart__terms-checkbox">
                 <input type="checkbox" id="cartTerms">
                 <label for="cartTerms">{{ 'cart.general.terms_at_checkout' | t }}</label>
@@ -118,7 +111,7 @@
             {%- endif -%}
             <div class="cart__checkout-wrapper">
               <button class="btn btn__link btn__primary" type="submit" aria-label="{{ 'cart.general.checkout' | t }}">{{ 'cart.general.checkout' | t }}</button>
-              {% if additional_checkout_buttons %}
+              {% if settings.additional_checkout_buttons %}
                 <div class="additional__buttons">{{ content_for_additional_checkout_buttons }}</div>
               {% endif %}
             </div>
