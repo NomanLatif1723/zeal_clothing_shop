@@ -165,10 +165,11 @@ input[type=number] {
     top: 0;
     bottom: 0;
     left: 0;
+    right: 0;
     transition: transform 0.2s ease;
     transform: scaleX(var(--progress));
     transform-origin: left;
-    right: 0;
+    
 }
 @media only screen and (min-width: 769px) {
   .main__cart {
