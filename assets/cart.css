@@ -151,6 +151,24 @@ input[type=number] {
     padding-bottom: 20px;
   display: inline-block;
 }
+.free-shipping__bar {
+    height: 8px;
+    border: 1px solid #111111;
+    border-radius: 8px;
+    margin-top: 15px;
+    position: relative;
+}
+.free-shipping__bar:after {
+    position: absolute;
+    content: '';
+    background: black;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transition: transform 0.2s ease;
+    transform: translateX(var(--progress));
+    right: 0;
+}
 @media only screen and (min-width: 769px) {
   .main__cart {
     margin: 60px 0;
