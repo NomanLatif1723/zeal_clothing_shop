@@ -47,6 +47,7 @@ input[type=number] {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    gap: 10px;
 }
 .line__item-quantity input {
   width: 40px;
