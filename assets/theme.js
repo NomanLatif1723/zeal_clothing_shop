@@ -714,6 +714,7 @@ function initCustomerForms() {
     const password = event.target.closest('.password__group').querySelector('input[type="password"]');
     const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
     password.setAttribute('type', type);
+    event.textContent = 'Hide';
   }
 }
 initCustomerForms();
