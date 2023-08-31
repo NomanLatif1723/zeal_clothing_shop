@@ -647,7 +647,6 @@ function initCustomerForms() {
   const recoverPasswordForm = document.querySelector('#recoverPasswordForm');
   const formContainer = document.querySelectorAll('[data-form]');
   const passwordToggleBtn = document.querySelectorAll('.password__toggle-btn');
-  const password = document.querySelectorAll('input[type="password"]');
   
   formContainer.forEach(form => {
     if (form) {
@@ -673,8 +672,8 @@ function initCustomerForms() {
 
   if (passwordToggleBtn) {
     passwordToggleBtn.forEach(btn => {
-      btn.addEventListener('click', () => {
-        
+      btn.addEventListener('click', (event) => {
+        passwordToggle(event);
       })
     })
   }
@@ -711,8 +710,10 @@ function initCustomerForms() {
   }
   customerAddressesForm();
 
-  function passwordToggle() {
-    
+  function passwordToggle(event) {
+    const password = event.target.closest('.password__group').querySelector('input[type="password"]');
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
   }
 }
 initCustomerForms();
