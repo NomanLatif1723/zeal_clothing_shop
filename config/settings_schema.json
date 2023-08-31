@@ -186,13 +186,13 @@
       },
       {
         "type": "checkbox",
-        "id": "free_shipping_bar",
+        "id": "is_free_shipping_bar",
         "label": "t:schema_settings.cart.settings.free_shipping_bar.label",
         "default": false
       },
       {
         "type": "text",
-        "id": "free_shipping_amount",
+        "id": "free_shipping_threshold",
         "label": "t:schema_settings.cart.settings.free_shipping_amount.label",
         "default": "50"
       },
