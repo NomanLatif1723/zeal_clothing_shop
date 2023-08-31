@@ -3,8 +3,8 @@
    assign free_shipping = false
    if settings.is_free_shipping_bar and settings.free_shipping_threshold != ''
      assign free_shipping = true
-     assign threshold_total = settings.free_shipping_threshold | money
-     assign threshold =threshold_total | times: 100
+     assign threshold_total = settings.free_shipping_threshold | times: 100
+     assign threshold = threshold_total | money
    endif
 -%}
         
@@ -14,13 +14,13 @@
     <div class="cart__header text__align-{{ section.settings.text_alignment }}">
       <div class="main__heading cart__main-heading"><h2>{{ 'cart.general.title' | t }}</h2></div>
       {%- if free_shipping -%}
-        {%- if cart.total_price < threshold -%}
+        {%- if cart.total_price < threshold_total -%}
           <div class="free-shipping-bar rte">
-            {{ 'cart.general.free_shipping_eligible'| t }}{{ shop.currency_symbol }}{{ threshold | minus: cart.total_price | money }}
+            {{ 'cart.general.free_shipping_eligible'| t }}{{ shop.currency_symbol }}{{ threshold_total | minus: cart.total_price | money }}
           </div>
           {%- else -%}
           <div class="free-shipping-bar">
-             <p>{{ 'cart.general.free_shipping_success_html' | t: ammount: threshold_total }}</p>
+             <p>{{ 'cart.general.free_shipping_success_html' | t: ammount: threshold }}</p>
           </div>
         {%- endif -%}
       {%- endif -%}
