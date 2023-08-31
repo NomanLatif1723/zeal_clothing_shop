@@ -12,7 +12,7 @@
     <div class="cart__header text__align-{{ section.settings.text_alignment }}">
       <div class="main__heading cart__main-heading"><h2>{{ 'cart.general.title' | t }}</h2></div>
       {% if settings.is_free_shipping_bar %}
-        {% assign threshold = settings.free_shipping_threshold  %}
+        {% assign threshold = settings.free_shipping_threshold | times:100  %}
         {% if cart.total_price >= threshold %}
           <div class="free-shipping-bar">
             <p>Congratulations! You qualify for free shipping on orders over {{ settings.free_shipping_threshold | money }}</p>
