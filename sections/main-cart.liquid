@@ -27,7 +27,6 @@
           </div>
           <div class="free-shipping__bar" style="--progress: {{ cart.total_price | times: 1.0 | divided_by: threshold_total | at_most: 1 }}"></div>
         </div>
-          
       {%- endif -%}
     </div>
     {%- if cart.item_count > 0 -%}
