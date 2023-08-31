@@ -646,7 +646,8 @@ function initCustomerForms() {
   const loginForm = document.querySelector('#loginForm');
   const recoverPasswordForm = document.querySelector('#recoverPasswordForm');
   const formContainer = document.querySelectorAll('[data-form]');
-  const passwordToggleBtn = document.querySelectorAll('.password__show-btn');
+  const passwordShowBtn = document.querySelectorAll('.password__show-btn');
+  const passwordHideBtn = document.querySelectorAll('.password__hide-btn');
   
   formContainer.forEach(form => {
     if (form) {
@@ -670,10 +671,17 @@ function initCustomerForms() {
     })
   }
 
-  if (passwordToggleBtn) {
-    passwordToggleBtn.forEach(btn => {
+  if (passwordShowBtn) {
+    passwordShowBtn.forEach(btn => {
       btn.addEventListener('click', (event) => {
         showPassword(event);
+      })
+    })
+  }
+  if (passwordHideBtn) {
+    passwordHideBtn.forEach(btn => {
+      btn.addEventListener('click', (event) => {
+        hidePassword(event);
       })
     })
   }
@@ -711,6 +719,13 @@ function initCustomerForms() {
   customerAddressesForm();
 
   function showPassword(event) {
+    const password = event.target.closest('.password__group').querySelector('input[type="password"]');
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    event.target.closest('.password__group').querySelector('.password__show-btn').classList.add('hidden');
+    event.target.closest('.password__group').querySelector('.password__hide-btn').classList.remove('hidden');
+  }
+  function hidePassword(event) {
     const password = event.target.closest('.password__group').querySelector('input[type="password"]');
     const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
     password.setAttribute('type', type);
