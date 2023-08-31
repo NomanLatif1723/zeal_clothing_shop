@@ -15,7 +15,7 @@
         {% assign threshold = settings.free_shipping_threshold | times: 100 %}
         {% if cart.total_price >= threshold %}
           <div class="free-shipping-bar">
-            <p>Congratulations! You qualify for free shipping on orders over {{ settings.free_shipping_threshold | money }}</p>
+            <p>Congratulations! You qualify for free shipping on orders over {{ threshold }}</p>
           </div>
         {% endif %}
       {% endif %}
