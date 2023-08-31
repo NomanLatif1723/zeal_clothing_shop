@@ -3,7 +3,7 @@
    assign free_shipping = false
    if settings.is_free_shipping_bar and settings.free_shipping_threshold != ''
      assign free_shipping = true
-     assign threshold = settings.free_shipping_threshold | times: 100
+     assign threshold = settings.free_shipping_threshold | times: 100 | money
    endif
 -%}
         
