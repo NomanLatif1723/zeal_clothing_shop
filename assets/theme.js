@@ -820,7 +820,8 @@ function initHandleCart() {
   let cartNotebtn = document.querySelector('#cartNoteBtn');
   let cartNote = document.querySelector('.cart__note');
   if (cartNotebtn) {
-    cartNotebtn.addEventListener('click', () => {
+    cartNotebtn.addEventListener('click', (event) => {
+      event.preventDefault();
       cartNote.classList.add('hidden');
     })
   }
