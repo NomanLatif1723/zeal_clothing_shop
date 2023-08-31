@@ -3,6 +3,7 @@
    assign free_shipping = false
    if settings.is_free_shipping_bar and settings.free_shipping_threshold != ''
      assign free_shipping = true
+     assign threshold = settings.free_shipping_threshold | times: 100
    endif
 -%}
         
@@ -15,7 +16,7 @@
         {% assign threshold = settings.free_shipping_threshold | times: 100 %}
         {% if cart.total_price >= threshold %}
           <div class="free-shipping-bar">
-            <p>Congratulations! You qualify for free shipping on orders over {{ threshold | money }}</p>
+            <p>Spend {{ shop.currency_symbol }}{{ threshold | minus: cart.total_price | money }} more to qualify for free shipping!</p>
           </div>
         {% endif %}
       {% endif %}
