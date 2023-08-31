@@ -30,6 +30,9 @@ input[type=number] {
 .cart__item-content {
   flex: 1 1 auto;
   padding-left: 15px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
 }
 .cart__item-title {
     display: flex;
