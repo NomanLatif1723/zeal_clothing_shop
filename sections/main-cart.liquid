@@ -84,10 +84,6 @@
                 <label class="form__label" for="CartNote">{{ 'cart.general.note' | t }}</label>
                 <textarea name="note" rows="10" class="form__input" form="cart" id="CartNote" placeholder="{{ 'cart.general.note_placeholder' | t }}">{{ cart.note }}</textarea>
               </div>
-            <p class="cart-attribute__field">
-              <label for="notes">Notes</label>
-              <textarea id="notes" name="attributes[notes]">{{ cart.attributes["notes"] }}</textarea>
-            </p>
             {%- endif -%}
             {%- if cart.cart_level_discount_applications != blank -%}
               <div class="cart__discounts">
