@@ -673,7 +673,7 @@ function initCustomerForms() {
   if (passwordToggleBtn) {
     passwordToggleBtn.forEach(btn => {
       btn.addEventListener('click', (event) => {
-        passwordToggle(event);
+        showPassword(event);
       })
     })
   }
@@ -710,7 +710,7 @@ function initCustomerForms() {
   }
   customerAddressesForm();
 
-  function passwordToggle(event) {
+  function showPassword(event) {
     const password = event.target.closest('.password__group').querySelector('input[type="password"]');
     const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
     password.setAttribute('type', type);
