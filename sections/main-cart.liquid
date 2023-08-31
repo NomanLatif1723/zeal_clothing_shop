@@ -32,7 +32,7 @@
                       <div class="line__item-price">{{ item.original_price | money }}</div>
                       {%- unless product.product.has_only_default_variant -%}
                         <div class="line__item-variants">
-                          {%- for option in product.options_with_values -%}
+                          {%- for option in item.product.options_with_values -%}
                             <div>{{ option.value }}</div>
                           {%- endfor -%}
                         </div>
