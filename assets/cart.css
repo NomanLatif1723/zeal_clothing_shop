@@ -37,6 +37,7 @@ input[type=number] {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-bottom: 4px;
 }
 .cart-quantity__wrapper {
     display: flex;
