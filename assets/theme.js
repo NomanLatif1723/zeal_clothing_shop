@@ -729,7 +729,8 @@ function initCustomerForms() {
     const password = event.target.closest('.password__group').querySelector('input[type="password"]');
     const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
     password.setAttribute('type', type);
-    event.target.textContent = 'Hide';
+    event.target.closest('.password__group').querySelector('.password__show-btn').classList.remove('hidden');
+    event.target.closest('.password__group').querySelector('.password__hide-btn').classList.add('hidden');
   }
 }
 initCustomerForms();
