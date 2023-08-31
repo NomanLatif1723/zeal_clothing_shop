@@ -816,6 +816,14 @@ function initHandleCart() {
       cartDrawer.classList.remove('hidden');
     })
   }
+
+  let cartNotebtn = document.querySelector('#cartNoteBtn');
+  let cartNote = document.querySelector('.cart__note');
+  if (cartNotebtn) {
+    cartNotebtn.addEventListener('click', () => {
+      cartNote.classList.toggle('hidden');
+    })
+  }
 }
 initHandleCart();
   
