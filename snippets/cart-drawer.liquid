@@ -1,9 +1,9 @@
 {{ 'cart.css' | asset_url | stylesheet_tag }}
 {%- liquid
-  assign cart_drawer_position = 'left'
+  assign cart_drawer_position = 'right'
   assign textDirection = settings.text_direction
   if textDirection == 'rtl'
-    assign cart_drawer_position = 'right'
+    assign cart_drawer_position = 'left'
   endif
 
   assign free_shipping = false
