@@ -891,6 +891,7 @@
       "settings": {
         "faq_heading": "Frequently asked questions.",
         "faq_text": "<p>Find answers to your questions about our products, policies, and more.<\/p>",
+        "text_alignment": "left",
         "margin_top": 60,
         "margin_bottom": 60
       }
