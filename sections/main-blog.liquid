@@ -36,6 +36,7 @@
     }
   }
 {%- endstyle -%}
+{{ blog.title }}
 <div class="grid blog__grid">
   {% for article in blog.articles %}
     {%- render 'article-item',
