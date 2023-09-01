@@ -284,15 +284,6 @@ input[type=number] {
     transition: all 0.5s ease;
     padding: 20px 25px;
 }
-/* .cart-popup .free-shipping {
-    padding: 30px 25px;
-} */
-/* .cart-popup__content {
-    padding: 30px 25px;
-} */
-/* .cart-popup__footer {
-    padding: 30px 25px;
-} */
 .cart-popup__top-right{
   top: -200%;
   right: 30px;
