@@ -263,3 +263,15 @@ input[type=number] {
     max-width: 420px;
   }
 }
+/* Cart Popup */
+.cart-popup {
+    position: fixed;
+    top: -200%;
+    background: white;
+    z-index: 99;
+    max-height: 400px;
+    height: 100%;
+    width: calc(100% - 40px);
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
