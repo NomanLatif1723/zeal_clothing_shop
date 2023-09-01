@@ -283,3 +283,6 @@ input[type=number] {
   top: -200%;
   left: 30px;
 }
+.open-cart__popup{
+  top: 0;
+}
