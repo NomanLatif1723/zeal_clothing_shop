@@ -847,8 +847,9 @@ function initHandleCart() {
     cartBtn.addEventListener('click', (event) => {
       if (cartType == 'drawer' || cartType == 'popup') {
         event.preventDefault();
-        openCartModal();
+        
       }
+      openCartModal();
     })
     if (overlayShadow) {
       overlayShadow.addEventListener('click', () => {
