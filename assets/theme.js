@@ -844,7 +844,7 @@ function initHandleCart() {
   let bodyContainer = document.querySelector('body');
   let cartDrawer = document.querySelector('[data-cart-drawer]');
   let cartPopup = document.querySelector('[data-cart-popup]');
-  if (cartBtn) {
+  // if (cartBtn) {
     cartBtn.addEventListener('click', (event) => {
       if (cartType == 'drawer' || cartType == 'popup') {
         event.preventDefault();
@@ -888,7 +888,7 @@ function initHandleCart() {
       overlayShadow.classList.remove('overlay__visible');
       bodyContainer.classList.remove('drawer__opening');
     }
-  }
+  // }
 
   let cartNotebtn = document.querySelector('#cartNoteBtn');
   let cartNote = document.querySelector('.cart__note');
