@@ -37,16 +37,20 @@
   }
 {%- endstyle -%}
 {{ blog.title }}
-<div class="grid blog__grid">
-  {% for article in blog.articles %}
-    {%- render 'article-item',
-      article: article,
-      blog: blog,
-      imageAspectRatio: imageAspectRatio,
-      show_date: show_date,
-      show_tags: show_tags,
-      lazyloading: lazyloading -%}
-  {% endfor %}
+<div class="main__section-{{ section.id }}">
+  <div class="page__width">
+    <div class="grid blog__grid">
+      {% for article in blog.articles %}
+        {%- render 'article-item',
+          article: article,
+          blog: blog,
+          imageAspectRatio: imageAspectRatio,
+          show_date: show_date,
+          show_tags: show_tags,
+          lazyloading: lazyloading -%}
+      {% endfor %}
+    </div>
+  </div>
 </div>
 {% schema %}
   {
