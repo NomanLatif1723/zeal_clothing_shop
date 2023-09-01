@@ -27,8 +27,8 @@
     </button>
   </div>
   {%- form 'cart', cart -%}
+    {%- if cart.item_count > 0 -%}
       <div class="drawer__scrollable">
-      {%- if cart.item_count > 0 -%}
         {%- if free_shipping -%}
           <div class="free-shipping free-shipping__modal">
             <div class="rte">
