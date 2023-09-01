@@ -1,9 +1,9 @@
 {{ 'cart.css' | asset_url | stylesheet_tag }}
 {%- liquid
-  assign cart_popup_position = 'left'
+  assign cart_popup_position = 'top-left'
   assign textDirection = settings.text_direction
   if textDirection == 'rtl'
-    assign cart_popup_position = 'right'
+    assign cart_popup_position = 'top-right'
   endif
 
   assign free_shipping = false
