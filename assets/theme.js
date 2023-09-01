@@ -850,12 +850,18 @@ function initHandleCart() {
       }
       openCartModal();
     })
-    overlayShadow.addEventListener('click', () => {
+    if (overlayShadow) {
+      overlayShadow.addEventListener('click', () => {
         closeCartModal();
-    })
-    closeDrawerBtn.addEventListener('click', () => {
-        closeCartModal();
-    })
+      })
+    }
+    
+    if (closeDrawerBtn) {
+        closeDrawerBtn.addEventListener('click', () => {
+          closeCartModal();
+      })
+    }
+    
     function openCartModal(){
       if (cartDrawer.classList.contains('cart-drawer__left')) {
         cartDrawer.classList.add('drawer-open__left');
