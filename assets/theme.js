@@ -853,7 +853,6 @@ function initHandleCart() {
       } else if (cartType == 'popup') {
         openCartPopup();
       }
-      
     })
     overlayShadow.addEventListener('click', () => {
       if (cartType == 'drawer') {
