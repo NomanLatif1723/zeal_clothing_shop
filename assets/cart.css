@@ -223,8 +223,8 @@ input[type=number] {
     transition: all 0.5s ease;
 }
 .cart__modal-header {
-    padding: 20px 25px;
-    margin-bottom: 15px;
+    margin: 20px 25px;
+    padding: 0 0 20px;
 }
 .free-shipping__modal {
     padding-bottom: 25px;
