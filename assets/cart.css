@@ -248,6 +248,12 @@ input[type=number] {
 .drawer__shipping-text {
     padding-bottom: 20px;
 }
+.drawer__scrollable {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
 @media only screen and (min-width: 481px) {
   .cart-drawer {
     max-width: 420px;
