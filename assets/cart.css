@@ -232,11 +232,11 @@ input[type=number] {
     padding: 30px 25px;
 }
 .cart-drawer__footer {
-    position: absolute;
-    bottom: 0;
+    /* position: absolute;
+    bottom: 0; */
     background: white;
     padding: 30px 25px;
-    width: 100%;
+    /* width: 100%; */
     border-top: 1px solid rgba(1,1,1,0.2);
 }
 .cart-drawer #cartNoteBtn {
