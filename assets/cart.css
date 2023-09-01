@@ -240,6 +240,13 @@ input[type=number] {
     width: 100%;
     border-top: 1px solid rgba(1,1,1,0.2);
 }
+.cart-drawer #cartNoteBtn {
+    margin-bottom: 20px;
+}
+
+.drawer__shipping-text {
+    padding-bottom: 20px;
+}
 @media only screen and (min-width: 481px) {
   .cart-drawer {
     max-width: 420px;
