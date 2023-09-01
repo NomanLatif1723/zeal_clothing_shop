@@ -842,23 +842,24 @@ function initHandleCart() {
   let overlayShadow = document.querySelector('.drawer__overlay-container');
   let closeDrawerBtn = document.querySelector('.cart-icon__close');
   let bodyContainer = document.querySelector('body');
-  let cartDrawer = document.querySelector('[data-cart-modal]');
+  let cartDrawer = document.querySelector('[data-cart-drawer]');
+  let cartPopup = document.querySelector('[data-cart-popup]');
   if (cartBtn) {
-    cartBtn.addEventListener('click', (event) => {
-      if (cartType == 'drawer' || cartType == 'popup') {
-        event.preventDefault();
-      }
-        // openCartDrawer();
-        openCartPopup();
-    })
-    overlayShadow.addEventListener('click', () => {
-        closeCartDrawer();
-        // closeCartPopup();
-    })
-    closeDrawerBtn.addEventListener('click', () => {
-        closeCartDrawer();
-        // closeCartPopup();
-    })
+    if (cartType == 'drawer') {
+      cartBtn.addEventListener('click', (event) => {
+        if (cartType == 'drawer' || cartType == 'popup') {
+          event.preventDefault();
+        }
+          openCartDrawer();
+      })
+      overlayShadow.addEventListener('click', () => {
+          closeCartDrawer();
+      })
+      closeDrawerBtn.addEventListener('click', () => {
+          closeCartDrawer();
+      })
+    }
+    
     function openCartDrawer(){
       if (cartDrawer.classList.contains('cart-drawer__left')) {
         cartDrawer.classList.add('drawer-open__left');
