@@ -843,6 +843,7 @@ function initHandleCart() {
   let closeDrawerBtn = document.querySelector('.cart-icon__close');
   let bodyContainer = document.querySelector('body');
   let cartDrawer = document.querySelector('[data-cart-modal]');
+  if (cartType == 'drawer' || cartType == 'popup') {
   if (cartBtn) {
     cartBtn.addEventListener('click', (event) => {
       if (cartType == 'drawer' || cartType == 'popup') {
@@ -885,7 +886,7 @@ function initHandleCart() {
       bodyContainer.classList.remove('drawer__opening');
     }
   }
-
+  }
   let cartNotebtn = document.querySelector('#cartNoteBtn');
   let cartNote = document.querySelector('.cart__note');
   if (cartNotebtn) {
