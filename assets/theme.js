@@ -866,7 +866,7 @@ function initHandleCart() {
       bodyContainer.classList.add('drawer__opening');
     }
     function closeCartDrawer() {
-      if (cartDrawer.classList.contains('menu-drawer__left')) {
+      if (cartDrawer.classList.contains('cart-drawer__left')) {
         cartDrawer.classList.remove('drawer-open__left');
       } else {
         cartDrawer.classList.remove('drawer-open__right');
