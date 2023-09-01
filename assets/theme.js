@@ -849,7 +849,10 @@ function initHandleCart() {
       if (cartType == 'drawer' || cartType == 'popup') {
         event.preventDefault();
       }
+      if (cartType == 'drawer') {
         openCartDrawer();
+      }
+        // openCartDrawer();
     })
     overlayShadow.addEventListener('click', () => {
         closeCartDrawer();
