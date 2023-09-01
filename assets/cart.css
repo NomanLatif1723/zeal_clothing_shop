@@ -234,7 +234,7 @@ input[type=number] {
 }
 .cart-drawer__footer {
     background: white;
-    padding: 20px 25px;
+    padding: 20px 25px 90px;
     border-top: 1px solid rgba(1,1,1,0.2);
 }
 .cart-drawer #cartNoteBtn {
