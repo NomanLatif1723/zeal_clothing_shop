@@ -841,6 +841,7 @@ function initHandleCart() {
   let cartType = cartBtn.getAttribute('[data-cart-type]');
   let overlayShadow = document.querySelector('.drawer__overlay-container');
   let closeDrawerBtn = document.querySelector('.cart-icon__close');
+  let bodyContainer = document.querySelector('body');
   let cartDrawer = document.querySelector('[data-cart-modal]');
   if (cartBtn) {
     cartBtn.addEventListener('click', (event) => {
