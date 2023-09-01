@@ -22,9 +22,7 @@
   <div class="drawer__overlay-container"></div>
   <div class="drawer__header cart__modal-header">
     <div class="drawer__title">{{ 'cart.general.popup_title' | t }}</div>
-    <button class="drawer-icon__close cart-icon__close">
-      {{ 'cart.general.drawer_close' | t }}
-    </button>
+    {%- render 'icon-close' -%}
   </div>
   {%- if cart.item_count > 0 -%}
     {%- if free_shipping -%}
