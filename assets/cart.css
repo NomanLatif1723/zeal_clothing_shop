@@ -274,6 +274,7 @@ input[type=number] {
     width: 100%;
     overflow: hidden;
     transition: all 0.5s ease;
+    padding: 30px 25px;
 }
 .cart-popup .free-shipping {
     padding: 30px 25px;
