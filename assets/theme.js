@@ -860,8 +860,10 @@ function initHandleCart() {
     function openCartDrawer(){
       if (cartDrawer.classList.contains('cart-drawer__left')) {
         cartDrawer.classList.add('drawer-open__left');
-      } else {
+      } else if(cartDrawer.classList.contains('cart-drawer__right')) {
         cartDrawer.classList.add('drawer-open__right');
+      } else if (cartDrawer.classList.contains('cart-popup')) {
+        cartDrawer.classList.add('open-cart__popup');
       }
       overlayShadow.classList.add('overlay__visible');
       bodyContainer.classList.add('drawer__opening');
