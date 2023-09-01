@@ -304,6 +304,11 @@ input[type=number] {
 .open-cart__popup{
   top: 0;
 }
+.cart__item-modal {
+    border: none;
+    padding-bottom: 25px;
+    margin: 0;
+}
 @media only screen and (min-width: 481px) {
   .cart-popup{
     max-width: 400px;
