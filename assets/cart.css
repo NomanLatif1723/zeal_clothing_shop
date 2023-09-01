@@ -285,6 +285,9 @@ input[type=number] {
 .open-cart__popup{
   top: 0;
 }
+.cart-popup .cart__note{
+  padding: 20px 0;
+}
 .cart__item-modal {
     border: none;
     padding-bottom: 25px;
