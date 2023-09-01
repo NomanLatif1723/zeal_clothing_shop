@@ -848,25 +848,16 @@ function initHandleCart() {
       if (cartType == 'drawer' || cartType == 'popup') {
         event.preventDefault();
       }
-      if (cartType == 'drawer') {
         openCartDrawer();
-      } else if (cartType == 'popup') {
-        openCartPopup();
-      }
+        // openCartPopup();
     })
     overlayShadow.addEventListener('click', () => {
-      if (cartType == 'drawer') {
         closeCartDrawer();
-      } else if (cartType == 'popup') {
-        closeCartPopup();
-      }
+        // closeCartPopup();
     })
     closeDrawerBtn.addEventListener('click', () => {
-      if (cartType == 'drawer') {
         closeCartDrawer();
-      } else if (cartType == 'popup') {
-        closeCartPopup();
-      }
+        // closeCartPopup();
     })
     function openCartDrawer(){
       if (cartDrawer.classList.contains('cart-drawer__left')) {
