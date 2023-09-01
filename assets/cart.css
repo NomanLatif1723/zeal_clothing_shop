@@ -267,7 +267,7 @@ input[type=number] {
 .cart-popup {
     position: fixed;
     background: white;
-    z-index: 99;
+    z-index: 999;
     max-height: 400px;
     height: 100%;
     max-width: calc(100% - 40px);
