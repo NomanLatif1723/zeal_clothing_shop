@@ -850,6 +850,7 @@ function initHandleCart() {
       }
       openCartModal();
     })
+  }
     if (overlayShadow) {
       overlayShadow.addEventListener('click', () => {
         closeCartModal();
@@ -884,7 +885,7 @@ function initHandleCart() {
       overlayShadow.classList.remove('overlay__visible');
       bodyContainer.classList.remove('drawer__opening');
     }
-  }
+  // }
   let cartNotebtn = document.querySelector('#cartNoteBtn');
   let cartNote = document.querySelector('.cart__note');
   if (cartNotebtn) {
