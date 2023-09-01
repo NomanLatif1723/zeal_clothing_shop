@@ -839,14 +839,24 @@ initHandleQuestions();
 function initHandleCart() {
   let cartBtn = document.querySelector('.icon__cart');
   let cartType = cartBtn.getAttribute('[data-cart-type]');
+  let overlayShadow = document.querySelector('.drawer__overlay-container');
   let cartDrawer = document.querySelector('[data-cart-modal]');
   if (cartBtn) {
     cartBtn.addEventListener('click', (event) => {
       if (cartType == 'drawer' || cartType == 'popup') {
         event.preventDefault();
       }
-      cartDrawer.classList.remove('hidden');
+      openCartDrawer();
     })
+    function openCartDrawer(){
+      if (cartDrawer.classList.contains('cart-drawer__left')) {
+        cartDrawer.classList.add('drawer-open__left');
+      } else {
+        cartDrawer.classList.add('drawer-open__right');
+      }
+      overlayShadow.classList.add('overlay__visible');
+      bodyContainer.classList.add('drawer__opening');
+    }
   }
 
   let cartNotebtn = document.querySelector('#cartNoteBtn');
