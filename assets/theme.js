@@ -849,7 +849,7 @@ function initHandleCart() {
         event.preventDefault();
       }
         openCartDrawer();
-        // openCartPopup();
+        openCartPopup();
     })
     overlayShadow.addEventListener('click', () => {
         closeCartDrawer();
