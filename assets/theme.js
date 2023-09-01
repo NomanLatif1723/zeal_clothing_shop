@@ -843,21 +843,20 @@ function initHandleCart() {
   let closeDrawerBtn = document.querySelector('.cart-icon__close');
   let bodyContainer = document.querySelector('body');
   let cartDrawer = document.querySelector('[data-cart-modal]');
-  let cartPopup = document.querySelector('[data-cart-popup]');
   if (cartBtn) {
     cartBtn.addEventListener('click', (event) => {
       if (cartType == 'drawer' || cartType == 'popup') {
         event.preventDefault();
       }
-      openCartDrawer();
+      openCartModal();
     })
     overlayShadow.addEventListener('click', () => {
-        closeCartDrawer();
+        closeCartModal();
     })
     closeDrawerBtn.addEventListener('click', () => {
-        closeCartDrawer();
+        closeCartModal();
     })
-    function openCartDrawer(){
+    function openCartModal(){
       if (cartDrawer.classList.contains('cart-drawer__left')) {
         cartDrawer.classList.add('drawer-open__left');
       } else if(cartDrawer.classList.contains('cart-drawer__right')) {
@@ -868,22 +867,14 @@ function initHandleCart() {
       overlayShadow.classList.add('overlay__visible');
       bodyContainer.classList.add('drawer__opening');
     }
-    function closeCartDrawer() {
+    function closeCartModal() {
       if (cartDrawer.classList.contains('cart-drawer__left')) {
         cartDrawer.classList.remove('drawer-open__left');
-      } else {
+      } else if(cartDrawer.classList.contains('cart-drawer__right')) {
         cartDrawer.classList.remove('drawer-open__right');
+      } else if (cartDrawer.classList.contains('cart-popup')) {
+        cartDrawer.classList.remove('open-cart__popup');
       }
-      overlayShadow.classList.remove('overlay__visible');
-      bodyContainer.classList.remove('drawer__opening');
-    }
-    function openCartPopup(){
-      cartDrawer.classList.add('open-cart__popup');
-      overlayShadow.classList.add('overlay__visible');
-      bodyContainer.classList.add('drawer__opening');
-    }
-    function closeCartPopup() {
-      cartDrawer.classList.remove('open-cart__popup');
       overlayShadow.classList.remove('overlay__visible');
       bodyContainer.classList.remove('drawer__opening');
     }
