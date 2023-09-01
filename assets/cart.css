@@ -275,11 +275,11 @@ input[type=number] {
     overflow: hidden;
     transition: all 0.5s ease;
 }
-.cart-popup cart-popup__top-right{
+.cart-popup__top-right{
   top: -200%;
   right: 30px;
 }
-.cart-popup cart-popup__top-left{
+.cart-popup__top-left{
   top: -200%;
   left: 30px;
 }
