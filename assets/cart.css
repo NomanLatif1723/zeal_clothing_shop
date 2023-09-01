@@ -212,6 +212,7 @@ input[type=number] {
     top: 0;
     z-index: 999;
     background: white;
+    width: calc(100% - 40px);
     height: 100vh;
     transition: all 0.5s ease;
 }
@@ -237,4 +238,9 @@ input[type=number] {
     padding: 30px 25px;
     width: 100%;
     border-top: 1px solid rgba(1,1,1,0.2);
+}
+@media only screen and (min-width: 481px) {
+  .cart-drawer {
+    width: 420px;
+  }
 }
