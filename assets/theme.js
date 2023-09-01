@@ -858,9 +858,7 @@ function initHandleCart() {
       closeDrawerBtn.addEventListener('click', () => {
           closeCartDrawer();
       })
-    }
-    
-    function openCartDrawer(){
+      function openCartDrawer(){
       if (cartDrawer.classList.contains('cart-drawer__left')) {
         cartDrawer.classList.add('drawer-open__left');
       } else {
@@ -878,6 +876,9 @@ function initHandleCart() {
       overlayShadow.classList.remove('overlay__visible');
       bodyContainer.classList.remove('drawer__opening');
     }
+    }
+    
+    
     function openCartPopup(){
       cartDrawer.classList.add('open-cart__popup');
       overlayShadow.classList.add('overlay__visible');
