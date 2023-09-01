@@ -1,3 +1,116 @@
-<div class="cart-popup hidden" data-cart-modal>
-cart popup
+{{ 'cart.css' | asset_url | stylesheet_tag }}
+{%- liquid
+  assign cart_popup_position = 'left'
+  assign textDirection = settings.text_direction
+  if textDirection == 'rtl'
+    assign cart_popup_position = 'right'
+  endif
+
+  assign free_shipping = false
+   if settings.is_free_shipping_bar and settings.free_shipping_threshold != ''
+     assign free_shipping = true
+     assign threshold_total = settings.free_shipping_threshold | times: 100
+     assign threshold = threshold_total | money
+   endif
+-%}
+{% style %}
+  :root  {
+    --progress: 1;
+  }
+{% endstyle %}
+<div class="cart-popup cart-popup__{{ cart_popup_position }}" data-cart-modal>
+  <div class="drawer__overlay-container"></div>
+  <div class="drawer__header">
+    <div class="drawer__title">{{ 'cart.general.drawer_title' | t }}</div>
+    <button class="drawer-icon__close cart-icon__close">
+      {{ 'cart.general.drawer_close' | t }}
+    </button>
+  </div>
+  {%- if cart.item_count > 0 -%}
+    {%- if free_shipping -%}
+      <div class="free-shipping">
+        <div class="rte">
+          {%- if cart.total_price < threshold_total -%}
+            <p>{{ 'cart.general.free_shipping_eligible' | t }}{{ shop.currency_symbol }}{{ threshold_total | minus: cart.total_price | money }}</p>
+          {%- else -%}
+            <p>{{ 'cart.general.free_shipping_success_html' | t: ammount: threshold }}</p>
+          {%- endif -%}
+        </div>
+        <div class="free-shipping__bar" style="--progress: {{ cart.total_price | times: 1.0 | divided_by: threshold_total | at_most: 1 }}"></div>
+      </div>
+    {%- endif -%}
+    <div class="cart-popup__content">
+      {%- for item in cart.items -%}
+        <div class="cart__item-block">
+          <div class="cart__item-image">
+            <a href="{{ item.url }}">
+              <img
+                src="{{ item.image | image_url: width: 80 }}"
+                alt="{{ item.image.alt }}"
+                width="80"
+                height="80"
+                loading="lazy" />
+            </a>
+          </div>
+          <div class="cart__item-content">
+            {%- if section.settings.show_vendor -%}
+              <div class="grid-product__vendor">{{ item.product.vendor }}</div>
+            {%- endif -%}
+            <div class="cart__item-title">
+              <h3>{{ item.title }}</h3>
+            </div>
+            <div class="cart__item-price">
+              <div class="line__item-price">{{ item.original_price | money }}</div>
+            </div>
+            {%- unless item.product.has_only_default_variant -%}
+              <div class="line__item-variants">
+                {%- for option in item.options_with_values -%}
+                  <div>{{ option.value }}</div>
+                {%- endfor -%}
+              </div>
+            {%- endunless -%}
+            {%- if product.selling_plan_allocation != empty -%}
+              <div class="cart__item-variants">
+                {{ product.selling_plan_allocation.selling_plan.name }}
+              </div>
+            {%- endif -%}
+            {%- unless item.properties == empty -%}
+              {%- for property in item.properties -%}
+                <div class="cart__item-property">
+                  {{ property.first }}:
+                  {%- if property.last contains '/uploads/' -%}
+                    <a href="{{ property.last }}">{{ property.last | split: '/' | last }}</a>
+                  {%- else -%}
+                    {{ property.last }}
+                  {%- endif -%}
+                </div>
+              {%- endfor -%}
+            {%- endunless -%}
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+    <div class="cart-popup__footer">
+      <div class="cart__checkout-wrapper">
+        <a href="{{ routes.cart_url }}"class="btn btn__link btn__outline"title="{{ 'cart.general.view_cart' | t }}">{{ 'cart.general.view_cart' | t }}</a>
+        <button
+          class="btn btn__link btn__primary"
+          type="submit"
+          name="checkout"
+          value="Checkout"
+          aria-label="{{ 'cart.general.checkout' | t }}">{{ 'cart.general.checkout' | t }}</button>
+        {% if settings.additional_checkout_buttons %}
+          <div class="additional__buttons">{{ content_for_additional_checkout_buttons }}</div>
+        {% endif %}
+      </div>
+    </div>
+  {%- else -%}
+    <div class="cart__empty-message">
+      <div class="rte">{{ 'cart.general.empty_cart' | t }}</div>
+      <a
+        href="{{ routes.all_products_collection_url }}"
+        title="{{ 'cart.general.continue_shopping' | t }}"
+        class="form__links">{{ 'cart.general.continue_shopping' | t }}</a>
+    </div>
+  {%- endif -%}
 </div>

@@ -1,0 +1,40 @@
+{% if search.performed %}
+  <h1>Here's Your Results:</h1>
+  <p>{{ search.results_count }}</p>
+  {% for result in search.results %}
+    {% if result.object_type == 'page' %}
+      <a href="{{ result.url }}">{{ result.title }}
+      </a>
+
+    {% elsif result.object_type == 'article' %}
+      {% if result.image -%}
+        <div class="result-image">
+          <a href="{{ result.url }}" title="{{ result.title | escape }}">
+            {{ result | image_url: width: 100 | image_tag }}
+            <span>{{ result.title }}</span>
+          </a>
+        </div>
+      {% endif %}
+
+    {% else %}
+      {%- if result.featured_image -%}
+        <div class="result-image">
+          <a href="{{ result.url }}" title="{{ result.title | escape }}">
+            {{ result.featured_image | image_url: width: 100 | image_tag }}
+            <span>{{ result.title }}</span>
+          </a>
+        </div>
+      {% endif %}
+
+
+    {% endif %}
+  {% endfor %}
+{% else %}
+  <h1>Try Searching for something</h1>
+{% endif %}
+{% schema %}
+  {
+    "name": "Search",
+    "settings": []
+  }
+{% endschema %}
