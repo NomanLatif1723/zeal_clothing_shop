@@ -105,10 +105,7 @@
       {%- if show_view_all and blog.articles.size > posts_to_show -%}
         <div class="button__wrapper">
           <div class="view__all-btn">
-            <a
-              class="btn btn__primary btn__link"
-              href="/blogs"
-              title="{{ 'blogs.article.view_all_text' | t }}">{{ 'blogs.article.view_all_text' | t }}</a>
+            <a class="btn btn__primary btn__link" href="{{ blog.url }}" title="{{ 'blogs.article.view_all_text' | t }}">{{ 'blogs.article.view_all_text' | t }}</a>
           </div>
         </div>
       {%- endif -%}
