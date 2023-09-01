@@ -26,10 +26,11 @@ input[type=number] {
     padding-bottom: 20px;
     border-bottom: 1px solid rgba(1,1,1,0.2);
     margin-bottom: 20px;
+    gap: 15px;
 }
 .cart__item-content {
   flex: 1 1 auto;
-  padding-left: 15px;
+  /* padding-left: 15px; */
   justify-content: space-between;
   display: flex;
   flex-direction: column;
@@ -201,9 +202,12 @@ input[type=number] {
   .desktop__hidden{
     display: none;
   }
-  .cart__item-content{
+  /* .cart__item-content{
     padding-left: 20px;
-    /* display: block; */
+    display: block;
+  } */
+  .cart__item-block{
+    gap: 20px;
   }
 }
 /* Cart Drawer */
