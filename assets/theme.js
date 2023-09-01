@@ -848,6 +848,12 @@ function initHandleCart() {
       }
       openCartDrawer();
     })
+    overlayShadow.addEventListener('click', () => {
+      closeCartDrawer();
+    })
+    closeDrawerBtn.addEventListener('click', () => {
+      closeCartDrawer();
+    })
     function openCartDrawer(){
       if (cartDrawer.classList.contains('cart-drawer__left')) {
         cartDrawer.classList.add('drawer-open__left');
