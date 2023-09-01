@@ -228,7 +228,6 @@ input[type=number] {
     overflow: auto;
     height: 100%;
 }
-
 .cart-drawer .free-shipping {
     padding: 30px 25px;
 }
@@ -243,7 +242,9 @@ input[type=number] {
 .cart-drawer #cartNoteBtn {
     margin-bottom: 20px;
 }
-
+.cart-drawer__footer .btn {
+  margin-bottom: 10px;
+}
 .drawer__shipping-text {
     padding-bottom: 20px;
 }
