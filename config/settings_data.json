@@ -27,7 +27,7 @@
     "show_currency": true,
     "show_language": true,
     "show_flags": true,
-    "text_direction": "ltr",
+    "text_direction": "rtl",
     "show_breadcrumbs": true,
     "favicon": "shopify:\/\/shop_images\/Vector.svg",
     "image_size": "square",
