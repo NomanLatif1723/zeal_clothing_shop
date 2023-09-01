@@ -278,6 +278,9 @@ input[type=number] {
 .cart-popup .free-shipping {
     padding: 30px 25px;
 }
+.cart-popup__content {
+    padding: 30px 25px;
+}
 .cart-popup__footer {
     padding: 30px 25px;
 }
