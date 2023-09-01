@@ -849,14 +849,15 @@ function initHandleCart() {
         event.preventDefault();
         
       }
-      openCartModal();
+      if (cartDrawer) {
+        openCartModal();
+      }
     })
     if (overlayShadow) {
       overlayShadow.addEventListener('click', () => {
         closeCartModal();
       })
     }
-    
     if (closeDrawerBtn) {
         closeDrawerBtn.addEventListener('click', () => {
           closeCartModal();
