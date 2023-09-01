@@ -888,13 +888,22 @@ function initHandleCart() {
       bodyContainer.classList.remove('drawer__opening');
     }
     function openCartPopup(){
-      if (cartDrawer.classList.contains('cart-drawer__left')) {
+      if (cartDrawer.classList.contains('cart-popup__left')) {
         cartDrawer.classList.add('drawer-open__left');
       } else {
         cartDrawer.classList.add('drawer-open__right');
       }
       overlayShadow.classList.add('overlay__visible');
       bodyContainer.classList.add('drawer__opening');
+    }
+    function closeCartPopup() {
+      if (cartDrawer.classList.contains('cart-popup__left')) {
+        cartDrawer.classList.remove('drawer-open__left');
+      } else {
+        cartDrawer.classList.remove('drawer-open__right');
+      }
+      overlayShadow.classList.remove('overlay__visible');
+      bodyContainer.classList.remove('drawer__opening');
     }
   }
 
