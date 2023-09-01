@@ -848,13 +848,26 @@ function initHandleCart() {
       if (cartType == 'drawer' || cartType == 'popup') {
         event.preventDefault();
       }
-      openCartDrawer();
+      if (cartType == 'drawer') {
+        openCartDrawer();
+      } else if (cartType == 'popup') {
+        openCartPopup();
+      }
+      
     })
     overlayShadow.addEventListener('click', () => {
-      closeCartDrawer();
+      if (cartType == 'drawer') {
+        closeCartDrawer();
+      } else if (cartType == 'popup') {
+        closeCartPopup();
+      }
     })
     closeDrawerBtn.addEventListener('click', () => {
-      closeCartDrawer();
+      if (cartType == 'drawer') {
+        closeCartDrawer();
+      } else if (cartType == 'popup') {
+        closeCartPopup();
+      }
     })
     function openCartDrawer(){
       if (cartDrawer.classList.contains('cart-drawer__left')) {
@@ -873,6 +886,15 @@ function initHandleCart() {
       }
       overlayShadow.classList.remove('overlay__visible');
       bodyContainer.classList.remove('drawer__opening');
+    }
+    function openCartPopup(){
+      if (cartDrawer.classList.contains('cart-drawer__left')) {
+        cartDrawer.classList.add('drawer-open__left');
+      } else {
+        cartDrawer.classList.add('drawer-open__right');
+      }
+      overlayShadow.classList.add('overlay__visible');
+      bodyContainer.classList.add('drawer__opening');
     }
   }
 
