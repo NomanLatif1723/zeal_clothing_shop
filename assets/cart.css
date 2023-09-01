@@ -236,7 +236,7 @@ input[type=number] {
   right: -200%;
 }
 .cart-drawer__content {
-    /* padding: 30px 25px; */
+    padding: 10px 25px;
     overflow: auto;
     height: 100%;
 }
