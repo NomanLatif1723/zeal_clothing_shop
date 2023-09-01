@@ -203,5 +203,6 @@ input[type=number] {
   }
   .cart__item-content{
     padding-left: 20px;
+    display: block;
   }
 }
