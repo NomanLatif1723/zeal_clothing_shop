@@ -210,12 +210,16 @@ input[type=number] {
 .cart-drawer {
     position: fixed;
     top: 0;
-    left: 0;
     z-index: 999;
     background: white;
     height: 100vh;
 }
-
+.cart-drawer__left{
+  left: -200%;
+}
+.cart-drawer__right{
+  right: -200%;
+}
 .cart-drawer__content {
     padding: 30px 25px;
     overflow: auto;
@@ -225,7 +229,6 @@ input[type=number] {
 .cart-drawer .free-shipping {
     padding: 30px 25px;
 }
-
 .cart-drawer__footer {
     position: absolute;
     bottom: 0;
