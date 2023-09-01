@@ -840,6 +840,7 @@ function initHandleCart() {
   let cartBtn = document.querySelector('.icon__cart');
   let cartType = cartBtn.getAttribute('[data-cart-type]');
   let overlayShadow = document.querySelector('.drawer__overlay-container');
+  let closeDrawerBtn = document.querySelector('.cart-icon__close');
   let cartDrawer = document.querySelector('[data-cart-modal]');
   if (cartBtn) {
     cartBtn.addEventListener('click', (event) => {
@@ -862,6 +863,15 @@ function initHandleCart() {
       }
       overlayShadow.classList.add('overlay__visible');
       bodyContainer.classList.add('drawer__opening');
+    }
+    function closeCartDrawer() {
+      if (cartDrawer.classList.contains('menu-drawer__left')) {
+        cartDrawer.classList.remove('drawer-open__left');
+      } else {
+        cartDrawer.classList.remove('drawer-open__right');
+      }
+      overlayShadow.classList.remove('overlay__visible');
+      bodyContainer.classList.remove('drawer__opening');
     }
   }
 
