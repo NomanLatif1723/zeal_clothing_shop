@@ -27,7 +27,6 @@
     </button>
   </div>
   {%- form 'cart', cart -%}
-
       <div class="drawer__scrollable">
       {%- if cart.item_count > 0 -%}
         {%- if free_shipping -%}
@@ -42,8 +41,7 @@
             <div class="free-shipping__bar" style="--progress: {{ cart.total_price | times: 1.0 | divided_by: threshold_total | at_most: 1 }}"></div>
           </div>
         {%- endif -%}
-        {%- endif -%}
-      {%- if cart.item_count > 0 -%}
+
         <div class="cart-drawer__content">
           {%- for item in cart.items -%}
             <div class="cart__item-block">
@@ -106,12 +104,6 @@
             </div>
           {%- endfor -%}
         </div>
-        {% else %}
-        <div class="cart__empty-message">
-        <div class="rte">{{ 'cart.general.empty_cart' | t }}</div>
-        <a href="{{ routes.all_products_collection_url }}" title="{{ 'cart.general.continue_shopping' | t }}" class="form__links">{{ 'cart.general.continue_shopping' | t }}</a>
-      </div>
-      {% endif %}
         <div class="cart-drawer__footer">
           <div class="cart__total-price">
             <div>{{ 'cart.general.total' | t }}</div>
@@ -150,13 +142,11 @@
           </div>
         </div>
       </div>
-  {% comment %}
     {%- else -%}
       <div class="cart__empty-message">
         <div class="rte">{{ 'cart.general.empty_cart' | t }}</div>
         <a href="{{ routes.all_products_collection_url }}" title="{{ 'cart.general.continue_shopping' | t }}" class="form__links">{{ 'cart.general.continue_shopping' | t }}</a>
       </div>
     {%- endif -%}
-      {% endcomment %}
   {%- endform -%}
 </div>
