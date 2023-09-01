@@ -1,13 +1,21 @@
 <div class="pagination__wrapper">
   <div class="pagination-left__container">
+    {%- liquid
+       if template.name == 'collection'
+         assign total_count = collection.all_products_count
+       elsif template.name == 'blog'
+         assign total_count = blog.articles_count
+       endif
+    -%}
     {% if paginate.next.is_link %}
-      Showing <strong>{{ paginate.current_offset | plus: 1 }} - {{ paginate.current_offset | plus: paginate.page_size }}</strong> of {{ collection.all_products_count }} items
+      Showing <strong>{{ paginate.current_offset | plus: 1 }} - {{ paginate.current_offset | plus: paginate.page_size }}</strong> of {{ total_count }} items
     {% else %}
     {% capture itemsOnCurrentPage %}
       {{ collection.all_products_count | minus: paginate.current_offset }}
     {% endcapture %}
-      Showing <strong>{{ paginate.current_offset | plus: 1 }} - {{ paginate.current_offset | plus: itemsOnCurrentPage }}</strong> of {{ collection.all_products_count }} items
+      Showing <strong>{{ paginate.current_offset | plus: 1 }} - {{ paginate.current_offset | plus: itemsOnCurrentPage }}</strong> of {{ total_count }} items
     {% endif %}
+    
   </div>
   <div class="pagination-right__container">
     {%- if paginate.previous -%}
