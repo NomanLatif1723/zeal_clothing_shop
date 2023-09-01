@@ -843,7 +843,7 @@ function initHandleCart() {
   let closeDrawerBtn = document.querySelector('.cart-icon__close');
   let bodyContainer = document.querySelector('body');
   let cartDrawer = document.querySelector('[data-cart-modal]');
-  if (cartType == 'drawer' || cartType == 'popup') {
+  if (cartBtn) {
     cartBtn.addEventListener('click', (event) => {
       if (cartType == 'drawer' || cartType == 'popup') {
         event.preventDefault();
