@@ -133,6 +133,12 @@ input[type=number] {
 .cart__item-price {
     padding-bottom: 20px;
     font-size: 12px;
+    display: flex;
+    gap: 20px;
+    color: rgba(1,1,1,0.6);
+}
+.line__item-price {
+    font-weight: bold;
 }
 .cart__item-remove {
     font-size: 13px;
