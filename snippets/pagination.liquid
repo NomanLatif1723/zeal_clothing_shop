@@ -11,7 +11,7 @@
       Showing <strong>{{ paginate.current_offset | plus: 1 }} - {{ paginate.current_offset | plus: paginate.page_size }}</strong> of {{ total_count }} items
     {% else %}
     {% capture itemsOnCurrentPage %}
-      {{ collection.all_products_count | minus: paginate.current_offset }}
+      {{ total_count | minus: paginate.current_offset }}
     {% endcapture %}
       Showing <strong>{{ paginate.current_offset | plus: 1 }} - {{ paginate.current_offset | plus: itemsOnCurrentPage }}</strong> of {{ total_count }} items
     {% endif %}
