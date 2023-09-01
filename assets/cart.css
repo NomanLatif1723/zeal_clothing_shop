@@ -163,7 +163,7 @@ input[type=number] {
 .free-shipping__bar {
     height: 8px;
     border: 1px solid #111111;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     margin-top: 15px;
     position: relative;
 }
