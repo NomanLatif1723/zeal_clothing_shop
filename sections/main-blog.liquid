@@ -38,8 +38,8 @@
 {%- endstyle -%}
 <div class="grid blog__grid">
   {% for article in blog.articles %}
-    {%- render 'article-item' 
-      , article: article,
+    {%- render 'article-item',
+      article: article,
       blog: blog,
       imageAspectRatio: imageAspectRatio,
       show_date: show_date,
