@@ -213,6 +213,7 @@ input[type=number] {
     z-index: 999;
     background: white;
     height: 100vh;
+    transition: all 0.5 ease;
 }
 .cart-drawer__left{
   left: -200%;
