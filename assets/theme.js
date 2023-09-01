@@ -848,7 +848,7 @@ function initHandleCart() {
       if (cartType == 'drawer' || cartType == 'popup') {
         event.preventDefault();
       }
-        openCartDrawer();
+        // openCartDrawer();
         openCartPopup();
     })
     overlayShadow.addEventListener('click', () => {
