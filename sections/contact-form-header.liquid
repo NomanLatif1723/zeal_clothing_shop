@@ -18,6 +18,9 @@
     margin-top: {{ section.settings.margin_top | times: 0.5 | round: 0 }}px;
     margin-bottom: {{ section.settings.margin_bottom | times: 0.5 | round: 0 }}px;
   }
+  .main__section-{{ section.id }} .contact-page__text-content {
+    color: {{ text_color }};
+  }
   @media only screen and (min-width: 769px) {
     .main__section-{{ section.id }}{
       margin-top: {{ section.settings.margin_top }}px;
