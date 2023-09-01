@@ -220,6 +220,7 @@ input[type=number] {
 }
 .free-shipping__modal {
     padding: 0 25px 25px;
+    display: block;
 }
 .cart-drawer__left{
   left: -200%;
