@@ -206,3 +206,31 @@ input[type=number] {
     /* display: block; */
   }
 }
+/* Cart Drawer */
+.cart-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: white;
+    height: 100vh;
+}
+
+.cart-drawer__content {
+    padding: 30px 25px;
+    overflow: auto;
+    height: 100%;
+}
+
+.cart-drawer .free-shipping {
+    padding: 30px 25px;
+}
+
+.cart-drawer__footer {
+    position: absolute;
+    bottom: 0;
+    background: white;
+    padding: 30px 25px;
+    width: 100%;
+    border-top: 1px solid rgba(1,1,1,0.2);
+}
