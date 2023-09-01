@@ -46,12 +46,7 @@
             <div class="cart__item-block">
               <div class="cart__item-image">
                 <a href="{{ item.url }}">
-                  <img
-                    src="{{ item.image | image_url: width: 80 }}"
-                    alt="{{ item.image.alt }}"
-                    width="80"
-                    height="80"
-                    loading="lazy" />
+                  <img src="{{ item.image | image_url: width: 80, height: 80 }}" alt="{{ item.image.alt }}" width="80" height="80" loading="lazy" />
                 </a>
               </div>
               <div class="cart__item-content">
@@ -60,10 +55,7 @@
                 {%- endif -%}
                 <div class="cart__item-title">
                   <h3>{{ item.title }}</h3>
-                  <a
-                    href="{{ item.url_to_remove }}"
-                    class="cart__item-remove"
-                    title="{{ 'cart.general.remove' | t }}">
+                  <a href="{{ item.url_to_remove }}" class="cart__item-remove" title="{{ 'cart.general.remove' | t }}">
                     {%- render 'icon-close' -%}
                   </a>
                 </div>
@@ -100,11 +92,7 @@
                     <input name="updates[]" value="{{ item.quantity }}" />
                     {% endcomment %}
                     <a href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | minus : 1 }}">&#8722;</a>
-                    <input
-                      id="qty-cart"
-                      type="number"
-                      value="{{ item.quantity }}"
-                      readonly="">
+                    <input id="qty-cart" type="number" value="{{ item.quantity }}" readonly="">
                     <a href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | plus : 1 }}">&#43;</a>
                   </div>
                   <div class="line__item-final--price rte">
@@ -130,19 +118,10 @@
             </div>
           {%- endif -%}
           {%- if settings.show_note -%}
-            <button
-              id="cartNoteBtn"
-              class="btn__link form__links"
-              class="btn__cart-note"
-              aria-label="{{ 'cart.general.add_note' | t }}">{{ 'cart.general.add_note' | t }}</button>
+            <button id="cartNoteBtn" class="btn__link form__links" class="btn__cart-note" aria-label="{{ 'cart.general.add_note' | t }}">{{ 'cart.general.add_note' | t }}</button>
             <div class="cart__note hidden">
               <label class="form__label" for="CartNote">{{ 'cart.general.note' | t }}</label>
-              <textarea
-                name="note"
-                rows="10"
-                class="form__input"
-                id="CartNote"
-                placeholder="{{ 'cart.general.note_placeholder' | t }}">{{ cart.note }}</textarea>
+              <textarea name="note" rows="10" class="form__input" id="CartNote" placeholder="{{ 'cart.general.note_placeholder' | t }}">{{ cart.note }}</textarea>
             </div>
           {%- endif -%}
           {%- if cart.cart_level_discount_applications != blank -%}
@@ -155,12 +134,7 @@
           {%- endif -%}
           <div class="cart__checkout-wrapper">
             <a href="{{ routes.cart_url }}"class="btn btn__link btn__outline"title="{{ 'cart.general.view_cart' | t }}">{{ 'cart.general.view_cart' | t }}</a>
-            <button
-              class="btn btn__link btn__primary"
-              type="submit"
-              name="checkout"
-              value="Checkout"
-              aria-label="{{ 'cart.general.checkout' | t }}">{{ 'cart.general.checkout' | t }}</button>
+            <button class="btn btn__link btn__primary" type="submit" name="checkout" value="Checkout" aria-label="{{ 'cart.general.checkout' | t }}">{{ 'cart.general.checkout' | t }}</button>
             {% if settings.additional_checkout_buttons %}
               <div class="additional__buttons">{{ content_for_additional_checkout_buttons }}</div>
             {% endif %}
@@ -170,10 +144,7 @@
     {%- else -%}
       <div class="cart__empty-message">
         <div class="rte">{{ 'cart.general.empty_cart' | t }}</div>
-        <a
-          href="{{ routes.all_products_collection_url }}"
-          title="{{ 'cart.general.continue_shopping' | t }}"
-          class="form__links">{{ 'cart.general.continue_shopping' | t }}</a>
+        <a href="{{ routes.all_products_collection_url }}" title="{{ 'cart.general.continue_shopping' | t }}" class="form__links">{{ 'cart.general.continue_shopping' | t }}</a>
       </div>
     {%- endif -%}
   {%- endform -%}
