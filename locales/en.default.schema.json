@@ -306,6 +306,9 @@
         "text_color": {
           "label": "Text"
         },
+        "show_breadcrumbs": {
+          "label": "Show Breadcrumbs"
+        },
         "lazyload_images": {
           "label": "Enable LazyLoad Images"
         },
