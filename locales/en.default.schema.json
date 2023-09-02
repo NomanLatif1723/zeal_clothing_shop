@@ -283,6 +283,9 @@
         "contact_header_image": {
           "label": "Background Image"
         },
+        "text_color": {
+          "label": "Text"
+        },
         "lazyload_images": {
           "label": "Enable LazyLoad Images"
         },
