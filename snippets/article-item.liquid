@@ -34,11 +34,13 @@
       {%- endif -%}
       <div class="grid__item-text">
         <div class="article__type-date">
-          <h4>{{ article.tags[0] }}</h4>
+          {%- if show_category -%}
+            <h4>{{ article.tags[0] }}</h4>
+          {%- endif -%}
           {%- if show_date -%}
-          <span class="article__date">
-            {{ article.created_at | date: '%d %b %Y' }}
-          </span>
+            <span class="article__date">
+              {{ article.created_at | date: '%d %b %Y' }}
+            </span>
           {%- endif -%}
         </div>
         <div class="main__heading article__title">
