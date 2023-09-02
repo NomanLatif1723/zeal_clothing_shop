@@ -1,12 +1,23 @@
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Blog Header",
+    "class": "blog__header",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "blog_image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "blog_heading",
+        "label": "Heading"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_breadcrumbs",
+        "label": "Show Breadcrumbs"
+      }
+    ]
   }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
