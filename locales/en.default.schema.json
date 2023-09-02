@@ -99,20 +99,20 @@
         "blog": {
           "label": "Blog"
         },
-        "blog_show_date": {
+        "show_date": {
           "label": "Show Date"
         },
-        "blog_show_tags": {
+        "show_tags": {
           "label": "Show Tags"
         },
-        "posts_range_label": {
+        "posts_to_show": {
           "label": "Posts To Show"
         },
-        "blog_show_viewall": {
+        "show_view_all_btn": {
           "label": "Enable 'View All' Button",
           "info": "Enable 'View All' if blogs have more posts than Shown"
         },
-        "blog_image_size": {
+        "post_image_size": {
           "label": "Image Size",
           "options": {
             "natural": {
