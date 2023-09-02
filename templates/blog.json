@@ -3,9 +3,10 @@
     "blog-header": {
       "type": "blog-header",
       "settings": {
-        "blog_heading": "",
-        "show_breadcrumbs": false,
-        "lazyload_images": false,
+        "blog_image": "shopify:\/\/shop_images\/370a1463-8dd4-46f6-a150-7c25cbcd9777_1.jpg",
+        "blog_heading": "Our Blogs",
+        "show_breadcrumbs": true,
+        "lazyload_images": true,
         "text_color": "#ffffff"
       }
     },
