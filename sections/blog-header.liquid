@@ -1,33 +1,33 @@
 {% schema %}
   {
-    "name": "Blog Header",
+    "name": "t:sections.blog-header.name",
     "class": "blog__header",
     "settings": [
       {
         "type": "image_picker",
         "id": "blog_image",
-        "label": "Image"
+        "label": "t:sections.blog-header.settings.blog_image.label"
       },
       {
         "type": "text",
         "id": "blog_heading",
-        "label": "Heading"
+        "label": "t:sections.blog-header.settings.blog_heading.label"
       },
       {
         "type": "checkbox",
         "id": "show_breadcrumbs",
-        "label": "Show Breadcrumbs"
+        "label": "t:sections.blog-header.settings.show_breadcrumbs.label"
       },
       {
         "type": "color",
         "id": "text_color",
-        "label": "Text",
+        "label": "t:sections.blog-header.settings.text_color.label",
         "default": "#ffffff"
       },
       {
         "type": "checkbox",
         "id": "lazyload_images",
-        "label": "t:sections.contact-header.settings.lazyload_images.label",
+        "label": "t:sections.blog-header.settings.lazyload_images.label",
         "default": false
       }
     ]
