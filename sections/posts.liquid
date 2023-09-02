@@ -60,7 +60,7 @@
         {%- endif -%}
       </header>
       {%- unless blog.empty? or blog.articles.size == 0 -%}
-        <div class="grid blog__grid">
+        <div class="blog__grid">
           {%- for article in blog.articles limit: posts_to_show -%}
             {%- render 'article-item',
               article: article,
@@ -75,11 +75,11 @@
 
         </div>
       {%- else -%}
-        <div class="grid blog__grid">
+        <div class="blog__grid">
           {%- for i in (1..posts_to_show) -%}
             <div class="grid__item grid__item-one-third">
-              <div class="grid article__grid ">
-                <div class="grid__item grid__item-small">
+              <div class="article__grid ">
+                <div class="grid__item">
                   <div class="grid__item-image">
                     <a href="#" class="article__image" style="aspect-ratio: {{ imageAspectRatio }};">
                       {{ 'image' | placeholder_svg_tag: "placeholder__image article__placeholder" }}
