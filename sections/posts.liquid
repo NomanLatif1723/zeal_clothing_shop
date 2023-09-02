@@ -87,9 +87,14 @@
                   </div>
                   <div class="grid__item-text">
                     <div class="article__type-date">
-                      <h4>{{ 'blogs.article.tag' | t }}</h4><span class="article__date">
-                        {%- if show_date -%}{{ 'blogs.article.date' | t }}{%- endif -%}
-                      </span>
+                      {% if show_category %}
+                        <h4>{{ 'blogs.article.tag' | t }}</h4>
+                      {% endif %}
+                      {%- if show_date -%}
+                        <span class="article__date">
+                          {{ 'blogs.article.date' | t }}
+                        </span>
+                        {%- endif -%}
                     </div>
                     <div class="main__heading article__title">
                       <h3>{{ 'blogs.article.title' | t }}</h3>
