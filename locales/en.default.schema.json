@@ -102,6 +102,10 @@
         "show_date": {
           "label": "Show Date"
         },
+        "show_category": {
+          "label": "Show Category",
+          "info": "First Article tag will be shown as its category"
+        },
         "show_tags": {
           "label": "Show Tags"
         },
@@ -1177,6 +1181,10 @@
         },
         "show_tags": {
           "label": "Show Tags"
+        },
+        "show_category": {
+          "label": "Show Category",
+          "info": "First Article tag will be shown as its category"
         },
         "post_image_size": {
           "label": "Image Size",
