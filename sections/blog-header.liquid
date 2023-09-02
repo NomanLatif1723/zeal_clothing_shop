@@ -2,6 +2,7 @@
     assign header_text = section.settings.blog_heading
     assign header_image = section.settings.blog_image
     assign text_color = section.settings.text_color
+    assign show_breadcrumbs = section.settings.show_breadcrumbs
 
     assign lazyloading = ''
     assign lazyloadImages = section.settings.lazyload_images
@@ -48,6 +49,19 @@
               <h1>{{ header_text }}</h1>
             {%- else -%}
               <h1>{{ blog.title }}</h1>
+            {%- endif -%}
+            {%- if show_breadcrumbs -%}
+              <nav role="navigation" aria-label="breadcrumb">
+                <ul class="breadcrumb__list">
+                    <li class="breadcrumb__item">
+                        <a href="{{ routes.root_url }}" title="Home">{{ 'general.breadcrumbs.home' | t }}</a>
+                    </li>
+                    <span class="separater__icon">{% render 'icon-arrow-down' %}</span>
+                    <li class="breadcrumb__item" aria-current="page">
+                        <span>{{ blog.title }}</span>
+                    </li>
+                </ul>
+              </nav>
             {%- endif -%}
           </div>
         </div>
