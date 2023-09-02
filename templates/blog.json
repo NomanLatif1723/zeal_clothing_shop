@@ -3,8 +3,10 @@
     "main": {
       "type": "main-blog",
       "settings": {
+        "posts_to_show": 3,
         "show_date": false,
         "show_tags": false,
+        "show_category": true,
         "post_image_size": "square",
         "lazyload_images": true,
         "margin_top": 60,
