@@ -2,6 +2,7 @@
   assign image_size = section.settings.post_image_size
   assign show_date = section.settings.show_date
   assign show_tags = section.settings.show_tags
+  assign posts_to_show = section.settings.posts_to_show
   
   assign lazyloading = ''
   assign lazyloadImages = section.settings.lazyload_images
@@ -38,7 +39,7 @@
 {%- endstyle -%}
 <div class="main__section-{{ section.id }}">
   <div class="page__width">
-    {%- paginate blog.articles by 2 -%}
+    {%- paginate blog.articles by posts_to_show -%}
       <div class="grid blog__grid">
         {% for article in blog.articles %}
           {%- render 'article-item',
@@ -66,7 +67,7 @@
       {
         "type": "range",
         "id": "posts_to_show",
-        "label": "t:sections.blog-posts.settings.posts_range_label.label",
+        "label": "t:sections.main-blog.settings.posts_to_show.label",
         "min": 3,
         "max": 30,
         "step": 3,
@@ -75,50 +76,50 @@
       {
         "type": "checkbox",
         "id": "show_date",
-        "label": "t:sections.blog-posts.settings.blog_show_date.label",
+        "label": "t:sections.main-blog.settings.blog_show_date.label",
         "default": false
       },
       {
         "type": "checkbox",
         "id": "show_tags",
-        "label": "t:sections.blog-posts.settings.blog_show_tags.label",
+        "label": "t:sections.main-blog.settings.blog_show_tags.label",
         "default": false
       },
       {
         "type": "select",
         "id": "post_image_size",
-        "label": "t:sections.blog-posts.settings.blog_image_size.label",
+        "label": "t:sections.main-blog.settings.blog_image_size.label",
         "options": [
           {
             "value": "natural",
-            "label": "t:sections.blog-posts.settings.blog_image_size.options.natural.label"
+            "label": "t:sections.main-blog.settings.blog_image_size.options.natural.label"
           },
           {
             "value": "square",
-            "label": "t:sections.blog-posts.settings.blog_image_size.options.square.label"
+            "label": "t:sections.main-blog.settings.blog_image_size.options.square.label"
           },
           {
             "value": "portrait",
-            "label": "t:sections.blog-posts.settings.blog_image_size.options.portrait.label"
+            "label": "t:sections.main-blog.settings.blog_image_size.options.portrait.label"
           },
           {
             "value": "landscape",
-            "label": "t:sections.blog-posts.settings.blog_image_size.options.landscape.label"
+            "label": "t:sections.main-blog.settings.blog_image_size.options.landscape.label"
           }, {
             "value": "wide",
-            "label": "t:sections.blog-posts.settings.blog_image_size.options.wide.label"
+            "label": "t:sections.main-blog.settings.blog_image_size.options.wide.label"
           }
         ]
       },
       {
         "type": "checkbox",
         "id": "lazyload_images",
-        "label": "t:sections.blog-posts.settings.lazyload_images.label",
+        "label": "t:sections.main-blog.settings.lazyload_images.label",
         "default": false,
-        "info": "t:sections.blog-posts.settings.lazyload_images.info"
+        "info": "t:sections.main-blog.settings.lazyload_images.info"
       }, {
         "type": "header",
-        "content": "t:sections.blog-posts.settings.header_spacing.label"
+        "content": "t:sections.main-blog.settings.header_spacing.label"
       }, {
         "type": "range",
         "id": "margin_top",
@@ -126,7 +127,7 @@
         "max": 100,
         "step": 2,
         "unit": "px",
-        "label": "t:sections.blog-posts.settings.header_spacing.top_spacing.label",
+        "label": "t:sections.main-blog.settings.header_spacing.top_spacing.label",
         "default": 16
       }, {
         "type": "range",
@@ -135,7 +136,7 @@
         "max": 100,
         "step": 2,
         "unit": "px",
-        "label": "t:sections.blog-posts.settings.header_spacing.bottom_spacing.label",
+        "label": "t:sections.main-blog.settings.header_spacing.bottom_spacing.label",
         "default": 16
       }
     ]
