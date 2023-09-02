@@ -27,6 +27,9 @@
     text-align: center;
     padding: 30px;
 }
+.contact-breadcrumb__list {
+    justify-content: center;
+}
 @media only screen and (min-width: 381px) {
   .contact-page__text-content h1 {
     font-size: 28px;
