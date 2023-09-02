@@ -1,5 +1,10 @@
 {
   "sections": {
+    "blog-header": {
+      "type": "blog-header",
+      "settings": {
+      }
+    },
     "main": {
       "type": "main-blog",
       "settings": {
@@ -15,6 +20,7 @@
     }
   },
   "order": [
+    "blog-header",
     "main"
   ]
 }
