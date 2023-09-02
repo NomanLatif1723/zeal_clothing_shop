@@ -3,6 +3,10 @@
     "blog-header": {
       "type": "blog-header",
       "settings": {
+        "blog_heading": "",
+        "show_breadcrumbs": false,
+        "lazyload_images": false,
+        "text_color": "#111111"
       }
     },
     "main": {
