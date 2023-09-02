@@ -6,6 +6,7 @@
   assign show_date = section.settings.show_date
   assign show_tags = section.settings.show_tags
   assign show_view_all = section.settings.show_view_all_btn
+  assign show_category = section.settings.show_category
   
   assign lazyloading = ''
   assign lazyloadImages = section.settings.lazyload_images
@@ -67,6 +68,7 @@
               imageAspectRatio: imageAspectRatio,
               show_date: show_date,
               show_tags: show_tags,
+              show_category: show_category,
               lazyloading: lazyloading
             -%}
           {%- endfor -%}
