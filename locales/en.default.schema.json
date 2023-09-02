@@ -154,6 +154,26 @@
         "name": "Blog Posts"
       }
     },
+    "blog-header": {
+      "name": "Blog header",
+      "settings": {
+        "blog_heading": {
+          "label": "Heading"
+        },
+        "blog_image": {
+          "label": "Background Image"
+        },
+        "show_breadcrumbs": {
+          "label": "Show Breadcrumbs"
+        },
+        "text_color": {
+          "label": "Text"
+        },
+        "lazyload_images": {
+          "label": "Enable LazyLoad Images"
+        }
+      }
+    },
     "collection-list": {
       "name": "Collection List",
       "settings": {
