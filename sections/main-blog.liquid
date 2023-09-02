@@ -3,6 +3,7 @@
   assign show_date = section.settings.show_date
   assign show_tags = section.settings.show_tags
   assign posts_to_show = section.settings.posts_to_show
+  assign show_category = section.settings.show_category
   
   assign lazyloading = ''
   assign lazyloadImages = section.settings.lazyload_images
@@ -48,6 +49,7 @@
             imageAspectRatio: imageAspectRatio,
             show_date: show_date,
             show_tags: show_tags,
+            show_category
             lazyloading: lazyloading -%}
         {% endfor %}
       </div>
