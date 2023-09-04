@@ -18,6 +18,12 @@
       "comment_published": "Your Comment has been Published",
       "comment_sent": "Your Comment has been sent. It will be visible when owner accepted it.",
       "empty": "You don't have any comments yet"
+    },
+    "socials": {
+      "faceebook": "Facebook",
+      "instagram": "Instagram",
+      "twitter": "Twitter",
+      "pinterest": "Pinterest"
     }
   },
   "blogs": {
