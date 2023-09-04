@@ -4,6 +4,7 @@
   assign show_comments = section.settings.show_comments
   assign show_category = section.settings.show_category
   assign show_social_sharing = section.settings.show_social_sharing
+  assign articleImage = article.image
 -%}
 {%- style -%}
   .main__section-{{ section.id }}{
@@ -21,11 +22,34 @@
   <div class="page__width">
     <article class="article__main--container">
       <div class="article__wrapper">
-        {% render 'article-item',
-          show_date: show_date,
-          show_tags: show_tags,
-          show_category: show_category,
-        %}
+        {%- if article.image -%}
+          <div class="grid__item-image">
+            <a
+              href="{{ article.url }}"
+              title="{{ article.title }}"
+              aria-label="{{ article.title | escape }}"
+              class="article__image">
+              <div class="article_image-wrapper">
+                <img style="aspect-ratio: {{ imageAspectRatio }};"src="{{ articleImage | img_url: default }}"srcset="
+                    {{ articleImage | img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
+                    {{ articleImage | img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
+                    {{ articleImage | img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
+                    {{ articleImage | img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
+                    {{ articleImage | img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
+                    "
+                    width="{{ articleImage.width }}"
+                    height="{{ articleImage.height }}"
+                    loading="{{ lazyloading }}"
+                    sizes="{{ sizes }}"
+                    alt="{{ articleImage.alt }}"
+                  >
+              </div>
+            </a>
+          </div>
+        {%- endif -%}
+        {%- if show_date -%}
+          
+        {%- endif -%}
         <div class="article__form">
           <div class="comments__wrapper">
             <h3>Customer Comments
