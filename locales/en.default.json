@@ -1,7 +1,8 @@
 {
   "article": {
     "general": {
-      "author": "By {{ author }}"
+      "author": "By {{ author }}",
+      "comments_count": "Comments({{ count }})"
     }
   },
   "blogs": {
