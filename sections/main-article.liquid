@@ -1,64 +1,78 @@
-<div class="page__width">
-  <article class="article__main--container">
-    <div class="article__wrapper">
-      <div class="article__content">
-        <img
-          src="{{ article.image | image_url }}"
-          alt="{{ article.image.alt }}"
-          width=""
-          height=""
-          loading="lazy" />
-        <h3>{{ article.title }}</h3>
-        <p>{{ article.content }}</p>
-      </div>
-      <div class="article__form">
-        <div class="comments__wrapper">
-          <h3>Customer Comments
-          </h3>
-          {% paginate article.comments by 2 %}
-            {% for comments in article.comments %}
-              <div class="comment__item">
-                <h3>{{ comments.author }}</h3>
-                <p>{{ comments.email }}</p>
-                <p>{{ comments.content }}</p>
-              </div>
-            {% endfor %}
-  
-            {{ paginate | default_pagination }}
-          {% endpaginate %}
+{%- style -%}
+  .main__section-{{ section.id }}{
+    margin-top: {{ section.settings.margin_top | times: 0.5 | round: 0 }}px;
+    margin-bottom: {{ section.settings.margin_bottom | times: 0.5 | round: 0 }}px;
+  }
+  @media only screen and (min-width: 769px) {
+    .main__section-{{ section.id }}{
+      margin-top: {{ section.settings.margin_top }}px;
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<div class="main__section-{{ section.id }}">
+  <div class="page__width">
+    <article class="article__main--container">
+      <div class="article__wrapper">
+        <div class="article__content">
+          <img
+            src="{{ article.image | image_url }}"
+            alt="{{ article.image.alt }}"
+            width=""
+            height=""
+            loading="lazy" />
+          <h3>{{ article.title }}</h3>
+          <p>{{ article.content }}</p>
         </div>
-        {% if article.comments_enabled? %}
-          {% form 'new_comment', article %}
-            <h3>Leave a Comment</h3>
-            {{ form.errors | default_errors }}
-            <div class="form__group">
-              <div class="name">
-                <label for="name">Name</label>
-                <input
-                  type="text"
-                  name="comment[author]"
-                  value="{{ form.author }}">
+        <div class="article__form">
+          <div class="comments__wrapper">
+            <h3>Customer Comments
+            </h3>
+            {% paginate article.comments by 2 %}
+              {% for comments in article.comments %}
+                <div class="comment__item">
+                  <h3>{{ comments.author }}</h3>
+                  <p>{{ comments.email }}</p>
+                  <p>{{ comments.content }}</p>
+                </div>
+              {% endfor %}
+    
+              {{ paginate | default_pagination }}
+            {% endpaginate %}
+          </div>
+          {% if article.comments_enabled? %}
+            {% form 'new_comment', article %}
+              <h3>Leave a Comment</h3>
+              {{ form.errors | default_errors }}
+              <div class="form__group">
+                <div class="name">
+                  <label for="name">Name</label>
+                  <input
+                    type="text"
+                    name="comment[author]"
+                    value="{{ form.author }}">
+                </div>
+    
+                <div class="email">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    name="comment[email]"
+                    value="{{ form.email }}">
+                </div>
+    
+                <div class="comment">
+                  <label for="comment">Comment</label>
+                  <textarea name="comment[body]">{{ form.body }}</textarea>
+                </div>
+                <button type="submit">Add Comment</button>
               </div>
-  
-              <div class="email">
-                <label for="email">Email</label>
-                <input
-                  type="email"
-                  name="comment[email]"
-                  value="{{ form.email }}">
-              </div>
-  
-              <div class="comment">
-                <label for="comment">Comment</label>
-                <textarea name="comment[body]">{{ form.body }}</textarea>
-              </div>
-              <button type="submit">Add Comment</button>
-            </div>
-          {% endform %}
-        {% endif %}
+            {% endform %}
+          {% endif %}
+        </div>
       </div>
-    </div>
-  </article>
+    </article>
+  </div>
 </div>
 {% schema %}
   {
