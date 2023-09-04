@@ -72,6 +72,9 @@
 .contact-form__grid {
     display: block;
 }
+.contact-form__grid .form__group {
+    width: 100%;
+  }
 .contact-form .btn__link {
     width: auto;
 }
