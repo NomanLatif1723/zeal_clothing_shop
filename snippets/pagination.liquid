@@ -5,6 +5,8 @@
          assign total_count = collection.all_products_count
        elsif template.name == 'blog'
          assign total_count = blog.articles_count
+       elsif template.name == 'article'
+         assign total_count = article.comments_count
        endif
     -%}
     {% if paginate.next.is_link %}
