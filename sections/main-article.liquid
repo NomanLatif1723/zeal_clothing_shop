@@ -83,8 +83,7 @@
       <div class="article__form">
         {%- if show_comments -%}
           <div class="comments__wrapper">
-            <h3>Customer Comments
-            </h3>
+            <h3>{{ 'article.general.comments.comments_count' | t:count: article.comments_count }}</h3>
             {%- paginate article.comments by 2 %}
               {%- for comments in article.comments -%}
                 <div class="comment__item">
@@ -102,27 +101,27 @@
         {%- endif -%}
         {%- if article.comments_enabled? -%}
           {%- form 'new_comment', article -%}
-            <h3>Leave a Comment</h3>
+            <h3>{{ 'article.general.comments.leave_comments' | t }}</h3>
             {{ form.errors | default_errors }}
             <div class="form__grid">
               <div class="form__group">
-                <label class="form__label" for="name">Name</label>
+                <label class="form__label" for="name">{{ 'article.general.comments.name' | t }}</label>
                 <input class="form__input" type="text" name="comment[author]" id="name" value="{{ form.author }}">
               </div>
               <div class="form__group">
-                <label class="form__label" for="email">Email</label>
+                <label class="form__label" for="email">{{ 'article.general.comments.email' | t }}</label>
                 <input class="form__input" type="email" name="comment[email]" id="email" value="{{ form.email }}">
               </div>
             </div>
             <div class="form__group">
-              <label class="form__label" for="comment">Comment</label>
+              <label class="form__label" for="comment">{{ 'article.general.comments.message' | t }}</label>
               <textarea class="form__input" name="comment[body]" id="comment">{{ form.body }}</textarea>
             </div>
             <div class="text__center">
               <div class="comments-form__submit">
-                <button class="btn btn__link btn__primary" type="submit">Submit</button>
+                <button class="btn btn__link btn__primary" type="submit">{{ 'article.general.comments.submit' | t }}</button>
               </div>
-              <a href="{{ blog.url }}" class="form__links">Back</a>
+              <a href="{{ blog.url }}" class="form__links">{{ 'article.general.comments.back' | t }}</a>
             </div>
           {%- endform -%}
         {%- endif -%}
