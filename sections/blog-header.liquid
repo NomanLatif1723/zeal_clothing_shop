@@ -3,6 +3,7 @@
     assign header_image = section.settings.blog_image
     assign text_color = section.settings.text_color
     assign show_breadcrumbs = section.settings.show_breadcrumbs
+    assign full_width = section.settings.full_width
 
     assign lazyloading = ''
     assign lazyloadImages = section.settings.lazyload_images
@@ -23,7 +24,9 @@
   }
 {%- endstyle -%}
 <div class="blog-header main__section-{{ section.id }}">
-  <!-- <div class="page__width"> -->
+  {%- if full_width -%}
+  <div class="page__width">
+  {%- endif -%}
     <div class="blog-header__wrapper">
       <div class="blog-header__image-container">
         {%- if header_image != blank -%}
@@ -70,7 +73,9 @@
         </div>
       </div>
     </div>
-  <!-- </div> -->
+  {%- if full_width -%}
+  </div>
+  {%- endif -%}
 </div>
 {% schema %}
   {
