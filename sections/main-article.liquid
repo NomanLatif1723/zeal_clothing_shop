@@ -86,21 +86,25 @@
         {%- if show_comments -%}
           <div class="comments__wrapper">
             <h3 class="comments-form__heading">{{ 'article.comments.comments_count' | t:count: article.comments_count }}</h3>
-            {%- paginate article.comments by 2 %}
-              {%- for comments in article.comments -%}
-                <div class="comment__item rte">
-                  <div class="comments__header">
-                    <h3>{{ comments.author }}</h3>
-                    <div>{{ comments.created_at | date: '%d %b %Y' }}</div>
+            {%- if article.comments_count > 0 -%}
+              {%- paginate article.comments by 50 %}
+                {%- for comments in article.comments -%}
+                  <div class="comment__item rte">
+                    <div class="comments__header">
+                      <h3>{{ comments.author }}</h3>
+                      <div>{{ comments.created_at | date: '%d %b %Y' }}</div>
+                    </div>
+                    <div>{{ comments.content }}</div>
                   </div>
-                  <div>{{ comments.content }}</div>
-                </div>
-              {%- endfor -%}
-    
-              {%- if paginate.pages > 1 -%}
-                {%- render 'pagination', paginate: paginate -%}
-              {%- endif -%}
-            {%- endpaginate -%}
+                {%- endfor -%}
+      
+                {%- if paginate.pages > 1 -%}
+                  {%- render 'pagination', paginate: paginate -%}
+                {%- endif -%}
+              {%- endpaginate -%}
+            {%- else -%}
+              <div class="comment__item rte">{{ 'article.comments.empty' | t }}</div>
+            {%- endif -%}
           </div>
         {%- endif -%}
         {%- if article.comments_enabled? -%}
