@@ -74,7 +74,7 @@
           </ul>
         {%- endif -%}
         <div class="article__content rte">
-          {{ article.content | truncatewords: 15 | strip_html }}
+          {{ article.content | strip_html }}
         </div>
       </div>
       {%- if show_social_sharing -%}
