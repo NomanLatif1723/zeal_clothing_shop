@@ -1,0 +1,155 @@
+{%- liquid
+    assign logo = section.settings.logo
+    assign desktop_logo_width = section.settings.desktop_logo_width
+    assign mobile_logo_width = section.settings.mobile_logo_width
+    assign gift_card_image = section.settings.gift_card_image
+
+    assign ratio = 0.75
+    assign default = 'grande'
+    assign sizes = '(min-width: 1200px) 650px, 45vw'
+-%}
+{% style %}
+  .header__logo {
+    width: {{ mobile_logo_width }}px;
+    flex: 0 0{{ mobile_logo_width }}px;
+  }
+  .site__logo-image {
+    width: {{ mobile_logo_width }}px;
+  }
+  @media only screen and (min-width: 769px) {
+    .header__logo {
+      width: {{ desktop_logo_width }}px;
+      flex: 0 0{{ desktop_logo_width }}px
+    }
+    .site__logo-image {
+      width: {{ desktop_logo_width }}px;
+    }
+  }
+{% endstyle %}
+<div class="page__width">
+  <div class="gift-card">
+    {%- capture header_logo -%}
+      <h1 class="site__logo">
+        <a
+          href="{{ routes.root_url }}"
+          title="{{ shop.name }}"
+          aria-label="{{ shop.name }}">
+          {% if logo != blank %}
+            {{ logo | image_url: width: logo.width, height: logo.height | image_tag: class: "site__logo-image" }}
+          {%- else -%}
+            <span>{{ shop.name }}</span>
+          {% endif %}
+        </a>
+      </h1>
+    {%- endcapture -%}
+    <div class="gift-card__wrapper">
+      <div class="gift-card__header">
+        {{ header_logo }}
+      </div>
+      <div class="gift-card__content">
+        <div class="gift-card__image-container">
+          {% if gift_card_image != blank %}
+            <img
+              src="{{ gift_card_image | img_url: default }}"
+              srcset="
+                                  {{ gift_card_image | img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
+                                  {{ gift_card_image | img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
+                                  {{ gift_card_image | img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
+                                  {{ gift_card_image | img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
+                                  {{ gift_card_image | img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
+                                "
+              width="{{ gift_card_image.width }}"
+              height="{{ gift_card_image.height }}"
+              loading="{{ lazyloading }}"
+              sizes="{{ sizes }}"
+              alt="{{ gift_card_image.alt }}" />
+          {% else %}
+            <img
+              class=""
+              width=""
+              height=""
+              loading="lazy"
+              src="{{ 'gift-card/card.jpg' | shopify_asset_url }}"
+              alt="{{ 'gift_card.illustration' | t | escape }}">
+          {% endif %}
+        </div>
+        <div class="gift-card__title">{{ 'gift_card.title' | t }}</div>
+        <div class="gift-card__balance">{{ gift_card.balance | money }}</div>
+        <div class="gift-card__flex">
+          <div class="gift-card__item gift-card__qrcode">
+            <div id="qr-code"></div>
+            <script>
+              new QRCode(document.getElementById('qr-code'), {
+                text: '{{ gift_card.qr_identifier }}',
+                width: 120,
+                height: 120
+              });
+            </script>
+            {% if gift_card.pass_url %}
+              <a href="{{ gift_card.pass_url }}">
+                <img
+                  id="apple-wallet-badge"
+                  src="{{ 'gift-card/add-to-apple-wallet.svg' | shopify_asset_url }}"
+                  width="120"
+                  height="40"
+                  alt="{{ 'gift_card.apple_wallet_pass' | t }}">
+              </a>
+            {% endif %}
+          </div>
+          <div class="gift-card__item text">
+            <div class="gift-card__message">{{ 'gift_card.message' | t }}</div>
+            <div class="gift-card__code">{{ gift_card.code }}</div>
+            <a
+              href="{{ shop.url }}"
+              title="{{ 'gift_card.go_to-shop' | t }}"
+              class="btn btn__link btn__primary">{{ 'gift_card.go_to-shop' | t }}</a>
+            <div class="text__center">
+              <a
+                href="#"
+                onclick="window.print();"
+                title="{{ 'gift_card.print' | t }}"
+                class="form__links">{{ 'gift_card.print' | t }}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% schema %}
+  {
+    "name": "Gift Card",
+    "class": "gift__card",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "site_logo"
+      }, {
+        "type": "range",
+        "id": "desktop_logo_width",
+        "label": "t:sections.header.blocks.logo.settings.header_logo.desktop_logo_width.label",
+        "min": 50,
+        "max": 350,
+        "step": 10,
+        "unit": "px",
+        "default": 100
+      }, {
+        "type": "range",
+        "id": "mobile_logo_width",
+        "label": "t:sections.header.blocks.logo.settings.header_logo.mobile_logo_width.label",
+        "min": 20,
+        "max": 200,
+        "step": 10,
+        "unit": "px",
+        "default": 100
+      }, {
+        "type": "image_picker",
+        "id": "gift_card_image",
+        "label": "Gift Card Image"
+      }
+    ]
+  }
+{% endschema %}
