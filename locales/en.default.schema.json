@@ -209,6 +209,23 @@
         "lazyload_images": {
           "label": "Enable LazyLoad Images"
         },
+        "header_alignment": {
+          "label": "Alignment",
+          "alignment": {
+            "label": "Text alignment",
+            "options": {
+              "left": {
+                "label": "Left"
+              },
+              "center": {
+                "label": "Center"
+              },
+              "right": {
+                "label": "Right"
+              }
+            }
+          }
+        },
         "header_spacing": {
           "label": "Section Spacing",
           "top_spacing": {
