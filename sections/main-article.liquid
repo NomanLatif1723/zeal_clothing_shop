@@ -112,7 +112,7 @@
           <div class="comments__wrapper">
             <h3 class="comments-form__heading">{{ 'article.comments.comments_count' | t:count: article.comments_count }}</h3>
             {%- if article.comments_count > 0 -%}
-              {%- paginate article.comments by 50 %}
+              {%- paginate article.comments by 1 %}
                 {%- for comments in article.comments -%}
                   <div class="comment__item rte">
                     <div class="comments__header">
