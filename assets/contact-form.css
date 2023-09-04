@@ -1,5 +1,5 @@
 /* Contact Form Header */
-.contact-page__text-content h1 {
+/* .contact-page__text-content h1 {
     font-size: 20px;
     line-height: 2em;
     text-transform: uppercase;
@@ -13,7 +13,7 @@
 }
 .contact-page__wrapper {
     position: relative;
-    /* height: 350px; */
+    height: 350px;
 }
 .contact-page__text-container {
     position: relative;
@@ -43,7 +43,7 @@
   .contact-page__text-content h1 {
     font-size: 40px;
   }
-}
+} */
 /* Contact Form */
 .contact-form .form__input {
     background: white;
