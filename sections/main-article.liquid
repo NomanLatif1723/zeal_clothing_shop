@@ -104,7 +104,53 @@
       {%- endif -%}
       {% paginate blog.articles by 1 %}
         {% if paginate.pages > 1 %}
-          {% render 'pagination', paginate: paginate %}
+          <div class="pagination__wrapper">
+  <div class="pagination-left__container">
+    {%- liquid
+         assign total_count = blog.articles_count
+    -%}
+    {% if paginate.next.is_link %}
+      Showing <strong>{{ paginate.current_offset | plus: 1 }} - {{ paginate.current_offset | plus: paginate.page_size }}</strong> of {{ total_count }} items
+    {% else %}
+    {% capture itemsOnCurrentPage %}
+      {{ total_count | minus: paginate.current_offset }}
+    {% endcapture %}
+      Showing <strong>{{ paginate.current_offset | plus: 1 }} - {{ paginate.current_offset | plus: itemsOnCurrentPage }}</strong> of {{ total_count }} items
+    {% endif %}
+    
+  </div>
+  <div class="pagination-right__container">
+    {%- if paginate.previous -%}
+      <span class="previous__page">
+        <a href="{{ paginate.previous.url }}{{ hash }}" aria-label="{{ 'general.pagination.previous' | t }}" title="{{ 'general.pagination.previous' | t }}">
+          <svg aria-hidden="true" width="8" height="8" focusable="false" role="presentation" class="icon icon-chevron-left" viewBox="0 0 284.49 498.98"><path d="M249.49 0a35 35 0 0 1 24.75 59.75L84.49 249.49l189.75 189.74a35.002 35.002 0 1 1-49.5 49.5L10.25 274.24a35 35 0 0 1 0-49.5L224.74 10.25A34.89 34.89 0 0 1 249.49 0z"></path></svg>
+        </a>
+      </span>
+    {%- endif -%}
+  
+    {%- for part in paginate.parts -%}
+      {%- if part.is_link -%}
+        <span class="page">
+          <a href="{{ part.url }}{{ hash }}">{{ part.title }}</a>
+        </span>
+      {%- else -%}
+        {%- if part.title == paginate.current_page -%}
+          <span class="page current">{{ part.title }}</span>
+        {%- else -%}
+          <span class="page">{{ part.title }}</span>
+        {%- endif -%}
+      {%- endif -%}
+    {%- endfor -%}
+  
+    {%- if paginate.next -%}
+      <span class="next__page">
+        <a href="{{ paginate.next.url }}{{ hash }}" aria-label="{{ 'general.pagination.next' | t }}" title="{{ 'general.pagination.next' | t }}">
+          <svg aria-hidden="true" width="8" height="8" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"></path></svg>
+        </a>
+      </span>
+    {%- endif -%}
+  </div>
+</div>
         {% endif %}
       {% endpaginate %}
       <div class="article__form">
