@@ -2,7 +2,17 @@
   "article": {
     "general": {
       "author": "By {{ author }}",
-      "comments_count": "Comments({{ count }})"
+      "sharing_socials_label": "Tips & tricks",
+      "comments": {
+        "name": "Name",
+        "email": "Email",
+        "comments": "Message",
+        "comments_placeholder": "Write Your Message",
+        "comments_count": "Comments({{ count }})",
+        "leave_comments": "leave a Comment",
+        "submit": "Submit",
+        "back": "Back"
+      }
     }
   },
   "blogs": {
