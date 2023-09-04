@@ -47,52 +47,74 @@
             </a>
           </div>
         {%- endif -%}
-        {%- if show_date -%}
-          
-        {%- endif -%}
-        <div class="article__form">
-          <div class="comments__wrapper">
-            <h3>Customer Comments
-            </h3>
-            {%- paginate article.comments by 2 %}
-              {%- for comments in article.comments -%}
-                <div class="comment__item">
-                  <h3>{{ comments.author }}</h3>
-                  <p>{{ comments.email }}</p>
-                  <p>{{ comments.content }}</p>
-                </div>
-              {%- endfor -%}
-    
-              {%- if paginate.pages > 0 -%}
-                {%- render 'pagination' -%}
-              {%- endif -%}
-            {%- endpaginate -%}
-          </div>
-          {%- if article.comments_enabled? -%}
-            {%- form 'new_comment', article -%}
-              <h3>Leave a Comment</h3>
-              {{ form.errors | default_errors }}
-              <div class="form__grid">
-                <div class="form__group">
-                  <label class="form__label" for="name">Name</label>
-                  <input class="form__input" type="text" name="comment[author]" id="name" value="{{ form.author }}">
-                </div>
-                <div class="form__group">
-                  <label class="form__label" for="email">Email</label>
-                  <input class="form__input" type="email" name="comment[email]" id="email" value="{{ form.email }}">
-                </div>
-                <div class="form__group">
-                  <label class="form__label" for="comment">Comment</label>
-                  <textarea class="form__input" name="comment[body]" id="comment">{{ form.body }}</textarea>
-                </div>
-                <button class="btn btn__link btn__primary" type="submit">Submit</button>
-                <div class="text__center">
-                  <a href="{{ blog.url }}" class="form__links">Back</a>
-                </div>
-              </div>
-            {%- endform -%}
+        <div class="article__type-date">
+          {%- if show_category -%}
+            <h4>{{ article.tags[0] }}</h4>
+          {%- endif -%}
+          {%- if show_date -%}
+            <span class="article__date">
+              {{ article.created_at | date: '%d %b %Y' }}
+            </span>
           {%- endif -%}
         </div>
+        <div class="main__heading article__title">
+          <a href="{{ article.url }}" title="{{ article.title }}">
+            <h3>{{ article.title }}</h3>
+          </a>
+        </div>
+        {%- if show_tags -%}
+          <ul class="tags__list">
+            {%- for tag in article.tags limit: 3 -%}
+              <li>{{ tag }}</li>
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
+        <div class="article__content rte">
+          {{ article.content | truncatewords: 15 | strip_html }}
+        </div>
+      </div>
+      <div class="article__form">
+        <div class="comments__wrapper">
+          <h3>Customer Comments
+          </h3>
+          {%- paginate article.comments by 2 %}
+            {%- for comments in article.comments -%}
+              <div class="comment__item">
+                <h3>{{ comments.author }}</h3>
+                <p>{{ comments.email }}</p>
+                <p>{{ comments.content }}</p>
+              </div>
+            {%- endfor -%}
+  
+            {%- if paginate.pages > 0 -%}
+              {%- render 'pagination' -%}
+            {%- endif -%}
+          {%- endpaginate -%}
+        </div>
+        {%- if article.comments_enabled? -%}
+          {%- form 'new_comment', article -%}
+            <h3>Leave a Comment</h3>
+            {{ form.errors | default_errors }}
+            <div class="form__grid">
+              <div class="form__group">
+                <label class="form__label" for="name">Name</label>
+                <input class="form__input" type="text" name="comment[author]" id="name" value="{{ form.author }}">
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="email">Email</label>
+                <input class="form__input" type="email" name="comment[email]" id="email" value="{{ form.email }}">
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="comment">Comment</label>
+                <textarea class="form__input" name="comment[body]" id="comment">{{ form.body }}</textarea>
+              </div>
+              <button class="btn btn__link btn__primary" type="submit">Submit</button>
+              <div class="text__center">
+                <a href="{{ blog.url }}" class="form__links">Back</a>
+              </div>
+            </div>
+          {%- endform -%}
+        {%- endif -%}
       </div>
     </article>
   </div>
