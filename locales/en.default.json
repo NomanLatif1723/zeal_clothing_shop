@@ -1,4 +1,9 @@
 {
+  "article": {
+    "general": {
+      "author": "By {{ author }}"
+    }
+  },
   "blogs": {
     "article": {
       "title": "Example Article Title",
