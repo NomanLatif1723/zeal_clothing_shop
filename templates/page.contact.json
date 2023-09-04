@@ -2,7 +2,6 @@
   "sections": {
     "header": {
       "type": "page-header",
-      "disabled": true,
       "settings": {
         "section_height_desktop": "standard",
         "section_height_mobile": "auto",
@@ -55,7 +54,6 @@
         "812d474c-d186-46b4-9f24-10d4b210a72b",
         "ee856c18-e9da-4e0c-aa02-2288f4c6aaa1"
       ],
-      "disabled": true,
       "settings": {
         "main_heading": "Get in touch",
         "info_heading": "Our information",
