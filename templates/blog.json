@@ -10,7 +10,9 @@
         "page_heading": "Our Blogs",
         "show_breadcrumbs": true,
         "lazyload_images": true,
-        "text_color": "#ffffff"
+        "text_color": "#ffffff",
+        "margin_top": 0,
+        "margin_bottom": 60
       }
     },
     "main": {
