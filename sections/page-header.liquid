@@ -6,6 +6,7 @@
     assign full_width = section.settings.full_width
     assign desktop_height = section.settings.section_height_desktop
     assign mobile_height = section.settings.section_height_mobile
+    assign textAlignment = section.settings.text_alignment 
 
     assign lazyloading = ''
     assign lazyloadImages = section.settings.lazyload_images
@@ -61,7 +62,7 @@
         {%- endif -%}
       </div>
       <div class="page-header__text-container">
-        <div class="page-header__text-shadow">
+        <div class="page-header__text-shadow text__align-{{ textAlignment }}">
           <div class="page-header__text-content">
             {%- if header_text != blank -%}
               <h1>{{ header_text }}</h1>
