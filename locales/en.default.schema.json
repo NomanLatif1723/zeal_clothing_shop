@@ -157,6 +157,43 @@
     "blog-header": {
       "name": "Blog header",
       "settings": {
+        "section_height_desktop": {
+          "label": "Desktop Height",
+          "options": {
+            "natural": {
+              "label": "Natural"
+            },
+            "compact": {
+              "label": "Compact (200px)"
+            },
+            "standard": {
+              "label": "Standard (300px)"
+            },
+            "extended": {
+              "label": "Extended (400px)"
+            }
+          }
+        },
+        "section_height_mobile": {
+          "label": "Mobile Height",
+          "options": {
+            "auto": {
+              "label": "Auto"
+            },
+            "compact": {
+              "label": "Compact (150px)"
+            },
+            "standard": {
+              "label": "Standard (200px)"
+            },
+            "extended": {
+              "label": "Extended (250px)"
+            }
+          }
+        },
+        "full_width": {
+          "label": "Full Width"
+        },
         "blog_heading": {
           "label": "Heading"
         },
