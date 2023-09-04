@@ -5,7 +5,9 @@
       "sharing_socials_label": "Tips & tricks",
       "comments": {
         "name": "Name",
+        "name_placeholder": "Enter Your Name",
         "email": "Email",
+        "email_placeholder": "Example@gmail.com",
         "message": "Message",
         "message_placeholder": "Write Your Message",
         "comments_count": "Comments({{ count }})",
