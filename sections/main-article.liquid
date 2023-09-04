@@ -4,6 +4,7 @@
   assign show_comments = section.settings.show_comments
   assign show_category = section.settings.show_category
   assign show_social_sharing = section.settings.show_social_sharing
+  assign show_author = section.settings.show_author
   assign articleImage = article.image
 -%}
 {%- style -%}
@@ -32,6 +33,9 @@
             </span>
           {%- endif -%}
         </div>
+        {%- if show_author -%}
+          <div class="article__author rte">{{ 'article.general.author' | t:author: article.author }}</div>
+        {%- endif -%}
         {%- if article.image -%}
           <div class="grid__item-image">
             <a
