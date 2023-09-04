@@ -33,6 +33,21 @@
             </span>
           {%- endif -%}
         </div>
+        {%- if show_author -%}
+          <div class="article__author rte">{{ 'article.general.author' | t:author: article.author }}</div>
+        {%- endif -%}
+        <div class="main__heading article__title">
+          <a href="{{ article.url }}" title="{{ article.title }}">
+            <h3>{{ article.title }}</h3>
+          </a>
+        </div>
+        {%- if show_tags -%}
+          <ul class="tags__list">
+            {%- for tag in article.tags limit: 3 -%}
+              <li>{{ tag }}</li>
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
         {%- if article.image -%}
           <div class="grid__item-image">
             <a
@@ -57,21 +72,6 @@
               </div>
             </a>
           </div>
-        {%- endif -%}
-        {%- if show_author -%}
-          <div class="article__author rte">{{ 'article.general.author' | t:author: article.author }}</div>
-        {%- endif -%}
-        <div class="main__heading article__title">
-          <a href="{{ article.url }}" title="{{ article.title }}">
-            <h3>{{ article.title }}</h3>
-          </a>
-        </div>
-        {%- if show_tags -%}
-          <ul class="tags__list">
-            {%- for tag in article.tags limit: 3 -%}
-              <li>{{ tag }}</li>
-            {%- endfor -%}
-          </ul>
         {%- endif -%}
         <div class="article__content rte">
           {{ article.content | strip_html }}
