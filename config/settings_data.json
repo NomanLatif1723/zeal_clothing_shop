@@ -51,6 +51,15 @@
     "collection_layout": "slider",
     "color_button": "#111111",
     "color_button_text": "#ffffff",
+    "sections": {
+      "gift-card": {
+        "type": "gift-card",
+        "settings": {
+          "desktop_logo_width": 130,
+          "mobile_logo_width": 100
+        }
+      }
+    },
     "content_for_index": [
 
     ]
