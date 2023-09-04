@@ -5,7 +5,7 @@
          assign total_count = collection.all_products_count
        elsif template.name == 'blog' or template.name == 'article'
          assign total_count = blog.articles_count
-       elsif template.name == 'article'
+       elsif template.name == 'article' and article.comments_enabled?
          assign total_count = article.comments_count
        endif
     -%}
