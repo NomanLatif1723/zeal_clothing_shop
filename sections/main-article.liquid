@@ -74,23 +74,25 @@
         </div>
       </div>
       <div class="article__form">
-        <div class="comments__wrapper">
-          <h3>Customer Comments
-          </h3>
-          {%- paginate article.comments by 2 %}
-            {%- for comments in article.comments -%}
-              <div class="comment__item">
-                <h3>{{ comments.author }}</h3>
-                <p>{{ comments.email }}</p>
-                <p>{{ comments.content }}</p>
-              </div>
-            {%- endfor -%}
-  
-            {%- if paginate.pages > 0 -%}
-              {%- render 'pagination' -%}
-            {%- endif -%}
-          {%- endpaginate -%}
-        </div>
+        {% if show_comments %}
+          <div class="comments__wrapper">
+            <h3>Customer Comments
+            </h3>
+            {%- paginate article.comments by 2 %}
+              {%- for comments in article.comments -%}
+                <div class="comment__item">
+                  <h3>{{ comments.author }}</h3>
+                  <p>{{ comments.email }}</p>
+                  <p>{{ comments.content }}</p>
+                </div>
+              {%- endfor -%}
+    
+              {%- if paginate.pages > 0 -%}
+                {%- render 'pagination' -%}
+              {%- endif -%}
+            {%- endpaginate -%}
+          </div>
+        {% endif %}
         {%- if article.comments_enabled? -%}
           {%- form 'new_comment', article -%}
             <h3>Leave a Comment</h3>
