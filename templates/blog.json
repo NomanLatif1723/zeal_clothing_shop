@@ -5,7 +5,8 @@
       "settings": {
         "section_height_desktop": "extended",
         "section_height_mobile": "compact",
-        "full_width": false,
+        "full_width": true,
+        "page_image": "shopify:\/\/shop_images\/370a1463-8dd4-46f6-a150-7c25cbcd9777_1.jpg",
         "page_heading": "",
         "show_breadcrumbs": true,
         "lazyload_images": true,

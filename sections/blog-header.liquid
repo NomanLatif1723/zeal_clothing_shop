@@ -55,8 +55,10 @@
           <div class="page-header__text-content">
             {%- if header_text != blank -%}
               <h1>{{ header_text }}</h1>
-            {%- else -%}
+            {%- elsif template.name == 'blog' -%}
               <h1>{{ blog.title }}</h1>
+            {%- else -%}
+              <h1>{{ page.title }}</h1>
             {%- endif -%}
             {%- if show_breadcrumbs -%}
               <nav role="navigation" aria-label="breadcrumb">
