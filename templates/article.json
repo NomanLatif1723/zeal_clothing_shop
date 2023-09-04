@@ -8,7 +8,7 @@
         "show_category": true,
         "show_author": true,
         "show_social_sharing": true,
-        "show_comments": false,
+        "show_comments": true,
         "margin_top": 60,
         "margin_bottom": 60
       }
