@@ -11,7 +11,9 @@
         "comments_count": "Comments({{ count }})",
         "leave_comments": "leave a Comment",
         "submit": "Submit",
-        "back": "Back"
+        "back": "Back",
+        "comment_published": "Your Comment has been Published",
+        "comment_sent": "Your has been sent. It will be visible when owner accepted it."
       }
     }
   },
