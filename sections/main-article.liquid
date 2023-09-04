@@ -21,16 +21,11 @@
   <div class="page__width">
     <article class="article__main--container">
       <div class="article__wrapper">
-        <div class="article__content">
-          <img
-            src="{{ article.image | image_url }}"
-            alt="{{ article.image.alt }}"
-            width=""
-            height=""
-            loading="lazy" />
-          <h3>{{ article.title }}</h3>
-          <p>{{ article.content }}</p>
-        </div>
+        {% render 'article-item',
+          show_date: show_date,
+          show_tags: show_tags,
+          show_category: show_category,
+        %}
         <div class="article__form">
           <div class="comments__wrapper">
             <h3>Customer Comments
