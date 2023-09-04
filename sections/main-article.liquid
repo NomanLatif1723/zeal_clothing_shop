@@ -30,17 +30,19 @@
           <div class="comments__wrapper">
             <h3>Customer Comments
             </h3>
-            {% paginate article.comments by 2 %}
-              {% for comments in article.comments %}
+            {%- paginate article.comments by 2 %}
+              {%- for comments in article.comments -%}
                 <div class="comment__item">
                   <h3>{{ comments.author }}</h3>
                   <p>{{ comments.email }}</p>
                   <p>{{ comments.content }}</p>
                 </div>
-              {% endfor %}
+              {%- endfor -%}
     
-              {{ paginate | default_pagination }}
-            {% endpaginate %}
+              {%- if paginate.pages > 0 -%}
+                {%- render 'pagination' -%}
+              {%- endif -%}
+            {%- endpaginate -%}
           </div>
           {%- if article.comments_enabled? -%}
             {%- form 'new_comment', article -%}
