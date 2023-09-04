@@ -86,9 +86,11 @@
             <h3>{{ 'article.general.comments.comments_count' | t:count: article.comments_count }}</h3>
             {%- paginate article.comments by 2 %}
               {%- for comments in article.comments -%}
-                <div class="comment__item">
-                  <h3>{{ comments.author }}</h3>
-                  <p>{{ comments.email }}</p>
+                <div class="comment__item rte">
+                  <div class="comments__header">
+                    <h3>{{ comments.author }}</h3>
+                    <p>{{ comments.created_at }}</p>
+                  </div>
                   <p>{{ comments.content }}</p>
                 </div>
               {%- endfor -%}
