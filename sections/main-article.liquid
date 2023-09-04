@@ -33,9 +33,6 @@
             </span>
           {%- endif -%}
         </div>
-        {%- if show_author -%}
-          <div class="article__author rte">{{ 'article.general.author' | t:author: article.author }}</div>
-        {%- endif -%}
         {%- if article.image -%}
           <div class="grid__item-image">
             <a
@@ -60,6 +57,9 @@
               </div>
             </a>
           </div>
+        {%- endif -%}
+        {%- if show_author -%}
+          <div class="article__author rte">{{ 'article.general.author' | t:author: article.author }}</div>
         {%- endif -%}
         <div class="main__heading article__title">
           <a href="{{ article.url }}" title="{{ article.title }}">
