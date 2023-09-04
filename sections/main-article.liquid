@@ -89,7 +89,7 @@
                 <div class="comment__item rte">
                   <div class="comments__header">
                     <h3>{{ comments.author }}</h3>
-                    <p>{{ comments.created_at }}</p>
+                    <p>{{ comments.created_at | date: '%d %b %Y' }}</p>
                   </div>
                   <p>{{ comments.content }}</p>
                 </div>
