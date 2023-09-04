@@ -7,7 +7,7 @@
         "name": "Name",
         "email": "Email",
         "message": "Message",
-        "comments_placeholder": "Write Your Message",
+        "message_placeholder": "Write Your Message",
         "comments_count": "Comments({{ count }})",
         "leave_comments": "leave a Comment",
         "submit": "Submit",
