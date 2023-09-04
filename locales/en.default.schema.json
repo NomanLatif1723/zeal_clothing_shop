@@ -1313,8 +1313,24 @@
     "main-article": {
       "name": "Main Article",
       "settings": {
+        "show_date": {
+          "label": "Show Date"
+        },
+        "show_category": {
+          "label": "Show Category",
+          "info": "First Article tag will be shown as its category"
+        },
+        "show_tags": {
+          "label": "Show Tags"
+        },
         "show_author": {
           "label": "Show Author"
+        },
+        "show_social_sharing": {
+          "label": "Show Social Sharing"
+        },
+        "show_comments": {
+          "label": "Show Comments"
         },
         "header_spacing": {
           "label": "Section Spacing",
