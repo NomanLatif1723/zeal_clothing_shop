@@ -1310,6 +1310,23 @@
         }
       }
     },
+    "main-article": {
+      "name": "Main Article",
+      "settings": {
+        "show_author": {
+          "label": "Show Author"
+        },
+        "header_spacing": {
+          "label": "Section Spacing",
+          "top_spacing": {
+            "label": "Spacing Top"
+          },
+          "bottom_spacing": {
+            "label": "Spacing Bottom"
+          }
+        }
+      }
+    },
     "newsletter": {
       "name": "Newsletter",
       "settings": {
