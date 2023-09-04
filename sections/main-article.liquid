@@ -85,7 +85,7 @@
       <div class="article__form">
         {%- if show_comments -%}
           <div class="comments__wrapper">
-            <h3 class="comments-form__heading">{{ 'article.general.comments.comments_count' | t:count: article.comments_count }}</h3>
+            <h3 class="comments-form__heading">{{ 'article.comments.comments_count' | t:count: article.comments_count }}</h3>
             {%- paginate article.comments by 2 %}
               {%- for comments in article.comments -%}
                 <div class="comment__item rte">
@@ -105,27 +105,34 @@
         {%- endif -%}
         {%- if article.comments_enabled? -%}
           {%- form 'new_comment', article -%}
-            <h3 class="comments-form__heading">{{ 'article.general.comments.leave_comments' | t }}</h3>
             {{ form.errors | default_errors }}
+            {%- if form.posted_successfully? -%}
+              {% if blog.moderated? %}
+                <div class="success__message">{{ 'article.comments.comment_sent' | t }}</div>
+              {% else %}
+                <div class="success__message">{{ 'article.comments.comment_published' | t }}</div>
+              {% endif %}
+            {%- endif -%}
+            <h3 class="comments-form__heading">{{ 'article.comments.leave_comments' | t }}</h3>
             <div class="form__grid">
               <div class="form__group">
-                <label class="form__label" for="name">{{ 'article.general.comments.name' | t }}</label>
-                <input class="form__input" type="text" name="comment[author]" placeholder="{{ 'article.general.comments.name_placeholder' | t }}" id="name" value="{{ form.author }}">
+                <label class="form__label" for="name">{{ 'article.comments.name' | t }}</label>
+                <input class="form__input" type="text" name="comment[author]" placeholder="{{ 'article.comments.name_placeholder' | t }}" id="name" value="{{ form.author }}">
               </div>
               <div class="form__group">
-                <label class="form__label" for="email">{{ 'article.general.comments.email' | t }}</label>
-                <input class="form__input" type="email" name="comment[email]" placeholder="{{ 'article.general.comments.email_placeholder' | t }}" id="email" value="{{ form.email }}">
+                <label class="form__label" for="email">{{ 'article.comments.email' | t }}</label>
+                <input class="form__input" type="email" name="comment[email]" placeholder="{{ 'article.comments.email_placeholder' | t }}" id="email" value="{{ form.email }}">
               </div>
             </div>
             <div class="form__group">
-              <label class="form__label" for="comment">{{ 'article.general.comments.message' | t }}</label>
-              <textarea class="form__input" name="comment[body]" placeholder="{{ 'article.general.comments.message_placeholder' | t }}" id="comment">{{ form.body }}</textarea>
+              <label class="form__label" for="comment">{{ 'article.comments.message' | t }}</label>
+              <textarea class="form__input" name="comment[body]" placeholder="{{ 'article.comments.message_placeholder' | t }}" id="comment">{{ form.body }}</textarea>
             </div>
             <div class="text__center">
               <div class="comments-form__submit">
-                <button class="btn btn__link btn__primary" type="submit">{{ 'article.general.comments.submit' | t }}</button>
+                <button class="btn btn__link btn__primary" type="submit">{{ 'article.comments.submit' | t }}</button>
               </div>
-              <a href="{{ blog.url }}" class="form__links">{{ 'article.general.comments.back' | t }}</a>
+              <a href="{{ blog.url }}" class="form__links">{{ 'article.comments.back' | t }}</a>
             </div>
           {%- endform -%}
         {%- endif -%}
