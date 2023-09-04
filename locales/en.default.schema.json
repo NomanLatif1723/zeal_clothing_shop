@@ -154,8 +154,8 @@
         "name": "Blog Posts"
       }
     },
-    "blog-header": {
-      "name": "Blog header",
+    "page-header": {
+      "name": "Page header",
       "settings": {
         "section_height_desktop": {
           "label": "Desktop Height",
@@ -209,6 +209,9 @@
         "lazyload_images": {
           "label": "Enable LazyLoad Images"
         }
+      },
+      "presets": {
+        "name": "Page Header"
       }
     },
     "collection-list": {
