@@ -102,6 +102,11 @@
           </div>
         </div>
       {%- endif -%}
+      {% paginate blog.articles by blog.articles_count %}
+        {% if paginate.pages > 1 %}
+          {% render 'pagination', paginate: paginate %}
+        {% endif %}
+      {% endpaginate %}
       <div class="article__form">
         {%- if show_comments -%}
           <div class="comments__wrapper">
