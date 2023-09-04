@@ -218,9 +218,6 @@
             "label": "Spacing Bottom"
           }
         }
-      },
-      "presets": {
-        "name": "Page Header"
       }
     },
     "collection-list": {
