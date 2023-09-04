@@ -102,7 +102,7 @@
           </div>
         </div>
       {%- endif -%}
-      {% paginate blog.articles by blog.articles_count %}
+      {% paginate blog.articles by 1 %}
         {% if paginate.pages > 1 %}
           {% render 'pagination', paginate: paginate %}
         {% endif %}
