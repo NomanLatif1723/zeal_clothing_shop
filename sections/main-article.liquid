@@ -83,7 +83,7 @@
       <div class="article__form">
         {%- if show_comments -%}
           <div class="comments__wrapper">
-            <h3>{{ 'article.general.comments.comments_count' | t:count: article.comments_count }}</h3>
+            <h3 class="comments-form__heading">{{ 'article.general.comments.comments_count' | t:count: article.comments_count }}</h3>
             {%- paginate article.comments by 2 %}
               {%- for comments in article.comments -%}
                 <div class="comment__item rte">
@@ -103,7 +103,7 @@
         {%- endif -%}
         {%- if article.comments_enabled? -%}
           {%- form 'new_comment', article -%}
-            <h3>{{ 'article.general.comments.leave_comments' | t }}</h3>
+            <h3 class="comments-form__heading">{{ 'article.general.comments.leave_comments' | t }}</h3>
             {{ form.errors | default_errors }}
             <div class="form__grid">
               <div class="form__group">
