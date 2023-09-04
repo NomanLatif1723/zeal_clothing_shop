@@ -1,26 +1,9 @@
 {
   "sections": {
-    "f264430d-1f3a-4017-a356-df757dc550c1": {
-      "type": "page-header",
-      "settings": {
-        "section_height_desktop": "standard",
-        "section_height_mobile": "auto",
-        "full_width": false,
-        "page_image": "shopify:\/\/shop_images\/8d594142-6cc7-44f9-bb4f-87c313910a1c_1.jpg",
-        "page_heading": "Unleash your comfort and style.",
-        "show_breadcrumbs": true,
-        "lazyload_images": true,
-        "text_color": "#ffffff",
-        "margin_top": 60,
-        "margin_bottom": 60
-      }
-    },
     "header": {
-      "type": "contact-form-header",
+      "type": "page-header",
       "disabled": true,
       "settings": {
-        "contact_header_text": "Unleash your comfort and style.",
-        "contact_header_image": "shopify:\/\/shop_images\/8d594142-6cc7-44f9-bb4f-87c313910a1c_1.jpg",
         "show_breadcrumbs": true,
         "lazyload_images": true,
         "text_color": "#ffffff",
@@ -76,7 +59,6 @@
     }
   },
   "order": [
-    "f264430d-1f3a-4017-a356-df757dc550c1",
     "header",
     "main"
   ]
