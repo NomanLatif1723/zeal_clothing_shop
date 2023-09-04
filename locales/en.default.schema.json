@@ -194,10 +194,10 @@
         "full_width": {
           "label": "Full Width"
         },
-        "blog_heading": {
+        "page_heading": {
           "label": "Heading"
         },
-        "blog_image": {
+        "page_image": {
           "label": "Background Image"
         },
         "show_breadcrumbs": {
