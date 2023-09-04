@@ -3142,9 +3142,9 @@ table {
 }
 /* Pagination */
 .pagination__wrapper{
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
     background: #f6f6f6;
     font-size: 12px;
     padding: 15px;
@@ -3175,6 +3175,13 @@ table {
     background: #111111;
     color: white;
     cursor: auto;
+}
+@media only screen and (min-width: 481px) {
+  .pagination__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 /* Filters */
 .filter-group__item {
