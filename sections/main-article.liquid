@@ -1,3 +1,10 @@
+{%- liquid
+  assign show_date = section.settings.show_date
+  assign show_tags = section.settings.show_tags
+  assign show_comments = section.settings.show_comments
+  assign show_category = section.settings.show_category
+  assign show_social_sharing = section.settings.show_social_sharing
+-%}
 {%- style -%}
   .main__section-{{ section.id }}{
     margin-top: {{ section.settings.margin_top | times: 0.5 | round: 0 }}px;
