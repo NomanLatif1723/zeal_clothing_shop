@@ -1,7 +1,7 @@
 {
   "sections": {
     "blog-header": {
-      "type": "blog-header",
+      "type": "page-header",
       "settings": {
         "section_height_desktop": "extended",
         "section_height_mobile": "compact",
