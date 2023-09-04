@@ -26,9 +26,9 @@
   }
 {%- endstyle -%}
 <div class="page-header main__section-{{ section.id }}">
-  {%- if full_width -%}
+  {%- unless full_width -%}
   <div class="page__width">
-  {%- endif -%}
+  {%- endunless -%}
     <div class="page-header__wrapper" data-desktop-height="{{ desktop_height }}" data-mobile-height="{{ mobile_height }}">
       <div class="page-header__image-container">
         {%- if header_image != blank -%}
@@ -79,9 +79,9 @@
         </div>
       </div>
     </div>
-  {%- if full_width -%}
+  {%- unless full_width -%}
   </div>
-  {%- endif -%}
+  {%- endunless -%}
 </div>
 {% schema %}
   {
