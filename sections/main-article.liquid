@@ -118,8 +118,9 @@
               <label class="form__label" for="comment">Comment</label>
               <textarea class="form__input" name="comment[body]" id="comment">{{ form.body }}</textarea>
             </div>
-            <button class="btn btn__link btn__primary" type="submit">Submit</button>
+            
             <div class="text__center">
+              <button class="btn btn__link btn__primary" type="submit">Submit</button>
               <a href="{{ blog.url }}" class="form__links">Back</a>
             </div>
           {%- endform -%}
