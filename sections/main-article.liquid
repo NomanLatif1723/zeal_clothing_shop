@@ -73,8 +73,11 @@
           {{ article.content | truncatewords: 15 | strip_html }}
         </div>
       </div>
+      {%- if show_social_sharing -%}
+        social sharing icons here
+      {%- endif -%}
       <div class="article__form">
-        {% if show_comments %}
+        {%- if show_comments -%}
           <div class="comments__wrapper">
             <h3>Customer Comments
             </h3>
@@ -92,7 +95,7 @@
               {%- endif -%}
             {%- endpaginate -%}
           </div>
-        {% endif %}
+        {%- endif -%}
         {%- if article.comments_enabled? -%}
           {%- form 'new_comment', article -%}
             <h3>Leave a Comment</h3>
