@@ -94,7 +94,7 @@
                 </div>
               {%- endfor -%}
     
-              {%- if paginate.pages > 0 -%}
+              {%- if paginate.pages.size > 0 -%}
                 {%- render 'pagination' -%}
               {%- endif -%}
             {%- endpaginate -%}
