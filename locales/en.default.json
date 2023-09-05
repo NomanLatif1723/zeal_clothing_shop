@@ -58,7 +58,9 @@
       "view_cart": "View Cart",
       "drawer_close": "Close",
       "drawer_title": "Shopping Cart",
-      "popup_title": "Just Added To Your Cart"
+      "popup_title": "Just Added To Your Cart",
+      "plus": "Plus",
+      "minus": "Minus"
     }
   },
   "collections": {
