@@ -55,7 +55,6 @@
       </div>
       <div class="gift-card__flex">
         <div class="gift-card__item gift-card__image-container">
-          
           {% if gift_card_image != blank %}
             <img
               src="{{ gift_card_image | img_url: default }}"
@@ -76,7 +75,6 @@
           {% endif %}
         </div>
         <div class="gift-card__item gift-card__qrcode">
-          
           <div id="qr-code"></div>
           <script>
             new QRCode(document.getElementById('qr-code'), {
