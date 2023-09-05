@@ -913,8 +913,8 @@ function initcartAjax() {
           quantityInput.value = newValue;
           changeItemQuantity(key, newValue);
         } else if (value > 1) {
-          let newvalue = value - 1
-          quantityInput.value = newvalue;
+          let newValue = value - 1
+          quantityInput.value = newValue;
           changeItemQuantity(key, newValue);
         }
       })
