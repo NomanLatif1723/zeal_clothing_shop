@@ -906,7 +906,7 @@ function initcartAjax() {
         let quantityInput = button.parentElement.querySelector('input');
         let value = Number(quantityInput.value);
         let isPlus = button.classList.contains('icon__plus');
-        let key = button.closest('.cart__item-block').dataset.data-key;
+        let key = button.closest('.cart__item-block').getAttribute('data-key');
 
         if (isPlus) {
           let newValue = value + 1
