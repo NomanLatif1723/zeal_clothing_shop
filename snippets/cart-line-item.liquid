@@ -1,0 +1,79 @@
+<div class="cart__item-title desktop__hidden">
+  <h3>{{ item.title }}</h3>
+  <a href="{{ item.url_to_remove }}" class="cart__item-remove" title="{{ 'cart.general.remove' | t }}">
+    <svg width="12" height="14" viewBox="0 0 12 14" fill="none">
+      <path d="M10.375 3.66667L9.83292 11.7617C9.7862 12.4594 9.2419 13 8.5861 13H3.4139C2.7581 13 2.2138 12.4594 2.16708 11.7617L1.625 3.66667M4.75 6.33333V10.3333M7.25 6.33333V10.3333M7.875 3.66667V1.66667C7.875 1.29848 7.59518 1 7.25 1H4.75C4.40482 1 4.125 1.29848 4.125 1.66667V3.66667M1 3.66667H11" stroke="#9D1339" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+    {{ 'cart.general.remove' | t }}
+  </a>
+</div>
+<div class="cart__item-block">
+    <div class="cart__item-image">
+    <a href="{{ item.url }}">
+      <img class="mobile__hidden" src="{{ item.image | image_url: width: 100, height: 100 }}" alt="{{ item.image.alt }}" width="100" height="100" loading="lazy" />
+      <img class="desktop__hidden" src="{{ item.image | image_url: width: 80, height: 80 }}" alt="{{ item.image.alt }}" width="80" height="80" loading="lazy" />
+    </a>  
+    </div>
+    <div class="cart__item-content">
+      {%- if section.settings.show_vendor -%}
+        <div class="grid-product__vendor">{{ item.product.vendor }}</div>
+      {%- endif -%}
+      <div class="cart__item-title mobile__hidden">
+        <h3>{{ item.product.title }}</h3>
+        <a href="{{ item.url_to_remove }}" class="cart__item-remove" title="{{ 'cart.general.remove' | t }}">
+          <svg width="12" height="14" viewBox="0 0 12 14" fill="none">
+            <path d="M10.375 3.66667L9.83292 11.7617C9.7862 12.4594 9.2419 13 8.5861 13H3.4139C2.7581 13 2.2138 12.4594 2.16708 11.7617L1.625 3.66667M4.75 6.33333V10.3333M7.25 6.33333V10.3333M7.875 3.66667V1.66667C7.875 1.29848 7.59518 1 7.25 1H4.75C4.40482 1 4.125 1.29848 4.125 1.66667V3.66667M1 3.66667H11" stroke="#9D1339" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+          {{ 'cart.general.remove' | t }}
+        </a>
+      </div>
+      <div class="cart__item-price">
+        <div class="line__item-price">{{ item.original_price | money }}</div>
+        {%- unless item.product.has_only_default_variant -%}
+          <div class="line__item-variants">
+            {%- for option in item.options_with_values -%}
+              <div>{{ option.value }}</div>
+            {%- endfor -%}
+          </div>
+        {%- endunless -%}
+        {%- if product.selling_plan_allocation != empty -%}
+          <div class="cart__item-variants">
+            {{ product.selling_plan_allocation.selling_plan.name }}
+          </div>
+        {%- endif -%}
+        {%- unless item.properties == empty -%}
+          {%- for property in item.properties -%}
+            <div class="cart__item-property">
+              {{ property.first }}:
+              {%- if property.last contains '/uploads/' -%}
+                <a href="{{ property.last }}">{{ property.last | split: '/' | last }}</a>
+              {%- else -%}
+                {{ property.last }}
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+        {%- endunless -%}
+      </div>
+      <div class="cart-quantity__wrapper">
+        <div class="line__item-quantity">
+          {% comment %}
+            <input name="updates[]" value="{{ item.quantity }}" />
+          {% endcomment %}
+          <button type="button" aria-label="{{ 'cart.general.minus' | t }}" class="icon__minus">
+             <svg xmlns="http://www.w3.org/2000/svg" width="10" height="2" viewBox="0 0 10 2" fill="none">
+              <path d="M9 1H1" stroke="currentcolor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <input name="updates[]" id="qty-cart" value="{{ item.quantity }}" readonly="">
+          <button type="button" aria-label="{{ 'cart.general.plus' | t }}" class="icon__plus">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+              <path d="M5 1V5M5 5V9M5 5H9M5 5L1 5" stroke="currentcolor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+        <div class="line__item-final--price rte">
+          {{ 'cart.general.final_line_price' | t }}<strong>{{ item.final_line_price | money }}</strong>
+        </div>
+      </div>
+    </div>
+</div>
