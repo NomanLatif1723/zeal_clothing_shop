@@ -919,7 +919,7 @@ function initcartAjax() {
         }
       })
       function changeItemQuantity(key, quantity) {
-        console.log(key, quantity);
+        console.log({key, quantity});
       }
     })
   })
