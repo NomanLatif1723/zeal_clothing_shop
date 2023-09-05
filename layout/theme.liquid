@@ -32,26 +32,7 @@
 
     {{ 'theme.css' | asset_url | stylesheet_tag: preload: true }}
     {{ 'swiper.min.css' | asset_url | stylesheet_tag }}
-    <script>
-      window.themeContent = {
-        routes: {
-          root: "{{ routes.root_url }}",
-          cartPage: "{{ routes.cart_url | json }}",
-          cartAddUrl: "{{ routes.cart_add_url | json }}",
-          cartChangeUrl: "{{ routes.cart_change_url | json }}",
-          searchPage: "{{ routes.search_url | json }}",
-          predictiveSearch: "{{ routes.predictive_search_url | json }}"
-        },
-        settings: {
-          cartType: "{{ settings.cart_type | json }}",
-          cartCount: "{{ cart.item_count | json }}",
-          moneyFormat: "{{ shop.money_format | json }}"
-        },
-        strings: {
-          cartItemAdded: "{{ 'cart.items.item_added' | t }}"
-        }
-      }
-    </script>
+    
     <script src="{{ 'theme.js' | asset_url }}" defer></script>
     <script src="{{ 'swiper.min.js' | asset_url }}"></script>
 
