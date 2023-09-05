@@ -116,7 +116,7 @@
             {%- endfor -%}
             <div class="cart-btn__container">
               {%- if settings.show_note -%}
-                <button id="cartNoteBtn" class="btn__link form__links" class="btn__cart-note" aria-label="{{ 'cart.general.add_note' | t }}">{{ 'cart.general.add_note' | t }}</button>
+                <button type="button" id="cartNoteBtn" class="btn__link form__links" class="btn__cart-note" aria-label="{{ 'cart.general.add_note' | t }}">{{ 'cart.general.add_note' | t }}</button>
               {%- endif -%}
               <a href="{{ routes.all_products_collection_url }}" title="{{ 'cart.general.continue_shopping' | t }}" class="btn__link form__links">{{ 'cart.general.continue_shopping' | t }}</a>
             </div>
