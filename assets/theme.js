@@ -908,11 +908,18 @@ function initcartAjax() {
         let isPlus = button.classList.contains('icon__plus');
 
         if (isPlus) {
-          quantityInput.value = value + 1;
+          let newValue = value + 1
+          quantityInput.value = newValue;
+          changeItemQuantity(key, newValue);
         } else if (value > 1) {
-          quantityInput.value = value - 1;
+          let newvalue = value - 1
+          quantityInput.value = newvalue;
+          changeItemQuantity(key, newValue);
         }
       })
+      function changeItemQuantity(key, quantity) {
+        console.log(key, quantity);
+      }
     })
   })
 }
