@@ -95,9 +95,9 @@
                         {% comment %}
                           <input name="updates[]" value="{{ item.quantity }}" />
                         {% endcomment %}
-                        <a href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | minus : 1 }}">&#8722;</a>
-                        <input  id="qty-cart" type="number" value="{{ item.quantity }}" readonly="">
-                        <a href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | plus : 1 }}">&#43;</a>
+                        <button >&#8722;</button>
+                        <input name="updates[]" id="qty-cart" value="{{ item.quantity }}" readonly="">
+                        <button>&#43;</button>
                       </div>
                       <div class="line__item-final--price rte">
                         {{ 'cart.general.final_line_price' | t }}<strong>{{ item.final_line_price | money }}</strong>
