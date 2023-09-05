@@ -49,7 +49,7 @@
           {{ header_logo }}
         </div>
         <div class="gift-card__banner-text">
-          <div class="gift-card__title">{{ 'gift_card.title' | t }}</div>
+          <div class="gift-card__title rte">{{ 'gift_card.title' | t }}</div>
           <div class="gift-card__balance">{{ gift_card.balance | money }}</div>
         </div>
       </div>
@@ -90,7 +90,7 @@
           {% endif %}
         </div>
         <div class="gift-card__item text">
-          <div class="gift-card__message">{{ 'gift_card.message' | t }}</div>
+          <div class="gift-card__message rte">{{ 'gift_card.message' | t }}</div>
           <div class="gift-card__code">{{ gift_card.code }}</div>
           <a
             href="{{ shop.url }}"
