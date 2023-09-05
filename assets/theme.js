@@ -900,7 +900,7 @@ initHandleCart();
 function initcartAjax() {
   let quantityWrapper = document.querySelectorAll('.line__item-quantity');
   quantityWrapper.forEach(wrapper => {
-    let quantityButtons = wrapper.querySelectorAll('.quantityWrapper button');
+    let quantityButtons = document.querySelectorAll('.quantityWrapper button');
     quantityButtons.forEach(button => {
       button.addEventListener('click', () => {
         let quantityInput = button.parentElement.querySelector('input');
