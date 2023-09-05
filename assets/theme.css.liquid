@@ -3462,13 +3462,6 @@ table {
     top: -101px;
     right: 0;
 }
-.gift-card__flex {
-    display: flex;
-    gap: 30px;
-}
-.gift-card__item{
-    width: 33.33%;
-}
 .gift-card {
     display: table-cell;
     vertical-align: middle;
@@ -3532,4 +3525,13 @@ table {
 .gift-card__item.text .form__links {
     font-size: 14px;
     text-transform: uppercase;
+}
+@media only screen and (min-width: 993px) {
+  .gift-card__flex {
+    display: flex;
+    gap: 30px;
+  }
+  .gift-card__item{
+      width: 33.33%;
+  }
 }
