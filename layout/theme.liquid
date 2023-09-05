@@ -43,7 +43,12 @@
           predictiveSearch: "{{ routes.predictive_search_url | json }}"
         },
         settings: {
-          cartType: "{{ settings.cartType }}"
+          cartType: "{{ settings.cart_type | json }}",
+          cartCount: "{{ cart.item_count | json }}",
+          moneyFormat: "{{ shop.money_format | json }}"
+        },
+        strings: {
+          cartItemAdded: "{{ 'cart.general.item_added' | t }}"
         }
       }
     </script>
