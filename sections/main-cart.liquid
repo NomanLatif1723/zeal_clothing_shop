@@ -34,7 +34,7 @@
         <div class="cart__main">
           <div class="cart__items">    
             {%- for item in cart.items -%}
-              {%- render 'cart-line-item', cart: cart -%}
+              {%- render 'cart-line-item', item: item -%}
             {%- endfor -%}
             <div class="cart-btn__container">
               {%- if settings.show_note -%}
