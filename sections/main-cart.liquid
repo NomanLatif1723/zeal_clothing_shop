@@ -95,13 +95,13 @@
                         {% comment %}
                           <input name="updates[]" value="{{ item.quantity }}" />
                         {% endcomment %}
-                        <button aria-label="{{ 'cart.general.minus' | t }}" class="icon__minus">
+                        <button type="button" aria-label="{{ 'cart.general.minus' | t }}" class="icon__minus">
                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="2" viewBox="0 0 10 2" fill="none">
                             <path d="M9 1H1" stroke="currentcolor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
                           </svg>
                         </button>
                         <input name="updates[]" id="qty-cart" value="{{ item.quantity }}" readonly="">
-                        <button aria-label="{{ 'cart.general.plus' | t }}" class="icon__plus">
+                        <button type="button" aria-label="{{ 'cart.general.plus' | t }}" class="icon__plus">
                           <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
                             <path d="M5 1V5M5 5V9M5 5H9M5 5L1 5" stroke="currentcolor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
                           </svg>
