@@ -897,4 +897,26 @@ function initHandleCart() {
 }
 initHandleCart();
   
+function initcartAjax() {
+  let quantityWrapper = document.querySelectorAll('.line__item-quantity');
+  quantityWrapper.forEach(wrapper => {
+    if (wrapper) {
+      let quantityButtons = wrapper.querySelectorAll('.quantityWrapper button');
+      quantityButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          let quantityInput = button.parentElement.querySelector('input');
+          let value = Number(input.value);
+          let isPlus = button.classList.contains('icon__plus');
+
+          if (isPlus) {
+            quantityInput.value = value + 1;
+          } else if (value > 1) {
+            quantityInput.value = value - 1;
+          }
+        })
+      })
+    }
+  })
+}
+initcartAjax();
 })();
