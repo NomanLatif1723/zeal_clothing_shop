@@ -95,13 +95,17 @@
                         {% comment %}
                           <input name="updates[]" value="{{ item.quantity }}" />
                         {% endcomment %}
-                        <button >
+                        <button class="icon__Minus">
                           <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
                             <path d="M5 1V5M5 5V9M5 5H9M5 5L1 5" stroke="currentcolor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
                           </svg>
                         </button>
                         <input name="updates[]" id="qty-cart" value="{{ item.quantity }}" readonly="">
-                        <button>&#43;</button>
+                        <button class="icon__plus">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="2" viewBox="0 0 10 2" fill="none">
+                            <path d="M9 1H1" stroke="currentcolor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
+                          </svg>
+                        </button>
                       </div>
                       <div class="line__item-final--price rte">
                         {{ 'cart.general.final_line_price' | t }}<strong>{{ item.final_line_price | money }}</strong>
