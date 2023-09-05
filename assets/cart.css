@@ -59,7 +59,11 @@ input[type=number] {
     display: flex;
     align-items: center;
     border: 1px solid rgba(1,1,1,0.2);
-    padding: 10px 17px;
+    /* padding: 10px 17px; */
+}
+.line__item-quantity button {
+    padding: 15px;
+    display: inline-flex;
 }
 .cart__summary {
     height: 100%;
