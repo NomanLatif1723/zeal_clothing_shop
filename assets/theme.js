@@ -965,25 +965,19 @@ function initcartAjax() {
         }
       })
       function changeItemQuantity(key, quantity) {
-        fetch('/cart/change.js', {
-          id: key,
-          quantity: quantity,
-          credentials: 'same-origin',
+        fetch('/cart/change.js?key=${key}&quantity=${quantity}', {
+          method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'X-Requested-With':'xmlhttprequest' /* XMLHttpRequest is ok too, it's case insensitive */
           },
-          method: 'POST'
-        }).then(function(response) {
-          return response.json();
-        }).then(function(res) {
+        })
+        .then(response => response.json())
+        .then(data =>  {
           /* we have JSON */
           let format = document.querySelector('[data-money-format]').getAttribute('data-money-format');
-          let totalPrice = formatMoney(res.total_price, format);
-          let item = res.items.find((item) => item.key === key);
-          let itemPrice = formatMoney(item.final_line_price, format);
+          let totalPrice = formatMoney(data.total_price, format);
 
-          document.querySelector(`[data-key="${key}"] .line__item-final--price`).textContent = itemPrice;
+          document.querySelector(`[data-key="${key}"] .line__item-final--price`).textContent = data.final_line_price;
           document.querySelector('#total_price').textContent = totalPrice;
           
         }).catch(function(err) {
