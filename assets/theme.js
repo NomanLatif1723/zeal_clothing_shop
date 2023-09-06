@@ -995,30 +995,35 @@ function initcartAjax() {
 initcartAjax();
 
   let quantitySelectors = document.querySelectorAll('.quantity__input');
-      quantitySelectors.forEach(function (selector) {
-        selector.addEventListener('change', function () {
-          let line = this.getAttribute('data-line');
-          let newQuantity = Number(this.value);
-          console.log({line, newQuantity});    
-          // Send an AJAX request to update the cart
-          fetch(`/cart/change.js?line=${line}&quantity=${newQuantity}`, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-          })
-          .then(response => response.json())
-          .then(data => {
-            // Update the line item price and total price
-            const lineItemPrice = document.querySelector(`.cart__item-block[data-line="${line}"] .final-line__price`);
-            lineItemPrice.textContent = Shopify.formatMoney(data.line_price);
+  quantitySelectors.forEach(input => {
+    input.addEventListener('change', () => {
+      console.log("hey");
+    })
+  })
+      // quantitySelectors.forEach(function (selector) {
+      //   selector.addEventListener('change', function () {
+      //     let line = this.getAttribute('data-line');
+      //     let newQuantity = Number(this.value);
+      //     console.log({line, newQuantity});    
+      //     // Send an AJAX request to update the cart
+      //     fetch(`/cart/change.js?line=${line}&quantity=${newQuantity}`, {
+      //       method: 'POST',
+      //       headers: {
+      //         'Content-Type': 'application/json',
+      //       },
+      //     })
+      //     .then(response => response.json())
+      //     .then(data => {
+      //       // Update the line item price and total price
+      //       const lineItemPrice = document.querySelector(`.cart__item-block[data-line="${line}"] .final-line__price`);
+      //       lineItemPrice.textContent = Shopify.formatMoney(data.line_price);
     
-            const totalPrice = document.querySelector('#total_price');
-            totalPrice.textContent = Shopify.formatMoney(data.total_price);
-          })
-          .catch(error => {
-            console.error('Error:', error);
-          });
-        });
-      });
+      //       const totalPrice = document.querySelector('#total_price');
+      //       totalPrice.textContent = Shopify.formatMoney(data.total_price);
+      //     })
+      //     .catch(error => {
+      //       console.error('Error:', error);
+      //     });
+      //   });
+      // });
 })();
