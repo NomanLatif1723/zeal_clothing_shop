@@ -984,7 +984,7 @@ function initcartAjax() {
             const lineItemPrice = document.querySelector(`.cart__item-block[data-line="${line}"] .final-line__price`);
             lineItemPrice.textContent = Shopify.formatMoney(data.line_price);
     
-            const totalPrice = document.querySelector('.cart-total-price');
+            const totalPrice = document.querySelector('#total_price');
             totalPrice.textContent = Shopify.formatMoney(data.total_price);
           })
           .catch(error => {
