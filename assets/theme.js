@@ -1031,10 +1031,10 @@ document.addEventListener('DOMContentLoaded', function () {
     .then(data => {
       // Update the line item price and total price
       const lineItemPrice = document.querySelector(`.cart__item-block[data-line="${line}"] .line-item__price`);
-      lineItemPrice.textContent = Shopify.formatMoney(data.line_price);
+      lineItemPrice.textContent = data.line_price;
 
       const totalPrice = document.querySelector('#total_price');
-      totalPrice.textContent = Shopify.formatMoney(data.total_price);
+      totalPrice.textContent = data.total_price;
     })
     .catch(error => {
       console.error('Error:', error);
