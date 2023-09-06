@@ -968,9 +968,9 @@ function initcartAjax() {
       let quantitySelectors = document.querySelectorAll('.quantity__input');
       quantitySelectors.forEach(function (selector) {
         selector.addEventListener('change', function () {
-          let key = this.getAttribute('data-key');
+          let line = this.getAttribute('data-line');
           let newQuantity = Number(this.value);
-          console.log()    
+          console.log({line, newQuantity});    
           // Send an AJAX request to update the cart
           fetch(`/cart/change.js?line=${line}&quantity=${newQuantity}`, {
             method: 'POST',
@@ -981,7 +981,7 @@ function initcartAjax() {
           .then(response => response.json())
           .then(data => {
             // Update the line item price and total price
-            const lineItemPrice = document.querySelector(`.cart__item-block[data-key="${key}"] .final-line__price`);
+            const lineItemPrice = document.querySelector(`.cart__item-block[data-line="${line}"] .final-line__price`);
             lineItemPrice.textContent = Shopify.formatMoney(data.line_price);
     
             const totalPrice = document.querySelector('#total_price');
