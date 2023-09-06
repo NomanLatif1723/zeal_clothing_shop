@@ -964,10 +964,6 @@ function initcartAjax() {
           // changeItemQuantity(key, newValue);
         }
       })
-      
-      
-
-
       function changeItemQuantity(key, quantity) {
         fetch('/cart/change.js?key=${key}&quantity=${quantity}', {
           method: 'POST',
@@ -993,37 +989,57 @@ function initcartAjax() {
   })
 }
 initcartAjax();
+// Wait for the document to be ready
+document.addEventListener('DOMContentLoaded', function () {
+  const quantitySelectors = document.querySelectorAll('.quantity__input');
+  const plusButtons = document.querySelectorAll('.icon__plus');
+  const minusButtons = document.querySelectorAll('.icon__minus');
 
-  let quantitySelectors = document.querySelectorAll('.quantity__input');
-  quantitySelectors.forEach(input => {
-    input.addEventListener('change', () => {
-      console.log("hey");
+  quantitySelectors.forEach(function (selector, index) {
+    selector.addEventListener('change', function () {
+      updateCartItem(index, parseInt(this.value));
+    });
+  });
+
+  plusButtons.forEach(function (button, index) {
+    button.addEventListener('click', function () {
+      const currentQuantity = parseInt(quantitySelectors[index].value);
+      quantitySelectors[index].value = currentQuantity + 1;
+      updateCartItem(index, currentQuantity + 1);
+    });
+  });
+
+  minusButtons.forEach(function (button, index) {
+    button.addEventListener('click', function () {
+      const currentQuantity = parseInt(quantitySelectors[index].value);
+      if (currentQuantity > 1) {
+        quantitySelectors[index].value = currentQuantity - 1;
+        updateCartItem(index, currentQuantity - 1);
+      }
+    });
+  });
+
+  function updateCartItem(line, newQuantity) {
+    // Send an AJAX request to update the cart
+    fetch(`/cart/change.js?line=${line}&quantity=${newQuantity}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
     })
-  })
-      // quantitySelectors.forEach(function (selector) {
-      //   selector.addEventListener('change', function () {
-      //     let line = this.getAttribute('data-line');
-      //     let newQuantity = Number(this.value);
-      //     console.log({line, newQuantity});    
-      //     // Send an AJAX request to update the cart
-      //     fetch(`/cart/change.js?line=${line}&quantity=${newQuantity}`, {
-      //       method: 'POST',
-      //       headers: {
-      //         'Content-Type': 'application/json',
-      //       },
-      //     })
-      //     .then(response => response.json())
-      //     .then(data => {
-      //       // Update the line item price and total price
-      //       const lineItemPrice = document.querySelector(`.cart__item-block[data-line="${line}"] .final-line__price`);
-      //       lineItemPrice.textContent = Shopify.formatMoney(data.line_price);
-    
-      //       const totalPrice = document.querySelector('#total_price');
-      //       totalPrice.textContent = Shopify.formatMoney(data.total_price);
-      //     })
-      //     .catch(error => {
-      //       console.error('Error:', error);
-      //     });
-      //   });
-      // });
+    .then(response => response.json())
+    .then(data => {
+      // Update the line item price and total price
+      const lineItemPrice = document.querySelector(`.cart__item-block[data-line="${line}"] .line-item__price`);
+      lineItemPrice.textContent = Shopify.formatMoney(data.line_price);
+
+      const totalPrice = document.querySelector('#total_price');
+      totalPrice.textContent = Shopify.formatMoney(data.total_price);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+  }
+});
+
 })();
