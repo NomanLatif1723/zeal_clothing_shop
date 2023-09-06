@@ -31,7 +31,7 @@
     </div>
     {%- if cart.item_count > 0 -%}
       {%- form 'cart', cart -%}
-        <div class="cart__main">
+        <div class="cart__main" data-money-format="{{ shop.money_format }}">
           <div class="cart__items">    
             {%- for item in cart.items -%}
               {%- render 'cart-line-item', item: item -%}
