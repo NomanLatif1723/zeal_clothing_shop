@@ -940,7 +940,7 @@ function initcartAjax() {
           let totalPrice = res.total_price;
           let item = res.items.find(item => item.key === key);
           let final_line_price = item.final_line_price;
-          console.log(final_line_price);
+          
         }).catch(function(err) {
           /* uh oh, we have error. */
           console.error(err)
