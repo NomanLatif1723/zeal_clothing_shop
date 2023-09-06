@@ -957,11 +957,11 @@ function initcartAjax() {
         if (isPlus) {
           let newValue = value + 1
           quantityInput.value = newValue;
-          changeItemQuantity(key, newValue);
+          // changeItemQuantity(key, newValue);
         } else if (value > 1) {
           let newValue = value - 1
           quantityInput.value = newValue;
-          changeItemQuantity(key, newValue);
+          // changeItemQuantity(key, newValue);
         }
       })
       function changeItemQuantity(key, quantity) {
