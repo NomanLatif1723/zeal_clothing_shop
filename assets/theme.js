@@ -981,7 +981,7 @@ function initcartAjax() {
           .then(response => response.json())
           .then(data => {
             // Update the line item price and total price
-            const lineItemPrice = document.querySelector(`.cart__item-block[data-line="${line}"] .line-item-price`);
+            const lineItemPrice = document.querySelector(`.cart__item-block[data-line="${line}"] .final-line__price`);
             lineItemPrice.textContent = Shopify.formatMoney(data.line_price);
     
             const totalPrice = document.querySelector('.cart-total-price');
