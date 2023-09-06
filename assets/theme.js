@@ -992,6 +992,7 @@ function initcartAjax() {
 // Wait for the document to be ready
 // Wait for the document to be ready
 document.addEventListener('DOMContentLoaded', function () {
+  let format = document.querySelector('[data-money-format]').getAttribute('data-money-format');
   const quantitySelectors = document.querySelectorAll('.quantity__input');
   const plusButtons = document.querySelectorAll('.icon__plus');
   const minusButtons = document.querySelectorAll('.icon__minus');
@@ -1031,10 +1032,10 @@ document.addEventListener('DOMContentLoaded', function () {
     .then(data => {
       // Update the line item price and total price
       const lineItemPrice = document.querySelector(`.cart__item-block[data-item-key="${itemKey}"] .final-line__price`);
-      lineItemPrice.textContent = data.line_price;
+      lineItemPrice.textContent = data.final_line_price;
 
       const totalPrice = document.querySelector('#total_price');
-      totalPrice.textContent = data.total_price;
+      totalPrice.textContent = formatMoney(data.total_price, format);
     })
     .catch(error => {
       console.error('Error:', error);
