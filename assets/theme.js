@@ -932,11 +932,8 @@ function initcartAjax() {
             'X-Requested-With':'xmlhttprequest' /* XMLHttpRequest is ok too, it's case insensitive */
           },
           method: 'POST'
-        }).then(function(response) {
-          return response.json();
-        }).then(function(json) {
-          /* we have JSON */
-          console.log(json)
+        }).then(responce => {
+          console.log(responce)
           let totalPrice = json.data.total_price;
           console.log(totalPrice);
         }).catch(function(err) {
