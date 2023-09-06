@@ -949,7 +949,7 @@ function initcartAjax() {
     quantityButtons.forEach(button => {
       button.addEventListener('click', () => {
         let quantityInput = button.parentElement.querySelector('input');
-        let line = quantityInput.getAttribute('data-line');
+        // let line = quantityInput.getAttribute('data-line');
         let value = Number(quantityInput.value);
         let isPlus = button.classList.contains('icon__plus');
         let key = button.closest('.cart__item-block').getAttribute('data-key');
@@ -964,6 +964,36 @@ function initcartAjax() {
           // changeItemQuantity(key, newValue);
         }
       })
+      
+      let quantitySelectors = document.querySelectorAll('.quantity__input');
+      quantitySelectors.forEach(function (selector, index) {
+        selector.addEventListener('change', function () {
+          let line = this.getAttribute('data-line');
+          let newQuantity = parseInt(this.value);
+    
+          // Send an AJAX request to update the cart
+          fetch(`/cart/change.js?line=${line}&quantity=${newQuantity}`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          })
+          .then(response => response.json())
+          .then(data => {
+            // Update the line item price and total price
+            const lineItemPrice = document.querySelector(`.cart__item-block[data-line="${line}"] .line-item-price`);
+            lineItemPrice.textContent = Shopify.formatMoney(data.line_price);
+    
+            const totalPrice = document.querySelector('.cart-total-price');
+            totalPrice.textContent = Shopify.formatMoney(data.total_price);
+          })
+          .catch(error => {
+            console.error('Error:', error);
+          });
+        });
+      });
+
+
       function changeItemQuantity(key, quantity) {
         fetch('/cart/change.js?key=${key}&quantity=${quantity}', {
           method: 'POST',
