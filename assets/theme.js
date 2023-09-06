@@ -937,6 +937,8 @@ function initcartAjax() {
         }).then(function(json) {
           /* we have JSON */
           console.log(json)
+          let totalPrice = json.data.total_price;
+          console.log(totalPrice);
         }).catch(function(err) {
           /* uh oh, we have error. */
           console.error(err)
