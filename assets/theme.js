@@ -993,8 +993,8 @@ function initcartAjax() {
 // Wait for the document to be ready
 document.addEventListener('DOMContentLoaded', function () {
   const quantitySelectors = document.querySelectorAll('.quantity__input');
-  const plusButtons = document.querySelectorAll('.plus-button');
-  const minusButtons = document.querySelectorAll('.minus-button');
+  const plusButtons = document.querySelectorAll('.icon__plus');
+  const minusButtons = document.querySelectorAll('.icon__minus');
 
   plusButtons.forEach(function (button, index) {
     button.addEventListener('click', function () {
@@ -1015,8 +1015,8 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   function getItemKey(index) {
-    const cartItems = document.querySelectorAll('.cart-item');
-    return cartItems[index].getAttribute('data-item-key');
+    const cartItems = document.querySelectorAll('.cart__item-block');
+    return cartItems[index].getAttribute('data-key');
   }
 
   function updateCartItem(itemKey, newQuantity) {
@@ -1030,10 +1030,10 @@ document.addEventListener('DOMContentLoaded', function () {
     .then(response => response.json())
     .then(data => {
       // Update the line item price and total price
-      const lineItemPrice = document.querySelector(`.cart-item[data-item-key="${itemKey}"] .line-item-price`);
+      const lineItemPrice = document.querySelector(`.cart__item-block[data-item-key="${itemKey}"] .final-line__price`);
       lineItemPrice.textContent = Shopify.formatMoney(data.line_price);
 
-      const totalPrice = document.querySelector('.cart-total-price');
+      const totalPrice = document.querySelector('#total_price');
       totalPrice.textContent = Shopify.formatMoney(data.total_price);
     })
     .catch(error => {
