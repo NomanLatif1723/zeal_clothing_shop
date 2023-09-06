@@ -981,7 +981,7 @@ function initcartAjax() {
           return response.json();
         }).then(function(res) {
           /* we have JSON */
-          let format = dcoument.querySelector('[data-money-format]').getAttribute('data-money-format');
+          let format = document.querySelector('[data-money-format]').getAttribute('data-money-format');
           let totalPrice = formatMoney(res.total_price, format);
           let item = res.items.find((item) => item.key === key);
           let itemPrice = formatMoney(item.final_line_price, format);
