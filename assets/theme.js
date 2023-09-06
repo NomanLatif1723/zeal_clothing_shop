@@ -1032,7 +1032,7 @@ document.addEventListener('DOMContentLoaded', function () {
     .then(data => {
       // Update the line item price and total price
       const lineItemPrice = document.querySelector(`.cart__item-block[data-item-key="${itemKey}"] .final-line__price`);
-      lineItemPrice.textContent = data.final_line_price;
+      lineItemPrice.textContent = formatMoney(data.final_line_price, format);
 
       const totalPrice = document.querySelector('#total_price');
       totalPrice.textContent = formatMoney(data.total_price, format);
