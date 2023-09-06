@@ -964,13 +964,9 @@ function initcartAjax() {
         }
       })
       function changeItemQuantity(key, quantity) {
-        var changeData = {
-          'id':key,
-          'quantity':1
-        };
-      
         fetch('/cart/change.js', {
-          body: JSON.stringify(changeData),
+          id: key,
+          quantity: quantity,
           credentials: 'same-origin',
           headers: {
             'Content-Type': 'application/json',
