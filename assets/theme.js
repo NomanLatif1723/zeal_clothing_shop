@@ -941,7 +941,7 @@ function initcartAjax() {
           let item = res.items.find(item => item.key === key);
           let itemPrice = item.final_line_price;
 
-          document.querySelector('.line__item-final--price').textContent = itemPrice;
+          document.querySelector(`[data-key="${key}"] .line__item-final--price`).textContent = itemPrice;
           document.querySelector('#total_price').textContent = totalPrice;
           
         }).catch(function(err) {
