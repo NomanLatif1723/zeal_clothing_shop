@@ -919,11 +919,27 @@ function initcartAjax() {
         }
       })
       function changeItemQuantity(key, quantity) {
-        fetch('/cart/change.js',{
-          id: key,
-          quantity: quantity
-        }).then(res => {
-          console.log(res.data);
+        var addData = {
+          'id':key,
+          'quantity':1
+        };
+      
+        fetch('/cart/change.js', {
+          body: JSON.stringify(addData),
+          credentials: 'same-origin',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-Requested-With':'xmlhttprequest' /* XMLHttpRequest is ok too, it's case insensitive */
+          },
+          method: 'POST'
+        }).then(function(response) {
+          return response.json();
+        }).then(function(json) {
+          /* we have JSON */
+          console.log(json)
+        }).catch(function(err) {
+          /* uh oh, we have error. */
+          console.error(err)
         });
       }
     })
