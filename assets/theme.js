@@ -988,7 +988,7 @@ function initcartAjax() {
     })
   })
 }
-initcartAjax();
+// initcartAjax();
 // Wait for the document to be ready
 document.addEventListener('DOMContentLoaded', function () {
   const quantitySelectors = document.querySelectorAll('.quantity__input');
