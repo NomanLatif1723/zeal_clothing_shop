@@ -966,11 +966,11 @@ function initcartAjax() {
       })
       
       let quantitySelectors = document.querySelectorAll('.quantity__input');
-      quantitySelectors.forEach(function (selector, index) {
+      quantitySelectors.forEach(function (selector) {
         selector.addEventListener('change', function () {
           let key = this.getAttribute('data-key');
           let newQuantity = Number(this.value);
-    
+          console.log()    
           // Send an AJAX request to update the cart
           fetch(`/cart/change.js?line=${line}&quantity=${newQuantity}`, {
             method: 'POST',
