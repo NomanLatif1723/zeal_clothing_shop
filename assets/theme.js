@@ -988,60 +988,6 @@ function initcartAjax() {
     })
   })
 }
-// initcartAjax();
-// Wait for the document to be ready
-// Wait for the document to be ready
-document.addEventListener('DOMContentLoaded', function () {
-  let format = document.querySelector('[data-money-format]').getAttribute('data-money-format');
-  const quantitySelectors = document.querySelectorAll('.quantity__input');
-  const plusButtons = document.querySelectorAll('.icon__plus');
-  const minusButtons = document.querySelectorAll('.icon__minus');
-
-  plusButtons.forEach(function (button, index) {
-    button.addEventListener('click', function () {
-      const itemKey = getItemKey(index);
-      const currentQuantity = parseInt(quantitySelectors[index].value);
-      updateCartItem(itemKey, currentQuantity + 1);
-    });
-  });
-
-  minusButtons.forEach(function (button, index) {
-    button.addEventListener('click', function () {
-      const itemKey = getItemKey(index);
-      const currentQuantity = parseInt(quantitySelectors[index].value);
-      if (currentQuantity > 1) {
-        updateCartItem(itemKey, currentQuantity - 1);
-      }
-    });
-  });
-
-  function getItemKey(index) {
-    const cartItems = document.querySelectorAll('.cart__item-block');
-    return cartItems[index].getAttribute('data-key');
-  }
-
-  function updateCartItem(itemKey, newQuantity) {
-    // Send an AJAX request to update the cart
-    fetch(`/cart/change.js?key=${itemKey}&quantity=${newQuantity}`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
-    .then(response => response.json())
-    .then(data => {
-      // Update the line item price and total price
-      const lineItemPrice = document.querySelector(`.cart__item-block[data-item-key="${itemKey}"] .final-line__price`);
-      lineItemPrice.textContent = formatMoney(data.final_line_price, format);
-
-      const totalPrice = document.querySelector('#total_price');
-      totalPrice.textContent = formatMoney(data.total_price, format);
-    })
-    .catch(error => {
-      console.error('Error:', error);
-    });
-  }
-});
-
+initcartAjax();
 
 })();
