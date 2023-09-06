@@ -1021,7 +1021,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function updateCartItem(line, newQuantity) {
     // Send an AJAX request to update the cart
-    fetch(`/cart/change.js?line=${line}&quantity=${newQuantity}`, {
+    fetch('/cart/change.js', {
+      id: key,
+      quantity: quantity,
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
