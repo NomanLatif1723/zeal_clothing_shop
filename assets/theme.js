@@ -938,7 +938,7 @@ function initcartAjax() {
           /* we have JSON */
           console.log(res)
           let totalPrice = res.total_price;
-          let item = res.items.find(item => item.key === key);
+          let item = res.items.find((item) => item.key === key);
           let itemPrice = item.final_line_price;
 
           document.querySelector(`[data-key="${key}"] .line__item-final--price`).textContent = itemPrice;
