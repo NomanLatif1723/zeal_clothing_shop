@@ -949,6 +949,7 @@ function initcartAjax() {
     quantityButtons.forEach(button => {
       button.addEventListener('click', () => {
         let quantityInput = button.parentElement.querySelector('input');
+        let line = quantityInput.getAttribute('data-line');
         let value = Number(quantityInput.value);
         let isPlus = button.classList.contains('icon__plus');
         let key = button.closest('.cart__item-block').getAttribute('data-key');
