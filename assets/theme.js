@@ -934,11 +934,13 @@ function initcartAjax() {
           method: 'POST'
         }).then(function(response) {
           return response.json();
-        }).then(function(json) {
+        }).then(function(res) {
           /* we have JSON */
-          console.log(json)
-          let totalPrice = json.total_price;
-          console.log(totalPrice);
+          console.log(res)
+          let totalPrice = res.total_price;
+          let item = res.items.find(item => item.key === key);
+          let final_line_price = item.final_line_price;
+          console.log(final_line_price);
         }).catch(function(err) {
           /* uh oh, we have error. */
           console.error(err)
