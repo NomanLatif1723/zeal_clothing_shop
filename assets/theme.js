@@ -983,7 +983,7 @@ function initcartAjax() {
           // headers: 'applications/json',
           // body: JSON.stringify({key: key,quantity: quantity})
         })
-        .then(responce => responce.json)
+        .then(responce => responce.json())
           .then(data => {
             console.log(data);
             let format = document.querySelector('[data-money-format]').getAttribute('data-money-format');
