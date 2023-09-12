@@ -148,7 +148,7 @@
                       textAlignment: textAlignment,
                       products_per_row: products_per_row,
                       product: product,
-                      collection: collection,
+                      collection: search,
                       lazyloading: lazyloading,
                       itemWidth: itemWidth 
                     -%}
@@ -157,7 +157,7 @@
                 {%- if paginate.pages > 1 -%}
                   {%- render 'pagination',
                      paginate: paginate,
-                     collection: collection
+                     collection: search
                   -%}
                 {%- endif -%}
               {%- endpaginate -%}
