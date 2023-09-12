@@ -957,15 +957,15 @@ function initcartAjax() {
         if (isPlus) {
           let newValue = value + 1
           quantityInput.value = newValue;
-          // changeItemQuantity(key, newValue);
+          changeItemQuantity(key, newValue);
         } else if (value > 1) {
           let newValue = value - 1
           quantityInput.value = newValue;
-          // changeItemQuantity(key, newValue);
+          changeItemQuantity(key, newValue);
         }
       })
       function changeItemQuantity(key, quantity) {
-        fetch('/cart/change.js?key=${key}&quantity=${quantity}', {
+        fetch('/cart/change?key=${key}&quantity=${quantity}', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
