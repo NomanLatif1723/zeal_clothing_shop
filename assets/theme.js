@@ -947,7 +947,7 @@ function initcartAjax() {
   quantityWrapper.forEach(wrapper => {
     let quantityButtons = wrapper.querySelectorAll('.line__item-quantity button');
     quantityButtons.forEach(button => {
-      button.addEventListener('click', () => {
+      button.addEventListener('click', async () => {
         let quantityInput = button.parentElement.querySelector('input');
         // let line = quantityInput.getAttribute('data-line');
         let value = Number(quantityInput.value);
@@ -957,19 +957,17 @@ function initcartAjax() {
         if (isPlus) {
           let newValue = value + 1
           quantityInput.value = newValue;
-          changeItemQuantity(key, newValue);
+          // changeItemQuantity(key, newValue);
         } else if (value > 1) {
           let newValue = value - 1
           quantityInput.value = newValue;
-          changeItemQuantity(key, newValue);
+          // changeItemQuantity(key, newValue);
         }
       })
-      function changeItemQuantity(key, quantity) {
-        fetch('/cart/change?key=${key}&quantity=${quantity}', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
+      await function changeItemQuantity(key, quantity) {
+        fetch('/cart/change', {
+          method: 'post',
+          body: new formData(button)
         })
         .then(response => response.json())
         .then(data =>  {
