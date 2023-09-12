@@ -944,6 +944,7 @@ function formatMoney(cents, format) {
   
 function initcartAjax() {
   let quantityWrapper = document.querySelectorAll('.line__item-quantity');
+  let cartForm = document.querySelectorAll('form[action="/cart"]');
   quantityWrapper.forEach(wrapper => {
     let quantityButtons = wrapper.querySelectorAll('.line__item-quantity button');
     quantityButtons.forEach(button => {
@@ -964,8 +965,17 @@ function initcartAjax() {
           // changeItemQuantity(key, newValue);
         }
       })
+      function updateCart() {
+        fetch('/?view=ajax-cart')
+        .then(responce => responce.text())
+        .then(cartData => {
+          cartForm.forEach(form => {
+            form.innerHTML = cartData;
+          })
+        })
+      }
       function changeItemQuantity(key, quantity) {
-        fetch('/cart/change', {
+        fetch('/cart/change.js', {
           method: 'post',
           body: new formData(button)
         })
