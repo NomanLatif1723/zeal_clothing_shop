@@ -987,7 +987,7 @@ function initcartAjax() {
           .then(data => {
             let format = document.querySelector('[data-money-format]').getAttribute('data-money-format');
             let totalPrice = formatMoney(data.total_price, format);
-            document.querySelector(`[data-key="${key}"] .final-line__price`).textContent = data.final_line_price;
+            document.querySelector(`.final-line__price`).textContent = data.final_line_price;
             document.querySelector('#total_price').textContent = totalPrice;
           })
         // fetch('/cart/change.js', {
