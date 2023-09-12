@@ -977,9 +977,11 @@ function initcartAjax() {
       }
       function changeItemQuantity(key, quantity) {
         fetch('/cart/change.js', {
-          method: 'POST',
-          headers: 'applications/json',
-          body: JSON.stringify({key: key,quantity: quantity})
+          key: key,
+          quantity: quantity
+          // method: 'POST',
+          // headers: 'applications/json',
+          // body: JSON.stringify({key: key,quantity: quantity})
         })
         .then(responce => responce.json)
           .then(data => {
