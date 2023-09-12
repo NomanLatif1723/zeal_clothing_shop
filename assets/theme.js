@@ -985,6 +985,7 @@ function initcartAjax() {
         })
         .then(responce => responce.json)
           .then(data => {
+            console.log(data);
             let format = document.querySelector('[data-money-format]').getAttribute('data-money-format');
             let totalPrice = formatMoney(data.total_price, format);
             document.querySelector(`.final-line__price`).textContent = data.final_line_price;
