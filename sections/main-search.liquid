@@ -47,21 +47,6 @@
     <div class="search__results">
       {% if search.performed %}
         {% for result in search.results %}
-          {% if result.object_type == 'page' %}
-            <a href="{{ result.url }}">{{ result.title }}
-            </a>
-      
-          {% elsif result.object_type == 'article' %}
-            {% if result.image -%}
-              <div class="result-image">
-                <a href="{{ result.url }}" title="{{ result.title | escape }}">
-                  {{ result | image_url: width: 100 | image_tag }}
-                  <span>{{ result.title }}</span>
-                </a>
-              </div>
-            {% endif %}
-      
-          {% else %}
             {%- if result.featured_image -%}
               <div class="catalog__wrapper">
                 {%- if show_filtering -%}
@@ -169,7 +154,6 @@
                 </div>
               </div>
             {% endif %}
-          {% endif %}
         {% endfor %}
       {% else %}
         <h1>Try Searching for something</h1>
