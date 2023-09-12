@@ -7,9 +7,48 @@
         "margin_top": 60,
         "margin_bottom": 60
       }
+    },
+    "66773da0-4d1c-4be3-b130-436d13e4b960": {
+      "type": "faq",
+      "blocks": {
+        "template--21029420892482__66773da0-4d1c-4be3-b130-436d13e4b960-question-1": {
+          "type": "question",
+          "settings": {
+            "question": "Any Question?",
+            "answer": ""
+          }
+        },
+        "template--21029420892482__66773da0-4d1c-4be3-b130-436d13e4b960-question-2": {
+          "type": "question",
+          "settings": {
+            "question": "Any Question?",
+            "answer": ""
+          }
+        },
+        "template--21029420892482__66773da0-4d1c-4be3-b130-436d13e4b960-question-3": {
+          "type": "question",
+          "settings": {
+            "question": "Any Question?",
+            "answer": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--21029420892482__66773da0-4d1c-4be3-b130-436d13e4b960-question-1",
+        "template--21029420892482__66773da0-4d1c-4be3-b130-436d13e4b960-question-2",
+        "template--21029420892482__66773da0-4d1c-4be3-b130-436d13e4b960-question-3"
+      ],
+      "settings": {
+        "faq_heading": "FAQ",
+        "faq_text": "",
+        "text_alignment": "left",
+        "margin_top": 16,
+        "margin_bottom": 16
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "66773da0-4d1c-4be3-b130-436d13e4b960"
   ]
 }
