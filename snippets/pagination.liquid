@@ -7,6 +7,8 @@
          assign total_count = blog.articles_count
        elsif template.name == 'article'
          assign total_count = article.comments_count
+       elsif template.name == 'search'
+         assign total_count = search.results_count
        endif
     -%}
     {% if paginate.next.is_link %}
