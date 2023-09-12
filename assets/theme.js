@@ -865,6 +865,7 @@ function initHandleCart() {
     }
     
     function openCartModal(){
+      
       if (cartDrawer.classList.contains('cart-drawer__left')) {
         cartDrawer.classList.add('drawer-open__left');
       } else if(cartDrawer.classList.contains('cart-drawer__right')) {
