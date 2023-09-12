@@ -977,22 +977,34 @@ function initcartAjax() {
       }
       function changeItemQuantity(key, quantity) {
         fetch('/cart/change.js', {
-          method: 'post',
-          body: new formData(button)
+          method: 'POST',
+          headers: 'applications/json',
+          body: JSON.stringify({key: key,quantity: quantity})
+          .then(responce => responce.json)
+          .then(data => {
+            let format = document.querySelector('[data-money-format]').getAttribute('data-money-format');
+            let totalPrice = formatMoney(data.total_price, format);
+            document.querySelector(`[data-key="${key}"] .final-line__price`).textContent = data.final_line_price;
+            document.querySelector('#total_price').textContent = totalPrice;
+          })
         })
-        .then(response => response.json())
-        .then(data =>  {
-          /* we have JSON */
-          let format = document.querySelector('[data-money-format]').getAttribute('data-money-format');
-          let totalPrice = formatMoney(data.total_price, format);
+        // fetch('/cart/change.js', {
+        //   method: 'post',
+        //   body: new formData(button)
+        // })
+        // .then(response => response.json())
+        // .then(data =>  {
+        //   /* we have JSON */
+        //   let format = document.querySelector('[data-money-format]').getAttribute('data-money-format');
+        //   let totalPrice = formatMoney(data.total_price, format);
 
-          document.querySelector(`[data-key="${key}"] .line__item-final--price`).textContent = data.final_line_price;
-          document.querySelector('#total_price').textContent = totalPrice;
+        //   document.querySelector(`[data-key="${key}"] .final-line__price`).textContent = data.final_line_price;
+        //   document.querySelector('#total_price').textContent = totalPrice;
           
-        }).catch(function(err) {
-          /* uh oh, we have error. */
-          console.error(err)
-        });
+        // }).catch(function(err) {
+        //   /* uh oh, we have error. */
+        //   console.error(err)
+        // });
       }
     })
   })
