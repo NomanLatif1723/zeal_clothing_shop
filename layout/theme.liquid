@@ -31,7 +31,7 @@
     {{ content_for_header }}
 
     {{ 'theme.css' | asset_url | stylesheet_tag: preload: true }}
-    {{ 'swiper.min.css' | asset_url | stylesheet_tag }}
+    {{ 'swiper.min.css' | asset_url | stylesheet_tag: preload: true }}
     <!-- <script>
       window.themeContent = {
         routes: {
@@ -52,7 +52,7 @@
         }
       }
     </script> -->
-    <script src="{{ 'theme.js' | asset_url }}" defer></script>
+    <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'swiper.min.js' | asset_url }}"></script>
     
 
