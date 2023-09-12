@@ -947,7 +947,7 @@ function initcartAjax() {
   quantityWrapper.forEach(wrapper => {
     let quantityButtons = wrapper.querySelectorAll('.line__item-quantity button');
     quantityButtons.forEach(button => {
-      button.addEventListener('click', async () => {
+      button.addEventListener('click', () => {
         let quantityInput = button.parentElement.querySelector('input');
         // let line = quantityInput.getAttribute('data-line');
         let value = Number(quantityInput.value);
@@ -964,7 +964,7 @@ function initcartAjax() {
           // changeItemQuantity(key, newValue);
         }
       })
-      await function changeItemQuantity(key, quantity) {
+      function changeItemQuantity(key, quantity) {
         fetch('/cart/change', {
           method: 'post',
           body: new formData(button)
