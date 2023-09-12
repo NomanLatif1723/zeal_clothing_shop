@@ -68,7 +68,7 @@
     {% comment %}
     <a href="{{ collection.url }}?sort_by={{ collection.sort_by }}" class="active-filters__clear">Clear all</a>
     {% endcomment %}
-    {%- for filter in collection.filters -%}
+    {%- for filter in filters -%}
       {%- if filter.type == "price_range" -%}
         {%- if filter.min_value.value != nil or filter.max_value.value != nil -%}
           <a class="active-filters__remove-filter" href="{{ filter.url_to_remove }}">
