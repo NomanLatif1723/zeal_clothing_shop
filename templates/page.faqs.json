@@ -22,29 +22,36 @@
         "template--21029420892482__66773da0-4d1c-4be3-b130-436d13e4b960-question-2": {
           "type": "question",
           "settings": {
-            "question": "Any Question?",
+            "question": "What forms of payment do you accept?",
             "answer": "<p>We offer free in-store returns for all of our products within 30 days of purchase. Items must be in their original condition with tags attached for a full refund.We offer free in-store returns for all of our products within 30 days of purchase. Items must be in their original condition with tags attached for a full refund.<\/p>"
           }
         },
         "template--21029420892482__66773da0-4d1c-4be3-b130-436d13e4b960-question-3": {
           "type": "question",
           "settings": {
-            "question": "Any Question?",
+            "question": "What sizes do you offer?",
             "answer": "<p>We offer free in-store returns for all of our products within 30 days of purchase. Items must be in their original condition with tags attached for a full refund.We offer free in-store returns for all of our products within 30 days of purchase. Items must be in their original condition with tags attached for a full refund.We offer free in-store returns for all of our products within 30 days of purchase. Items must be in their original condition with tags attached for a full refund.<\/p>"
           }
         },
         "13754525-550b-48c9-a4be-e3baba38f80b": {
           "type": "question",
           "settings": {
-            "question": "Any Question?",
+            "question": "How can I track my order?",
             "answer": "<p>We offer free in-store returns for all of our products within 30 days of purchase. Items must be in their original condition with tags attached for a full refund.We offer free in-store returns for all of our products within 30 days of purchase. Items must be in their original condition with tags attached for a full refund.We offer free in-store returns for all of our products within 30 days of purchase. Items must be in their original condition with tags attached for a full refund.We offer free in-store returns for all of our products within 30 days of purchase. Items must be in their original condition with tags attached for a full refund.<\/p>"
           }
         },
         "7049f4ce-30ff-4d5e-9e4e-5640f94bfcac": {
           "type": "question",
           "settings": {
-            "question": "Any Question?",
+            "question": "Can I cancel or modify my order?",
             "answer": "<p>We offer free in-store returns for all of our products within 30 days of purchase. Items must be in their original condition with tags attached for a full refund.We offer free in-store returns for all of our products within 30 days of purchase. Items must be in their original condition with tags attached for a full refund.We offer free in-store returns for all of our products within 30 days of purchase. Items must be in their original condition with tags attached for a full refund.We offer free in-store returns for all of our products within 30 days of purchase. Items must be in their original condition with tags attached for a full refund.We offer free in-store returns for all of our products within 30 days of purchase. Items must be in their original condition with tags attached for a full refund.<\/p>"
+          }
+        },
+        "543a8c6e-6ca4-4e06-809f-8ef5ca314bc0": {
+          "type": "question",
+          "settings": {
+            "question": "Do you offer international shipping?",
+            "answer": "<p>We offer free in-store returns for all of our products within 30 days of purchase. Items must be in their original condition with tags attached for a full refund.We offer free in-store returns for all of our products within 30 days of purchase. Items must be in their original condition with tags attached for a full refund.<\/p>"
           }
         }
       },
@@ -53,11 +60,12 @@
         "template--21029420892482__66773da0-4d1c-4be3-b130-436d13e4b960-question-2",
         "template--21029420892482__66773da0-4d1c-4be3-b130-436d13e4b960-question-3",
         "13754525-550b-48c9-a4be-e3baba38f80b",
-        "7049f4ce-30ff-4d5e-9e4e-5640f94bfcac"
+        "7049f4ce-30ff-4d5e-9e4e-5640f94bfcac",
+        "543a8c6e-6ca4-4e06-809f-8ef5ca314bc0"
       ],
       "settings": {
-        "faq_heading": "FAQ",
-        "faq_text": "",
+        "faq_heading": "Frequently asked questions.",
+        "faq_text": "<p>Find answers to your questions about our products, policies, and more.<\/p>",
         "text_alignment": "left",
         "margin_top": 60,
         "margin_bottom": 60
