@@ -34,7 +34,7 @@
               assign question = block.settings.question
               assign answer = block.settings.answer
           -%}
-          <div class="faq-question__item{% if forloop.index > 1 %} hidden{% endif %} faq__item-{{ forloop.index }}">
+          <div class="faq-question__item faq__item-{{ forloop.index }}">
             <div class="faq-question__header">
               {%- if question != blank -%}
                 <h3>{{ question }}</h3>
