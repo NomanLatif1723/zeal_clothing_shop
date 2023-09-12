@@ -57,7 +57,7 @@
                 {%- render 'icon-close' -%}
               </button>
             </div>
-            {% render 'filter-facets' %}
+            {%- render 'filter-facets', filters: collection.filters -%}
             <div class="drawer__header filter-drawer__header">
               <div class="drawer__title">{{ 'collections.general.sort_drawer' | t }}</div>
             </div>
