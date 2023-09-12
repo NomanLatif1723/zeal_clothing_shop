@@ -60,55 +60,6 @@
                   </div>
                 {%- endif -%}
                 <div class="{% if show_filtering %}catalog-list__banner{% endif %}">
-                  {%- for block in section.blocks -%}
-                    {%- liquid
-                        assign banner_heading = block.settings.banner_heading
-                        assign banner_button = block.settings.banner_button
-                        assign banner_link = block.settings.banner_link
-                        assign banner_image = block.settings.banner_image
-                        assign ratio = 0.75
-                        assign default = 'grande'
-                        assign sizes = '(min-width: 1200px) 650px, 45vw'
-                    -%}
-                    {%- if block.type == 'banner' -%}
-                    <div class="catalog-header__banner">
-                      <div class="header-banner__image">
-                        {%- if banner_image != blank -%}
-                          <img
-                          src="{{ banner_image | img_url: default }}"
-                          srcset="
-                            {{ banner_image | img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
-                            {{ banner_image | img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
-                            {{ banner_image | img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
-                            {{ banner_image | img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
-                            {{ banner_image | img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
-                          "
-                          width="{{ banner_image.width }}"
-                          height="{{ banner_image.height }}"
-                          loading="{{ lazyloading }}"
-                          sizes="{{ sizes }}"
-                          alt= "{{ banner_image.alt }}"
-                          />
-                          {%- else -%}
-                            {{ 'lifestyle-1' | placeholder_svg_tag: "placeholder__image" }}
-                        {%- endif -%}
-                      </div>
-                      <div class="header-banner__text">
-                        <div class="header-banner__shadow">
-                          {%- if banner_heading != blank -%}
-                            <div class="banner__heading">
-                              <h1>{{ banner_heading }}</h1>
-                            </div>
-                          {%- endif -%}
-                          {%- if banner_button != blank -%}
-                          <a href="{{ banner_link }}" class="btn btn__link btn__outline" title="{{ banner_button }}">{{ banner_button }}</a>
-                          {%- endif -%}
-                        </div>
-                      </div>
-                    </div>
-                    {%- endif -%}
-                  {%- endfor -%}
-                  
                   <div class="catalog__header">
                     <div class="catalog-title__container">
                       <div class="main__heading catalog__heading">
@@ -160,7 +111,7 @@
                       </button>
                     </div>
                   </div>
-                  {%- paginate collection.products by products_to_show -%}
+                  {%- paginate search.results by 12 -%}
                     <div class="collection-grid">
                       {%- for product in collection.products limit: products_to_show -%}
                         {%- render 'product-item',
