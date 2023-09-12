@@ -32,6 +32,18 @@
   endif
   
 -%}
+{%- style -%}
+  .main__section-{{ section.id }}{
+    margin-top: {{ section.settings.margin_top | times: 0.5 | round: 0 }}px;
+    margin-bottom: {{ section.settings.margin_bottom | times: 0.5 | round: 0 }}px;
+  }
+  @media only screen and (min-width: 769px) {
+    .main__section-{{ section.id }}{
+      margin-top: {{ section.settings.margin_top }}px;
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+  }
+{%- endstyle -%}
 <div class="main-section__wrapper main__section-{{ section.id }}">
   <div class="page__width">
     <div class="search__form">

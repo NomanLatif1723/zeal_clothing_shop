@@ -10,8 +10,8 @@
         "show_collection_count": true,
         "text_alignment": "center",
         "lazyload_images": true,
-        "margin_top": 16,
-        "margin_bottom": 16
+        "margin_top": 60,
+        "margin_bottom": 60
       }
     }
   },
