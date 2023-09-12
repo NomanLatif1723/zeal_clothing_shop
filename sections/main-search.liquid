@@ -46,7 +46,6 @@
     </div>
     <div class="search__results">
       {% if search.performed %}
-        {% for result in search.results %}
             {%- if result.featured_image -%}
               <div class="catalog__wrapper">
                 {%- if show_filtering -%}
@@ -154,7 +153,6 @@
                 </div>
               </div>
             {% endif %}
-        {% endfor %}
       {% else %}
         <h1>Try Searching for something</h1>
       {% endif %}
