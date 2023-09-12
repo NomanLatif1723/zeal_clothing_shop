@@ -89,15 +89,20 @@
                 </div>
                 <div class="cart-quantity__wrapper">
                   <div class="line__item-quantity">
-                    {% comment %}
-                    <input name="updates[]" value="{{ item.quantity }}" />
-                    {% endcomment %}
-                    <a href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | minus : 1 }}">&#8722;</a>
-                    <input class="quantity__input" type="number" value="{{ item.quantity }}" data-line="{{ forloop.index0 }}" readonly="">
-                    <a href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | plus : 1 }}">&#43;</a>
+                    <button type="button" aria-label="{{ 'cart.general.minus' | t }}" class="icon__minus">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="10" height="2" viewBox="0 0 10 2" fill="none">
+                        <path d="M9 1H1" stroke="currentcolor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+                      </svg>
+                    </button>
+                    <input name="updates[]" class="quantity__input"  value="{{ item.quantity }}" >
+                    <button type="button" aria-label="{{ 'cart.general.plus' | t }}" class="icon__plus">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                        <path d="M5 1V5M5 5V9M5 5H9M5 5L1 5" stroke="currentcolor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+                      </svg>
+                    </button>
                   </div>
                   <div class="line__item-final--price rte">
-                    {{ 'cart.general.final_line_price' | t }}<strong>{{ item.final_line_price | money }}</strong>
+                    {{ 'cart.general.final_line_price' | t }}<strong class="final-line__price">{{ item.final_line_price | money }}</strong>
                   </div>
                 </div>
               </div>
