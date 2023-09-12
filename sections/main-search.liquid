@@ -4,9 +4,9 @@
   assign show_collection_count = section.settings.show_collection_count
   assign show_breadcrumbs = settings.show_breadcrumbs
   assign textAlignment = section.settings.text_alignment 
-  assign products_per_row = section.settings.products_per_row
-  assign products_to_show = section.settings.products_to_show
-  case products_per_row   
+  assign results_per_row = section.settings.results_per_row
+  assign results_to_show = section.settings.results_to_show
+  case results_per_row   
   when 1
     assign itemWidth = ''
   when 2
@@ -185,7 +185,7 @@
     "settings": [
       {
         "type": "range",
-        "id": "products_to_show",
+        "id": "results_to_show",
         "label": "t:sections.main-collection.settings.products_to_show.label",
         "min": 8,
         "max": 50,
@@ -194,7 +194,7 @@
       },
       {
         "type": "range",
-        "id": "products_per_row",
+        "id": "results_per_row",
         "label": "t:sections.main-collection.settings.products_per_row.label",
         "min": 2,
         "max": 5,
