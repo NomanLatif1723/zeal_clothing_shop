@@ -113,7 +113,7 @@
                   </div>
                   {%- paginate search.results by 12 -%}
                     <div class="collection-grid">
-                      {%- for product in collection.products limit: products_to_show -%}
+                      {%- for product in search.results limit: 2 -%}
                         {%- render 'product-item',
                           section: section,
                           textAlignment: textAlignment,
