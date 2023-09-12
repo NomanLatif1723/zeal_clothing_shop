@@ -140,27 +140,33 @@
                   </button>
                 </div>
               </div>
-              {%- paginate search.results by results_to_show -%}
-                <div class="collection-grid">
-                  {%- for product in search.results limit: results_to_show -%}
-                    {%- render 'product-item',
-                      section: section,
-                      textAlignment: textAlignment,
-                      products_per_row: products_per_row,
-                      product: product,
-                      collection: search,
-                      lazyloading: lazyloading,
-                      itemWidth: itemWidth 
-                    -%}
-                  {%- endfor -%}
-                </div>
-                {%- if paginate.pages > 1 -%}
-                  {%- render 'pagination',
-                     paginate: paginate,
-                     collection: search
-                  -%}
-                {%- endif -%}
-              {%- endpaginate -%}
+              {% for result in search.results %}
+                {% if result.featured_image %}
+                  {%- paginate search.results by results_to_show -%}
+                    <div class="collection-grid">
+                      {%- for product in search.results limit: results_to_show -%}
+                        {%- render 'product-item',
+                          section: section,
+                          textAlignment: textAlignment,
+                          products_per_row: products_per_row,
+                          product: product,
+                          collection: search,
+                          lazyloading: lazyloading,
+                          itemWidth: itemWidth 
+                        -%}
+                      {%- endfor -%}
+                    </div>
+                    {%- if paginate.pages > 1 -%}
+                      {%- render 'pagination',
+                         paginate: paginate,
+                         collection: search
+                      -%}
+                    {%- endif -%}
+                  {%- endpaginate -%}
+                  {% elsif result.object_type == 'page' %}
+                   <a href="{{ result.url }}">{{ result.title }}</a>
+                {% endif %}
+              {% endfor %}
             </div>
           </div>
         {% else %}
