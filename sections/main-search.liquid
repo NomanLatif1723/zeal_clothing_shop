@@ -145,9 +145,9 @@
                       </button>
                     </div>
                   </div>
-                  {%- paginate search.results by 12 -%}
+                  {%- paginate search.results by results_to_show -%}
                     <div class="collection-grid">
-                      {%- for product in search.results limit: 2 -%}
+                      {%- for product in search.results limit: results_to_show -%}
                         {%- render 'product-item',
                           section: section,
                           textAlignment: textAlignment,
