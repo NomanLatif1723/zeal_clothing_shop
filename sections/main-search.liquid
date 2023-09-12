@@ -1,3 +1,11 @@
+<form action="{{ routes.search_url }}">
+  <input type="text"
+    placeholder="Search"
+    name="q"
+    value="{{ search.terms | escape }}"
+ >
+  <input type="submit" value="Search">
+</form>
 {% if search.performed %}
   <h1>Here's Your Results:</h1>
   <p>{{ search.results_count }}</p>
