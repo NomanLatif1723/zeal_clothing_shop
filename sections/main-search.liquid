@@ -112,7 +112,7 @@
                 <div class="catalog-sorting__container">
                   {%- if show_collection_count -%}
                     <div class="catalog-product__count">
-                      {{ 'collections.general.products_count' | t: products_count:collection.products_count }}
+                      {{ 'collections.general.products_count' | t: products_count:search.results_count }}
                     </div>
                   {%- endif -%}
                   {%- if show_sorting -%}
