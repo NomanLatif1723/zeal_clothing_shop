@@ -1,3 +1,4 @@
+<div class="cart__item-container" data-key="{{ item.key }}">
 <div class="cart__item-title desktop__hidden">
   <h3>{{ item.title }}</h3>
   <a href="{{ item.url_to_remove }}" class="cart__item-remove" title="{{ 'cart.general.remove' | t }}">
@@ -7,7 +8,7 @@
     {{ 'cart.general.remove' | t }}
   </a>
 </div>
-<div class="cart__item-block" data-key="{{ item.key }}" data-line="{{ forloop.index }}">       
+<div class="cart__item-block">       
   <div class="cart__item-image">
     <a href="{{ item.url }}">
       <img class="mobile__hidden" src="{{ item.image | image_url: width: 100, height: 100 }}" alt="{{ item.image.alt }}" width="100" height="100" loading="lazy" />
@@ -56,18 +57,15 @@
     </div>
     <div class="cart-quantity__wrapper">
       <div class="line__item-quantity">
-        {% comment %}
-          <input name="updates[]" value="{{ item.quantity }}" />
-        {% endcomment %}
         <button type="button" aria-label="{{ 'cart.general.minus' | t }}" class="icon__minus">
            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="2" viewBox="0 0 10 2" fill="none">
-            <path d="M9 1H1" stroke="currentcolor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
+            <path d="M9 1H1" stroke="currentcolor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
           </svg>
         </button>
         <input name="updates[]" class="quantity__input"  value="{{ item.quantity }}" >
         <button type="button" aria-label="{{ 'cart.general.plus' | t }}" class="icon__plus">
           <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
-            <path d="M5 1V5M5 5V9M5 5H9M5 5L1 5" stroke="currentcolor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
+            <path d="M5 1V5M5 5V9M5 5H9M5 5L1 5" stroke="currentcolor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
           </svg>
         </button>
       </div>
@@ -76,4 +74,5 @@
       </div>
     </div>
   </div>
+</div>
 </div>
