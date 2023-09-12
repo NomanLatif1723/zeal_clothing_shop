@@ -984,30 +984,13 @@ function initcartAjax() {
           body: JSON.stringify({key: key,quantity: quantity})
         })
         .then(responce => responce.json())
-          .then(data => {
-            console.log(data);
-            let format = document.querySelector('[data-money-format]').getAttribute('data-money-format');
-            let totalPrice = formatMoney(data.total_price, format);
-            document.querySelector(`.final-line__price`).textContent = data.final_line_price;
-            document.querySelector('#total_price').textContent = totalPrice;
-          })
-        // fetch('/cart/change.js', {
-        //   method: 'post',
-        //   body: new formData(button)
-        // })
-        // .then(response => response.json())
-        // .then(data =>  {
-        //   /* we have JSON */
-        //   let format = document.querySelector('[data-money-format]').getAttribute('data-money-format');
-        //   let totalPrice = formatMoney(data.total_price, format);
-
-        //   document.querySelector(`[data-key="${key}"] .final-line__price`).textContent = data.final_line_price;
-        //   document.querySelector('#total_price').textContent = totalPrice;
-          
-        // }).catch(function(err) {
-        //   /* uh oh, we have error. */
-        //   console.error(err)
-        // });
+        .then(data => {
+          console.log(data);
+          let format = document.querySelector('[data-money-format]').getAttribute('data-money-format');
+          let totalPrice = formatMoney(data.total_price, format);
+          document.querySelector(`.final-line__price`).textContent = data.final_line_price;
+          document.querySelector('#total_price').textContent = totalPrice;
+        })
       }
     })
   })
