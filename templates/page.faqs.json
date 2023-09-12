@@ -15,29 +15,45 @@
         "template--21029420892482__66773da0-4d1c-4be3-b130-436d13e4b960-question-1": {
           "type": "question",
           "settings": {
-            "question": "Any Question?",
-            "answer": ""
+            "question": "What is your return policy?",
+            "answer": "<p>We offer free in-store returns for all of our products within 30 days of purchase. Items must be in their original condition with tags attached for a full refund.<\/p>"
           }
         },
         "template--21029420892482__66773da0-4d1c-4be3-b130-436d13e4b960-question-2": {
           "type": "question",
           "settings": {
             "question": "Any Question?",
-            "answer": ""
+            "answer": "<p>We offer free in-store returns for all of our products within 30 days of purchase. Items must be in their original condition with tags attached for a full refund.We offer free in-store returns for all of our products within 30 days of purchase. Items must be in their original condition with tags attached for a full refund.<\/p>"
           }
         },
         "template--21029420892482__66773da0-4d1c-4be3-b130-436d13e4b960-question-3": {
           "type": "question",
           "settings": {
             "question": "Any Question?",
-            "answer": ""
+            "answer": "<p>We offer free in-store returns for all of our products within 30 days of purchase. Items must be in their original condition with tags attached for a full refund.We offer free in-store returns for all of our products within 30 days of purchase. Items must be in their original condition with tags attached for a full refund.We offer free in-store returns for all of our products within 30 days of purchase. Items must be in their original condition with tags attached for a full refund.<\/p>"
+          }
+        },
+        "13754525-550b-48c9-a4be-e3baba38f80b": {
+          "type": "question",
+          "settings": {
+            "question": "Any Question?",
+            "answer": "<p>We offer free in-store returns for all of our products within 30 days of purchase. Items must be in their original condition with tags attached for a full refund.We offer free in-store returns for all of our products within 30 days of purchase. Items must be in their original condition with tags attached for a full refund.We offer free in-store returns for all of our products within 30 days of purchase. Items must be in their original condition with tags attached for a full refund.We offer free in-store returns for all of our products within 30 days of purchase. Items must be in their original condition with tags attached for a full refund.<\/p>"
+          }
+        },
+        "7049f4ce-30ff-4d5e-9e4e-5640f94bfcac": {
+          "type": "question",
+          "settings": {
+            "question": "Any Question?",
+            "answer": "<p>We offer free in-store returns for all of our products within 30 days of purchase. Items must be in their original condition with tags attached for a full refund.We offer free in-store returns for all of our products within 30 days of purchase. Items must be in their original condition with tags attached for a full refund.We offer free in-store returns for all of our products within 30 days of purchase. Items must be in their original condition with tags attached for a full refund.We offer free in-store returns for all of our products within 30 days of purchase. Items must be in their original condition with tags attached for a full refund.We offer free in-store returns for all of our products within 30 days of purchase. Items must be in their original condition with tags attached for a full refund.<\/p>"
           }
         }
       },
       "block_order": [
         "template--21029420892482__66773da0-4d1c-4be3-b130-436d13e4b960-question-1",
         "template--21029420892482__66773da0-4d1c-4be3-b130-436d13e4b960-question-2",
-        "template--21029420892482__66773da0-4d1c-4be3-b130-436d13e4b960-question-3"
+        "template--21029420892482__66773da0-4d1c-4be3-b130-436d13e4b960-question-3",
+        "13754525-550b-48c9-a4be-e3baba38f80b",
+        "7049f4ce-30ff-4d5e-9e4e-5640f94bfcac"
       ],
       "settings": {
         "faq_heading": "FAQ",
