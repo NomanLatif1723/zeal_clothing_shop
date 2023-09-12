@@ -267,5 +267,10 @@
     "general": {
       "social_label": "Join Us On {{ social }}"
     }
+  },
+  "search": {
+    "general": {
+      "catalog": "Shop"
+    }
   }
 }
