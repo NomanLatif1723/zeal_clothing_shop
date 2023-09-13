@@ -753,14 +753,16 @@ function initCollections() {
     }
   
     // Update sort_by query parameter on select change
-    const sortContainer = document.querySelector('#sort-by');
+    const sortContainer = document.querySelectorAll('#sort-by');
     if (sortContainer) {
-      sortContainer.addEventListener('change', function(e) {
-        var value = e.target.value;
-    
-        Shopify.queryParams.sort_by = value;
-        location.search = new URLSearchParams(Shopify.queryParams).toString();
-      });
+      sortContainer.forEach(el => {
+        el.addEventListener('change', function(e) {
+          var value = e.target.value;
+          Shopify.queryParams.sort_by = value;
+          location.search = new URLSearchParams(Shopify.queryParams).toString();
+        });
+      })
+      
     }
   }
   function collectionFilters() {
