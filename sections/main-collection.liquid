@@ -45,7 +45,6 @@
   when 'wide'
   assign imageAspectRatio = "16/9"
   endcase
-  
 -%}
 {%- style -%}
   .main__section-{{ section.id }}{
@@ -140,7 +139,6 @@
           </div>
           {%- endif -%}
         {%- endfor -%}
-        
         <div class="catalog__header">
           <div class="catalog-title__container">
             <div class="main__heading catalog__heading">
@@ -181,8 +179,7 @@
           </div>
           <div class="catalog-sorting__btn">
             <button class="filter__btn" aria-label="Filter/Sort">
-              {%- render 'icon-filter' -%}
-              {{ 'collections.general.fiter_collection' | t }}
+              {%- render 'icon-filter' -%}{{ 'collections.general.fiter_collection' | t }}
             </button>
           </div>
         </div>
@@ -209,7 +206,6 @@
           {%- endif -%}
         {%- endpaginate -%}
       </div>
-
     </div>
   </div>
 </div>
