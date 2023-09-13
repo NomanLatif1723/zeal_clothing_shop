@@ -58,7 +58,7 @@
     </div>
     <div class="search__results">
       {% if search.performed %}
-          {% if search.object_type == 'product' %}
+          {% if search.featured_image %}
             <div class="catalog__wrapper">
               {%- if show_filtering -%}
                 <div class="catalog-filter__block">
@@ -164,9 +164,9 @@
                 {%- endpaginate -%}
               </div>
             </div>
-          {% elsif search.object_type == 'page' %}
+          {% elsif result.object_type == 'page' %}
             <a href="{{ result.url }}">{{ result.title }}</a>
-          {% elsif search.object_type == 'article' %}
+          {% elsif result.object_type == 'article' %}
             <a href="{{ result.url }}" title="{{ result.title | escape }}">
             {{ result | image_url: width: 100 | image_tag }}
             <span>{{ result.title }}</span>
