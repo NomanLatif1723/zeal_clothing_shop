@@ -1,13 +1,15 @@
-<nav role="navigation" aria-label="breadcrumb">
-  <ul class="breadcrumb__list">
-    <li class="breadcrumb__item">
-      <a href="{{ routes.root_url }}">Home</a>
-    </li>
-    <span class="divider">/</span>
-    {% if template.name == 'search' %}
+{% if settings.show_breadcrumbs %}
+  <nav role="navigation" aria-label="breadcrumb" class="breadcrumbs">
+    <ul class="breadcrumb__list">
       <li class="breadcrumb__item">
-        <span>{{ 'search.genral.title' | t }}</span>
+        <a href="{{ routes.root_url }}">Home</a>
       </li>
-    {% endif %}
-  </ul>
-</nav>
+      <span class="divider">/</span>
+      {% if template.name == 'search' %}
+        <li class="breadcrumb__item">
+          <span>{{ 'search.general.title' | t }}</span>
+        </li>
+      {% endif %}
+    </ul>
+  </nav>
+{% endif %}
