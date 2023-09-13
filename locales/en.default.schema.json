@@ -1092,7 +1092,7 @@
           "label": "Items To Show"
         },
         "results_per_row": {
-          "label": "Per Row"
+          "label": "Items Per Row"
         },
         "header_sorting": {
           "label": "Sorting and Filtering",
