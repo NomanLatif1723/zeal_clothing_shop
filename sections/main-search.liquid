@@ -155,7 +155,8 @@
                           product: result,
                           collection: search,
                           lazyloading: lazyloading,
-                          itemWidth: itemWidth 
+                          itemWidth: itemWidth,
+                          imageAspectRatio: imageAspectRatio
                         -%}
                        {%- elsif result.object_type == 'page' -%}
                         <div class="collection-grid__item {{ itemWidth }} {% if stackProduct == false %}list-scroller__item{% endif %}">
