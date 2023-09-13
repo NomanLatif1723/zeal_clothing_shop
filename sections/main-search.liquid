@@ -102,7 +102,7 @@
                         </li>
                         <span class="separater__icon">{% render 'icon-arrow-down' %}</span>
                         <li class="breadcrumb__item" aria-current="page">
-                            <span>{{ page_title }}</span>
+                            <span>{{ page_title | replace: '*', '' }}</span>
                         </li>
                     </ul>
                   </nav>
