@@ -1085,6 +1085,59 @@
         }
       }
     },
+    "main-search": {
+      "name": "Search",
+      "settings": {
+        "results_to_show": {
+          "label": "Items To Show"
+        },
+        "results_per_row": {
+          "label": "Per Row"
+        },
+        "header_sorting": {
+          "label": "Sorting and Filtering",
+          "show_sorting": {
+            "label": "Show Sorting"
+          },
+          "show_filtering": {
+            "label": "Show Filters",
+            "info": "[Customize filters](\/admin\/menus)"
+          },
+          "show_collection_count": {
+            "label": "Show Collection Count"
+          }
+        },
+        "header_alignment": {
+          "label": "Alignment",
+          "alignment": {
+            "label": "Text alignment",
+            "options": {
+              "left": {
+                "label": "Left"
+              },
+              "center": {
+                "label": "Center"
+              },
+              "right": {
+                "label": "Right"
+              }
+            }
+          }
+        },
+        "lazyload_images": {
+          "label": "Enable LazyLoad Images"
+        },
+        "header_spacing": {
+          "label": "Section Spacing",
+          "top_spacing": {
+            "label": "Spacing Top"
+          },
+          "bottom_spacing": {
+            "label": "Spacing Bottom"
+          }
+        }
+      }
+    },
     "marquee-text": {
       "name": "Marquee Text",
       "settings": {
