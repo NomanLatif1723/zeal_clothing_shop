@@ -219,12 +219,12 @@
 
 {% schema %}
   {
-    "name": "Search",
+    "name": "t:sections.main-search.name",
     "settings": [
       {
         "type": "range",
         "id": "results_to_show",
-        "label": "t:sections.main-collection.settings.products_to_show.label",
+        "label": "t:sections.main-search.settings.products_to_show.label",
         "min": 8,
         "max": 50,
         "default": 12,
@@ -233,7 +233,7 @@
       {
         "type": "range",
         "id": "results_per_row",
-        "label": "t:sections.main-collection.settings.products_per_row.label",
+        "label": "t:sections.main-search.settings.products_per_row.label",
         "min": 2,
         "max": 5,
         "default": 4,
@@ -241,45 +241,45 @@
       },
       {
         "type": "header",
-        "content": "t:sections.main-collection.settings.header_sorting.label"
+        "content": "t:sections.main-search.settings.header_sorting.label"
       },
       {
         "type": "checkbox",
         "id": "show_sorting",
-        "label": "t:sections.main-collection.settings.header_sorting.show_sorting.label",
+        "label": "t:sections.main-search.settings.header_sorting.show_sorting.label",
         "default": false
       },
       {
         "type": "checkbox",
         "id": "show_filtering",
-        "label": "t:sections.main-collection.settings.header_sorting.show_filtering.label",
-        "info": "t:sections.main-collection.settings.header_sorting.show_filtering.info",
+        "label": "t:sections.main-search.settings.header_sorting.show_filtering.label",
+        "info": "t:sections.main-search.settings.header_sorting.show_filtering.info",
         "default": false
       },
       {
         "type": "checkbox",
         "id": "show_collection_count",
-        "label": "t:sections.main-collection.settings.header_sorting.show_collection_count.label",
+        "label": "t:sections.main-search.settings.header_sorting.show_collection_count.label",
         "default": false
       },
       {
         "type": "header",
-        "content": "t:sections.main-collection.settings.header_alignment.label"
+        "content": "t:sections.main-search.settings.header_alignment.label"
       },
       {
         "type": "select",
         "id": "text_alignment",
-        "label": "t:sections.main-collection.settings.header_alignment.alignment.label",
+        "label": "t:sections.main-search.settings.header_alignment.alignment.label",
         "options": [
           {
             "value": "left",
-            "label": "t:sections.main-collection.settings.header_alignment.alignment.options.left.label"
+            "label": "t:sections.main-search.settings.header_alignment.alignment.options.left.label"
           }, {
             "value": "center",
-            "label": "t:sections.main-collection.settings.header_alignment.alignment.options.center.label"
+            "label": "t:sections.main-search.settings.header_alignment.alignment.options.center.label"
           }, {
             "value": "right",
-            "label": "t:sections.main-collection.settings.header_alignment.alignment.options.right.label"
+            "label": "t:sections.main-search.settings.header_alignment.alignment.options.right.label"
           }
         ],
         "default": "center"
@@ -287,12 +287,12 @@
       {
         "type": "checkbox",
         "id": "lazyload_images",
-        "label": "t:sections.main-collection.settings.lazyload_images.label",
+        "label": "t:sections.main-search.settings.lazyload_images.label",
         "default": false
       },
       {
         "type": "header",
-        "content": "t:sections.main-collection.settings.header_spacing.label"
+        "content": "t:sections.main-search.settings.header_spacing.label"
       },
       {
         "type": "range",
@@ -301,7 +301,7 @@
         "max": 100,
         "step": 2,
         "unit": "px",
-        "label": "t:sections.main-collection.settings.header_spacing.top_spacing.label",
+        "label": "t:sections.main-search.settings.header_spacing.top_spacing.label",
         "default": 16
       },
       {
@@ -311,7 +311,7 @@
         "max": 100,
         "step": 2,
         "unit": "px",
-        "label": "t:sections.main-collection.settings.header_spacing.bottom_spacing.label",
+        "label": "t:sections.main-search.settings.header_spacing.bottom_spacing.label",
         "default": 16
       }
     ]
