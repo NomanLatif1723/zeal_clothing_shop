@@ -271,7 +271,7 @@
   "search": {
     "general": {
       "title": "Search",
-      "no_results": "No Results Could be Found Try Searching Again"
+      "no_results": "No Results Could be Found For {{ search_term }}"
     }
   }
 }
