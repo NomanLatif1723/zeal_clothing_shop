@@ -90,24 +90,7 @@
           {%- endif -%}
           <div class="{% if show_filtering %}catalog-list__banner{% endif %}">
             <div class="catalog__header">
-              <div class="catalog-title__container">
-                <div class="main__heading catalog__heading">
-                  <h2>{{ 'search.general.catalog' | t }}</h2>
-                </div>
-                {%- if show_breadcrumbs -%}
-                  <nav role="navigation" aria-label="breadcrumb">
-                    <ul class="breadcrumb__list">
-                        <li class="breadcrumb__item">
-                            <a href="{{ routes.root_url }}" title="Home">{{ 'general.breadcrumbs.home' | t }}</a>
-                        </li>
-                        <span class="separater__icon">{% render 'icon-arrow-down' %}</span>
-                        <li class="breadcrumb__item" aria-current="page">
-                            <span>{{ page_title | replace: '*', '' }}</span>
-                        </li>
-                    </ul>
-                  </nav>
-                {%- endif -%}
-              </div>
+              
               <div class="catalog-sorting__container">
                 {%- if show_collection_count -%}
                   <div class="catalog-product__count">
