@@ -123,20 +123,30 @@
                 </button>
               </div>
             </div>
-            {%- for result in search.results -%}
-              {%- if result.object_type == 'product' -%}
+            
                 {%- paginate search.results by results_to_show -%}
                   <div class="collection-grid">
-                    {%- for product in search.results limit: results_to_show -%}
-                      {%- render 'product-item',
-                        section: section,
-                        textAlignment: textAlignment,
-                        products_per_row: products_per_row,
-                        product: product,
-                        collection: search,
-                        lazyloading: lazyloading,
-                        itemWidth: itemWidth 
-                      -%}
+                    {%- for result in search.results -%}
+                      {%- if result.object_type == 'product' -%}
+                        {%- render 'product-item',
+                          section: section,
+                          textAlignment: textAlignment,
+                          products_per_row: results_per_row,
+                          product: result,
+                          collection: search,
+                          lazyloading: lazyloading,
+                          itemWidth: itemWidth 
+                        -%}
+                       {%- elsif result.object_type == 'page' -%}
+                        <a href="{{ result.url }}" title="{{ result.title }}">{{ result.title }}</a>
+                      {%- elsif result.object_type == 'article' %}
+                        <a href="{{ result.url }}" title="{{ result.title }}">
+                          {%- if result.image -%}
+                            {{ result | image_url: width: 100 | image_tag }}
+                          {%- endif %}
+                          <span>{{ result.title }}</span>
+                        </a>
+                      {%- endif -%}
                     {%- endfor -%}
                   </div>
                   {%- if paginate.pages > 1 -%}
@@ -146,17 +156,7 @@
                     -%}
                   {%- endif -%}
                 {%- endpaginate -%}
-              {%- elsif result.object_type == 'page' -%}
-                <a href="{{ result.url }}" title="{{ result.title }}">{{ result.title }}</a>
-              {%- elsif result.object_type == 'article' %}
-                <a href="{{ result.url }}" title="{{ result.title }}">
-                  {%- if result.image -%}
-                    {{ result | image_url: width: 100 | image_tag }}
-                  {%- endif %}
-                  <span>{{ result.title }}</span>
-                </a>
-              {%- endif -%}
-            {%- endfor -%}
+             
           </div>
         </div>
       {%- endif -%}
