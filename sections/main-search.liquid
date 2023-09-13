@@ -159,10 +159,11 @@
             {%- endfor -%}
           </div>
         </div>
-        {%- if search.results_count == 0 -%}
+        
+      {%- endif -%}
+      {%- if search.results_count == 0 -%}
           <div class="search-no__results text__center">{{ 'search.general.no_results' | t }}</div>
         {%- endif -%}
-      {%- endif -%}
     </div>
   </div>
 </div>
