@@ -28,7 +28,7 @@
     "show_language": true,
     "show_flags": true,
     "text_direction": "ltr",
-    "show_breadcrumbs": true,
+    "show_breadcrumbs": false,
     "favicon": "shopify:\/\/shop_images\/Vector.svg",
     "image_size": "square",
     "show_quick_view": true,
