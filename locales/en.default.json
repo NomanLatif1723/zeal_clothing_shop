@@ -270,7 +270,7 @@
   },
   "search": {
     "general": {
-      "catalog": "Shop",
+      "title": "Search",
       "no_results": "No Results Could be Found Try Searching Again"
     }
   }
