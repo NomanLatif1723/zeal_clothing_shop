@@ -209,7 +209,7 @@
             </div>
           </div>
         {%- else -%}
-          <div class="search-no__results text__center">{{ 'search.general.no_results' | t }}</div>
+          <div class="search-no__results text__center">{{ 'search.general.no_results' | t:search_term: search.terms }}</div>
         {%- endif -%}
       {%- endif -%}
     </div>
