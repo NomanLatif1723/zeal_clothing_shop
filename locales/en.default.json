@@ -271,6 +271,8 @@
   "search": {
     "general": {
       "title": "Search",
+      "submit": "Search",
+      "search_placeholder": "Search",
       "no_results": "No Results Could be Found For ''{{ search_term }}''",
       "search_results": "{{ count }} Results for ''{{ search_term }}''"
     }
