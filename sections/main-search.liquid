@@ -110,7 +110,7 @@
                 <div class="catalog__header">
                   <div class="catalog-title__container">
                     {%- if search.results_count != 0 -%}
-                      <div class="rte">{{ 'search.general.search_results' | t: count: search.results_count, search_term: search.terms }}</div>
+                      <div class="rte search-results__query">{{ 'search.general.search_results' | t: count: search.results_count, search_term: search.terms }}</div>
                     {%- endif -%}
                 </div>
                 <div class="catalog-sorting__container">
