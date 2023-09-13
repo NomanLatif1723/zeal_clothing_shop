@@ -111,7 +111,7 @@
               </div>
             {%- endif -%}
             <div class="{% if show_filtering %}catalog-list__banner{% endif %}">
-                <div class="catalog__header{% if search.results_count == 0 %} search-catalog__header{% endif %}">
+                <div class="catalog__header">
                   <div class="catalog-title__container">
                     {%- if search.results_count != 0 -%}
                       <h3>{{ page_title }}</h3>
