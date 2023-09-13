@@ -126,17 +126,15 @@
               {% if result.object_type == 'product' %}
                 {%- paginate search.results by results_to_show -%}
                   <div class="collection-grid">
-                    {%- for product in search.results limit: results_to_show -%}
                       {%- render 'product-item',
                         section: section,
                         textAlignment: textAlignment,
-                        products_per_row: products_per_row,
-                        product: product,
+                        products_per_row: results_per_row,
+                        product: result,
                         collection: search,
                         lazyloading: lazyloading,
                         itemWidth: itemWidth 
                       -%}
-                    {%- endfor -%}
                   </div>
                   {%- if paginate.pages > 1 -%}
                     {%- render 'pagination',
