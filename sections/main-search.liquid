@@ -114,7 +114,7 @@
                 <div class="catalog__header">
                   <div class="catalog-title__container">
                     {%- if search.results_count != 0 -%}
-                      <h3>{{ page_title }}</h3>
+                      <h3>{{ 'search.general.search_results' | t: count: search.results_count, search_term: search.terms }}</h3>
                     {%- endif -%}
                 </div>
                 <div class="catalog-sorting__container">
