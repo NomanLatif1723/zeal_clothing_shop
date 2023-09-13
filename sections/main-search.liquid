@@ -138,14 +138,18 @@
                           itemWidth: itemWidth 
                         -%}
                        {%- elsif result.object_type == 'page' -%}
-                        <a href="{{ result.url }}" title="{{ result.title }}">{{ result.title }}</a>
+                        <div class="collection-grid__item {{ itemWidth }} {% if stackProduct == false %}list-scroller__item{% endif %}">
+                          <a href="{{ result.url }}" title="{{ result.title }}">{{ result.title }}</a>
+                        </div>
                       {%- elsif result.object_type == 'article' %}
-                        <a href="{{ result.url }}" title="{{ result.title }}">
-                          {%- if result.image -%}
-                            {{ result | image_url: width: 100 | image_tag }}
-                          {%- endif %}
-                          <span>{{ result.title }}</span>
-                        </a>
+                        <div class="collection-grid__item {{ itemWidth }} {% if stackProduct == false %}list-scroller__item{% endif %}">
+                          <a href="{{ result.url }}" title="{{ result.title }}">
+                            {%- if result.image -%}
+                              {{ result | image_url: width: 100 | image_tag }}
+                            {%- endif %}
+                            <span>{{ result.title }}</span>
+                          </a>
+                        </div>
                       {%- endif -%}
                     {%- endfor -%}
                   </div>
