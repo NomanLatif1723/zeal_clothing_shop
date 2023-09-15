@@ -16,8 +16,7 @@
             {{ media | img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
             {{ media | img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
             {{ media | img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
-            {{ media | img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
-            "
+            {{ media | img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w"
           width="{{ media.width }}"
           height="{{ media.height }}"
           loading="lazy"
@@ -44,12 +43,10 @@
                   style="aspect-ratio: {{ imageAspectRatio }};"
                   src="{{ media | img_url: '360x' }}"
                   srcset="
-                            {{ media | img_url: '120x' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}120{% endif %}w,
-                            {{ media | img_url: '360x' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}360{% endif %}w,
-                            {{ media | img_url: '540x' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}540{% endif %}w,
-                            {{ media | img_url: '720x' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}720{% endif %}w,
-                            
-                            "
+                    {{ media | img_url: '120x' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}120{% endif %}w,
+                    {{ media | img_url: '360x' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}360{% endif %}w,
+                    {{ media | img_url: '540x' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}540{% endif %}w,
+                    {{ media | img_url: '720x' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}720{% endif %}w"
                   width="{{ media.width }}"
                   height="{{ media.height }}"
                   loading="lazy"
@@ -72,8 +69,6 @@
   const swiper = new Swiper('.swiper', {
     slidesPerView: 5,
     spaceBetween: 20,
-
-// Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
