@@ -70,7 +70,7 @@
     max-width: 650px;
     width: 100%;
 }
-/* .product__sizeguide:before {
+.sizeguide__overlay:before {
     content: '';
     position: fixed;
     width: 100%;
@@ -79,7 +79,7 @@
     top: 0;
     left: 0;
     z-index: 99;
-} */
+}
 .close-modal__size--popup {
     right: -15px;
     top: -15px;
