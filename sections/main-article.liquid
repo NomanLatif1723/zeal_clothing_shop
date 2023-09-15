@@ -53,19 +53,15 @@
         {%- endif -%}
         {%- if article.image -%}
           <div class="grid__item-image">
-            <a
-              href="{{ article.url }}"
-              title="{{ article.title }}"
-              aria-label="{{ article.title | escape }}"
-              class="article__image">
+            <a href="{{ article.url }}" title="{{ article.title }}" aria-label="{{ article.title | escape }}" class="article__image">
               <div class="article_image-wrapper">
                 <img style="aspect-ratio: {{ imageAspectRatio }};"src="{{ articleImage | img_url: default }}"srcset="
-                                                                    {{ articleImage | img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
-                                                                    {{ articleImage | img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
-                                                                    {{ articleImage | img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
-                                                                    {{ articleImage | img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
-                                                                    {{ articleImage | img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
-                                                                    "width="{{ articleImage.width }}"height="{{ articleImage.height }}"loading="{{ lazyloading }}"sizes="{{ sizes }}"alt="{{ articleImage.alt }}">
+                  {{ articleImage | img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
+                  {{ articleImage | img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
+                  {{ articleImage | img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
+                  {{ articleImage | img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
+                  {{ articleImage | img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
+                  "width="{{ articleImage.width }}"height="{{ articleImage.height }}"loading="{{ lazyloading }}"sizes="{{ sizes }}"alt="{{ articleImage.alt }}">
               </div>
             </a>
           </div>
@@ -130,33 +126,16 @@
             <div class="form__grid">
               <div class="form__group">
                 <label class="form__label" for="name">{{ 'article.comments.name' | t }}</label>
-                <input
-                  class="form__input"
-                  type="text"
-                  name="comment[author]"
-                  placeholder="{{ 'article.comments.name_placeholder' | t }}"
-                  id="name"
-                  value="{{ form.author }}">
+                <input class="form__input" type="text" name="comment[author]" placeholder="{{ 'article.comments.name_placeholder' | t }}" id="name" value="{{ form.author }}">
               </div>
               <div class="form__group">
                 <label class="form__label" for="email">{{ 'article.comments.email' | t }}</label>
-                <input
-                  class="form__input"
-                  type="email"
-                  name="comment[email]"
-                  placeholder="{{ 'article.comments.email_placeholder' | t }}"
-                  id="email"
-                  value="{{ form.email }}">
+                <input class="form__input" type="email" name="comment[email]" placeholder="{{ 'article.comments.email_placeholder' | t }}" id="email" value="{{ form.email }}">
               </div>
             </div>
             <div class="form__group">
               <label class="form__label" for="comment">{{ 'article.comments.message' | t }}</label>
-              <textarea
-                class="form__input"
-                rows="5"
-                name="comment[body]"
-                placeholder="{{ 'article.comments.message_placeholder' | t }}"
-                id="comment">{{ form.body }}</textarea>
+              <textarea class="form__input" rows="5" name="comment[body]" placeholder="{{ 'article.comments.message_placeholder' | t }}" id="comment">{{ form.body }}</textarea>
             </div>
             <div class="text__center">
               <div class="comments-form__submit">

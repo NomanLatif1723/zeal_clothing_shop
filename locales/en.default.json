@@ -226,8 +226,8 @@
   },
   "products": {
     "promotional_message": "Hurry up! sale ends in",
-    "minus":"Minus",
-    "plus":"Plus",
+    "minus": "Minus",
+    "plus": "Plus",
     "quantity_label": "Qty",
     "sizeguide_text": "Size Guide",
     "sizechart": "Size Chart",
