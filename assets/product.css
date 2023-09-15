@@ -105,10 +105,15 @@
     display: flex;
     align-items: center;
 }
-
 .product__sizeguide button svg {
     width: 30px;
     height: 30px;
+}
+.product-media__thumbnails {
+    padding-top: 20px;
+}
+.product-media__thumbnails .swiper-slide-thumb-active {
+    border: 1px solid black;
 }
 @media only screen and (min-width: 768px) {
   .product-grid {
