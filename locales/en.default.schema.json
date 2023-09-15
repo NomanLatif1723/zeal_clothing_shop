@@ -1451,7 +1451,7 @@
         "variants_picker": {
           "name": "variants Picker",
           "settings": {
-            "variants_type": {
+            "variant_type": {
               "label": "Variants Type",
               "options": {
                 "dropdown": {
