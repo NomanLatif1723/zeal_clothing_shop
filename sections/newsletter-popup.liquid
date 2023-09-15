@@ -24,12 +24,11 @@
           <img
             src="{{ newsletter_image | img_url: default }}"
             srcset="
-                            {{ newsletter_image | product_img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
-                            {{ newsletter_image | product_img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
-                            {{ newsletter_image | product_img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
-                            {{ newsletter_image | product_img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
-                            {{ newsletter_image | product_img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
-                            "
+              {{ newsletter_image | product_img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
+              {{ newsletter_image | product_img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
+              {{ newsletter_image | product_img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
+              {{ newsletter_image | product_img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
+              {{ newsletter_image | product_img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w"
             width="{{ newsletter_image.width }}"
             height="{{ newsletter_image.height }}"
             loading="{{ lazyloading }}"
@@ -61,10 +60,7 @@
         </div>
         {%- if show_popup -%}
           <div class="show-newsletter__popup">
-            <input
-              type="checkbox"
-              name="show Popup"
-              id="show-popup">
+            <input type="checkbox" name="show Popup" id="show-popup">
             <label for="show-popup">{{ 'popups.newsletter-popup.show_popup' | t }}</label>
           </div>
         {%- endif -%}
@@ -100,17 +96,20 @@
         "type": "richtext",
         "id": "newsletter_text",
         "label": "t:sections.newsletter-popup.settings.newsletter_text.label"
-      }, {
+      },
+      {
         "type": "text",
         "id": "newsletter_button_label",
         "label": "t:sections.newsletter-popup.settings.newsletter_button_label.label",
         "default": "Submit"
-      }, {
+      },
+      {
         "type": "checkbox",
         "id": "show_popup",
         "label": "t:sections.newsletter-popup.settings.show_popup.label",
         "default": false
-      }, {
+      },
+      {
         "type": "checkbox",
         "id": "lazyload_images",
         "label": "t:sections.newsletter-popup.settings.lazyload_images.label",
