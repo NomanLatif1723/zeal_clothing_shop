@@ -1,5 +1,5 @@
 .product-grid {
-  padding-top: 20px;
+  padding-top: 30px;
 }
 .product-grid__item {
   width: 100%;
@@ -41,6 +41,12 @@
 .product-quantity__wrapper {
   display: flex;
   justify-content: space-between;
+}
+.product__title h2 {
+    text-transform: capitalize;
+}
+.sale__price {
+    font-size: 24px;
 }
 @media only screen and (min-width: 768px) {
   .product-grid {
