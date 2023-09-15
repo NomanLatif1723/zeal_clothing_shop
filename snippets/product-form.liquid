@@ -106,12 +106,12 @@
                 </button>
               </div>
             </div>
-            <div class="product__sizeguide" data-popup-modal>
+            <div class="product__sizeguide" >
               {%- if block.settings.size_guide_page != blank -%}
               <button type="button" aria-label="{{ 'products.sizeguide_text' | t }}">
                 {%- render 'icon-sizeguide' -%}{{ 'products.sizeguide_text' | t }}
               </button>
-              <div class="sizeguide-popup">
+              <div class="sizeguide-popup" data-popup-modal>
                 <div class="sizechart__header">{{ 'products.sizechart' | t }}</div>
                 {{ block.settings.size_guide_page }}
                 <button class="close__modal close-modal__size--popup" aria-label="{{ 'general.accessibility.close-modal' | t }}">
