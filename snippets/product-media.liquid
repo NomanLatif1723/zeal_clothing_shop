@@ -8,7 +8,7 @@
   {%- endif -%}
   <div class="product-media__wrapper">
     {%- for media in product.media -%}
-      
+      <div class="product__image">
         <img
           src="{{ media | img_url: default }}"
           srcset="
@@ -22,8 +22,7 @@
           loading="lazy"
           sizes="{{ sizes }}"
           alt="{{ media.alt }}" />
-      
-
+      </div>
     {%- endfor -%}
   </div>
   <div class="product-media__thumbnails">
