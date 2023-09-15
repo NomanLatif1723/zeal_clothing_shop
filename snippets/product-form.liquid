@@ -90,35 +90,37 @@
       {%- when 'quantity_selector' -%}
         <div class="product__block product__quantity" {{ block.shopify_attributes }}>
           <div class="product-quantity__wrapper">
-            <span>{{ 'products.quantity_label' | t }}</span>
-          <div class="product__item-quantity">
-            <button type="button" aria-label="{{ 'products.minus' | t }}" class="icon__minus">
-              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="2" viewBox="0 0 10 2" fill="none">
-                <path d="M9 1H1" stroke="currentcolor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
-              </svg>
-            </button>
-            <input type="text" name="quantity" class="product-quantity__input" min="1"  value="1" >
-            <button type="button" aria-label="{{ 'products.plus' | t }}" class="icon__plus">
-              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
-                <path d="M5 1V5M5 5V9M5 5H9M5 5L1 5" stroke="currentcolor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
-              </svg>
-            </button>
-          </div>
-          <div class="product__sizeguide" data-popup-modal>
-            {%- if block.settings.size_guide_page != blank -%}
-            <button type="button" aria-label="{{ 'products.sizeguide_text' | t }}">
-              {%- render 'icon-sizeguide' -%}{{ 'products.sizeguide_text' | t }}
-            </button>
-            <div class="sizeguide-popup">
-              <div class="sizechart__header">{{ 'products.sizechart' | t }}</div>
-              {{ block.settings.size_guide_page }}
-              <button class="close__modal close-modal__size--popup" aria-label="{{ 'general.accessibility.close-modal' | t }}">
-                {%- render 'icon-close' -%}
-              </button>
+            <div>
+              <span>{{ 'products.quantity_label' | t }}</span>
+              <div class="product__item-quantity">
+                <button type="button" aria-label="{{ 'products.minus' | t }}" class="icon__minus">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="2" viewBox="0 0 10 2" fill="none">
+                    <path d="M9 1H1" stroke="currentcolor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+                  </svg>
+                </button>
+                <input type="text" name="quantity" class="product-quantity__input" min="1"  value="1" >
+                <button type="button" aria-label="{{ 'products.plus' | t }}" class="icon__plus">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                    <path d="M5 1V5M5 5V9M5 5H9M5 5L1 5" stroke="currentcolor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+                  </svg>
+                </button>
+              </div>
             </div>
-          {%- endif -%}   
+            <div class="product__sizeguide" data-popup-modal>
+              {%- if block.settings.size_guide_page != blank -%}
+              <button type="button" aria-label="{{ 'products.sizeguide_text' | t }}">
+                {%- render 'icon-sizeguide' -%}{{ 'products.sizeguide_text' | t }}
+              </button>
+              <div class="sizeguide-popup">
+                <div class="sizechart__header">{{ 'products.sizechart' | t }}</div>
+                {{ block.settings.size_guide_page }}
+                <button class="close__modal close-modal__size--popup" aria-label="{{ 'general.accessibility.close-modal' | t }}">
+                  {%- render 'icon-close' -%}
+                </button>
+              </div>
+            {%- endif -%}   
+            </div>
           </div>
-        </div>
         </div>
       {%- when 'buy_buttons' -%}
         <div class="product__block product__buy-buttons" {{ block.shopify_attributes }}>
