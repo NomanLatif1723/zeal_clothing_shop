@@ -1,3 +1,4 @@
+{{ 'product.css' | asset_url | stylesheet_tag: preload: true }}
 {%- liquid
   assign media_container_width = section.settings.media_layout
   assign thumbnail_position = section.settings.thumbnail_position
