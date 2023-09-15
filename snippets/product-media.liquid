@@ -8,6 +8,7 @@
   {%- endif -%}
   <div class="product-media__wrapper">
     {%- for media in product.media -%}
+      
       <div class="product__image">
         <img
           src="{{ media | img_url: default }}"
