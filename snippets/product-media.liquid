@@ -31,6 +31,7 @@
   </div>
   <div class="product-media__thumbnails swiper">
     {%- if product.media.size > 1 %}
+      <!-- <div class="swiper"> -->
       <div class="swiper-wrapper">
         {%- for media in product.media -%}
           <div class="swiper-slide">
@@ -58,9 +59,11 @@
           </div>
         {%- endfor -%}
       </div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+      
+      <!-- </div> -->
     {%- endif -%}
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
   </div>
   {%- if thumbnail_position == 'left' -%}
   </div>
