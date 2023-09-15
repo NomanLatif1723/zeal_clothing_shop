@@ -159,7 +159,7 @@
         </div>
       {%- when 'stock' -%}
         <div class="product__block product__inventory product__content" {{ block.shopify_attributes }}>
-          <div class="product__content-title">{{ 'products.tags.title' | t }}</div>
+          <div class="product__content-title">{{ 'products.stock.title' | t }}</div>
           <div class="product__content-content">
             {%- if product.selected_or_first_available_variant.inventory_management == 'shopify' -%}
               {%- if product.selected_or_first_available_variant.inventory_quantity > 0 -%}
