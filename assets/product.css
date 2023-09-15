@@ -37,6 +37,7 @@
 .product-quantity__wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
 }
 .product__title h2 {
   text-transform: capitalize;
