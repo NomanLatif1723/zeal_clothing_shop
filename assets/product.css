@@ -4,10 +4,6 @@
 .product-grid__item {
   width: 100%;
 }
-.product__content {
-  display: flex;
-  gap: 50px;
-}
 .product__block {
   margin-bottom: 20px;
 }
@@ -43,10 +39,23 @@
   justify-content: space-between;
 }
 .product__title h2 {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 .sale__price {
-    font-size: 24px;
+  font-size: 24px;
+}
+.product__content {
+  display: flex;
+  align-items: flex-start;
+}
+.product__content-title {
+  min-width: 150px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+.product__content-content {
+  display: flex;
 }
 @media only screen and (min-width: 768px) {
   .product-grid {
