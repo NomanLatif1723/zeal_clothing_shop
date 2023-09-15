@@ -24,6 +24,22 @@
   align-items: center;
   gap: 20px;
 }
+.product__buy-buttons .btn__link {
+  width: 100%;
+}
+.product__item-quantity input {
+  width: 40px;
+  padding: 0;
+  border: none;
+}
+.product__item-quantity button {
+  display: inline-flex;
+  padding: 15px;
+}
+.product-quantity__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
 @media only screen and (min-width: 768px) {
   .product-grid {
     display: flex;
