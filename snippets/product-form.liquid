@@ -55,7 +55,7 @@
         {{ product.description }}
       </div>
       {%- when 'tags' -%}
-      <div class="product__block product__content" {{ block.shopify_attributes }}>
+      <div class="product__block product__content rte" {{ block.shopify_attributes }}>
         <div class="product__content-title">{{ 'products.tags.title' | t }}</div>
         <div class="product__content-content">
           {%- for tag in product.tags -%}
@@ -65,12 +65,12 @@
         </div>
       </div>
       {%- when 'sku' -%}
-      <div class="product__block product__content" {{ block.shopify_attributes }}>
+      <div class="product__block product__content rte" {{ block.shopify_attributes }}>
         <div class="product__content-title">{{ 'products.sku.title' | t }}</div>
         <div class="product__content-content">{{ product.selected_or_first_available_variant.sku }}</div>
       </div>
       {%- when 'category' -%}
-      <div class="product__block product__content" {{ block.shopify_attributes }}>
+      <div class="product__block product__content rte" {{ block.shopify_attributes }}>
         <div class="product__content-title">{{ 'products.category.title' | t }}</div>
         <div class="product__content-content">
           {%- for collection in product.collections -%}
