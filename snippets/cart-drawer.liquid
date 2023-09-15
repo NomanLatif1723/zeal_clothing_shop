@@ -61,7 +61,31 @@
                   </a>
                 </div>
                 <div class="cart__item-price">
-                  <div class="line__item-price">{{ item.original_price | money }}</div>
+                  <div class="line__item-price">
+                    {%- if item.original_price != item.final_price -%}
+                      <span class="visually__hidden">{{ 'products.price.regular_price' | t }}</span>
+                      <span class="item__price price__strike">{{ item.original_price | money }}</span>
+                      <span class="visually__hidden">{{ 'products.price.sale_price' | t }}</span>
+                      <span class="item__price">{{ item.final_price | money }}</span>
+                      {%- else -%}
+                        <span class="item__price">{{ item.original_price | money }}</span>
+                    {%- endif -%}
+                    {%- if item.line_level_discount_allocations != blank -%}
+                      {%- for discount_allocation in item.line_level_discount_allocations -%}
+                        <span class="line-item__discount">{{ discount_allocation.discount_application.title }}(-{{ discount_allocation.amount }})</span>
+                      {%- endfor -%}
+                    {%- endif -%}
+                    <div class="product__unit-price{% unless item.unit_price_measurement %} hidden{% endunless %}">
+                      {%- if item.unit_price_measurement -%}
+                        <div>{{ item.unit_price }}/
+                          {%- if item.unit_price_measurement.reference_value != 1 -%}
+                            {{ item.unit_price_measurement.reference_value }}
+                          {%- endif -%}
+                            {{ item.unit_price_measurement.reference_unit }}
+                        </div>
+                      {%- endif -%}
+                    </div>
+                  </div>
                   {%- unless item.product.has_only_default_variant -%}
                     <div class="line__item-variants">
                       {%- for option in item.options_with_values -%}
