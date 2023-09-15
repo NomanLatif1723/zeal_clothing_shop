@@ -32,6 +32,7 @@
   width: 40px;
   padding: 0;
   border: none;
+  text-align: center;
 }
 .product__item-quantity button {
   display: inline-flex;
