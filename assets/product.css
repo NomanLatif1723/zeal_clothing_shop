@@ -29,9 +29,6 @@
     display: flex;
     gap: 50px;
   }
-  .product-grid__item {
-    width: 100%;
-  }
   .product-block__small {
     width: 40%;
   }
