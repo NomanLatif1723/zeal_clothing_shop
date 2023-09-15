@@ -74,7 +74,7 @@
         <div class="product__content-title">{{ 'products.category.title' | t }}</div>
         <div class="product__content-content">
           {%- for collection in product.collections -%}
-            <a href="/collections/{{ collection | handleize }}" title="{{ collection }}">{{ collection }}{% unless forloop.last %},{% endunless %}
+            <a href="/collections/{{ collection.title | handleize }}" title="{{ collection.title }}">{{ collection.title }}{% unless forloop.last %},{% endunless %}
             </a>
           {%- endfor -%}
         </div>
