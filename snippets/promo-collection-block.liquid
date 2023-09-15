@@ -6,13 +6,6 @@
    assign collection_button_link = block.settings.collection_button_link
    
    assign show_collection_timer = block.settings.show_collection_timer
-   assign year = block.settings.years
-   assign month = block.settings.months
-   assign day = block.settings.days
-   assign hour = block.settings.hours
-   assign minute = block.settings.minutes
-   assign completion_message = block.settings.timer_completion_message
-   
    assign collection_image_1  = promo_collection.products[0].featured_media.preview_image
    assign collection_image_2  = promo_collection.products[1].featured_media.preview_image
 
@@ -35,29 +28,7 @@
           </div>
         {%- endif -%}
         {%- if show_collection_timer and promo_collection != blank -%}
-          <div class="promo-timer__banner" data-year="{{ year }}" data-month="{{ month }}" data-day="{{ day }}" data-hour="{{ hour }}" data-minute="{{ minute }}" data-message="{{ completion_message }}" data-countdown>
-            <div class="promo-timer__wrapper">
-              <div class="timer__item">
-                <span class="timer__days">10</span>
-                <span>Days</span>
-              </div>
-              <div class="timer__item">
-                <span class="timer__hours">12</span>
-                <span>Hours</span>
-              </div>
-              <div class="timer__item">
-                <span class="timer__minutes">20</span>
-                <span>Min</span>
-              </div>
-              <div class="timer__item">
-                <span class="timer__seconds">59</span>
-                <span>Sec</span>
-              </div>
-            </div>
-            {%- if completion_message != blank -%}
-              <div class="timer__message rte">{{ completion_message }}</div>
-            {%- endif -%}
-          </div>
+          {%- render 'promotional-countdown', block: block -%}
         {%- endif -%}
         {% if collection_button_label != blank %}
           <div class="promo-btn__container">
@@ -76,12 +47,12 @@
                 <img
                   src="{{ collection_image_1 | img_url: default }}"
                   srcset="
-                    {{ collection_image_1 | img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
-                    {{ collection_image_1 | img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
-                    {{ collection_image_1 | img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
-                    {{ collection_image_1 | img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
-                    {{ collection_image_1 | img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
-                  "
+                                        {{ collection_image_1 | img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
+                                        {{ collection_image_1 | img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
+                                        {{ collection_image_1 | img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
+                                        {{ collection_image_1 | img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
+                                        {{ collection_image_1 | img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
+                                      "
                   width="{{ collection_image_1.width }}"
                   height="{{ collection_image_1.height }}"
                   loading="{{ lazyloading }}"
@@ -96,12 +67,12 @@
                 <img
                   src="{{ collection_image_2 | img_url: default }}"
                   srcset="
-                    {{ collection_image_2 | img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
-                    {{ collection_image_2 | img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
-                    {{ collection_image_2 | img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
-                    {{ collection_image_2 | img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
-                    {{ collection_image_2 | img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
-                  "
+                                        {{ collection_image_2 | img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
+                                        {{ collection_image_2 | img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
+                                        {{ collection_image_2 | img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
+                                        {{ collection_image_2 | img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
+                                        {{ collection_image_2 | img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
+                                      "
                   width="{{ collection_image_2.width }}"
                   height="{{ collection_image_1.height }}"
                   loading="{{ lazyloading }}"

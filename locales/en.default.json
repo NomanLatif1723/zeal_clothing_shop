@@ -197,7 +197,8 @@
       "shop_collection": "BACK TO HOME"
     },
     "breadcrumbs": {
-      "home": "Home"
+      "home": "Home",
+      "collection": "Collection"
     },
     "pagination": {
       "previous": "Previous",
@@ -224,9 +225,27 @@
     }
   },
   "products": {
+    "promotional_message": "Hurry up! sale ends in",
+    "minus":"Minus",
+    "plus":"Plus",
+    "quantity_label": "Qty",
+    "sizeguide_text": "Size Guide",
+    "sizechart": "Size Chart",
+    "add_to_cart": "Add To Cart",
+    "sold_out": "Sold Out",
+    "free_unit_price": "Free",
+    "taxes_included": "Tax Included.",
+    "shipping_policy_html": "<a href='{{ link }}'>Shipping<\/a> calculated at checkout.",
+    "share_social": "Share:",
+    "inventory_in_stock": "In Stock",
+    "inventory_in_stock_count": "{{ items }} In Stock",
+    "inventory_low_stock": "Low Stock",
+    "inventory_low_stock_count": "Low Stock: {{ items }} Left",
+    "inventory_out_of_stock_contine_selling": "In Stock",
+    "inventory_out_of_stock": "Out of Stock",
     "price": {
       "regular_price": "Regular Price",
-      "compare_price": "Comapre Price"
+      "sale_price": "Sale Price"
     },
     "badges": {
       "on_sale": "Sale",
@@ -235,6 +254,15 @@
     "onboarding": {
       "product_title": "Example Product",
       "product_price": "$30"
+    },
+    "sku": {
+      "title": "Sku"
+    },
+    "tags": {
+      "title": "Tags"
+    },
+    "category": {
+      "title": "Category"
     }
   },
   "sections": {

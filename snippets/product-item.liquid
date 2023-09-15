@@ -25,12 +25,12 @@
           style="aspect-ratio: {{ imageAspectRatio }};"
           src="{{ image | product_img_url: default }}"
           srcset="
-              {{ image | product_img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
-              {{ image | product_img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
-              {{ image | product_img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
-              {{ image | product_img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
-              {{ image | product_img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
-          "
+                          {{ image | product_img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
+                          {{ image | product_img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
+                          {{ image | product_img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
+                          {{ image | product_img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
+                          {{ image | product_img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
+                      "
           width="{{ image.width }}"
           height="{{ image.height }}"
           loading="{{ lazyloading }}"
@@ -42,12 +42,12 @@
             style="aspect-ratio: {{ imageAspectRatio }};"
             src="{{ product.media[1] | product_img_url: medium }}"
             srcset="
-                {{ product.media[1] | product_img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
-                {{ product.media[1] | product_img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
-                {{ product.media[1] | product_img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
-                {{ product.media[1] | product_img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
-                {{ product.media[1] | product_img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
-            "
+                              {{ product.media[1] | product_img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
+                              {{ product.media[1] | product_img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
+                              {{ product.media[1] | product_img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
+                              {{ product.media[1] | product_img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
+                              {{ product.media[1] | product_img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
+                          "
             width="{{ product.media[1].width }}"
             height="{{ product.media[1].height }}"
             loading="{{ lazyloading }}"
@@ -68,10 +68,10 @@
         </a>
       </div>
       <div class="grid-product__price">
-        <span class="visually__hidden">{{ 'products.price.regular_price' | t }}</span>
+        <span class="visually__hidden">{{ 'products.price.sale_price' | t }}</span>
         <span class="product__sale-price">{{ product.price | money_without_trailing_zeros }}</span>
         {%- if product.compare_at_price > product.price -%}
-          <span class="visually__hidden">{{ 'products.price.compare_price' | t }}</span>
+          <span class="visually__hidden">{{ 'products.price.regular_price' | t }}</span>
           <span class="product__compare-price">{{ product.compare_at_price | money_without_trailing_zeros }}</span>
         {%- endif -%}
       </div>
