@@ -69,6 +69,15 @@
   </div>
 {%- endif -%}
 <script>
+  const swiperThumbs = new Swiper('.product-media__thumbnails', {
+    slidesPerView: 5,
+    spaceBetween: 20,
+    watchSlidesProgress: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
+  });
   const swiperMedia = new Swiper('.product-media__wrapper', {
     slidesPerView: 1,
     navigation: {
@@ -79,13 +88,5 @@
         swiper: swiperThumbs,
       },
   });
-  const swiperThumbs = new Swiper('.product-media__thumbnails', {
-    slidesPerView: 5,
-    spaceBetween: 20,
-    watchSlidesProgress: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    }
-  });
+  
 </script>
