@@ -19,10 +19,10 @@
       <div class="product__block product__price" {{ block.shopify_attributes }}>
         <div class="product__price-container">
           <span class="visually__hidden">{{ 'products.price.sale_price' | t }}</span>
-          <span class="product__sale-price">{{ product.selected_or_first_available_variant.price | money }}</span>
+          <span class="sale__price product__sale-price">{{ product.selected_or_first_available_variant.price | money }}</span>
           {%- if product.compare_at_price > product.price -%}
             <span class="visually__hidden">{{ 'products.price.regular_price' | t }}</span>
-            <span class="product__compare-price">{{ product.selected_or_first_available_variant.compare_at_price | money }}</span>
+            <span class="sale__price product__compare-price">{{ product.selected_or_first_available_variant.compare_at_price | money }}</span>
           {%- endif -%}
         <div class="product__unit-price{% unless product.selected_or_first_available_variant.unit_price_measurement %} hidden{% endunless %}">
           {%- if product.selected_or_first_available_variant.price > 0 -%}
