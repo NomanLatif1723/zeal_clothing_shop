@@ -2,7 +2,124 @@
   "sections": {
     "main": {
       "type": "main-product",
+      "blocks": {
+        "2bebcb3d-bfb7-4a54-b0fd-7594f60db804": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "c48c8421-10a9-4423-9659-6762eab443c1": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "cd2107fa-b62c-4b09-ab0d-477efa3eb924": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "444874e2-bc96-40b0-b414-aac057b2deb9": {
+          "type": "tags",
+          "settings": {
+          }
+        },
+        "1142a56f-1555-4016-8057-f20c8948fa7c": {
+          "type": "category",
+          "settings": {
+          }
+        },
+        "061aee36-58ac-488a-95f9-bc48abbaf17a": {
+          "type": "sku",
+          "settings": {
+          }
+        },
+        "ad72a519-7d2d-4c55-b8bc-7f201ed71233": {
+          "type": "variants_picker",
+          "settings": {
+            "variant_type": "dropdown",
+            "enable_color_swatches": false
+          }
+        },
+        "6a2a8b20-17c1-4c25-94d8-5e73e7667cdf": {
+          "type": "sale_timer",
+          "settings": {
+            "years": 2024,
+            "months": "08",
+            "days": 31,
+            "hours": 12,
+            "minutes": 12,
+            "timer_completion_message": ""
+          }
+        },
+        "8c5f37a6-8693-4180-a51a-16a798da00ce": {
+          "type": "stock",
+          "settings": {
+            "stock_threshold": 0,
+            "stock_count": false
+          }
+        },
+        "8c0ed8c2-91f4-4ae1-9ac8-2b8733c8dfc3": {
+          "type": "quantity_selector",
+          "settings": {
+            "size_guide_page": ""
+          }
+        },
+        "f4ade60f-6d15-4321-bd20-a58d8b261a56": {
+          "type": "buy_buttons",
+          "settings": {
+            "enable_dynamic_checkout": false
+          }
+        },
+        "d606abb9-e7cf-4681-8980-06f5b855efb5": {
+          "type": "collapsables",
+          "settings": {
+            "heading": "Tab Heading",
+            "text": ""
+          }
+        },
+        "e12da961-abfc-41b6-b750-d67682386124": {
+          "type": "collapsables",
+          "settings": {
+            "heading": "Tab Heading",
+            "text": ""
+          }
+        },
+        "5f8969bd-d623-44ae-afaa-81360b9a68da": {
+          "type": "social_share",
+          "settings": {
+          }
+        },
+        "cadb32f9-5740-408f-8a98-fb552196cf0d": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_content": ""
+          }
+        }
+      },
+      "block_order": [
+        "2bebcb3d-bfb7-4a54-b0fd-7594f60db804",
+        "c48c8421-10a9-4423-9659-6762eab443c1",
+        "cd2107fa-b62c-4b09-ab0d-477efa3eb924",
+        "444874e2-bc96-40b0-b414-aac057b2deb9",
+        "1142a56f-1555-4016-8057-f20c8948fa7c",
+        "061aee36-58ac-488a-95f9-bc48abbaf17a",
+        "ad72a519-7d2d-4c55-b8bc-7f201ed71233",
+        "6a2a8b20-17c1-4c25-94d8-5e73e7667cdf",
+        "8c5f37a6-8693-4180-a51a-16a798da00ce",
+        "8c0ed8c2-91f4-4ae1-9ac8-2b8733c8dfc3",
+        "f4ade60f-6d15-4321-bd20-a58d8b261a56",
+        "d606abb9-e7cf-4681-8980-06f5b855efb5",
+        "e12da961-abfc-41b6-b750-d67682386124",
+        "5f8969bd-d623-44ae-afaa-81360b9a68da",
+        "cadb32f9-5740-408f-8a98-fb552196cf0d"
+      ],
       "settings": {
+        "show_breadcrumbs": true,
+        "show_rating": false,
+        "media_layout": "compact",
+        "thumbnail_position": "below",
+        "margin_top": 16,
+        "margin_bottom": 16
       }
     }
   },
