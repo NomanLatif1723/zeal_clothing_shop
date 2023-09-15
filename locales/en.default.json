@@ -263,6 +263,9 @@
     },
     "category": {
       "title": "Category"
+    },
+    "stock": {
+      "title": "Available"
     }
   },
   "sections": {
