@@ -6,69 +6,80 @@
 {%- if thumbnail_position == 'left' -%}
   <div class="product-media__grid">
   {%- endif -%}
-  <div class="product-media__wrapper">
-    {%- for media in product.media -%}
-      
-      <div class="product__image">
-        <img
-          src="{{ media | img_url: default }}"
-          srcset="
-            {{ media | img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
-            {{ media | img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
-            {{ media | img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
-            {{ media | img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
-            {{ media | img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w"
-          width="{{ media.width }}"
-          height="{{ media.height }}"
-          loading="lazy"
-          sizes="{{ sizes }}"
-          alt="{{ media.alt }}" />
-      </div>
-    {%- endfor -%}
+  <div class="product-media__wrapper swiper">
+    <div class="swiper-wrapper">
+      {%- for media in product.media -%}
+        {% if media.media_type == 'image' %}
+          <div class="product__image swiper-slide">
+            <img
+              src="{{ media | img_url: default }}"
+              srcset="
+                {{ media | img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
+                {{ media | img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
+                {{ media | img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
+                {{ media | img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
+                {{ media | img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w"
+              width="{{ media.width }}"
+              height="{{ media.height }}"
+              loading="lazy"
+              sizes="{{ sizes }}"
+              alt="{{ media.alt }}" />
+          </div>
+        {% endif %}
+      {%- endfor -%}
+    </div>
   </div>
-  <div class="product-media__thumbnails">
+  <div class="product-media__thumbnails swiper">
     {%- if product.media.size > 1 %}
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          {%- for media in product.media -%}
-            <div class="swiper-slide">
-              <a href="#" class="product__thumbs">
-                {%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
-                  <span class="product__play-icon">
-                    {%- render 'icon-play' -%}
-                  </span>
-                {%- endif -%}
-                <img
-                  class="product__image"
-                  style="aspect-ratio: {{ imageAspectRatio }};"
-                  src="{{ media | img_url: '360x' }}"
-                  srcset="
-                    {{ media | img_url: '120x' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}120{% endif %}w,
-                    {{ media | img_url: '360x' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}360{% endif %}w,
-                    {{ media | img_url: '540x' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}540{% endif %}w,
-                    {{ media | img_url: '720x' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}720{% endif %}w"
-                  width="{{ media.width }}"
-                  height="{{ media.height }}"
-                  loading="lazy"
-                  sizes="{{ sizes }}"
-                  alt="{{ media.alt }}" />
-              </a>
-            </div>
-          {%- endfor -%}
-        </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+      <div class="swiper-wrapper">
+        {%- for media in product.media -%}
+          <div class="swiper-slide">
+            <a href="#" class="product__thumbs">
+              {%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
+                <span class="product__play-icon">
+                  {%- render 'icon-play' -%}
+                </span>
+              {%- endif -%}
+              <img
+                class="product__image"
+                style="aspect-ratio: {{ imageAspectRatio }};"
+                src="{{ media | img_url: '360x' }}"
+                srcset="
+                  {{ media | img_url: '120x' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}120{% endif %}w,
+                  {{ media | img_url: '360x' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}360{% endif %}w,
+                  {{ media | img_url: '540x' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}540{% endif %}w,
+                  {{ media | img_url: '720x' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}720{% endif %}w"
+                width="{{ media.width }}"
+                height="{{ media.height }}"
+                loading="lazy"
+                sizes="{{ sizes }}"
+                alt="{{ media.alt }}" />
+            </a>
+          </div>
+        {%- endfor -%}
       </div>
-
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     {%- endif -%}
   </div>
   {%- if thumbnail_position == 'left' -%}
   </div>
 {%- endif -%}
 <script>
-  const swiper = new Swiper('.swiper', {
+  const swiperMedia = new Swiper('.product-media__wrapper', {
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    thumbs: {
+        swiper: swiper,
+      },
+  });
+  const swiperThumbs = new Swiper('.product-media__thumbnails', {
     slidesPerView: 5,
     spaceBetween: 20,
+    watchSlidesProgress: true,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
