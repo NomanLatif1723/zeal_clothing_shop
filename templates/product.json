@@ -55,7 +55,7 @@
           "type": "stock",
           "settings": {
             "stock_threshold": 0,
-            "stock_count": false
+            "stock_count": true
           }
         },
         "8c0ed8c2-91f4-4ae1-9ac8-2b8733c8dfc3": {
