@@ -178,7 +178,7 @@
 @media only screen and (min-width: 768px) {
   .product-grid {
     display: flex;
-    gap: 50px;
+    gap: 60px;
   }
   .product-block__small {
     width: 40%;
