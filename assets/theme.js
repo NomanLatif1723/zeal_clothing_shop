@@ -584,6 +584,7 @@ initNewsletterPopup();
 function initModalPopup() {
   let popupModal = document.querySelectorAll('[data-popup-modal]');
   let sizeGuideContainer = document.querySelector('.product__sizeguide');
+  let sizeGuidePopup = document.querySelector('.sizeguide-popup')
   popupModal.forEach(popup => {
     let closeModalBtn = popup.querySelector('.close__modal');
     let eventCancelBtn = popup.querySelector('.popup-cancel__btn button');
@@ -611,10 +612,13 @@ function initModalPopup() {
     // }
     if (sizeGuideContainer) {
       sizeGuideContainer.addEventListener('click', () => {
-        document.querySelector('[data-popup-modal]').classList.toggle('popup__hidden');
-        // if (sizeGuideContainer) {
+        sizeGuidePopup.classList.toggle('popup__hidden');
           sizeGuideContainer.classList.toggle('sizeguide__overlay');
-        // }
+      })
+    }
+    if (sizeGuidePopup) {
+      sizeGuidePopup.addEventListener('click', (event) => {
+        event.stopPropagation();
       })
     }
   })
