@@ -263,7 +263,8 @@
       "empty": "Please Add Some tags to the Product"
     },
     "category": {
-      "title": "Category"
+      "title": "Category",
+      "empty": "Products Should be in more than one Collections to be appear here as Category"
     },
     "stock": {
       "title": "Available"
