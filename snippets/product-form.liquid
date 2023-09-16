@@ -114,7 +114,7 @@
               </button>
               <div class="sizeguide-popup popup__hidden" data-popup-modal>
                 <div class="sizechart__header">{{ 'products.sizechart' | t }}</div>
-                {{ block.settings.size_guide_page }}
+                <div class="sizeguide__content">{{ block.settings.size_guide_page }}</div>
                 <button class="close__modal close-modal__size--popup" aria-label="{{ 'general.accessibility.close-modal' | t }}">
                   {%- render 'icon-close' -%}
                 </button>
