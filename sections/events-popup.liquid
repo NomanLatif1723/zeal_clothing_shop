@@ -9,12 +9,6 @@
   assign show_socials = section.settings.show_socials
 
   assign show_timer = section.settings.show_timer
-  assign year = section.settings.years
-  assign month = section.settings.months
-  assign day = section.settings.days
-  assign hour = section.settings.hours
-  assign minute = section.settings.minutes
-  assign completion_message = section.settings.timer_completion_message
 -%}
 <events-popup class="events-popup" data-popup-modal>
   <div class="events-popup__modal">
@@ -42,36 +36,8 @@
         {%- endif -%}
       </div>
       {%- if show_timer -%}
-        <div
-          class="promo-timer__banner"
-          data-year="{{ year }}"
-          data-month="{{ month }}"
-          data-day="{{ day }}"
-          data-hour="{{ hour }}"
-          data-minute="{{ minute }}"
-          data-message="{{ completion_message }}"
-          data-countdown>
-          <div class="promo-timer__wrapper">
-            <div class="timer__item">
-              <span class="timer__days">10</span>
-              <span>Days</span>
-            </div>
-            <div class="timer__item">
-              <span class="timer__hours">12</span>
-              <span>Hours</span>
-            </div>
-            <div class="timer__item">
-              <span class="timer__minutes">20</span>
-              <span>Min</span>
-            </div>
-            <div class="timer__item">
-              <span class="timer__seconds">59</span>
-              <span>Sec</span>
-            </div>
-          </div>
-          {%- if completion_message != blank -%}
-            <div class="timer__message rte">{{ completion_message }}</div>
-          {%- endif -%}
+        <div class="promo-timer__container">
+          {%- render 'promotional-countdown', block: block -%}
         </div>
       {%- endif -%}
       <div class="events-popup-newsletter">
