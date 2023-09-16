@@ -67,7 +67,7 @@
 }
 .product__content {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 }
 .product__content a{
   color: rgba(17,17,17,0.6);
