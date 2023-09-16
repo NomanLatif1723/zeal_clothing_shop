@@ -75,7 +75,7 @@
 .contact-form__grid .form__group {
     width: 100%;
   }
-.contact-form .btn__link {
+.contact__form .btn__link {
     width: auto;
 }
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
