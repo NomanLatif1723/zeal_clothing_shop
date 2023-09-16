@@ -599,7 +599,7 @@ function initModalPopup() {
     }
     if (sizeChartBtn) {
       sizeChartBtn.addEventListener('click', () => {
-        sizeChartBtn.closest('[data-popup-modal]').classList.remove('popup__hidden');
+        sizeChartBtn.closest('.product__sizeguide').querySelector('[data-popup-modal]').classList.remove('popup__hidden');
       })
     }
   })
