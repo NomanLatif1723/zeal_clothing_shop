@@ -156,6 +156,28 @@
 .product-media__thumbnails .swiper-button-next {
     right: 0;
 }
+.promo-sale__message {
+  padding-bottom: 10px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.product-form__label {
+  font-size: 14px;
+  padding-bottom: 12px;
+  display: block;
+}
+.product-form__select {
+  padding-bottom: 15px;
+}
+.quantity__label {
+  padding-bottom: 8px;
+  display: block;
+}
+.product__social-share span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 @media only screen and (min-width: 768px) {
   .product-grid {
     display: flex;
