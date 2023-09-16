@@ -43,7 +43,7 @@
         "ad72a519-7d2d-4c55-b8bc-7f201ed71233": {
           "type": "variants_picker",
           "settings": {
-            "variant_type": "dropdown",
+            "variant_type": "button",
             "enable_color_swatches": false
           }
         },
