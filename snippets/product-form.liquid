@@ -80,12 +80,8 @@
         <div class="product__content-title">{{ 'products.category.title' | t }}</div>
         <div class="product__content-content">
           {%- for collection in product.collections -%}
-            {%- if collection. -%}
             <a href="/collections/{{ collection.title | handleize }}" title="{{ collection.title }}">{{ collection.title }}{% unless forloop.last %}, {% endunless %}
             </a>
-            {%- else -%}
-              {{ 'products.category.empty' | t }}
-            {%- endif -%}
           {%- endfor -%}
         </div>
       </div>
