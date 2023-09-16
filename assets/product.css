@@ -39,6 +39,7 @@
   display: flex;
   align-items: center;
   gap: 20px;
+  font-size: 13px;
 }
 .product__buy-buttons .btn__link {
   width: 100%;
@@ -73,6 +74,7 @@
 }
 .product__content-title {
   min-width: 150px;
+  font-size: 13px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.7px;
