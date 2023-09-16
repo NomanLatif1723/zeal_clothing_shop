@@ -69,6 +69,12 @@
             "enable_dynamic_checkout": false
           }
         },
+        "a0670cbe-0d41-4504-905b-1a080352120e": {
+          "type": "full_description",
+          "settings": {
+            "description_tab_heading": "Description"
+          }
+        },
         "d606abb9-e7cf-4681-8980-06f5b855efb5": {
           "type": "collapsables",
           "settings": {
@@ -121,6 +127,7 @@
         "6a2a8b20-17c1-4c25-94d8-5e73e7667cdf",
         "8c0ed8c2-91f4-4ae1-9ac8-2b8733c8dfc3",
         "f4ade60f-6d15-4321-bd20-a58d8b261a56",
+        "a0670cbe-0d41-4504-905b-1a080352120e",
         "d606abb9-e7cf-4681-8980-06f5b855efb5",
         "e12da961-abfc-41b6-b750-d67682386124",
         "28c271d4-b1fd-4938-9e50-3c7fda5b0348",
