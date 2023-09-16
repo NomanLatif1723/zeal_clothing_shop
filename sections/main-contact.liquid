@@ -122,7 +122,7 @@
         {%- if main_heading != blank -%}
           <div class="main__heading contact-main__heading"><h2>{{ main_heading }}</h2></div>
         {%- endif -%}  
-        <div class="contact-form">
+        <div class="contact__form">
           {%- form 'contact', id: "contact_form" -%}
             {%- if form.posted_successfully? -%}
               <p class="success__message">
