@@ -98,10 +98,12 @@
           {
             "value": "compact",
             "label": "t:sections.main-product.settings.media_layout.options.compact.label"
-          }, {
+          },
+          {
             "value": "large",
             "label": "t:sections.main-product.settings.media_layout.options.large.label"
-          }, {
+          },
+          {
             "value": "extended",
             "label": "t:sections.main-product.settings.media_layout.options.extended.label"
           }
@@ -116,15 +118,28 @@
           {
             "value": "left",
             "label": "t:sections.main-product.settings.thumbnail_position.options.left.label"
-          }, {
+          },
+          {
             "value": "below",
             "label": "t:sections.main-product.settings.thumbnail_position.options.below.label"
           }
         ]
-      }, {
+      },
+      {
+        "type": "header",
+        "content": "t:sections.main-product.settings.header_size_chart.label"
+      },
+      {
+        "type": "page",
+        "id": "size_guide_page",
+        "label": "t:sections.main-product.settings.header_size_chart.size_guide_page.label",
+        "info": "t:sections.main-product.settings.header_size_chart.size_guide_page.info"
+      },
+      {
         "type": "header",
         "content": "t:sections.main-product.settings.header_spacing.label"
-      }, {
+      },
+      {
         "type": "range",
         "id": "margin_top",
         "min": 0,
@@ -133,7 +148,8 @@
         "unit": "px",
         "label": "t:sections.main-product.settings.header_spacing.top_spacing.label",
         "default": 16
-      }, {
+      },
+      {
         "type": "range",
         "id": "margin_bottom",
         "min": 0,
@@ -198,23 +214,18 @@
             "label": "t:sections.main-product.blocks.collapsables.settings.text.label"
           }
         ]
-      }, {
+      },
+      {
         "type": "price",
         "name": "t:sections.main-product.blocks.price.name",
         "limit": 1
-      }, {
+      },
+      {
         "type": "quantity_selector",
         "name": "t:sections.main-product.blocks.quantity_selector.name",
-        "limit": 1,
-        "settings": [
-          {
-            "type": "page",
-            "id": "size_guide_page",
-            "label": "t:sections.main-product.blocks.quantity_selector.settings.size_guide_page.label",
-            "info": "t:sections.main-product.blocks.quantity_selector.settings.size_guide_page.info"
-          }
-        ]
-      }, {
+        "limit": 1
+      },
+      {
         "type": "buy_buttons",
         "name": "t:sections.main-product.blocks.buy_buttons.name",
         "settings": [
@@ -225,7 +236,8 @@
             "info": "t:sections.main-product.blocks.buy_buttons.settings.enable_dynamic_checkout.info"
           }
         ]
-      }, {
+      },
+      {
         "type": "custom_liquid",
         "name": "t:sections.main-product.blocks.custom_liquid.name",
         "settings": [
