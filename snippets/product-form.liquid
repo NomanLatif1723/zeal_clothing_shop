@@ -69,10 +69,12 @@
         {{ 'products.tags.empty' | t }}
       {%- endif -%}
       {%- when 'sku' -%}
-      <div class="product__block product__content rte" {{ block.shopify_attributes }}>
-        <div class="product__content-title">{{ 'products.sku.title' | t }}</div>
-        <div class="product__content-content">{{ product.selected_or_first_available_variant.sku }}</div>
-      </div>
+      {%- if product.selected_or_first_available_variant.sku != blank -%}
+        <div class="product__block product__content rte" {{ block.shopify_attributes }}>
+          <div class="product__content-title">{{ 'products.sku.title' | t }}</div>
+          <div class="product__content-content">{{ product.selected_or_first_available_variant.sku }}</div>
+        </div>
+      {%- endif -%}
       {%- when 'category' -%}
       <div class="product__block product__content rte" {{ block.shopify_attributes }}>
         <div class="product__content-title">{{ 'products.category.title' | t }}</div>
