@@ -14,8 +14,8 @@
                 name="{{ option.name }}"
                 value="{{ value }}"
                 {% if option.selected_value == value %}checked{% endif%}
-                id="{{ option.name |handlize }}-{{ value | handlize }}">
-              <label for="{{ option.name |handlize }}-{{ value | handlize }}">
+                id="{{ option.name }}-{{ value }}">
+              <label for="{{ option.name }}-{{ value }}">
                 {{ value }}
               </label>
             {% endfor %}
