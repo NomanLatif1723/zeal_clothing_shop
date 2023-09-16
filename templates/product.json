@@ -111,7 +111,7 @@
         "cadb32f9-5740-408f-8a98-fb552196cf0d": {
           "type": "custom_liquid",
           "settings": {
-            "custom_content": "hjkhjkfhjk hjkflhsadjkl hfkjdal"
+            "custom_content": "{{ product.description }}"
           }
         }
       },
