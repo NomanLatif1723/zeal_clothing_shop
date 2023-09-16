@@ -14,7 +14,12 @@
 }
 .product-tab__header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+}
+.product-tab__container {
+  border-bottom: 1px solid rgba(17,17,17,0.1);
+  padding: 10px 0;
 }
 .product__social-share {
   display: flex;
