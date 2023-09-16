@@ -601,12 +601,20 @@ function initModalPopup() {
         eventCancelBtn.closest('[data-popup-modal]').classList.add('popup__hidden');
       })
     }
-    if (sizeChartBtn) {
-      sizeChartBtn.addEventListener('click', () => {
-        sizeChartBtn.closest('.product__sizeguide').querySelector('[data-popup-modal]').classList.remove('popup__hidden');
-        if (sizeGuideContainer) {
+    // if (sizeChartBtn) {
+    //   sizeChartBtn.addEventListener('click', () => {
+    //     sizeChartBtn.closest('.product__sizeguide').querySelector('[data-popup-modal]').classList.remove('popup__hidden');
+    //     if (sizeGuideContainer) {
+    //       sizeGuideContainer.classList.add('sizeguide__overlay');
+    //     }
+    //   })
+    // }
+    if (sizeGuideContainer) {
+      sizeGuideContainer.addEventListener('click', () => {
+        document.querySelector('[data-popup-modal]').classList.toggle('popup__hidden');
+        // if (sizeGuideContainer) {
           sizeGuideContainer.classList.add('sizeguide__overlay');
-        }
+        // }
       })
     }
   })
