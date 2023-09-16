@@ -115,6 +115,10 @@
 .product-media__thumbnails .swiper-slide-thumb-active {
     border: 1px solid black;
 }
+.product-media__thumbnails .swiper-button-next:after,
+.product-media__thumbnails .swiper-button-prev:after {
+  font-size: 14px !important;
+}
 @media only screen and (min-width: 768px) {
   .product-grid {
     display: flex;
