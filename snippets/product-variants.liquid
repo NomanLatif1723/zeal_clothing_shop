@@ -30,7 +30,7 @@
       data-url="{{ product.url }}">
       {% for option in product.options_with_values %}
         <div class="product-form__select">
-          <label class="product-form__label">{{ option.name }}</label>
+          <label class="product-form__label">{{ option.name }} ({{ option.selected_value }})</label>
           <select class="product__select" id="product-select-{{ forloop.index }}">
             {% for value in option.values %}
               <option value="{{ value }}" {% if option.selected_value == value %}selected{% endif %}>
