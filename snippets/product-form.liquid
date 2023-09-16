@@ -76,15 +76,19 @@
         </div>
       {%- endif -%}
       {%- when 'category' -%}
-      <div class="product__block product__content rte" {{ block.shopify_attributes }}>
-        <div class="product__content-title">{{ 'products.category.title' | t }}</div>
-        <div class="product__content-content">
-          {%- for collection in product.collections -%}
-            <a href="/collections/{{ collection.title | handleize }}" title="{{ collection.title }}">{{ collection.title }}{% unless forloop.last %}, {% endunless %}
-            </a>
-          {%- endfor -%}
+      {%- if product.collections.size > 1 -%}
+        <div class="product__block product__content rte" {{ block.shopify_attributes }}>
+          <div class="product__content-title">{{ 'products.category.title' | t }}</div>
+          <div class="product__content-content">
+            {%- for collection in product.collections -%}
+              <a href="/collections/{{ collection.title | handleize }}" title="{{ collection.title }}">{{ collection.title }}{% unless forloop.last %}, {% endunless %}
+              </a>
+            {%- endfor -%}
+          </div>
         </div>
-      </div>
+      {%- else -%}
+        {{ 'products.category.empty' | t }}
+      {%- endif -%}
       {%- when 'variants_picker' -%}
         <div class="product__block product__variants" {{ block.shopify_attributes }}>
           {%- render 'product-variants', block: block, product: product -%}
