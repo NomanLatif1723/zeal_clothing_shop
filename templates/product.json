@@ -146,11 +146,11 @@
           "settings": {
             "banner_heading": "Get -15% on your first purchase!",
             "banner_text": "Valid for new users only.",
-            "banner_button_1": "Shop Now",
-            "banner_button_link_1": "shopify:\/\/collections",
-            "banner_button_2": "Shop Now",
-            "banner_button_link_2": "shopify:\/\/collections\/mens-wear",
-            "banner_background_color": "#000000"
+            "banner_button_1": "Shop Men",
+            "banner_button_link_1": "shopify:\/\/collections\/mens-wear",
+            "banner_button_2": "Shop Women",
+            "banner_button_link_2": "shopify:\/\/collections\/womens-wear",
+            "banner_background_color": "#9d1339"
           }
         }
       },
