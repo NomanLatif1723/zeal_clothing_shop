@@ -122,6 +122,10 @@
     display: flex;
     align-items: center;
 }
+#sizeChartBtn svg {
+    width: 30px;
+    height: 30px;
+}
 .product-media__thumbnails {
     margin-top: 20px;
 }
