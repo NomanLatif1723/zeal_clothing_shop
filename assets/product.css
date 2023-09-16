@@ -175,6 +175,34 @@
   align-items: center;
   gap: 10px;
 }
+.product__options input {
+  width: auto;
+}
+.product-form__input {
+  border: none;
+  padding: 0 0 25px;
+  margin: 0;
+}
+.product-form__input:last-child {
+  padding: 0;
+}
+.product-form__input input[type="radio"]+label {
+  color: var(--bodyTextColor);
+  padding: 10px 12px;
+  display: inline-block;
+  border: 1px solid #e2e2e2;
+  font-size: 14px;
+  letter-spacing: 0.7px;
+  cursor: pointer;
+  margin-right: 6px;
+}
+.product-form__input input[type="radio"]:checked+label {
+  background: #111111;
+  color: white;
+}
+.product-form__input input[type="radio"] {
+  display: none;
+}
 @media only screen and (min-width: 768px) {
   .product-grid {
     display: flex;
