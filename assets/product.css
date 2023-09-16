@@ -19,6 +19,10 @@
   cursor: pointer;
   padding-bottom: 15px;
 }
+.product-tab__header h4 {
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
 .product__tabs{
   margin-bottom: 15px;
 }
