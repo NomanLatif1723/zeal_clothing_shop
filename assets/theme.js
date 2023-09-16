@@ -583,6 +583,7 @@ initNewsletterPopup();
 //  General Modal Button Events 
 function initModalPopup() {
   let popupModal = document.querySelectorAll('[data-popup-modal]');
+  let sizeGuideContainer = document.querySelector('.product__sizeguide');
   popupModal.forEach(popup => {
     let closeModalBtn = popup.querySelector('.close__modal');
     let eventCancelBtn = popup.querySelector('.popup-cancel__btn button');
@@ -590,6 +591,9 @@ function initModalPopup() {
     if (closeModalBtn) {
         closeModalBtn.addEventListener('click', () => {
         closeModalBtn.closest('[data-popup-modal]').classList.add('popup__hidden');
+        if (sizeGuideContainer) {
+          sizeGuideContainer.classList.remove('sizeguide__overlay');
+        }
       })
     }
     if (eventCancelBtn) {
@@ -600,7 +604,9 @@ function initModalPopup() {
     if (sizeChartBtn) {
       sizeChartBtn.addEventListener('click', () => {
         sizeChartBtn.closest('.product__sizeguide').querySelector('[data-popup-modal]').classList.remove('popup__hidden');
-        document.querySelector('.product__sizeguide').classList.add('sizeguide__overlay');
+        if (sizeGuideContainer) {
+          sizeGuideContainer.classList.add('sizeguide__overlay');
+        }
       })
     }
   })
