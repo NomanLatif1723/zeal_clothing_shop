@@ -1431,7 +1431,7 @@
             }
           }
         },
-        "header_size-chart": {
+        "header_size_chart": {
           "label": "Size Chart",
           "size_chart_page": {
             "label": "Size Chart Page",
