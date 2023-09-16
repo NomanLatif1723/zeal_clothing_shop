@@ -61,7 +61,6 @@
         "8c0ed8c2-91f4-4ae1-9ac8-2b8733c8dfc3": {
           "type": "quantity_selector",
           "settings": {
-            "size_guide_page": "faq"
           }
         },
         "f4ade60f-6d15-4321-bd20-a58d8b261a56": {
@@ -134,6 +133,7 @@
         "show_rating": false,
         "media_layout": "large",
         "thumbnail_position": "below",
+        "size_chart_page": "size-chart",
         "margin_top": 16,
         "margin_bottom": 16
       }
