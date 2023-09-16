@@ -55,19 +55,19 @@
         {{ product.description }}
       </div>
       {%- when 'tags' -%}
-      {%- if product.tags > 0 -%}
-        <div class="product__block product__content rte" {{ block.shopify_attributes }}>
-          <div class="product__content-title">{{ 'products.tags.title' | t }}</div>
-          <div class="product__content-content">
+      <div class="product__block product__content rte" {{ block.shopify_attributes }}>
+        <div class="product__content-title">{{ 'products.tags.title' | t }}</div>
+        <div class="product__content-content">
+          {%- if product.tags > 0 -%}
             {%- for tag in product.tags -%}
               <a href="/collections/all/{{ tag | handleize }}" title="{{ tag }}">{{ tag }}{% unless forloop.last %}, {% endunless %}
               </a>
             {%- endfor -%}
-          </div>
+          {%- else -%}
+            {{ 'products.tags.empty' | t }}
+          {%- endif -%}
         </div>
-      {%- else -%}
-        {{ 'products.tags.empty' | t }}
-      {%- endif -%}
+      </div>
       {%- when 'sku' -%}
       {%- if product.selected_or_first_available_variant.sku != blank -%}
         <div class="product__block product__content rte" {{ block.shopify_attributes }}>
@@ -76,19 +76,19 @@
         </div>
       {%- endif -%}
       {%- when 'category' -%}
-      {%- if product.collections.size > 1 -%}
-        <div class="product__block product__content rte" {{ block.shopify_attributes }}>
-          <div class="product__content-title">{{ 'products.category.title' | t }}</div>
-          <div class="product__content-content">
-            {%- for collection in product.collections -%}
-              <a href="/collections/{{ collection.title | handleize }}" title="{{ collection.title }}">{{ collection.title }}{% unless forloop.last %}, {% endunless %}
-              </a>
-            {%- endfor -%}
-          </div>
+      <div class="product__block product__content rte" {{ block.shopify_attributes }}>
+        <div class="product__content-title">{{ 'products.category.title' | t }}</div>
+        <div class="product__content-content">
+          {%- for collection in product.collections -%}
+            {%- if collection.all_tags.size > 1 -%}
+            <a href="/collections/{{ collection.title | handleize }}" title="{{ collection.title }}">{{ collection.title }}{% unless forloop.last %}, {% endunless %}
+            </a>
+            {%- else -%}
+              {{ 'products.category.empty' | t }}
+            {%- endif -%}
+          {%- endfor -%}
         </div>
-      {%- else -%}
-        {{ 'products.category.empty' | t }}
-      {%- endif -%}
+      </div>
       {%- when 'variants_picker' -%}
         <div class="product__block product__variants" {{ block.shopify_attributes }}>
           {%- render 'product-variants', block: block, product: product -%}
