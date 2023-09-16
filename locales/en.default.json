@@ -263,7 +263,7 @@
     "stock": {
       "title": "Available",
       "inventory_in_stock": "In Stock",
-      "inventory_in_stock_count": "{{ items }} In Stock",
+      "inventory_in_stock_count": "{{ quantity }} In Stock",
       "inventory_low_stock": "Low Stock",
       "inventory_low_stock_count": "Low Stock: {{ items }} Left",
       "inventory_out_of_stock_contine_selling": "In Stock",
