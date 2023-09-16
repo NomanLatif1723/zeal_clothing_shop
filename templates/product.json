@@ -140,7 +140,7 @@
         "show_breadcrumbs": true,
         "show_rating": false,
         "media_layout": "large",
-        "thumbnail_position": "below",
+        "thumbnail_position": "left",
         "size_chart_page": "size-chart",
         "margin_top": 40,
         "margin_bottom": 60
