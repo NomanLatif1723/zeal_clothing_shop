@@ -1431,6 +1431,13 @@
             }
           }
         },
+        "header_size-chart": {
+          "label": "Size Chart",
+          "size_chart_page": {
+            "label": "Size Chart Page",
+            "info": "Select a Page for Size Chart"
+          }
+        },
         "header_spacing": {
           "label": "Section Spacing",
           "top_spacing": {
@@ -1482,13 +1489,7 @@
           "name": "Price"
         },
         "quantity_selector": {
-          "name": "Quantity Selector",
-          "settings": {
-            "size_guide_page": {
-              "label": "Size Guide Page",
-              "info": "Select a Page for Size Guide"
-            }
-          }
+          "name": "Quantity Selector"
         },
         "buy_buttons": {
           "name": "Buy Buttons",
