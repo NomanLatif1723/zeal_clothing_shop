@@ -7,7 +7,7 @@
         data-url="{{ product.url }}">
         {% for option in product.options_with_values %}
           <fieldset class="product-form__input">
-            <legend class="product-form__label">{{ option.name }}</legend>
+            <legend class="product-form__label">{{ option.name }} ({{ option.selected_value }})</legend>
             {% for value in option.values %}
               <input
                 type="radio"
