@@ -55,7 +55,6 @@
         {{ product.description }}
       </div>
       {%- when 'tags' -%}
-      
       <div class="product__block product__content rte" {{ block.shopify_attributes }}>
         <div class="product__content-title">{{ 'products.tags.title' | t }}</div>
         <div class="product__content-content">
@@ -69,7 +68,6 @@
           {%- endif -%}
         </div>
       </div>
-      
       {%- when 'sku' -%}
       {%- if product.selected_or_first_available_variant.sku != blank -%}
         <div class="product__block product__content rte" {{ block.shopify_attributes }}>
