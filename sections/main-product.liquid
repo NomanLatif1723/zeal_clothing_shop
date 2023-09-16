@@ -53,15 +53,16 @@
     {%- endif -%}
     <div class="product-grid">
       <div class="product-grid__item {{ product_media_width }} product__image-container">
-        {%- render 'product-media' 
-          , product: product,
+        {%- render 'product-media', 
+          product: product,
           block: block,
           thumbnail_position: thumbnail_position,
-          media_size: media_size -%}
+          media_size: media_size 
+        -%}
       </div>
       <div class="product-grid__item {{ product_content_width }} product__content-container">
-        {%- render 'product-form' 
-          , product: product,
+        {%- render 'product-form',
+          product: product,
           block: block,
           show_vendor: settings.show_vendor,
           show_rating: section.settings.show_rating,
@@ -131,9 +132,9 @@
       },
       {
         "type": "page",
-        "id": "size_guide_page",
-        "label": "t:sections.main-product.settings.header_size_chart.size_guide_page.label",
-        "info": "t:sections.main-product.settings.header_size_chart.size_guide_page.info"
+        "id": "size_chart_page",
+        "label": "t:sections.main-product.settings.header_size_chart.size_chart_page.label",
+        "info": "t:sections.main-product.settings.header_size_chart.size_chart_page.info"
       },
       {
         "type": "header",
