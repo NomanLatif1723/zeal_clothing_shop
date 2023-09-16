@@ -1453,7 +1453,7 @@
           "name": "Title"
         },
         "description": {
-          "name": "Description"
+          "name": "Short Description"
         },
         "variants_picker": {
           "name": "variants Picker",
