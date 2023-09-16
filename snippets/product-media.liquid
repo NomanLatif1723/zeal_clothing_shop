@@ -5,7 +5,7 @@
 -%}
 {%- if thumbnail_position == 'left' -%}
   <div class="product-media__grid">
-  {%- endif -%}
+{%- endif -%}
   <div class="product-media__wrapper swiper">
     <div class="swiper-wrapper">
       {%- for media in product.media -%}
@@ -63,8 +63,8 @@
     </div>
   {%- endif -%}
   {%- if thumbnail_position == 'left' -%}
-  </div>
-{%- endif -%}
+    </div>
+  {%- endif -%}
 <script>
   const swiperThumbs = new Swiper('.product-media__thumbnails', {
     slidesPerView: 5,
