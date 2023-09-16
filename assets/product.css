@@ -16,13 +16,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
+  padding-bottom: 15px;
 }
 .product__tabs{
   margin-bottom: 15px;
 }
 .product-tab__container {
   border-bottom: 1px solid rgba(17,17,17,0.1);
-  padding-bottom: 15px;
+  /* padding-bottom: 15px; */
 }
 .product__social-share {
   display: flex;
