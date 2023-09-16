@@ -586,7 +586,7 @@ function initModalPopup() {
   popupModal.forEach(popup => {
     let closeModalBtn = popup.querySelector('.close__modal');
     let eventCancelBtn = popup.querySelector('.popup-cancel__btn button');
-    let sizeChartBtn = popup.querySelector('#sizeChartBtn');
+    let sizeChartBtn = document.querySelector('#sizeChartBtn');
     if (closeModalBtn) {
         closeModalBtn.addEventListener('click', () => {
         closeModalBtn.closest('[data-popup-modal]').classList.add('popup__hidden');
