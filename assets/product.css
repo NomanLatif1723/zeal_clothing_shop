@@ -9,7 +9,7 @@
 }
 .product__item-quantity {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   border: 1px solid rgba(1,1,1,0.3);
 }
 .product-tab__header {
