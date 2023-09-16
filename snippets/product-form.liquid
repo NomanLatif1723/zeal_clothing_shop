@@ -55,19 +55,21 @@
         {{ product.description }}
       </div>
       {%- when 'tags' -%}
-      {% if product.tags != empty %}
+      
       <div class="product__block product__content rte" {{ block.shopify_attributes }}>
         <div class="product__content-title">{{ 'products.tags.title' | t }}</div>
         <div class="product__content-content">
-          {%- for tag in product.tags -%}
-            <a href="/collections/all/{{ tag | handleize }}" title="{{ tag }}">{{ tag }}{% unless forloop.last %}, {% endunless %}
-            </a>
-          {%- endfor -%}
+          {%- if product.tags != empty -%}
+            {%- for tag in product.tags -%}
+              <a href="/collections/all/{{ tag | handleize }}" title="{{ tag }}">{{ tag }}{% unless forloop.last %}, {% endunless %}
+              </a>
+            {%- endfor -%}
+          {%- else -%}
+            {{ 'products.tags.empty' | t }}
+          {%- endif -%}
         </div>
       </div>
-      {% else %}
-        {{ 'products.tags.empty' | t }}
-      {% endif %}
+      
       {%- when 'sku' -%}
       {%- if product.selected_or_first_available_variant.sku != blank -%}
         <div class="product__block product__content rte" {{ block.shopify_attributes }}>
