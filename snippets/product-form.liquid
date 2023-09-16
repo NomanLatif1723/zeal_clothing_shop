@@ -79,10 +79,14 @@
       <div class="product__block product__content rte" {{ block.shopify_attributes }}>
         <div class="product__content-title">{{ 'products.category.title' | t }}</div>
         <div class="product__content-content">
+          {% if product.collections != empty %}
           {%- for collection in product.collections -%}
             <a href="/collections/{{ collection.title | handleize }}" title="{{ collection.title }}">{{ collection.title }}{% unless forloop.last %}, {% endunless %}
             </a>
           {%- endfor -%}
+          {% else %}
+            {{ 'products.category.empty' | t }}
+          {% endif %}
         </div>
       </div>
       {%- when 'variants_picker' -%}
