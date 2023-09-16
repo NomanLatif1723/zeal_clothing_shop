@@ -259,7 +259,8 @@
       "title": "Sku"
     },
     "tags": {
-      "title": "Tags"
+      "title": "Tags",
+      "empty": "Please Add Some tags to the Product"
     },
     "category": {
       "title": "Category"
