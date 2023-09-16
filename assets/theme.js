@@ -600,6 +600,7 @@ function initModalPopup() {
     if (sizeChartBtn) {
       sizeChartBtn.addEventListener('click', () => {
         sizeChartBtn.closest('.product__sizeguide').querySelector('[data-popup-modal]').classList.remove('popup__hidden');
+        document.querySelector('.product__sizeguide').classList.add('sizeguide__overlay');
       })
     }
   })
