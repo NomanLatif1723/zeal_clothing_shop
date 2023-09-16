@@ -237,12 +237,6 @@
     "taxes_included": "Tax Included.",
     "shipping_policy_html": "<a href='{{ link }}'>Shipping<\/a> calculated at checkout.",
     "share_social": "Share:",
-    "inventory_in_stock": "In Stock",
-    "inventory_in_stock_count": "{{ items }} In Stock",
-    "inventory_low_stock": "Low Stock",
-    "inventory_low_stock_count": "Low Stock: {{ items }} Left",
-    "inventory_out_of_stock_contine_selling": "In Stock",
-    "inventory_out_of_stock": "Out of Stock",
     "price": {
       "regular_price": "Regular Price",
       "sale_price": "Sale Price"
@@ -267,7 +261,13 @@
       "empty": "Products Should be in one or more Collections to be appear here as Category"
     },
     "stock": {
-      "title": "Available"
+      "title": "Available",
+      "inventory_in_stock": "In Stock",
+      "inventory_in_stock_count": "{{ items }} In Stock",
+      "inventory_low_stock": "Low Stock",
+      "inventory_low_stock_count": "Low Stock: {{ items }} Left",
+      "inventory_out_of_stock_contine_selling": "In Stock",
+      "inventory_out_of_stock": "Out of Stock"
     }
   },
   "sections": {
