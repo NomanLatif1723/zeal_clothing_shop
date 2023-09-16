@@ -1455,6 +1455,14 @@
         "description": {
           "name": "Short Description"
         },
+        "full_description": {
+          "name": "Full Description",
+          "settings": {
+            "heading": {
+              "label": "Heading"
+            }
+          }
+        },
         "variants_picker": {
           "name": "variants Picker",
           "settings": {
