@@ -264,7 +264,7 @@
     },
     "category": {
       "title": "Category",
-      "empty": "Products Should be in more than one Collections to be appear here as Category"
+      "empty": "Products Should be in one or more Collections to be appear here as Category"
     },
     "stock": {
       "title": "Available"
