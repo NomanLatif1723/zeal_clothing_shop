@@ -51,7 +51,7 @@
       </div>
       {%- when 'description' -%}
       <div class="product__block product__description rte" {{ block.shopify_attributes }}>
-        {{ product.description }}
+        {{ product.description | truncatewords: 100 }}
       </div>
       {%- when 'full_description' -%}
         <div class="product__tabs" {{ block.shopify_attributes }}>
