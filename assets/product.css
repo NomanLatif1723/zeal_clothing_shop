@@ -119,7 +119,8 @@
 .product-media__thumbnails .swiper-button-prev:after {
   font-size: 14px !important;
 }
-.swiper-button-prev, .swiper-button-next {
+.product-media__thumbnails .swiper-button-prev,
+.product-media__thumbnails .swiper-button-next {
     border: 1px solid rgba(226,226,226,1);
     height: auto;
     top: 50%;
@@ -128,12 +129,10 @@
     margin-top: 0;
     background: rgba(226,226,226,1);
 }
-
-.swiper-button-prev {
+.product-media__thumbnails .swiper-button-prev {
     left: 0;
 }
-
-.swiper-button-next {
+.product-media__thumbnails .swiper-button-next {
     right: 0;
 }
 @media only screen and (min-width: 768px) {
