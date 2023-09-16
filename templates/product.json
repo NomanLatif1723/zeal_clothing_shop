@@ -33,6 +33,13 @@
           "settings": {
           }
         },
+        "8c5f37a6-8693-4180-a51a-16a798da00ce": {
+          "type": "stock",
+          "settings": {
+            "stock_threshold": 23,
+            "stock_count": true
+          }
+        },
         "ad72a519-7d2d-4c55-b8bc-7f201ed71233": {
           "type": "variants_picker",
           "settings": {
@@ -49,13 +56,6 @@
             "hours": 12,
             "minutes": 12,
             "timer_completion_message": ""
-          }
-        },
-        "8c5f37a6-8693-4180-a51a-16a798da00ce": {
-          "type": "stock",
-          "settings": {
-            "stock_threshold": 23,
-            "stock_count": true
           }
         },
         "8c0ed8c2-91f4-4ae1-9ac8-2b8733c8dfc3": {
@@ -117,9 +117,9 @@
         "444874e2-bc96-40b0-b414-aac057b2deb9",
         "1142a56f-1555-4016-8057-f20c8948fa7c",
         "061aee36-58ac-488a-95f9-bc48abbaf17a",
+        "8c5f37a6-8693-4180-a51a-16a798da00ce",
         "ad72a519-7d2d-4c55-b8bc-7f201ed71233",
         "6a2a8b20-17c1-4c25-94d8-5e73e7667cdf",
-        "8c5f37a6-8693-4180-a51a-16a798da00ce",
         "8c0ed8c2-91f4-4ae1-9ac8-2b8733c8dfc3",
         "f4ade60f-6d15-4321-bd20-a58d8b261a56",
         "d606abb9-e7cf-4681-8980-06f5b855efb5",
