@@ -191,7 +191,7 @@
   .product-block__extended{
     width: 65%;
   }
-  product-block__extra--small{
+  .product-block__extra--small{
     width: 35%;
   }
 }
