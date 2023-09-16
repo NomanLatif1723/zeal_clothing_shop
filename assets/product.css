@@ -81,6 +81,7 @@
 }
 .product__content-content {
   display: flex;
+  flex-wrap: wrap;
 }
 .sizeguide-popup {
   position: fixed;
