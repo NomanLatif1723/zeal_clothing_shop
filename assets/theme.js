@@ -613,7 +613,7 @@ function initModalPopup() {
       sizeGuideContainer.addEventListener('click', () => {
         document.querySelector('[data-popup-modal]').classList.toggle('popup__hidden');
         // if (sizeGuideContainer) {
-          sizeGuideContainer.classList.add('sizeguide__overlay');
+          sizeGuideContainer.classList.toggle('sizeguide__overlay');
         // }
       })
     }
