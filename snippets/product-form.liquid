@@ -217,7 +217,7 @@
         </div>
       {%- when 'custom_liquid' -%}
       <div class="product__block" {{ block.shopify_attributes }}>
-        {{ custom_content }}
+        {{ block.settings.custom_content }}
       </div>
     {%- endcase -%}
   {%- endfor -%}
