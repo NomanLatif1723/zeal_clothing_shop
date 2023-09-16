@@ -91,10 +91,6 @@
   z-index: 99;
   max-width: 650px;
   width: 100%;
-  visibility: hidden;
-}
-.sizeguide-popup.active{
-  visibility: visible;
 }
 .sizeguide__overlay:before {
   content: '';
