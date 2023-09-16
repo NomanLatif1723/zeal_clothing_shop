@@ -586,6 +586,7 @@ function initModalPopup() {
   popupModal.forEach(popup => {
     let closeModalBtn = popup.querySelector('.close__modal');
     let eventCancelBtn = popup.querySelector('.popup-cancel__btn button');
+    let sizeChartBtn = popup.querySelector('#sizeChartBtn');
     if (closeModalBtn) {
         closeModalBtn.addEventListener('click', () => {
         closeModalBtn.closest('[data-popup-modal]').classList.add('popup__hidden');
@@ -594,6 +595,11 @@ function initModalPopup() {
     if (eventCancelBtn) {
       eventCancelBtn.addEventListener('click', () => {
         eventCancelBtn.closest('[data-popup-modal]').classList.add('popup__hidden');
+      })
+    }
+    if (sizeChartBtn) {
+      sizeChartBtn.addEventListener('click', () => {
+        sizeChartBtn.closest('[data-popup-modal]').classList.add('popup__hidden');
       })
     }
   })
@@ -973,6 +979,7 @@ function initcartAjax() {
 }
 initcartAjax();
 
+// function for product collapsibles 
 function initProductCollapsibles() {
   let collapsibleWrapper = document.querySelectorAll('.product__tabs');
   collapsibleWrapper.forEach(tab => {
