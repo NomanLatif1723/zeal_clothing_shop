@@ -122,10 +122,6 @@
     display: flex;
     align-items: center;
 }
-/* .product__sizeguide button svg {
-    width: 30px;
-    height: 30px;
-} */
 .product-media__thumbnails {
     margin-top: 20px;
 }
