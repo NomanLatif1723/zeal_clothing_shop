@@ -189,7 +189,7 @@
           <div class="product__content-content">
             {%- if product.selected_or_first_available_variant.inventory_management == 'shopify' -%}
               {%- if product.selected_or_first_available_variant.inventory_quantity > 0 -%}
-                {%- if product.selected_or_first_available_variant.inventory_quantity <= inventory_threshold -%}
+                {%- if product.selected_or_first_available_variant.inventory_quantity <= block.settings.stock_threshold -%}
                   {%- if block.settings.stock_count -%}
                     {{ 'products.stock.inventory_low_stock_count' | t: items: product.selected_or_first_available_variant.inventory_quantity }}
                     {% else %}
