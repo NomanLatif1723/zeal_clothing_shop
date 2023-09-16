@@ -82,6 +82,7 @@
 }
 .product__content-content {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
 }
 .sizeguide-popup {
