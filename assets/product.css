@@ -28,7 +28,12 @@
 }
 .product-tab__container {
   border-bottom: 1px solid rgba(17,17,17,0.1);
-  /* padding-bottom: 15px; */
+}
+.product-tab__content {
+  padding-bottom: 20px;
+}
+.product-tab__content strong {
+  color: var(--colorBodyText);
 }
 .product__social-share {
   display: flex;
