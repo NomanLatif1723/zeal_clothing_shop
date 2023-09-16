@@ -1,4 +1,49 @@
 (function(){
+// shopify formate money function
+function formatMoney(cents, format) {
+  if (typeof cents == 'string') { cents = cents.replace('.',''); }
+  var value = '';
+  var placeholderRegex = /\{\{\s*(\w+)\s*\}\}/;
+  var formatString = (format || this.money_format);
+
+  function defaultOption(opt, def) {
+     return (typeof opt == 'undefined' ? def : opt);
+  }
+
+  function formatWithDelimiters(number, precision, thousands, decimal) {
+    precision = defaultOption(precision, 2);
+    thousands = defaultOption(thousands, ',');
+    decimal   = defaultOption(decimal, '.');
+
+    if (isNaN(number) || number == null) { return 0; }
+
+    number = (number/100.0).toFixed(precision);
+
+    var parts   = number.split('.'),
+        dollars = parts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1' + thousands),
+        cents   = parts[1] ? (decimal + parts[1]) : '';
+
+    return dollars + cents;
+  }
+
+  switch(formatString.match(placeholderRegex)[1]) {
+    case 'amount':
+      value = formatWithDelimiters(cents, 2);
+      break;
+    case 'amount_no_decimals':
+      value = formatWithDelimiters(cents, 0);
+      break;
+    case 'amount_with_comma_separator':
+      value = formatWithDelimiters(cents, 2, '.', ',');
+      break;
+    case 'amount_no_decimals_with_comma_separator':
+      value = formatWithDelimiters(cents, 0, '.', ',');
+      break;
+  }
+
+  return formatString.replace(placeholderRegex, value);
+};
+  
 // Announcement Bar Timer 
 function initAnnouncementTimer() {
   // Get All Announcement Bar Wrappers 
@@ -874,51 +919,6 @@ function initHandleCart() {
 }
 initHandleCart();
   
-// shopify formate money function
-function formatMoney(cents, format) {
-  if (typeof cents == 'string') { cents = cents.replace('.',''); }
-  var value = '';
-  var placeholderRegex = /\{\{\s*(\w+)\s*\}\}/;
-  var formatString = (format || this.money_format);
-
-  function defaultOption(opt, def) {
-     return (typeof opt == 'undefined' ? def : opt);
-  }
-
-  function formatWithDelimiters(number, precision, thousands, decimal) {
-    precision = defaultOption(precision, 2);
-    thousands = defaultOption(thousands, ',');
-    decimal   = defaultOption(decimal, '.');
-
-    if (isNaN(number) || number == null) { return 0; }
-
-    number = (number/100.0).toFixed(precision);
-
-    var parts   = number.split('.'),
-        dollars = parts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1' + thousands),
-        cents   = parts[1] ? (decimal + parts[1]) : '';
-
-    return dollars + cents;
-  }
-
-  switch(formatString.match(placeholderRegex)[1]) {
-    case 'amount':
-      value = formatWithDelimiters(cents, 2);
-      break;
-    case 'amount_no_decimals':
-      value = formatWithDelimiters(cents, 0);
-      break;
-    case 'amount_with_comma_separator':
-      value = formatWithDelimiters(cents, 2, '.', ',');
-      break;
-    case 'amount_no_decimals_with_comma_separator':
-      value = formatWithDelimiters(cents, 0, '.', ',');
-      break;
-  }
-
-  return formatString.replace(placeholderRegex, value);
-};
-  
 function initcartAjax() {
   let quantityWrapper = document.querySelectorAll('.line__item-quantity');
   let cartForm = document.querySelectorAll('form[action="/cart"]');
@@ -972,6 +972,22 @@ function initcartAjax() {
   })
 }
 initcartAjax();
+
+function initProductCollapsibles() {
+  let collapsibleWrapper = document.querySelectorAll('.product__tabs');
+  collapsibleWrapper.forEach(tab => {
+    if (tab) {
+      let collapsibleHeader = tab.querySelector('.product-tab__header');
+      if (collapsibleHeader) {
+        collapsibleHeader.addEventListener('click', (event) => {
+          event.target.parentElement.find('.product-tab__content').classList.toggle('hidden');
+          event.target.find('icon__arrow').classList.toggle('icon__rotate');
+        })
+      }
+    }
+  })
+}
+initProductCollapsibles();
 
 
 })();
