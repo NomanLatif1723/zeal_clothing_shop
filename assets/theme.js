@@ -1018,7 +1018,7 @@ function initProductmediaSlideShow() {
     if (thumbnailPosition == 'left') {
       console.log(thumbnailPosition);
     }
-    if (ThumbnailSliderContainer) {
+    // if (ThumbnailSliderContainer) {
       if (ThumbnailSliderContainer.swiper) {
         ThumbnailSliderContainer.swiper.destroy();
       }
@@ -1047,7 +1047,7 @@ function initProductmediaSlideShow() {
         // }
       // }
       let swiperThumbs = new Swiper(ThumbnailSliderContainer,thumbsSwiperOptions);
-    }
+    // }
     if (MediaSliderContainer) {
       if (MediaSliderContainer.swiper) {
         MediaSliderContainer.swiper.destroy();
