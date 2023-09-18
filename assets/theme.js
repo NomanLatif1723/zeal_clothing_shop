@@ -1029,12 +1029,13 @@ function initProductmediaSlideShow() {
     }
     if (thumbnailPosition) {
       let thumbnailPosition = thumbnailMediaPosition.dataset.thumbnail;
+      if (thumbnailPosition === 'left') {
+        thumbsSwiperOptions.direction = "vertical";
+        thumbsSwiperOptions.spaceBetween = 10;
+        thumbsSwiperOptions.mousewheel = true;
+      }
     }
-    if (thumbnailPosition === 'left') {
-      thumbsSwiperOptions.direction = "vertical";
-      thumbsSwiperOptions.spaceBetween = 10;
-      thumbsSwiperOptions.mousewheel = true;
-    }
+    
     let swiperThumbs = new Swiper(ThumbnailSliderContainer,thumbsSwiperOptions);
     if (MediaSliderContainer.swiper) {
       MediaSliderContainer.swiper.destroy();
