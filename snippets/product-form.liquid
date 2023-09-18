@@ -170,7 +170,7 @@
             {{ form | payment_button }}
           {% endif %}
         </div>
-        <select name="id" data-product-select class="product-single__variants no-js">
+        <select name="id" class="product__variants hidden">
           {%- for variant in product.variants -%}
             {%- if variant.available -%}
               <option {% if variant == product.selected_or_first_available_variant %}
