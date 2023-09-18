@@ -11,6 +11,7 @@
             {% for value in option.values %}
               <input
                 type="radio"
+                form="{{ product_form_id }}"
                 name="{{ option.name }}"
                 value="{{ value }}"
                 {% if option.selected_value == value %}checked{% endif%}
@@ -31,7 +32,7 @@
       {% for option in product.options_with_values %}
         <div class="product-form__select">
           <label class="product-form__label"><strong>{{ option.name }}</strong> ({{ option.selected_value }})</label>
-          <select class="product__select" id="product-select-{{ forloop.index }}">
+          <select form="{{ product_form_id }}" class="product__select" id="product-select-{{ forloop.index }}">
             {% for value in option.values %}
               <option value="{{ value }}" {% if option.selected_value == value %}selected{% endif %}>
                 {{ value }}
