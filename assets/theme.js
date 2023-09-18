@@ -1055,4 +1055,15 @@ function initProductmediaSlideShow() {
 }
 initProductmediaSlideShow();
 
+// Product Variants js
+function initProductVariants(){
+  let variantSelector = document.querySelectorAll('[data-selected-variant]');
+  variantSelector.forEach(variant => {
+    variant.addEventListener('change', () => {
+      console.log('variant change', variant);
+    })
+  })
+}
+initProductVariants();
+
 })();
