@@ -1009,7 +1009,7 @@ initProductCollapsibles();
 
 // function for product Media Sliders
 function initProductmediaSlideShow() {
-  let productmediaWrapper = document.querySelectorAll('product-grid');
+  let productmediaWrapper = document.querySelectorAll('.product-grid');
   productmediaWrapper.forEach(wrapper => {
     let id = wrapper.dataset.sectionId;
     console.log(id);
