@@ -1406,6 +1406,12 @@
           "label": "Add Product Rating",
           "info": "To display a rating, add a product rating app. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/theme-structure\/theme-features#featured-product-rating)"
         },
+        "media_position": {
+          "label": "Media on the Right"
+        },
+        "enable_image_zoom": {
+          "label": "Enable Image Zoom"
+        },
         "media_layout": {
           "label": "Desktop Layout",
           "options": {
@@ -1430,6 +1436,9 @@
               "label": "Below"
             }
           }
+        },
+        "show_thumbnail_arrows": {
+          "label": "Show Arrows"
         },
         "header_size_chart": {
           "label": "Size Chart",
