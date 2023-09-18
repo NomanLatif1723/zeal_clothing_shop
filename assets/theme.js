@@ -1021,7 +1021,7 @@ console.log(MediaSliderContainer);
         ThumbnailSliderContainer.swiper.destroy();
       }
       if (thumbnailPosition == 'left') {
-        let thumbsSwiperOptions = {
+        let swiperOptions = {
           direction: "vertical",
           slidesPerView: 5,
           spaceBetween: 10,
@@ -1033,7 +1033,7 @@ console.log(MediaSliderContainer);
           },
         }
       } else {
-        let thumbsSwiperOptions = {
+        let swiperOptions = {
           slidesPerView: 5,
           spaceBetween: 30,
           mousewheel: true,
@@ -1044,7 +1044,7 @@ console.log(MediaSliderContainer);
           },
         }
       }
-      let swiperThumbs = new Swiper(ThumbnailSliderContainer,thumbsSwiperOptions);
+      let swiperThumbs = new Swiper(ThumbnailSliderContainer,swiperOptions);
     }
     if (MediaSliderContainer) {
       if (MediaSliderContainer.swiper) {
