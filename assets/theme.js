@@ -1032,7 +1032,7 @@ function initProductmediaSlideShow() {
             prevEl: '.swiper-button-prev.swiper-button-' + id
           },
         }
-      if (thumbPosition === 'left') {
+      if (thumbnailPosition === 'left') {
         thumbsSwiperOptions.direction = "vertical";
         thumbsSwiperOptions.spaceBetween = 10;
         thumbsSwiperOptions.mousewheel = true;
