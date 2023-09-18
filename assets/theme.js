@@ -1045,7 +1045,7 @@ function initProductmediaSlideShow() {
         //     prevEl: '.swiper-button-prev.swiper-button-' + id
         //   },
         // }
-      }
+      // }
       let swiperThumbs = new Swiper(ThumbnailSliderContainer,thumbsSwiperOptions);
     }
     if (MediaSliderContainer) {
