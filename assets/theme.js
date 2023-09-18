@@ -1027,7 +1027,7 @@ function initProductmediaSlideShow() {
         prevEl: '.swiper-button-prev.swiper-button-' + id
       },
     }
-    if (thumbnailPosition) {
+    if (thumbnailMediaPosition) {
       let thumbnailPosition = thumbnailMediaPosition.dataset.thumbnail;
       if (thumbnailPosition === 'left') {
         thumbsSwiperOptions.direction = "vertical";
