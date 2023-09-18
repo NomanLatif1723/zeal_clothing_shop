@@ -4,6 +4,9 @@
 .product-grid__item {
   width: 100%;
 }
+.product__image-container {
+  padding-bottom: 30px;
+}
 .product__price-container .badge {
   padding: 8px 12px;
   font-size: 14px;
@@ -262,6 +265,9 @@
   .product-grid {
     display: flex;
     gap: 60px;
+  }
+  .product__image-container {
+    padding-bottom: 0;
   }
   .product-grid__reverse{
     flex-direction: row-reverse;
