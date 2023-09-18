@@ -1009,7 +1009,11 @@ initProductCollapsibles();
 
 // function for product Media Sliders
 function initProductmediaSlideShow() {
-  let productmediaWrapper = document.querySelectorAll('')
+  let productmediaWrapper = document.querySelectorAll('product-grid');
+  productmediaWrapper.forEach(wrapper => {
+    let id = wrapper.dataset.thumbnail;
+    console.log(id);
+  })
 }
 initProductmediaSlideShow();
 
