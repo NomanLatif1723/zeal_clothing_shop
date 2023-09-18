@@ -39,6 +39,7 @@
                 <span class="product__play-icon">
                   {%- render 'icon-play' -%}
                 </span>
+                
               {%- endif -%}
               <img
                 class="product__image"
@@ -68,13 +69,21 @@
   {%- endif -%}
 <script>
   const swiperThumbs = new Swiper('.product-media__thumbnails', {
-    slidesPerView: 5,
-    spaceBetween: 20,
-    watchSlidesProgress: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    }
+    direction: "vertical",
+      slidesPerView: 5,
+      spaceBetween: 30,
+      mousewheel: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      }
+    // slidesPerView: 5,
+    // spaceBetween: 20,
+    // watchSlidesProgress: true,
+    // navigation: {
+    //   nextEl: '.swiper-button-next',
+    //   prevEl: '.swiper-button-prev'
+    // }
   });
   const swiperMedia = new Swiper('.product-media__wrapper', {
     slidesPerView: 1,
