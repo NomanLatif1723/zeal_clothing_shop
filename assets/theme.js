@@ -1021,7 +1021,7 @@ function initProductmediaSlideShow() {
         ThumbnailSliderContainer.swiper.destroy();
       }
       if (thumbnailPosition == 'left') {
-        let swiperOptions = {
+        let thumbsSwiperOptions = {
           direction: "vertical",
           slidesPerView: 5,
           spaceBetween: 10,
