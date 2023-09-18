@@ -254,6 +254,9 @@
 .swiper-button-prev {
   top: 0 !important;
 }
+.product-media__grid .swiper-vertical>.swiper-wrapper{
+  transform: none !important;
+}
 @media only screen and (min-width: 768px) {
   .product-grid {
     display: flex;
