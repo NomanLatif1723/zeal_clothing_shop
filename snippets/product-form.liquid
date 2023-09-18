@@ -24,10 +24,12 @@
             <span class="visually__hidden">{{ 'products.price.regular_price' | t }}</span>
             <span class="sale__price product__compare-price">{{ product.selected_or_first_available_variant.compare_at_price | money }}</span>
           {%- endif -%}
-          {%- if block.settings.show_sale_badges and product.selected_or_first_available_variant.available -%}
-            <span class="badge sale__badge{% if settings.sale_badge_color contains '#f' %} badge-color__dark{% else %} badge-color__light{% endif %}">{{ 'products.badges.on_sale' | t }}</span>
-          {%- else -%}
-             <span class="badge soldout__badge{% if settings.soldout_badge_color contains '#f' %} badge-color__dark{% else %} badge-color__light{% endif %}">{{ 'products.badges.sold_out' | t }}</span>
+          {%- if block.settings.show_sale_badges -%}
+            {%- if product.selected_or_first_available_variant.available -%}
+              <span class="badge sale__badge{% if settings.sale_badge_color contains '#f' %} badge-color__dark{% else %} badge-color__light{% endif %}">{{ 'products.badges.on_sale' | t }}</span>
+            {%- else -%}
+               <span class="badge soldout__badge{% if settings.soldout_badge_color contains '#f' %} badge-color__dark{% else %} badge-color__light{% endif %}">{{ 'products.badges.sold_out' | t }}</span>
+            {%- endif -%}
           {%- endif -%}
           <div class="product__unit-price{% unless product.selected_or_first_available_variant.unit_price_measurement %} hidden{% endunless %}">
             {%- if product.selected_or_first_available_variant.price > 0 -%}
