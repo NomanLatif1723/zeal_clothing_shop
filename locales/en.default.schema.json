@@ -1503,7 +1503,12 @@
           }
         },
         "price": {
-          "name": "Price"
+          "name": "Price",
+          "settings": {
+            "Show_sale_badges": {
+              "label": "Show Sale Badges"
+            }
+          }
         },
         "quantity_selector": {
           "name": "Quantity Selector"
