@@ -47,7 +47,7 @@
         </ul>
       </nav>
     {%- endif -%}
-    <div class="product-grid{% if section.settings.media_position == 'left' %} product-grid__reverse{% endif %}">
+    <div class="product-grid">
       <div class="product-grid__item {{ product_media_width }} product__image-container">
         {%- render 'product-media', 
           product: product,
