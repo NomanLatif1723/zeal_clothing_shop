@@ -170,6 +170,17 @@
             {{ form | payment_button }}
           {% endif %}
         </div>
+        <noscript>
+          <label class="input__block-label" for="product-select-{{ section.id }}">{{ 'products.form.variants' | t }}</label>
+          <div class="select-wrapper">
+            <select class="select" autocomplete="off" id="product-variants-{{ section.id }}" name="id" form="{{ product_form_id }}">
+              {%- for variant in product.variants -%}
+                <option {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %}
+                {% unless variant.available %}disabled="disabled"{% endunless %} value="{{ variant.id }}" data-sku="{{ variant.sku }}">{{ variant.title }} - {{ variant.price | money }}</option>
+              {%- endfor -%}
+            </select>
+          </div>
+        </noscript>
       {%- endform -%}
     {%- when 'collapsables' -%}
       <div class="product__tabs" {{ block.shopify_attributes }}>
