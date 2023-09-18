@@ -1,4 +1,4 @@
-{%- assign product_form_id = addToCartForm-{{ section.id }}-{{ product.id }} -%}
+{%- assign product_form_id = 'addToCartForm-' | append: section.id | append: '-' | append: product.id -%}
 {%- if show_vendor -%}
   <div class="product__vendor">
     {{ product.vendor | link_to_vendor }}
