@@ -247,11 +247,11 @@
   right: auto !important;
   height: 30px !important;
 }
-.swiper-button-next {
+.product-media__grid .swiper-button-next {
   top: 100% !important;
   margin-top: -40px !important;
 }
-.swiper-button-prev {
+.product-media__grid .swiper-button-prev {
   top: 0 !important;
 }
 .product-media__grid .swiper-vertical>.swiper-wrapper{
