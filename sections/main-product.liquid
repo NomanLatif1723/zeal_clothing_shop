@@ -28,7 +28,7 @@
     }
   }
 {%- endstyle -%}
-<div class="main-product__wrapper main__section-{{ section.id }}" data-section-id="{{ section.id }}">
+<div class="main-product__wrapper main__section-{{ section.id }}">
   <div class="page__width">
     {%- if section.settings.show_breadcrumbs -%}
       <nav role="navigation" aria-label="breadcrumb" class="product-breadcrumbs">
@@ -47,7 +47,7 @@
         </ul>
       </nav>
     {%- endif -%}
-    <div class="product-grid">
+    <div class="product-grid" data-section-id="{{ section.id }}">
       <div class="product-grid__item {{ product_media_width }} product__image-container">
         {%- render 'product-media', 
           product: product,
