@@ -44,7 +44,7 @@
     </div>
   {% endif %}
 {% endunless %}
-<!-- <noscript> -->
+<noscript>
   <label class="input__block-label" for="product-select-{{ section.id }}">{{ 'products.form.variants' | t }}</label>
   <div class="select-wrapper">
     <select class="select" autocomplete="off" id="product-variants-{{ section.id }}" name="id" form="{{ product_form_id }}">
@@ -54,4 +54,4 @@
       {%- endfor -%}
     </select>
   </div>
-<!-- </noscript> -->
+</noscript>
