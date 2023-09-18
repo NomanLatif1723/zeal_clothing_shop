@@ -1026,7 +1026,6 @@ function initProductmediaSlideShow() {
         let thumbsSwiperOptions = {
           slidesPerView: 5,
           spaceBetween: 30,
-          mousewheel: true,
           watchSlidesProgress: true,
           navigation: {
             nextEl: '.swiper-button-next.swiper-button-' + id,
@@ -1036,6 +1035,7 @@ function initProductmediaSlideShow() {
       if (thumbPosition === 'left') {
         thumbsSwiperOptions.direction = "vertical";
         thumbsSwiperOptions.spaceBetween = 10;
+        thumbsSwiperOptions.mousewheel = true;
       }
       // } else {
         // let thumbsSwiperOptions = {
