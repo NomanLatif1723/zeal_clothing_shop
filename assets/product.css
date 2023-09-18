@@ -224,6 +224,7 @@
 .product-media__grid {
   display: flex;
   direction: rtl;
+  gap: 25px;
 }
 @media only screen and (min-width: 768px) {
   .product-grid {
