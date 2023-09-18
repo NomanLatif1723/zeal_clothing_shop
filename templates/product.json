@@ -11,6 +11,7 @@
         "c48c8421-10a9-4423-9659-6762eab443c1": {
           "type": "price",
           "settings": {
+            "show_sale_badges": true
           }
         },
         "cd2107fa-b62c-4b09-ab0d-477efa3eb924": {
