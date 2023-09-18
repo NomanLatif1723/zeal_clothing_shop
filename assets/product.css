@@ -210,6 +210,9 @@
     display: flex;
     gap: 60px;
   }
+  .product-grid__reverse{
+    flex-direction: row-reverse;
+  }
   .product-block__small {
     width: 40%;
   }
