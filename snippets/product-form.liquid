@@ -18,41 +18,43 @@
       {%- when 'price' -%}
       <div class="product__block product__price" {{ block.shopify_attributes }}>
         <div class="product__price-container">
-          <span class="visually__hidden">{{ 'products.price.sale_price' | t }}</span>
-          <span class="sale__price product__sale-price">{{ product.selected_or_first_available_variant.price | money }}</span>
-          {%- if product.compare_at_price > product.price -%}
-            <span class="visually__hidden">{{ 'products.price.regular_price' | t }}</span>
-            <span class="sale__price product__compare-price">{{ product.selected_or_first_available_variant.compare_at_price | money }}</span>
-          {%- endif -%}
-          {%- if block.settings.show_sale_badges -%}
-            {%- if product.selected_or_first_available_variant.available -%}
-              <span class="badge sale__badge{% if settings.sale_badge_color contains '#f' %} badge-color__dark{% else %} badge-color__light{% endif %}">{{ 'products.badges.on_sale' | t }}</span>
-            {%- else -%}
-               <span class="badge soldout__badge{% if settings.soldout_badge_color contains '#f' %} badge-color__dark{% else %} badge-color__light{% endif %}">{{ 'products.badges.sold_out' | t }}</span>
+          <div class="product__price-flex">
+            <span class="visually__hidden">{{ 'products.price.sale_price' | t }}</span>
+            <span class="sale__price product__sale-price">{{ product.selected_or_first_available_variant.price | money }}</span>
+            {%- if product.compare_at_price > product.price -%}
+              <span class="visually__hidden">{{ 'products.price.regular_price' | t }}</span>
+              <span class="sale__price product__compare-price">{{ product.selected_or_first_available_variant.compare_at_price | money }}</span>
             {%- endif -%}
-          {%- endif -%}
-        </div>
-        <div class="product__unit-price{% unless product.selected_or_first_available_variant.unit_price_measurement %} hidden{% endunless %}">
-          {%- if product.selected_or_first_available_variant.price > 0 -%}
-            {%- if product.selected_or_first_available_variant.unit_price_measurement -%}
-              <div>{{ product.selected_or_first_available_variant.unit_price }}/
-                {%- if product.selected_or_first_available_variant.unit_price_measurement.reference_value != 1 -%}
-                  {{ product.selected_or_first_available_variant.unit_price_measurement.reference_value }}
-                {%- endif -%}
-                  {{ product.selected_or_first_available_variant.unit_price_measurement.reference_unit }}
-              </div>
+            {%- if block.settings.show_sale_badges -%}
+              {%- if product.selected_or_first_available_variant.available -%}
+                <span class="badge sale__badge{% if settings.sale_badge_color contains '#f' %} badge-color__dark{% else %} badge-color__light{% endif %}">{{ 'products.badges.on_sale' | t }}</span>
+              {%- else -%}
+                 <span class="badge soldout__badge{% if settings.soldout_badge_color contains '#f' %} badge-color__dark{% else %} badge-color__light{% endif %}">{{ 'products.badges.sold_out' | t }}</span>
+              {%- endif -%}
             {%- endif -%}
-            {%- else -%}
-              {{ 'products.free_unit_price' | t }}
-          {%- endif -%}
-        </div>
-        <div class="product__tax-policies">
-          {%- if shop.taxes_included -%}
-            <span>{{ 'products.taxes_included' | t }}</span>
-          {%- endif -%}
-          {%- if shop.shipping_policy.body != blank -%}
-            <span>{{ 'products.shipping_policy_html' | t: link: shop.shipping_policy.url  }}</span>
-          {%- endif -%}
+          </div>
+          <div class="product__unit-price{% unless product.selected_or_first_available_variant.unit_price_measurement %} hidden{% endunless %}">
+            {%- if product.selected_or_first_available_variant.price > 0 -%}
+              {%- if product.selected_or_first_available_variant.unit_price_measurement -%}
+                <div>{{ product.selected_or_first_available_variant.unit_price }}/
+                  {%- if product.selected_or_first_available_variant.unit_price_measurement.reference_value != 1 -%}
+                    {{ product.selected_or_first_available_variant.unit_price_measurement.reference_value }}
+                  {%- endif -%}
+                    {{ product.selected_or_first_available_variant.unit_price_measurement.reference_unit }}
+                </div>
+              {%- endif -%}
+              {%- else -%}
+                {{ 'products.free_unit_price' | t }}
+            {%- endif -%}
+          </div>
+          <div class="product__tax-policies">
+            {%- if shop.taxes_included -%}
+              <span>{{ 'products.taxes_included' | t }}</span>
+            {%- endif -%}
+            {%- if shop.shipping_policy.body != blank -%}
+              <span>{{ 'products.shipping_policy_html' | t: link: shop.shipping_policy.url  }}</span>
+            {%- endif -%}
+          </div>
         </div>
         <div class="product__rating"></div>
       </div>
