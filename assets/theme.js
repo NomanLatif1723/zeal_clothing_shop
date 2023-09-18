@@ -1022,7 +1022,7 @@ function initProductmediaSlideShow() {
       if (ThumbnailSliderContainer.swiper) {
         ThumbnailSliderContainer.swiper.destroy();
       }
-      if (thumbnailPosition == 'left') {
+      // if (thumbnailPosition == 'left') {
         let thumbsSwiperOptions = {
           direction: "vertical",
           slidesPerView: 5,
@@ -1034,17 +1034,17 @@ function initProductmediaSlideShow() {
             prevEl: '.swiper-button-prev.swiper-button-' + id
           },
         }
-      } else {
-        let thumbsSwiperOptions = {
-          slidesPerView: 5,
-          spaceBetween: 30,
-          mousewheel: true,
-          watchSlidesProgress: true,
-          navigation: {
-            nextEl: '.swiper-button-next.swiper-button-' + id,
-            prevEl: '.swiper-button-prev.swiper-button-' + id
-          },
-        }
+      // } else {
+        // let thumbsSwiperOptions = {
+        //   slidesPerView: 5,
+        //   spaceBetween: 30,
+        //   mousewheel: true,
+        //   watchSlidesProgress: true,
+        //   navigation: {
+        //     nextEl: '.swiper-button-next.swiper-button-' + id,
+        //     prevEl: '.swiper-button-prev.swiper-button-' + id
+        //   },
+        // }
       }
       let swiperThumbs = new Swiper(ThumbnailSliderContainer,thumbsSwiperOptions);
     }
