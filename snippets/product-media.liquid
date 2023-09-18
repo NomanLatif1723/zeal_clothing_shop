@@ -42,7 +42,6 @@
               {%- endif -%}
               <img
                 class="product__image"
-                style="aspect-ratio: {{ imageAspectRatio }};"
                 src="{{ media | img_url: '360x' }}"
                 srcset="
                   {{ media | img_url: '120x' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}120{% endif %}w,
