@@ -182,7 +182,7 @@
   display: block;
 }
 .product-form__select {
-  padding-bottom: 15px;
+  padding-bottom: 25px;
 }
 .product-form__select:nth-last-child {
   padding-bottom: 0;
