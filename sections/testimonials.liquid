@@ -86,34 +86,6 @@
     </div>
   </div>
 </div>
-{% comment %}
-<script>
-  // Testimonial Slider 
-  var swiper{{ section.id | remove: '-' }} = new Swiper("#testimonials-{{ section.id }}", {
-      slidesPerView: 1,
-      navigation: {
-        nextEl: ".swiper-button-next.swiper-button-{{ section.id }}",
-        prevEl: ".swiper-button-prev.swiper-button-{{ section.id }}",
-      },
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".swiper-pagination.swiper-pagination-{{ section.id }}",
-        clickable: true,
-      },
-      breakpoints: {
-      601: {
-        slidesPerView: 2,
-      },
-      993: {
-        slidesPerView: 3,
-      },
-    },
-    });
-</script>
-{% endcomment %}
 {% schema %}
   {
     "name": "t:sections.testimonials.name",
