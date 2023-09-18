@@ -1,7 +1,6 @@
 {{ 'product.css' | asset_url | stylesheet_tag: preload: true }}
 {%- liquid
   assign media_container_width = section.settings.media_layout
-  assign thumbnail_position = section.settings.thumbnail_position
   assign media_size = '760px'
   if media_container_width == 'compact'
     assign product_media_width = 'product-block__small'
@@ -57,8 +56,6 @@
           product: product,
           block: block,
           section: section,
-          thumbnail_position: thumbnail_position,
-          show_thumbnail_arrows: section.settings.show_thumbnail_arrows,
           media_size: media_size 
         -%}
       </div>
