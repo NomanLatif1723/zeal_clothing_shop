@@ -58,8 +58,10 @@
           </div>
         {%- endfor -%}
       </div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+      {%- if show_thumbnail_arrows -%}
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      {%- endif -%}
     </div>
   {%- endif -%}
   {%- if thumbnail_position == 'left' -%}
