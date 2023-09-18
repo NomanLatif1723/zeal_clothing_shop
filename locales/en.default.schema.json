@@ -1505,7 +1505,7 @@
         "price": {
           "name": "Price",
           "settings": {
-            "Show_sale_badges": {
+            "show_sale_badges": {
               "label": "Show Sale Badges"
             }
           }
