@@ -1014,7 +1014,7 @@ function initProductmediaSlideShow() {
     let id = wrapper.dataset.sectionId;
     let MediaSliderContainer = wrapper.querySelector('#product__media-' + id);
     let ThumbnailSliderContainer = wrapper.querySelector('#product__thumbnail-' + id);
-    let thumbnailPosition = wrapper.querySelector('.product-media__grid').dataset.thumbnail;
+    let thumbnailPosition = wrapper.querySelector('.product-media__grid');
     if (ThumbnailSliderContainer.swiper) {
       ThumbnailSliderContainer.swiper.destroy();
     }
@@ -1026,6 +1026,9 @@ function initProductmediaSlideShow() {
         nextEl: '.swiper-button-next.swiper-button-' + id,
         prevEl: '.swiper-button-prev.swiper-button-' + id
       },
+    }
+    if (thumbnailPosition) {
+      let thumbnailPosition = thumbnailPosition.dataset.thumbnail;
     }
     if (thumbnailPosition === 'left') {
       thumbsSwiperOptions.direction = "vertical";
