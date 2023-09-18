@@ -1044,7 +1044,7 @@ function initProductmediaSlideShow() {
           },
         }
       }
-      let swiperThumbs = new swiperThumbs(ThumbnailSliderContainer,thumbsSwiperOptions);
+      let swiperThumbs = new Swiper(ThumbnailSliderContainer,thumbsSwiperOptions);
     }
     if (MediaSliderContainer) {
       if (MediaSliderContainer.swiper) {
@@ -1060,7 +1060,7 @@ function initProductmediaSlideShow() {
             swiper: swiperThumbs,
           },
       }
-      let mediaSwiper = new mediaSwiper(MediaSliderContainer, mediaSwiperOptions);
+      let mediaSwiper = new Swiper(MediaSliderContainer, mediaSwiperOptions);
     }
   })
 }
