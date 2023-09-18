@@ -184,6 +184,9 @@
 .product-form__select {
   padding-bottom: 15px;
 }
+.product-form__select:nth-last-child {
+  padding-bottom: 0;
+}
 .quantity__label {
   padding-bottom: 8px;
   display: block;
