@@ -221,6 +221,10 @@
 .product-form__input input[type="radio"] {
   display: none;
 }
+.product-media__grid {
+  display: flex;
+  direction: rtl;
+}
 @media only screen and (min-width: 768px) {
   .product-grid {
     display: flex;
