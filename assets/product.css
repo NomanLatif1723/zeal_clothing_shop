@@ -9,6 +9,12 @@
   font-size: 14px;
   line-height: 20px;
 }
+.product__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
 .product__price-flex {
   display: flex;
   align-items: center;
