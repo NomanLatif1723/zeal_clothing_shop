@@ -1021,30 +1021,30 @@ console.log(MediaSliderContainer);
         ThumbnailSliderContainer.swiper.destroy();
       }
       if (thumbnailPosition == 'left') {
-        let swiperOptions = {
+        let thumbsSwiperOptions = {
           direction: "vertical",
           slidesPerView: 5,
           spaceBetween: 10,
           mousewheel: true,
           watchSlidesProgress: true,
           navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev'
+            nextEl: '.swiper-button-next.swiper-button-' + id,
+            prevEl: '.swiper-button-prev.swiper-button-' + id
           },
         }
       } else {
-        let swiperOptions = {
+        let thumbsSwiperOptions = {
           slidesPerView: 5,
           spaceBetween: 30,
           mousewheel: true,
           watchSlidesProgress: true,
           navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev'
+            nextEl: '.swiper-button-next.swiper-button-' + id,
+            prevEl: '.swiper-button-prev.swiper-button-' + id
           },
         }
       }
-      let swiperThumbs = new Swiper(ThumbnailSliderContainer,swiperOptions);
+      let swiperThumbs = new Swiper(ThumbnailSliderContainer,thumbsSwiperOptions);
     }
     if (MediaSliderContainer) {
       if (MediaSliderContainer.swiper) {
@@ -1053,8 +1053,8 @@ console.log(MediaSliderContainer);
       let mediaSwiperOptions = {
         slidesPerView: 1,
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
+          nextEl: '.swiper-button-next.swiper-button-' + id,
+          prevEl: '.swiper-button-prev.swiper-button-' + id
         },
         thumbs: {
             swiper: swiperThumbs,
