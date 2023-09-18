@@ -1015,7 +1015,7 @@ function initProductmediaSlideShow() {
     let MediaSliderContainer = wrapper.querySelector('#product__media-' + id);
     let ThumbnailSliderContainer = wrapper.querySelector('#product__thumbnail-' + id);
     let thumbnailPosition = wrapper.querySelector('.product-media__grid').dataset.thumbnail;
-console.log(thumbnailPosition);
+console.log(MediaSliderContainer);
     if (ThumbnailSliderContainer) {
       if (ThumbnailSliderContainer.swiper) {
         ThumbnailSliderContainer.swiper.destroy();
