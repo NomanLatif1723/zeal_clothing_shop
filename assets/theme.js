@@ -1024,9 +1024,8 @@ function initProductmediaSlideShow() {
       }
       // if (thumbnailPosition == 'left') {
         let thumbsSwiperOptions = {
-          direction: "vertical",
           slidesPerView: 5,
-          spaceBetween: 10,
+          spaceBetween: 30,
           mousewheel: true,
           watchSlidesProgress: true,
           navigation: {
@@ -1034,6 +1033,10 @@ function initProductmediaSlideShow() {
             prevEl: '.swiper-button-prev.swiper-button-' + id
           },
         }
+      if (thumbPosition === 'left') {
+        thumbsSwiperOptions.direction = "vertical";
+        thumbsSwiperOptions.spaceBetween = 10;
+      }
       // } else {
         // let thumbsSwiperOptions = {
         //   slidesPerView: 5,
@@ -1048,7 +1051,7 @@ function initProductmediaSlideShow() {
       // }
       let swiperThumbs = new Swiper(ThumbnailSliderContainer,thumbsSwiperOptions);
     // }
-    if (MediaSliderContainer) {
+    // if (MediaSliderContainer) {
       if (MediaSliderContainer.swiper) {
         MediaSliderContainer.swiper.destroy();
       }
@@ -1063,7 +1066,7 @@ function initProductmediaSlideShow() {
           },
       }
       let mediaSwiper = new Swiper(MediaSliderContainer, mediaSwiperOptions);
-    }
+    // }
   })
 }
 initProductmediaSlideShow();
