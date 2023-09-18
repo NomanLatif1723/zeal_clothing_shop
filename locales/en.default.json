@@ -241,6 +241,9 @@
       "regular_price": "Regular Price",
       "sale_price": "Sale Price"
     },
+    "form": {
+      "variants": "Variants"
+    },
     "badges": {
       "on_sale": "Sale",
       "sold_out": "Sold Out"
