@@ -1020,7 +1020,7 @@ function initProductmediaSlideShow() {
     }
     let thumbsSwiperOptions = {
       slidesPerView: 5,
-      spaceBetween: 30,
+      spaceBetween: 20,
       watchSlidesProgress: true,
       navigation: {
         nextEl: '.swiper-button-next.swiper-button-' + id,
