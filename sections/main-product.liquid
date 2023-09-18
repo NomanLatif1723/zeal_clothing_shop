@@ -31,10 +31,7 @@
 <div class="main-product__wrapper main__section-{{ section.id }}" data-section-id="{{ section.id }}">
   <div class="page__width">
     {%- if section.settings.show_breadcrumbs -%}
-      <nav
-        role="navigation"
-        aria-label="breadcrumb"
-        class="product-breadcrumbs">
+      <nav role="navigation" aria-label="breadcrumb" class="product-breadcrumbs">
         <ul class="breadcrumb__list">
           <li class="breadcrumb__item">
             <a href="{{ routes.root_url }}" title="{{ 'general.breadcrumbs.home' | t }}">{{ 'general.breadcrumbs.home' | t }}</a>
@@ -50,7 +47,7 @@
         </ul>
       </nav>
     {%- endif -%}
-    <div class="product-grid{% if section.settings.media_position %} product-grid__reverse{% endif %}">
+    <div class="product-grid{% if section.settings.media_position == 'left' %} product-grid__reverse{% endif %}">
       <div class="product-grid__item {{ product_media_width }} product__image-container">
         {%- render 'product-media', 
           product: product,
