@@ -30,7 +30,7 @@
     </div>
   </div>
   {%- if product.media.size > 1 %}
-    <div class="product-media__thumbnails swiper">
+    <div id="product__thumbnail-{{ section.id }}" class="product-media__thumbnails swiper">
       <div class="swiper-wrapper">
         {%- for media in product.media -%}
           <div class="swiper-slide">
@@ -59,8 +59,8 @@
         {%- endfor -%}
       </div>
       {%- if section.settings.show_thumbnail_arrows -%}
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev swiper-button-{{ section.id }}"></div>
+        <div class="swiper-button-next swiper-button-{{ section.id }}"></div>
       {%- endif -%}
     </div>
   {%- endif -%}
