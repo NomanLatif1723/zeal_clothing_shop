@@ -35,6 +35,7 @@
     <script>
       window.themeContent = {
         routes: {
+          product: {{ product | json }},
           productRecommendation: {{ routes.product_recommendations_url | json }}
         }
       }
