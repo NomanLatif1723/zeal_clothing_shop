@@ -4,20 +4,7 @@
   assign show_collection_count = section.settings.show_collection_count
   assign show_breadcrumbs = settings.show_breadcrumbs
   assign textAlignment = section.settings.text_alignment 
-  assign products_per_row = section.settings.products_per_row
   assign products_to_show = section.settings.products_to_show
-  case products_per_row   
-  when 1
-    assign itemWidth = ''
-  when 2
-    assign itemWidth = 'block__item--half'
-  when 3
-    assign itemWidth = 'block__item--auto block__item--one-third'
-  when 4
-    assign itemWidth = 'block__item--auto block__item--one-fourth'
-  when 5
-    assign itemWidth = 'block__item--auto block__item--one-fifth'
-  endcase
 
   assign lazyloading = ''
   assign lazyloadImages = section.settings.lazyload_images
@@ -30,21 +17,6 @@
   if textDirection == 'rtl'
     assign filter_drawer_position = 'right'
   endif
-
-  assign selectedImageSize = settings.image_size
-  assign imageAspectRatio = "0"
-  case selectedImageSize
-  when 'natural'
-  assign imageAspectRatio = "0"
-  when 'square'
-  assign imageAspectRatio = "1/1"
-  when 'portrait'
-  assign imageAspectRatio = "2/3"
-  when 'landscape'
-  assign imageAspectRatio = "4/3"
-  when 'wide'
-  assign imageAspectRatio = "16/9"
-  endcase
 -%}
 {%- style -%}
   .main__section-{{ section.id }}{
@@ -189,12 +161,10 @@
               {%- render 'product-item',
                 section: section,
                 textAlignment: textAlignment,
-                products_per_row: products_per_row,
+                products_per_row: section.settings.products_per_row,
                 product: product,
                 collection: collection,
-                lazyloading: lazyloading,
-                itemWidth: itemWidth,
-                imageAspectRatio: imageAspectRatio
+                lazyloadImages: section.settings.lazyload_images
               -%}
             {%- endfor -%}
           </div>
