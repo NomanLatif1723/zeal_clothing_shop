@@ -1056,34 +1056,7 @@ function initProductmediaSlideShow() {
 initProductmediaSlideShow();
 
 // Product Recommendations
-// JavaScript code to handle the custom element
-// class ProductRecommendationsElement extends HTMLElement {
-//   constructor() {
-//     super();
-//   }
-//   async connectedCallback() {
-//     // Extract data attributes from the custom element
-//     const intent = this.getAttribute('data-intent');
-//     const sectionId = this.getAttribute('data-section-id');
-//     const productId = this.getAttribute('data-product-id');
-//     const recommendationsCount = this.getAttribute('data-limit');
-//     try {
-//       console.log('connectedCallback called');
-//       const response = await fetch(`${window.themeContent.routes.productRecommendation}?section_id=${sectionId}&product_id=${productId}&limit=${recommendationsCount}&intent=${intent}`);
-//       if (response.ok) {
-//         const data = await response.text();
-//         // Replace the content of this custom element with the fetched data
-//         this.innerHTML = data;
-//       } else {
-//         console.error(`Failed to fetch data: ${response.status} - ${response.statusText}`);
-//       }
-//     } catch (error) {
-//       console.error('Error fetching data:', error);
-//     }
-//   }
-// }
-// customElements.define('product-recommendations', ProductRecommendationsElement);
-function fetchAndReplaceProductRecommendations() {
+function initProductRecommendations() {
   const productRecommendationContainer = document.querySelector('product-recommendations');
   const intent = productRecommendationContainer.getAttribute('data-intent');
   const sectionId = productRecommendationContainer.getAttribute('data-section-id');
@@ -1104,7 +1077,6 @@ function fetchAndReplaceProductRecommendations() {
       return null;
     }
   }
-
   async function replaceContent() {
     const data = await fetchData();
     if (data !== null) {
@@ -1114,17 +1086,9 @@ function fetchAndReplaceProductRecommendations() {
       });
     }
   }
-
-  // Call the function to replace content
   replaceContent();
 }
-
-// Example usage:
-fetchAndReplaceProductRecommendations();
-
-
-
-
+initProductRecommendations();
 // var initProductRecommendations= class extends HTMLElement{
 //   async callback() {
 //     const responce = await fetch(`${window.themeContent.routes.productRecommendation}?section_id=${this.sectionId}&product_id=${this.productId}&limit=${this.recommendationsCount}&intent=${this.intent}`);
