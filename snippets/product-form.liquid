@@ -101,7 +101,7 @@
     {%- if product.selected_or_first_available_variant.sku != blank -%}
       <div class="product__block product__content rte" {{ block.shopify_attributes }}>
         <div class="product__content-title">{{ 'products.sku.title' | t }}</div>
-        <div class="product__content-content">{{ product.selected_or_first_available_variant.sku }}</div>
+        <div class="product__content-content" data-sku>{{ product.selected_or_first_available_variant.sku }}</div>
       </div>
     {%- endif -%}
     {%- when 'category' -%}
