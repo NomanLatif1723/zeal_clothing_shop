@@ -32,7 +32,7 @@
 
     {{ 'theme.css' | asset_url | stylesheet_tag: preload: true }}
     {{ 'swiper.min.css' | asset_url | stylesheet_tag: preload: true }}
-    <!-- <script>
+    <script>
       window.themeContent = {
         routes: {
           root: "{{ routes.root_url }}",
@@ -40,7 +40,8 @@
           cartAddUrl: "{{ routes.cart_add_url | json }}",
           cartChangeUrl: "{{ routes.cart_change_url | json }}",
           searchPage: "{{ routes.search_url | json }}",
-          predictiveSearch: "{{ routes.predictive_search_url | json }}"
+          predictiveSearch: "{{ routes.predictive_search_url | json }}",
+          productRecommendation: "{{ routes.product_recommendations_url | json }}"
         },
         settings: {
           cartType: "{{ settings.cart_type | json }}",
@@ -51,7 +52,7 @@
           cartItemAdded: "{{ 'cart.items.item_added' | t }}"
         }
       }
-    </script> -->
+    </script>
     <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'swiper.min.js' | asset_url }}"></script>
     
