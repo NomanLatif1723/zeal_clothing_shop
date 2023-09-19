@@ -43,7 +43,7 @@
           searchPage: "{{ routes.search_url | json }}",
           predictiveSearch: "{{ routes.predictive_search_url | json }}",
           {% endcomment %}
-          productRecommendation: "{{ routes.product_recommendations_url | json }}"
+          productRecommendation: {{ routes.product_recommendations_url | json }}
         },
         {% comment %}
         settings: {
