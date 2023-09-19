@@ -1060,12 +1060,9 @@ initProductmediaSlideShow();
 class ProductRecommendationsElement extends HTMLElement {
   constructor() {
     super();
-     this.connectedCallbackCount = 0;
   }
 
   async connectedCallback() {
-    this.connectedCallbackCount++;
-    console.log(`connectedCallback called ${this.connectedCallbackCount} times`);
     // Extract data attributes from the custom element
     const intent = this.getAttribute('data-intent');
     const sectionId = this.getAttribute('data-section-id');
