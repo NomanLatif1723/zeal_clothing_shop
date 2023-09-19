@@ -1084,7 +1084,7 @@ initProductmediaSlideShow();
 // }
 // customElements.define('product-recommendations', ProductRecommendationsElement);
 function fetchAndReplaceProductRecommendations() {
-  const productRecommendationContainer = document.querySelector('product-recommendation');
+  const productRecommendationContainer = document.querySelector('product-recommendations');
   const intent = productRecommendationContainer.getAttribute('data-intent');
   const sectionId = productRecommendationContainer.getAttribute('data-section-id');
   const productId = productRecommendationContainer.getAttribute('data-product-id');
