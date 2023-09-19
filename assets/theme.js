@@ -1082,7 +1082,7 @@ var initProductRecommendations= class extends HTMLElement{
     return this.dataset.intent;
   }
 };
-window.customElements.define('product-recommendations',initProductRecommendations);
+customElements.define('product-recommendations',initProductRecommendations);
 
 // Product Variants js
 function initProductVariants(){
