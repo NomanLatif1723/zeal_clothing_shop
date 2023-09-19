@@ -17,7 +17,7 @@
 {%- endstyle -%}
 <div class="main__section-{{ section.id }}">
   <div class="page__width">
-    <div class="product-recommendations" data-intent="related" data-section-id="{{ section.id }}" data-product-id="{{ product.id }}" data-limit="{{ products_to_show }}">
+    <product-recommendations class="product-recommendations" data-intent="related" data-section-id="{{ section.id }}" data-product-id="{{ product.id }}" data-limit="{{ products_to_show }}">
       {%- if recommendations.performed? and recommendations.products_count > 0 -%}
         <div class="collection__header text__align-{{ section.settings.text_alignment }}">
           {%- if section.settings.heading != blank -%}
@@ -41,7 +41,7 @@
           {%- endfor -%}
         </div>
       {%- endif -%}
-    </div>
+    </product-recommendations>
   </div>
 </div>
 
