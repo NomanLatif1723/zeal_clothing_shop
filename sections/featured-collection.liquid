@@ -16,24 +16,7 @@
     assign itemWidth = 'block__item--auto block__item--one-fourth'
   when 5
     assign itemWidth = 'block__item--auto block__item--one-fifth'
-  endcase
-  
-  
-
-  assign selectedImageSize = settings.image_size
-  assign imageAspectRatio = "0"
-  case selectedImageSize
-  when 'natural'
-  assign imageAspectRatio = "0"
-  when 'square'
-  assign imageAspectRatio = "1/1"
-  when 'portrait'
-  assign imageAspectRatio = "2/3"
-  when 'landscape'
-  assign imageAspectRatio = "4/3"
-  when 'wide'
-  assign imageAspectRatio = "16/9"
-  endcase
+  endcase  
 -%}
 {%- style -%}
   .main__section-{{ section.id }}{
