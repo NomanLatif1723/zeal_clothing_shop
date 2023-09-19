@@ -1134,7 +1134,8 @@ function initProductVariants(){
   let productInStock = document.querySelector('[data-availability]');
   let productAddToCartBtn = document.querySelector('[data-add-to-cart]');
   let variantSelector = document.querySelectorAll('[data-selected-variant]');
-  
+  let product = window.themeContent.routes.product;
+  console.log(product);
   variantSelector.forEach(variant => {
     variant.addEventListener('change', _onSelectChange);
   })
