@@ -1,4 +1,4 @@
-.product-grid {
+/* .product-grid {
   padding-top: 30px;
 }
 .product-grid__item {
@@ -112,8 +112,6 @@
   transform: translate(-50%, -50%);
   background: white;
   z-index: 99;
-  /* max-width: 650px;
-  width: 100%; */
 }
 .sizeguide__overlay:before {
   content: '';
@@ -287,4 +285,4 @@
   .product-block__extra--small{
     width: 35%;
   }
-}
+} */
