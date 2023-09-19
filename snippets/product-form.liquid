@@ -64,7 +64,7 @@
       {{ product.description | truncatewords: 100 }}
     </div>
     {%- when 'full_description' -%}
-      {%- if section.settings.description_as_tab -%}
+      {%- if block.settings.description_as_tab -%}
         <div class="product__tabs" {{ block.shopify_attributes }}>
           <div class="product-tab__container">
             <div class="product-tab__header">
