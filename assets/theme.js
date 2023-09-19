@@ -1127,8 +1127,14 @@ initProductRecommendations();
 
 // Product Variants js
 function initProductVariants(){
-  let variantSelector = document.querySelectorAll('[data-selected-variant]');
   let masterVariantSelector = document.querySelector('.product-selected__variants');
+  let productSalePrice = document.querySelector('[data-sale-price]');
+  let productRegularPrice = document.querySelector('[data-regular-price]');
+  let productSku = document.querySelector('[data-sku]');
+  let productInStock = document.querySelector('[data-availability]');
+  let productAddToCartBtn = document.querySelector('[data-add-to-cart]');
+  let variantSelector = document.querySelectorAll('[data-selected-variant]');
+  
   variantSelector.forEach(variant => {
     variant.addEventListener('change', () => {
       console.log(masterVariantSelector.value);
