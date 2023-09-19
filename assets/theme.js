@@ -1015,7 +1015,7 @@ function initProductmediaSlideShow() {
     let MediaSliderContainer = wrapper.querySelector('#product__media-' + id);
     let ThumbnailSliderContainer = wrapper.querySelector('#product__thumbnail-' + id);
     let thumbnailMediaPosition = wrapper.querySelector('.product-media__grid');
-    if (ThumbnailSliderContainer || MediaSliderContainer) {
+    if (ThumbnailSliderContainer) {
       if (ThumbnailSliderContainer.swiper) {
         ThumbnailSliderContainer.swiper.destroy();
       }
@@ -1038,6 +1038,8 @@ function initProductmediaSlideShow() {
       }
       
       let swiperThumbs = new Swiper(ThumbnailSliderContainer,thumbsSwiperOptions);
+    }
+    if (MediaSliderContainer) {
       if (MediaSliderContainer.swiper) {
         MediaSliderContainer.swiper.destroy();
       }
