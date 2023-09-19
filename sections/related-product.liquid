@@ -1,36 +1,29 @@
-<div
-  class="product-recommendations"
-  data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=4&intent=related"
->
-  {%- if recommendations.performed? and recommendations.products_count > 0 -%}
-    {% if recommendations.intent == 'related' %}
-      <h2>You may also like</h2>
-    {% elsif recommendations.intent == 'complementary' %}
-      <h2>Pair it with</h2>
-    {% endif %}
-
-    <ul>
-      {%- for product in recommendations.products -%}
-        <li class="product">
-          <a href="{{ product.url }}">
-            <img
-              class="product__img"
-              src="{{ product.featured_image | image_url: width: 300, height: 300 }}"
-              alt="{{ product.featured_image.alt }}"
-            />
-
-            <p class="product__title">{{ product.title }}</p>
-            <p class="product__price">{{ product.price | money}}</p>
-          </a>
-        </li>
-      {%- endfor -%}
-    </ul>
-  {%- endif -%}
+<div class="main__section-{{ section.id }}">
+  <div class="page__width">
+    <div class="product-recommendations" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=4&intent=related">
+      {%- if recommendations.performed? and recommendations.products_count > 0 -%}
+        {% if recommendations.intent == 'related' %}
+          <h2>You may also like</h2>
+        {% elsif recommendations.intent == 'complementary' %}
+          <h2>Pair it with</h2>
+        {% endif %}
+    
+        <div class="collection-grid">
+          {%- for product in recommendations.products -%}
+            {%- render 'product-item', product: product -%}
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
 </div>
+
+
 
 {% schema %}
   {
     "name": "Product recommendations",
+    "class": "product__recommendation",
     "settings": [
       {
         "type": "paragraph",
@@ -81,6 +74,30 @@
         "max": 5,
         "step": 1,
         "default": 4
+      },
+      {
+        "type": "header",
+        "content": "t:sections.featured-collection.settings.header_spacing.label"
+      },
+      {
+        "type": "range",
+        "id": "margin_top",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "label": "t:sections.featured-collection.settings.header_spacing.top_spacing.label",
+        "default": 16
+      },
+      {
+        "type": "range",
+        "id": "margin_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "label": "t:sections.featured-collection.settings.header_spacing.bottom_spacing.label",
+        "default": 16
       }
     ]
   }
