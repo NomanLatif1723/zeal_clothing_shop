@@ -17,31 +17,29 @@
 {%- endstyle -%}
 <product-recommendations class="main__section-{{ section.id }}" data-intent="related" data-section-id="{{ section.id }}" data-product-id="{{ product.id }}" data-limit="{{ products_to_show }}">
   <div class="page__width">
-    <!-- <div class=""> -->
-      {%- if recommendations.performed? and recommendations.products_count > 0 -%}
-        <div class="collection__header text__align-{{ section.settings.text_alignment }}">
-          {%- if section.settings.heading != blank -%}
-            <div class="main__heading">
-              {%- if recommendations.intent == 'related' -%}
-                <h2>{{ section.settings.heading }}</h2>
-              {%- elsif recommendations.intent == 'complementary' -%}
-                <h2>Pair it with</h2>
-              {%- endif -%}
-            </div>
-          {%- endif -%}
-        </div>
-        <div class="collection-grid">
-          {%- for product in recommendations.products limit: product_limit -%}
-            {%- render 'product-item',
-               product: product,
-               products_per_row: section.settings.products_per_row,
-               lazyloadImages: section.settings.lazyload_images,
-               textAlignment: section.settings.text_alignment
-            -%}
-          {%- endfor -%}
-        </div>
-      {%- endif -%}
-    <!-- </div> -->
+    {%- if recommendations.performed? and recommendations.products_count > 0 -%}
+      <div class="collection__header text__align-{{ section.settings.text_alignment }}">
+        {%- if section.settings.heading != blank -%}
+          <div class="main__heading">
+            {%- if recommendations.intent == 'related' -%}
+              <h2>{{ section.settings.heading }}</h2>
+            {%- elsif recommendations.intent == 'complementary' -%}
+              <h2>Pair it with</h2>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      </div>
+      <div class="collection-grid">
+        {%- for product in recommendations.products limit: product_limit -%}
+          {%- render 'product-item',
+             product: product,
+             products_per_row: section.settings.products_per_row,
+             lazyloadImages: section.settings.lazyload_images,
+             textAlignment: section.settings.text_alignment
+          -%}
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
   </div>
 </product-recommendations>
 
