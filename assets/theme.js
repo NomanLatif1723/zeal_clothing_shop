@@ -1054,11 +1054,9 @@ function initProductmediaSlideShow() {
         //     swiper: swiperThumbs,
         //   },
       }
-      if (ThumbnailSliderContainer) {
         mediaSwiperOptions.thumbs = {
           swiper: swiperThumbs,
         }
-      }
       let mediaSwiper = new Swiper(MediaSliderContainer, mediaSwiperOptions);
     }
   })
