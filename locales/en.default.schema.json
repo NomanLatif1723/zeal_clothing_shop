@@ -1467,6 +1467,9 @@
         "full_description": {
           "name": "Full Description",
           "settings": {
+            "description_as_tab": {
+              "label": "Description as a tab"
+            },
             "heading": {
               "label": "Heading"
             }
