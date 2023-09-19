@@ -1067,6 +1067,7 @@ var initProductRecommendations = class extends HTMLElement {
       if (response.ok) {
         const data = await response.text();
         this.innerHTML = data;
+        console.log(data);
       } else {
         console.error(`Failed to fetch data: ${response.status} - ${response.statusText}`);
       }
