@@ -1060,6 +1060,7 @@ var initProductRecommendations= class extends HTMLElement{
   async callback() {
     const responce = await fetch(`${window.themeContent.routes.productRecommendation}?section_id=${this.sectionId}&product_id=${this.productId}&limit=${this.recommendationsCount}&intent=${this.intent}`);
     const div = document.createElement('div');
+    div.innerHTML = await responce.text();
     const productRecommendedEl = div.querySelector('.product-recommendations');
     if (productRecommendedEl.hasChildNodes()) {
       this.innerHTML = productRecommendedEl.innerHTML;
