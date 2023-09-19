@@ -73,6 +73,7 @@
         "a0670cbe-0d41-4504-905b-1a080352120e": {
           "type": "full_description",
           "settings": {
+            "description_as_tab": false,
             "description_tab_heading": "Description"
           }
         },
@@ -153,6 +154,13 @@
     "related-products": {
       "type": "related-product",
       "settings": {
+        "heading": "You May Also Like",
+        "text_alignment": "center",
+        "products_to_show": 10,
+        "products_per_row": 4,
+        "lazyload_images": false,
+        "margin_top": 16,
+        "margin_bottom": 16
       }
     },
     "01f8fcff-e28d-485b-8b95-b9fa72c6042b": {
