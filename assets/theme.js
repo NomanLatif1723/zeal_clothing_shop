@@ -1015,42 +1015,44 @@ function initProductmediaSlideShow() {
     let MediaSliderContainer = wrapper.querySelector('#product__media-' + id);
     let ThumbnailSliderContainer = wrapper.querySelector('#product__thumbnail-' + id);
     let thumbnailMediaPosition = wrapper.querySelector('.product-media__grid');
-    if (ThumbnailSliderContainer.swiper) {
-      ThumbnailSliderContainer.swiper.destroy();
-    }
-    let thumbsSwiperOptions = {
-      slidesPerView: 5,
-      spaceBetween: 20,
-      watchSlidesProgress: true,
-      navigation: {
-        nextEl: '.swiper-button-next.swiper-button-' + id,
-        prevEl: '.swiper-button-prev.swiper-button-' + id
-      },
-    }
-    if (thumbnailMediaPosition) {
-      let thumbnailPosition = thumbnailMediaPosition.dataset.thumbnail;
-      if (thumbnailPosition === 'left') {
-        thumbsSwiperOptions.direction = "vertical";
-        thumbsSwiperOptions.spaceBetween = 10;
-        // thumbsSwiperOptions.mousewheel = true;
+    if (ThumbnailSliderContainer || MediaSliderContainer) {
+      if (ThumbnailSliderContainer.swiper) {
+        ThumbnailSliderContainer.swiper.destroy();
       }
-    }
-    
-    let swiperThumbs = new Swiper(ThumbnailSliderContainer,thumbsSwiperOptions);
-    if (MediaSliderContainer.swiper) {
-      MediaSliderContainer.swiper.destroy();
-    }
-    let mediaSwiperOptions = {
-      slidesPerView: 1,
-      navigation: {
-        nextEl: '.swiper-button-next.swiper-button-' + id,
-        prevEl: '.swiper-button-prev.swiper-button-' + id
-      },
-      thumbs: {
-          swiper: swiperThumbs,
+      let thumbsSwiperOptions = {
+        slidesPerView: 5,
+        spaceBetween: 20,
+        watchSlidesProgress: true,
+        navigation: {
+          nextEl: '.swiper-button-next.swiper-button-' + id,
+          prevEl: '.swiper-button-prev.swiper-button-' + id
         },
+      }
+      if (thumbnailMediaPosition) {
+        let thumbnailPosition = thumbnailMediaPosition.dataset.thumbnail;
+        if (thumbnailPosition === 'left') {
+          thumbsSwiperOptions.direction = "vertical";
+          thumbsSwiperOptions.spaceBetween = 10;
+          // thumbsSwiperOptions.mousewheel = true;
+        }
+      }
+      
+      let swiperThumbs = new Swiper(ThumbnailSliderContainer,thumbsSwiperOptions);
+      if (MediaSliderContainer.swiper) {
+        MediaSliderContainer.swiper.destroy();
+      }
+      let mediaSwiperOptions = {
+        slidesPerView: 1,
+        navigation: {
+          nextEl: '.swiper-button-next.swiper-button-' + id,
+          prevEl: '.swiper-button-prev.swiper-button-' + id
+        },
+        thumbs: {
+            swiper: swiperThumbs,
+          },
+      }
+      let mediaSwiper = new Swiper(MediaSliderContainer, mediaSwiperOptions);
     }
-    let mediaSwiper = new Swiper(MediaSliderContainer, mediaSwiperOptions);
   })
 }
 initProductmediaSlideShow();
