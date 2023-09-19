@@ -1084,8 +1084,11 @@ initProductmediaSlideShow();
 // }
 // customElements.define('product-recommendations', ProductRecommendationsElement);
 function fetchAndReplaceProductRecommendations(intent, sectionId, productId, recommendationsCount) {
-  // const productRecommendationContainer = document.querySelector('product-recommendation');
-  
+  const productRecommendationContainer = document.querySelector('product-recommendation');
+  const intent = productRecommendationContainer.getAttribute('data-intent');
+  const sectionId = productRecommendationContainer.getAttribute('data-section-id');
+  const productId = productRecommendationContainer.getAttribute('data-product-id');
+  const recommendationsCount = productRecommendationContainer.getAttribute('data-limit');
   async function fetchData() {
     try {
       const response = await fetch(`${window.themeContent.routes.productRecommendation}?section_id=${sectionId}&product_id=${productId}&limit=${recommendationsCount}&intent=${intent}`);
@@ -1107,10 +1110,6 @@ function fetchAndReplaceProductRecommendations(intent, sectionId, productId, rec
     if (data !== null) {
       const containers = document.querySelectorAll('product-recommendations');
       containers.forEach(container => {
-        const intent = container.getAttribute('data-intent');
-        const sectionId = container.getAttribute('data-section-id');
-        const productId = container.getAttribute('data-product-id');
-        const recommendationsCount = container.getAttribute('data-limit');
         container.innerHTML = data;
       });
     }
