@@ -1056,76 +1056,74 @@ function initProductmediaSlideShow() {
 initProductmediaSlideShow();
 
 // Product Recommendations
-// var initProductRecommendations = class extends HTMLElement {
-//   constructor() {
-//     super();
-//   }
+var initProductRecommendations = class extends HTMLElement {
+  constructor() {
+    super();
+  }
 
-//   async connectedCallback() {
-//     try {
-//       const response = await fetch(`${window.themeContent.routes.productRecommendation}?section_id=${this.sectionId}&product_id=${this.productId}&limit=${this.recommendationsCount}&intent=${this.intent}`);
-//       if (response.ok) {
-//         const data = await response.text();
-//         const containers = document.querySelectorAll('.product-recommendations'); // Find all containers with the class
-//         containers.forEach(container => {
-//           container.innerHTML = data; // Replace the content of each container
-//         });
-//       } else {
-//         console.error(`Failed to fetch data: ${response.status} - ${response.statusText}`);
-//       }
-//     } catch (error) {
-//       console.error('Error fetching data:', error);
-//     }
-//   }
-
-//   get sectionId() {
-//     return this.dataset.sectionId;
-//   }
-
-//   get productId() {
-//     return this.dataset.productId;
-//   }
-
-//   get recommendationsCount() {
-//     return this.dataset.limit;
-//   }
-
-//   get intent() {
-//     return this.dataset.intent;
-//   }
-// };
-
-// window.customElements.define('product-recommendations', initProductRecommendations);
-
-
-var initProductRecommendations= class extends HTMLElement{
-  async callback() {
-    const responce = await fetch(`${window.themeContent.routes.productRecommendation}?section_id=${this.sectionId}&product_id=${this.productId}&limit=${this.recommendationsCount}&intent=${this.intent}`);
-    const div = document.createElement('div');
-    div.innerHTML = await responce.text();
-    const productRecommendedEl = div.querySelector('product-recommendations');
-    if (productRecommendedEl.hasChildNodes()) {
-      this.innerHTML = productRecommendedEl.innerHTML;
-    } else {
-      if (this.intent === 'complementory') {
-        this.remove();
+  async connectedCallback() {
+    try {
+      const response = await fetch(`${window.themeContent.routes.productRecommendation}?section_id=${this.sectionId}&product_id=${this.productId}&limit=${this.recommendationsCount}&intent=${this.intent}`);
+      if (response.ok) {
+        const data = await response.text();
+        this.innerHTML = data;
+      } else {
+        console.error(`Failed to fetch data: ${response.status} - ${response.statusText}`);
       }
+    } catch (error) {
+      console.error('Error fetching data:', error);
     }
   }
+
   get sectionId() {
     return this.dataset.sectionId;
   }
+
   get productId() {
     return this.dataset.productId;
   }
+
   get recommendationsCount() {
     return this.dataset.limit;
   }
+
   get intent() {
     return this.dataset.intent;
   }
 };
-customElements.define('product-recommendations',initProductRecommendations);
+
+customElements.define('product-recommendations', initProductRecommendations);
+
+
+
+// var initProductRecommendations= class extends HTMLElement{
+//   async callback() {
+//     const responce = await fetch(`${window.themeContent.routes.productRecommendation}?section_id=${this.sectionId}&product_id=${this.productId}&limit=${this.recommendationsCount}&intent=${this.intent}`);
+//     const div = document.createElement('div');
+//     div.innerHTML = await responce.text();
+//     const productRecommendedEl = div.querySelector('product-recommendations');
+//     if (productRecommendedEl.hasChildNodes()) {
+//       this.innerHTML = productRecommendedEl.innerHTML;
+//     } else {
+//       if (this.intent === 'complementory') {
+//         this.remove();
+//       }
+//     }
+//   }
+//   get sectionId() {
+//     return this.dataset.sectionId;
+//   }
+//   get productId() {
+//     return this.dataset.productId;
+//   }
+//   get recommendationsCount() {
+//     return this.dataset.limit;
+//   }
+//   get intent() {
+//     return this.dataset.intent;
+//   }
+// };
+// customElements.define('product-recommendations',initProductRecommendations);
 
 // Product Variants js
 function initProductVariants(){
