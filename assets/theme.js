@@ -1085,10 +1085,10 @@ initProductmediaSlideShow();
 // customElements.define('product-recommendations', ProductRecommendationsElement);
 function fetchAndReplaceProductRecommendations(intent, sectionId, productId, recommendationsCount) {
   const productRecommendationContainer = document.querySelector('product-recommendation');
-  const intent = productRecommendationContainer.getAttribute('data-intent');
-  const sectionId = productRecommendationContainer.getAttribute('data-section-id');
-  const productId = productRecommendationContainer.getAttribute('data-product-id');
-  const recommendationsCount = productRecommendationContainer.getAttribute('data-limit');
+  intent = productRecommendationContainer.getAttribute('data-intent');
+  sectionId = productRecommendationContainer.getAttribute('data-section-id');
+  productId = productRecommendationContainer.getAttribute('data-product-id');
+  recommendationsCount = productRecommendationContainer.getAttribute('data-limit');
   async function fetchData() {
     try {
       const response = await fetch(`${window.themeContent.routes.productRecommendation}?section_id=${sectionId}&product_id=${productId}&limit=${recommendationsCount}&intent=${intent}`);
