@@ -156,11 +156,11 @@
       "settings": {
         "heading": "You May Also Like",
         "text_alignment": "center",
-        "products_to_show": 4,
+        "products_to_show": 10,
         "products_per_row": 4,
         "lazyload_images": true,
-        "margin_top": 16,
-        "margin_bottom": 16
+        "margin_top": 60,
+        "margin_bottom": 60
       }
     },
     "01f8fcff-e28d-485b-8b95-b9fa72c6042b": {
