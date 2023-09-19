@@ -18,11 +18,7 @@
     assign itemWidth = 'block__item--auto block__item--one-fifth'
   endcase
   
-  assign lazyloading = ''
-  assign lazyloadImages = section.settings.lazyload_images
-  if lazyloadImages
-  assign lazyloading = 'lazy'
-  endif
+  
 
   assign selectedImageSize = settings.image_size
   assign imageAspectRatio = "0"
@@ -96,7 +92,7 @@
               products_per_row: section.settings.product_per_row,
               product: product,
               collection: collection,
-              lazyloading: lazyloading,
+              lazyloadImages: section.settings.lazyload_images,
               itemWidth: itemWidth,
               imageAspectRatio: imageAspectRatio
             -%}
