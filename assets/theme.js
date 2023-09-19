@@ -1139,7 +1139,7 @@ function initProductVariants(){
     variant.addEventListener('change', _onSelectChange);
   })
   function _onSelectChange(srcElement) {
-    
+    console.log('ghjhgdhj');
   }
 }
 initProductVariants();
