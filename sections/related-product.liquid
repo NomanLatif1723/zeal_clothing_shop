@@ -1,25 +1,77 @@
+{%- liquid
+  assign products_per_row = section.settings.products_per_row
+  assign product_rows = section.settings.products_to_show
+  assign product_limit = products_per_row | times: product_rows        
+  assign textAlignment = section.settings.text_alignment    
+  case products_per_row   
+  when 1
+    assign itemWidth = ''
+  when 2
+    assign itemWidth = 'block__item--half'
+  when 3
+    assign itemWidth = 'block__item--auto block__item--one-third'
+  when 4
+    assign itemWidth = 'block__item--auto block__item--one-fourth'
+  when 5
+    assign itemWidth = 'block__item--auto block__item--one-fifth'
+  endcase
+  
+  assign lazyloading = ''
+  assign lazyloadImages = section.settings.lazyload_images
+  if lazyloadImages
+  assign lazyloading = 'lazy'
+  endif
+
+  assign selectedImageSize = settings.image_size
+  assign imageAspectRatio = "0"
+  case selectedImageSize
+  when 'natural'
+  assign imageAspectRatio = "0"
+  when 'square'
+  assign imageAspectRatio = "1/1"
+  when 'portrait'
+  assign imageAspectRatio = "2/3"
+  when 'landscape'
+  assign imageAspectRatio = "4/3"
+  when 'wide'
+  assign imageAspectRatio = "16/9"
+  endcase
+-%}
 <div class="main__section-{{ section.id }}">
   <div class="page__width">
     <div class="product-recommendations" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=4&intent=related">
       {%- if recommendations.performed? and recommendations.products_count > 0 -%}
-        {% if recommendations.intent == 'related' %}
+        <div class="recommendation__header text__align-{{ textAlignment }}">
+          {%- if section.settings.heading != blank -%}
+            <div class="main__heading">
+              {%- if recommendations.intent == 'related' -%}
+                <h2>{{ section.settings.heading }}</h2>
+              {%- elsif recommendations.intent == 'complementary' -%}
+                <h2>Pair it with</h2>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        </div>
+        {%- if recommendations.intent == 'related' -%}
           <h2>You may also like</h2>
-        {% elsif recommendations.intent == 'complementary' %}
+        {%- elsif recommendations.intent == 'complementary' -%}
           <h2>Pair it with</h2>
-        {% endif %}
+        {%- endif -%}
     
         <div class="collection-grid">
-          {%- for product in recommendations.products -%}
-            {%- render 'product-item', product: product -%}
+          {%- for product in recommendations.products limit: product_limit -%}
+            {%- render 'product-item',
+               product: product,
+               imageAspectRatio: imageAspectRatio,
+               lazyloading: lazyloading,
+               itemWidth: itemWidth
+            -%}
           {%- endfor -%}
         </div>
       {%- endif -%}
     </div>
   </div>
 </div>
-
-
-
 {% schema %}
   {
     "name": "Product recommendations",
@@ -31,7 +83,7 @@
       },
       {
         "type": "text",
-        "id": "Heading",
+        "id": "heading",
         "label": "Heading",
         "default": "You May Also Like"
       },
@@ -74,6 +126,12 @@
         "max": 5,
         "step": 1,
         "default": 4
+      },
+      {
+        "type": "checkbox",
+        "id": "lazyload_images",
+        "label": "t:sections.slideshow.settings.lazyload_images.label",
+        "default": false
       },
       {
         "type": "header",
