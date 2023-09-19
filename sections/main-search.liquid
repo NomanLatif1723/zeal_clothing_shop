@@ -3,7 +3,6 @@
   assign show_sorting =  section.settings.show_sorting
   assign show_collection_count = section.settings.show_collection_count
   assign show_breadcrumbs = settings.show_breadcrumbs
-  assign textAlignment = section.settings.text_alignment 
   assign results_per_row = section.settings.results_per_row
   assign results_to_show = section.settings.results_to_show
   case results_per_row   
@@ -145,13 +144,11 @@
                     {%- if result.object_type == 'product' -%}
                       {%- render 'product-item',
                         section: section,
-                        textAlignment: textAlignment,
-                        products_per_row: results_per_row,
+                        textAlignment: section.settings.text_alignment,
+                        products_per_row: section.settings.results_per_row,
                         product: result,
                         collection: search,
-                        lazyloading: lazyloading,
-                        itemWidth: itemWidth,
-                        imageAspectRatio: imageAspectRatio
+                        lazyloadImages: section.settings.lazyload_images
                       -%}
                      {%- elsif result.object_type == 'page' -%}
                       <div class="collection-grid__item {{ itemWidth }} {% if stackProduct == false %}list-scroller__item{% endif %}">
