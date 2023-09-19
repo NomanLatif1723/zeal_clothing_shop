@@ -1137,7 +1137,13 @@ function initProductVariants(){
   let product = window.themeContent.routes.product;
   console.log(product);
   variantSelector.forEach(variant => {
-    variant.addEventListener('change', _onSelectChange);
+    variant.addEventListener('change', () => {
+      variantSelector.checked.forEach(option => {
+        option.addEventListener('click', () => {
+          console.log('hey');
+        })
+      })
+    });
   })
   function _onSelectChange(srcElement) {
     console.log('ghjhgdhj');
