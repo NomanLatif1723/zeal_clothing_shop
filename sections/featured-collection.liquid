@@ -4,7 +4,6 @@
   assign product_limit = products_per_row | times: product_rows     
   assign collection = collections[section.settings.collection]   
   assign show_view_all = section.settings.show_view_all   
-  assign textAlignment = section.settings.text_alignment    
   assign stackProduct = section.settings.stack_product    
   case products_per_row   
   when 1
@@ -54,7 +53,7 @@
 {%- endstyle -%}
 <div class="featured-collection__wrapper main__section-{{ section.id }}">
   <div class="page__width">
-    <div class="collection__header text__align-{{ textAlignment }}">
+    <div class="collection__header text__align-{{ section.settings.text_alignment }}">
       {%- if section.settings.heading != blank -%}
         <div class="main__heading collection__title">
           <h2>{{ section.settings.heading }}</h2>
@@ -80,7 +79,7 @@
                     {{ 'product-' | append: count | placeholder_svg_tag: "placeholder__image product__placeholder" }}
                   </div>
                 </div>
-                <div class="featured-grid__description text__align-{{ textAlignment }}">
+                <div class="featured-grid__description text__align-{{ section.settings.text_alignment }}">
                   <div class="grid-product__title">
                     <h4>{{ 'products.onboarding.product_title' | t }}</h4>
                   </div>
@@ -93,7 +92,7 @@
           {%- for product in collection.products limit: product_limit -%}
             {%- render 'product-item',
               section: section,
-              textAlignment: textAlignment,
+              textAlignment: section.settings.text_alignment,
               products_per_row: products_per_row,
               product: product,
               collection: collection,
