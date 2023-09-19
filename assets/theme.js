@@ -1082,10 +1082,7 @@ function initProductRecommendations() {
       async function replaceContent() {
         const data = await fetchData();
         if (data !== null) {
-          // const containers = document.querySelectorAll('product-recommendations');
-          // containers.forEach(container => {
-            container.innerHTML = data;
-          // });
+          container.innerHTML = data;
         }
       }
       replaceContent();
