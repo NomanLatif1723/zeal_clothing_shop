@@ -1128,9 +1128,10 @@ initProductRecommendations();
 // Product Variants js
 function initProductVariants(){
   let variantSelector = document.querySelectorAll('[data-selected-variant]');
+  let masterVariantSelector = document.querySelector('.product-selected__variants');
   variantSelector.forEach(variant => {
     variant.addEventListener('change', () => {
-      console.log('variant change', variant);
+      console.log(masterVariantSelector.value);
     })
   })
 }
