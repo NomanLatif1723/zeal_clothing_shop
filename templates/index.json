@@ -899,6 +899,7 @@
     },
     "eb12ada6-c091-44e1-b0a3-3f74ef93b5ad": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "collection": "mens-wear",
         "heading": "Featured Collection",
