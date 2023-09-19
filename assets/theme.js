@@ -1138,7 +1138,7 @@ function initProductVariants(){
   console.log(product);
   variantSelector.forEach(variant => {
     variant.addEventListener('change', () => {
-      variantSelector.checked.forEach(option => {
+      document.querySelectorAll('[data-selected-variant]:checked').forEach(option => {
         option.addEventListener('click', () => {
           console.log('hey');
         })
