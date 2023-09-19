@@ -1,7 +1,7 @@
 {%- liquid
   assign products_per_row = section.settings.products_per_row
-  assign product_rows = section.settings.products_to_show
-  assign product_limit = products_per_row | times: product_rows        
+  assign products_to_show = section.settings.products_to_show
+  assign product_limit = products_per_row | times: products_to_show        
 -%}
 {%- style -%}
   .main__section-{{ section.id }}{
@@ -17,7 +17,7 @@
 {%- endstyle -%}
 <div class="main__section-{{ section.id }}">
   <div class="page__width">
-    <div class="product-recommendations" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ products_per_row }}&intent=related">
+    <div class="product-recommendations" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ products_to_show }}&intent=related">
       {%- if recommendations.performed? and recommendations.products_count > 0 -%}
         <div class="collection__header text__align-{{ section.settings.text_alignment }}">
           {%- if section.settings.heading != blank -%}
