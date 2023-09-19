@@ -154,89 +154,6 @@
         "name": "Blog Posts"
       }
     },
-    "page-header": {
-      "name": "Page header",
-      "settings": {
-        "section_height_desktop": {
-          "label": "Desktop Height",
-          "options": {
-            "natural": {
-              "label": "Natural"
-            },
-            "compact": {
-              "label": "Compact (200px)"
-            },
-            "standard": {
-              "label": "Standard (300px)"
-            },
-            "extended": {
-              "label": "Extended (400px)"
-            }
-          }
-        },
-        "section_height_mobile": {
-          "label": "Mobile Height",
-          "options": {
-            "auto": {
-              "label": "Auto"
-            },
-            "compact": {
-              "label": "Compact (150px)"
-            },
-            "standard": {
-              "label": "Standard (200px)"
-            },
-            "extended": {
-              "label": "Extended (250px)"
-            }
-          }
-        },
-        "full_width": {
-          "label": "Full Width"
-        },
-        "page_heading": {
-          "label": "Heading"
-        },
-        "page_image": {
-          "label": "Background Image"
-        },
-        "show_breadcrumbs": {
-          "label": "Show Breadcrumbs"
-        },
-        "text_color": {
-          "label": "Text"
-        },
-        "lazyload_images": {
-          "label": "Enable LazyLoad Images"
-        },
-        "header_alignment": {
-          "label": "Alignment",
-          "alignment": {
-            "label": "Text alignment",
-            "options": {
-              "left": {
-                "label": "Left"
-              },
-              "center": {
-                "label": "Center"
-              },
-              "right": {
-                "label": "Right"
-              }
-            }
-          }
-        },
-        "header_spacing": {
-          "label": "Section Spacing",
-          "top_spacing": {
-            "label": "Spacing Top"
-          },
-          "bottom_spacing": {
-            "label": "Spacing Bottom"
-          }
-        }
-      }
-    },
     "collection-list": {
       "name": "Collection List",
       "settings": {
@@ -1693,6 +1610,89 @@
         }
       }
     },
+    "page-header": {
+      "name": "Page header",
+      "settings": {
+        "section_height_desktop": {
+          "label": "Desktop Height",
+          "options": {
+            "natural": {
+              "label": "Natural"
+            },
+            "compact": {
+              "label": "Compact (200px)"
+            },
+            "standard": {
+              "label": "Standard (300px)"
+            },
+            "extended": {
+              "label": "Extended (400px)"
+            }
+          }
+        },
+        "section_height_mobile": {
+          "label": "Mobile Height",
+          "options": {
+            "auto": {
+              "label": "Auto"
+            },
+            "compact": {
+              "label": "Compact (150px)"
+            },
+            "standard": {
+              "label": "Standard (200px)"
+            },
+            "extended": {
+              "label": "Extended (250px)"
+            }
+          }
+        },
+        "full_width": {
+          "label": "Full Width"
+        },
+        "page_heading": {
+          "label": "Heading"
+        },
+        "page_image": {
+          "label": "Background Image"
+        },
+        "show_breadcrumbs": {
+          "label": "Show Breadcrumbs"
+        },
+        "text_color": {
+          "label": "Text"
+        },
+        "lazyload_images": {
+          "label": "Enable LazyLoad Images"
+        },
+        "header_alignment": {
+          "label": "Alignment",
+          "alignment": {
+            "label": "Text alignment",
+            "options": {
+              "left": {
+                "label": "Left"
+              },
+              "center": {
+                "label": "Center"
+              },
+              "right": {
+                "label": "Right"
+              }
+            }
+          }
+        },
+        "header_spacing": {
+          "label": "Section Spacing",
+          "top_spacing": {
+            "label": "Spacing Top"
+          },
+          "bottom_spacing": {
+            "label": "Spacing Bottom"
+          }
+        }
+      }
+    },
     "promotional-grid": {
       "name": "Promotional Grid",
       "settings": {
@@ -2023,6 +2023,53 @@
       },
       "presets": {
         "name": "Promotional Block"
+      }
+    },
+    "product-recommendation": {
+      "name": "Product Recommendations",
+      "settings": {
+        "show_dynamic_recommendation": {
+          "info": "Dynamic recommendations use order and product information to change and improve over time. [Learn more](https:\/\/help.shopify.com\/en\/themes\/development\/recommended-products)"
+        },
+        "heading": {
+          "label": "Heading"
+        },
+        "products_to_show": {
+          "label": "Products To Show"
+        },
+        "products_per_row": {
+          "label": "Products Per Row"
+        },
+        "header_alignment": {
+          "label": "Alignment",
+          "alignment": {
+            "label": "Text alignment",
+            "options": {
+              "left": {
+                "label": "Left"
+              },
+              "center": {
+                "label": "Center"
+              },
+              "right": {
+                "label": "Right"
+              }
+            }
+          }
+        },
+        "lazyload_images": {
+          "label": "Enable LazyLoad Images",
+          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+        },
+        "header_spacing": {
+          "label": "Section Spacing",
+          "top_spacing": {
+            "label": "Spacing Top"
+          },
+          "bottom_spacing": {
+            "label": "Spacing Bottom"
+          }
+        }
       }
     },
     "richtext": {
