@@ -1071,7 +1071,7 @@ class ProductRecommendationsElement extends HTMLElement {
 
     // Fetch data based on the extracted attributes
     try {
-      const response = await fetch(`/api/recommendations?section_id=${sectionId}&product_id=${productId}&limit=${recommendationsCount}&intent=${intent}`);
+      const response = await fetch(`${window.themeContent.routes.productRecommendation}?section_id=${sectionId}&product_id=${productId}&limit=${recommendationsCount}&intent=${intent}`);
       if (response.ok) {
         const data = await response.text();
         // Replace the content of this custom element with the fetched data
