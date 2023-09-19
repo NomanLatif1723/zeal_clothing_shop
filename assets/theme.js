@@ -1057,36 +1057,40 @@ initProductmediaSlideShow();
 
 // Product Recommendations
 function initProductRecommendations() {
-  const productRecommendationContainer = document.querySelector('product-recommendations');
-  const intent = productRecommendationContainer.getAttribute('data-intent');
-  const sectionId = productRecommendationContainer.getAttribute('data-section-id');
-  const productId = productRecommendationContainer.getAttribute('data-product-id');
-  const recommendationsCount = productRecommendationContainer.getAttribute('data-limit');
-  async function fetchData() {
-    try {
-      const response = await fetch(`${window.themeContent.routes.productRecommendation}?section_id=${sectionId}&product_id=${productId}&limit=${recommendationsCount}&intent=${intent}`);
-      if (response.ok) {
-        const data = await response.text();
-        return data;
-      } else {
-        console.error(`Failed to fetch data: ${response.status} - ${response.statusText}`);
-        return null;
+  const productRecommendationContainer = document.querySelectorAll('product-recommendations');
+  if (productRecommendationContainer) {
+    productRecommendationContainer.forEach(container => {
+      const intent = container.getAttribute('data-intent');
+      const sectionId = container.getAttribute('data-section-id');
+      const productId = container.getAttribute('data-product-id');
+      const recommendationsCount = container.getAttribute('data-limit');
+      async function fetchData() {
+        try {
+          const response = await fetch(`${window.themeContent.routes.productRecommendation}?section_id=${sectionId}&product_id=${productId}&limit=${recommendationsCount}&intent=${intent}`);
+          if (response.ok) {
+            const data = await response.text();
+            return data;
+          } else {
+            console.error(`Failed to fetch data: ${response.status} - ${response.statusText}`);
+            return null;
+          }
+        } catch (error) {
+          console.error('Error fetching data:', error);
+          return null;
+        }
       }
-    } catch (error) {
-      console.error('Error fetching data:', error);
-      return null;
-    }
+      async function replaceContent() {
+        const data = await fetchData();
+        if (data !== null) {
+          // const containers = document.querySelectorAll('product-recommendations');
+          // containers.forEach(container => {
+            container.innerHTML = data;
+          // });
+        }
+      }
+      replaceContent();
+    })
   }
-  async function replaceContent() {
-    const data = await fetchData();
-    if (data !== null) {
-      const containers = document.querySelectorAll('product-recommendations');
-      containers.forEach(container => {
-        container.innerHTML = data;
-      });
-    }
-  }
-  replaceContent();
 }
 initProductRecommendations();
 // var initProductRecommendations= class extends HTMLElement{
