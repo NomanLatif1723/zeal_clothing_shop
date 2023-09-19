@@ -1140,11 +1140,9 @@ function initProductVariants(){
     variant.addEventListener('change', () => {
       let selectedOptions = []
       document.querySelectorAll('[data-selected-variant]:checked').forEach(option => {
-        option.addEventListener('click', () => {
           selectedOptions.push(option.value);
-        })
-        console.log(selectedOptions);
       })
+        console.log(selectedOptions);
     });
   })
   function _onSelectChange(srcElement) {
