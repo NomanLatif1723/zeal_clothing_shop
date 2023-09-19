@@ -1136,10 +1136,10 @@ function initProductVariants(){
   let variantSelector = document.querySelectorAll('[data-selected-variant]');
   
   variantSelector.forEach(variant => {
-    variant.addEventListener('change', _onSelectChange);
+    variant.addEventListener('change', _onSelectChange(this));
   })
   function _onSelectChange(srcElement) {
-    console.log('hello there')
+    srcElement = 'this is fucking good'
   }
 }
 initProductVariants();
