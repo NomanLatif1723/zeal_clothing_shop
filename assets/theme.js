@@ -1138,10 +1138,12 @@ function initProductVariants(){
   console.log(product);
   variantSelector.forEach(variant => {
     variant.addEventListener('change', () => {
-      document.querySelectorAll('[data-selected-variant]:checked, [data-selected-variant].selected').forEach(option => {
+      let selectedOptions = []
+      document.querySelectorAll('[data-selected-variant]:checked').forEach(option => {
         option.addEventListener('click', () => {
-          console.log('hey');
+          selectedOptions.push(option.value);
         })
+        console.log(selectedOptions);
       })
     });
   })
