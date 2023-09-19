@@ -1,12 +1,117 @@
+<div
+  class="product-recommendations"
+  data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=4&intent=related"
+>
+  {%- if recommendations.performed? and recommendations.products_count > 0 -%}
+    {% if recommendations.intent == 'related' %}
+      <h2>You may also like</h2>
+    {% elsif recommendations.intent == 'complementary' %}
+      <h2>Pair it with</h2>
+    {% endif %}
+
+    <ul>
+      {%- for product in recommendations.products -%}
+        <li class="product">
+          <a href="{{ product.url }}">
+            <img
+              class="product__img"
+              src="{{ product.featured_image | image_url: width: 300, height: 300 }}"
+              alt="{{ product.featured_image.alt }}"
+            />
+
+            <p class="product__title">{{ product.title }}</p>
+            <p class="product__price">{{ product.price | money}}</p>
+          </a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+</div>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Product recommendations",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Dynamic recommendations use order and product information to change and improve over time. [Learn more](https:\/\/help.shopify.com\/en\/themes\/development\/recommended-products)"
+      },
+      {
+        "type": "text",
+        "id": "Heading",
+        "label": "Heading",
+        "default": "You May Also Like"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.featured-collection.settings.header_alignment.label"
+      },
+      {
+        "type": "select",
+        "id": "text_alignment",
+        "label": "t:sections.featured-collection.settings.header_alignment.alignment.label",
+        "options": [
+          {
+            "value": "left",
+            "label": "t:sections.featured-collection.settings.header_alignment.alignment.options.left.label"
+          }, {
+            "value": "center",
+            "label": "t:sections.featured-collection.settings.header_alignment.alignment.options.center.label"
+          }, {
+            "value": "right",
+            "label": "t:sections.featured-collection.settings.header_alignment.alignment.options.right.label"
+          }
+        ],
+        "default": "center"
+      },
+      {
+        "type": "range",
+        "id": "products_to_show",
+        "label": "Products To Show",
+        "min": 2,
+        "max": 10,
+        "step": 1,
+        "default": 4
+      },
+      {
+        "type": "range",
+        "id": "products_per_row",
+        "label": "Products Per Row",
+        "min": 1,
+        "max": 5,
+        "step": 1,
+        "default": 4
+      }
+    ]
   }
 {% endschema %}
 
-{% stylesheet %}
-{% endstylesheet %}
-
 {% javascript %}
+  const handleIntersection = (entries, observer) => {
+    if (!entries[0].isIntersecting) return;
+
+    observer.unobserve(productRecommendationsSection);
+
+    const url = productRecommendationsSection.dataset.url;
+
+    fetch(url)
+      .then(response => response.text())
+      .then(text => {
+        const html = document.createElement('div');
+        html.innerHTML = text;
+        const recommendations = html.querySelector('.product-recommendations');
+
+        if (recommendations && recommendations.innerHTML.trim().length) {
+          productRecommendationsSection.innerHTML = recommendations.innerHTML;
+        }
+      })
+      .catch(e => {
+        console.error(e);
+      });
+  };
+
+  const productRecommendationsSection = document.querySelector('.product-recommendations');
+  const observer = new IntersectionObserver(handleIntersection, {rootMargin: '0px 0px 200px 0px'});
+
+  observer.observe(productRecommendationsSection);
 {% endjavascript %}
