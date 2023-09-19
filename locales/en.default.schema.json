@@ -2070,6 +2070,9 @@
             "label": "Spacing Bottom"
           }
         }
+      },
+      "presets": {
+        "name": "Product Recommendations"
       }
     },
     "richtext": {
