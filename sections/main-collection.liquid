@@ -3,7 +3,6 @@
   assign show_sorting =  section.settings.show_sorting
   assign show_collection_count = section.settings.show_collection_count
   assign show_breadcrumbs = settings.show_breadcrumbs
-  assign textAlignment = section.settings.text_alignment 
   assign products_to_show = section.settings.products_to_show
 
   assign lazyloading = ''
@@ -160,7 +159,7 @@
             {%- for product in collection.products limit: products_to_show -%}
               {%- render 'product-item',
                 section: section,
-                textAlignment: textAlignment,
+                textAlignment: section.settings.text_alignment,
                 products_per_row: section.settings.products_per_row,
                 product: product,
                 collection: collection,
