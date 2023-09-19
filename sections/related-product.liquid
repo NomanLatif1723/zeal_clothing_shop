@@ -52,12 +52,6 @@
             </div>
           {%- endif -%}
         </div>
-        {%- if recommendations.intent == 'related' -%}
-          <h2>You may also like</h2>
-        {%- elsif recommendations.intent == 'complementary' -%}
-          <h2>Pair it with</h2>
-        {%- endif -%}
-    
         <div class="collection-grid">
           {%- for product in recommendations.products limit: product_limit -%}
             {%- render 'product-item',
