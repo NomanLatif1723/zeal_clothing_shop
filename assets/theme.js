@@ -1055,6 +1055,35 @@ function initProductmediaSlideShow() {
 }
 initProductmediaSlideShow();
 
+// Product Recommendations 
+var initProductRecommendations= class extends HTMLElement{
+  async callback() {
+    const responce = await fetch(`${window.themeContent.routes.productRecommendation}?section_id=${this.sectionId}&product_id=${this.productId}&limit=${this.recommendationsCount}&intent=${this.intent}`);
+    const div = document.createElement('div');
+    const productRecommendedEl = div.querySelector('product-recommendations');
+    if (productRecommendedEl.hasChildNodes()) {
+      this.innerHTML = productRecommendedEl.innerHTML;
+    } else {
+      if (this.intent === 'complementory') {
+        this.remove();
+      }
+    }
+  }
+  get sectionId() {
+    return this.dataset.sectionId;
+  }
+  get productId() {
+    return this.dataset.productId;
+  }
+  get recommendationsCount() {
+    return this.dataset.limit;
+  }
+  get intent() {
+    return this.dataset.intent;
+  }
+};
+window.customElements.define('product-recommendations',initProductRecommendations);
+
 // Product Variants js
 function initProductVariants(){
   let variantSelector = document.querySelectorAll('[data-selected-variant]');
