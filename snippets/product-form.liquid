@@ -64,19 +64,25 @@
       {{ product.description | truncatewords: 100 }}
     </div>
     {%- when 'full_description' -%}
-      <div class="product__tabs" {{ block.shopify_attributes }}>
-        <div class="product-tab__container">
-          <div class="product-tab__header">
-            {%- if block.settings.description_tab_heading != blank -%}
-              <h4>{{ block.settings.description_tab_heading }}</h4> 
-            {%- endif -%}
-            {%- render 'icon-arrow-down' -%}
-          </div>
-          <div class="product-tab__content rte hidden">
-            {{ product.description }}
+      {%- if section.settings.description_as_tab -%}
+        <div class="product__tabs" {{ block.shopify_attributes }}>
+          <div class="product-tab__container">
+            <div class="product-tab__header">
+              {%- if block.settings.description_tab_heading != blank -%}
+                <h4>{{ block.settings.description_tab_heading }}</h4> 
+              {%- endif -%}
+              {%- render 'icon-arrow-down' -%}
+            </div>
+            <div class="product-tab__content rte hidden">
+              {{ product.description }}
+            </div>
           </div>
         </div>
-      </div>
+      {%- else -%}
+        <div class="product__block">
+          {{ product.description }}
+        </div>
+      {%- endif -%}
     {%- when 'tags' -%}
     <div class="product__block product__content rte" {{ block.shopify_attributes }}>
       <div class="product__content-title">{{ 'products.tags.title' | t }}</div>
