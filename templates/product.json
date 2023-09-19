@@ -156,7 +156,7 @@
       "settings": {
         "heading": "You May Also Like",
         "text_alignment": "center",
-        "products_to_show": 8,
+        "products_to_show": 4,
         "products_per_row": 4,
         "lazyload_images": true,
         "margin_top": 60,
