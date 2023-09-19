@@ -17,8 +17,7 @@
 {%- endstyle -%}
 <div class="main__section-{{ section.id }}">
   <div class="page__width">
-    <div class="product-recommendations" data-intent="related" data-section-id="{{ section.id }}" data-product-id="{{ product.id }}" data-limit="{{ products_to_show }}"
-      data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ products_to_show }}&intent=related">
+    <div class="product-recommendations" data-intent="related" data-section-id="{{ section.id }}" data-product-id="{{ product.id }}" data-limit="{{ products_to_show }}">
       {%- if recommendations.performed? and recommendations.products_count > 0 -%}
         <div class="collection__header text__align-{{ section.settings.text_alignment }}">
           {%- if section.settings.heading != blank -%}
@@ -45,35 +44,7 @@
     </div>
   </div>
 </div>
-{% javascript %}
-  const handleIntersection = (entries, observer) => {
-    if (!entries[0].isIntersecting) return;
 
-    observer.unobserve(productRecommendationsSection);
-
-    const url = productRecommendationsSection.dataset.url;
-
-    fetch(url)
-      .then(response => response.text())
-      .then(text => {
-        const html = document.createElement('div');
-        html.innerHTML = text;
-        const recommendations = html.querySelector('.product-recommendations');
-
-        if (recommendations && recommendations.innerHTML.trim().length) {
-          productRecommendationsSection.innerHTML = recommendations.innerHTML;
-        }
-      })
-      .catch(e => {
-        console.error(e);
-      });
-  };
-
-  const productRecommendationsSection = document.querySelector('.product-recommendations');
-  const observer = new IntersectionObserver(handleIntersection, {rootMargin: '0px 0px 200px 0px'});
-
-  observer.observe(productRecommendationsSection);
-{% endjavascript %}
 {% schema %}
   {
     "name": "t:sections.product-recommendation.name",
