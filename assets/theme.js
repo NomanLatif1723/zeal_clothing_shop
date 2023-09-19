@@ -1060,7 +1060,7 @@ initProductCollapsibles();
 // initProductmediaSlideShow();
 function initProductmediaSlideShow() {
   let productmediaWrapper = document.querySelectorAll('.product-grid');
-  let swiperThumbs; // Declare swiperThumbs in a higher scope
+  let swiperThumbs;
   productmediaWrapper.forEach(wrapper => {
     let id = wrapper.dataset.sectionId;
     let MediaSliderContainer = wrapper.querySelector('#product__media-' + id);
@@ -1101,7 +1101,7 @@ function initProductmediaSlideShow() {
           prevEl: '.swiper-button-prev.swiper-button-' + id
         },
         thumbs: {
-          swiper: swiperThumbs, // Use the swiperThumbs here
+          swiper: swiperThumbs
         },
       }
       let mediaSwiper = new Swiper(MediaSliderContainer, mediaSwiperOptions);
