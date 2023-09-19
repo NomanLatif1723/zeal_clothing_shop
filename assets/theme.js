@@ -1056,18 +1056,26 @@ function initProductmediaSlideShow() {
 initProductmediaSlideShow();
 
 // Product Recommendations
-var initProductRecommendations = class extends HTMLElement {
+// JavaScript code to handle the custom element
+class ProductRecommendationsElement extends HTMLElement {
   constructor() {
     super();
   }
 
   async connectedCallback() {
+    // Extract data attributes from the custom element
+    const intent = this.getAttribute('data-intent');
+    const sectionId = this.getAttribute('data-section-id');
+    const productId = this.getAttribute('data-product-id');
+    const recommendationsCount = this.getAttribute('data-limit');
+
+    // Fetch data based on the extracted attributes
     try {
-      const response = await fetch(`${window.themeContent.routes.productRecommendation}?section_id=${this.sectionId}&product_id=${this.productId}&limit=${this.recommendationsCount}&intent=${this.intent}`);
+      const response = await fetch(`/api/recommendations?section_id=${sectionId}&product_id=${productId}&limit=${recommendationsCount}&intent=${intent}`);
       if (response.ok) {
         const data = await response.text();
+        // Replace the content of this custom element with the fetched data
         this.innerHTML = data;
-        console.log(data);
       } else {
         console.error(`Failed to fetch data: ${response.status} - ${response.statusText}`);
       }
@@ -1075,25 +1083,10 @@ var initProductRecommendations = class extends HTMLElement {
       console.error('Error fetching data:', error);
     }
   }
+}
 
-  get sectionId() {
-    return this.dataset.sectionId;
-  }
+customElements.define('product-recommendations', ProductRecommendationsElement);
 
-  get productId() {
-    return this.dataset.productId;
-  }
-
-  get recommendationsCount() {
-    return this.dataset.limit;
-  }
-
-  get intent() {
-    return this.dataset.intent;
-  }
-};
-
-customElements.define('product-recommendations', initProductRecommendations);
 
 
 
