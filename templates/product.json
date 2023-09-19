@@ -157,7 +157,7 @@
         "heading": "You May Also Like",
         "text_alignment": "center",
         "products_to_show": 10,
-        "products_per_row": 4,
+        "products_per_row": 3,
         "lazyload_images": false,
         "margin_top": 16,
         "margin_bottom": 16
