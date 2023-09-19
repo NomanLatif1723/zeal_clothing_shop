@@ -1139,7 +1139,8 @@ function initProductVariants(){
     variant.addEventListener('change', _onSelectChange(this));
   })
   function _onSelectChange(srcElement) {
-    srcElement = 'this is fucking good'
+    srcElement = 'this is fucking good';
+    return;
   }
 }
 initProductVariants();
