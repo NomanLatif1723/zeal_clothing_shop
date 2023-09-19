@@ -1095,7 +1095,7 @@ var initProductRecommendations = class extends HTMLElement {
   }
 };
 
-customElements.define('product-recommendations', initProductRecommendations);
+window.customElements.define('product-recommendations', initProductRecommendations);
 
 
 // var initProductRecommendations= class extends HTMLElement{
