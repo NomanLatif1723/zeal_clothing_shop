@@ -1071,6 +1071,7 @@ class ProductRecommendationsElement extends HTMLElement {
 
     // Fetch data based on the extracted attributes
     try {
+      console.log('connectedCallback called');
       const response = await fetch(`${window.themeContent.routes.productRecommendation}?section_id=${sectionId}&product_id=${productId}&limit=${recommendationsCount}&intent=${intent}`);
       if (response.ok) {
         const data = await response.text();
