@@ -1049,14 +1049,10 @@ function initProductmediaSlideShow() {
           nextEl: '.swiper-button-next.swiper-button-' + id,
           prevEl: '.swiper-button-prev.swiper-button-' + id
         },
-        
-        // thumbs: {
-        //     swiper: swiperThumbs,
-        //   },
-      }
-        mediaSwiperOptions.thumbs = {
+        thumbs: {
           swiper: swiperThumbs,
-        }
+        },
+      }
       let mediaSwiper = new Swiper(MediaSliderContainer, mediaSwiperOptions);
     }
   })
