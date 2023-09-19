@@ -1057,36 +1057,70 @@ initProductmediaSlideShow();
 
 // Product Recommendations
 // JavaScript code to handle the custom element
-class ProductRecommendationsElement extends HTMLElement {
-  constructor() {
-    super();
-  }
-
-  async connectedCallback() {
-    // Extract data attributes from the custom element
-    const intent = this.getAttribute('data-intent');
-    const sectionId = this.getAttribute('data-section-id');
-    const productId = this.getAttribute('data-product-id');
-    const recommendationsCount = this.getAttribute('data-limit');
-
-    // Fetch data based on the extracted attributes
+// class ProductRecommendationsElement extends HTMLElement {
+//   constructor() {
+//     super();
+//   }
+//   async connectedCallback() {
+//     // Extract data attributes from the custom element
+//     const intent = this.getAttribute('data-intent');
+//     const sectionId = this.getAttribute('data-section-id');
+//     const productId = this.getAttribute('data-product-id');
+//     const recommendationsCount = this.getAttribute('data-limit');
+//     try {
+//       console.log('connectedCallback called');
+//       const response = await fetch(`${window.themeContent.routes.productRecommendation}?section_id=${sectionId}&product_id=${productId}&limit=${recommendationsCount}&intent=${intent}`);
+//       if (response.ok) {
+//         const data = await response.text();
+//         // Replace the content of this custom element with the fetched data
+//         this.innerHTML = data;
+//       } else {
+//         console.error(`Failed to fetch data: ${response.status} - ${response.statusText}`);
+//       }
+//     } catch (error) {
+//       console.error('Error fetching data:', error);
+//     }
+//   }
+// }
+// customElements.define('product-recommendations', ProductRecommendationsElement);
+function fetchAndReplaceProductRecommendations(intent, sectionId, productId, recommendationsCount) {
+  const productRecommendationContainer = document.querySelector('product-recommendation');
+  const intent = productRecommendationContainer.getAttribute('data-intent');
+  const sectionId = productRecommendationContainer.getAttribute('data-section-id');
+  const productId = productRecommendationContainer.getAttribute('data-product-id');
+  const recommendationsCount = productRecommendationContainer.getAttribute('data-limit');
+  async function fetchData() {
     try {
-      console.log('connectedCallback called');
       const response = await fetch(`${window.themeContent.routes.productRecommendation}?section_id=${sectionId}&product_id=${productId}&limit=${recommendationsCount}&intent=${intent}`);
       if (response.ok) {
         const data = await response.text();
-        // Replace the content of this custom element with the fetched data
-        this.innerHTML = data;
+        return data;
       } else {
         console.error(`Failed to fetch data: ${response.status} - ${response.statusText}`);
+        return null;
       }
     } catch (error) {
       console.error('Error fetching data:', error);
+      return null;
     }
   }
+
+  async function replaceContent() {
+    const data = await fetchData();
+    if (data !== null) {
+      const containers = document.querySelectorAll('.product-recommendations');
+      containers.forEach(container => {
+        container.innerHTML = data;
+      });
+    }
+  }
+
+  // Call the function to replace content
+  replaceContent();
 }
 
-customElements.define('product-recommendations', ProductRecommendationsElement);
+// Example usage:
+fetchAndReplaceProductRecommendations(intent, sectionId, productId, recommendationsCount);
 
 
 
