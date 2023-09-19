@@ -1092,7 +1092,7 @@ var initProductRecommendations = class extends HTMLElement {
   }
 };
 
-window.customElements.define('product-recommendations', initProductRecommendations);
+window.define('product-recommendations', initProductRecommendations);
 
 // var initProductRecommendations= class extends HTMLElement{
 //   async callback() {
