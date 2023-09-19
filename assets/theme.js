@@ -1056,8 +1056,8 @@ function initProductmediaSlideShow() {
       }
       if (ThumbnailSliderContainer) {
         mediaSwiperOptions.thumbs = {
-          swiper: swiperThumbs
-        };
+          swiper: swiperThumbs,
+        }
       }
       let mediaSwiper = new Swiper(MediaSliderContainer, mediaSwiperOptions);
     }
