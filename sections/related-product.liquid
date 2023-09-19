@@ -17,7 +17,7 @@
 {%- endstyle -%}
 <div class="main__section-{{ section.id }}">
   <div class="page__width">
-    <div class="product-recommendations" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=4&intent=related">
+    <div class="product-recommendations" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ products_per_row }}&intent=related">
       {%- if recommendations.performed? and recommendations.products_count > 0 -%}
         <div class="collection__header text__align-{{ section.settings.text_alignment }}">
           {%- if section.settings.heading != blank -%}
