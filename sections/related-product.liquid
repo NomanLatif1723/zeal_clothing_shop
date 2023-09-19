@@ -21,10 +21,8 @@
       <div class="collection__header text__align-{{ section.settings.text_alignment }}">
         {%- if section.settings.heading != blank -%}
           <div class="main__heading">
-            {%- if recommendations.intent == 'related' -%}
+            {%- if section.settings.heading -%}
               <h2>{{ section.settings.heading }}</h2>
-            {%- elsif recommendations.intent == 'complementary' -%}
-              <h2>Pair it with</h2>
             {%- endif -%}
           </div>
         {%- endif -%}
