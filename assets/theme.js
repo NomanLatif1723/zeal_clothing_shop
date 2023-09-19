@@ -1066,7 +1066,10 @@ var initProductRecommendations = class extends HTMLElement {
       const response = await fetch(`${window.themeContent.routes.productRecommendation}?section_id=${this.sectionId}&product_id=${this.productId}&limit=${this.recommendationsCount}&intent=${this.intent}`);
       if (response.ok) {
         const data = await response.text();
-        this.innerHTML = data;
+        const containers = document.querySelectorAll('.product-recommendations'); // Find all containers with the class
+        containers.forEach(container => {
+          container.innerHTML = data; // Replace the content of each container
+        });
       } else {
         console.error(`Failed to fetch data: ${response.status} - ${response.statusText}`);
       }
@@ -1092,7 +1095,8 @@ var initProductRecommendations = class extends HTMLElement {
   }
 };
 
-window.customElements.define('.product-recommendations', initProductRecommendations);
+customElements.define('product-recommendations', initProductRecommendations);
+
 
 // var initProductRecommendations= class extends HTMLElement{
 //   async callback() {
