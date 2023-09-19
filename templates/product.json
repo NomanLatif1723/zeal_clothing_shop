@@ -150,6 +150,11 @@
         "margin_bottom": 60
       }
     },
+    "related-products": {
+      "type": "related-product",
+      "settings": {
+      }
+    },
     "01f8fcff-e28d-485b-8b95-b9fa72c6042b": {
       "type": "promotional-grid",
       "blocks": {
@@ -178,6 +183,7 @@
   },
   "order": [
     "main",
+    "related-products",
     "01f8fcff-e28d-485b-8b95-b9fa72c6042b"
   ]
 }
