@@ -1183,7 +1183,7 @@ function initProductVariants(){
         
       } 
       function updateButtons() {
-        var add = document.querySelector('name="add"');
+        var add = document.querySelector('[name="add"]');
         if(matchedVariant.available){
           add.textContent = "Add To cart";
           add.disabled = false;
