@@ -1130,27 +1130,27 @@ initProductRecommendations();
 // customElements.define('product-recommendations',initProductRecommendations);
 
 // Product Variants js
-function initProductVariants(){
-  let masterVariantSelector = document.querySelector('.product-selected__variants');
-  let productSalePrice = document.querySelector('[data-sale-price]');
-  let productRegularPrice = document.querySelector('[data-regular-price]');
-  let productSku = document.querySelector('[data-sku]');
-  let productInStock = document.querySelector('[data-availability]');
-  let productAddToCartBtn = document.querySelector('[data-add-to-cart]');
-  let variantSelector = document.querySelectorAll('[data-selected-variant]');
-  let product = window.themeContent.routes.product;
-  console.log(product);
-  variantSelector.forEach(variant => {
-    variant.addEventListener('change', () => {
-      let selectedOptions = []
-      document.querySelectorAll('[data-selected-variant]:checked').forEach(option => {
-          selectedOptions.push(option.value);
-      })
-        console.log(selectedOptions);
-    });
-  })
-}
-initProductVariants();
+// function initProductVariants(){
+//   let masterVariantSelector = document.querySelector('.product-selected__variants');
+//   let productSalePrice = document.querySelector('[data-sale-price]');
+//   let productRegularPrice = document.querySelector('[data-regular-price]');
+//   let productSku = document.querySelector('[data-sku]');
+//   let productInStock = document.querySelector('[data-availability]');
+//   let productAddToCartBtn = document.querySelector('[data-add-to-cart]');
+//   let variantSelector = document.querySelectorAll('[data-selected-variant]');
+//   let product = window.themeContent.routes.product;
+//   console.log(product);
+//   variantSelector.forEach(variant => {
+//     variant.addEventListener('change', () => {
+//       let selectedOptions = []
+//       document.querySelectorAll('[data-selected-variant]:checked').forEach(option => {
+//           selectedOptions.push(option.value);
+//       })
+//         console.log(selectedOptions);
+//     });
+//   })
+// }
+// initProductVariants();
 
 class VariantSelects extends HTMLElement {
   constructor() {
@@ -1160,22 +1160,22 @@ class VariantSelects extends HTMLElement {
   onVariantChange() {
     console.log("variant change");
     this.updateOptions();
-    this.updateMasterId();
-    this.toggleAddButton(true, '', false);
-    this.updatePickupAvailability();
-    this.removeErrorMessage();
-    this.updateVariantStatuses();
+    // this.updateMasterId();
+    // this.toggleAddButton(true, '', false);
+    // this.updatePickupAvailability();
+    // this.removeErrorMessage();
+    // this.updateVariantStatuses();
 
-    if (!this.currentVariant) {
-      this.toggleAddButton(true, '', true);
-      this.setUnavailable();
-    } else {
-      this.updateMedia();
-      this.updateURL();
-      this.updateVariantInput();
-      this.renderProductInfo();
-      this.updateShareUrl();
-    }
+    // if (!this.currentVariant) {
+    //   this.toggleAddButton(true, '', true);
+    //   this.setUnavailable();
+    // } else {
+    //   this.updateMedia();
+    //   this.updateURL();
+    //   this.updateVariantInput();
+    //   this.renderProductInfo();
+    //   this.updateShareUrl();
+    // }
   }
 
   updateOptions() {
