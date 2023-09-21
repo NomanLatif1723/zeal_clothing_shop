@@ -1285,27 +1285,19 @@ class VariantSelects extends HTMLElement {
         if (this.currentVariant.id !== requestedVariantId) return;
 
         const html = new DOMParser().parseFromString(responseText, 'text/html');
-        const destination = document.getElementById(`price-${this.dataset.section}`);
-        const source = html.getElementById(
-          `price-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`
-        );
-        const skuSource = html.getElementById(
-          `Sku-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`
-        );
-        const skuDestination = document.getElementById(`Sku-${this.dataset.section}`);
-        const inventorySource = html.getElementById(
-          `Inventory-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`
-        );
-        const inventoryDestination = document.getElementById(`Inventory-${this.dataset.section}`);
+        const destination = document.querySelector('[data-sale-price]');
+        const source = html.querySelector('[data-sale-price]');
+        const skuSource = html.querySelector('[data-sku]');
+        const skuDestination = document.querySelector('[data-sale-price]');
+        const inventorySource = html.querySelector('[data-sale-price]');
+        const inventoryDestination = document.querySelector('[data-inventory]');
 
-        const volumePricingSource = html.getElementById(
-          `Volume-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`
-        );
+        // const volumePricingSource = html.querySelector();
 
-        const pricePerItemDestination = document.getElementById(`Price-Per-Item-${this.dataset.section}`);
-        const pricePerItemSource = html.getElementById(`Price-Per-Item-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
+        // const pricePerItemDestination = document.querySelector(`Price-Per-Item-${this.dataset.section}`);
+        // const pricePerItemSource = html.querySelector(`Price-Per-Item-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
 
-        const volumePricingDestination = document.getElementById(`Volume-${this.dataset.section}`);
+        // const volumePricingDestination = document.querySelector(`Volume-${this.dataset.section}`);
 
         if (source && destination) destination.innerHTML = source.innerHTML;
         if (inventorySource && inventoryDestination) inventoryDestination.innerHTML = inventorySource.innerHTML;
@@ -1323,14 +1315,14 @@ class VariantSelects extends HTMLElement {
           pricePerItemDestination.classList.toggle('visibility-hidden', pricePerItemSource.classList.contains('visibility-hidden'));
         }
 
-        const price = document.getElementById(`price-${this.dataset.section}`);
+        const price = document.querySelector('[data-sale-price]');
 
         if (price) price.classList.remove('visibility-hidden');
 
         if (inventoryDestination)
           inventoryDestination.classList.toggle('visibility-hidden', inventorySource.innerText === '');
 
-        const addButtonUpdated = html.getElementById(`ProductSubmitButton-${sectionId}`);
+        const addButtonUpdated = html.querySelector('[name="add"]');
         this.toggleAddButton(
           addButtonUpdated ? addButtonUpdated.hasAttribute('disabled') : true,
           window.variantStrings.soldOut
