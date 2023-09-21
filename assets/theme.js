@@ -1364,16 +1364,15 @@ class VariantSelects extends HTMLElement {
   }
 
   setUnavailable() {
-    const button = document.getElementById(`product-form-${this.dataset.section}`);
+    const button = document.querySelector('.product__form');
     const addButton = button.querySelector('[name="add"]');
-    const addButtonText = button.querySelector('[name="add"] > span');
-    const price = document.getElementById(`price-${this.dataset.section}`);
-    const inventory = document.getElementById(`Inventory-${this.dataset.section}`);
-    const sku = document.getElementById(`Sku-${this.dataset.section}`);
-    const pricePerItem = document.getElementById(`Price-Per-Item-${this.dataset.section}`);
+    const price = document.querySelector('[data-sale-price]');
+    const inventory = document.getElementById('[data-inventory]');
+    const sku = document.getElementById('[data-sku]');
+    // const pricePerItem = document.getElementById(`Price-Per-Item-${this.dataset.section}`);
 
     if (!addButton) return;
-    addButtonText.textContent = window.variantStrings.unavailable;
+    addButton.textContent = window.variantStrings.unavailable;
     if (price) price.classList.add('visibility-hidden');
     if (inventory) inventory.classList.add('visibility-hidden');
     if (sku) sku.classList.add('visibility-hidden');
