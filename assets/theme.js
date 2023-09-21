@@ -73,6 +73,7 @@ function announcementTimer(hours, minutes, id) {
     
     const timerInterval = setInterval(function() {
         // Calculate remaining hours, minutes, and seconds
+      const timerContainer = wrapper.querySelector('.main__timer');
         const remainingHours = Math.floor(remainingMilliseconds / 3600000);
         const remainingMinutes = Math.floor((remainingMilliseconds % 3600000) / 60000);
         const remainingSeconds = Math.floor((remainingMilliseconds % 60000) / 1000);
