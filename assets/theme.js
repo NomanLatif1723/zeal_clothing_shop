@@ -1191,7 +1191,7 @@ class VariantSelects extends HTMLElement {
     this.updateVariantStatuses();
 
     if (!this.currentVariant) {
-      this.toggleAddButton(true, '', true);
+      this.toggleAddButton(this.currentVariant);
       this.setUnavailable();
     } else {
       this.updateMedia();
