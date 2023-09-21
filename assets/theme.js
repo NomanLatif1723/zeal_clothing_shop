@@ -1144,28 +1144,13 @@ function initProductVariants(){
   variantSelector.forEach(variant => {
     variant.addEventListener('change', () => {
       let selectedOptions = []
-      updateOptions(selectedOptions);
+      updateOptions();
       updateMasterVariant();
-
       
-
-      // Change the price
-      
-
-       // change the badges
-      
-
-      // Change the Image 
-       
-      
-      // Change the Add To Cart
-      
-
     });
-  })
-  function updateOptions(options) {
+  function updateOptions() {
     document.querySelectorAll('[data-selected-variant]:checked').forEach(option => {
-        options.push(option.value);
+        selectedOptions.push(option.value);
     })
   }
   function updateMasterVariant() {
@@ -1232,6 +1217,8 @@ function initProductVariants(){
       document.querySelector('.product_image_thumbs li').firstElementChild.setAttribute('src', matchedVariant.featured_image.src);
     }
   }
+  })
+  
   
 }
 initProductVariants();
