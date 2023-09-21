@@ -1203,13 +1203,6 @@ class VariantSelects extends HTMLElement {
     mediaGalleries.forEach((mediaGallery) =>
       mediaGallery.setActiveMedia(`${this.dataset.section}-${this.currentVariant.media.id}`, true)
     );
-    // if (!this.currentVariant) return;
-    // if (!this.currentVariant.media) return;
-
-    // const mediaGalleries = document.querySelectorAll(`#product__media-${this.dataset.section}`);
-    // mediaGalleries.forEach((mediaGallery) =>
-    //   mediaGallery.setActiveMedia(`${this.dataset.section}-${this.currentVariant.media.id}`, true)
-    // );
 
     // const modalContent = document.querySelector(`#ProductModal-${this.dataset.section} .product-media-modal__content`);
     // if (!modalContent) return;
@@ -1220,6 +1213,17 @@ class VariantSelects extends HTMLElement {
   updateURL() {
     if (!this.currentVariant || this.dataset.updateUrl === 'false') return;
     window.history.replaceState({}, '', `${this.dataset.url}?variant=${this.currentVariant.id}`);
+  }
+
+   updateVariantInput() {
+    const productForms = document.querySelectorAll(
+      `#addToCartForm-${this.dataset.section}`
+    );
+    productForms.forEach((productForm) => {
+      const input = productForm.querySelector('input[name="id"]');
+      input.value = this.currentVariant.id;
+      input.dispatchEvent(new Event('change', { bubbles: true }));
+    });
   }
 
   toggleAddButton(currentVariant) {
