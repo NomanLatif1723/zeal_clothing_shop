@@ -1191,23 +1191,23 @@ class VariantSelects extends HTMLElement {
     });
   }
 
-  // toggleAddButton(disable = true, text, modifyClass = true) {
-  //   const productForm = document.getElementById(`addToCartForm-${this.dataset.section}`);
-  //   if (!productForm) return;
-  //   const addButton = productForm.querySelector('[name="add"]');
-  //   const addButtonText = productForm.querySelector('[name="add"] > span');
-  //   if (!addButton) return;
+  toggleAddButton(disable = true, text, modifyClass = true) {
+    const productForm = document.getElementById(`addToCartForm-${this.dataset.section}`);
+    if (!productForm) return;
+    const addButton = productForm.querySelector('[name="add"]');
+    const addButtonText = productForm.querySelector('[name="add"] > span');
+    if (!addButton) return;
 
-  //   if (disable) {
-  //     addButton.setAttribute('disabled', 'disabled');
-  //     if (text) addButtonText.textContent = text;
-  //   } else {
-  //     addButton.removeAttribute('disabled');
-  //     addButtonText.textContent = window.variantStrings.addToCart;
-  //   }
+    if (disable) {
+      addButton.setAttribute('disabled', 'disabled');
+      if (text) addButtonText.textContent = text;
+    } else {
+      addButton.removeAttribute('disabled');
+      addButtonText.textContent = window.variantStrings.addToCart;
+    }
 
-  //   if (!modifyClass) return;
-  // }
+    if (!modifyClass) return;
+  }
 
   getVariantData() {
     this.variantData = this.variantData || JSON.parse(this.querySelector('[type="application/json"]').textContent);
