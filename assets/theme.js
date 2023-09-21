@@ -1160,7 +1160,7 @@ class VariantSelects extends HTMLElement {
   onVariantChange() {
     this.updateOptions();
     this.updateMasterId();
-    this.toggleAddButton(true, '', false);
+    this.toggleAddButton();
     // this.updatePickupAvailability();
     // this.removeErrorMessage();
     // this.updateVariantStatuses();
@@ -1191,7 +1191,7 @@ class VariantSelects extends HTMLElement {
     });
   }
 
-  toggleAddButton(disable = true, text) {
+  toggleAddButton() {
     const formid = document.querySelector('.product__form').dataset.sectionId;
     const productForm = document.querySelector('.product__form');
     if (!productForm) return;
@@ -1199,9 +1199,9 @@ class VariantSelects extends HTMLElement {
     // const addButtonText = productForm.querySelector('[name="add"]');
     if (!addButton) return;
 
-    if (disable) {
+    if (currentVariant.available) {
       addButton.setAttribute('disabled', 'disabled');
-      if (text) addButton.textContent = text;
+      addButton.textContent = text;
     } else {
       addButton.removeAttribute('disabled');
       addButton.textContent = 'Sold Out';
