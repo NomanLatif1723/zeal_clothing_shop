@@ -45,7 +45,7 @@ function formatMoney(cents, format) {
 };
   
 // Announcement Bar Timer 
-function announcementTimer(hours, minutes, id) {
+function announcementTimer(hours, minutes, id, timerContainer) {
     // Get the stored start time for this announcement bar
     let startTime = localStorage.getItem(`announcementStartTime_${id}`);
     
@@ -73,7 +73,6 @@ function announcementTimer(hours, minutes, id) {
     
     const timerInterval = setInterval(function() {
         // Calculate remaining hours, minutes, and seconds
-      const timerContainer = wrapper.querySelector('.main__timer');
         const remainingHours = Math.floor(remainingMilliseconds / 3600000);
         const remainingMinutes = Math.floor((remainingMilliseconds % 3600000) / 60000);
         const remainingSeconds = Math.floor((remainingMilliseconds % 60000) / 1000);
@@ -106,10 +105,11 @@ function initAnnouncementTimer() {
             const hours = timerContainer.getAttribute('data-hour');
             const minutes = timerContainer.getAttribute('data-minutes');
             
-            announcementTimer(hours, minutes, id);
+            announcementTimer(hours, minutes, id, timerContainer);
         }
     });
 }
+
 
 // function initAnnouncementTimer() {
 //   // Get All Announcement Bar Wrappers 
