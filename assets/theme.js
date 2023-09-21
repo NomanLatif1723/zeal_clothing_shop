@@ -1183,14 +1183,14 @@ function initProductVariants(){
         
       } 
       function updateButtons() {
-        var add = document.querySelector('[name="add"]');
+        var addButton = document.querySelector('[name="add"]');
         if(matchedVariant.available){
-          add.textContent = "Add To cart";
-          add.disabled = false;
+          addButton.textContent = "Add To cart";
+          addButton.disabled = false;
         }
         else{
-          add.textContent = "Sold Out";
-          add.disabled = true;
+          addButton.textContent = "Sold Out";
+          addButton.disabled = true;
         }
       }
       function updateAvailability() {
