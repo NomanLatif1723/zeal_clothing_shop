@@ -7,15 +7,8 @@
             <fieldset class="product-form__input">
               <legend class="product-form__label"><strong>{{ option.name }}</strong> ({{ option.selected_value }})</legend>
               {% for value in option.values %}
-                <input
-                  type="radio"
-                  data-selected-variant
-                  form="{{ product_form_id }}"
-                  name="{{ option.name }}"
-                  value="{{ value }}"
-                  {% if option.selected_value == value %}checked{% endif%}
-                  id="{{ option.name }}-{{ value }}">
-                <label for="{{ option.name }}-{{ value }}">
+                <input type="radio" data-selected-variant form="{{ product_form_id }}" name="{{ option.name }}" value="{{ value }}" {% if option.selected_value == value %}checked{% endif%} id="{{ option.name }}-{{ value }}">
+                  <label for="{{ option.name }}-{{ value }}">
                   {{ value }}
                 </label>
               {% endfor %}
