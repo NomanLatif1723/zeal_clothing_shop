@@ -1156,17 +1156,16 @@ function initProductVariants(){
         }
       });
       
-      updateMasterVariant();
+      updateMasterVariant(matchedVariant);
       updateButtons();
       function updateOptions() {
         document.querySelectorAll('[data-selected-variant]:checked').forEach(option => {
         selectedOptions.push(option.value);
       })
     }
-      function updateMasterVariant() {
-        
+      function updateMasterVariant(currentVariant) {
         // Change the variant id
-        document.querySelector('.selected-variant__id').value= matchedVariant.id;
+        document.querySelector('.selected-variant__id').value= currentVariant.id;
       }
       function updateUrl() {
         let url = new URLParse(window.location.href,true);
