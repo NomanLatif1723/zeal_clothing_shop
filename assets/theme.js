@@ -1192,7 +1192,7 @@ class VariantSelects extends HTMLElement {
   }
 
   toggleAddButton(disable = true, text, modifyClass = true) {
-    const productForm = document.getElementById(`addToCartForm-${this.dataset.section}`);
+    const productForm = document.getElementById(`addToCartForm-${this.dataset.sectionId}`);
     if (!productForm) return;
     const addButton = productForm.querySelector('[name="add"]');
     // const addButtonText = productForm.querySelector('[name="add"]');
