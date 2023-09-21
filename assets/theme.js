@@ -56,6 +56,7 @@ function announcementTimer(hours, minutes, id, timerContainer) {
   const timeDifference = currentTime - startTime;
   let remainingMilliseconds = totalMilliseconds - timeDifference;
   if (remainingMilliseconds <= 0) {
+      timerContainer.innerHTML = "00 : 00 : 00";
       console.log("Invalid timer duration");
       return;
   }
