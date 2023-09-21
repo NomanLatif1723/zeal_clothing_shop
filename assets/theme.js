@@ -1195,7 +1195,7 @@ class VariantSelects extends HTMLElement {
     const productForm = document.getElementById(`addToCartForm-${this.dataset.section}`);
     if (!productForm) return;
     const addButton = productForm.querySelector('[name="add"]');
-    const addButtonText = productForm.querySelector('[name="add"] > span');
+    const addButtonText = productForm.querySelector('[name="add"]');
     if (!addButton) return;
 
     if (disable) {
