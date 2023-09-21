@@ -60,10 +60,10 @@ function announcementTimer(hours, minutes, id, timerContainer) {
     
     // Calculate elapsed time
     const currentTime = Date.now();
-    const elapsedTime = currentTime - startTime;
+    const timeDifference = currentTime - startTime;
     
     // Calculate remaining time
-    let remainingMilliseconds = totalMilliseconds - elapsedTime;
+    let remainingMilliseconds = totalMilliseconds - timeDifference;
     
     // Ensure the timer is valid
     if (remainingMilliseconds <= 0) {
