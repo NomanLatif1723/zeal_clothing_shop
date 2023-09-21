@@ -23,7 +23,9 @@
               height="{{ media.height }}"
               loading="lazy"
               sizes="{{ sizes }}"
-              alt="{{ media.alt }}" />
+              alt="{{ media.alt }}"
+              data-media-id="{{ media.id }}"
+              />
           </div>
         {% endif %}
       {%- endfor -%}
