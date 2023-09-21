@@ -1144,7 +1144,7 @@ function initProductVariants(){
   variantSelector.forEach(variant => {
     variant.addEventListener('change', () => {
       let selectedOptions = []
-      updateOptions();
+      updateOptions(selectedOptions);
       updateMasterVariant();
 
       // Change the url
@@ -1206,7 +1206,7 @@ function initProductVariants(){
 
     });
   })
-  function updateOptions() {
+  function updateOptions(selectedOptions) {
     document.querySelectorAll('[data-selected-variant]:checked').forEach(option => {
         selectedOptions.push(option.value);
     })
