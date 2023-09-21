@@ -163,7 +163,7 @@
         </div>
       </div>
     {%- when 'buy_buttons' -%}
-      {%- form 'product', product, id: product_form_id, class: "product__form", data-section-id: section.id -%}
+      {%- form 'product', product, id: product_form_id, class: "product__form-" | append: section.id, data-section-id: section.id -%}
         <div class="product__block product__buy-buttons" {{ block.shopify_attributes }}>
           <button data-add-to-cart type="submit" name="add" aria-label="Add to cart" class="btn btn__link btn__primary"{% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>
             {% if product.selected_or_first_available_variant.available %}
