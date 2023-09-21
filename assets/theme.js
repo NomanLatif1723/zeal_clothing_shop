@@ -1188,7 +1188,7 @@ class VariantSelects extends HTMLElement {
     this.toggleAddButton(this.currentVariant);
     // this.updatePickupAvailability();
     // this.removeErrorMessage();
-    // this.updateVariantStatuses();
+    this.updateVariantStatuses();
 
     if (!this.currentVariant) {
       this.toggleAddButton(true, '', true);
@@ -1242,6 +1242,32 @@ class VariantSelects extends HTMLElement {
       const input = productForm.querySelector('input[name="id"]');
       input.value = this.currentVariant.id;
       input.dispatchEvent(new Event('change', { bubbles: true }));
+    });
+  }
+
+   updateVariantStatuses() {
+    const selectedOptionOneVariants = this.variantData.filter(
+      (variant) => this.querySelector(':checked').value === variant.option1
+    );
+    const inputWrappers = [...this.querySelectorAll('.product-form__input')];
+    inputWrappers.forEach((option, index) => {
+      if (index === 0) return;
+      const optionInputs = [...option.querySelectorAll('input[type="radio"], option')];
+      const previousOptionSelected = inputWrappers[index - 1].querySelector(':checked').value;
+      const availableOptionInputsValue = selectedOptionOneVariants
+        .filter((variant) => variant.available && variant[`option${index}`] === previousOptionSelected)
+        .map((variantOption) => variantOption[`option${index + 1}`]);
+      this.setInputAvailability(optionInputs, availableOptionInputsValue);
+    });
+  }
+
+  setInputAvailability(listOfOptions, listOfAvailableOptions) {
+    listOfOptions.forEach((input) => {
+      if (listOfAvailableOptions.includes(input.getAttribute('value'))) {
+        input.innerText = input.getAttribute('value');
+      } else {
+        input.innerText = window.variantStrings.unavailable_with_option.replace('[value]', input.getAttribute('value'));
+      }
     });
   }
 
