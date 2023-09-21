@@ -1217,7 +1217,7 @@ class VariantSelects extends HTMLElement {
 
    updateVariantInput() {
     const productForms = document.querySelectorAll(
-      `#addToCartForm-${this.dataset.section}`
+      `#addToCartForm-${this.dataset.section}-${this.dataset.product}`
     );
     productForms.forEach((productForm) => {
       const input = productForm.querySelector('input[name="id"]');
