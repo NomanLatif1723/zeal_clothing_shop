@@ -1196,9 +1196,13 @@ class VariantSelects extends HTMLElement {
   }
 
   updateMedia() {
-    document.querySelectorAll(`.product-media-${this.dataset.mediaId}`).forEach(media => {
-      media.click();
-    });
+    if (!this.currentVariant) return;
+    if (!this.currentVariant.media) return;
+
+    const mediaGalleries = document.querySelectorAll(`#product__media-${this.dataset.section}`);
+    mediaGalleries.forEach((mediaGallery) =>
+      mediaGallery.setActiveMedia(`${this.dataset.section}-${this.currentVariant.media.id}`, true)
+    );
     // if (!this.currentVariant) return;
     // if (!this.currentVariant.media) return;
 
