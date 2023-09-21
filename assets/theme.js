@@ -1191,6 +1191,11 @@ class VariantSelects extends HTMLElement {
         .includes(false);
     });
   }
+
+  getVariantData() {
+    this.variantData = this.variantData || JSON.parse(this.querySelector('[type="application/json"]').textContent);
+    return this.variantData;
+  }
   
 }
 customElements.define('variant-selects', VariantSelects);
