@@ -169,7 +169,7 @@
             {%- else -%}
               {%- render 'icon-minimal-bag' -%}
             {%- endif -%}
-            <span data-cart-count class="cart-item__count">{{ cart.item_count }}</span>
+            <span data-cart-count class="cart-item__count{% if cart.item_count <= 0 %} hidden{% endif %}">{{ cart.item_count }}</span>
           </a>
         {%- unless show_icons -%}
             <a href="{{ routes.search_url }}" class="icon icon__search icon__hide-mobile">{{ 'sections.search.title' | t }}</a>
