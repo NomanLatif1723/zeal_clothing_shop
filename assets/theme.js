@@ -1161,7 +1161,7 @@ class VariantSelects extends HTMLElement {
     console.log("variant change");
     this.updateOptions();
     this.updateMasterId();
-    // this.toggleAddButton(true, '', false);
+    this.toggleAddButton(true, '', false);
     // this.updatePickupAvailability();
     // this.removeErrorMessage();
     // this.updateVariantStatuses();
