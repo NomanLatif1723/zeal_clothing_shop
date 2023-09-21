@@ -1206,9 +1206,9 @@ function initProductVariants(){
 
     });
   })
-  function updateOptions(selectedOptions) {
+  function updateOptions(options) {
     document.querySelectorAll('[data-selected-variant]:checked').forEach(option => {
-        selectedOptions.push(option.value);
+        options.push(option.value);
     })
   }
   function updateMasterVariant() {
