@@ -1146,6 +1146,7 @@ function initProductVariants(){
       let selectedOptions = []
       updateOptions();
       updateMasterVariant();
+      updateButtons();
       function updateOptions() {
         document.querySelectorAll('[data-selected-variant]:checked').forEach(option => {
         selectedOptions.push(option.value);
