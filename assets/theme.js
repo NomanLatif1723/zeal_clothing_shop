@@ -1143,8 +1143,19 @@ function initProductVariants(){
   console.log(product);
   variantSelector.forEach(variant => {
     variant.addEventListener('change', () => {
-      let selectedOptions = []
+      let selectedOptions = [];
       updateOptions();
+      
+      // Find the Matched Variant
+      let matchedVariant = product.variants.find(variant =>{
+        for(let i= 0;  i < selectedOptions.length; i++ ){
+          if(selectedOptions.indexOf(variant.options[i]) === -1){
+            pass= false;
+            break;
+          }
+        }
+      });
+      
       updateMasterVariant();
       updateButtons();
       function updateOptions() {
@@ -1153,17 +1164,7 @@ function initProductVariants(){
       })
     }
       function updateMasterVariant() {
-        // Find the Matched Variant
-        let matchedVariant = product.variants.find(variant =>{
-          let pass = true;
-          for(let i= 0;  i < selectedOptions.length; i++ ){
-            if(selectedOptions.indexOf(variant.options[i]) === -1){
-              pass= false;
-              break;
-            }
-          }
-          return pass;
-        });
+        
         // Change the variant id
         document.querySelector('.selected-variant__id').value= matchedVariant.id;
       }
