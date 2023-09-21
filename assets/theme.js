@@ -1165,7 +1165,7 @@ initProductmediaSlideShow();
         console.log("button Clicked ");
         const quantityInput = button.parentElement.querySelector('input');
         let quantityValue = Number(quantityInput.value);
-        const isPlus = button.classList.contain('icon__plus');
+        const isPlus = button.classList.contains('icon__plus');
 
         if (isPlus) {
           quantityValue = quantityValue + 1;
