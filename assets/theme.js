@@ -1196,7 +1196,9 @@ class VariantSelects extends HTMLElement {
   }
 
   updateMedia() {
-    console.log(document.querySelectorAll(`.product-media-${this.dataset.mediaId}`));
+    document.querySelectorAll(`.product-media-${this.dataset.mediaId}`).forEach(media => {
+      media.click();
+    });
     // if (!this.currentVariant) return;
     // if (!this.currentVariant.media) return;
 
