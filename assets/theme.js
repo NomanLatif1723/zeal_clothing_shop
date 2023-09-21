@@ -1275,15 +1275,15 @@ class VariantRadios extends VariantSelects {
     super();
   }
 
-  // setInputAvailability(listOfOptions, listOfAvailableOptions) {
-  //   listOfOptions.forEach((input) => {
-  //     if (listOfAvailableOptions.includes(input.getAttribute('value'))) {
-  //       input.classList.remove('disabled');
-  //     } else {
-  //       input.classList.add('disabled');
-  //     }
-  //   });
-  // }
+  setInputAvailability(listOfOptions, listOfAvailableOptions) {
+    listOfOptions.forEach((input) => {
+      if (listOfAvailableOptions.includes(input.getAttribute('value'))) {
+        input.classList.remove('disabled');
+      } else {
+        input.classList.add('disabled');
+      }
+    });
+  }
 
   updateOptions() {
     const fieldsets = Array.from(this.querySelectorAll('fieldset'));
