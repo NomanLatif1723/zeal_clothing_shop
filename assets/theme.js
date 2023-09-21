@@ -1156,7 +1156,8 @@ initProductmediaSlideShow();
 // }
 // initProductVariants();
 
-// Product Quantity Selectors Event 
+// Product Quantity Selectors Event
+function initProductQuantitySelector() {
   const quantityWrapper = document.querySelectorAll('.product__item-quantity');
   if (quantityWrapper) {
     const quantityButton = document.querySelectorAll('.product__item-quantity button');
@@ -1173,6 +1174,8 @@ initProductmediaSlideShow();
       })
     })
   }
+}
+initProductQuantitySelector(); 
 
 class VariantSelects extends HTMLElement {
   constructor() {
