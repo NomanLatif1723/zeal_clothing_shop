@@ -46,68 +46,51 @@ function formatMoney(cents, format) {
   
 // Announcement Bar Timer 
 function announcementTimer(hours, minutes, id, timerContainer) {
-    // Get the stored start time for this announcement bar
-    let startTime = localStorage.getItem(`announcementStartTime_${id}`);
+  let startTime = localStorage.getItem(`announcementStartTime_${id}`);
+  if (!startTime) {
+      startTime = Date.now();
+      localStorage.setItem(`announcementStartTime_${id}`, startTime);
+  }
+  const totalMilliseconds = (hours * 3600000) + (minutes * 60000);
+  const currentTime = Date.now();
+  const timeDifference = currentTime - startTime;
+  let remainingMilliseconds = totalMilliseconds - timeDifference;
+  if (remainingMilliseconds <= 0) {
+      console.log("Invalid timer duration");
+      return;
+  }
+  const timerInterval = setInterval(function() {
+    // Calculate remaining hours, minutes, and seconds
+    const remainingHours = Math.floor(remainingMilliseconds / 3600000);
+    const remainingMinutes = Math.floor((remainingMilliseconds % 3600000) / 60000);
+    const remainingSeconds = Math.floor((remainingMilliseconds % 60000) / 1000);
     
-    // If no start time is stored, set it to the current time
-    if (!startTime) {
-        startTime = Date.now();
-        localStorage.setItem(`announcementStartTime_${id}`, startTime);
-    }
-    
-    // Calculate the total countdown time in milliseconds
-    const totalMilliseconds = (hours * 3600000) + (minutes * 60000);
-    
-    // Calculate elapsed time
-    const currentTime = Date.now();
-    const timeDifference = currentTime - startTime;
-    
-    // Calculate remaining time
-    let remainingMilliseconds = totalMilliseconds - timeDifference;
-    
-    // Ensure the timer is valid
+    timerContainer.innerHTML = `${remainingHours} : ${remainingMinutes} : ${remainingSeconds}`;
+
+    // Reduce remaining time by 1 second
+    remainingMilliseconds -= 1000;
+
+    // Check if the timer has ended
     if (remainingMilliseconds <= 0) {
-        console.log("Invalid timer duration");
-        return;
+        clearInterval(timerInterval);
+        timerContainer.innerHTML = "00 : 00 : 00";
     }
-    
-    const timerInterval = setInterval(function() {
-        // Calculate remaining hours, minutes, and seconds
-        const remainingHours = Math.floor(remainingMilliseconds / 3600000);
-        const remainingMinutes = Math.floor((remainingMilliseconds % 3600000) / 60000);
-        const remainingSeconds = Math.floor((remainingMilliseconds % 60000) / 1000);
-        
-        timerContainer.innerHTML = `${remainingHours} : ${remainingMinutes} : ${remainingSeconds}`;
-    
-        // Reduce remaining time by 1 second
-        remainingMilliseconds -= 1000;
-    
-        // Check if the timer has ended
-        if (remainingMilliseconds <= 0) {
-            clearInterval(timerInterval);
-            timerContainer.innerHTML = "00 : 00 : 00";
-        }
-    }, 1000);
+  }, 1000);
 }
-
 document.addEventListener("DOMContentLoaded", function() {
-    initAnnouncementTimer();
+  initAnnouncementTimer();
 });
-
 function initAnnouncementTimer() {
-    // Get All Announcement Bar Wrappers 
-    const announcementWrappers = document.querySelectorAll('.announcement__bar');
-
-    announcementWrappers.forEach(wrapper => {
-        if (wrapper) {
-            const id = wrapper.getAttribute('data-section-id');
-            const timerContainer = wrapper.querySelector('.main__timer');
-            const hours = timerContainer.getAttribute('data-hour');
-            const minutes = timerContainer.getAttribute('data-minutes');
-            
-            announcementTimer(hours, minutes, id, timerContainer);
-        }
-    });
+  const announcementWrappers = document.querySelectorAll('.announcement__bar');
+  announcementWrappers.forEach(wrapper => {
+    if (wrapper) {
+      const id = wrapper.getAttribute('data-section-id');
+      const timerContainer = wrapper.querySelector('.main__timer');
+      const hours = timerContainer.getAttribute('data-hour');
+      const minutes = timerContainer.getAttribute('data-minutes');
+      announcementTimer(hours, minutes, id, timerContainer);
+    }
+  });
 }
 
 
