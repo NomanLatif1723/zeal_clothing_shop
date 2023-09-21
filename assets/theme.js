@@ -71,11 +71,11 @@ function announcementTimer(hours, minutes, id, timerContainer) {
     // Reduce remaining time by 1 second
     remainingMilliseconds -= 1000;
 
-    // Check if the timer has ended
-    if (remainingMilliseconds <= 0) {
-        clearInterval(timerInterval);
-        timerContainer.innerHTML = "00 : 00 : 00";
-    }
+    // // Check if the timer has ended
+    // if (remainingMilliseconds <= 0) {
+    //     clearInterval(timerInterval);
+    //     timerContainer.innerHTML = "00 : 00 : 00";
+    // }
   }, 1000);
 }
 document.addEventListener("DOMContentLoaded", function() {
