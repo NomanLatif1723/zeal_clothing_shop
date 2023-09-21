@@ -34,7 +34,7 @@
     <div id="product__thumbnail-{{ section.id }}" class="product-media__thumbnails swiper">
       <div class="swiper-wrapper">
         {%- for media in product.media -%}
-          <div class="swiper-slide">
+          <div class="swiper-slide" >
             <a href="#" class="product__thumbs">
               {%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
                 <span class="product__play-icon">
