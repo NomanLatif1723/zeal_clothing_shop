@@ -1163,14 +1163,14 @@ initProductmediaSlideShow();
     quantityButton.forEach(button => {
       button.addEventListener('click', () => {
         console.log("button Clicked ");
-        const quantityInput = button.parentElement.querySelector('input');
+        let quantityInput = button.parentElement.querySelector('input');
         let quantityValue = Number(quantityInput.value);
         const isPlus = button.classList.contains('icon__plus');
 
         if (isPlus) {
-          quantityValue = quantityValue + 1;
+          quantityInput.value = quantityValue + 1;
         } else if(quantityValue > 1) {
-          quantityValue = quantityValue - 1;
+          quantityInput.value = quantityValue - 1;
         }
         
       })
