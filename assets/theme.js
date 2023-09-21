@@ -1101,34 +1101,6 @@ function initProductRecommendations() {
   }
 }
 initProductRecommendations();
-// var initProductRecommendations= class extends HTMLElement{
-//   async callback() {
-//     const responce = await fetch(`${window.themeContent.routes.productRecommendation}?section_id=${this.sectionId}&product_id=${this.productId}&limit=${this.recommendationsCount}&intent=${this.intent}`);
-//     const div = document.createElement('div');
-//     div.innerHTML = await responce.text();
-//     const productRecommendedEl = div.querySelector('product-recommendations');
-//     if (productRecommendedEl.hasChildNodes()) {
-//       this.innerHTML = productRecommendedEl.innerHTML;
-//     } else {
-//       if (this.intent === 'complementory') {
-//         this.remove();
-//       }
-//     }
-//   }
-//   get sectionId() {
-//     return this.dataset.sectionId;
-//   }
-//   get productId() {
-//     return this.dataset.productId;
-//   }
-//   get recommendationsCount() {
-//     return this.dataset.limit;
-//   }
-//   get intent() {
-//     return this.dataset.intent;
-//   }
-// };
-// customElements.define('product-recommendations',initProductRecommendations);
 
 // Product Variants js
 function initProductVariants(){
@@ -1165,7 +1137,7 @@ function initProductVariants(){
     }
       function updateMasterVariant(currentVariant) {
         // Change the variant id
-        document.querySelector('.selected-variant__id').value= currentVariant.id;
+        document.querySelector('.selected-variant__id').value = currentVariant.id;
       }
       function updateUrl() {
         let url = new URLParse(window.location.href,true);
