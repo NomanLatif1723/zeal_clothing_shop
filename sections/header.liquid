@@ -183,7 +183,10 @@
                   {% endif %}
                 </a>
             {%- endif -%}
-            <a href="{%- if settings.cart_type == 'page' -%}{{ routes.cart_url }}{%- else -%}#{%- endif -%}" data-cart-type="{{ settings.cart_type }}" aria-label="{{ 'sections.header.general.cart' | t }}" class="icon icon__cart icon__hide-mobile">{{ 'sections.header.general.cart' | t }}</a>
+            <a href="{%- if settings.cart_type == 'page' -%}{{ routes.cart_url }}{%- else -%}#{%- endif -%}" data-cart-type="{{ settings.cart_type }}" aria-label="{{ 'sections.header.general.cart' | t }}" class="icon icon__cart icon__hide-mobile">
+              {{ 'sections.header.general.cart' | t }}
+              <span data-cart-count class="cart-item__count{% if cart.item_count <= 0 %} hidden{% endif %}">{{ cart.item_count }}</span>
+            </a>
         {%- endunless -%}
       </div>
     </div>
