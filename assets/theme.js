@@ -1065,6 +1065,27 @@ function initProductmediaSlideShow() {
 }
 initProductmediaSlideShow();
 
+// Product Quantity Selectors Event
+function initProductQuantitySelector() {
+  const quantityWrapper = document.querySelectorAll('.product__item-quantity');
+  if (quantityWrapper) {
+    const quantityButton = document.querySelectorAll('.product__item-quantity button');
+    quantityButton.forEach(button => {
+      button.addEventListener('click', () => {
+        let quantityInput = button.parentElement.querySelector('input');
+        let quantityValue = Number(quantityInput.value);
+        const isPlus = button.classList.contains('icon__plus');
+        if (isPlus) {
+          quantityInput.value = quantityValue + 1;
+        } else if(quantityValue > 1) {
+          quantityInput.value = quantityValue - 1;
+        }
+      })
+    })
+  }
+}
+initProductQuantitySelector(); 
+
 // Product Variants js
 // function initProductVariants(){
 //   let masterVariantSelector = document.querySelector('.product-selected__variants');
@@ -1155,27 +1176,6 @@ initProductmediaSlideShow();
 //   })
 // }
 // initProductVariants();
-
-// Product Quantity Selectors Event
-function initProductQuantitySelector() {
-  const quantityWrapper = document.querySelectorAll('.product__item-quantity');
-  if (quantityWrapper) {
-    const quantityButton = document.querySelectorAll('.product__item-quantity button');
-    quantityButton.forEach(button => {
-      button.addEventListener('click', () => {
-        let quantityInput = button.parentElement.querySelector('input');
-        let quantityValue = Number(quantityInput.value);
-        const isPlus = button.classList.contains('icon__plus');
-        if (isPlus) {
-          quantityInput.value = quantityValue + 1;
-        } else if(quantityValue > 1) {
-          quantityInput.value = quantityValue - 1;
-        }
-      })
-    })
-  }
-}
-initProductQuantitySelector(); 
 
 class VariantSelects extends HTMLElement {
   constructor() {
