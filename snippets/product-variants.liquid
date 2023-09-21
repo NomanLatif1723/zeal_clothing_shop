@@ -1,7 +1,7 @@
 {%- unless product.has_only_default_variant -%}
   {%- if block.settings.variant_type == 'button' -%}
     {% if product.variants.size > 1 %}
-      <product-radios>
+      <variant-radios>
         <div class="product__options" data-section="{{ section.id }}" data-url="{{ product.url }}">
           {% for option in product.options_with_values %}
             <fieldset class="product-form__input">
@@ -22,7 +22,7 @@
             </fieldset>
           {% endfor %}
         </div>
-      </product-radios>
+      </variant-radios>
     {% endif %}
   {% elsif block.settings.variant_type == 'dropdown' %}
     <variant-selects>
