@@ -1222,7 +1222,7 @@ class VariantSelects extends HTMLElement {
     productForms.forEach((productForm) => {
       const input = productForm.querySelector('input[name="id"]');
       input.value = this.currentVariant.id;
-      // input.dispatchEvent(new Event('change', { bubbles: true }));
+      input.dispatchEvent(new Event('change', { bubbles: true }));
     });
   }
 
