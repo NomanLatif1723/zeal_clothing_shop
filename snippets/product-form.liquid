@@ -167,7 +167,7 @@
         <div class="product__block product__buy-buttons" {{ block.shopify_attributes }}>
           <button data-add-to-cart type="submit" name="add" aria-label="Add to cart" class="btn btn__link btn__primary"{% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>
             {% if product.selected_or_first_available_variant.available %}
-              <span>{{ 'products.add_to_cart' | t }}</span>
+              {{ 'products.add_to_cart' | t }}
             {% else %}
               {{ 'products.sold_out' | t }}
             {% endif %}
