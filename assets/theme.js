@@ -1156,6 +1156,27 @@ initProductmediaSlideShow();
 // }
 // initProductVariants();
 
+// Product Quantity Selectors Event 
+  const quantityWrapper = document.querySelectorAll('.product__item-quantity');
+  if (quantityWrapper) {
+    const quantityButton = document.querySelectorAll('.product__item-quantity button');
+    quantityButton.forEach(button => {
+      button.addEventListener('click', () => {
+        console.log("button Clicked ");
+        const quantityInput = button.parentElement.querySelector('input');
+        let quantityValue = Number(quantityInput.value);
+        const isPlus = button.classList.contain('icon__plus');
+
+        if (isPlus) {
+          quantityValue = quantityValue + 1;
+        } else if(quantityValue > 1) {
+          quantityValue = quantityValue - 1;
+        }
+        
+      })
+    })
+  }
+
 class VariantSelects extends HTMLElement {
   constructor() {
     super();
