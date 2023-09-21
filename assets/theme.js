@@ -1149,13 +1149,10 @@ function initProductVariants(){
         console.log(selectedOptions);
     });
   })
-  function _onSelectChange(srcElement) {
-    console.log('ghjhgdhj');
-  }
 }
 initProductVariants();
 
-class variantSelects extends HTMLElement {
+class VariantSelects extends HTMLElement {
   constructor() {
     super();
     this.addEventListener('change', this.onVariantChange);
@@ -1180,7 +1177,36 @@ class variantSelects extends HTMLElement {
       this.updateShareUrl();
     }
   }
-}
-customElements.define('product-radios', variantSelects);
 
+  updateOptions() {
+    this.options = Array.from(this.querySelectorAll('select'), (select) => select.value);
+  }
+  
+}
+customElements.define('variant-selects', VariantSelects);
+  
+class VariantRadios extends VariantSelects {
+  constructor() {
+    super();
+  }
+
+  // setInputAvailability(listOfOptions, listOfAvailableOptions) {
+  //   listOfOptions.forEach((input) => {
+  //     if (listOfAvailableOptions.includes(input.getAttribute('value'))) {
+  //       input.classList.remove('disabled');
+  //     } else {
+  //       input.classList.add('disabled');
+  //     }
+  //   });
+  // }
+
+  updateOptions() {
+    const fieldsets = Array.from(this.querySelectorAll('fieldset'));
+    this.options = fieldsets.map((fieldset) => {
+      return Array.from(fieldset.querySelectorAll('input')).find((radio) => radio.checked).value;
+    });
+  }
+}
+
+customElements.define('variant-radios', VariantRadios);
 })();
