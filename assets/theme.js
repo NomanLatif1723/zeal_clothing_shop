@@ -1199,7 +1199,7 @@ class VariantSelects extends HTMLElement {
     if (!this.currentVariant) return;
     if (!this.currentVariant.featured_media) return;
 
-    const mediaGalleries = document.querySelectorAll(`[id^="product__media-${this.dataset.section}"]`);
+    const mediaGalleries = document.querySelectorAll(`#product__media-${this.dataset.section}`);
     mediaGalleries.forEach((mediaGallery) =>
       mediaGallery.setActiveMedia(`${this.dataset.section}-${this.currentVariant.featured_media.id}`, true)
     );
