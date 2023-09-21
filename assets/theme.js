@@ -1196,13 +1196,14 @@ class VariantSelects extends HTMLElement {
   }
 
   updateMedia() {
-    if (!this.currentVariant) return;
-    if (!this.currentVariant.media) return;
+    document.querySelector(`.product-media-${this.dataset.media.id}`).click();
+    // if (!this.currentVariant) return;
+    // if (!this.currentVariant.media) return;
 
-    const mediaGalleries = document.querySelectorAll(`#product__media-${this.dataset.section}`);
-    mediaGalleries.forEach((mediaGallery) =>
-      mediaGallery.setActiveMedia(`${this.dataset.section}-${this.currentVariant.media.id}`, true)
-    );
+    // const mediaGalleries = document.querySelectorAll(`#product__media-${this.dataset.section}`);
+    // mediaGalleries.forEach((mediaGallery) =>
+    //   mediaGallery.setActiveMedia(`${this.dataset.section}-${this.currentVariant.media.id}`, true)
+    // );
 
     // const modalContent = document.querySelector(`#ProductModal-${this.dataset.section} .product-media-modal__content`);
     // if (!modalContent) return;
