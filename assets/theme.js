@@ -1195,15 +1195,15 @@ class VariantSelects extends HTMLElement {
     const productForm = document.getElementById(`addToCartForm-${this.dataset.section}`);
     if (!productForm) return;
     const addButton = productForm.querySelector('[name="add"]');
-    const addButtonText = productForm.querySelector('[name="add"]');
+    // const addButtonText = productForm.querySelector('[name="add"]');
     if (!addButton) return;
 
     if (disable) {
       addButton.setAttribute('disabled', 'disabled');
-      if (text) addButtonText.textContent = text;
+      if (text) addButton.textContent = text;
     } else {
       addButton.removeAttribute('disabled');
-      addButtonText.textContent = window.variantStrings.addToCart;
+      addButton.textContent = window.variantStrings.addToCart;
     }
 
     if (!modifyClass) return;
