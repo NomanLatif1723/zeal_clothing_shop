@@ -1181,6 +1181,6 @@ class variantSelects extends HTMLElement {
     }
   }
 }
-customElements.define('product__options', variantSelects);
+customElements.define('product-radios', variantSelects);
 
 })();
