@@ -1160,7 +1160,7 @@ class VariantSelects extends HTMLElement {
   onVariantChange() {
     this.updateOptions();
     this.updateMasterId();
-    this.toggleAddButton();
+    this.toggleAddButton(this.currentVariant);
     // this.updatePickupAvailability();
     // this.removeErrorMessage();
     // this.updateVariantStatuses();
@@ -1191,7 +1191,7 @@ class VariantSelects extends HTMLElement {
     });
   }
 
-  toggleAddButton() {
+  toggleAddButton(currentVariant) {
     const formid = document.querySelector('.product__form').dataset.sectionId;
     const productForm = document.querySelector('.product__form');
     if (!productForm) return;
