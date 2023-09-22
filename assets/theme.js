@@ -1126,10 +1126,12 @@ function initProductVariants() {
       updateButtons(matchedVariant);
       updateUrl(matchedVariant);
       updateProductPrice(matchedVariant);
+      // updateProductUnitPrice(matchedVariant);
       updateProductSku(matchedVariant);
       updateAvailability(matchedVariant);
       updateInventory(matchedVariant);
       updateMedia(matchedVariant);
+      
     }
   }
 
@@ -1159,6 +1161,10 @@ function initProductVariants() {
     matchedVariant.compare_at_price > matchedVariant.price ?
       selectors.productRegularPrice.classList.remove('hidden') :
       selectors.productRegularPrice.classList.add('hidden');
+  }
+
+  function updateProductUnitPrice(matchedvariant) {
+    
   }
 
   function updateProductSku(matchedVariant) {
