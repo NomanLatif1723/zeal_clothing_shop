@@ -1195,7 +1195,10 @@ function initProductVariants() {
   }
 
   function updateInventory(matchedVariant) {
-    
+    if (!selectors.productInStock) {
+      return;
+    }
+    selectors.productInStock.textContent = matchedVariant.stock_count;
   }
 
   function updateMedia(matchedVariant) {
