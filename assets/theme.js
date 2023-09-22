@@ -1076,95 +1076,95 @@ function initProductQuantitySelector() {
 initProductQuantitySelector(); 
 
 // Product Variants js
-// function initProductVariants(){
-//   let masterVariantSelector = document.querySelector('.product-selected__variants');
-//   let productSalePrice = document.querySelector('[data-sale-price]');
-//   let productRegularPrice = document.querySelector('[data-regular-price]');
-//   let productSku = document.querySelector('[data-sku]');
-//   let productInStock = document.querySelector('[data-availability]');
-//   let productAddToCartBtn = document.querySelector('[data-add-to-cart]');
-//   let variantSelector = document.querySelectorAll('[data-selected-variant]');
-//   let product = window.themeContent.routes.product;
-//   console.log(product);
-//   variantSelector.forEach(variant => {
-//     variant.addEventListener('change', () => {
-//       let selectedOptions = [];
-//       updateOptions();
+function initProductVariants(){
+  let masterVariantSelector = document.querySelector('.product-selected__variants');
+  let productSalePrice = document.querySelector('[data-sale-price]');
+  let productRegularPrice = document.querySelector('[data-regular-price]');
+  let productSku = document.querySelector('[data-sku]');
+  let productInStock = document.querySelector('[data-availability]');
+  let productAddToCartBtn = document.querySelector('[data-add-to-cart]');
+  let variantSelector = document.querySelectorAll('[data-selected-variant]');
+  let product = window.themeContent.routes.product;
+  console.log(product);
+  variantSelector.forEach(variant => {
+    variant.addEventListener('change', () => {
+      let selectedOptions = [];
+      updateOptions();
       
-//       // Find the Matched Variant
-//       let matchedVariant = product.variants.find(variant =>{
-//         for(let i= 0;  i < selectedOptions.length; i++ ){
-//           if(selectedOptions.indexOf(variant.options[i]) === -1){
-//             pass= false;
-//             break;
-//           }
-//         }
-//       });
+      // Find the Matched Variant
+      let matchedVariant = product.variants.find(variant =>{
+        for(let i= 0;  i < selectedOptions.length; i++ ){
+          if(selectedOptions.indexOf(variant.options[i]) === -1){
+            pass= false;
+            break;
+          }
+        }
+      });
       
-//       updateMasterVariant(matchedVariant);
-//       updateButtons();
-//       function updateOptions() {
-//         document.querySelectorAll('[data-selected-variant]:checked').forEach(option => {
-//         selectedOptions.push(option.value);
-//       })
-//     }
-//       function updateMasterVariant(currentVariant) {
-//         // Change the variant id
-//         document.querySelector('.selected-variant__id').value = currentVariant.id;
-//       }
-//       function updateUrl() {
-//         let url = new URLParse(window.location.href,true);
-//         url.query.variant = matchedVariant.id;
-//         window.history.replaceState(null,null,url.toString());
-//       }
-//       function updateProductPrice() {
-//         document.querySelector('.product-price').textContent = formatMoney(matchedVariant.price, "{{ shop.money_format }}");      
-//         document.querySelector('.product-compare-price').textContent = formatMoney(matchedVariant.compare_at_price, "{{ shop.money_format }}");
+      updateMasterVariant(matchedVariant);
+      updateButtons();
+      function updateOptions() {
+        document.querySelectorAll('[data-selected-variant]:checked').forEach(option => {
+        selectedOptions.push(option.value);
+      })
+    }
+      function updateMasterVariant(currentVariant) {
+        // Change the variant id
+        document.querySelector('.selected-variant__id').value = currentVariant.id;
+      }
+      function updateUrl() {
+        let url = new URLParse(window.location.href,true);
+        url.query.variant = matchedVariant.id;
+        window.history.replaceState(null,null,url.toString());
+      }
+      function updateProductPrice() {
+        document.querySelector('.product-price').textContent = formatMoney(matchedVariant.price, "{{ shop.money_format }}");      
+        document.querySelector('.product-compare-price').textContent = formatMoney(matchedVariant.compare_at_price, "{{ shop.money_format }}");
     
-//         matchedVariant.compare_at_price > matchedVariant.price ? 
-//                   document.querySelector('.product-compare-price').classList.remove('hide'):
-//                   document.querySelector('.product-compare-price').classList.add('hide');
-//       } 
-//       function updateProductSku() {
+        matchedVariant.compare_at_price > matchedVariant.price ? 
+                  document.querySelector('.product-compare-price').classList.remove('hide'):
+                  document.querySelector('.product-compare-price').classList.add('hide');
+      } 
+      function updateProductSku() {
         
-//       } 
-//       function updateButtons() {
-//         var addButton = document.querySelector('[name="add"]');
-//         if(matchedVariant.available){
-//           addButton.textContent = "Add To cart";
-//           addButton.disabled = false;
-//         }
-//         else{
-//           addButton.textContent = "Sold Out";
-//           addButton.disabled = true;
-//         }
-//       }
-//       function updateAvailability() {
-//         if(matchedVariant.available){
-//           document.querySelector('.price__badge-sale').style.display = "inline-block";
-//           document.querySelector('.price__badge-sold-out').style.display = "none";
-//         } else{
-//           document.querySelector('.price__badge-sale').style.display = "none";
-//           document.querySelector('.price__badge-sold-out').style.display = "inline-block";
-//         }
-//       }
-//       function updateMedia() {
-//         $('.prd_img'+matchedVariant.id).click();
-//         if(matchedVariant.featured_image){
-//           document.querySelector('#product-image').setAttribute('src', matchedVariant.featured_image.src );
-//           document.querySelector('.product_image_thumbs li.selected').classList.remove('selected');
-//           document.querySelectorAll('.product_image_thumbs li')[matchedVariant.featured_image.position -1].classList.add('selected');
-//         }
-//         if(matchedVariant.featured_image){
-//           document.querySelector('.product_image_thumbs li.selected').classList.remove('selected');
-//           document.querySelectorAll('.product_image_thumbs li')[matchedVariant.featured_image.position -1].classList.add('selected');
-//           document.querySelector('.product_image_thumbs li').firstElementChild.setAttribute('src', matchedVariant.featured_image.src);
-//         }
-//       }
-//     });
-//   })
-// }
-// initProductVariants();
+      } 
+      function updateButtons() {
+        var addButton = document.querySelector('[name="add"]');
+        if(matchedVariant.available){
+          addButton.textContent = "Add To cart";
+          addButton.disabled = false;
+        }
+        else{
+          addButton.textContent = "Sold Out";
+          addButton.disabled = true;
+        }
+      }
+      function updateAvailability() {
+        if(matchedVariant.available){
+          document.querySelector('.price__badge-sale').style.display = "inline-block";
+          document.querySelector('.price__badge-sold-out').style.display = "none";
+        } else{
+          document.querySelector('.price__badge-sale').style.display = "none";
+          document.querySelector('.price__badge-sold-out').style.display = "inline-block";
+        }
+      }
+      function updateMedia() {
+        $('.prd_img'+matchedVariant.id).click();
+        if(matchedVariant.featured_image){
+          document.querySelector('#product-image').setAttribute('src', matchedVariant.featured_image.src );
+          document.querySelector('.product_image_thumbs li.selected').classList.remove('selected');
+          document.querySelectorAll('.product_image_thumbs li')[matchedVariant.featured_image.position -1].classList.add('selected');
+        }
+        if(matchedVariant.featured_image){
+          document.querySelector('.product_image_thumbs li.selected').classList.remove('selected');
+          document.querySelectorAll('.product_image_thumbs li')[matchedVariant.featured_image.position -1].classList.add('selected');
+          document.querySelector('.product_image_thumbs li').firstElementChild.setAttribute('src', matchedVariant.featured_image.src);
+        }
+      }
+    });
+  })
+}
+initProductVariants();
 
 // class VariantSelects extends HTMLElement {
 //   constructor() {
@@ -1393,105 +1393,6 @@ initProductQuantitySelector();
 
 // customElements.define('variant-radios', VariantRadios);
 
-window.Variants = (function(){
-
-  function Variants(options) {
-    this.container = options.container;
-    this.variants = options.variants;
-    this.singleOptionSelector = options.singleOptionSelector;
-    this.originalSelectorId = options.originalSelectorId;
-    this.enableHistoryState = options.enableHistoryState;
-    this.dynamicVariantsEnabled = options.dynamicVariantsEnabled;
-    this.currentlySelectedValues = this._getCurrentOptions();
-    this.currentVariant = this._getVariantFromOptions();
-    this.container.querySelectorAll(this.singleOptionSelector).forEach(el => {
-      console.log("hello there");
-      el.addEventListener('change', this._onSelectChange.bind(this));
-    });
-  }
-  Variants.prototype = Object.assign({}, Variants.prototype, {
-    _getCurrentOptions: function() {
-      var result = [];
-
-      this.container.querySelectorAll(this.singleOptionSelector).forEach(el => {
-        var type = el.getAttribute('type');
-
-        if (type === 'radio' || type === 'checkbox') {
-          if (el.checked) {
-            result.push({
-              value: el.value,
-              index: el.dataset.index
-            });
-          }
-        } else {
-          result.push({
-            value: el.value,
-            index: el.dataset.index
-          });
-        }
-      });
-
-      // remove any unchecked input values if using radio buttons or checkboxes
-      result = theme.utils.compact(result);
-
-      return result;
-    },
-     _getVariantFromOptions: function(lastSelectedOption) {
-      const availableFullMatch = this._getFullMatch(true);
-      const closestAvailableMatch = this._getClosestAvailableMatch(lastSelectedOption);
-      const fullMatch = this._getFullMatch(false);
-  
-      if (this.dynamicVariantsEnabled) {
-        // Add some additional smarts to variant matching if Dynamic Variants are enabled
-        return availableFullMatch || closestAvailableMatch || fullMatch || null;
-      } else {
-        // Only return a full match or null (variant doesn't exist) if Dynamic Variants are disabled
-        return fullMatch || null;
-      }
-  
-    },
-    _onSelectChange: function({srcElement}) {
-        const optionSelectElements = this.container.querySelectorAll(this.singleOptionSelector);
-  
-        // Get the best variant based on the current selection + last selected element
-        const variant = this._getVariantFromOptions({
-          index: srcElement.dataset.index,
-          value: srcElement.value
-        });
-  
-        // Update DOM option input states based on the variant that was found
-        optionSelectElements.forEach(this._updateInputState(variant, srcElement))
-  
-        // Make sure our currently selected values are up to date after updating state of DOM
-        const currentlySelectedValues = this.currentlySelectedValues = this._getCurrentOptions();
-  
-        const detail = {
-          variant,
-          currentlySelectedValues,
-          value: srcElement.value,
-          index: srcElement.parentElement.dataset.index
-        }
-  
-        this.container.dispatchEvent(new CustomEvent('variantChange', {detail}));
-        document.dispatchEvent(new CustomEvent('variant:change', {detail}));
-  
-        if (!variant) {
-          return;
-        }
-  
-        this._updateMasterSelect(variant);
-        this._updateImages(variant);
-        this._updatePrice(variant);
-        this._updateUnitPrice(variant);
-        this._updateSKU(variant);
-        this.currentVariant = variant;
-  
-        if (this.enableHistoryState) {
-          this._updateHistoryState(variant);
-        }
-      },
-  })
-})
 
 // Product Recommendations
 function initProductRecommendations() {
