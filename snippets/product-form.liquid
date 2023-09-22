@@ -177,6 +177,7 @@
             {{ form | payment_button }}
           {% endif %}
         </div>
+        {% comment %}
         <select name="id" class="product-selected__variants hidden">
           {%- for variant in product.variants -%}
             {%- if variant.available -%}
@@ -192,6 +193,7 @@
             {%- endif -%}
           {%- endfor -%}
         </select>
+        {% endcomment %}
       {%- endform -%}
     {%- when 'collapsables' -%}
       <div class="product__tabs" {{ block.shopify_attributes }}>
