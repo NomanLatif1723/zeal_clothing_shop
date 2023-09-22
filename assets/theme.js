@@ -1087,9 +1087,15 @@ function initProductVariants() {
     productAddToCartBtn: document.querySelector('[data-add-to-cart]'),
     variantSelectors: document.querySelectorAll('[data-selected-variant]'),
     productForm: document.querySelector('.product__form'),
-    format: document.querySelector('.product__form').dataset.format,
+    format: null,
     product: window.themeContent.routes.product
   };
+
+  if (selectors.productForm) {
+    selectors.format = selectors.productForm.dataset.format;
+  } else {
+    selectors.format = 'default';
+  }
 
   selectors.variantSelectors.forEach(selector => {
     selector.addEventListener('change', () => {
