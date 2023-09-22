@@ -1082,6 +1082,7 @@ function initProductVariants() {
     masterVariantSelector: document.querySelector('.selected-variant__id'),
     productSalePrice: document.querySelector('[data-sale-price]'),
     productRegularPrice: document.querySelector('[data-regular-price]'),
+    productUnitPrice: document.querySelector('[data-unit-price]'),
     productSku: document.querySelector('[data-sku]'),
     productInStock: document.querySelector('[data-availability]'),
     productAddToCartBtn: document.querySelector('[data-add-to-cart]'),
