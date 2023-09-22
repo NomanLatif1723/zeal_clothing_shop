@@ -1101,7 +1101,7 @@ function initProductVariants(){
         }
       });
       
-      updateMasterVariant(matchedVariant);
+      updateMasterVariant(currentVariant);
       updateButtons();
       function updateOptions() {
         document.querySelectorAll('[data-selected-variant]:checked').forEach(option => {
