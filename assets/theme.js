@@ -1295,14 +1295,14 @@ class VariantSelects extends HTMLElement {
           skuDestination.classList.toggle('visibility-hidden', skuSource.classList.contains('visibility-hidden'));
         }
 
-        if (volumePricingSource && volumePricingDestination) {
-          volumePricingDestination.innerHTML = volumePricingSource.innerHTML;
-        }
+        // if (volumePricingSource && volumePricingDestination) {
+        //   volumePricingDestination.innerHTML = volumePricingSource.innerHTML;
+        // }
 
-        if (pricePerItemSource && pricePerItemDestination) {
-          pricePerItemDestination.innerHTML = pricePerItemSource.innerHTML;
-          pricePerItemDestination.classList.toggle('visibility-hidden', pricePerItemSource.classList.contains('visibility-hidden'));
-        }
+        // if (pricePerItemSource && pricePerItemDestination) {
+        //   pricePerItemDestination.innerHTML = pricePerItemSource.innerHTML;
+        //   pricePerItemDestination.classList.toggle('visibility-hidden', pricePerItemSource.classList.contains('visibility-hidden'));
+        // }
 
         const price = document.querySelector('[data-sale-price]');
 
