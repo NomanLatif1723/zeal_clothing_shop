@@ -1277,8 +1277,8 @@ class VariantSelects extends HTMLElement {
         const destination = document.querySelector('[data-sale-price]');
         const source = html.querySelector('[data-sale-price]');
         const skuSource = html.querySelector('[data-sku]');
-        const skuDestination = document.querySelector('[data-sale-price]');
-        const inventorySource = html.querySelector('[data-sale-price]');
+        const skuDestination = document.querySelector('[data-sku]');
+        const inventorySource = html.querySelector('[data-inventory]');
         const inventoryDestination = document.querySelector('[data-inventory]');
 
         // const volumePricingSource = html.querySelector();
