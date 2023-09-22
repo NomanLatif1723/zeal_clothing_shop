@@ -1107,7 +1107,7 @@ function initProductVariants(){
       });
           
       // Change the variant id
-      document.querySelector('#product-id').value= matchedVariant.id;
+      document.querySelector('.selected-variant__id').value= matchedVariant.id;
       
       // updateMasterVariant();
       // updateButtons();
