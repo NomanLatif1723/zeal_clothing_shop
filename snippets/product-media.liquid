@@ -24,7 +24,6 @@
               loading="lazy"
               sizes="{{ sizes }}"
               alt="{{ media.alt }}"
-              data-media-id="{{ media.id }}"
               />
           </div>
         {% endif %}
@@ -71,34 +70,3 @@
   {%- if section.settings.thumbnail_position == 'left' -%}
     </div>
   {%- endif -%}
-<!-- <script>
-  const swiperThumbs = new Swiper('.product-media__thumbnails', {
-    direction: "vertical",
-      slidesPerView: 5,
-      spaceBetween: 30,
-      mousewheel: true,
-      watchSlidesProgress: true,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-      },
-    // slidesPerView: 5,
-    // spaceBetween: 20,
-    // watchSlidesProgress: true,
-    // navigation: {
-    //   nextEl: '.swiper-button-next',
-    //   prevEl: '.swiper-button-prev'
-    // }
-  });
-  const swiperMedia = new Swiper('.product-media__wrapper', {
-    slidesPerView: 1,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    },
-    thumbs: {
-        swiper: swiperThumbs,
-      },
-  });
-  
-</script> -->
