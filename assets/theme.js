@@ -1204,14 +1204,14 @@ function initProductVariants() {
   function updateMedia(matchedVariant) {
     // $('.prd_img' + matchedVariant.id).click();
     if (matchedVariant.featured_image) {
-      document.querySelector('#product-image').setAttribute('src', matchedVariant.featured_image.src);
-      document.querySelector('.product_image_thumbs li.selected').classList.remove('selected');
-      document.querySelectorAll('.product_image_thumbs li')[matchedVariant.featured_image.position - 1].classList.add('selected');
+      document.querySelector('.product__image.swiper-slide-active').setAttribute('src', matchedVariant.featured_image.src);
+      // document.querySelector('.product_image_thumbs li.selected').classList.remove('selected');
+      // document.querySelectorAll('.product_image_thumbs li')[matchedVariant.featured_image.position - 1].classList.add('selected');
     }
     if (matchedVariant.featured_image) {
-      document.querySelector('.product_image_thumbs li.selected').classList.remove('selected');
-      document.querySelectorAll('.product_image_thumbs li')[matchedVariant.featured_image.position - 1].classList.add('selected');
-      document.querySelector('.product_image_thumbs li').firstElementChild.setAttribute('src', matchedVariant.featured_image.src);
+      // document.querySelector('.product_image_thumbs li.selected').classList.remove('selected');
+      // document.querySelectorAll('.product_image_thumbs li')[matchedVariant.featured_image.position - 1].classList.add('selected');
+      // document.querySelector('.product_image_thumbs li').firstElementChild.setAttribute('src', matchedVariant.featured_image.src);
     }
   }
 }
