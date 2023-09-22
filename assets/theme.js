@@ -1393,6 +1393,105 @@ initProductQuantitySelector();
 
 // customElements.define('variant-radios', VariantRadios);
 
+window.Variants = (function(){
+
+  function Variants(options) {
+    this.container = options.container;
+    this.variants = options.variants;
+    this.singleOptionSelector = options.singleOptionSelector;
+    this.originalSelectorId = options.originalSelectorId;
+    this.enableHistoryState = options.enableHistoryState;
+    this.dynamicVariantsEnabled = options.dynamicVariantsEnabled;
+    this.currentlySelectedValues = this._getCurrentOptions();
+    this.currentVariant = this._getVariantFromOptions();
+    this.container.querySelectorAll(this.singleOptionSelector).forEach(el => {
+      el.addEventListener('change', this._onSelectChange.bind(this));
+    });
+  }
+  Variants.prototype = Object.assign({}, Variants.prototype, {
+    _getCurrentOptions: function() {
+      var result = [];
+
+      this.container.querySelectorAll(this.singleOptionSelector).forEach(el => {
+        var type = el.getAttribute('type');
+
+        if (type === 'radio' || type === 'checkbox') {
+          if (el.checked) {
+            result.push({
+              value: el.value,
+              index: el.dataset.index
+            });
+          }
+        } else {
+          result.push({
+            value: el.value,
+            index: el.dataset.index
+          });
+        }
+      });
+
+      // remove any unchecked input values if using radio buttons or checkboxes
+      result = theme.utils.compact(result);
+
+      return result;
+    },
+     _getVariantFromOptions: function(lastSelectedOption) {
+      const availableFullMatch = this._getFullMatch(true);
+      const closestAvailableMatch = this._getClosestAvailableMatch(lastSelectedOption);
+      const fullMatch = this._getFullMatch(false);
+  
+      if (this.dynamicVariantsEnabled) {
+        // Add some additional smarts to variant matching if Dynamic Variants are enabled
+        return availableFullMatch || closestAvailableMatch || fullMatch || null;
+      } else {
+        // Only return a full match or null (variant doesn't exist) if Dynamic Variants are disabled
+        return fullMatch || null;
+      }
+  
+    },
+    _onSelectChange: function({srcElement}) {
+        const optionSelectElements = this.container.querySelectorAll(this.singleOptionSelector);
+  
+        // Get the best variant based on the current selection + last selected element
+        const variant = this._getVariantFromOptions({
+          index: srcElement.dataset.index,
+          value: srcElement.value
+        });
+  
+        // Update DOM option input states based on the variant that was found
+        optionSelectElements.forEach(this._updateInputState(variant, srcElement))
+  
+        // Make sure our currently selected values are up to date after updating state of DOM
+        const currentlySelectedValues = this.currentlySelectedValues = this._getCurrentOptions();
+  
+        const detail = {
+          variant,
+          currentlySelectedValues,
+          value: srcElement.value,
+          index: srcElement.parentElement.dataset.index
+        }
+  
+        this.container.dispatchEvent(new CustomEvent('variantChange', {detail}));
+        document.dispatchEvent(new CustomEvent('variant:change', {detail}));
+  
+        if (!variant) {
+          return;
+        }
+  
+        this._updateMasterSelect(variant);
+        this._updateImages(variant);
+        this._updatePrice(variant);
+        this._updateUnitPrice(variant);
+        this._updateSKU(variant);
+        this.currentVariant = variant;
+  
+        if (this.enableHistoryState) {
+          this._updateHistoryState(variant);
+        }
+      },
+  })
+})
+
 // Product Recommendations
 function initProductRecommendations() {
   const productRecommendationContainer = document.querySelectorAll('product-recommendations');
