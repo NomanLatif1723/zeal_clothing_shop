@@ -57,7 +57,7 @@ function announcementTimer(hours, minutes, id, timerContainer) {
   let remainingMilliseconds = totalMilliseconds - timeDifference;
   if (remainingMilliseconds <= 0) {
       timerContainer.innerHTML = "00 : 00 : 00";
-      console.log("Invalid timer duration");
+      // console.log("Invalid timer duration");
       return;
   }
   const timerInterval = setInterval(function() {
@@ -65,17 +65,9 @@ function announcementTimer(hours, minutes, id, timerContainer) {
     const remainingHours = Math.floor(remainingMilliseconds / 3600000);
     const remainingMinutes = Math.floor((remainingMilliseconds % 3600000) / 60000);
     const remainingSeconds = Math.floor((remainingMilliseconds % 60000) / 1000);
-    
     timerContainer.innerHTML = `${remainingHours} : ${remainingMinutes} : ${remainingSeconds}`;
-
     // Reduce remaining time by 1 second
     remainingMilliseconds -= 1000;
-
-    // // Check if the timer has ended
-    // if (remainingMilliseconds <= 0) {
-    //     clearInterval(timerInterval);
-    //     timerContainer.innerHTML = "00 : 00 : 00";
-    // }
   }, 1000);
 }
 document.addEventListener("DOMContentLoaded", function() {
