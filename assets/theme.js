@@ -1101,9 +1101,11 @@ function initProductVariants(){
           }
         }
       });
+
+      document.querySelector('.selected-variant__id').value = matchedVariant.id;
       
-      updateMasterVariant();
-      updateButtons();
+      // updateMasterVariant();
+      // updateButtons();
       function updateOptions() {
           document.querySelectorAll('[data-selected-variant]:checked').forEach(option => {
           selectedOptions.push(option.value);
