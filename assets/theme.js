@@ -1112,7 +1112,7 @@ function initProductVariants() {
   function updateProductOptions() {
     let selectedOptions = [];
 
-    variantSelectors.forEach(selector => {
+    selectors.variantSelectors.forEach(selector => {
       if (selector.type === 'radio' || selector.type === 'checkbox') {
         if (selector.checked) {
           selectedOptions.push(selector.value);
