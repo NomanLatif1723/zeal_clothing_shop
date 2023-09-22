@@ -22,7 +22,7 @@
           <span class="sale__price product__sale-price" data-sale-price>{{ product.selected_or_first_available_variant.price | money }}</span>
           {%- if product.compare_at_price > product.price -%}
             <span class="visually__hidden">{{ 'products.price.regular_price' | t }}</span>
-            <span class="sale__price product__compare-price{% unless product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %} hidden{% endunless %}" data-regular-price>
+            <span class="sale__price product__compare-price {% unless product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %}hidden{% endunless %}" data-regular-price>
               {{ product.selected_or_first_available_variant.compare_at_price | money }}
             </span>
           {%- endif -%}
