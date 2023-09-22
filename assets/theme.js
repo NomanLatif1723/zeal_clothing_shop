@@ -1317,13 +1317,13 @@ class VariantSelects extends HTMLElement {
           window.themeContent.strings.soldOut
         );
 
-        publish(PUB_SUB_EVENTS.variantChange, {
-          data: {
-            sectionId,
-            html,
-            variant: this.currentVariant,
-          },
-        });
+        // publish(PUB_SUB_EVENTS.variantChange, {
+        //   data: {
+        //     sectionId,
+        //     html,
+        //     variant: this.currentVariant,
+        //   },
+        // });
       });
   }
 
