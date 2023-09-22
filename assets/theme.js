@@ -1170,13 +1170,13 @@ function initProductVariants() {
     if (!saleBadge || soldOutBadge) {
       return;
     }
-    // if (matchedVariant.available) {
-      saleBadge.classList.toggle('hidden');
-      soldOutBadge.classList.toggle('hidden');
-    // } else {
-      // saleBadge.classList.toggle('hidden');
-      // soldOutBadge.classList.toggle('hidden');
-    // }
+    if (matchedVariant.available) {
+      saleBadge.classList.remove('hidden');
+      soldOutBadge.classList.add('hidden');
+    } else {
+      saleBadge.classList.add('hidden');
+      soldOutBadge.classList.remove('hidden');
+    }
   }
 
   function updateMedia(matchedVariant) {
