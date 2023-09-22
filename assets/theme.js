@@ -1204,7 +1204,7 @@ function initProductVariants() {
   function updateMedia(matchedVariant) {
     // $('.prd_img' + matchedVariant.id).click();
     if (matchedVariant.featured_image) {
-      document.querySelector('.product__image.swiper-slide-active img').setAttribute('src', matchedVariant.featured_media.src);
+      document.querySelector('.swiper-slide-active img').setAttribute('src', matchedVariant.featured_media.src);
       // document.querySelector('.product_image_thumbs li.selected').classList.remove('selected');
       // document.querySelectorAll('.product_image_thumbs li')[matchedVariant.featured_image.position - 1].classList.add('selected');
     }
