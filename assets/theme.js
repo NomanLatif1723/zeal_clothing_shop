@@ -1141,6 +1141,9 @@ function initProductVariants() {
   }
 
   function updateProductPrice(matchedVariant) {
+    if (!productSalePrice || !productRegularPrice) {
+      return;
+    }
     productSalePrice.textContent = formatMoney(matchedVariant.price,format);
     productRegularPrice.textContent = formatMoney(matchedVariant.compare_at_price, format);
 
