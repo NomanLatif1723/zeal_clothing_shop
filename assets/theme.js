@@ -1129,7 +1129,7 @@ function initProductVariants() {
       updateProductSku(matchedVariant);
       updateBadges(matchedVariant);
       updateAvailability(matchedVariant);
-      // updateMedia(matchedVariant);
+      updateMedia(matchedVariant);
     }
   }
 
