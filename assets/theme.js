@@ -1203,18 +1203,19 @@ function initProductVariants() {
 
   function updateMedia(matchedVariant) {
      try {
-    var currentVariantImage = matchedVariant.featured_media || {};
-    var imageElement = document.querySelector('.product__image.swiper-slide-active img');
-
-    if (imageElement && currentVariantImage.preview_image && currentVariantImage.preview_image.src) {
-      // Update the image source
-      imageElement.setAttribute('src', currentVariantImage.preview_image.src);
-      console.log('Image source updated:', currentVariantImage.preview_image.src);
-    } else {
-      console.warn('Image source not found or invalid:', currentVariantImage);
+      var currentVariantImage = matchedVariant.featured_media || {};
+      var imageElement = document.querySelector('.product__image.swiper-slide-active img');
+  
+      if (imageElement && currentVariantImage.preview_image && currentVariantImage.preview_image.src) {
+        // Update the image source
+        imageElement.setAttribute('src', currentVariantImage.preview_image.src);
+        console.log('Image source updated:', currentVariantImage.preview_image.src);
+      } else {
+        console.warn('Image source not found or invalid:', currentVariantImage);
+      }
+    } catch (error) {
+      console.error('Error updating media:', error);
     }
-  } catch (error) {
-    console.error('Error updating media:', error);
   }
 }
 
