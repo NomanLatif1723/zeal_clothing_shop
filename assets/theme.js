@@ -1085,6 +1085,8 @@ function initProductVariants() {
   let productInStock = document.querySelector('[data-availability]');
   let productAddToCartBtn = document.querySelector('[data-add-to-cart]');
   let variantSelectors = document.querySelectorAll('[data-selected-variant]');
+  let productForm = document.querySelector('.product__form');
+  let format = productForm.dataset.format;
   let product = window.themeContent.routes.product;
 
   variantSelectors.forEach(selector => {
