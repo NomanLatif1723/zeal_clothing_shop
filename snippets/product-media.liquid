@@ -61,6 +61,13 @@
             </a>
           </div>
         {%- endfor -%}
+        {% for variant in product.variants %}
+          <div class="swiper-slide product-variant-{{ variant.id }}">
+            <a href="#">
+              <img />
+            </a>
+          </div>
+        {% endfor %}
       </div>
       {%- if section.settings.show_thumbnail_arrows -%}
         <div class="swiper-button-prev swiper-button-{{ section.id }}"></div>
