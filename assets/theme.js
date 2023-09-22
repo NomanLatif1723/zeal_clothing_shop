@@ -1204,7 +1204,7 @@ function initProductVariants() {
   function updateMedia(matchedVariant) {
     // $('.prd_img' + matchedVariant.id).click();
     // document.querySelector('.swiper-slide-active img').setAttribute('src', matchedVariant.media.src);
-    const destination = document.querySelector('.product__image.swiper-slide-active img');
+    const destination = document.querySelector('.product__image.swiper-slide-active img').getAttribute('src');
     console.log(destination);
     var variantImage = matchedVariant.featured_image || {};
     var currentVariantImage = matchedVariant.featured_image || {};
