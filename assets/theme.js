@@ -1156,10 +1156,10 @@ function initProductVariants() {
   function updateButtons(matchedVariant) {
     var addButton = document.querySelector('[name="add"]');
     if (matchedVariant.available) {
-      addButton.textContent = "Add To Cart";
+      addButton.textContent = window.themeContent.strings.addToCart;
       addButton.disabled = false;
     } else {
-      addButton.textContent = "Sold Out";
+      addButton.textContent = window.themeContent.strings.soldOut;
       addButton.disabled = true;
     }
   }
