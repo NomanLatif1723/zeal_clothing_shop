@@ -1096,15 +1096,18 @@ function initProductVariants(){
       
       // Find the Matched Variant
       let matchedVariant = product.variants.find(variant =>{
+        let pass = true;
         for(let i= 0;  i < selectedOptions.length; i++ ){
           if(selectedOptions.indexOf(variant.options[i]) === -1){
             pass= false;
             break;
           }
         }
+        return pass;
       });
-
-      document.querySelector('.selected-variant__id').value = matchedVariant.value;
+          
+      // Change the variant id
+      document.querySelector('#product-id').value= matchedVariant.id;
       
       // updateMasterVariant();
       // updateButtons();
