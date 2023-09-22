@@ -1159,8 +1159,8 @@ function initProductVariants() {
     if (!selectors.productSalePrice || !selectors.productRegularPrice) {
       return;
     }
-    selectors.productSalePrice.textContent = formatMoney(matchedVariant.price,format);
-    selectors.productRegularPrice.textContent = formatMoney(matchedVariant.compare_at_price, format);
+    selectors.productSalePrice.textContent = formatMoney(matchedVariant.price,selectors.format);
+    selectors.productRegularPrice.textContent = formatMoney(matchedVariant.compare_at_price, selectors.format);
 
     matchedVariant.compare_at_price > matchedVariant.price ?
       selectors.productRegularPrice.classList.remove('hidden') :
