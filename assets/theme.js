@@ -1171,20 +1171,11 @@ function initProductVariants() {
       return;
     }
     if (matchedVariant.available) {
-      if (saleBadge) {
-        saleBadge.style.display = 'inline-block';
-      }
-      if (soldOutBadge) {
-        soldOutBadge.style.display = 'none';
-      }
-      
+      saleBadge.classList.remove('hidden');
+      soldOutBadge.classList.add('hidden');
     } else {
-      if (saleBadge) {
-        saleBadge.style.display = 'none';
-      }
-      if (soldOutBadge) {
-        soldOutBadge.style.display = 'inline-block';
-      }
+      saleBadge.classList.add('hidden');
+      soldOutBadge.classList.remove('hidden');
     }
   }
 
