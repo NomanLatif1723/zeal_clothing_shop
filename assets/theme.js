@@ -1084,7 +1084,7 @@ function initProductVariants(){
   let productInStock = document.querySelector('[data-availability]');
   let productAddToCartBtn = document.querySelector('[data-add-to-cart]');
   let variantSelector = document.querySelectorAll('[data-selected-variant]');
-  // let matchedVariant;
+  let matchedVariant;
   let product = window.themeContent.routes.product;
   console.log(product);
   variantSelector.forEach(options => {
@@ -1095,7 +1095,7 @@ function initProductVariants(){
       })
       
       // Find the Matched Variant
-      let matchedVariant = product.variants.find(variant =>{
+      matchedVariant = product.variants.find(variant =>{
         let pass = true;
         for(let i= 0;  i < selectedOptions.length; i++ ){
           if(selectedOptions.indexOf(variant.options[i]) === -1){
