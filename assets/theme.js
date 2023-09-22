@@ -57,16 +57,13 @@ function announcementTimer(hours, minutes, id, timerContainer) {
   let remainingMilliseconds = totalMilliseconds - timeDifference;
   if (remainingMilliseconds <= 0) {
       timerContainer.innerHTML = "00 : 00 : 00";
-      // console.log("Invalid timer duration");
       return;
   }
   const timerInterval = setInterval(function() {
-    // Calculate remaining hours, minutes, and seconds
     const remainingHours = Math.floor(remainingMilliseconds / 3600000);
     const remainingMinutes = Math.floor((remainingMilliseconds % 3600000) / 60000);
     const remainingSeconds = Math.floor((remainingMilliseconds % 60000) / 1000);
     timerContainer.innerHTML = `${remainingHours} : ${remainingMinutes} : ${remainingSeconds}`;
-    // Reduce remaining time by 1 second
     remainingMilliseconds -= 1000;
   }, 1000);
 }
