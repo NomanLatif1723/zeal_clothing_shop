@@ -1208,14 +1208,16 @@ function initProductVariants() {
     console.log(destination);
     var variantImage = matchedVariant.featured_image || {};
     var currentVariantImage = matchedVariant.featured_image || {};
+    console.log(currentVariantImage);
     if (!matchedVariant.featured_image || variantImage.src === currentVariantImage.src) {
       return;
     }
-    this.container.dispatchEvent(new CustomEvent('variantImageChange', {
-      detail: {
-        variant: variant
-      }
-    }));
+    
+    // this.container.dispatchEvent(new CustomEvent('variantImageChange', {
+    //   detail: {
+    //     variant: variant
+    //   }
+    // }));
   }
 }
 
