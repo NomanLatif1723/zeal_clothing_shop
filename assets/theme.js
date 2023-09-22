@@ -1166,7 +1166,10 @@ function initProductVariants() {
 
   function updateAvailability(matchedVariant) {
     let saleBadge = document.querySelector('.sale__badge');
-    let soldOutBadge = document.querySelector('.soldout__badge')
+    let soldOutBadge = document.querySelector('.soldout__badge');
+    if (!saleBadge || soldOutBadge) {
+      return;
+    }
     if (matchedVariant.available) {
       saleBadge.classList.remove('hidden');
       soldOutBadge.classList.add('hidden');
