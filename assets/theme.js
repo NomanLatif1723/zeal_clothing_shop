@@ -1405,6 +1405,7 @@ window.Variants = (function(){
     this.currentlySelectedValues = this._getCurrentOptions();
     this.currentVariant = this._getVariantFromOptions();
     this.container.querySelectorAll(this.singleOptionSelector).forEach(el => {
+      console.log("hello there");
       el.addEventListener('change', this._onSelectChange.bind(this));
     });
   }
