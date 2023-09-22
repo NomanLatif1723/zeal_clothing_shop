@@ -25,11 +25,8 @@
             <span class="sale__price product__compare-price" data-regular-price>{{ product.selected_or_first_available_variant.compare_at_price | money }}</span>
           {%- endif -%}
           {%- if block.settings.show_sale_badges -%}
-            {%- if product.selected_or_first_available_variant.available -%}
-              <span class="badge sale__badge{% if settings.sale_badge_color contains '#f' %} badge-color__dark{% else %} badge-color__light{% endif %}">{{ 'products.badges.on_sale' | t }}</span>
-            {%- else -%}
-               <span class="badge soldout__badge{% if settings.soldout_badge_color contains '#f' %} badge-color__dark{% else %} badge-color__light{% endif %}">{{ 'products.badges.sold_out' | t }}</span>
-            {%- endif -%}
+            <span class="badge sale__badge{% if settings.sale_badge_color contains '#f' %} badge-color__dark{% else %} badge-color__light{% endif %}">{{ 'products.badges.on_sale' | t }}</span>
+            <span class="badge hidden soldout__badge{% if settings.soldout_badge_color contains '#f' %} badge-color__dark{% else %} badge-color__light{% endif %}">{{ 'products.badges.sold_out' | t }}</span>
           {%- endif -%}
         </div>
         <div class="product__unit-price{% unless product.selected_or_first_available_variant.unit_price_measurement %} hidden{% endunless %}">
