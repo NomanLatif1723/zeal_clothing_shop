@@ -1108,64 +1108,64 @@ function initProductVariants(){
       
       // updateMasterVariant();
       // updateButtons();
-      function updateOptions() {
-          document.querySelectorAll('[data-selected-variant]:checked').forEach(option => {
-          selectedOptions.push(option.value);
-        })
-      }
-      function updateMasterVariant() {
-        // Change the variant id
-        document.querySelector('.selected-variant__id').value = matchedVariant.id;
-      }
-      function updateUrl() {
-        let url = new URLParse(window.location.href,true);
-        url.query.variant = matchedVariant.id;
-        window.history.replaceState(null,null,url.toString());
-      }
-      function updateProductPrice() {
-        document.querySelector('.product-price').textContent = formatMoney(matchedVariant.price, "{{ shop.money_format }}");      
-        document.querySelector('.product-compare-price').textContent = formatMoney(matchedVariant.compare_at_price, "{{ shop.money_format }}");
+      // function updateOptions() {
+      //     document.querySelectorAll('[data-selected-variant]:checked').forEach(option => {
+      //     selectedOptions.push(option.value);
+      //   })
+      // }
+      // function updateMasterVariant() {
+      //   // Change the variant id
+      //   document.querySelector('.selected-variant__id').value = matchedVariant.id;
+      // }
+      // function updateUrl() {
+      //   let url = new URLParse(window.location.href,true);
+      //   url.query.variant = matchedVariant.id;
+      //   window.history.replaceState(null,null,url.toString());
+      // }
+      // function updateProductPrice() {
+      //   document.querySelector('.product-price').textContent = formatMoney(matchedVariant.price, "{{ shop.money_format }}");      
+      //   document.querySelector('.product-compare-price').textContent = formatMoney(matchedVariant.compare_at_price, "{{ shop.money_format }}");
     
-        matchedVariant.compare_at_price > matchedVariant.price ? 
-                  document.querySelector('.product-compare-price').classList.remove('hide'):
-                  document.querySelector('.product-compare-price').classList.add('hide');
-      } 
-      function updateProductSku() {
+      //   matchedVariant.compare_at_price > matchedVariant.price ? 
+      //             document.querySelector('.product-compare-price').classList.remove('hide'):
+      //             document.querySelector('.product-compare-price').classList.add('hide');
+      // } 
+      // function updateProductSku() {
         
-      } 
-      function updateButtons() {
-        var addButton = document.querySelector('[name="add"]');
-        if(matchedVariant.available){
-          addButton.textContent = "Add To cart";
-          addButton.disabled = false;
-        }
-        else{
-          addButton.textContent = "Sold Out";
-          addButton.disabled = true;
-        }
-      }
-      function updateAvailability() {
-        if(matchedVariant.available){
-          document.querySelector('.price__badge-sale').style.display = "inline-block";
-          document.querySelector('.price__badge-sold-out').style.display = "none";
-        } else{
-          document.querySelector('.price__badge-sale').style.display = "none";
-          document.querySelector('.price__badge-sold-out').style.display = "inline-block";
-        }
-      }
-      function updateMedia() {
-        $('.prd_img'+matchedVariant.id).click();
-        if(matchedVariant.featured_image){
-          document.querySelector('#product-image').setAttribute('src', matchedVariant.featured_image.src );
-          document.querySelector('.product_image_thumbs li.selected').classList.remove('selected');
-          document.querySelectorAll('.product_image_thumbs li')[matchedVariant.featured_image.position -1].classList.add('selected');
-        }
-        if(matchedVariant.featured_image){
-          document.querySelector('.product_image_thumbs li.selected').classList.remove('selected');
-          document.querySelectorAll('.product_image_thumbs li')[matchedVariant.featured_image.position -1].classList.add('selected');
-          document.querySelector('.product_image_thumbs li').firstElementChild.setAttribute('src', matchedVariant.featured_image.src);
-        }
-      }
+      // } 
+      // function updateButtons() {
+      //   var addButton = document.querySelector('[name="add"]');
+      //   if(matchedVariant.available){
+      //     addButton.textContent = "Add To cart";
+      //     addButton.disabled = false;
+      //   }
+      //   else{
+      //     addButton.textContent = "Sold Out";
+      //     addButton.disabled = true;
+      //   }
+      // }
+      // function updateAvailability() {
+      //   if(matchedVariant.available){
+      //     document.querySelector('.price__badge-sale').style.display = "inline-block";
+      //     document.querySelector('.price__badge-sold-out').style.display = "none";
+      //   } else{
+      //     document.querySelector('.price__badge-sale').style.display = "none";
+      //     document.querySelector('.price__badge-sold-out').style.display = "inline-block";
+      //   }
+      // }
+      // function updateMedia() {
+      //   $('.prd_img'+matchedVariant.id).click();
+      //   if(matchedVariant.featured_image){
+      //     document.querySelector('#product-image').setAttribute('src', matchedVariant.featured_image.src );
+      //     document.querySelector('.product_image_thumbs li.selected').classList.remove('selected');
+      //     document.querySelectorAll('.product_image_thumbs li')[matchedVariant.featured_image.position -1].classList.add('selected');
+      //   }
+      //   if(matchedVariant.featured_image){
+      //     document.querySelector('.product_image_thumbs li.selected').classList.remove('selected');
+      //     document.querySelectorAll('.product_image_thumbs li')[matchedVariant.featured_image.position -1].classList.add('selected');
+      //     document.querySelector('.product_image_thumbs li').firstElementChild.setAttribute('src', matchedVariant.featured_image.src);
+      //   }
+      // }
     });
   })
 }
