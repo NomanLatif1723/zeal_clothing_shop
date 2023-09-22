@@ -1140,11 +1140,11 @@ function initProductVariants() {
 
   function updateProductPrice(matchedVariant) {
     productSalePrice.textContent = formatMoney(matchedVariant.price,format);
-    document.querySelector('.product-compare-price').textContent = formatMoney(matchedVariant.compare_at_price, "{{ shop.money_format }}");
+    productRegularPrice.textContent = formatMoney(matchedVariant.compare_at_price, format);
 
     matchedVariant.compare_at_price > matchedVariant.price ?
-      document.querySelector('.product-compare-price').classList.remove('hide') :
-      document.querySelector('.product-compare-price').classList.add('hide');
+      document.querySelector('.product-compare-price').classList.remove('hidden') :
+      document.querySelector('.product-compare-price').classList.add('hidden');
   }
 
   function updateProductSku(matchedVariant) {
