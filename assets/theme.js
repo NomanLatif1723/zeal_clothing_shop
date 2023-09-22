@@ -1077,7 +1077,8 @@ initProductQuantitySelector();
 
 // Product Variants js
 function initProductVariants() {
-  let masterVariantSelector = document.querySelector('.product-selected__variants');
+  // let masterVariantSelector = document.querySelector('.product-selected__variants');
+  let masterVariantSelector = document.querySelector('.selected-variant__id');
   let productSalePrice = document.querySelector('[data-sale-price]');
   let productRegularPrice = document.querySelector('[data-regular-price]');
   let productSku = document.querySelector('[data-sku]');
@@ -1122,8 +1123,10 @@ function initProductVariants() {
   }
 
   function updateMasterVariant(matchedVariant) {
-    // Change the variant id
-    document.querySelector('.selected-variant__id').value = matchedVariant.id;
+    if (!masterVariantSelector) {
+      return;
+    }
+    masterVariantSelector.value = matchedVariant.id;
   }
 
   function updateUrl(matchedVariant) {
@@ -1133,10 +1136,6 @@ function initProductVariants() {
 
     var newurl = window.location.protocol + '//' + window.location.host + window.location.pathname + '?variant=' + matchedVariant.id;
     window.history.replaceState({path: newurl}, '', newurl);
-    
-    // let url = new URLParse(window.location.href, true);
-    // url.query.variant = matchedVariant.id;
-    // window.history.replaceState(null, null, url.toString());
   }
 
   function updateProductPrice(matchedVariant) {
