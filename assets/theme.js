@@ -1090,7 +1090,7 @@ function initProductVariants(){
   variantSelector.forEach(options => {
     options.addEventListener('change', () => {
       let selectedOptions = [];
-      updateOptions();
+      updateOptions(event);
       // Find the Matched Variant
       let matchedVariant = product.variants.find(variant =>{
         let pass = true;
