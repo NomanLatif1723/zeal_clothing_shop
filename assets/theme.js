@@ -1171,7 +1171,7 @@ function initProductVariants() {
       return;
     }
     if (matchedVariant.available) {
-      saleBadge.classList.remove('hidden');
+      // saleBadge.classList.remove('hidden');
       soldOutBadge.classList.add('hidden');
     } else {
       saleBadge.classList.add('hidden');
