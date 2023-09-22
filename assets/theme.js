@@ -1088,11 +1088,11 @@ function initProductVariants() {
 
   variantSelectors.forEach(selector => {
     selector.addEventListener('change', () => {
-      updateProductInfo();
+      updateProductOptions();
     });
   });
 
-  function updateProductInfo() {
+  function updateProductOptions() {
     let selectedOptions = [];
 
     variantSelectors.forEach(selector => {
@@ -1113,7 +1113,7 @@ function initProductVariants() {
     if (matchedVariant) {
       updateMasterVariant(matchedVariant);
       updateButtons(matchedVariant);
-      // updateUrl(matchedVariant);
+      updateUrl(matchedVariant);
       // updateProductPrice(matchedVariant);
       // updateProductSku(matchedVariant);
       // updateAvailability(matchedVariant);
