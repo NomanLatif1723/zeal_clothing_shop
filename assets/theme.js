@@ -1123,7 +1123,7 @@ function initProductVariants() {
     });
 
     // Find the matched variant
-    let matchedVariant = product.variants.find(variant => {
+    let matchedVariant = selectors.product.variants.find(variant => {
       return selectedOptions.every(option => variant.options.includes(option));
     });
 
