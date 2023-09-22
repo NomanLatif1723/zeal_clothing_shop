@@ -29,7 +29,7 @@
             <span class="badge hidden soldout__badge{% if settings.soldout_badge_color contains '#f' %} badge-color__dark{% else %} badge-color__light{% endif %}">{{ 'products.badges.sold_out' | t }}</span>
           {%- endif -%}
         </div>
-        <div class="product__unit-price{% unless product.selected_or_first_available_variant.unit_price_measurement %} hidden{% endunless %}">
+        <div data-unit-price class="product__unit-price{% unless product.selected_or_first_available_variant.unit_price_measurement %} hidden{% endunless %}">
           {%- if product.selected_or_first_available_variant.price > 0 -%}
             {%- if product.selected_or_first_available_variant.unit_price_measurement -%}
               <div>{{ product.selected_or_first_available_variant.unit_price }}/
