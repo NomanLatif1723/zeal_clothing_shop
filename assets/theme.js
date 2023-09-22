@@ -1198,7 +1198,7 @@ function initProductVariants() {
     if (!selectors.productInStock) {
       return;
     }
-    selectors.productInStock.textContent = matchedVariant.stock_count;
+    selectors.productInStock.textContent = matchedVariant.inventory_quantity;
   }
 
   function updateMedia(matchedVariant) {
