@@ -1127,8 +1127,8 @@ function initProductVariants() {
       updateUrl(matchedVariant);
       updateProductPrice(matchedVariant);
       updateProductSku(matchedVariant);
-      updateBadges(matchedVariant);
       updateAvailability(matchedVariant);
+      updateInventory(matchedVariant);
       updateMedia(matchedVariant);
     }
   }
@@ -1179,7 +1179,7 @@ function initProductVariants() {
     }
   }
 
-  function updateBadges(matchedVariant) {
+  function updateAvailability(matchedVariant) {
     let saleBadge = document.querySelector('.sale__badge');
     let soldOutBadge = document.querySelector('.soldout__badge');
     if (!saleBadge || !soldOutBadge) {
@@ -1194,7 +1194,7 @@ function initProductVariants() {
     }
   }
 
-  function updateAvailability(matchedVariant) {
+  function updateInventory(matchedVariant) {
     
   }
 
