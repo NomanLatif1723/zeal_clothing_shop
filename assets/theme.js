@@ -1084,17 +1084,15 @@ function initProductVariants(){
   let productInStock = document.querySelector('[data-availability]');
   let productAddToCartBtn = document.querySelector('[data-add-to-cart]');
   let variantSelector = document.querySelectorAll('[data-selected-variant]');
-  let matchedVariant;
+  // let matchedVariant;
   let product = window.themeContent.routes.product;
   console.log(product);
   variantSelector.forEach(options => {
     options.addEventListener('change', () => {
       let selectedOptions = [];
       updateOptions();
-      
-      
       // Find the Matched Variant
-      matchedVariant = product.variants.find(variant =>{
+      let matchedVariant = product.variants.find(variant =>{
         let pass = true;
         for(let i= 0;  i < selectedOptions.length; i++ ){
           if(selectedOptions.indexOf(variant.options[i]) === -1){
@@ -1104,18 +1102,20 @@ function initProductVariants(){
         }
         return pass;
       });
-
-      updateMasterVariant();
-      
-      
       updateMasterVariant();
       updateButtons();
-      function updateOptions() {
-          document.querySelectorAll('[data-selected-variant]:checked').forEach(option => {
-          selectedOptions.push(option.value);
-        })
+      function updateOptions(event) {
+        let type = event.target.getAttribute('type');
+        console.log(type);
+        if (type == 'radio' || type == 'checkbox') {
+          const selectedOptions = Array.from(document.querySelectorAll('[data-selected-variant]:checked'))
+          .map(option => option.value);
+        } else {
+          const selectedOptions = Array.from(document.querySelectorAll('[data-selected-variant]'))
+          .map(option => option.value);
+        }
       }
-      function updateMasterVariant() {
+      function updateMasterVariant(matchedvariant) {
         // Change the variant id
         document.querySelector('.selected-variant__id').value = matchedVariant.id;
       }
