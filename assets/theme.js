@@ -1118,8 +1118,8 @@ function initProductVariants() {
       updateButtons(matchedVariant);
       updateUrl(matchedVariant);
       updateProductPrice(matchedVariant);
-      // updateProductSku(matchedVariant);
-      // updateAvailability(matchedVariant);
+      updateProductSku(matchedVariant);
+      updateAvailability(matchedVariant);
       // updateMedia(matchedVariant);
     }
   }
@@ -1165,12 +1165,14 @@ function initProductVariants() {
   }
 
   function updateAvailability(matchedVariant) {
+    let saleBadge = document.querySelector('sale__badge');
+    let soldOutBadge = document.querySelector('.soldout__badge')
     if (matchedVariant.available) {
-      document.querySelector('.price__badge-sale').style.display = "inline-block";
-      document.querySelector('.price__badge-sold-out').style.display = "none";
+      saleBadge.classList.remove('hidden');
+      soldOutBadge.classList.add('hidden');
     } else {
-      document.querySelector('.price__badge-sale').style.display = "none";
-      document.querySelector('.price__badge-sold-out').style.display = "inline-block";
+      saleBadge.classList.add('hidden');
+      soldOutBadge.classList.remove('hidden');
     }
   }
 
