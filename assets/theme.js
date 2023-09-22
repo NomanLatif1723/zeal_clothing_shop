@@ -1079,29 +1079,17 @@ initProductQuantitySelector();
 function initProductVariants() {
 
   let selectors = {
-  masterVariantSelector: document.querySelector('.selected-variant__id'),
-  productSalePrice: document.querySelector('[data-sale-price]'),
-  productRegularPrice: document.querySelector('[data-regular-price]'),
-  productSku: document.querySelector('[data-sku]'),
-  productInStock: document.querySelector('[data-availability]'),
-  productAddToCartBtn: document.querySelector('[data-add-to-cart]'),
-  variantSelectors: document.querySelectorAll('[data-selected-variant]'),
-  productForm: document.querySelector('.product__form'),
-  format: document.querySelector('.product__form').dataset.format,
-  product: window.themeContent.routes.product
-};
-
-  // // let masterVariantSelector = document.querySelector('.product-selected__variants');
-  // let masterVariantSelector = document.querySelector('.selected-variant__id');
-  // let productSalePrice = document.querySelector('[data-sale-price]');
-  // let productRegularPrice = document.querySelector('[data-regular-price]');
-  // let productSku = document.querySelector('[data-sku]');
-  // let productInStock = document.querySelector('[data-availability]');
-  // let productAddToCartBtn = document.querySelector('[data-add-to-cart]');
-  // let variantSelectors = document.querySelectorAll('[data-selected-variant]');
-  // let productForm = document.querySelector('.product__form');
-  // let format = productForm.dataset.format;
-  // let product = window.themeContent.routes.product;
+    masterVariantSelector: document.querySelector('.selected-variant__id'),
+    productSalePrice: document.querySelector('[data-sale-price]'),
+    productRegularPrice: document.querySelector('[data-regular-price]'),
+    productSku: document.querySelector('[data-sku]'),
+    productInStock: document.querySelector('[data-availability]'),
+    productAddToCartBtn: document.querySelector('[data-add-to-cart]'),
+    variantSelectors: document.querySelectorAll('[data-selected-variant]'),
+    productForm: document.querySelector('.product__form'),
+    format: document.querySelector('.product__form').dataset.format,
+    product: window.themeContent.routes.product
+  };
 
   selectors.variantSelectors.forEach(selector => {
     selector.addEventListener('change', () => {
