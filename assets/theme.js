@@ -1143,8 +1143,8 @@ function initProductVariants() {
     productRegularPrice.textContent = formatMoney(matchedVariant.compare_at_price, format);
 
     matchedVariant.compare_at_price > matchedVariant.price ?
-      document.querySelector('.product-compare-price').classList.remove('hidden') :
-      document.querySelector('.product-compare-price').classList.add('hidden');
+      productRegularPrice.classList.remove('hidden') :
+      productRegularPrice.classList.add('hidden');
   }
 
   function updateProductSku(matchedVariant) {
