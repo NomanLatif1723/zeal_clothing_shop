@@ -1203,6 +1203,7 @@ function initProductVariants() {
 
   function updateMedia(matchedVariant) {
     // $('.prd_img' + matchedVariant.id).click();
+    document.querySelector('.swiper-slide-active img').setAttribute('src', matchedVariant.media.src);
     if (matchedVariant.media) {
       document.querySelector('.swiper-slide-active img').setAttribute('src', matchedVariant.media.src);
       // document.querySelector('.product_image_thumbs li.selected').classList.remove('selected');
