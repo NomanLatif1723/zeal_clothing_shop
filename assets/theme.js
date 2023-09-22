@@ -1168,7 +1168,7 @@ function initProductVariants() {
     if (!selectors.productUnitPrice) {
       return;
     }
-    selectors.productUnitPrice.textContent = matchedvariant.unit_price;
+    selectors.productUnitPrice.textContent = `${matchedvariant.unit_price}/${matchedvariant.unit_price_measurement.reference_value}`;
   }
 
   function updateProductSku(matchedVariant) {
