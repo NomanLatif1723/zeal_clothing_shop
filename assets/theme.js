@@ -1105,10 +1105,10 @@ function initProductVariants(){
       updateMasterVariant();
       updateButtons();
       function updateOptions() {
-        document.querySelectorAll('[data-selected-variant]:checked').forEach(option => {
-        selectedOptions.push(option.value);
-      })
-    }
+          document.querySelectorAll('[data-selected-variant]:checked').forEach(option => {
+          selectedOptions.push(option.value);
+        })
+      }
       function updateMasterVariant() {
         // Change the variant id
         document.querySelector('.selected-variant__id').value = matchedVariant.id;
