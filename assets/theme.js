@@ -1314,7 +1314,7 @@ class VariantSelects extends HTMLElement {
         const addButtonUpdated = html.querySelector('[name="add"]');
         this.toggleAddButton(
           addButtonUpdated ? addButtonUpdated.hasAttribute('disabled') : true,
-          window.variantStrings.soldOut
+          window.themeContent.strings.soldOut
         );
 
         publish(PUB_SUB_EVENTS.variantChange, {
@@ -1337,10 +1337,10 @@ class VariantSelects extends HTMLElement {
 
     if (currentVariant.available) {
       addButton.removeAttribute('disabled');
-      addButton.textContent = 'Add To Cart';
+      addButton.textContent = window.themeContent.strings.addToCart;
     } else {
       addButton.setAttribute('disabled', 'disabled');
-      addButton.textContent = 'Sold Out';
+      addButton.textContent = window.themeContent.strings.soldOut';
     }
   }
 
