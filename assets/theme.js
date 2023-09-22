@@ -1105,7 +1105,7 @@ function initProductVariants(){
       updateMasterVariant();
       updateButtons();
       function updateOptions(event) {
-        let type = event.target.getAttribute('type');
+        let type = event.getAttribute('type');
         console.log(type);
         if (type == 'radio' || type == 'checkbox') {
           const selectedOptions = Array.from(document.querySelectorAll('[data-selected-variant]:checked'))
