@@ -1127,7 +1127,7 @@ function initProductVariants() {
       updateButtons(matchedVariant);
       updateUrl(matchedVariant);
       updateProductPrice(matchedVariant);
-      // updateProductUnitPrice(matchedVariant);
+      updateProductUnitPrice(matchedVariant);
       updateProductSku(matchedVariant);
       updateAvailability(matchedVariant);
       updateInventory(matchedVariant);
@@ -1165,7 +1165,10 @@ function initProductVariants() {
   }
 
   function updateProductUnitPrice(matchedvariant) {
-    
+    if (!selectors.productUnitPrice) {
+      return;
+    }
+    selectors.productUnitPrice.textContent = matchedvariant.unit_price;
   }
 
   function updateProductSku(matchedVariant) {
