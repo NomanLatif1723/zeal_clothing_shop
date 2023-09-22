@@ -1168,10 +1168,12 @@ function initProductVariants() {
     if (!selectors.productUnitPrice) {
       return;
     }
-    matchedvariant.price > 0 ? 
-      selectors.productUnitPrice.classList.remove('hidden') : 
-      selectors.productUnitPrice.classList.add('hidden');
-    selectors.productUnitPrice.textContent = `${matchedvariant.unit_price}/${matchedvariant.unit_price_measurement.reference_value} ${matchedvariant.unit_price_measurement.reference_unit}`;
+    // matchedvariant.price > 0 ? 
+    //   selectors.productUnitPrice.classList.remove('hidden') : 
+    //   selectors.productUnitPrice.classList.add('hidden');
+    if (matchedvariant.unit_price) {
+      selectors.productUnitPrice.textContent = `${matchedvariant.unit_price}/${matchedvariant.unit_price_measurement.reference_value} ${matchedvariant.unit_price_measurement.reference_unit}`;
+    }
   }
 
   function updateProductSku(matchedVariant) {
