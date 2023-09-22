@@ -1150,7 +1150,7 @@ function initProductVariants() {
   }
 
   function updateProductSku(matchedVariant) {
-    // Implement SKU update logic here
+    productSku.textContent = matchedVariant.sku;
   }
 
   function updateButtons(matchedVariant) {
