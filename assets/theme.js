@@ -1103,7 +1103,7 @@ function initProductVariants() {
   // let format = productForm.dataset.format;
   // let product = window.themeContent.routes.product;
 
-  variantSelectors.forEach(selector => {
+  selectors.variantSelectors.forEach(selector => {
     selector.addEventListener('change', () => {
       updateProductOptions();
     });
