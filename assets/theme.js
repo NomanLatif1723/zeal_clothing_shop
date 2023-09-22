@@ -1108,9 +1108,9 @@ function initProductVariants(){
         selectedOptions.push(option.value);
       })
     }
-      function updateMasterVariant(currentVariant) {
+      function updateMasterVariant(matchedVariant) {
         // Change the variant id
-        document.querySelector('.selected-variant__id').value = currentVariant.id;
+        document.querySelector('.selected-variant__id').value = matchedVariant.id;
       }
       function updateUrl() {
         let url = new URLParse(window.location.href,true);
