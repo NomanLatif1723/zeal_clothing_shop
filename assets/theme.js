@@ -1207,7 +1207,7 @@ function initProductVariants() {
     const destination = document.querySelector('.product__image.swiper-slide-active img').getAttribute('src');
     console.log(destination);
     var variantImage = matchedVariant.featured_image || {};
-    var currentVariantImage = matchedVariant.media || {};
+    var currentVariantImage = matchedVariant.featured_media || {};
     console.log(currentVariantImage);
     if (!matchedVariant.featured_image || variantImage.src === currentVariantImage.src) {
       return;
