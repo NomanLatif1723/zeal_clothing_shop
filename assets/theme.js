@@ -1171,11 +1171,11 @@ function initProductVariants() {
       return;
     }
     if (matchedVariant.available) {
-      saleBadge.classList.remove('hidden');
-      soldOutBadge.classList.add('hidden');
+      saleBadge.show();
+      soldOutBadge.hide();
     } else {
-      saleBadge.classList.add('hidden');
-      soldOutBadge.classList.remove('hidden');
+      saleBadge.hide();
+      soldOutBadge.show();
     }
   }
 
