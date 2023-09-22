@@ -1087,8 +1087,8 @@ function initProductVariants(){
   // let matchedVariant;
   let product = window.themeContent.routes.product;
   console.log(product);
-  variantSelector.forEach(variant => {
-    variant.addEventListener('change', () => {
+  variantSelector.forEach(options => {
+    options.addEventListener('change', () => {
       let selectedOptions = [];
       document.querySelectorAll('[data-selected-variant]:checked').forEach(option => {
         selectedOptions.push(option.value);
