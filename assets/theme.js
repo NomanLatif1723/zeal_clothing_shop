@@ -1340,7 +1340,7 @@ class VariantSelects extends HTMLElement {
       addButton.textContent = window.themeContent.strings.addToCart;
     } else {
       addButton.setAttribute('disabled', 'disabled');
-      addButton.textContent = window.themeContent.strings.soldOut';
+      addButton.textContent = window.themeContent.strings.soldOut;
     }
   }
 
