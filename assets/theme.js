@@ -1127,9 +1127,16 @@ function initProductVariants() {
   }
 
   function updateUrl(matchedVariant) {
-    let url = new URLParse(window.location.href, true);
-    url.query.variant = matchedVariant.id;
-    window.history.replaceState(null, null, url.toString());
+    if (!history.replaceState || !matchedVariant) {
+      return;
+    }
+
+    var newurl = window.location.protocol + '//' + window.location.host + window.location.pathname + '?variant=' + matchedVariant.id;
+    window.history.replaceState({path: newurl}, '', newurl);
+    
+    // let url = new URLParse(window.location.href, true);
+    // url.query.variant = matchedVariant.id;
+    // window.history.replaceState(null, null, url.toString());
   }
 
   function updateProductPrice(matchedVariant) {
