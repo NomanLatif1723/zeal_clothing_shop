@@ -1132,7 +1132,6 @@ function initProductVariants() {
       updateAvailability(matchedVariant);
       updateInventory(matchedVariant);
       updateMedia(matchedVariant);
-      
     }
   }
 
@@ -1168,9 +1167,6 @@ function initProductVariants() {
     if (!selectors.productUnitPrice) {
       return;
     }
-    // matchedvariant.price > 0 ? 
-    //   selectors.productUnitPrice.classList.remove('hidden') : 
-    //   selectors.productUnitPrice.classList.add('hidden');
     if (matchedvariant.unit_price) {
       selectors.productUnitPrice.classList.remove('hidden');
       selectors.productUnitPrice.textContent = `${matchedvariant.unit_price}/${matchedvariant.unit_price_measurement.reference_value} ${matchedvariant.unit_price_measurement.reference_unit}`;
@@ -1220,6 +1216,7 @@ function initProductVariants() {
   }
 
   function updateMedia(matchedVariant) {
+    // need to be done 
      try {
       var currentVariantImage = matchedVariant.featured_media || {};
       var imageElement = document.querySelector('.product__image.swiper-slide-active img');
