@@ -1115,7 +1115,7 @@ function initProductVariants() {
       updateMasterVariant(matchedVariant);
       updateButtons(matchedVariant);
       updateUrl(matchedVariant);
-      // updateProductPrice(matchedVariant);
+      updateProductPrice(matchedVariant);
       // updateProductSku(matchedVariant);
       // updateAvailability(matchedVariant);
       // updateMedia(matchedVariant);
@@ -1139,7 +1139,7 @@ function initProductVariants() {
   }
 
   function updateProductPrice(matchedVariant) {
-    document.querySelector('.product-price').textContent = formatMoney(matchedVariant.price, "{{ shop.money_format }}");
+    productSalePrice.textContent = formatMoney(matchedVariant.price,format);
     document.querySelector('.product-compare-price').textContent = formatMoney(matchedVariant.compare_at_price, "{{ shop.money_format }}");
 
     matchedVariant.compare_at_price > matchedVariant.price ?
