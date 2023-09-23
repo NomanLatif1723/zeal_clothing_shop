@@ -983,21 +983,6 @@ initHandleCart();
 //   })
 // }
 // initcartAjax();
-function updateCart() {
-  fetch('/cart.js')
-    .then((response) => response.json())
-    .then((cartData) => {
-      console.log('Cart updated:', cartData);
-    })
-    .catch((error) => {
-      console.error('Error updating cart:', error);
-    });
-}
-updateCart();
-document.addEventListener('cart.updated', function () {
-  updateCart();
-});
-
 function initCartForm() {
   let selectors = {
     
