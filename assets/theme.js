@@ -1018,45 +1018,48 @@ function initCartForm() {
   // })
 
   selectors.quantitySelector.forEach(button => {
-    button.addEventListener('click', async (event) => {
-      let isPlus = button.classList.contains('icon__plus');
-      let quantityInput = button.parentElement.querySelector('input');
-      let value = Number(quantityInput.value);
-      let key = button.closest('[data-key]').dataset.key;
-      
-      // Fetch the product's stock availability based on the key
-      const cartDataResponse = await fetch('/cart.js');
-      const cartData = await cartDataResponse.json();
-  
-      const lineItem = cartData.items.find(item => item.key === key);
-      const stockAvailable = lineItem.product_id ? lineItem.product_id : 0;
-  
-      if (isPlus) {
-        // Check if increasing the quantity will exceed the stock limit
-        if (value + 1 <= stockAvailable) {
-          let qty = value + 1;
-          quantityInput.value = qty;
-          updateCart(key, qty);
-        } else {
-          // Show a message to the user or disable the buttons if limit reached
-          alert('You have reached the maximum allowed quantity for this product.');
-          // Or disable the plus button here
-        }
-      } else {
-        // Check if decreasing the quantity is valid (greater than 0)
-        if (value > 1) {
-          let qty = value - 1;
-          quantityInput.value = qty;
-          updateCart(key, qty);
-        } else {
-          // Show a message to the user or disable the buttons if limit reached
-          alert('You have reached the minimum allowed quantity for this product.');
-          // Or disable the minus button here
-        }
-      }
-    });
-  });
+  button.addEventListener('click', async (event) => {
+    let isPlus = button.classList.contains('icon__plus');
+    let quantityInput = button.parentElement.querySelector('input');
+    let currentValue = Number(quantityInput.value);
+    let key = button.closest('[data-key]').dataset.key;
+    
+    // Fetch the product's stock availability based on the key
+    const cartDataResponse = await fetch('/cart.js');
+    const cartData = await cartDataResponse.json();
 
+    const lineItem = cartData.items.find(item => item.key === key);
+    const stockAvailable = lineItem.product_id ? lineItem.product_id : 0;
+
+    if (isPlus) {
+      // Calculate the new quantity if plus button is clicked
+      let newQuantity = currentValue + 1;
+
+      // Check if the new quantity exceeds the available stock
+      if (newQuantity <= stockAvailable) {
+        quantityInput.value = newQuantity;
+        updateCart(key, newQuantity);
+      } else {
+        // Show a message to the user or disable the plus button if limit reached
+        alert('You have reached the maximum allowed quantity for this product.');
+        // Or disable the plus button here
+      }
+    } else {
+      // Calculate the new quantity if minus button is clicked
+      let newQuantity = currentValue - 1;
+
+      // Check if the new quantity is greater than 0
+      if (newQuantity > 0) {
+        quantityInput.value = newQuantity;
+        updateCart(key, newQuantity);
+      } else {
+        // Show a message to the user or disable the minus button if limit reached
+        alert('You have reached the minimum allowed quantity for this product.');
+        // Or disable the minus button here
+      }
+    }
+  });
+});
   function updateCart(key,quantity) {
     console.log({key,quantity});
     var requestData = {
