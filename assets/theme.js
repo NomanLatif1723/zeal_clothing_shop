@@ -1229,21 +1229,31 @@ function initProductVariants() {
   }
 
   function updateMedia(matchedVariant) {
-    // need to be done 
-     try {
-      var currentVariantImage = matchedVariant.featured_media || {};
-      var imageElement = document.querySelector('.product__image.swiper-slide-active img');
+    if (!matchedVariant) return;
+    if (!matchedVariant.featured_media) return;
+
+    const mediaGalleries = document.querySelectorAll(`[id^="MediaGallery-${this.dataset.section}"]`);
+    mediaGalleries.forEach((mediaGallery) =>
+      mediaGallery.setActiveMedia(`${this.dataset.section}-${this.currentVariant.featured_media.id}`, true)
+    );
+
+    const modalContent = document.querySelector(`#ProductModal-${this.dataset.section} .product-media-modal__content`);
+    if (!modalContent) return;
+    const newMediaModal = modalContent.querySelector(`[data-media-id="${this.currentVariant.featured_media.id}"]`);
+    modalContent.prepend(newMediaModal);
+    //  try {
+    //   var currentVariantImage = matchedVariant.featured_media || {};
+    //   var imageElement = document.querySelector('.product__image.swiper-slide-active img');
   
-      if (imageElement && currentVariantImage.preview_image && currentVariantImage.preview_image.src) {
-        // Update the image source
-        imageElement.setAttribute('src', currentVariantImage.preview_image.src);
-        console.log('Image source updated:', currentVariantImage.preview_image.src);
-      } else {
-        console.warn('Image source not found or invalid:', currentVariantImage);
-      }
-    } catch (error) {
-      console.error('Error updating media:', error);
-    }
+    //   if (imageElement && currentVariantImage.preview_image && currentVariantImage.preview_image.src) {
+    //     imageElement.setAttribute('src', currentVariantImage.preview_image.src);
+    //     console.log('Image source updated:', currentVariantImage.preview_image.src);
+    //   } else {
+    //     console.warn('Image source not found or invalid:', currentVariantImage);
+    //   }
+    // } catch (error) {
+    //   console.error('Error updating media:', error);
+    // }
   }
 }
 
