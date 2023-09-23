@@ -1213,7 +1213,7 @@ function initProductVariants() {
       console.log('product is out of stock');
       return;
     }
-    selectors.productInStock.textContent = `In Stock: ${matchedVariant.inventory_quantity} units`;
+    selectors.productInStock.textContent = matchedVariant.inventory_quantity;
   }
 
   function updateMedia(matchedVariant) {
