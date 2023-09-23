@@ -1219,13 +1219,6 @@ function initProductVariants() {
         const inventorySource = html.querySelector('[data-inventory]');
         const inventoryDestination = document.querySelector('[data-inventory]');
         if (inventorySource && inventoryDestination) inventoryDestination.innerHTML = inventorySource.innerHTML;
-        // publish(PUB_SUB_EVENTS.variantChange, {
-        //   data: {
-        //     sectionId,
-        //     html,
-        //     variant: this.currentVariant,
-        //   },
-        // });
       });
     
     // if (!matchedVariant || matchedVariant.inventory_quantity <=0) {
