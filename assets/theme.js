@@ -1049,15 +1049,24 @@ function initCartForm() {
     items.forEach((item) => {
       let finalPriceContainer = document.querySelector(`[data-key="${item.key}"] .final-line__price`);
       let itemPrice =  formatMoney(item.final_line_price,selectors.format);
+      if (!finalPriceContainer) {
+        return;
+      }
       finalPriceContainer.textContent = itemPrice;
     });
   }
 
   function updateSubtotal(cartData) {
+    if (!selectors.subTotal) {
+      return;
+    }
     selectors.subTotal.textContent = formatMoney(cartData.total_price,selectors.format);
   }
 
   function updateTotalDiscount(cartData) {
+    if (!selectors.totalDiscount) {
+      return;
+    }
     selectors.totalDiscount.textContent = formatMoney(cartData.total_discount,selectors.format);
   }
 
