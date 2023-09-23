@@ -1040,7 +1040,10 @@ function initCartForm() {
   }
   function updateLineItemPrices(items) {
     items.forEach((item) => {
-      console.log(item);
+      let finalPriceContainer = document.querySelector(`[data-key="${item.key}"] .final-line__price`);
+      let itemPrice =  item.final_line_price;
+      finalPriceContainer.textContent = itemPrice;
+      
     });
   }
 
