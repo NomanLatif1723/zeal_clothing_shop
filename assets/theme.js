@@ -1232,7 +1232,7 @@ function initProductVariants() {
     if (!matchedVariant) return;
     if (!matchedVariant.featured_media) return;
 
-    const mediaGalleries = document.querySelectorAll(`[id^="product__media-${this.dataset.section}"]`);
+    const mediaGalleries = document.querySelectorAll(`#product__media-${this.dataset.section}"]`);
     mediaGalleries.forEach((mediaGallery) =>
       mediaGallery.setActiveMedia(`${matchedVariant.featured_media.id}`, true)
     );
