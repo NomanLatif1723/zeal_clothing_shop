@@ -40,7 +40,7 @@
           {%- endif -%}
           {%- if item.line_level_discount_allocations != blank -%}
             {%- for discount_allocation in item.line_level_discount_allocations -%}
-              <span class="line-item__discount">{{ discount_allocation.discount_application.title }}(-{{ discount_allocation.amount }})</span>
+              <div class="line-item__discount">{{ discount_allocation.discount_application.title }}(-{{ discount_allocation.amount }})</div>
             {%- endfor -%}
           {%- endif -%}
           <div class="cart__unit-price{% unless item.unit_price_measurement %} hidden{% endunless %}">
