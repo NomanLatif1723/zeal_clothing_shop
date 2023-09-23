@@ -63,12 +63,12 @@
             {% if cart.discount_applications != blank %}
               <div class="cart__total-price">
                 <div>{{ 'cart.general.total_discounts' | t }}</div>
-                <div id="total_discounts">{{ cart.total_discount | money }}</div>
+                <div data-discount>{{ cart.total_discount | money }}</div>
               </div>
             {% endif %}
             <div class="cart__total-price">
               <div>{{ 'cart.general.total_price' | t }}</div>
-              <div id="total_price">{{ cart.total_price | money }}</div>
+              <div data-subTotal>{{ cart.total_price | money }}</div>
             </div>
             <div class="cart__shipping-text">
               <h4>{{ 'cart.general.shipping' | t }}</h4>
