@@ -986,8 +986,16 @@ initHandleCart();
 function initCartForm() {
   let selectors = {
     quantitySelector: document.querySelectorAll('.line__item-quantity button'),
-    checkoutButton: document.querySelector('[name="checkout"]')
+    checkoutButton: document.querySelector('[name="checkout"]'),
+    cartForm: document.querySelector('.cart__main'),
+    format: null
   };
+
+  if (selectors.cartForm) {
+    selectors.format = selectors.cartForm.dataset.moneyFormat;
+  } else {
+    selectors.format = 'default';
+  }
 
   selectors.quantitySelector.forEach(button => {
     button.addEventListener('click', (event) => {
@@ -1041,9 +1049,8 @@ function initCartForm() {
   function updateLineItemPrices(items) {
     items.forEach((item) => {
       let finalPriceContainer = document.querySelector(`[data-key="${item.key}"] .final-line__price`);
-      let itemPrice =  item.final_line_price;
+      let itemPrice =  formatMoney(item.final_line_price,selectors.format);
       finalPriceContainer.textContent = itemPrice;
-      
     });
   }
 
