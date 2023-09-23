@@ -37,7 +37,7 @@
         "8c5f37a6-8693-4180-a51a-16a798da00ce": {
           "type": "stock",
           "settings": {
-            "stock_threshold": 9,
+            "stock_threshold": 0,
             "stock_count": true
           }
         },
