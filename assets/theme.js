@@ -1010,8 +1010,8 @@ function initCartForm() {
   function updateCart(key,quantity) {
     console.log({key,quantity});
     var requestData = {
-      id: lineItemKey,
-      quantity: newQuantity
+      id: key,
+      quantity: quantity
     };
     fetch('/cart/change.js', {
       method: 'POST',
