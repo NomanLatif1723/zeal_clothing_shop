@@ -1118,7 +1118,7 @@ initProductmediaSlideShow();
 
 // Product Quantity Selectors Event
 function initProductQuantitySelector() {
-  const quantityWrapper = document.querySelectorAll('.line__item-quantity');
+  const quantityWrapper = document.querySelectorAll('.product__item-quantity');
   quantityWrapper.forEach(wrapper => {
     if (wrapper) {
       const quantityButton = wrapper.querySelectorAll('button');
