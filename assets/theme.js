@@ -1057,11 +1057,11 @@ function initCartForm() {
   }
 
   function updateSubtotal(cartData) {
-    console.log(cartData);
+    selectors.subTotal.textContent = formatMoney(cartData.total_price,format);
   }
 
   function updateTotalDiscount(cartData) {
-    console.log(cartData);
+    selectors.totalDiscount.textContent = formatMoney(cartData.total_discount,format);
   }
 
   function updateCartNote(cartNote) {
