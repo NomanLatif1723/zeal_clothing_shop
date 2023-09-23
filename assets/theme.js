@@ -1031,15 +1031,28 @@ function initCartForm() {
       const lineItem = cartData.items.find(item => item.key === key);
       const stockAvailable = lineItem.product_id ? lineItem.product_id : 0;
   
-      if ((isPlus && value + 1 <= stockAvailable) || (!isPlus && value - 1 > 0)) {
-        // Allow the quantity to be updated
-        let qty = isPlus ? value + 1 : value - 1;
-        quantityInput.value = qty;
-        updateCart(key, qty);
+      if (isPlus) {
+        // Check if increasing the quantity will exceed the stock limit
+        if (value + 1 <= stockAvailable) {
+          let qty = value + 1;
+          quantityInput.value = qty;
+          updateCart(key, qty);
+        } else {
+          // Show a message to the user or disable the buttons if limit reached
+          alert('You have reached the maximum allowed quantity for this product.');
+          // Or disable the plus button here
+        }
       } else {
-        // Show a message to the user or disable the buttons if limit reached
-        alert('You have reached the maximum allowed quantity for this product.');
-        // Or disable the plus and minus buttons here
+        // Check if decreasing the quantity is valid (greater than 0)
+        if (value > 1) {
+          let qty = value - 1;
+          quantityInput.value = qty;
+          updateCart(key, qty);
+        } else {
+          // Show a message to the user or disable the buttons if limit reached
+          alert('You have reached the minimum allowed quantity for this product.');
+          // Or disable the minus button here
+        }
       }
     });
   });
