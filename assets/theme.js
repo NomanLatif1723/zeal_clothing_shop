@@ -1031,12 +1031,9 @@ function initCartForm() {
       const lineItem = cartData.items.find(item => item.key === key);
       const stockAvailable = lineItem.product_id ? lineItem.product_id : 0;
   
-      if (isPlus && value < stockAvailable) {
-        let qty = value + 1;
-        quantityInput.value = qty;
-        updateCart(key, qty);
-      } else if (!isPlus && value > 1) {
-        let qty = value - 1;
+      if ((isPlus && value + 1 <= stockAvailable) || (!isPlus && value - 1 > 0)) {
+        // Allow the quantity to be updated
+        let qty = isPlus ? value + 1 : value - 1;
         quantityInput.value = qty;
         updateCart(key, qty);
       } else {
