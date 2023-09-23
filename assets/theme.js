@@ -1209,10 +1209,11 @@ function initProductVariants() {
   }
 
   function updateInventory(matchedVariant) {
-    if (!selectors.productInStock) {
+    if (!matchedVariant || matchedVariant.inventory_quantity <=0) {
+      console.log('product is out of stock');
       return;
     }
-    selectors.productInStock.textContent = matchedVariant.inventory_quantity;
+    selectors.productInStock.textContent = `In Stock: ${matchedVariant.inventory_quantity} units`;
   }
 
   function updateMedia(matchedVariant) {
