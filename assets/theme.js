@@ -1232,15 +1232,15 @@ function initProductVariants() {
     if (!matchedVariant) return;
     if (!matchedVariant.featured_media) return;
 
-    const mediaGalleries = document.querySelectorAll(`[id^="MediaGallery-${this.dataset.section}"]`);
+    const mediaGalleries = document.querySelectorAll(`[id^="product__media-${this.dataset.section}"]`);
     mediaGalleries.forEach((mediaGallery) =>
       mediaGallery.setActiveMedia(`${this.dataset.section}-${this.currentVariant.featured_media.id}`, true)
     );
 
-    const modalContent = document.querySelector(`#ProductModal-${this.dataset.section} .product-media-modal__content`);
-    if (!modalContent) return;
-    const newMediaModal = modalContent.querySelector(`[data-media-id="${this.currentVariant.featured_media.id}"]`);
-    modalContent.prepend(newMediaModal);
+    // const modalContent = document.querySelector(`#ProductModal-${this.dataset.section} .product-media-modal__content`);
+    // if (!modalContent) return;
+    // const newMediaModal = modalContent.querySelector(`[data-media-id="${this.currentVariant.featured_media.id}"]`);
+    // modalContent.prepend(newMediaModal);
     //  try {
     //   var currentVariantImage = matchedVariant.featured_media || {};
     //   var imageElement = document.querySelector('.product__image.swiper-slide-active img');
