@@ -986,8 +986,7 @@ initHandleCart();
 function initCartForm() {
   let selectors = {
     quantitySelector: document.querySelectorAll('.line__item-quantity button'),
-    checkoutButton: document.querySelector('[name="checkout"]'),
-    key: document.querySelector('[data-key]')
+    checkoutButton: document.querySelector('[name="checkout"]')
   };
 
   selectors.quantitySelector.forEach(button => {
@@ -996,6 +995,7 @@ function initCartForm() {
       let isPlus = button.classList.contains('icon__plus');
       let quantityInput = button.parentElement.querySelector('input');
       let value = Number(quantityInput.value);
+      let key = button.closest('[data-key]').dataset.key;
       if (isPlus) {
         quantityInput.value = value + 1;
         updateCart();
