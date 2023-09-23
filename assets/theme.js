@@ -1210,7 +1210,6 @@ function initProductVariants() {
 
   function updateInventory(matchedVariant) {
     const requestedVariantId = matchedVariant.id;
-    console.log(matchedVariant.url);
     fetch(
       `${window.location.protocol}//${window.location.host}${window.location.pathname}?variant=${matchedVariant.id}`)
       .then((response) => response.text())
