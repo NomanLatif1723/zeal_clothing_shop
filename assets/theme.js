@@ -1209,9 +1209,25 @@ function initProductVariants() {
   }
 
   function updateInventory(matchedVariant) {
-    const html = new DOMParser().parseFromString(responseText, 'text/html');
-    const inventorySource = html.querySelector('[data-inventory]');
-    const inventoryDestination = document.querySelector('[data-inventory]');
+    const requestedVariantId = matchedVariant.id;
+    fetch(
+      `${this.dataset.url}?variant=${requestedVariantId}`)
+      .then((response) => response.text())
+      .then((responseText) => {
+        if (matchedVariant.id !== requestedVariantId) return;
+        const html = new DOMParser().parseFromString(responseText, 'text/html');
+        const inventorySource = html.querySelector('[data-inventory]');
+        const inventoryDestination = document.querySelector('[data-inventory]');
+        if (inventorySource && inventoryDestination) inventoryDestination.innerHTML = inventorySource.innerHTML;
+        publish(PUB_SUB_EVENTS.variantChange, {
+          data: {
+            sectionId,
+            html,
+            variant: this.currentVariant,
+          },
+        });
+      });
+    
     if (source && destination) destination.innerHTML = source.innerHTML;
     if (inventorySource && inventoryDestination) inventoryDestination.innerHTML = inventorySource.innerHTML;
     // if (!matchedVariant || matchedVariant.inventory_quantity <=0) {
