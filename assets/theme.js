@@ -1008,14 +1008,15 @@ function initCartForm() {
     })
   })
   function updateCart(key,quantity) {
+    console.log({key,quantity});
     fetch('/cart.js')
     .then((response) => response.json())
     .then((cartData) => {
-      updateLineItemPrices(cartData.items);
-      updateSubtotal(cartData);
-      updateTotalPrice(cartData);
-      updateCartNote(cartData.note);
-      updateButtons(cartData);
+      // updateLineItemPrices(cartData.items);
+      // updateSubtotal(cartData);
+      // updateTotalPrice(cartData);
+      // updateCartNote(cartData.note);
+      // updateButtons(cartData);
     })
     .catch((error) => {
       console.error('Error updating cart:', error);
