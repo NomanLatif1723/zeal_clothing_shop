@@ -988,6 +988,7 @@ function initCartForm() {
     quantitySelector: document.querySelectorAll('.line__item-quantity button'),
     checkoutButton: document.querySelector('[name="checkout"]'),
     cartForm: document.querySelector('.cart__main'),
+    subTotal: document.querySelector('')
     format: null
   };
 
@@ -1038,7 +1039,7 @@ function initCartForm() {
         console.log('total discounts',cartData.total_discount);
         updateLineItemPrices(cartData.items);
         updateSubtotal(cartData);
-        updateTotalPrice(cartData);
+        updateTotalDiscount(cartData);
         updateCartNote(cartData.note);
         updateButtons(cartData);
       })
@@ -1058,7 +1059,7 @@ function initCartForm() {
     console.log(cartData);
   }
 
-  function updateTotalPrice(cartData) {
+  function updateTotalDiscount(cartData) {
     console.log(cartData);
   }
 
