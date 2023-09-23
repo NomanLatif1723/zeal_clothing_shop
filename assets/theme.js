@@ -1234,7 +1234,7 @@ function initProductVariants() {
 
     const mediaGalleries = document.querySelectorAll(`[id^="product__media-${this.dataset.section}"]`);
     mediaGalleries.forEach((mediaGallery) =>
-      mediaGallery.setActiveMedia(`${this.dataset.section}-${this.currentVariant.featured_media.id}`, true)
+      mediaGallery.setActiveMedia(`${matchedVariant.featured_media.id}`, true)
     );
 
     // const modalContent = document.querySelector(`#ProductModal-${this.dataset.section} .product-media-modal__content`);
