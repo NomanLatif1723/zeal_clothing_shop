@@ -985,7 +985,8 @@ initHandleCart();
 // initcartAjax();
 function initCartForm() {
   let selectors = {
-    quantitySelector: document.querySelectorAll('.line__item-quantity button')
+    quantitySelector: document.querySelectorAll('.line__item-quantity button'),
+    checkoutButton: document.querySelector('[name="checkout"]')
   };
 
   selectors.quantitySelector.forEach(button => {
@@ -1035,13 +1036,15 @@ function initCartForm() {
   }
 
   function updateButtons(cartData) {
-    var addButton = document.querySelector('[name="add"]');
+    if (!selectors.checkoutButton) {
+      return;
+    }
     if (cartData.item_count > 0) {
-      addButton.textContent = "Update Cart";
-      addButton.disabled = false;
+      selectors.checkoutButton.textContent = "Checkout";
+      selectors.checkoutButton.disabled = false;
     } else {
-      addButton.textContent = "Cart is Empty";
-      addButton.disabled = true;
+      selectors.checkoutButton.textContent = "Sold Out";
+      selectors.checkoutButton.disabled = true;
     }
   }
 }
