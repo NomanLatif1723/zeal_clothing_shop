@@ -75,7 +75,9 @@
               </div>
             {%- endif -%}
             <div class="cart__checkout-wrapper">
-              <button class="btn btn__link btn__primary" type="submit" data-terms="{{ settings.show_terms }}" name="checkout" value="Checkout" aria-label="{{ 'cart.general.checkout' | t }}">{{ 'cart.general.checkout' | t }}</button>
+              <button class="btn btn__link btn__primary" type="submit" data-terms="{{ settings.show_terms }}" data-terms-message="{{ 'cart.general.terms_message_at_checkout' | t }}" name="checkout" value="Checkout" aria-label="{{ 'cart.general.checkout' | t }}">
+                {{ 'cart.general.checkout' | t }}
+              </button>
               {% if additional_checkout_buttons and settings.additional_checkout_buttons %}
                 <div class="additional__buttons">{{ content_for_additional_checkout_buttons }}</div>
               {% endif %}
