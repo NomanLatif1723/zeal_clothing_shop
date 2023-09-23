@@ -929,60 +929,81 @@ function initHandleCart() {
   }
 }
 initHandleCart();
-  
-function initcartAjax() {
-  let quantityWrapper = document.querySelectorAll('.line__item-quantity');
-  let cartForm = document.querySelectorAll('form[action="/cart"]');
-  quantityWrapper.forEach(wrapper => {
-    let quantityButtons = wrapper.querySelectorAll('.line__item-quantity button');
-    quantityButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        let quantityInput = button.parentElement.querySelector('input');
-        // let line = quantityInput.getAttribute('data-line');
-        let value = Number(quantityInput.value);
-        let isPlus = button.classList.contains('icon__plus');
-        let key = button.closest('.cart__item-block').getAttribute('data-key');
+// Cart Form Ajax 
+// function initcartAjax() {
+//   let quantityWrapper = document.querySelectorAll('.line__item-quantity');
+//   let cartForm = document.querySelectorAll('form[action="/cart"]');
+//   quantityWrapper.forEach(wrapper => {
+//     let quantityButtons = wrapper.querySelectorAll('.line__item-quantity button');
+//     quantityButtons.forEach(button => {
+//       button.addEventListener('click', () => {
+//         let quantityInput = button.parentElement.querySelector('input');
+//         // let line = quantityInput.getAttribute('data-line');
+//         let value = Number(quantityInput.value);
+//         let isPlus = button.classList.contains('icon__plus');
+//         let key = button.closest('.cart__item-block').getAttribute('data-key');
 
-        if (isPlus) {
-          let newValue = value + 1
-          quantityInput.value = newValue;
-          changeItemQuantity(key, newValue);
-        } else if (value > 1) {
-          let newValue = value - 1
-          quantityInput.value = newValue;
-          changeItemQuantity(key, newValue);
-        }
-      })
-      function updateCart() {
-        fetch('/?view=ajax-cart')
-        .then(responce => responce.text())
-        .then(cartData => {
-          cartForm.forEach(form => {
-            form.innerHTML = cartData;
-          })
-        })
-      }
-      function changeItemQuantity(key, quantity) {
-        fetch('/cart/change.js', {
-          // key: key,
-          // quantity: quantity
-          method: 'POST',
-          headers: 'applications/json',
-          body: JSON.stringify({key: key,quantity: quantity})
-        })
-        .then(responce => responce.json())
-        .then(data => {
-          console.log(data);
-          let format = document.querySelector('[data-money-format]').getAttribute('data-money-format');
-          let totalPrice = formatMoney(data.total_price, format);
-          document.querySelector(`.final-line__price`).textContent = data.final_line_price;
-          document.querySelector('#total_price').textContent = totalPrice;
-        })
-      }
+//         if (isPlus) {
+//           let newValue = value + 1
+//           quantityInput.value = newValue;
+//           changeItemQuantity(key, newValue);
+//         } else if (value > 1) {
+//           let newValue = value - 1
+//           quantityInput.value = newValue;
+//           changeItemQuantity(key, newValue);
+//         }
+//       })
+//       function updateCart() {
+//         fetch('/?view=ajax-cart')
+//         .then(responce => responce.text())
+//         .then(cartData => {
+//           cartForm.forEach(form => {
+//             form.innerHTML = cartData;
+//           })
+//         })
+//       }
+//       function changeItemQuantity(key, quantity) {
+//         fetch('/cart/change.js', {
+//           // key: key,
+//           // quantity: quantity
+//           method: 'POST',
+//           headers: 'applications/json',
+//           body: JSON.stringify({key: key,quantity: quantity})
+//         })
+//         .then(responce => responce.json())
+//         .then(data => {
+//           console.log(data);
+//           let format = document.querySelector('[data-money-format]').getAttribute('data-money-format');
+//           let totalPrice = formatMoney(data.total_price, format);
+//           document.querySelector(`.final-line__price`).textContent = data.final_line_price;
+//           document.querySelector('#total_price').textContent = totalPrice;
+//         })
+//       }
+//     })
+//   })
+// }
+// initcartAjax();
+function updateCart() {
+  fetch('/cart.js')
+    .then((response) => response.json())
+    .then((cartData) => {
+      console.log('Cart updated:', cartData);
     })
-  })
+    .catch((error) => {
+      console.error('Error updating cart:', error);
+    });
 }
-initcartAjax();
+updateCart();
+document.addEventListener('cart.updated', function () {
+  updateCart();
+});
+
+function initCartForm() {
+  let selectors = {
+    
+  };
+}
+initCartForm();
 
 // function for product collapsibles 
 function initProductCollapsibles() {
