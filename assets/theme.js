@@ -1009,7 +1009,7 @@ function initCartForm() {
   })
   function updateCart(key,quantity) {
     console.log({key,quantity});
-    fetch('/cart.js')
+    fetch('/cart/change.js')
     .then((response) => response.json())
     .then((cartData) => {
       // updateLineItemPrices(cartData.items);
