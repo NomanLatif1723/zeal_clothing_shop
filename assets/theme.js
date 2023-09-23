@@ -999,11 +999,11 @@ function initCartForm() {
       if (isPlus) {
         let qty = value + 1;
         quantityInput.value = qty;
-        updateCart(key,qty );
+        updateCart(key,qty);
       } else if(value > 1) {
         let qty = value - 1
         quantityInput.value = qty;
-        updateCart(key,qty );
+        updateCart(key,qty);
       }
     })
   })
