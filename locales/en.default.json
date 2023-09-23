@@ -51,6 +51,7 @@
       "shipping_text": "Shipping and tax calculated at checkout.",
       "checkout": "Checkout",
       "terms_at_checkout": "I agree with Terms and Conditions",
+      "terms_message_at_checkout": "You must agree with the terms and conditions to check out",
       "discount": "Discounts",
       "note_placeholder": "Any special instructions for your order?",
       "free_shipping_eligible": "You are away from free shipping by ",
