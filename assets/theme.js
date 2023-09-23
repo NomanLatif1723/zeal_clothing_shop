@@ -1211,7 +1211,7 @@ function initProductVariants() {
   function updateInventory(matchedVariant) {
     const requestedVariantId = matchedVariant.id;
     fetch(
-      `${this.dataset.url}?variant=${requestedVariantId}`)
+      `${matchedVariant.url}?variant=${requestedVariantId}`)
       .then((response) => response.text())
       .then((responseText) => {
         if (matchedVariant.id !== requestedVariantId) return;
