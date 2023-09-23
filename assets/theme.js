@@ -1233,9 +1233,9 @@ function initProductVariants() {
     if (!matchedVariant.featured_media) return;
 
     const mediaGalleries = document.querySelectorAll('.product__image img');
-    mediaGalleries.forEach((mediaGallery) =>
+    mediaGalleries.forEach(mediaGallery => {
       mediaGallery.setAttribute('src',`${matchedVariant.featured_media.id}`);
-    );
+    });
 
     // const modalContent = document.querySelector(`#ProductModal-${this.dataset.section} .product-media-modal__content`);
     // if (!modalContent) return;
