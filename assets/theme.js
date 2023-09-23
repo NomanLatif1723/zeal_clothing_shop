@@ -1024,26 +1024,19 @@ function initCartForm() {
       .then(function(response) {
         return response.json();
       })
-      .then(function(data) {
-        console.log('Cart change response:', data);
-        console.log('total price',data.total_price);
-        console.log('total discounts',data.total_discount);
+      .then(function(cartData) {
+        console.log('Cart change response:', cartData);
+        console.log('total price',cartData.total_price);
+        console.log('total discounts',cartData.total_discount);
+        updateLineItemPrices(cartData.items);
+        updateSubtotal(cartData);
+        updateTotalPrice(cartData);
+        updateCartNote(cartData.note);
+        updateButtons(cartData);
       })
       .catch(function(error) {
         console.error('Error updating cart:', error);
       });
-    // fetch('/cart/change.js')
-    // .then((response) => response.json())
-    // .then((cartData) => {
-    //   // updateLineItemPrices(cartData.items);
-    //   // updateSubtotal(cartData);
-    //   // updateTotalPrice(cartData);
-    //   // updateCartNote(cartData.note);
-    //   // updateButtons(cartData);
-    // })
-    // .catch((error) => {
-    //   console.error('Error updating cart:', error);
-    // });
   }
   function updateLineItemPrices(items) {
     items.forEach((item) => {
