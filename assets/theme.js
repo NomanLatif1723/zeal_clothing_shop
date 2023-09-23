@@ -1078,21 +1078,24 @@ initProductmediaSlideShow();
 // Product Quantity Selectors Event
 function initProductQuantitySelector() {
   const quantityWrapper = document.querySelectorAll('.line__item-quantity');
-  if (quantityWrapper) {
-    const quantityButton = document.querySelectorAll('.line__item-quantity button');
-    quantityButton.forEach(button => {
-      button.addEventListener('click', () => {
-        let quantityInput = button.parentElement.querySelector('input');
-        let quantityValue = Number(quantityInput.value);
-        const isPlus = button.classList.contains('icon__plus');
-        if (isPlus) {
-          quantityInput.value = quantityValue + 1;
-        } else if(quantityValue > 1) {
-          quantityInput.value = quantityValue - 1;
-        }
+  quantityWrapper.forEach(wrapper => {
+    if (wrapper) {
+      const quantityButton = wrapper.querySelectorAll('button');
+      quantityButton.forEach(button => {
+        button.addEventListener('click', () => {
+          let quantityInput = button.parentElement.querySelector('input');
+          let quantityValue = Number(quantityInput.value);
+          const isPlus = button.classList.contains('icon__plus');
+          if (isPlus) {
+            quantityInput.value = quantityValue + 1;
+          } else if(quantityValue > 1) {
+            quantityInput.value = quantityValue - 1;
+          }
+        })
       })
-    })
-  }
+    }
+  })
+  
 }
 initProductQuantitySelector(); 
 
