@@ -1002,6 +1002,60 @@ function initCartForm() {
   let selectors = {
     
   };
+  function updateCart(params) {
+    fetch('/cart.js')
+    .then((response) => response.json())
+    .then((cartData) => {
+      // Handle cart data here
+      // Update line-item prices, subtotal, total price, cart note, and buttons
+      updateLineItemPrices(cartData.items);
+      updateSubtotal(cartData);
+      updateTotalPrice(cartData);
+      updateCartNote(cartData.note);
+      updateButtons(cartData);
+    })
+    .catch((error) => {
+      console.error('Error updating cart:', error);
+    });
+  }
+    // Function to update line-item prices
+  function updateLineItemPrices(items) {
+    // Iterate through the cart items and update their prices based on variants
+    items.forEach((item) => {
+      // Implement logic to update line-item prices based on variant data
+      // You can access item.variant_id and item.quantity
+    });
+  }
+
+  // Function to update the subtotal
+  function updateSubtotal(cartData) {
+    // Calculate and update the subtotal based on the updated line-item prices
+    // cartData.items contains the current cart items
+  }
+
+  // Function to update the total price
+  function updateTotalPrice(cartData) {
+    // Calculate and update the total price based on the updated subtotal and any discounts
+    // cartData.total_price contains the current total price
+  }
+
+  // Function to update the cart note
+  function updateCartNote(cartNote) {
+    // Update the cart note based on your requirements
+    // cartNote contains the current cart note data
+  }
+
+  // Function to update buttons based on cart data
+  function updateButtons(cartData) {
+    var addButton = document.querySelector('[name="add"]');
+    if (cartData.item_count > 0) {
+      addButton.textContent = "Update Cart";
+      addButton.disabled = false;
+    } else {
+      addButton.textContent = "Cart is Empty";
+      addButton.disabled = true;
+    }
+  }
 }
 initCartForm();
 
