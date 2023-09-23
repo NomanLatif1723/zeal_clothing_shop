@@ -1212,7 +1212,7 @@ function initProductVariants() {
     const requestedVariantId = matchedVariant.id;
     console.log(matchedVariant.url);
     fetch(
-      `${window.location.protocol}//${window.location.host}${window.location.pathname}'?variant='${matchedVariant.id}`)
+      `${window.location.protocol}//${window.location.host}${window.location.pathname}?variant=${matchedVariant.id}`)
       .then((response) => response.text())
       .then((responseText) => {
         if (matchedVariant.id !== requestedVariantId) return;
