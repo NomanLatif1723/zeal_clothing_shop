@@ -1035,9 +1035,6 @@ function initCartForm() {
         return response.json();
       })
       .then(function(cartData) {
-        console.log('Cart change response:', cartData);
-        console.log('total price',cartData.total_price);
-        console.log('total discounts',cartData.total_discount);
         updateLineItemPrices(cartData.items);
         updateSubtotal(cartData);
         updateTotalDiscount(cartData);
