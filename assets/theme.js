@@ -999,23 +999,61 @@ function initCartForm() {
     selectors.format = 'default';
   }
 
+  // selectors.quantitySelector.forEach(button => {
+  //   button.addEventListener('click', (event) => {
+  //     let isPlus = button.classList.contains('icon__plus');
+  //     let quantityInput = button.parentElement.querySelector('input');
+  //     let value = Number(quantityInput.value);
+  //     let key = button.closest('[data-key]').dataset.key;
+  //     if (isPlus) {
+  //       let qty = value + 1;
+  //       quantityInput.value = qty;
+  //       updateCart(key,qty);
+  //     } else if(value > 1) {
+  //       let qty = value - 1
+  //       quantityInput.value = qty;
+  //       updateCart(key,qty);
+  //     }
+  //   })
+  // })
+  // ... (existing code)
+
   selectors.quantitySelector.forEach(button => {
     button.addEventListener('click', (event) => {
       let isPlus = button.classList.contains('icon__plus');
       let quantityInput = button.parentElement.querySelector('input');
       let value = Number(quantityInput.value);
       let key = button.closest('[data-key]').dataset.key;
-      if (isPlus) {
-        let qty = value + 1;
-        quantityInput.value = qty;
-        updateCart(key,qty);
-      } else if(value > 1) {
-        let qty = value - 1
-        quantityInput.value = qty;
-        updateCart(key,qty);
-      }
-    })
-  })
+      
+      // Fetch the product's stock availability based on the key
+      fetch('/cart.js')
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(cartData) {
+          let lineItem = cartData.items.find(item => item.key === key);
+          let stockAvailable = lineItem.product_id ? lineItem.product_id : 0;
+          
+          if (isPlus && value < stockAvailable) {
+            let qty = value + 1;
+            quantityInput.value = qty;
+            updateCart(key, qty);
+          } else if (!isPlus && value > 1) {
+            let qty = value - 1;
+            quantityInput.value = qty;
+            updateCart(key, qty);
+          } else {
+            // Show a message to the user or disable buttons if limit reached
+            alert('You have reached the maximum allowed quantity for this product.');
+            // or disable the plus and minus buttons here
+          }
+        })
+        .catch(function(error) {
+          console.error('Error fetching cart data:', error);
+        });
+    });
+  });
+
   function updateCart(key,quantity) {
     console.log({key,quantity});
     var requestData = {
@@ -1047,6 +1085,7 @@ function initCartForm() {
   }
   function updateLineItemPrices(items) {
     items.forEach((item) => {
+      
       let finalPriceContainer = document.querySelector(`[data-key="${item.key}"] .final-line__price`);
       let itemPrice =  formatMoney(item.final_line_price,selectors.format);
       if (!finalPriceContainer) {
