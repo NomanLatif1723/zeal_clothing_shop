@@ -1009,18 +1009,39 @@ function initCartForm() {
   })
   function updateCart(key,quantity) {
     console.log({key,quantity});
-    fetch('/cart/change.js')
-    .then((response) => response.json())
-    .then((cartData) => {
-      // updateLineItemPrices(cartData.items);
-      // updateSubtotal(cartData);
-      // updateTotalPrice(cartData);
-      // updateCartNote(cartData.note);
-      // updateButtons(cartData);
+    var requestData = {
+      id: lineItemKey,
+      quantity: newQuantity
+    };
+    fetch('/cart/change.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Requested-With': 'XMLHttpRequest'
+      },
+      body: JSON.stringify(requestData)
     })
-    .catch((error) => {
-      console.error('Error updating cart:', error);
-    });
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        console.log('Cart change response:', data);
+      })
+      .catch(function(error) {
+        console.error('Error updating cart:', error);
+      });
+    // fetch('/cart/change.js')
+    // .then((response) => response.json())
+    // .then((cartData) => {
+    //   // updateLineItemPrices(cartData.items);
+    //   // updateSubtotal(cartData);
+    //   // updateTotalPrice(cartData);
+    //   // updateCartNote(cartData.note);
+    //   // updateButtons(cartData);
+    // })
+    // .catch((error) => {
+    //   console.error('Error updating cart:', error);
+    // });
   }
   function updateLineItemPrices(items) {
     items.forEach((item) => {
