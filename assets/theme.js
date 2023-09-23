@@ -986,7 +986,8 @@ initHandleCart();
 function initCartForm() {
   let selectors = {
     quantitySelector: document.querySelectorAll('.line__item-quantity button'),
-    checkoutButton: document.querySelector('[name="checkout"]')
+    checkoutButton: document.querySelector('[name="checkout"]'),
+    key: document.querySelector('[data-key]')
   };
 
   selectors.quantitySelector.forEach(button => {
