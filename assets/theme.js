@@ -1183,7 +1183,6 @@ function initProductVariants() {
     if (!selectors.productAddToCartBtn) {
       return;
     }
-    // var addButton = document.querySelector('[name="add"]');
     if (matchedVariant.available) {
       selectors.productAddToCartBtn.textContent = window.themeContent.strings.addToCart;
       selectors.productAddToCartBtn.disabled = false;
@@ -1220,12 +1219,6 @@ function initProductVariants() {
         const inventoryDestination = document.querySelector('[data-inventory]');
         if (inventorySource && inventoryDestination) inventoryDestination.innerHTML = inventorySource.innerHTML;
       });
-    
-    // if (!matchedVariant || matchedVariant.inventory_quantity <=0) {
-    //   console.log('product is out of stock');
-    //   return;
-    // }
-    // selectors.productInStock.textContent = matchedVariant.inventory_quantity;
   }
 
   function updateMedia(matchedVariant) {
