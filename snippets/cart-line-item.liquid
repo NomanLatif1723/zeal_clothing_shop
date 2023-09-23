@@ -43,7 +43,7 @@
               <span class="line-item__discount">{{ discount_allocation.discount_application.title }}(-{{ discount_allocation.amount }})</span>
             {%- endfor -%}
           {%- endif -%}
-          <div class="product__unit-price{% unless item.unit_price_measurement %} hidden{% endunless %}">
+          <div class="cart__unit-price{% unless item.unit_price_measurement %} hidden{% endunless %}">
             {%- if item.unit_price_measurement -%}
               <div>{{ item.unit_price }}/
                 {%- if item.unit_price_measurement.reference_value != 1 -%}
