@@ -1070,7 +1070,7 @@ function initCartForm() {
   }
 
   function updateCartNote(cartNote) {
-    // console.log(cartNote);
+    console.log(cartNote);
   }
 
   function updateButtons(cartData) {
