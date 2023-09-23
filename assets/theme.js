@@ -1021,8 +1021,8 @@ function initCartForm() {
     })
   })
 
+  // cartNote change Event
   selectors.cartNote.addEventListener('keyup', (event) => {
-    console.log(event.target.value);
     var requestData = {
       note: event.target.value
     };
