@@ -219,34 +219,38 @@
     {%- when 'stock' -%}
       <div class="product__block product__inventory product__content" {{ block.shopify_attributes }}>
         <div class="product__content-title">{{ 'products.stock.title' | t }}</div>
-        <div class="product__content-content rte" data-inventory>
-          {%- if product.selected_or_first_available_variant.inventory_management == 'shopify' -%}
-            {%- if product.selected_or_first_available_variant.inventory_quantity > 0 -%}
-              {%- if product.selected_or_first_available_variant.inventory_quantity <= block.settings.stock_threshold -%}
-                {%- if block.settings.stock_count -%}
-                  {{ 'products.stock.inventory_low_stock_count' | t: items: product.selected_or_first_available_variant.inventory_quantity }}
-                  {% else %}
-                    {{ 'products.stock.inventory_low_stock' | t }}
-                {%- endif -%}
-              {% else %}
-              <svg x="0px" y="0px" width="20" height="20" viewBox="0 0 48 48">
-                <path fill="#c8e6c9" d="M36,42H12c-3.314,0-6-2.686-6-6V12c0-3.314,2.686-6,6-6h24c3.314,0,6,2.686,6,6v24C42,39.314,39.314,42,36,42z"></path><path fill="#4caf50" d="M34.585 14.586L21.014 28.172 15.413 22.584 12.587 25.416 21.019 33.828 37.415 17.414z"></path>
-              </svg>
-                {%- if block.settings.stock_count -%}
-                  {{ 'products.stock.inventory_in_stock_count' | t: quantity: product.selected_or_first_available_variant.inventory_quantity }}
+        {%- if product.selected_or_first_available_variant.available -%}
+          <div class="product__content-content rte" data-inventory>
+            {%- if product.selected_or_first_available_variant.inventory_management == 'shopify' -%}
+              {%- if product.selected_or_first_available_variant.inventory_quantity > 0 -%}
+                {%- if product.selected_or_first_available_variant.inventory_quantity <= block.settings.stock_threshold -%}
+                  {%- if block.settings.stock_count -%}
+                    {{ 'products.stock.inventory_low_stock_count' | t: items: product.selected_or_first_available_variant.inventory_quantity }}
+                    {% else %}
+                      {{ 'products.stock.inventory_low_stock' | t }}
+                  {%- endif -%}
                 {% else %}
-                  {{ 'products.stock.inventory_in_stock' | t }}
+                <svg x="0px" y="0px" width="20" height="20" viewBox="0 0 48 48">
+                  <path fill="#c8e6c9" d="M36,42H12c-3.314,0-6-2.686-6-6V12c0-3.314,2.686-6,6-6h24c3.314,0,6,2.686,6,6v24C42,39.314,39.314,42,36,42z"></path><path fill="#4caf50" d="M34.585 14.586L21.014 28.172 15.413 22.584 12.587 25.416 21.019 33.828 37.415 17.414z"></path>
+                </svg>
+                  {%- if block.settings.stock_count -%}
+                    {{ 'products.stock.inventory_in_stock_count' | t: quantity: product.selected_or_first_available_variant.inventory_quantity }}
+                  {% else %}
+                    {{ 'products.stock.inventory_in_stock' | t }}
+                  {%- endif -%}
                 {%- endif -%}
-              {%- endif -%}
-              {%- else -%}
-                {%- if product.selected_or_first_available_variant.inventory_policy == 'continue' -%}
-                  {{ 'products.stock.inventory_out_of_stock_contine_selling' | t }}
                 {%- else -%}
-                  {{ 'products.stock.inventory_out_of_stock' | t }}
-                {%- endif -%}
+                  {%- if product.selected_or_first_available_variant.inventory_policy == 'continue' -%}
+                    {{ 'products.stock.inventory_out_of_stock_contine_selling' | t }}
+                  {%- else -%}
+                    {{ 'products.stock.inventory_out_of_stock' | t }}
+                  {%- endif -%}
+              {%- endif -%}
             {%- endif -%}
-          {%- endif -%}
-        </div>
+          </div>
+        {%- else -%}
+          {{ 'products.stock.inventory_out_of_stock' | t }}
+        {%- endif -%}
       </div>
     {%- when 'custom_liquid' -%}
     <div class="product__block" {{ block.shopify_attributes }}>
