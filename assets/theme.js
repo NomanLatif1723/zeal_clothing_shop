@@ -1209,11 +1209,16 @@ function initProductVariants() {
   }
 
   function updateInventory(matchedVariant) {
-    if (!matchedVariant || matchedVariant.inventory_quantity <=0) {
-      console.log('product is out of stock');
-      return;
-    }
-    selectors.productInStock.textContent = matchedVariant.inventory_quantity;
+    const html = new DOMParser().parseFromString(responseText, 'text/html');
+    const inventorySource = html.querySelector('[data-inventory]');
+    const inventoryDestination = document.querySelector('[data-inventory]');
+    if (source && destination) destination.innerHTML = source.innerHTML;
+    if (inventorySource && inventoryDestination) inventoryDestination.innerHTML = inventorySource.innerHTML;
+    // if (!matchedVariant || matchedVariant.inventory_quantity <=0) {
+    //   console.log('product is out of stock');
+    //   return;
+    // }
+    // selectors.productInStock.textContent = matchedVariant.inventory_quantity;
   }
 
   function updateMedia(matchedVariant) {
