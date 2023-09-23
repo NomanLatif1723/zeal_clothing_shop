@@ -992,7 +992,7 @@ function initCartForm() {
     button.addEventListener('click', () => {
       let isPlus = button.classList.contains('icon__plus');
       let quantityInput = button.parentElement.querySelector('input');
-      let value = quantityInput.value;
+      let value = Number(quantityInput.value);
       if (isPlus) {
         quantityInput.value = value + 1;
       } else if(value > 1) {
