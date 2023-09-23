@@ -997,14 +997,17 @@ function initCartForm() {
       let value = Number(quantityInput.value);
       let key = button.closest('[data-key]').dataset.key;
       if (isPlus) {
-        quantityInput.value = value + 1;
-        updateCart();
+        let qty = value + 1;
+        quantityInput.value = qty;
+        updateCart(key,qty );
       } else if(value > 1) {
-        quantityInput.value = value - 1;
+        let qty = value - 1
+        quantityInput.value = qty;
+        updateCart(key,qty );
       }
     })
   })
-  function updateCart(params) {
+  function updateCart(key,quantity) {
     fetch('/cart.js')
     .then((response) => response.json())
     .then((cartData) => {
