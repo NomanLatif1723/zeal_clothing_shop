@@ -990,6 +990,7 @@ function initCartForm() {
     cartForm: document.querySelector('.cart__main'),
     subTotal: document.querySelector('[data-subTotal]'),
     totalDiscount: document.querySelector('[data-discount]'),
+    cartNote: document.querySelector('[name="note"]'),
     format: null
   };
 
@@ -1000,6 +1001,9 @@ function initCartForm() {
   }
 
   selectors.quantitySelector.forEach(button => {
+    if (!button) {
+      return;
+    }
     button.addEventListener('click', (event) => {
       let isPlus = button.classList.contains('icon__plus');
       let quantityInput = button.parentElement.querySelector('input');
@@ -1017,8 +1021,21 @@ function initCartForm() {
     })
   })
 
+  selectors.cartNote.addEventListener('keyup', (event) => {
+    var requestData = {
+      note: event.target.value
+    };
+    fetch('/cart/update.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Requested-With': 'XMLHttpRequest'
+      },
+      body: JSON.stringify(requestData)
+    })
+  })
+
   function updateCart(key,quantity) {
-    console.log({key,quantity});
     var requestData = {
       id: key,
       quantity: quantity
@@ -1039,7 +1056,7 @@ function initCartForm() {
         updateLineItemPrices(cartData.items);
         updateSubtotal(cartData);
         updateTotalDiscount(cartData);
-        updateCartNote(cartData.note);
+        
         updateButtons(cartData);
       })
       .catch(function(error) {
