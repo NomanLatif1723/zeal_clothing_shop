@@ -108,6 +108,9 @@ text-align: center;
   font-size: 14px;
   padding-top: 4px;
 }
+.line-item__discount {
+    padding-top: 4px;
+}
 .cart__item-image a {
   height: 100%;
 }
