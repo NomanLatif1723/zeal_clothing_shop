@@ -1026,6 +1026,8 @@ function initCartForm() {
       })
       .then(function(data) {
         console.log('Cart change response:', data);
+        console.log(data.total_price);
+        console.log(data.tottal_discounts);
       })
       .catch(function(error) {
         console.error('Error updating cart:', error);
