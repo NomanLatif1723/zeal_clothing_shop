@@ -28,7 +28,7 @@
   </div>
   {%- form 'cart', cart -%}
     {%- if cart.item_count > 0 -%}
-      <div class="drawer__scrollable">
+      <div class="drawer__scrollable cart__main" data-money-format="{{ shop.money_format }}">
         {%- if free_shipping -%}
           <div class="free-shipping free-shipping__modal" data-free-shipping-threshold="{{ threshold_total }}">
             <div class="rte" data-free-shipping-bar>
