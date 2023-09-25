@@ -44,7 +44,7 @@
 
         <div class="cart-drawer__content">
           {%- for item in cart.items -%}
-            <div class="cart__item-block">
+            <div class="cart__item-block" data-key="{{ item.key }}" data-stock-count="{{ item.variant.inventory_quantity }}">
               <div class="cart__item-image">
                 <a href="{{ item.url }}">
                   <img src="{{ item.image | image_url: width: 70, height: 70 }}" alt="{{ item.image.alt }}" width="70" height="70" loading="lazy" />
