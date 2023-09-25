@@ -946,6 +946,8 @@ function initCartForm() {
     freeShippingBar: document.querySelector('.free-shipping'),
     mainCartContainer: document.querySelector('.main-cart__wrapper .page__width'),
     cartItemCounter: document.querySelector('.cart-item__count'),
+    freeShippingText: document.querySelector('[data-free-shipping-bar]'),
+    progressBar: document.querySelector('.progress__bar'),
     format: null
   };
 
@@ -1159,35 +1161,22 @@ function initCartForm() {
   }
 
   function updateSippingBar(cartData) {
-    // Identify the shipping bar and relevant data attributes
-    // const shippingBar = document.querySelector('.free-shipping');
+    if (!selectors.freeShippingBar || !selectors.freeShippingText || selectors.progressBar) {
+      return;
+    }
     const thresholdTotal = selectors.freeShippingBar.dataset.freeShippingThreshold;
     const cartTotal = cartData.total_price;
-    
     const progress = cartTotal / thresholdTotal;
-    const progressBar = selectors.freeShippingBar.querySelector('.free-shipping__bar');
-    progressBar.style.setProperty('--progress', progress);
-  
-    const shippingText = selectors.freeShippingBar.querySelector('.rte p');
-    
+    if (!thresholdTotal || !cartTotal || !progress) {
+      return;
+    }
+    selectors.progressBar.style.setProperty('--progress', progress);
     if (cartTotal < thresholdTotal) {
       const remainingAmount = formatMoney(thresholdTotal - cartTotal, selectors.format);
-      shippingText.innerHTML = `Spend ${remainingAmount} more to qualify for free shipping.`;
+      selectors.freeShippingText.innerHTML = `Spend ${remainingAmount} more to qualify for free shipping.`;
     } else {
-      shippingText.textContent = window.themeContent.strings.freeShippingSuccess;
+      selectors.freeShippingText.textContent = window.themeContent.strings.freeShippingSuccess;
     }
-
-    // fetch('/cart.js')
-    //   .then((response) => response.text())
-    //   .then((responseText) => {
-    //     const html = new DOMParser().parseFromString(responseText,'text/html');
-    //     const inventorySource = html.querySelector('.free-shipping');
-    //     const inventoryDestination = document.querySelector('.free-shipping');
-    //     if (!inventorySource || inventoryDestination) {
-    //       return;
-    //     }
-    //     if (inventorySource && inventoryDestination) inventoryDestination.innerHTML = inventorySource.innerHTML;
-    //   });
   }
 }
 initCartForm();
