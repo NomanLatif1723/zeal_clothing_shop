@@ -1002,6 +1002,7 @@ console.log(stockAvailable);
           updateCart(key, newQuantity);
         } else {
           // alert('You have reached the minimum allowed quantity for this product.');
+          document.querySelector('.icon__plus').classList.remove('disabled__button');
           button.classList.add('disabled__button');
         }
       }
