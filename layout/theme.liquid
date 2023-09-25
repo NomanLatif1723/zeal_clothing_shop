@@ -36,7 +36,8 @@
       window.themeContent = {
         routes: {
           product: {{ product | json }},
-          productRecommendation: {{ routes.product_recommendations_url | json }}
+          productRecommendation: {{ routes.product_recommendations_url | json }},
+          all_collections: {{ routes.all_products_collection_url }}
         },
         strings: {
           addToCart: "{{ 'products.add_to_cart' | t }}",
