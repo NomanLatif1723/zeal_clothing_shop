@@ -1163,7 +1163,6 @@ function initCartForm() {
       `${window.location.protocol}//${window.location.host}${window.location.pathname}/cart.js`)
       .then((response) => response.text())
       .then((responseText) => {
-        
         const html = new DOMParser().parseFromString(responseText, 'text/html');
         const inventorySource = html.querySelector('.free-shipping');
         const inventoryDestination = document.querySelector('.free-shipping');
