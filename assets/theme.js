@@ -995,18 +995,18 @@ function initCartForm() {
         quantityInput.value = newQuantity;
         updateCart(key, newQuantity);
       } 
-      // else {
-      //   button.toggleAttribute('disabled', 'disabled');
-      // }
+      else {
+        event.target.toggleAttribute('disabled', 'disabled');
+      }
     } else {
       let newQuantity = value - 1;
       if (newQuantity > 0) {
         quantityInput.value = newQuantity;
         updateCart(key, newQuantity);
       } 
-      // else {
-      //   button.toggleAttribute('disabled', 'disabled');
-      // }
+      else {
+        event.target.toggleAttribute('disabled', 'disabled');
+      }
     }
   });
 });
