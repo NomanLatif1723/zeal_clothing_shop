@@ -988,6 +988,7 @@ function initCartForm() {
     quantitySelector: document.querySelectorAll('.line__item-quantity button'),
     checkoutForm: document.querySelector('[name="checkout"]'),
     termsEnabled: document.querySelector('[data-checkout-terms]'),
+    checkedInput: termsEnabled.querySelector('input'),
     cartForm: document.querySelector('.cart__main'),
     subTotal: document.querySelector('[data-subTotal]'),
     totalDiscount: document.querySelector('[data-discount]'),
@@ -1125,6 +1126,7 @@ function initCartForm() {
   }
   function formSubmit(event) {
     let terms = event.target.dataset.terms;
+    console.log(selectors.checkedInput);
     let checkedInput = selectors.termsEnabled.querySelector('input');
     if (checkedInput.checked) {
       console.log('its checked');
