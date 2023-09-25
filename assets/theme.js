@@ -960,6 +960,11 @@ function initCartForm() {
       let stockCount = button.closest('[data-key]').dataset.stockCount;
       
       console.log(stockCount);
+      if (value <= stockCount) {
+        button.removeAttribute(disabled);
+      } else {
+        button.setAttribute('disabled','disabled');
+      }
       
       if (isPlus && value + 1 <= stockCount) {
         let qty = value + 1;
