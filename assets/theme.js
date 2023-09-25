@@ -1116,7 +1116,7 @@ function initCartForm() {
   }
 
   function removeLineItem(items,itemToRemove) {
-    if (!selectors.cartForm || selectors.freeShippingBar || selectors.mainCartContainer) {
+    if (!selectors.cartForm || !selectors.freeShippingBar || !selectors.mainCartContainer) {
       return;
     }
     itemToRemove.remove();
