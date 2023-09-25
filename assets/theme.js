@@ -996,7 +996,6 @@ function initCartForm() {
         quantityInput.value = newQuantity;
         updateCart(key, newQuantity);
       } else {
-        // Disable the plus button if limit reached
         button.setAttribute('disabled', 'disabled');
       }
     } else {
@@ -1005,12 +1004,10 @@ function initCartForm() {
         quantityInput.value = newQuantity;
         updateCart(key, newQuantity);
       } else {
-        // Disable the minus button if limit reached
         button.setAttribute('disabled', 'disabled');
       }
     }
 
-    // Re-enable both buttons since we're not exceeding the limits
     const plusButton = button.parentElement.querySelector('.icon__plus');
     const minusButton = button.parentElement.querySelector('.icon__minus');
     plusButton.removeAttribute('disabled');
