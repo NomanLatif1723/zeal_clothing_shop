@@ -1006,8 +1006,11 @@ function initCartForm() {
         quantityInput.value = newQuantity;
         updateCart(key, newQuantity);
       } else {
-        button.classList.contains('icon__plus').remove('disabled__button');
-        button.classList.contains('icon__minus').add('disabled__button');
+        if (event.target.classList.contains('icon__plus')) {
+          event.target.classList.remove('disabled__button');
+        } else {
+          event.target.classList.add('disabled__button');
+        }
       }
     }
   });
