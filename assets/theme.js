@@ -1126,10 +1126,10 @@ function initCartForm() {
       
       const emptyCart = document.createElement('div');
       emptyCart.className = 'cart__empty-message';
-      emptyCart.innerHtML = `
+      emptyCart.innerHTML = `
         <div class="rte">{{ 'cart.general.empty_cart' | t }}</div>
         <a href="{{ routes.all_products_collection_url }}" title="{{ 'cart.general.continue_shopping' | t }}" class="form__links">{{ 'cart.general.continue_shopping' | t }}</a>
-      `
+      `;
       selectors.mainCartContainer.appendChild(emptyCart);
     }
   }
