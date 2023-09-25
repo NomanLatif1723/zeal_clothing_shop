@@ -996,7 +996,7 @@ function initCartForm() {
         updateCart(key, newQuantity);
       } 
       else {
-        event.target.toggleAttribute('disabled', 'disabled');
+        event.target.closest('button').toggleAttribute('disabled', 'disabled');
       }
     } else {
       let newQuantity = value - 1;
@@ -1005,7 +1005,7 @@ function initCartForm() {
         updateCart(key, newQuantity);
       } 
       else {
-        event.target.toggleAttribute('disabled', 'disabled');
+        event.target.closest('button').toggleAttribute('disabled', 'disabled');
       }
     }
   });
