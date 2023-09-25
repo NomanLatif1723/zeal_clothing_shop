@@ -1202,24 +1202,25 @@ initProductmediaSlideShow();
 function initProductQuantitySelector() {
   const quantityWrapper = document.querySelectorAll('.product__item-quantity');
   quantityWrapper.forEach(wrapper => {
-    if (wrapper) {
-      const quantityButton = wrapper.querySelectorAll('button');
-      quantityButton.forEach(button => {
-        if (!button) {
-          return;
-        }
-        button.addEventListener('click', () => {
-          let quantityInput = button.parentElement.querySelector('input');
-          let quantityValue = Number(quantityInput.value);
-          const isPlus = button.classList.contains('icon__plus');
-          if (isPlus) {
-            quantityInput.value = quantityValue + 1;
-          } else if(quantityValue > 1) {
-            quantityInput.value = quantityValue - 1;
-          }
-        })
-      })
+    if (!wrapper) {
+      return;
     }
+    const quantityButton = wrapper.querySelectorAll('button');
+    quantityButton.forEach(button => {
+      if (!button) {
+        return;
+      }
+      button.addEventListener('click', () => {
+        let quantityInput = button.parentElement.querySelector('input');
+        let quantityValue = Number(quantityInput.value);
+        const isPlus = button.classList.contains('icon__plus');
+        if (isPlus) {
+          quantityInput.value = quantityValue + 1;
+        } else if(quantityValue > 1) {
+          quantityInput.value = quantityValue - 1;
+        }
+      })
+    })
   })
   
 }
