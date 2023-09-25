@@ -990,7 +990,7 @@ function initCartForm() {
     if (lineItem) {
       // Get the stock available for this line item
       const stockAvailable = lineItem.inventory_quantity;
-console.log(stockAvailable);
+console.log(lineItem);
       if (isPlus) {
         // Calculate the new quantity if plus button is clicked
         let newQuantity = value + 1;
