@@ -1009,6 +1009,7 @@ function initCartForm() {
         removeLineItem(cartData.items,itemToRemove);
         updateSubtotal(cartData);
         updateTotalDiscount(cartData);
+        updateSippingBar(cartData);
       })
       .catch(function(error) {
         console.error('Error updating cart:', error);
@@ -1074,6 +1075,7 @@ function initCartForm() {
       console.error('Error updating cart:', error);
     });
   }
+  
   function updateLineItemPrices(items) {
     items.forEach((item) => {
       if (!item) {
@@ -1132,6 +1134,10 @@ function initCartForm() {
       `;
       selectors.mainCartContainer.appendChild(emptyCart);
     }
+  }
+
+  function updateSippingBar(cartData) {
+    
   }
 }
 initCartForm();
