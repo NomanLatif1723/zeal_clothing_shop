@@ -994,7 +994,7 @@ function initCartForm() {
         quantityInput.value = newQuantity;
         updateCart(key, newQuantity);
       } else {
-        // button.setAttribute
+        button.toggleAttribute('disabled', 'disabled');
       }
     } else {
       let newQuantity = value - 1;
@@ -1002,6 +1002,7 @@ function initCartForm() {
         quantityInput.value = newQuantity;
         updateCart(key, newQuantity);
       } else {
+        button.toggleAttribute('disabled', 'disabled');
         // if (event.target.classList.contains('icon__plus')) {
         //   event.target.classList.remove('disabled__button');
         // } else {
