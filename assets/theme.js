@@ -1114,7 +1114,7 @@ function initCartForm() {
   }
 
   function removeLineItem(items,itemToRemove) {
-    if (!selectors.cart_form) {
+    if (!selectors.cartForm) {
       return;
     }
     item.remove();
