@@ -1001,6 +1001,7 @@ function initCartForm() {
       })
       .then(function(response) {
         return response.json();
+        item.remove();
         // console.log(response);
         // removeLineItem(response.items);
       })
