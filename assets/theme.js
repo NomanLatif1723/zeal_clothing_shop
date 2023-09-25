@@ -988,6 +988,7 @@ function initCartForm() {
     // const cartData = await cartDataResponse.json();
     // const lineItem = cartData.items.find(item => item.key === key);
     const lineItem = button.closest('[data-key]');
+    console.log(lineItem);
     const stockAvailable = lineItem.dataset.stockCount;
     if (isPlus) {
       let newQuantity = value + 1;
