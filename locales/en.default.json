@@ -56,7 +56,7 @@
       "discount": "Discounts",
       "note_placeholder": "Any special instructions for your order?",
       "free_shipping_eligible": "Spend {{ amount }} more to qualify for free shipping.",
-      "free_shipping_success_html": "Congratulations! You qualify for free shipping on orders over {{ ammount }}",
+      "free_shipping_success_html": "Congratulations! You qualify for free shipping on orders over {{ amount }}",
       "view_cart": "View Cart",
       "drawer_close": "Close",
       "drawer_title": "Shopping Cart",
