@@ -1001,10 +1001,10 @@ function initCartForm() {
       })
       .then(function(response) {
         return response.json();
-        
       })
       .then(function(cartData) {
-        item.remove();
+        // item.remove();
+        removeLineItem(item);
         updateSubtotal(cartData);
         updateTotalDiscount(cartData);
       })
@@ -1113,14 +1113,15 @@ function initCartForm() {
     }
   }
 
-  function removeLineItem(items) {
-    items.forEach((item) => {
-      if (!item) {
-        return;
-      }
-      let lineItem = document.querySelector(`[data-key="${item.key}"]`);
-      lineItem.remove();
-    });
+  function removeLineItem(item) {
+    item.remove();
+    // items.forEach((item) => {
+    //   if (!item) {
+    //     return;
+    //   }
+    //   let lineItem = document.querySelector(`[data-key="${item.key}"]`);
+    //   lineItem.remove();
+    // });
   }
 }
 initCartForm();
