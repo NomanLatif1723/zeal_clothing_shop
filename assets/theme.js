@@ -1161,7 +1161,7 @@ function initCartForm() {
   }
 
   function updateSippingBar(cartData) {
-    if (!selectors.freeShippingBar || !selectors.freeShippingText || selectors.progressBar) {
+    if (!selectors.freeShippingBar || !selectors.freeShippingText || !selectors.progressBar) {
       return;
     }
     const thresholdTotal = selectors.freeShippingBar.dataset.freeShippingThreshold;
