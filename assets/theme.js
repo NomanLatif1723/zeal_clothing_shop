@@ -993,22 +993,19 @@ function initCartForm() {
       if (newQuantity <= stockAvailable) {
         quantityInput.value = newQuantity;
         updateCart(key, newQuantity);
-      } else {
-        button.toggleAttribute('disabled', 'disabled');
-      }
+      } 
+      // else {
+      //   button.toggleAttribute('disabled', 'disabled');
+      // }
     } else {
       let newQuantity = value - 1;
       if (newQuantity > 0) {
         quantityInput.value = newQuantity;
         updateCart(key, newQuantity);
-      } else {
-        button.toggleAttribute('disabled', 'disabled');
-        // if (event.target.classList.contains('icon__plus')) {
-        //   event.target.classList.remove('disabled__button');
-        // } else {
-        //   event.target.classList.add('disabled__button');
-        // }
-      }
+      } 
+      // else {
+      //   button.toggleAttribute('disabled', 'disabled');
+      // }
     }
   });
 });
