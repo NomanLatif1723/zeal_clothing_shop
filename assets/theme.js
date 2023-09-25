@@ -943,6 +943,8 @@ function initCartForm() {
     subTotal: document.querySelector('[data-subTotal]'),
     totalDiscount: document.querySelector('[data-discount]'),
     cartNote: document.querySelector('[name="note"]'),
+    freeShippingBar: document.querySelector('.free-shipping'),
+    mainCartContainer: document.querySelector('.main-cart__wrapper .page__width'),
     format: null
   };
 
@@ -1114,23 +1116,21 @@ function initCartForm() {
   }
 
   function removeLineItem(items,itemToRemove) {
-    if (!selectors.cartForm) {
+    if (!selectors.cartForm || selectors.freeShippingBar || selectors.mainCartContainer) {
       return;
     }
     itemToRemove.remove();
     if (items.length === 0) {
+      selectors.freeShippingBar.remove();
       selectors.cartForm.remove();
-      const mainCartContainer = document.querySelector('.main-cart__wrapper .page__width');
-      if (!mainCartContainer) {
-        return
-      }
+      
       const emptyCart = document.createElement('div');
       emptyCart.className = 'cart__empty-message';
       emptyCart.innerHtML = `
         <div class="rte">{{ 'cart.general.empty_cart' | t }}</div>
         <a href="{{ routes.all_products_collection_url }}" title="{{ 'cart.general.continue_shopping' | t }}" class="form__links">{{ 'cart.general.continue_shopping' | t }}</a>
       `
-      mainCartContainer.appendChild(emptyCart);
+      selectors.mainCartContainer.appendChild(emptyCart);
     }
   }
 }
