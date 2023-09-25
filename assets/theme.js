@@ -1159,18 +1159,17 @@ function initCartForm() {
   }
 
   function updateSippingBar(cartData) {
-    // fetch(
-      // `${window.location.protocol}//${window.location.host}${window.location.pathname}/cart.js`)
-      // .then((response) => response.text())
-      // .then((responseText) => {
-        const html = new DOMParser().parseFromString('text/html');
+    fetch('/cart.js')
+      .then((response) => response.text())
+      .then((responseText) => {
+        const html = new DOMParser().parseFromString(responseText,'text/html');
         const inventorySource = html.querySelector('.free-shipping');
         const inventoryDestination = document.querySelector('.free-shipping');
         if (!inventorySource || inventoryDestination) {
           return;
         }
         if (inventorySource && inventoryDestination) inventoryDestination.innerHTML = inventorySource.innerHTML;
-      // });
+      });
   }
   
 }
