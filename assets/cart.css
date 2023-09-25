@@ -177,6 +177,7 @@ text-align: center;
   position: relative;
   max-width: 550px;
   width: 100%;
+  overflow: hidden;
 }
 .progress__bar:after {
   position: absolute;
