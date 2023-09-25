@@ -932,6 +932,7 @@ initHandleCart();
 function initCartForm() {
   let selectors = {
     quantitySelector: document.querySelectorAll('.line__item-quantity button'),
+    removeButton: document.querySelectorAll('.cart__item-remove'),
     checkoutForm: document.querySelector('[name="checkout"]'),
     termsEnabled: document.querySelector('[data-checkout-terms]'),
     checkedInput: document.querySelector('[data-checkout-terms] input'),
@@ -949,36 +950,11 @@ function initCartForm() {
   } else {
     selectors.format = 'default';
   }
-
-  // selectors.quantitySelector.forEach(button => {
-  //   if (!button) {
-  //     return;
-  //   }
-  //   button.addEventListener('click', (event) => {
-  //     let isPlus = button.classList.contains('icon__plus');
-  //     let quantityInput = button.parentElement.querySelector('input');
-  //     let value = Number(quantityInput.value);
-  //     let key = button.closest('[data-key]').dataset.key;
-  //     let stockCount = button.closest('[data-key]').dataset.stockCount;
-      
-  //     if (isPlus && value + 1 <= stockCount) {
-  //       let qty = value + 1;
-  //       quantityInput.value = qty;
-  //       button.classList.remove('disabled__button');
-  //       updateCart(key,qty);
-  //     } else if(!isPlus && value > 1) {
-  //       let qty = value - 1
-  //       quantityInput.value = qty;
-  //       button.classList.remove('disabled__button');
-  //       updateCart(key,qty);
-  //     } else{
-  //       button.classList.add('disabled__button');
-  //     }
-  //   })
-  // })
-
   
-    selectors.quantitySelector.forEach(button => {
+  selectors.quantitySelector.forEach(button => {
+    if (!button) {
+      return;
+    }
     button.addEventListener('click', (event) => {
       let isPlus = button.classList.contains('icon__plus');
       let quantityInput = button.parentElement.querySelector('input');
@@ -1003,6 +979,14 @@ function initCartForm() {
     });
   });
 
+  selectors.removeButton.forEach(button => {
+    if (!button) {
+      return
+    }
+    button.addEventListener('click', (event) => {
+      event.preventDefault();
+    })
+  })
 
   // cartNote change Event
   if (!selectors.cartNote) {
