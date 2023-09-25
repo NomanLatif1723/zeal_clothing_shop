@@ -945,6 +945,7 @@ function initCartForm() {
     cartNote: document.querySelector('[name="note"]'),
     freeShippingBar: document.querySelector('.free-shipping'),
     mainCartContainer: document.querySelector('.main-cart__wrapper .page__width'),
+    cartItemCounter: document.querySelector('.cart-item__count'),
     format: null
   };
 
@@ -1116,7 +1117,11 @@ function initCartForm() {
   }
 
   function updateCartCount(cartData) {
-    
+    if (!selectors.cartItemCounter) {
+      return;
+    }
+    console.log(cartData);
+    selectors.cartItemCounter.textContent = cartData.items_count;
   }
 
   function formSubmit(event) {
