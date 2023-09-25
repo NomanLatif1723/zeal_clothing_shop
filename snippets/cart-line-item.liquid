@@ -1,4 +1,4 @@
-<div class="cart__item-container" data-key="{{ item.key }}">
+<div class="cart__item-container" data-key="{{ item.key }}" data-stock-count="{{ product.selected_or_first_available_variant.inventory_quantity }}">
   <div class="cart__item-title desktop__hidden">
     <h3>{{ item.title }}</h3>
     <button class="cart__item-remove" aria-label="{{ 'cart.general.remove' | t }}">
