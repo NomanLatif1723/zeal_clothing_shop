@@ -191,6 +191,9 @@ display: inline-block;
 .cart__item-title.desktop__hidden {
   padding-bottom: 20px;
 }
+.disabled__button{
+  color: red;
+}
 @media only screen and (min-width: 769px) {
   .main__cart {
     margin: 60px 0;
