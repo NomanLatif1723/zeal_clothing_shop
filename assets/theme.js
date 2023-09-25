@@ -1123,7 +1123,6 @@ function initCartForm() {
     if (!selectors.cartItemCounter) {
       return;
     }
-    console.log(cartData);
     if (cartData.item_count > 0) {
       selectors.cartItemCounter.textContent = cartData.item_count;
     } else {
