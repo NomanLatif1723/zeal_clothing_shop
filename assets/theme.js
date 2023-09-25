@@ -961,7 +961,7 @@ function initCartForm() {
       
       console.log(stockCount);
       if (value <= stockCount) {
-        button.removeAttribute(disabled);
+        button.removeAttribute('disabled');
       } else {
         button.setAttribute('disabled','disabled');
       }
