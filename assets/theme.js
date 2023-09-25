@@ -977,16 +977,16 @@ function initCartForm() {
   //   })
   // })
   selectors.quantitySelector.forEach(button => {
-  button.addEventListener('click', (event) => {
+  button.addEventListener('click', async (event) => {
     let isPlus = button.classList.contains('icon__plus');
     let quantityInput = button.parentElement.querySelector('input');
     let value = Number(quantityInput.value);
     let key = button.closest('[data-key]').dataset.key;
     let plusIcon = button.classList.contains('icon__plus');
     let minusIcon = button.classList.contains('icon__minus');
-    // const cartDataResponse = await fetch('/cart.js');
-    // const cartData = await cartDataResponse.json();
-    // const lineItem = cartData.items.find(item => item.key === key);
+    const cartDataResponse = await fetch('/cart.js');
+    const cartData = await cartDataResponse.json();
+    const lineItem = cartData.items.find(item => item.key === key);
     const stockAvailable = button.closest('[data-key]').dataset.stockCount;
     if (isPlus) {
       let newQuantity = value + 1;
