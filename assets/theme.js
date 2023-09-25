@@ -1161,8 +1161,8 @@ function initCartForm() {
   function updateSippingBar(cartData) {
     // Identify the shipping bar and relevant data attributes
     // const shippingBar = document.querySelector('.free-shipping');
-    const thresholdTotal = parseFloat(selectors.freeShippingBar.dataset.freeShippingThreshold);
-    const cartTotal = parseFloat(cartData.total_price);
+    const thresholdTotal = selectors.freeShippingBar.dataset.freeShippingThreshold;
+    const cartTotal = cartData.total_price;
     
     const progress = cartTotal / thresholdTotal;
     const progressBar = selectors.freeShippingBar.querySelector('.free-shipping__bar');
@@ -1171,7 +1171,7 @@ function initCartForm() {
     const shippingText = selectors.freeShippingBar.querySelector('.rte p');
     
     if (cartTotal < thresholdTotal) {
-      const remainingAmount = (thresholdTotal - cartTotal).toFixed(2);
+      const remainingAmount = formatMoney(thresholdTotal - cartTotal, selectors.format);
       shippingText.innerHTML = `Spend $${remainingAmount} more to qualify for free shipping.`;
     } else {
       shippingText.textContent = `You qualify for free shipping!`;
