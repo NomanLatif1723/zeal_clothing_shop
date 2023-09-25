@@ -1159,16 +1159,24 @@ function initCartForm() {
   }
 
   function updateSippingBar(cartData) {
-    // Fetch cart data or calculate relevant information
-    const cartTotal = cartData.total_price;
-    const eligibleForFreeShipping = selectors.freeShippingBar.dataset.freeShippingThreshold;
+    // Identify the shipping bar and relevant data attributes
+    // const shippingBar = document.querySelector('.free-shipping');
+    const thresholdTotal = parseFloat(selectors.freeShippingBar.dataset.freeShippingThreshold);
+    const cartTotal = parseFloat(cartData.total_price);
+    
+    const progress = cartTotal / thresholdTotal;
+    const progressBar = selectors.freeShippingBar.querySelector('.free-shipping__bar');
+    progressBar.style.setProperty('--progress', progress);
   
-    // Update the shipping bar content based on cart data
-    if (eligibleForFreeShipping) {
-      shippingBar.textContent = 'You are eligible for free shipping!';
+    const shippingText = shippingBar.querySelector('.rte p');
+    
+    if (cartTotal < thresholdTotal) {
+      const remainingAmount = (thresholdTotal - cartTotal).toFixed(2);
+      shippingText.innerHTML = `Spend $${remainingAmount} more to qualify for free shipping.`;
     } else {
-      shippingBar.textContent = `Spend $50 more to qualify for free shipping.`;
+      shippingText.textContent = `You qualify for free shipping!`;
     }
+
     // fetch('/cart.js')
     //   .then((response) => response.text())
     //   .then((responseText) => {
