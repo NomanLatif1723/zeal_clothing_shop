@@ -984,28 +984,24 @@ function initCartForm() {
     let key = button.closest('[data-key]').dataset.key;
     const cartDataResponse = await fetch('/cart.js');
     const cartData = await cartDataResponse.json();
-    const lineItem = cartData.items.find(item => item.key === key);
-    if (lineItem) {
-      const stockAvailable = button.closest('[data-key]').dataset.stockCount;
-console.log(stockAvailable);
-      if (isPlus) {
-        let newQuantity = value + 1;
-        if (newQuantity <= stockAvailable) {
-          quantityInput.value = newQuantity;
-          updateCart(key, newQuantity);
-        } else {
-          selectors.minusIcon.removeAttribute('disabled');
-          selectors.plusIcon.setAttribute('disabled','disabled');
-        }
+    const stockAvailable = button.closest('[data-key]').dataset.stockCount;
+    if (isPlus) {
+      let newQuantity = value + 1;
+      if (newQuantity <= stockAvailable) {
+        quantityInput.value = newQuantity;
+        updateCart(key, newQuantity);
       } else {
-        let newQuantity = value - 1;
-        if (newQuantity > 0) {
-          quantityInput.value = newQuantity;
-          updateCart(key, newQuantity);
-        } else {
-          selectors.plusIcon.removeAttribute('disabled');
-          selectors.minusIcon.setAttribute('disabled','disabled');
-        }
+        selectors.minusIcon.removeAttribute('disabled');
+        selectors.plusIcon.setAttribute('disabled','disabled');
+      }
+    } else {
+      let newQuantity = value - 1;
+      if (newQuantity > 0) {
+        quantityInput.value = newQuantity;
+        updateCart(key, newQuantity);
+      } else {
+        selectors.plusIcon.removeAttribute('disabled');
+        selectors.minusIcon.setAttribute('disabled','disabled');
       }
     }
   });
