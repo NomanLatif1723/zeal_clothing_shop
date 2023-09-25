@@ -1134,12 +1134,13 @@ function initProductCollapsibles() {
       return;
     }
     let collapsibleHeader = tab.querySelector('.product-tab__header');
-    if (collapsibleHeader) {
-      collapsibleHeader.addEventListener('click', (event) => {
-        event.target.parentElement.querySelector('.product-tab__content').classList.toggle('hidden');
-        event.target.querySelector('.icon__arrow').classList.toggle('icon__rotate');
-      })
+    if (!collapsibleHeader) {
+      return;
     }
+    collapsibleHeader.addEventListener('click', (event) => {
+      event.target.parentElement.querySelector('.product-tab__content').classList.toggle('hidden');
+      event.target.querySelector('.icon__arrow').classList.toggle('icon__rotate');
+    })
   })
 }
 initProductCollapsibles();
