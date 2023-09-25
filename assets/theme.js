@@ -1037,12 +1037,12 @@ function initCartForm() {
     })
     .then(function(response) {
       return response.json();
+      removeLineItem(cartData.items);
     })
     .then(function(cartData) {
       updateLineItemPrices(cartData.items);
       updateSubtotal(cartData);
       updateTotalDiscount(cartData);
-      removeLineItem(cartData.items);
     })
     .catch(function(error) {
       console.error('Error updating cart:', error);
