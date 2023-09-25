@@ -75,7 +75,7 @@
               <div class="rte">{{ 'cart.general.shipping_text' | t }}</div>
             </div>
             {%- if settings.show_terms -%}
-              <div class="cart__terms-checkbox">
+              <div class="cart__terms-checkbox" data-checkout-terms>
                 <input type="checkbox" id="cartTerms">
                 <label for="cartTerms">{{ 'cart.general.terms_at_checkout' | t }}</label>
               </div>
