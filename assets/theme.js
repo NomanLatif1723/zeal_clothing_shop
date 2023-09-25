@@ -957,7 +957,13 @@ function initCartForm() {
       let quantityInput = button.parentElement.querySelector('input');
       let value = Number(quantityInput.value);
       let key = button.closest('[data-key]').dataset.key;
-      if (isPlus) {
+
+      const cartDataResponse = await fetch('/cart.js');
+      const cartData = await cartDataResponse.json();
+      const lineItem = cartData.items.find(item => item.key === key);
+      const stockAvailable = lineItem.product_id ? lineItem.product_id : 0;
+      
+      if (isPlus && value + 1 < stockAvailable) {
         let qty = value + 1;
         quantityInput.value = qty;
         updateCart(key,qty);
