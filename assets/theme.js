@@ -1008,8 +1008,8 @@ function initCartForm() {
       }
     }
 
-    const plusButton = button.parentElement.querySelector('.icon__plus');
-    const minusButton = button.parentElement.querySelector('.icon__minus');
+    const plusButton = button.classList.contains('.icon__plus');
+    const minusButton = button.classList.contains('.icon__minus');
     plusButton.removeAttribute('disabled');
     minusButton.removeAttribute('disabled');
   });
