@@ -1108,7 +1108,7 @@ function initCartForm() {
     })
     .catch(function(error) {
       console.log('Error Deleting Line Item', error);
-    })
+    });
   }
 }
 initCartForm();
