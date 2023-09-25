@@ -55,7 +55,7 @@
       "terms_message_at_checkout": "You must agree with the terms and conditions to check out",
       "discount": "Discounts",
       "note_placeholder": "Any special instructions for your order?",
-      "free_shipping_eligible": "You are away from free shipping by ",
+      "free_shipping_eligible": "Spend {{ amount }} more to qualify for free shipping.",
       "free_shipping_success_html": "Congratulations! You qualify for free shipping on orders over {{ ammount }}",
       "view_cart": "View Cart",
       "drawer_close": "Close",
