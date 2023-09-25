@@ -1000,12 +1000,13 @@ function initCartForm() {
   } else {
     selectors.format = 'default';
   }
-  // if (selectors.checkoutForm) {
-  //   selectors.termsEnabled = selectors.cartNote.dataset.terms;
-    
-  // } else {
-  //   selectors.termsEnabled = 'false';
-  // }
+  
+  if (selectors.checkoutForm) {
+    selectors.termsEnabled = selectors.cartNote.dataset.terms;
+    console.log(selectors.termsEnabled);
+  } else {
+    selectors.termsEnabled = 'false';
+  }
 
   selectors.quantitySelector.forEach(button => {
     if (!button) {
