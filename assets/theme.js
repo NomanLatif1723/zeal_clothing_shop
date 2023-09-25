@@ -1092,7 +1092,7 @@ function initCartForm() {
 
   function formSubmit(event) {
     if (selectors.checkedInput.checked) {
-      console.log('proceed to checout');
+      // Proceed To Checkout 
     } else {
       alert(window.themeContent.strings.cartTermsConfirmation);
       event.preventDefault();
