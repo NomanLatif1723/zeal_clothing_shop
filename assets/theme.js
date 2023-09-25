@@ -965,7 +965,7 @@ function initCartForm() {
         let qty = value + 1;
         quantityInput.value = qty;
         updateCart(key,qty);
-      } else if(value > 1) {
+      } else if(!isPlus && value > 1) {
         let qty = value - 1
         quantityInput.value = qty;
         updateCart(key,qty);
