@@ -1048,7 +1048,8 @@ function initCartForm() {
       updateLineItemPrices(cartData.items);
       updateSubtotal(cartData);
       updateTotalDiscount(cartData);
-      updateCartCount(cartData)
+      updateCartCount(cartData);
+      updateSippingBar(cartData)
     })
     .catch(function(error) {
       console.error('Error updating cart:', error);
