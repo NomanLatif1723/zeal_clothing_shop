@@ -988,7 +988,7 @@ function initCartForm() {
     quantitySelector: document.querySelectorAll('.line__item-quantity button'),
     checkoutForm: document.querySelector('[name="checkout"]'),
     termsEnabled: document.querySelector('[data-checkout-terms]'),
-    checkedInput: termsEnabled.querySelector('input'),
+    checkedInput: document.querySelector('[data-checkout-terms] input'),
     cartForm: document.querySelector('.cart__main'),
     subTotal: document.querySelector('[data-subTotal]'),
     totalDiscount: document.querySelector('[data-discount]'),
