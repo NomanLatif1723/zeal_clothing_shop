@@ -994,8 +994,8 @@ function initCartForm() {
         quantityInput.value = newQuantity;
         updateCart(key, newQuantity);
       } else {
-        minusIcon.classList.remove('disabled__button');
-        plusIcon.classList.add('disabled__button');
+        button.classList.toggle('disabled__button');
+        // plusIcon.classList.add('disabled__button');
       }
     } else {
       let newQuantity = value - 1;
@@ -1003,8 +1003,8 @@ function initCartForm() {
         quantityInput.value = newQuantity;
         updateCart(key, newQuantity);
       } else {
-        plusIcon.classList.remove('disabled__button');
-        minusIcon.classList.add('disabled__button');
+        button.classList.toggle('disabled__button');
+        // minusIcon.classList.add('disabled__button');
       }
     }
   });
