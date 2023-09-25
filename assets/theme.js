@@ -976,6 +976,7 @@ function initCartForm() {
   //     }
   //   })
   // })
+
   selectors.quantitySelector.forEach(button => {
   button.addEventListener('click', async (event) => {
     let isPlus = button.classList.contains('icon__plus');
@@ -987,34 +988,76 @@ function initCartForm() {
     const cartData = await cartDataResponse.json();
     const lineItem = cartData.items.find(item => item.key === key);
     
-    const cartLineItem = button.closest('[data-key]');
-    const stockAvailable = cartLineItem.dataset.stockCount;
+    const stockAvailable = Number(button.closest('[data-key]').dataset.stockCount);
+
     if (isPlus) {
       let newQuantity = value + 1;
       if (newQuantity <= stockAvailable) {
         quantityInput.value = newQuantity;
         updateCart(key, newQuantity);
-      } 
-      else {
-        event.target.closest('button').setAttribute('disabled', 'disabled');
-        document.querySelector('[data-key] .icon__minus').removeAttribute('disabled');
-        // lineItem.querySelector('.icon__minus').removeAttribute('disabled');
+      } else {
+        // Disable the plus button if limit reached
+        button.setAttribute('disabled', 'disabled');
       }
     } else {
       let newQuantity = value - 1;
       if (newQuantity > 0) {
         quantityInput.value = newQuantity;
         updateCart(key, newQuantity);
-      } 
-      else {
-        event.target.closest('button').toggleAttribute('disabled', 'disabled');
-        document.querySelector('[data-key] .icon__plus').removeAttribute('disabled');
-        
-        // lineItem.querySelector('.icon__plus').removeAttribute('disabled');
+      } else {
+        // Disable the minus button if limit reached
+        button.setAttribute('disabled', 'disabled');
       }
     }
+
+    // Re-enable both buttons since we're not exceeding the limits
+    const plusButton = button.parentElement.querySelector('.icon__plus');
+    const minusButton = button.parentElement.querySelector('.icon__minus');
+    plusButton.removeAttribute('disabled');
+    minusButton.removeAttribute('disabled');
   });
 });
+
+  
+//   selectors.quantitySelector.forEach(button => {
+//   button.addEventListener('click', async (event) => {
+//     let isPlus = button.classList.contains('icon__plus');
+//     let quantityInput = button.parentElement.querySelector('input');
+//     let value = Number(quantityInput.value);
+//     let key = button.closest('[data-key]').dataset.key;
+    
+//     const cartDataResponse = await fetch('/cart.js');
+//     const cartData = await cartDataResponse.json();
+//     const lineItem = cartData.items.find(item => item.key === key);
+    
+//     const cartLineItem = button.closest('[data-key]');
+//     const stockAvailable = cartLineItem.dataset.stockCount;
+//     if (isPlus) {
+//       let newQuantity = value + 1;
+//       if (newQuantity <= stockAvailable) {
+//         quantityInput.value = newQuantity;
+//         updateCart(key, newQuantity);
+//       } 
+//       else {
+//         event.target.closest('button').setAttribute('disabled', 'disabled');
+//         document.querySelector('[data-key] .icon__minus').removeAttribute('disabled');
+//         // lineItem.querySelector('.icon__minus').removeAttribute('disabled');
+//       }
+//     } else {
+//       let newQuantity = value - 1;
+//       if (newQuantity > 0) {
+//         quantityInput.value = newQuantity;
+//         updateCart(key, newQuantity);
+//       } 
+//       else {
+//         event.target.closest('button').toggleAttribute('disabled', 'disabled');
+//         document.querySelector('[data-key] .icon__plus').removeAttribute('disabled');
+        
+//         // lineItem.querySelector('.icon__plus').removeAttribute('disabled');
+//       }
+//     }
+//   });
+// });
 
 
   // cartNote change Event
