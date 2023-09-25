@@ -981,13 +981,12 @@ function initCartForm() {
     let value = Number(quantityInput.value);
     let key = button.closest('[data-key]').dataset.key;
     
-    // Fetch the product's stock availability based on the line item key
     const cartDataResponse = await fetch('/cart.js');
     const cartData = await cartDataResponse.json();
 
     const lineItem = cartData.items.find(item => item.key === key);
 
-    if (lineItem) {
+    // if (lineItem) {
       // Get the stock available for this line item
       const stockAvailable = button.closest('[data-key]').dataset.stockCount;
 console.log(stockAvailable);
@@ -1018,7 +1017,7 @@ console.log(stockAvailable);
           button.classList.add('disabled__button'); // Disable the minus button
         }
       }
-    }
+    // }
   });
 });
 
