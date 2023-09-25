@@ -1043,7 +1043,7 @@ function initCartForm() {
   if (!selectors.checkoutForm) {
     return;
   }
-  selectors.checkoutForm.addEventlistener('submit', (event) => {
+  selectors.checkoutForm.addEventListener('submit', (event) => {
     formSubmit(event);
   });
 
