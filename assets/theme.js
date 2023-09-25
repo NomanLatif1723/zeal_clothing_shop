@@ -989,7 +989,7 @@ function initCartForm() {
 
     if (lineItem) {
       // Get the stock available for this line item
-      const stockAvailable = lineItem.dataset.stockCount;
+      const stockAvailable = button.closest('[data-key]').dataset.stockCount;
 console.log(stockAvailable);
       if (isPlus) {
         // Calculate the new quantity if plus button is clicked
