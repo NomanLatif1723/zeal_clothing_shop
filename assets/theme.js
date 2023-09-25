@@ -986,7 +986,7 @@ initHandleCart();
 function initCartForm() {
   let selectors = {
     quantitySelector: document.querySelectorAll('.line__item-quantity button'),
-    checkoutButton: document.querySelector('[name="checkout"]'),
+    checkoutForm: document.querySelector('[name="checkout"]'),
     cartForm: document.querySelector('.cart__main'),
     subTotal: document.querySelector('[data-subTotal]'),
     totalDiscount: document.querySelector('[data-discount]'),
@@ -1038,6 +1038,14 @@ function initCartForm() {
       body: JSON.stringify(requestData)
     })
   })
+
+  // Checkout Form Submit
+  if (!selectors.checkoutForm) {
+    return;
+  }
+  selectors.checkoutForm.addEventlistener('submit', (event) => {
+    formSubmit(event);
+  });
 
   function updateCart(key,quantity) {
     var requestData = {
@@ -1108,6 +1116,9 @@ function initCartForm() {
       selectors.checkoutButton.textContent = "Sold Out";
       selectors.checkoutButton.disabled = true;
     }
+  }
+  function formSubmit(event) {
+    event.preventDefault();
   }
 }
 initCartForm();
