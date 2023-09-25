@@ -1159,7 +1159,7 @@ function initCartForm() {
   }
 
   function updateSippingBar(cartData) {
-    fetch(
+    // fetch(
       // `${window.location.protocol}//${window.location.host}${window.location.pathname}/cart.js`)
       // .then((response) => response.text())
       // .then((responseText) => {
