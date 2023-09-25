@@ -1044,6 +1044,9 @@ function initCartForm() {
   if (!selectors.checkoutForm) {
     return;
   }
+  if (!selectors.termsEnabled) {
+    return;
+  }
   if (selectors.termsEnabled) {
      selectors.checkoutForm.addEventListener('click', (event) => {
       formSubmit(event)
