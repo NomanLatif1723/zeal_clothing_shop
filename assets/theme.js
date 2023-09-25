@@ -936,7 +936,8 @@ function initCartForm() {
     checkoutForm: document.querySelector('[name="checkout"]'),
     termsEnabled: document.querySelector('[data-checkout-terms]'),
     checkedInput: document.querySelector('[data-checkout-terms] input'),
-    cartForm: document.querySelector('.cart__main'),
+    cartContainer: document.querySelector('.cart__main'),
+    cartForm: document.querySelector('#cart_form'),
     plusIcon: document.querySelector('.icon__plus'),
     minusIcon: document.querySelector('.icon__minus'),
     subTotal: document.querySelector('[data-subTotal]'),
@@ -945,8 +946,8 @@ function initCartForm() {
     format: null
   };
 
-  if (selectors.cartForm) {
-    selectors.format = selectors.cartForm.dataset.moneyFormat;
+  if (selectors.cartContainer) {
+    selectors.format = selectors.cartContainer.dataset.moneyFormat;
   } else {
     selectors.format = 'default';
   }
@@ -1003,8 +1004,7 @@ function initCartForm() {
         return response.json();
       })
       .then(function(cartData) {
-        // item.remove();
-        removeLineItem(item);
+        removeLineItem(cartData,item);
         updateSubtotal(cartData);
         updateTotalDiscount(cartData);
       })
@@ -1113,8 +1113,16 @@ function initCartForm() {
     }
   }
 
-  function removeLineItem(item) {
-    item.remove();
+  function removeLineItem(cartData,item) {
+    if (!selectors.cart_form) {
+      return;
+    }
+    if (cartData.items.length === 0) {
+      selectors.cartForm.remove();
+      
+    } else {
+      item.remove();
+    }
     // items.forEach((item) => {
     //   if (!item) {
     //     return;
