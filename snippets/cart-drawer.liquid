@@ -142,7 +142,7 @@
           {% endif %}
           <div class="cart__total-price">
             <div>{{ 'cart.general.total_price' | t }}</div>
-            <div>{{ cart.total_price | money }}</div>
+            <div data-subtotal>{{ cart.total_price | money }}</div>
           </div>
           <div class="drawer__shipping-text">
             <div class="rte">{{ 'cart.general.shipping_text' | t }}</div>
