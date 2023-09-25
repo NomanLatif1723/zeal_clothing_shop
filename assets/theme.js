@@ -1130,7 +1130,7 @@ function initCartForm() {
     if (selectors.checkedInput.checked) {
       console.log('proceed to checout');
     } else {
-      alert(theme.strings.cartTermsConfirmation);
+      alert(window.themeContent.strings.cartTermsConfirmation);
       event.preventDefault();
     }
   }
