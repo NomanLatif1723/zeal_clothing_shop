@@ -1174,7 +1174,7 @@ function initCartForm() {
       const remainingAmount = formatMoney(thresholdTotal - cartTotal, selectors.format);
       shippingText.innerHTML = `Spend ${remainingAmount} more to qualify for free shipping.`;
     } else {
-      shippingText.textContent = `You qualify for free shipping!`;
+      shippingText.textContent = window.themeContent.strings.freeShippingSuccess;
     }
 
     // fetch('/cart.js')
