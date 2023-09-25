@@ -996,7 +996,8 @@ function initCartForm() {
         updateCart(key, newQuantity);
       } 
       else {
-        event.target.closest('button').toggleAttribute('disabled', 'disabled');
+        event.target.closest('button').setAttribute('disabled', 'disabled');
+        lineItem.querySelector('.icon__minus').removeAttribute('disabled');
       }
     } else {
       let newQuantity = value - 1;
@@ -1006,6 +1007,7 @@ function initCartForm() {
       } 
       else {
         event.target.closest('button').toggleAttribute('disabled', 'disabled');
+        lineItem.querySelector('.icon__plus').removeAttribute('disabled');
       }
     }
   });
