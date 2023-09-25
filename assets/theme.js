@@ -1125,6 +1125,10 @@ function initCartForm() {
   }
   function formSubmit(event) {
     let terms = event.target.dataset.terms;
+    let checkedInput = selectors.termsEnabled.querySelector('input');
+    if (checkedInput.checked) {
+      console.log('its checked');
+    }
     console.log(terms);
     
     event.preventDefault();
