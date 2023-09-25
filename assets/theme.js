@@ -1042,6 +1042,7 @@ function initCartForm() {
       updateLineItemPrices(cartData.items);
       updateSubtotal(cartData);
       updateTotalDiscount(cartData);
+      removeLineItem(cartData.items);
     })
     .catch(function(error) {
       console.error('Error updating cart:', error);
@@ -1049,7 +1050,9 @@ function initCartForm() {
   }
   function updateLineItemPrices(items) {
     items.forEach((item) => {
-      
+      if (!item) {
+        return;
+      }
       let finalPriceContainer = document.querySelector(`[data-key="${item.key}"] .final-line__price`);
       let itemPrice =  formatMoney(item.final_line_price,selectors.format);
       if (!finalPriceContainer) {
@@ -1086,28 +1089,13 @@ function initCartForm() {
     }
   }
 
-  function removeCartItem(key,quantity) {
-    var requestedData = {
-      key: key,
-      quantity: quantity
-    };
-    fetch('/cart/change.js', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-Requested-Width': 'XMLHttpRequest'
-      },
-      body: JSON.stringify(requestedData)
-    })
-    .then(function(responce) {
-      return responce.json();
-    })
-    .then(function(cartData){
-      updateSubtotal(cartData);
-      updateTotalDiscount(cartData);
-    })
-    .catch(function(error) {
-      console.log('Error Deleting Line Item', error);
+  function removeLineItem(items) {
+    items.forEach((item) => {
+      if (!item) {
+        return;
+      }
+      let lineItem = document.querySelector(`[data-key="${item.key}"]`);
+      lineItem.remove();
     });
   }
 }
