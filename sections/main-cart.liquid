@@ -20,7 +20,7 @@
         <div class="free-shipping" data-free-shipping-threshold="{{ threshold_total }}">
           <div class="rte">
             {%- if cart.total_price < threshold_total -%}
-              <p>{{ 'cart.general.free_shipping_eligible'| t: amount: threshold_total | minus: cart.total_price | money }}</p>
+              <p>{{ 'cart.general.free_shipping_eligible'| t }}{{ shop.currency_symbol }}{{ threshold_total | minus: cart.total_price | money }}</p>
             {%- else -%}
              <p>{{ 'cart.general.free_shipping_success_html' | t: amount: threshold }}</p>
             {%- endif -%}
