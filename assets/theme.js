@@ -1125,8 +1125,6 @@ function initCartForm() {
     }
   }
   function formSubmit(event) {
-    let terms = event.target.dataset.terms;
-    console.log(selectors.checkedInput);
     if (selectors.checkedInput.checked) {
       console.log('proceed to checout');
     } else {
