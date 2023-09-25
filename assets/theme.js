@@ -1091,7 +1091,7 @@ function initCartForm() {
       key: key,
       quantity: quantity
     };
-    fetch('cart/change.js', {
+    fetch('/cart/change.js', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
