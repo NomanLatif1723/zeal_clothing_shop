@@ -987,7 +987,8 @@ function initCartForm() {
     // const cartDataResponse = await fetch('/cart.js');
     // const cartData = await cartDataResponse.json();
     // const lineItem = cartData.items.find(item => item.key === key);
-    const stockAvailable = button.closest('[data-key]').dataset.stockCount;
+    const lineItem = button.closest('[data-key]');
+    const stockAvailable = lineItem.dataset.stockCount;
     if (isPlus) {
       let newQuantity = value + 1;
       if (newQuantity <= stockAvailable) {
