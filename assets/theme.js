@@ -987,7 +987,7 @@ function initCartForm() {
   let selectors = {
     quantitySelector: document.querySelectorAll('.line__item-quantity button'),
     checkoutForm: document.querySelector('[name="checkout"]'),
-    termsEnabled: 'false',
+    termsEnabled: document.querySelector('[data-checkout-terms]'),
     cartForm: document.querySelector('.cart__main'),
     subTotal: document.querySelector('[data-subTotal]'),
     totalDiscount: document.querySelector('[data-discount]'),
@@ -1044,10 +1044,11 @@ function initCartForm() {
   if (!selectors.checkoutForm) {
     return;
   }
-    
-  selectors.checkoutForm.addEventListener('click', (event) => {
-    formSubmit(event)
-  });
+  if (selectors.termsEnabled) {
+     selectors.checkoutForm.addEventListener('click', (event) => {
+      formSubmit(event)
+    });
+  }
 
   function updateCart(key,quantity) {
     var requestData = {
@@ -1120,8 +1121,8 @@ function initCartForm() {
     }
   }
   function formSubmit(event) {
-    let termsEnabled = event.target.dataset.terms;
-    console.log(termsEnabled);
+    let terms = event.target.dataset.terms;
+    console.log(terms);
     
     event.preventDefault();
     console.log('form submitted');
