@@ -1026,12 +1026,9 @@ function initCartForm() {
         return response.json();
       })
       .then(function(cartData) {
-        console.log('cart data', cartData);
         updateLineItemPrices(cartData.items);
         updateSubtotal(cartData);
         updateTotalDiscount(cartData);
-        
-        updateButtons(cartData);
       })
       .catch(function(error) {
         console.error('Error updating cart:', error);
@@ -1067,18 +1064,6 @@ function initCartForm() {
     console.log(cartNote);
   }
 
-  function updateButtons(cartData) {
-    if (!selectors.checkoutButton) {
-      return;
-    }
-    if (cartData.item_count > 0) {
-      selectors.checkoutButton.textContent = "Checkout";
-      selectors.checkoutButton.disabled = false;
-    } else {
-      selectors.checkoutButton.textContent = "Sold Out";
-      selectors.checkoutButton.disabled = true;
-    }
-  }
   function formSubmit(event) {
     if (selectors.checkedInput.checked) {
       console.log('proceed to checout');
