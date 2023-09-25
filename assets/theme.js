@@ -1130,9 +1130,8 @@ function initCartForm() {
     if (selectors.checkedInput.checked) {
       console.log('proceed to checout');
     } else {
-      console.log(terms);
+      alert(theme.strings.cartTermsConfirmation);
       event.preventDefault();
-      console.log('form submitted');
     }
   }
 }
