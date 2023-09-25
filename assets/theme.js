@@ -987,7 +987,7 @@ function initCartForm() {
       event.preventDefault();
       const item = button.closest('[data-key]');
       const key = item.dataset.key;
-      updateCart(key,0);
+      removeCartItem(key,0);
     })
   })
 
@@ -1035,17 +1035,17 @@ function initCartForm() {
       },
       body: JSON.stringify(requestData)
     })
-      .then(function(response) {
-        return response.json();
-      })
-      .then(function(cartData) {
-        updateLineItemPrices(cartData.items);
-        updateSubtotal(cartData);
-        updateTotalDiscount(cartData);
-      })
-      .catch(function(error) {
-        console.error('Error updating cart:', error);
-      });
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(cartData) {
+      updateLineItemPrices(cartData.items);
+      updateSubtotal(cartData);
+      updateTotalDiscount(cartData);
+    })
+    .catch(function(error) {
+      console.error('Error updating cart:', error);
+    });
   }
   function updateLineItemPrices(items) {
     items.forEach((item) => {
@@ -1084,6 +1084,31 @@ function initCartForm() {
       alert(window.themeContent.strings.cartTermsConfirmation);
       event.preventDefault();
     }
+  }
+
+  function removeCartItem(key,quantity) {
+    var requestedData = {
+      key: key,
+      quantity: quantity
+    };
+    fetch('cart/change.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Requested-Width': 'XMLHttpRequest'
+      },
+      body: JSON.stringify(requestedData)
+    })
+    .then(function(responce) {
+      return responce.json();
+    })
+    .then(function(cartData){
+      updateSubtotal(cartData);
+      updateTotalDiscount(cartData);
+    })
+    .catch(function(error) {
+      console.log('Error Deleting Line Item', error);
+    })
   }
 }
 initCartForm();
