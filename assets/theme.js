@@ -1159,13 +1159,13 @@ function initCartForm() {
 
   function updateSippingBar(cartData) {
     fetch(
-      `${window.location.protocol}//${window.location.host}${window.location.pathname}?variant=${matchedVariant.id}`)
+      `${window.location.protocol}//${window.location.host}${window.location.pathname}/cart.js`)
       .then((response) => response.text())
       .then((responseText) => {
         if (matchedVariant.id !== requestedVariantId) return;
         const html = new DOMParser().parseFromString(responseText, 'text/html');
-        const inventorySource = html.querySelector('[data-inventory]');
-        const inventoryDestination = document.querySelector('[data-inventory]');
+        const inventorySource = html.querySelector('.free-shipping');
+        const inventoryDestination = document.querySelector('.free-shipping');
         if (!inventorySource || inventoryDestination) {
           return;
         }
