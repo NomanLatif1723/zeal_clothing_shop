@@ -962,6 +962,7 @@ function initCartForm() {
       const cartData = await cartDataResponse.json();
       const lineItem = cartData.items.find(item => item.key === key);
       const stockAvailable = lineItem.product_id ? lineItem.product_id : 0;
+      console.log(stockAvailable);
       
       if (isPlus && value + 1 < stockAvailable) {
         let qty = value + 1;
