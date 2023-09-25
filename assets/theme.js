@@ -987,6 +987,7 @@ function initCartForm() {
   let selectors = {
     quantitySelector: document.querySelectorAll('.line__item-quantity button'),
     checkoutForm: document.querySelector('[name="checkout"]'),
+    termsEnabled: false,
     cartForm: document.querySelector('.cart__main'),
     subTotal: document.querySelector('[data-subTotal]'),
     totalDiscount: document.querySelector('[data-discount]'),
@@ -998,6 +999,12 @@ function initCartForm() {
     selectors.format = selectors.cartForm.dataset.moneyFormat;
   } else {
     selectors.format = 'default';
+  }
+
+  if (selectors.checkoutForm) {
+    selectors.termsEnabled = selectors.cartNote.dataset.terms;
+  } else {
+    selectors.termsEnabled = false;
   }
 
   selectors.quantitySelector.forEach(button => {
@@ -1043,9 +1050,11 @@ function initCartForm() {
   if (!selectors.checkoutForm) {
     return;
   }
-  selectors.checkoutForm.addEventListener('click', (event) => {
-    formSubmit(event)
-  });
+  if (selectors.termsEnabled) {
+    selectors.checkoutForm.addEventListener('click', (event) => {
+      formSubmit(event)
+    });
+  }
 
   function updateCart(key,quantity) {
     var requestData = {
@@ -1118,6 +1127,8 @@ function initCartForm() {
     }
   }
   function formSubmit(event) {
+    
+    
     event.preventDefault();
     console.log('form submitted');
   }
