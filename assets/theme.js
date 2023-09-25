@@ -1117,7 +1117,7 @@ function initCartForm() {
     if (!selectors.cartForm) {
       return;
     }
-    item.remove();
+    itemToRemove.remove();
     if (items.length === 0) {
       selectors.cartForm.remove();
     }
