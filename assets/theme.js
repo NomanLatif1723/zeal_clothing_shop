@@ -994,11 +994,7 @@ function initCartForm() {
         quantityInput.value = newQuantity;
         updateCart(key, newQuantity);
       } else {
-        if (event.target.classList.contains('icon__plus')) {
-          event.target.classList.add('disabled__button');
-        } else {
-          event.target.classList.remove('disabled__button');
-        }
+        // button.setAttribute
       }
     } else {
       let newQuantity = value - 1;
@@ -1006,11 +1002,11 @@ function initCartForm() {
         quantityInput.value = newQuantity;
         updateCart(key, newQuantity);
       } else {
-        if (event.target.classList.contains('icon__plus')) {
-          event.target.classList.remove('disabled__button');
-        } else {
-          event.target.classList.add('disabled__button');
-        }
+        // if (event.target.classList.contains('icon__plus')) {
+        //   event.target.classList.remove('disabled__button');
+        // } else {
+        //   event.target.classList.add('disabled__button');
+        // }
       }
     }
   });
