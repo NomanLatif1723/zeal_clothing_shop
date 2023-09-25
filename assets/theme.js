@@ -962,13 +962,15 @@ function initCartForm() {
       if (isPlus && value + 1 <= stockCount) {
         let qty = value + 1;
         quantityInput.value = qty;
+        button.classList.remove('disabled__button');
         updateCart(key,qty);
       } else if(!isPlus && value > 1) {
         let qty = value - 1
         quantityInput.value = qty;
+        button.classList.remove('disabled__button');
         updateCart(key,qty);
       } else{
-        button.classList.toggle('disabled__button');
+        button.classList.add('disabled__button');
       }
     })
   })
