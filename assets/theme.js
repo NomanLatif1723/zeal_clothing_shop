@@ -1128,12 +1128,12 @@ function initCartForm() {
     let terms = event.target.dataset.terms;
     console.log(selectors.checkedInput);
     if (selectors.checkedInput.checked) {
-      console.log('its checked');
+      console.log('proceed to checout');
+    } else {
+      console.log(terms);
+      event.preventDefault();
+      console.log('form submitted');
     }
-    console.log(terms);
-    
-    event.preventDefault();
-    console.log('form submitted');
   }
 }
 initCartForm();
