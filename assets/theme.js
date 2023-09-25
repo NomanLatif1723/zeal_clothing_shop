@@ -1121,7 +1121,12 @@ function initCartForm() {
       return;
     }
     console.log(cartData);
-    selectors.cartItemCounter.textContent = cartData.item_count;
+    if (cartData.item_count > 0) {
+      selectors.cartItemCounter.textContent = cartData.item_count;
+    } else {
+      selectors.cartItemCounter.remove();
+    }
+    
   }
 
   function formSubmit(event) {
