@@ -1121,7 +1121,7 @@ function initCartForm() {
       return;
     }
     console.log(cartData);
-    selectors.cartItemCounter.textContent = cartData.items_count;
+    selectors.cartItemCounter.textContent = cartData.item_count;
   }
 
   function formSubmit(event) {
