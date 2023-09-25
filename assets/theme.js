@@ -961,7 +961,7 @@ function initCartForm() {
       
       console.log(stockCount);
       
-      if (isPlus && value + 1 < stockAvailable) {
+      if (isPlus && value + 1 < stockCount) {
         let qty = value + 1;
         quantityInput.value = qty;
         updateCart(key,qty);
