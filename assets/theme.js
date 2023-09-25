@@ -1051,6 +1051,7 @@ function initCartForm() {
     return;
   }
   if (selectors.termsEnabled) {
+    console.log(selectors.termsEnabled);
     selectors.checkoutForm.addEventListener('click', (event) => {
       formSubmit(event)
     });
