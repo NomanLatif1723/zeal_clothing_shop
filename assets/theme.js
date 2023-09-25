@@ -1127,8 +1127,8 @@ function initCartForm() {
       const emptyCart = document.createElement('div');
       emptyCart.className = 'cart__empty-message';
       emptyCart.innerHTML = `
-        <div class="rte">{{ 'cart.general.empty_cart' | t }}</div>
-        <a href="{{ routes.all_products_collection_url }}" title="{{ 'cart.general.continue_shopping' | t }}" class="form__links">{{ 'cart.general.continue_shopping' | t }}</a>
+        <div class="rte">${window.themeContent.strings.cartEmptyMessage}</div>
+        <a href="${window.themeContent.routes.all_collections}" title="${window.themeContent.strings.continue_shopping}" class="form__links">${window.themeContent.strings.continue_shopping}</a>
       `;
       selectors.mainCartContainer.appendChild(emptyCart);
     }
