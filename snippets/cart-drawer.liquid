@@ -134,8 +134,14 @@
           {%- endfor -%}
         </div>
         <div class="cart-drawer__footer">
+          {% if cart.discount_applications != blank %}
+            <div class="cart__total-price">
+              <div>{{ 'cart.general.total_discounts' | t }}</div>
+              <div data-discount>{{ cart.total_discount | money }}</div>
+            </div>
+          {% endif %}
           <div class="cart__total-price">
-            <div>{{ 'cart.general.total' | t }}</div>
+            <div>{{ 'cart.general.total_price' | t }}</div>
             <div>{{ cart.total_price | money }}</div>
           </div>
           <div class="drawer__shipping-text">
