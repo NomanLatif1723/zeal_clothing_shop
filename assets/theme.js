@@ -987,7 +987,7 @@ function initCartForm() {
       event.preventDefault();
       const item = button.closest('[data-key]');
       const key = item.dataset.key;
-      removeCartItem(key,0);
+      updateCart(key,0);
     })
   })
 
