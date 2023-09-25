@@ -1000,10 +1000,10 @@ function initCartForm() {
   } else {
     selectors.format = 'default';
   }
-
+console.log(selectors.termsEnabled);
   if (selectors.checkoutForm) {
     selectors.termsEnabled = selectors.cartNote.dataset.terms;
-    console.log(selectors.termsEnabled);
+    
   } else {
     selectors.termsEnabled = 'false';
     console.log(selectors.termsEnabled);
