@@ -982,8 +982,7 @@ function initCartForm() {
     let quantityInput = button.parentElement.querySelector('input');
     let value = Number(quantityInput.value);
     let key = button.closest('[data-key]').dataset.key;
-    let plusIcon = document.querySelector('.icon__plus');
-    let minusIcon = document.querySelector('.icon__minus');
+    let isMinus = button.classList.contains('icon__minus');
     // const cartDataResponse = await fetch('/cart.js');
     // const cartData = await cartDataResponse.json();
     // const lineItem = cartData.items.find(item => item.key === key);
@@ -994,8 +993,8 @@ function initCartForm() {
         quantityInput.value = newQuantity;
         updateCart(key, newQuantity);
       } else {
-        minusIcon.removeAttribute('disabled');
-        plusIcon.setAttribute('disabled','disabled');
+        isMinus.removeAttribute('disabled');
+        isPlus.setAttribute('disabled','disabled');
       }
     } else {
       let newQuantity = value - 1;
@@ -1003,8 +1002,8 @@ function initCartForm() {
         quantityInput.value = newQuantity;
         updateCart(key, newQuantity);
       } else {
-        plusIcon.removeAttribute('disabled');
-        minusIcon.setAttribute('disabled','disabled');
+        isPlus.removeAttribute('disabled');
+        isMinus.setAttribute('disabled','disabled');
       }
     }
   });
