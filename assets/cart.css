@@ -168,13 +168,15 @@ text-align: center;
 }
 .free-shipping {
   padding-bottom: 20px;
-display: inline-block;
+/* display: inline-block; */
 }
 .progress__bar {
   height: 8px;
   border: 1px solid #111111;
   margin-top: 15px;
   position: relative;
+  max-width: 550px;
+  width: 100%;
 }
 .free-shipping__bar:after {
   position: absolute;
