@@ -1044,7 +1044,7 @@ function initCartForm() {
     return;
   }
   selectors.checkoutForm.addEventListener('submit', (event) => {
-    formSubmit(event);
+    event.preventDefault();
   });
 
   function updateCart(key,quantity) {
