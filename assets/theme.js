@@ -1008,10 +1008,8 @@ function initCartForm() {
       }
     }
 
-    const plusButton = button.classList.contains('.icon__plus');
-    const minusButton = button.classList.contains('.icon__minus');
-    plusButton.removeAttribute('disabled');
-    minusButton.removeAttribute('disabled');
+        button.parentElement.querySelector('.icon__plus').removeAttribute('disabled');
+    button.parentElement.querySelector('.icon__minus').removeAttribute('disabled');
   });
 });
 
