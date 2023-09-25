@@ -55,7 +55,7 @@
                   <div class="grid-product__vendor">{{ item.product.vendor }}</div>
                 {%- endif -%}
                 <div class="cart__item-title">
-                  <h3>{{ item.title }}</h3>
+                  <h3>{{ item.product.title }}</h3>
                   <a href="{{ item.url_to_remove }}" class="cart__item-remove" title="{{ 'cart.general.remove' | t }}">
                     {%- render 'icon-close' -%}
                   </a>
