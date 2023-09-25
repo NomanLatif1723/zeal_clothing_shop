@@ -1043,8 +1043,9 @@ function initCartForm() {
   if (!selectors.checkoutForm) {
     return;
   }
-  selectors.checkoutForm.addEventListener('submit', (event) => {
+  selectors.checkoutForm.addEventListener('click', (event) => {
     event.preventDefault();
+    console.log('form submitted');
   });
 
   function updateCart(key,quantity) {
