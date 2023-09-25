@@ -1000,13 +1000,6 @@ function initCartForm() {
   } else {
     selectors.format = 'default';
   }
-  
-  if (selectors.checkoutForm) {
-    selectors.termsEnabled = selectors.cartNote.dataset.terms;
-    console.log(selectors.termsEnabled);
-  } else {
-    selectors.termsEnabled = 'false';
-  }
 
   selectors.quantitySelector.forEach(button => {
     if (!button) {
@@ -1127,7 +1120,8 @@ function initCartForm() {
     }
   }
   function formSubmit(event) {
-    
+    let termsEnabled = event.target.dataset.terms;
+    console.log(termsEnabled);
     
     event.preventDefault();
     console.log('form submitted');
