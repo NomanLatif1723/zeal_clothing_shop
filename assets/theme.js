@@ -948,32 +948,80 @@ function initCartForm() {
     selectors.format = 'default';
   }
 
-  selectors.quantitySelector.forEach(button => {
-    if (!button) {
-      return;
-    }
-    button.addEventListener('click', (event) => {
-      let isPlus = button.classList.contains('icon__plus');
-      let quantityInput = button.parentElement.querySelector('input');
-      let value = Number(quantityInput.value);
-      let key = button.closest('[data-key]').dataset.key;
-      let stockCount = button.closest('[data-key]').dataset.stockCount;
+  // selectors.quantitySelector.forEach(button => {
+  //   if (!button) {
+  //     return;
+  //   }
+  //   button.addEventListener('click', (event) => {
+  //     let isPlus = button.classList.contains('icon__plus');
+  //     let quantityInput = button.parentElement.querySelector('input');
+  //     let value = Number(quantityInput.value);
+  //     let key = button.closest('[data-key]').dataset.key;
+  //     let stockCount = button.closest('[data-key]').dataset.stockCount;
       
-      if (isPlus && value + 1 <= stockCount) {
-        let qty = value + 1;
-        quantityInput.value = qty;
-        button.classList.remove('disabled__button');
-        updateCart(key,qty);
-      } else if(!isPlus && value > 1) {
-        let qty = value - 1
-        quantityInput.value = qty;
-        button.classList.remove('disabled__button');
-        updateCart(key,qty);
-      } else{
-        button.classList.add('disabled__button');
+  //     if (isPlus && value + 1 <= stockCount) {
+  //       let qty = value + 1;
+  //       quantityInput.value = qty;
+  //       button.classList.remove('disabled__button');
+  //       updateCart(key,qty);
+  //     } else if(!isPlus && value > 1) {
+  //       let qty = value - 1
+  //       quantityInput.value = qty;
+  //       button.classList.remove('disabled__button');
+  //       updateCart(key,qty);
+  //     } else{
+  //       button.classList.add('disabled__button');
+  //     }
+  //   })
+  // })
+  selectors.quantitySelector.forEach(button => {
+  button.addEventListener('click', async (event) => {
+    let isPlus = button.classList.contains('icon__plus');
+    let quantityInput = button.parentElement.querySelector('input');
+    let value = Number(quantityInput.value);
+    let key = button.closest('[data-key]').dataset.key;
+    
+    // Fetch the product's stock availability based on the line item key
+    const cartDataResponse = await fetch('/cart.js');
+    const cartData = await cartDataResponse.json();
+
+    const lineItem = cartData.items.find(item => item.key === key);
+
+    if (lineItem) {
+      // Get the stock available for this line item
+      const stockAvailable = lineItem.quantity;
+console.log(stockAvailable);
+      if (isPlus) {
+        // Calculate the new quantity if plus button is clicked
+        let newQuantity = value + 1;
+
+        // Check if the new quantity exceeds the available stock
+        if (newQuantity <= stockAvailable) {
+          quantityInput.value = newQuantity;
+          updateCart(key, newQuantity);
+        } else {
+          // Show a message to the user or disable the plus button if limit reached
+          alert('You have reached the maximum allowed quantity for this product.');
+          button.classList.add('disabled__button'); // Disable the plus button
+        }
+      } else {
+        // Calculate the new quantity if minus button is clicked
+        let newQuantity = value - 1;
+
+        // Check if the new quantity is greater than 0
+        if (newQuantity > 0) {
+          quantityInput.value = newQuantity;
+          updateCart(key, newQuantity);
+        } else {
+          // Show a message to the user or disable the minus button if limit reached
+          alert('You have reached the minimum allowed quantity for this product.');
+          button.classList.add('disabled__button'); // Disable the minus button
+        }
       }
-    })
-  })
+    }
+  });
+});
+
 
   // cartNote change Event
   if (!selectors.cartNote) {
