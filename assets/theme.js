@@ -988,7 +988,6 @@ function initCartForm() {
     const lineItem = cartData.items.find(item => item.key === key);
     
     const cartLineItem = button.closest('[data-key]');
-    console.log(lineItem);
     const stockAvailable = cartLineItem.dataset.stockCount;
     if (isPlus) {
       let newQuantity = value + 1;
