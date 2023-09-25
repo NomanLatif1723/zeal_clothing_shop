@@ -986,8 +986,8 @@ function initCartForm() {
     }
     button.addEventListener('click', (event) => {
       event.preventDefault();
-      const item = button.closest('[data-key]');
-      const key = item.dataset.key;
+      const itemToRemove = button.closest('[data-key]');
+      const key = itemToRemove.dataset.key;
       var requestData = {
         id: key,
         quantity: 0
@@ -1004,7 +1004,7 @@ function initCartForm() {
         return response.json();
       })
       .then(function(cartData) {
-        removeLineItem(cartData.items,item);
+        removeLineItem(cartData.items,itemToRemove);
         updateSubtotal(cartData);
         updateTotalDiscount(cartData);
       })
@@ -1113,22 +1113,14 @@ function initCartForm() {
     }
   }
 
-  function removeLineItem(items,item) {
+  function removeLineItem(items,itemToRemove) {
     if (!selectors.cart_form) {
       return;
     }
+    item.remove();
     if (items.length === 0) {
       selectors.cartForm.remove();
-    } else {
-      item.remove();
     }
-    // items.forEach((item) => {
-    //   if (!item) {
-    //     return;
-    //   }
-    //   let lineItem = document.querySelector(`[data-key="${item.key}"]`);
-    //   lineItem.remove();
-    // });
   }
 }
 initCartForm();
