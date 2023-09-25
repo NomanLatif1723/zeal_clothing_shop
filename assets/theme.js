@@ -970,8 +970,8 @@ function initCartForm() {
         quantityInput.value = qty;
         updateCart(key,qty);
       } else{
-        event.target.disabled;
-       alert('All items are added for this line item');
+        event.target.setAttribute('disabled','disabled');
+       // alert('All items are added for this line item');
       }
     })
   })
