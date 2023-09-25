@@ -1044,8 +1044,7 @@ function initCartForm() {
     return;
   }
   selectors.checkoutForm.addEventListener('click', (event) => {
-    event.preventDefault();
-    console.log('form submitted');
+    formSubmit(event)
   });
 
   function updateCart(key,quantity) {
@@ -1120,6 +1119,7 @@ function initCartForm() {
   }
   function formSubmit(event) {
     event.preventDefault();
+    console.log('form submitted');
   }
 }
 initCartForm();
