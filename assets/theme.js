@@ -1168,7 +1168,7 @@ function initCartForm() {
     const progressBar = selectors.freeShippingBar.querySelector('.free-shipping__bar');
     progressBar.style.setProperty('--progress', progress);
   
-    const shippingText = shippingBar.querySelector('.rte p');
+    const shippingText = selectors.freeShippingBar.querySelector('.rte p');
     
     if (cartTotal < thresholdTotal) {
       const remainingAmount = (thresholdTotal - cartTotal).toFixed(2);
