@@ -17,7 +17,7 @@
         "f0ba936b-3352-416d-93f0-cdb44ef09cf9"
       ],
       "settings": {
-        "products_to_show": 8,
+        "products_to_show": 30,
         "products_per_row": 4,
         "show_sorting": true,
         "show_filtering": true,
