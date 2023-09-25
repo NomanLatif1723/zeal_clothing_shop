@@ -936,7 +936,7 @@ function initCartForm() {
     checkoutForm: document.querySelector('[name="checkout"]'),
     termsEnabled: document.querySelector('[data-checkout-terms]'),
     checkedInput: document.querySelector('[data-checkout-terms] input'),
-    cartContainer: document.querySelector('.cart__main'),
+    cartContainer: document.querySelector('[data-cart]'),
     cartForm: document.querySelector('#cart_form'),
     plusIcon: document.querySelector('.icon__plus'),
     minusIcon: document.querySelector('.icon__minus'),
