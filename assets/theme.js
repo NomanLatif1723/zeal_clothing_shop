@@ -1130,14 +1130,15 @@ initCartForm();
 function initProductCollapsibles() {
   let collapsibleWrapper = document.querySelectorAll('.product__tabs');
   collapsibleWrapper.forEach(tab => {
-    if (tab) {
-      let collapsibleHeader = tab.querySelector('.product-tab__header');
-      if (collapsibleHeader) {
-        collapsibleHeader.addEventListener('click', (event) => {
-          event.target.parentElement.querySelector('.product-tab__content').classList.toggle('hidden');
-          event.target.querySelector('.icon__arrow').classList.toggle('icon__rotate');
-        })
-      }
+    if (!tab) {
+      return;
+    }
+    let collapsibleHeader = tab.querySelector('.product-tab__header');
+    if (collapsibleHeader) {
+      collapsibleHeader.addEventListener('click', (event) => {
+        event.target.parentElement.querySelector('.product-tab__content').classList.toggle('hidden');
+        event.target.querySelector('.icon__arrow').classList.toggle('icon__rotate');
+      })
     }
   })
 }
@@ -1203,6 +1204,9 @@ function initProductQuantitySelector() {
     if (wrapper) {
       const quantityButton = wrapper.querySelectorAll('button');
       quantityButton.forEach(button => {
+        if (!button) {
+          return;
+        }
         button.addEventListener('click', () => {
           let quantityInput = button.parentElement.querySelector('input');
           let quantityValue = Number(quantityInput.value);
