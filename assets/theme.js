@@ -990,30 +990,7 @@ function initCartForm() {
       event.preventDefault();
       const itemToRemove = button.closest('[data-key]');
       const key = itemToRemove.dataset.key;
-      var requestData = {
-        id: key,
-        quantity: 0
-      };
-      fetch('/cart/change.js', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-Requested-With': 'XMLHttpRequest'
-        },
-        body: JSON.stringify(requestData)
-      })
-      .then(function(response) {
-        return response.json();
-      })
-      .then(function(cartData) {
-        removeLineItem(cartData.items,itemToRemove);
-        updateSubtotal(cartData);
-        updateTotalDiscount(cartData);
-        updateSippingBar(cartData);
-      })
-      .catch(function(error) {
-        console.error('Error updating cart:', error);
-      });
+      removeItem(key,0,itemToRemove);
     })
   })
 
@@ -1070,10 +1047,40 @@ function initCartForm() {
       updateLineItemPrices(cartData.items);
       updateSubtotal(cartData);
       updateTotalDiscount(cartData);
+      updateCartCount(cartData)
     })
     .catch(function(error) {
       console.error('Error updating cart:', error);
     });
+  }
+
+  function removeItem(key, quantity, itemToRemove) {
+    var requestData = {
+        id: key,
+        quantity: 0,
+        itemToRemove: itemToRemove
+      };
+      fetch('/cart/change.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Requested-With': 'XMLHttpRequest'
+        },
+        body: JSON.stringify(requestData)
+      })
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(cartData) {
+        removeLineItem(cartData.items,itemToRemove);
+        updateSubtotal(cartData);
+        updateTotalDiscount(cartData);
+        updateCartCount(cartData);
+        updateSippingBar(cartData);
+      })
+      .catch(function(error) {
+        console.error('Error updating cart:', error);
+      });
   }
   
   function updateLineItemPrices(items) {
@@ -1108,6 +1115,10 @@ function initCartForm() {
     console.log(cartNote);
   }
 
+  function updateCartCount(cartData) {
+    
+  }
+
   function formSubmit(event) {
     if (selectors.checkedInput.checked) {
       // Proceed To Checkout 
@@ -1139,6 +1150,7 @@ function initCartForm() {
   function updateSippingBar(cartData) {
     
   }
+  
 }
 initCartForm();
 
