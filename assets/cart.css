@@ -170,7 +170,7 @@ text-align: center;
   padding-bottom: 20px;
 display: inline-block;
 }
-.free-shipping__bar {
+.progress__bar {
   height: 8px;
   border: 1px solid #111111;
   margin-top: 15px;
