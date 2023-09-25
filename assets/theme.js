@@ -987,7 +987,7 @@ function initCartForm() {
   let selectors = {
     quantitySelector: document.querySelectorAll('.line__item-quantity button'),
     checkoutForm: document.querySelector('[name="checkout"]'),
-    termsEnabled: false,
+    termsEnabled: 'false',
     cartForm: document.querySelector('.cart__main'),
     subTotal: document.querySelector('[data-subTotal]'),
     totalDiscount: document.querySelector('[data-discount]'),
@@ -1005,7 +1005,7 @@ function initCartForm() {
     selectors.termsEnabled = selectors.cartNote.dataset.terms;
     console.log(selectors.termsEnabled);
   } else {
-    selectors.termsEnabled = false;
+    selectors.termsEnabled = 'false';
     console.log(selectors.termsEnabled);
   }
 
