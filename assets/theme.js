@@ -959,13 +959,6 @@ function initCartForm() {
       let key = button.closest('[data-key]').dataset.key;
       let stockCount = button.closest('[data-key]').dataset.stockCount;
       
-      console.log(stockCount);
-      if (value <= stockCount) {
-        button.removeAttribute('disabled');
-      } else {
-        button.setAttribute('disabled','disabled');
-      }
-      
       if (isPlus && value + 1 <= stockCount) {
         let qty = value + 1;
         quantityInput.value = qty;
@@ -975,7 +968,7 @@ function initCartForm() {
         quantityInput.value = qty;
         updateCart(key,qty);
       } else{
-        // button.setAttribute('disabled','disabled');
+        button.setAttribute('disabled','disabled');
       }
     })
   })
