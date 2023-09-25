@@ -1159,19 +1159,28 @@ function initCartForm() {
   }
 
   function updateSippingBar(cartData) {
-    fetch('/cart.js')
-      .then((response) => response.text())
-      .then((responseText) => {
-        const html = new DOMParser().parseFromString(responseText,'text/html');
-        const inventorySource = html.querySelector('.free-shipping');
-        const inventoryDestination = document.querySelector('.free-shipping');
-        if (!inventorySource || inventoryDestination) {
-          return;
-        }
-        if (inventorySource && inventoryDestination) inventoryDestination.innerHTML = inventorySource.innerHTML;
-      });
-  }
+    // Fetch cart data or calculate relevant information
+    const cartTotal = cartData.total_price;
+    const eligibleForFreeShipping = selectors.freeShippingBar.dataset.freeShippingThreshold;
   
+    // Update the shipping bar content based on cart data
+    if (eligibleForFreeShipping) {
+      shippingBar.textContent = 'You are eligible for free shipping!';
+    } else {
+      shippingBar.textContent = `Spend $50 more to qualify for free shipping.`;
+    }
+    // fetch('/cart.js')
+    //   .then((response) => response.text())
+    //   .then((responseText) => {
+    //     const html = new DOMParser().parseFromString(responseText,'text/html');
+    //     const inventorySource = html.querySelector('.free-shipping');
+    //     const inventoryDestination = document.querySelector('.free-shipping');
+    //     if (!inventorySource || inventoryDestination) {
+    //       return;
+    //     }
+    //     if (inventorySource && inventoryDestination) inventoryDestination.innerHTML = inventorySource.innerHTML;
+    //   });
+  }
 }
 initCartForm();
 
