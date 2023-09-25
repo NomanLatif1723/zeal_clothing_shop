@@ -1120,6 +1120,14 @@ function initCartForm() {
     itemToRemove.remove();
     if (items.length === 0) {
       selectors.cartForm.remove();
+      const mainCartContainer = document.querySelector('.main-cart__wrapper .page__width');
+      const emptyCart = document.createElement('div');
+      emptyCart.className = 'cart__empty-message';
+      emptyCart.innerHtML = `
+        <div class="rte">{{ 'cart.general.empty_cart' | t }}</div>
+        <a href="{{ routes.all_products_collection_url }}" title="{{ 'cart.general.continue_shopping' | t }}" class="form__links">{{ 'cart.general.continue_shopping' | t }}</a>
+      `
+      mainCartContainer.appendChild(emptyCart);
     }
   }
 }
