@@ -936,6 +936,8 @@ function initCartForm() {
     termsEnabled: document.querySelector('[data-checkout-terms]'),
     checkedInput: document.querySelector('[data-checkout-terms] input'),
     cartForm: document.querySelector('.cart__main'),
+    plusIcon: document.querySelector('.icon__plus'),
+    minusIcon: document.querySelector('.icon__minus'),
     subTotal: document.querySelector('[data-subTotal]'),
     totalDiscount: document.querySelector('[data-discount]'),
     cartNote: document.querySelector('[name="note"]'),
@@ -992,8 +994,8 @@ console.log(stockAvailable);
           quantityInput.value = newQuantity;
           updateCart(key, newQuantity);
         } else {
-          // alert('You have reached the maximum allowed quantity for this product.');
-          button.classList.add('disabled__button');
+          selectors.minusIcon.removeAttribute('disabled');
+          selectors.plusIcon.setAttribute('disabled','disabled');
         }
       } else {
         let newQuantity = value - 1;
@@ -1001,9 +1003,8 @@ console.log(stockAvailable);
           quantityInput.value = newQuantity;
           updateCart(key, newQuantity);
         } else {
-          // alert('You have reached the minimum allowed quantity for this product.');
-          document.querySelector('.icon__plus').classList.remove('disabled__button');
-          button.classList.add('disabled__button');
+          selectors.plusIcon.removeAttribute('disabled');
+          selectors.minusIcon.setAttribute('disabled','disabled');
         }
       }
     }
