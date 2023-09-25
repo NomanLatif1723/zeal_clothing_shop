@@ -1000,14 +1000,12 @@ function initCartForm() {
   } else {
     selectors.format = 'default';
   }
-console.log(selectors.termsEnabled);
-  if (selectors.checkoutForm) {
-    selectors.termsEnabled = selectors.cartNote.dataset.terms;
+  // if (selectors.checkoutForm) {
+  //   selectors.termsEnabled = selectors.cartNote.dataset.terms;
     
-  } else {
-    selectors.termsEnabled = 'false';
-    console.log(selectors.termsEnabled);
-  }
+  // } else {
+  //   selectors.termsEnabled = 'false';
+  // }
 
   selectors.quantitySelector.forEach(button => {
     if (!button) {
@@ -1052,12 +1050,10 @@ console.log(selectors.termsEnabled);
   if (!selectors.checkoutForm) {
     return;
   }
-  if (selectors.termsEnabled) {
     
-    selectors.checkoutForm.addEventListener('click', (event) => {
-      formSubmit(event)
-    });
-  }
+  selectors.checkoutForm.addEventListener('click', (event) => {
+    formSubmit(event)
+  });
 
   function updateCart(key,quantity) {
     var requestData = {
