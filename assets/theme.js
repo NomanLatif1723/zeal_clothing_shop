@@ -985,6 +985,9 @@ function initCartForm() {
     }
     button.addEventListener('click', (event) => {
       event.preventDefault();
+      const item = button.closest('[data-key]');
+      const key = item.dataset.key;
+      updateCart(key,0);
     })
   })
 
