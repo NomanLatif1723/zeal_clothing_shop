@@ -1121,6 +1121,9 @@ function initCartForm() {
     if (items.length === 0) {
       selectors.cartForm.remove();
       const mainCartContainer = document.querySelector('.main-cart__wrapper .page__width');
+      if (!mainCartContainer) {
+        return
+      }
       const emptyCart = document.createElement('div');
       emptyCart.className = 'cart__empty-message';
       emptyCart.innerHtML = `
