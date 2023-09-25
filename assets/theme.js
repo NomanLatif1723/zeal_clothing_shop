@@ -968,7 +968,7 @@ function initCartForm() {
         quantityInput.value = qty;
         updateCart(key,qty);
       } else{
-        button.setAttribute('disabled','disabled');
+        button.classList.toggle('disabled__button');
       }
     })
   })
