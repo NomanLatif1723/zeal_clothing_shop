@@ -1003,8 +1003,10 @@ function initCartForm() {
 
   if (selectors.checkoutForm) {
     selectors.termsEnabled = selectors.cartNote.dataset.terms;
+    console.log(selectors.termsEnabled);
   } else {
     selectors.termsEnabled = false;
+    console.log(selectors.termsEnabled);
   }
 
   selectors.quantitySelector.forEach(button => {
@@ -1051,7 +1053,7 @@ function initCartForm() {
     return;
   }
   if (selectors.termsEnabled) {
-    console.log(selectors.termsEnabled);
+    
     selectors.checkoutForm.addEventListener('click', (event) => {
       formSubmit(event)
     });
