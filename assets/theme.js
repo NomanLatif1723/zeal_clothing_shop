@@ -977,82 +977,35 @@ function initCartForm() {
   //   })
   // })
 
-  selectors.quantitySelector.forEach(button => {
-  button.addEventListener('click', async (event) => {
-    let isPlus = button.classList.contains('icon__plus');
-    let quantityInput = button.parentElement.querySelector('input');
-    let value = Number(quantityInput.value);
-    let key = button.closest('[data-key]').dataset.key;
-    
-    const cartDataResponse = await fetch('/cart.js');
-    const cartData = await cartDataResponse.json();
-    const lineItem = cartData.items.find(item => item.key === key);
-    
-    const stockAvailable = Number(button.closest('[data-key]').dataset.stockCount);
-
-    if (isPlus) {
-      let newQuantity = value + 1;
-      if (newQuantity <= stockAvailable) {
-        quantityInput.value = newQuantity;
-        updateCart(key, newQuantity);
-      } else {
-        button.setAttribute('disabled', 'disabled');
-      }
-    } else {
-      let newQuantity = value - 1;
-      if (newQuantity > 0) {
-        quantityInput.value = newQuantity;
-        updateCart(key, newQuantity);
-      } else {
-        button.setAttribute('disabled', 'disabled');
-      }
-    }
-
-        button.parentElement.querySelector('.icon__plus').removeAttribute('disabled');
-    button.parentElement.querySelector('.icon__minus').removeAttribute('disabled');
-  });
-});
-
   
-//   selectors.quantitySelector.forEach(button => {
-//   button.addEventListener('click', async (event) => {
-//     let isPlus = button.classList.contains('icon__plus');
-//     let quantityInput = button.parentElement.querySelector('input');
-//     let value = Number(quantityInput.value);
-//     let key = button.closest('[data-key]').dataset.key;
-    
-//     const cartDataResponse = await fetch('/cart.js');
-//     const cartData = await cartDataResponse.json();
-//     const lineItem = cartData.items.find(item => item.key === key);
-    
-//     const cartLineItem = button.closest('[data-key]');
-//     const stockAvailable = cartLineItem.dataset.stockCount;
-//     if (isPlus) {
-//       let newQuantity = value + 1;
-//       if (newQuantity <= stockAvailable) {
-//         quantityInput.value = newQuantity;
-//         updateCart(key, newQuantity);
-//       } 
-//       else {
-//         event.target.closest('button').setAttribute('disabled', 'disabled');
-//         document.querySelector('[data-key] .icon__minus').removeAttribute('disabled');
-//         // lineItem.querySelector('.icon__minus').removeAttribute('disabled');
-//       }
-//     } else {
-//       let newQuantity = value - 1;
-//       if (newQuantity > 0) {
-//         quantityInput.value = newQuantity;
-//         updateCart(key, newQuantity);
-//       } 
-//       else {
-//         event.target.closest('button').toggleAttribute('disabled', 'disabled');
-//         document.querySelector('[data-key] .icon__plus').removeAttribute('disabled');
-        
-//         // lineItem.querySelector('.icon__plus').removeAttribute('disabled');
-//       }
-//     }
-//   });
-// });
+    selectors.quantitySelector.forEach(button => {
+    button.addEventListener('click', async (event) => {
+      let isPlus = button.classList.contains('icon__plus');
+      let quantityInput = button.parentElement.querySelector('input');
+      let value = Number(quantityInput.value);
+      let key = button.closest('[data-key]').dataset.key;
+      
+      const cartDataResponse = await fetch('/cart.js');
+      const cartData = await cartDataResponse.json();
+      const lineItem = cartData.items.find(item => item.key === key);
+      
+      const cartLineItem = button.closest('[data-key]');
+      const stockAvailable = cartLineItem.dataset.stockCount;
+      if (isPlus) {
+        let newQuantity = value + 1;
+        if (newQuantity <= stockAvailable) {
+          quantityInput.value = newQuantity;
+          updateCart(key, newQuantity);
+        } 
+      } else {
+        let newQuantity = value - 1;
+        if (newQuantity > 0) {
+          quantityInput.value = newQuantity;
+          updateCart(key, newQuantity);
+        }
+      }
+    });
+  });
 
 
   // cartNote change Event
