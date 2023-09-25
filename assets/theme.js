@@ -987,7 +987,30 @@ function initCartForm() {
       event.preventDefault();
       const item = button.closest('[data-key]');
       const key = item.dataset.key;
-      updateCart(key,0);
+      var requestData = {
+        id: key,
+        quantity: 0
+      };
+      fetch('/cart/change.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Requested-With': 'XMLHttpRequest'
+        },
+        body: JSON.stringify(requestData)
+      })
+      .then(function(response) {
+        return response.json();
+        // console.log(response);
+        // removeLineItem(response.items);
+      })
+      .then(function(cartData) {
+        updateSubtotal(cartData);
+        updateTotalDiscount(cartData);
+      })
+      .catch(function(error) {
+        console.error('Error updating cart:', error);
+      });
     })
   })
 
@@ -1037,8 +1060,8 @@ function initCartForm() {
     })
     .then(function(response) {
       return response.json();
-      console.log(response);
-      removeLineItem(response.items);
+      // console.log(response);
+      // removeLineItem(response.items);
     })
     .then(function(cartData) {
       updateLineItemPrices(cartData.items);
