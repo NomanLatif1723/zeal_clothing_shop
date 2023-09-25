@@ -1004,7 +1004,7 @@ function initCartForm() {
         return response.json();
       })
       .then(function(cartData) {
-        removeLineItem(cartData,item);
+        removeLineItem(cartData.items,item);
         updateSubtotal(cartData);
         updateTotalDiscount(cartData);
       })
@@ -1113,13 +1113,12 @@ function initCartForm() {
     }
   }
 
-  function removeLineItem(cartData,item) {
+  function removeLineItem(items,item) {
     if (!selectors.cart_form) {
       return;
     }
-    if (cartData.items.length === 0) {
+    if (items.length === 0) {
       selectors.cartForm.remove();
-      
     } else {
       item.remove();
     }
