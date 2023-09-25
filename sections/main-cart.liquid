@@ -25,7 +25,7 @@
              <p>{{ 'cart.general.free_shipping_success_html' | t: amount: threshold }}</p>
             {%- endif -%}
           </div>
-          <div class="free-shipping__bar" style="--progress: {{ cart.total_price | times: 1.0 | divided_by: threshold_total | at_most: 1 }}"></div>
+          <div class="progress__bar" style="--progress: {{ cart.total_price | times: 1.0 | divided_by: threshold_total | at_most: 1 }}"></div>
         </div>
       {%- endif -%}
     </div>
