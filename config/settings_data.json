@@ -19,7 +19,7 @@
     "is_free_shipping_bar": true,
     "free_shipping_threshold": "2000",
     "additional_checkout_buttons": true,
-    "show_terms": false,
+    "show_terms": true,
     "show_note": true,
     "overlay_style": false,
     "show_first_product": false,
