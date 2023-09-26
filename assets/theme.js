@@ -887,7 +887,6 @@ function initCartForm() {
     cartNoteBtn: document.querySelectorAll('#cartNoteBtn'),
     cartNote: document.querySelectorAll('[name="note"]'),
     freeShippingBar: document.querySelectorAll('.free-shipping'),
-    // mainCartContainer: document.querySelector('[data]'),
     cartItemCounter: document.querySelectorAll('[data-cart-count]'),
     freeShippingText: document.querySelectorAll('[data-free-shipping-bar]'),
     progressBar: document.querySelectorAll('.progress__bar'),
