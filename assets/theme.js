@@ -984,10 +984,10 @@ function initCartForm() {
         } 
       } else {
         let newQuantity = value - 1;
-        // if (newQuantity > 0) {
+        if (newQuantity > 0) {
           quantityInput.value = newQuantity;
           updateCart(key, newQuantity);
-        // }
+        }
       }
     });
   });
