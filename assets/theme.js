@@ -937,7 +937,7 @@ function initCartForm() {
     termsEnabled: document.querySelector('[data-checkout-terms]'),
     checkedInput: document.querySelector('[data-checkout-terms] input'),
     cartContainer: document.querySelector('[data-cart]'),
-    cartForm: document.querySelector('#cart_form'),
+    cartForm: document.querySelectorAll('#cart_form'),
     plusIcon: document.querySelector('.icon__plus'),
     minusIcon: document.querySelector('.icon__minus'),
     subTotal: document.querySelector('[data-subTotal]'),
@@ -1148,13 +1148,13 @@ function initCartForm() {
   }
 
   function removeLineItem(items,itemToRemove) {
-    if (!selectors.cartForm || !selectors.freeShippingBar || !selectors.mainCartContainer) {
-      return;
-    }
+    // if (!selectors.freeShippingBar || !selectors.mainCartContainer) {
+    //   return;
+    // }
     itemToRemove.remove();
     if (items.length === 0) {
       selectors.freeShippingBar.remove();
-      selectors.cartForm.remove();
+      selectors.cartForm.forEach(form => { form.remove()});
       
       const emptyCart = document.createElement('div');
       emptyCart.className = 'cart__empty-message';
