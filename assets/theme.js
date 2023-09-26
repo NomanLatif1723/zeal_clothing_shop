@@ -938,12 +938,10 @@ function initCartForm() {
     checkedInput: document.querySelectorAll('[data-checkout-terms] input'),
     cartContainer: document.querySelectorAll('[data-cart]'),
     cartForm: document.querySelectorAll('#cart_form'),
-    plusIcon: document.querySelector('.icon__plus'),
-    minusIcon: document.querySelector('.icon__minus'),
     subTotal: document.querySelectorAll('[data-subTotal]'),
     totalDiscount: document.querySelectorAll('[data-discount]'),
     cartNoteBtn: document.querySelectorAll('#cartNoteBtn'),
-    cartNote: document.querySelector('[name="note"]'),
+    cartNote: document.querySelectorAll('[name="note"]'),
     freeShippingBar: document.querySelector('.free-shipping'),
     mainCartContainer: document.querySelector('.main-cart__wrapper .page__width'),
     cartItemCounter: document.querySelector('[data-cart-count]'),
@@ -1012,23 +1010,24 @@ function initCartForm() {
     })
   })
   
-  if (!selectors.cartNote) {
-    return;
-  }
-  selectors.cartNote.addEventListener('keyup', (event) => {
-    var requestData = {
-      note: event.target.value
-    };
-    fetch('/cart/update.js', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-Requested-With': 'XMLHttpRequest'
-      },
-      body: JSON.stringify(requestData)
+  selectors.cartNote.forEach(note => {
+    if (!note) {
+      return;
+    }
+    note.addEventListener('keyup', (event) => {
+      var requestData = {
+        note: event.target.value
+      };
+      fetch('/cart/update.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Requested-With': 'XMLHttpRequest'
+        },
+        body: JSON.stringify(requestData)
+      })
     })
   })
-
   // Checkout Form Submit
   selectors.termsEnabled.forEach(term => {
     if (!term) {
