@@ -1464,8 +1464,15 @@ function initProductVariants() {
     // }
   }
 }
-
 initProductVariants();
+
+// Product Form Add To Cart Ajax
+function initProductForm() {
+  let selectors = {
+    productForm: document.querySelectorAll('[name="add"]')
+  };
+}
+initProductForm();
 
 // Product Recommendations
 function initProductRecommendations() {
