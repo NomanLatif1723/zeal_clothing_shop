@@ -1496,18 +1496,42 @@ function initProductForm() {
         //   body: new FormData(form),
         // });
         // let addToCartForm = document.querySelector('form[action$="/cart/add"]');
-        let formData = new FormData(form);
-        console.log(formData);
-        fetch('/cart/add', {
+        
+        // let formData = new FormData(form);
+        // console.log(formData);
+        // fetch('/cart/add', {
+        //   method: 'POST',
+        //   body: formData
+        // })
+        // .then(response => {
+        //   return response.json();
+        // })
+        // .catch((error) => {
+        //   console.error('Error:', error);
+        // });
+        
+        var data = form;
+        console.log(data);
+  
+        fetch('/cart/add.js', {
           method: 'POST',
-          body: formData
+          body: data,
+          credentials: 'same-origin',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'X-Requested-With': 'XMLHttpRequest'
+          }
         })
-        .then(response => {
-          return response.json();
-        })
-        .catch((error) => {
-          console.error('Error:', error);
+        .then(response => response.json())
+        .then(function(data) {
+          if (data.status === 422) {
+            this.error(data);
+          } else {
+            var product = data;
+            this.success(product);
+          }
         });
+        
       }
     })
   })
