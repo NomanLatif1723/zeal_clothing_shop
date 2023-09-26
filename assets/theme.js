@@ -1498,7 +1498,7 @@ function initProductForm() {
         // let addToCartForm = document.querySelector('form[action$="/cart/add"]');
         let formData = new FormData(form);
         console.log(formData);
-        fetch('/cart/add.js', {
+        fetch('/cart/add', {
           method: 'POST',
           body: formData
         })
