@@ -1483,14 +1483,29 @@ function initProductForm() {
     selectors.cartType = selectors.productGrid.dataset.cartType;
   }
   selectors.productForm.forEach(form => {
-    form.addEventListener('click', (event) => {
+    if (!form) {
+      return;
+    }
+    form.addEventListener('click', async (event) => {
       if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
         event.preventDefault();
 
         // Submit Form Ajax
-        fetch('/cart/add', {
-          method: "POST",
-          body: new FormData(form),
+        // await fetch('/cart/add', {
+        //   method: "POST",
+        //   body: new FormData(form),
+        // });
+        // let addToCartForm = document.querySelector('form[action$="/cart/add"]');
+        let formData = new FormData(form);
+        fetch(window.Shopify.routes.root + 'cart/add.js', {
+          method: 'POST',
+          body: formData
+        })
+        .then(response => {
+          return response.json();
+        })
+        .catch((error) => {
+          console.error('Error:', error);
         });
       }
     })
