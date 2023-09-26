@@ -1487,9 +1487,12 @@ function initProductForm() {
   // if (!selectors.productGrid || !selectors.cartDrawer || !selectors.overlayShadow || !selectors.closeDrawerBtn) {
   //   return;
   // }
-  // if (selectors.cartHeaderButton) {
+  if (!selectors.cartHeaderButton) {
+    return;
+  }
+  if (selectors.cartHeaderButton) {
   selectors.cartType = selectors.cartHeaderButton.dataset.cartType;
-  // }
+  }
   console.log(selectors.cartType);
   selectors.cartHeaderButton.addEventListener('click', (event) => {
     if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
