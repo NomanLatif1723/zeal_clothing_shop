@@ -1083,15 +1083,16 @@ function initCartForm() {
   }
 
   function updateCartCount(cartData) {
-    if (!selectors.cartItemCounter) {
-      return;
-    }
-    if (cartData.item_count > 0) {
-      selectors.cartItemCounter.textContent = cartData.item_count;
-    } else {
-      selectors.cartItemCounter.remove();
-    }
-    
+    selectors.cartItemCounter.forEach(counter => {
+      if (!counter) {
+        return;
+      }
+      if (cartData.item_count > 0) {
+        counter.textContent = cartData.item_count;
+      } else {
+        counter.remove();
+      }
+    })
   }
 
   function formSubmit(event) {
@@ -1109,12 +1110,9 @@ function initCartForm() {
   }
 
   function removeLineItem(items,itemToRemove) {
-    // if (!selectors.freeShippingBar || !selectors.mainCartContainer) {
-    //   return;
-    // }
     itemToRemove.remove();
     if (items.length === 0) {
-      selectors.freeShippingBar.remove();
+      selectors.freeShippingBar.forEach(bar => { bar.remove()});
       selectors.cartForm.forEach(form => { form.remove()});
       
       const emptyCart = document.createElement('div');
@@ -1128,10 +1126,10 @@ function initCartForm() {
   }
 
   function updateSippingBar(cartData) {
-    if (!selectors.freeShippingBar || !selectors.freeShippingText || !selectors.progressBar) {
+    if (!selectors.freeShippingText || !selectors.progressBar) {
       return;
     }
-    const thresholdTotal = selectors.freeShippingBar.dataset.freeShippingThreshold;
+    const thresholdTotal = selectors.freeShippingBar.forEach(bar => { bar.dataset.freeShippingThreshold});
     const cartTotal = cartData.total_price;
     const progress = cartTotal / thresholdTotal;
     if (!thresholdTotal || !cartTotal || !progress) {
