@@ -1015,7 +1015,7 @@ function initCartForm() {
       return;
     }
     button.addEventListener('click', () => {
-      button.nextSibling.classList.toggle('hidden');
+      button.closest('[data-cart]').querySelector('.cart__note').classList.toggle('hidden');
       // selectors.cartNoteContainer.classList.toggle('hidden');
     })
   })
