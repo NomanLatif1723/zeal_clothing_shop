@@ -1,4 +1,5 @@
 {% layout none %}
+<div data-cart data-money-format="{{ shop.money_format }}">
   {%- form 'cart', cart -%}
     {%- if cart.item_count > 0 -%}
       <div class="drawer__scrollable" data-cart data-money-format="{{ shop.money_format }}">
@@ -159,3 +160,4 @@
       </div>
     {%- endif -%}
   {%- endform -%}
+</div>
