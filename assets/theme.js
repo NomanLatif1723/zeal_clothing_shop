@@ -1342,6 +1342,7 @@ function initProductVariants() {
       updateInventory(matchedVariant);
       updateMedia(matchedVariant);
     }
+    
   }
 
   function updateMasterVariant(matchedVariant) {
