@@ -1507,7 +1507,7 @@ function initProductForm() {
         // Get cart count
         const res = await fetch("/cart.js");
         const cart = await res.json();
-        updateCartItemCounts(cart.item_count);
+        cartItemCount(cart.item_count);
 
         // update Cart Drawer
         await updateCartDrawer();
