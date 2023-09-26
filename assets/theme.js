@@ -1479,7 +1479,13 @@ function initProductForm() {
   if (selectors.productForm) {
     selectors.cartType = selectors.productGrid.dataset.cartType;
   }
-  console.log(selectors.cartType);
+  selectors.productForm.forEach(form => {
+    form.addEventListener('submit', (event) => {
+      if (selectors.cartType == 'drawer') {
+        event.preventDefault();
+      }
+    })
+  })
 }
 initProductForm();
 
