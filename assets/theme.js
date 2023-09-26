@@ -887,7 +887,7 @@ function initCartForm() {
     cartNoteBtn: document.querySelectorAll('#cartNoteBtn'),
     cartNote: document.querySelectorAll('[name="note"]'),
     freeShippingBar: document.querySelectorAll('.free-shipping'),
-    mainCartContainer: document.querySelector('.main-cart__wrapper .page__width'),
+    // mainCartContainer: document.querySelector('[data]'),
     cartItemCounter: document.querySelectorAll('[data-cart-count]'),
     freeShippingText: document.querySelectorAll('[data-free-shipping-bar]'),
     progressBar: document.querySelectorAll('.progress__bar'),
@@ -1119,7 +1119,7 @@ function initCartForm() {
         <div class="rte">${window.themeContent.strings.cartEmptyMessage}</div>
         <a href="${window.themeContent.routes.all_collections}" title="${window.themeContent.strings.continue_shopping}" class="form__links">${window.themeContent.strings.continue_shopping}</a>
       `;
-      selectors.mainCartContainer.appendChild(emptyCart);
+      selectors.cartContainer.appendChild(emptyCart);
     }
   }
 
