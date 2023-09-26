@@ -1152,12 +1152,17 @@ function initCartForm() {
   }
 
   function formSubmit(event) {
-    if (selectors.checkedInput.checked) {
-      // Proceed To Checkout 
-    } else {
-      alert(window.themeContent.strings.cartTermsConfirmation);
-      event.preventDefault();
-    }
+    selectors.checkedInput.forEach(input => {
+      if (!input) {
+        return;
+      }
+      if (input.checked) {
+        // Proceed to Checkout
+      } else {
+        alert(window.themeContent.strings.cartTermsConfirmation);
+        event.preventDefault();
+      }
+    })
   }
 
   function removeLineItem(items,itemToRemove) {
