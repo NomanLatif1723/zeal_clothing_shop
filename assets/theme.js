@@ -1484,9 +1484,9 @@ function initProductForm() {
     cartItemCounter: document.querySelector('[data-cart-count]'),
     cartType: 'page'
   };
-  if (!selectors.productGrid || !selectors.cartDrawer || !selectors.overlayShadow || !selectors.closeDrawerBtn) {
-    return;
-  }
+  // if (!selectors.productGrid || !selectors.cartDrawer || !selectors.overlayShadow || !selectors.closeDrawerBtn) {
+  //   return;
+  // }
   // if (selectors.cartHeaderButton) {
   selectors.cartType = selectors.cartHeaderButton.dataset.cartType;
   // }
