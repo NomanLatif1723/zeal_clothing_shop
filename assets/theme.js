@@ -1054,7 +1054,6 @@ function initCartForm() {
       }
       let finalPriceContainer = document.querySelectorAll(`[data-key="${item.key}"] .final-line__price`);
       let itemPrice =  formatMoney(item.final_line_price,selectors.format);
-
       finalPriceContainer.forEach(lineItem => { lineItem.textContent = itemPrice});
     });
   }
