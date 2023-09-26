@@ -1486,6 +1486,12 @@ function initProductForm() {
     form.addEventListener('click', (event) => {
       if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
         event.preventDefault();
+
+        // Submit Form Ajax
+        fetch('/cart/add', {
+          method: "POST",
+          body: new FormData(form),
+        });
       }
     })
   })
