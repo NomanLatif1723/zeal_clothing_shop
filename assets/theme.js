@@ -154,17 +154,19 @@ function initHeaderNavigation() {
 
   // Drawer Item Click Function 
   menuItem.forEach(item => {
-    if (item) {
-      item.addEventListener('click', (event) => {
-        let dropdownList = item.closest('.drawer-menu__item').querySelector('.drawer__list');
-        let iconArrow = item.querySelector('.icon__arrow');
-        if (dropdownList) {
-          event.preventDefault();
-          dropdownList.classList.toggle('show__dropdown');
-          iconArrow.classList.toggle('icon__rotate');
-        }
-      })
+    if (!item) {
+      return;
     }
+    item.addEventListener('click', (event) => {
+      let dropdownList = item.closest('.drawer-menu__item').querySelector('.drawer__list');
+      let iconArrow = item.querySelector('.icon__arrow');
+      if (!dropdownList || !iconArrow) {
+        return;
+      }
+      event.preventDefault();
+      dropdownList.classList.toggle('show__dropdown');
+      iconArrow.classList.toggle('icon__rotate');
+    })
   })
 }
 initHeaderNavigation();
