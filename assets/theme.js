@@ -951,7 +951,9 @@ function initCartForm() {
     progressBar: document.querySelector('.progress__bar'),
     format: null
   };
-
+  if (!selectors.cartContainer) {
+    return;
+  }
   if (selectors.cartContainer) {
     selectors.format = selectors.cartContainer.dataset.moneyFormat;
   } else {
@@ -999,9 +1001,6 @@ function initCartForm() {
   })
 
   // cartNote change Event
-  if (!selectors.cartNote) {
-    return;
-  }
   selectors.cartNoteBtn.forEach(button => {
     if (!button) {
       return;
@@ -1010,6 +1009,10 @@ function initCartForm() {
       button.closest('[data-cart]').querySelector('.cart__note').classList.toggle('hidden');
     })
   })
+  
+  if (!selectors.cartNote) {
+    return;
+  }
   selectors.cartNote.addEventListener('keyup', (event) => {
     var requestData = {
       note: event.target.value
@@ -1025,10 +1028,7 @@ function initCartForm() {
   })
 
   // Checkout Form Submit
-  if (!selectors.checkoutForm) {
-    return;
-  }
-  if (!selectors.termsEnabled) {
+  if (!selectors.termsEnabled || !selectors.checkoutForm) {
     return;
   }
   if (selectors.termsEnabled) {
