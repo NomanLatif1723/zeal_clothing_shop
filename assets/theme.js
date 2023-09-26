@@ -1490,6 +1490,7 @@ function initProductForm() {
   if (selectors.cartHeaderButton) {
     selectors.cartType = selectors.cartHeaderButton.dataset.cartType;
   }
+  console.log(selectors.cartType);
   selectors.cartHeaderButton.addEventListener('click', (event) => {
     if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
       event.preventDefault();
