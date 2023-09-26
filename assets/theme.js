@@ -1489,6 +1489,7 @@ function initProductForm() {
   if (selectors.cartHeaderButton) {
   selectors.cartType = selectors.cartHeaderButton.dataset.cartType;
   }
+  
   selectors.cartHeaderButton.addEventListener('click', (event) => {
     if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
       event.preventDefault();
@@ -1498,9 +1499,11 @@ function initProductForm() {
   selectors.overlayShadow.addEventListener('click', () => {
     closeCartDrawer();
   })
+  
   selectors.closeDrawerBtn.addEventListener('click', () => {
     closeCartDrawer();
   })
+  
   selectors.productForm.forEach(form => {
     if (!form) {
       return;
