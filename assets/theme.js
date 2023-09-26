@@ -1485,9 +1485,10 @@ function initProductForm() {
   selectors.productForm.forEach(form => {
     form.addEventListener('click', (event) => {
       if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
-        event.setAttribute('type', 'button');
+        // event.setAttribute('type', 'button');
+        event.preventDefault();
       } else {
-        event.setAttribute('type', 'submit');
+        // event.setAttribute('type', 'submit');
       }
     })
   })
