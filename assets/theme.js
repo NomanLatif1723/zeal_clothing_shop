@@ -1483,7 +1483,7 @@ function initProductForm() {
     selectors.cartType = selectors.productGrid.dataset.cartType;
   }
   selectors.productForm.forEach(form => {
-    form.addEventListener('submit', (event) => {
+    form.addEventListener('click', (event) => {
       if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
         event.setAttribute('type', 'button');
       } else {
