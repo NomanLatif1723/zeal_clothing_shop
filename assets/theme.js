@@ -1510,7 +1510,7 @@ function initProductForm() {
         updateCartItemCounts(cart.item_count);
 
         // update Cart Drawer
-        updateCartDrawer();
+        await updateCartDrawer();
         
         // open Cart Drawer
         openCartDrawer();
