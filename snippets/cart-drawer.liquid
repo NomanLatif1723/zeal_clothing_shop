@@ -147,17 +147,17 @@
           <div class="drawer__shipping-text">
             <div class="rte">{{ 'cart.general.shipping_text' | t }}</div>
           </div>
-          {%- if settings.show_terms -%}
-            <div class="cart__terms-checkbox" data-checkout-terms>
-              <input type="checkbox" id="cartTerms">
-              <label for="cartTerms">{{ 'cart.general.terms_at_checkout' | t }}</label>
-            </div>
-          {%- endif -%}
           {%- if settings.show_note -%}
             <button type="button" id="cartNoteBtn" class="btn__link form__links" class="btn__cart-note" aria-label="{{ 'cart.general.add_note' | t }}">{{ 'cart.general.add_note' | t }}</button>
             <div class="cart__note hidden">
               <label class="form__label" for="CartNote">{{ 'cart.general.note' | t }}</label>
               <textarea name="note" rows="10" class="form__input" id="CartNote" placeholder="{{ 'cart.general.note_placeholder' | t }}">{{ cart.note }}</textarea>
+            </div>
+          {%- endif -%}
+          {%- if settings.show_terms -%}
+            <div class="cart__terms-checkbox" data-checkout-terms>
+              <input type="checkbox" id="cartTerms">
+              <label for="cartTerms">{{ 'cart.general.terms_at_checkout' | t }}</label>
             </div>
           {%- endif -%}
           {%- if cart.cart_level_discount_applications != blank -%}
