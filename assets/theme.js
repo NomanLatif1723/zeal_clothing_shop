@@ -1123,12 +1123,15 @@ function initCartForm() {
   }
 
   function updateSippingBar(cartData) {
+    // selectors.freeShippingBar.forEach(bar => {
+    //   const thresholdTotal = bar.dataset.freeShippingThreshold;
+    //   const cartTotal = cartData.total_price;
+    //   const progress = cartTotal / thresholdTotal;
+    //   console.log(thresholdTotal,cartTotal,progress);
+    // })
     const thresholdTotal = selectors.freeShippingBar.forEach(bar => { bar.dataset.freeShippingThreshold});
     const cartTotal = cartData.total_price;
     const progress = cartTotal / thresholdTotal;
-    if (!thresholdTotal || !cartTotal || !progress) {
-      return;
-    }
     selectors.progressBar.forEach(bar => { bar.style.setProperty('--progress', progress)});
     if (cartTotal < thresholdTotal) {
       const remainingAmount = formatMoney(thresholdTotal - cartTotal, selectors.format);
