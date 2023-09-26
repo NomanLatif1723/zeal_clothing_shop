@@ -909,7 +909,7 @@ function initCartForm() {
       return;
     }
     button.addEventListener('click', (event) => {
-      let button = event.target;
+      // let button = event.target;
       let isPlus = button.classList.contains('icon__plus');
       let quantityInput = button.parentElement.querySelector('input');
       let value = Number(quantityInput.value );
