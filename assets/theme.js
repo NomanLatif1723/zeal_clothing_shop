@@ -951,7 +951,6 @@ function initCartForm() {
     totalDiscount: document.querySelector('[data-discount]'),
     cartNoteBtn: document.querySelectorAll('#cartNoteBtn'),
     cartNote: document.querySelector('[name="note"]'),
-    cartNoteContainer: document.querySelector('.cart__note'),
     freeShippingBar: document.querySelector('.free-shipping'),
     mainCartContainer: document.querySelector('.main-cart__wrapper .page__width'),
     cartItemCounter: document.querySelector('.cart-item__count'),
@@ -1007,7 +1006,7 @@ function initCartForm() {
   })
 
   // cartNote change Event
-  if (!selectors.cartNote  || !selectors.cartNoteContainer) {
+  if (!selectors.cartNote) {
     return;
   }
   selectors.cartNoteBtn.forEach(button => {
@@ -1016,7 +1015,6 @@ function initCartForm() {
     }
     button.addEventListener('click', () => {
       button.closest('[data-cart]').querySelector('.cart__note').classList.toggle('hidden');
-      // selectors.cartNoteContainer.classList.toggle('hidden');
     })
   })
   selectors.cartNote.addEventListener('keyup', (event) => {
