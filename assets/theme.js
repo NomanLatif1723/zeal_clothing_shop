@@ -1497,7 +1497,7 @@ function initProductForm() {
         // });
         // let addToCartForm = document.querySelector('form[action$="/cart/add"]');
         let formData = new FormData(form);
-        fetch(window.Shopify.routes.root + 'cart/add.js', {
+        fetch('cart/add.js', {
           method: 'POST',
           body: formData
         })
