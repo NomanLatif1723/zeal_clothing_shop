@@ -1569,9 +1569,7 @@ function initProductForm() {
   
     initCartForm();
   }
-  function cartDrawerListeners() {
-    
-  }
+  initCartForm();
 }
 initProductForm();
 
