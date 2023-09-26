@@ -172,6 +172,7 @@ function initHeaderNavigation() {
   }
 }
 initHeaderNavigation();
+
 // Slideshow
 function initSlideshowSwipers() {
   // find all the slideshow wrappers on the page
@@ -933,6 +934,8 @@ function initHandleCart() {
   }
 }
 initHandleCart();
+
+// Cart Form Ajax
 function initCartForm() {
   let selectors = {
     quantitySelector: document.querySelectorAll('.line__item-quantity button'),
