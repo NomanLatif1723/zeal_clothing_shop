@@ -875,7 +875,7 @@ initHandleQuestions();
 // Cart Form Ajax
 function initCartForm() {
   let selectors = {
-    quantitySelector: document.querySelectorAll('.line__item-quantity'),
+    quantitySelector: document.querySelectorAll('.line__item-quantity button'),
     removeButton: document.querySelectorAll('.cart__item-remove'),
     checkoutForm: document.querySelectorAll('[name="checkout"]'),
     termsEnabled: document.querySelectorAll('[data-checkout-terms]'),
@@ -904,40 +904,33 @@ function initCartForm() {
     }
   })
   
-  selectors.quantitySelector.forEach(wrapper => {
-    if (!wrapper) {
+  selectors.quantitySelector.forEach(button => {
+    if (!button) {
       return;
     }
-    let quantityButtons = wrapper.querySelectorAll('button');
-    quantityButtons.forEach(button => {
-      if (!button) {
-        return;
-      }
-      button.addEventListener('click', (event) => {
-        let isPlus = button.classList.contains('icon__plus');
-        let quantityInput = button.parentElement.querySelector('input');
-        let value = Number(quantityInput.value);
-        let key = button.closest('[data-key]').dataset.key;
-        
-        const cartLineItem = button.closest('[data-key]');
-        const stockAvailable = cartLineItem.dataset.stockCount;
-        if (isPlus) {
-          let newQuantity = value + 1;
-          if (newQuantity <= stockAvailable) {
-            quantityInput.value = newQuantity;
-            updateCart(key, newQuantity);
-          } 
-        } else {
-          let newQuantity = value - 1;
-          if (newQuantity > 0) {
-            quantityInput.value = newQuantity;
-            updateCart(key, newQuantity);
-          }
+    
+    button.addEventListener('click', (event) => {
+      let isPlus = button.classList.contains('icon__plus');
+      let quantityInput = button.parentElement.querySelector('input');
+      let value = Number(quantityInput.value);
+      let key = button.closest('[data-key]').dataset.key;
+      
+      const cartLineItem = button.closest('[data-key]');
+      const stockAvailable = cartLineItem.dataset.stockCount;
+      if (isPlus) {
+        let newQuantity = value + 1;
+        if (newQuantity <= stockAvailable) {
+          quantityInput.value = newQuantity;
+          updateCart(key, newQuantity);
+        } 
+      } else {
+        let newQuantity = value - 1;
+        if (newQuantity > 0) {
+          quantityInput.value = newQuantity;
+          updateCart(key, newQuantity);
         }
-      });
-    })
-    
-    
+      }
+    });
   });
 
   selectors.removeButton.forEach(button => {
