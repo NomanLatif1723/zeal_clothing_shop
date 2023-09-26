@@ -908,7 +908,7 @@ function initCartForm() {
     if (!wrapper) {
       return;
     }
-    let quantityButtons = wrapper.querySelector('button');
+    let button = wrapper.querySelector('button');
     if (!button) {
       return;
     }
