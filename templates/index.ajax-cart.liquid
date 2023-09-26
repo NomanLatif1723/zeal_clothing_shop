@@ -79,8 +79,8 @@
         </div>
         <div class="cart-drawer__footer">
           <div class="cart__total-price">
-            <div>{{ 'cart.general.total' | t }}</div>
-            <div>{{ cart.total_price | money }}</div>
+            <div>{{ 'cart.general.total_price' | t }}</div>
+            <div data-total-price>{{ cart.total_price | money }}</div>
           </div>
           <div class="drawer__shipping-text">
             <div class="rte">{{ 'cart.general.shipping_text' | t }}</div>
