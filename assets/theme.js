@@ -879,7 +879,6 @@ function initCartForm() {
     removeButton: document.querySelectorAll('.cart__item-remove'),
     checkoutForm: document.querySelectorAll('[name="checkout"]'),
     termsEnabled: document.querySelectorAll('[data-checkout-terms]'),
-    checkedInput: document.querySelectorAll('[data-checkout-terms] input'),
     cartContainer: document.querySelectorAll('[data-cart]'),
     cartForm: document.querySelectorAll('#cart_form'),
     subTotal: document.querySelectorAll('[data-subTotal]'),
@@ -888,8 +887,6 @@ function initCartForm() {
     cartNote: document.querySelectorAll('[name="note"]'),
     freeShippingBar: document.querySelectorAll('.free-shipping'),
     cartItemCounter: document.querySelectorAll('[data-cart-count]'),
-    freeShippingText: document.querySelectorAll('[data-free-shipping-bar]'),
-    progressBar: document.querySelectorAll('.progress__bar'),
     format: null
   };
   selectors.cartContainer.forEach(container => {
@@ -977,13 +974,14 @@ function initCartForm() {
     if (!term) {
       return;
     }
+    const checkedInput = term.querySelector('input');
     if (term) {
       selectors.checkoutForm.forEach(form => {
         if (!form) {
           return
         }
         form.addEventListener('click', (event) => {
-          formSubmit(event);
+          formSubmit(event,checkedInput);
         });
       });
     }
@@ -1092,18 +1090,16 @@ function initCartForm() {
     })
   }
 
-  function formSubmit(event) {
-    selectors.checkedInput.forEach(input => {
-      if (!input) {
-        return;
-      }
-      if (input.checked) {
-        // Proceed to Checkout
-      } else {
-        alert(window.themeContent.strings.cartTermsConfirmation);
-        event.preventDefault();
-      }
-    })
+  function formSubmit(event,checkedInput) {
+    if (!checkedInput) {
+      return;
+    }
+    if (checkedInput.checked) {
+      // Proceed to Checkout
+    } else {
+      alert(window.themeContent.strings.cartTermsConfirmation);
+      event.preventDefault();
+    }
   }
 
   function removeLineItem(items,itemToRemove) {
@@ -1138,16 +1134,6 @@ function initCartForm() {
         freeShippingText.textContent = window.themeContent.strings.freeShippingSuccess;
       }
     })
-    // const thresholdTotal = selectors.freeShippingBar.forEach(bar => { bar.dataset.freeShippingThreshold});
-    // const cartTotal = cartData.total_price;
-    // const progress = cartTotal / thresholdTotal;
-    // progressBar.forEach(bar => { bar.style.setProperty('--progress', progress)});
-    // if (cartTotal < thresholdTotal) {
-    //   const remainingAmount = formatMoney(thresholdTotal - cartTotal, selectors.format);
-    //   freeShippingText.forEach(item => { item.innerHTML = `Spend ${remainingAmount} more to qualify for free shipping.`});
-    // } else {
-    //   freeShippingText.forEach(item => { item.textContent = window.themeContent.strings.freeShippingSuccess});
-    // }
   }
 }
 initCartForm();
