@@ -153,7 +153,7 @@ function initHeaderNavigation() {
   }
 
   // Drawer Item Click Function
-  if (window.matchMedia("(max-width: 768px)")) {
+  if (window.matchMedia("(max-width: 768px)").matches) {
     menuItem.forEach(item => {
       if (!item) {
         return;
