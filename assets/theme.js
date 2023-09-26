@@ -1126,21 +1126,18 @@ function initCartForm() {
   }
 
   function updateSippingBar(cartData) {
-    if (!selectors.freeShippingText || !selectors.progressBar) {
-      return;
-    }
     const thresholdTotal = selectors.freeShippingBar.forEach(bar => { bar.dataset.freeShippingThreshold});
     const cartTotal = cartData.total_price;
     const progress = cartTotal / thresholdTotal;
     if (!thresholdTotal || !cartTotal || !progress) {
       return;
     }
-    selectors.progressBar.style.setProperty('--progress', progress);
+    selectors.progressBar.forEach(bar => { bar.style.setProperty('--progress', progress)});
     if (cartTotal < thresholdTotal) {
       const remainingAmount = formatMoney(thresholdTotal - cartTotal, selectors.format);
-      selectors.freeShippingText.innerHTML = `Spend ${remainingAmount} more to qualify for free shipping.`;
+      selectors.freeShippingText.forEach(item => { item.innerHTML = `Spend ${remainingAmount} more to qualify for free shipping.`});
     } else {
-      selectors.freeShippingText.textContent = window.themeContent.strings.freeShippingSuccess;
+      selectors.freeShippingText.forEach(item => { item.textContent = window.themeContent.strings.freeShippingSuccess});
     }
   }
 }
