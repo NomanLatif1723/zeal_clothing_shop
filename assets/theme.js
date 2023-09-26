@@ -912,7 +912,7 @@ function initCartForm() {
       // let button = event.target;
       let isPlus = button.classList.contains('icon__plus');
       let quantityInput = button.parentElement.querySelector('input');
-      let value = Number(quantityInput.value );
+      let value = Number(quantityInput.value);
       let key = button.closest('[data-key]').dataset.key;
       
       const cartLineItem = button.closest('[data-key]');
