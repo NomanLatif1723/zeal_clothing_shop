@@ -1123,21 +1123,23 @@ function initCartForm() {
   }
 
   function updateSippingBar(cartData) {
-    // selectors.freeShippingBar.forEach(bar => {
-    //   const thresholdTotal = bar.dataset.freeShippingThreshold;
-    //   const cartTotal = cartData.total_price;
-    //   const progress = cartTotal / thresholdTotal;
-    //   console.log(thresholdTotal,cartTotal,progress);
-    // })
+    selectors.freeShippingBar.forEach(bar => {
+      const thresholdTotal = bar.dataset.freeShippingThreshold;
+      const cartTotal = cartData.total_price;
+      const progress = cartTotal / thresholdTotal;
+      const progressBar = bar.querySelector('.progress__bar');
+      const freeShippingText = bar.querySelector('[data-free-shipping-bar]');
+      console.log(thresholdTotal,cartTotal,progress);
+    })
     const thresholdTotal = selectors.freeShippingBar.forEach(bar => { bar.dataset.freeShippingThreshold});
     const cartTotal = cartData.total_price;
     const progress = cartTotal / thresholdTotal;
-    selectors.progressBar.forEach(bar => { bar.style.setProperty('--progress', progress)});
+    progressBar.forEach(bar => { bar.style.setProperty('--progress', progress)});
     if (cartTotal < thresholdTotal) {
       const remainingAmount = formatMoney(thresholdTotal - cartTotal, selectors.format);
-      selectors.freeShippingText.forEach(item => { item.innerHTML = `Spend ${remainingAmount} more to qualify for free shipping.`});
+      freeShippingText.innerHTML = `Spend ${remainingAmount} more to qualify for free shipping.`;
     } else {
-      selectors.freeShippingText.forEach(item => { item.textContent = window.themeContent.strings.freeShippingSuccess});
+      freeShippingText.textContent = window.themeContent.strings.freeShippingSuccess;
     }
   }
 }
