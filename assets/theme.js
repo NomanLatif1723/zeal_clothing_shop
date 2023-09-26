@@ -908,31 +908,36 @@ function initCartForm() {
     if (!wrapper) {
       return;
     }
-    console.log(wrapper);
-    let isPlus = wrapper.querySelector('.icon__plus');
-    let isMinus = wrapper.querySelector('.icon__minus');
-    let quantityInput = wrapper.querySelector('input');
-    let value = Number(quantityInput.value);
-    let key = wrapper.closest('[data-key]').dataset.key;
-    const cartLineItem = wrapper.closest('[data-key]');
-    const stockAvailable = cartLineItem.dataset.stockCount;
-    if (!isMinus || !isPlus) {
-      return;
-    }
-    isPlus.addEventListener('click', () => {
-      let newQuantity = value + 1;
-      if (newQuantity <= stockAvailable) {
-        quantityInput.value = newQuantity;
-        updateCart(key, newQuantity);
-      } 
-    })
-    isMinus.addEventListener('click', () => {
-      let newQuantity = value - 1;
-      if (newQuantity > 0) {
-        quantityInput.value = newQuantity;
-        updateCart(key, newQuantity);
+    let quantityButtons = wrapper.querySelectorAll('button');
+    quantityButtons.forEach(button => {
+      if (!button) {
+        return;
       }
+      button.addEventListener('click', (event) => {
+        let isPlus = button.classList.contains('icon__plus');
+        let quantityInput = button.parentElement.querySelector('input');
+        let value = Number(quantityInput.value);
+        let key = button.closest('[data-key]').dataset.key;
+        
+        const cartLineItem = button.closest('[data-key]');
+        const stockAvailable = cartLineItem.dataset.stockCount;
+        if (isPlus) {
+          let newQuantity = value + 1;
+          if (newQuantity <= stockAvailable) {
+            quantityInput.value = newQuantity;
+            updateCart(key, newQuantity);
+          } 
+        } else {
+          let newQuantity = value - 1;
+          if (newQuantity > 0) {
+            quantityInput.value = newQuantity;
+            updateCart(key, newQuantity);
+          }
+        }
+      });
     })
+    
+    
   });
 
   selectors.removeButton.forEach(button => {
