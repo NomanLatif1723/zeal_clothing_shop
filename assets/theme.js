@@ -1052,12 +1052,10 @@ function initCartForm() {
       if (!item) {
         return;
       }
-      let finalPriceContainer = document.querySelector(`[data-key="${item.key}"] .final-line__price`);
+      let finalPriceContainer = document.querySelectorAll(`[data-key="${item.key}"] .final-line__price`);
       let itemPrice =  formatMoney(item.final_line_price,selectors.format);
-      if (!finalPriceContainer) {
-        return;
-      }
-      finalPriceContainer.textContent = itemPrice;
+
+      finalPriceContainer.forEach(lineItem => { lineItem.textContent = itemPrice});
     });
   }
 
