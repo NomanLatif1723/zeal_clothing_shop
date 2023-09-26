@@ -163,7 +163,7 @@
       {%- form 'product', product, id: product_form_id, class: "product__form", data-section-id: section.id, data-format: shop.money_format -%}
         <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" class="selected-variant__id" />
         <div class="product__block product__buy-buttons" {{ block.shopify_attributes }}>
-          <button data-add-to-cart type="submit" name="add" aria-label="Add to cart" class="btn btn__link btn__primary"{% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>
+          <button data-cart-type="{{ settings.cart_type }}" type="submit" name="add" aria-label="Add to cart" class="btn btn__link btn__primary"{% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>
             {% if product.selected_or_first_available_variant.available %}
               {{ 'products.add_to_cart' | t }}
             {% else %}
