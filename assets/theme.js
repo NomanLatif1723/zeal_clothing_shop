@@ -873,60 +873,60 @@ function initHandleQuestions() {
 initHandleQuestions();
 
 // Cart Events
-function initHandleCart() {
-  let cartBtn = document.querySelector('.icon__cart');
-  let cartType = cartBtn.getAttribute('[data-cart-type]');
-  let overlayShadow = document.querySelector('.drawer__overlay-container');
-  let closeDrawerBtn = document.querySelector('.cart-icon__close');
-  let bodyContainer = document.querySelector('body');
-  let cartDrawer = document.querySelector('[data-cart-modal]');
-  if (cartBtn) {
-    cartBtn.addEventListener('click', (event) => {
-      if (cartType == 'drawer' || cartType == 'popup') {
-        event.preventDefault();
+// function initHandleCart() {
+//   let cartBtn = document.querySelector('.icon__cart');
+//   let cartType = cartBtn.getAttribute('[data-cart-type]');
+//   let overlayShadow = document.querySelector('.drawer__overlay-container');
+//   let closeDrawerBtn = document.querySelector('.cart-icon__close');
+//   let bodyContainer = document.querySelector('body');
+//   let cartDrawer = document.querySelector('[data-cart-modal]');
+//   if (cartBtn) {
+//     cartBtn.addEventListener('click', (event) => {
+//       if (cartType == 'drawer' || cartType == 'popup') {
+//         event.preventDefault();
         
-      }
-      if (cartDrawer) {
-        openCartModal();
-      }
-    })
-    if (overlayShadow) {
-      overlayShadow.addEventListener('click', () => {
-        closeCartModal();
-      })
-    }
-    if (closeDrawerBtn) {
-        closeDrawerBtn.addEventListener('click', () => {
-          closeCartModal();
-      })
-    }
+//       }
+//       if (cartDrawer) {
+//         openCartModal();
+//       }
+//     })
+//     if (overlayShadow) {
+//       overlayShadow.addEventListener('click', () => {
+//         closeCartModal();
+//       })
+//     }
+//     if (closeDrawerBtn) {
+//         closeDrawerBtn.addEventListener('click', () => {
+//           closeCartModal();
+//       })
+//     }
     
-    function openCartModal(){
+//     function openCartModal(){
       
-      if (cartDrawer.classList.contains('cart-drawer__left')) {
-        cartDrawer.classList.add('drawer-open__left');
-      } else if(cartDrawer.classList.contains('cart-drawer__right')) {
-        cartDrawer.classList.add('drawer-open__right');
-      } else if (cartDrawer.classList.contains('cart-popup')) {
-        cartDrawer.classList.add('open-cart__popup');
-      }
-      overlayShadow.classList.add('overlay__visible');
-      bodyContainer.classList.add('drawer__opening');
-    }
-    function closeCartModal() {
-      if (cartDrawer.classList.contains('cart-drawer__left')) {
-        cartDrawer.classList.remove('drawer-open__left');
-      } else if(cartDrawer.classList.contains('cart-drawer__right')) {
-        cartDrawer.classList.remove('drawer-open__right');
-      } else if (cartDrawer.classList.contains('cart-popup')) {
-        cartDrawer.classList.remove('open-cart__popup');
-      }
-      overlayShadow.classList.remove('overlay__visible');
-      bodyContainer.classList.remove('drawer__opening');
-    }
-  }
-}
-initHandleCart();
+//       if (cartDrawer.classList.contains('cart-drawer__left')) {
+//         cartDrawer.classList.add('drawer-open__left');
+//       } else if(cartDrawer.classList.contains('cart-drawer__right')) {
+//         cartDrawer.classList.add('drawer-open__right');
+//       } else if (cartDrawer.classList.contains('cart-popup')) {
+//         cartDrawer.classList.add('open-cart__popup');
+//       }
+//       overlayShadow.classList.add('overlay__visible');
+//       bodyContainer.classList.add('drawer__opening');
+//     }
+//     function closeCartModal() {
+//       if (cartDrawer.classList.contains('cart-drawer__left')) {
+//         cartDrawer.classList.remove('drawer-open__left');
+//       } else if(cartDrawer.classList.contains('cart-drawer__right')) {
+//         cartDrawer.classList.remove('drawer-open__right');
+//       } else if (cartDrawer.classList.contains('cart-popup')) {
+//         cartDrawer.classList.remove('open-cart__popup');
+//       }
+//       overlayShadow.classList.remove('overlay__visible');
+//       bodyContainer.classList.remove('drawer__opening');
+//     }
+//   }
+// }
+// initHandleCart();
 
 // Cart Form Ajax
 function initCartForm() {
