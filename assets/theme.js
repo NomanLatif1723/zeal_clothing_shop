@@ -1473,10 +1473,11 @@ initProductVariants();
 function initProductForm() {
   let selectors = {
     productForm: document.querySelectorAll('[name="add"]'),
+    productGrid: document.querySelector('.product__content-container'),
     cartType: 'page'
   };
   if (selectors.productForm) {
-    selectors.cartType = selectors.productForm.forEach(form => {form.dataset.cartType});
+    selectors.cartType = selectors.productGrid.dataset.cartType;
   }
   console.log(selectors.cartType);
 }
