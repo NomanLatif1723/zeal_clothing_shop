@@ -1478,6 +1478,7 @@ function initProductForm() {
   if (selectors.productForm) {
     selectors.cartType = selectors.productForm.dataset.cartType;
   }
+  console.log(selectors.cartType);
 }
 initProductForm();
 
