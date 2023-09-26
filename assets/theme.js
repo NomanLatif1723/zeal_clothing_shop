@@ -911,8 +911,8 @@ function initCartForm() {
     
     button.addEventListener('click', (event) => {
       let isPlus = button.classList.contains('icon__plus');
-      let quantityInput = button.parentElement.querySelector('input');
-      let value = Number(quantityInput.value);
+      let quantityInput = button.parentElement.querySelectorAll('input');
+      let value = Number(quantityInput.forEach(input => { input.value)});
       let key = button.closest('[data-key]').dataset.key;
       
       const cartLineItem = button.closest('[data-key]');
@@ -920,13 +920,13 @@ function initCartForm() {
       if (isPlus) {
         let newQuantity = value + 1;
         if (newQuantity <= stockAvailable) {
-          quantityInput.value = newQuantity;
+          quantityInput.forEach(input => { input.value = newQuantity});
           updateCart(key, newQuantity);
         } 
       } else {
         let newQuantity = value - 1;
         if (newQuantity > 0) {
-          quantityInput.value = newQuantity;
+          quantityInput.forEach(input => { input.value = newQuantity});
           updateCart(key, newQuantity);
         }
       }
