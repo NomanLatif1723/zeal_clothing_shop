@@ -1566,11 +1566,11 @@ function initProductForm() {
     const html = document.createElement("div");
     html.innerHTML = text;
   
-    const newBox = html.querySelector(".cart-drawer").innerHTML;
+    const newBox = html.querySelector("[data-cart]").innerHTML;
   
-    document.querySelector(".cart-drawer").innerHTML = newBox;
+    document.querySelector("[data-cart]").innerHTML = newBox;
   
-    addCartDrawerListeners();
+    // addCartDrawerListeners();
   }
   function cartDrawerListeners() {
     
