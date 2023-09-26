@@ -1484,11 +1484,11 @@ function initProductForm() {
     cartItemCounter: document.querySelector('[data-cart-count]'),
     cartType: 'page'
   };
-  if (!selectors.productGrid || !selectors.cartDrawer || !selectors.overlayShadow || !selectors.closeDrawerBtn) {
+  if (!selectors.productGrid || !selectors.cartDrawer || !selectors.overlayShadow || !selectors.closeDrawerBtn || !selectors.cartHeaderButton) {
     return;
   }
-  if (selectors.productForm) {
-    selectors.cartType = selectors.productGrid.dataset.cartType;
+  if (selectors.cartHeaderButton) {
+    selectors.cartType = selectors.cartHeaderButton.dataset.cartType;
   }
   selectors.productForm.forEach(form => {
     if (!form) {
@@ -1560,8 +1560,17 @@ function initProductForm() {
     }
     selectors.cartItemCounter.textContent = count;
   }
-  function updateCartDrawer() {
-    
+  async function updateCartDrawer() {
+    const res = await fetch("/?view=ajax-cart");
+    const text = await res.text();
+    const html = document.createElement("div");
+    html.innerHTML = text;
+  
+    const newBox = html.querySelector(".cart-drawer").innerHTML;
+  
+    document.querySelector(".cart-drawer").innerHTML = newBox;
+  
+    addCartDrawerListeners();
   }
   function cartDrawerListeners() {
     
