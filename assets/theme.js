@@ -1130,17 +1130,24 @@ function initCartForm() {
       const progressBar = bar.querySelector('.progress__bar');
       const freeShippingText = bar.querySelector('[data-free-shipping-bar]');
       console.log(thresholdTotal,cartTotal,progress);
+      progressBar.style.setProperty('--progress', progress);
+      if (cartTotal < thresholdTotal) {
+        const remainingAmount = formatMoney(thresholdTotal - cartTotal, selectors.format);
+        freeShippingText.innerHTML = `Spend ${remainingAmount} more to qualify for free shipping.`;
+      } else {
+        freeShippingText.textContent = window.themeContent.strings.freeShippingSuccess;
+      }
     })
-    const thresholdTotal = selectors.freeShippingBar.forEach(bar => { bar.dataset.freeShippingThreshold});
-    const cartTotal = cartData.total_price;
-    const progress = cartTotal / thresholdTotal;
-    progressBar.forEach(bar => { bar.style.setProperty('--progress', progress)});
-    if (cartTotal < thresholdTotal) {
-      const remainingAmount = formatMoney(thresholdTotal - cartTotal, selectors.format);
-      freeShippingText.innerHTML = `Spend ${remainingAmount} more to qualify for free shipping.`;
-    } else {
-      freeShippingText.textContent = window.themeContent.strings.freeShippingSuccess;
-    }
+    // const thresholdTotal = selectors.freeShippingBar.forEach(bar => { bar.dataset.freeShippingThreshold});
+    // const cartTotal = cartData.total_price;
+    // const progress = cartTotal / thresholdTotal;
+    // progressBar.forEach(bar => { bar.style.setProperty('--progress', progress)});
+    // if (cartTotal < thresholdTotal) {
+    //   const remainingAmount = formatMoney(thresholdTotal - cartTotal, selectors.format);
+    //   freeShippingText.forEach(item => { item.innerHTML = `Spend ${remainingAmount} more to qualify for free shipping.`});
+    // } else {
+    //   freeShippingText.forEach(item => { item.textContent = window.themeContent.strings.freeShippingSuccess});
+    // }
   }
 }
 initCartForm();
