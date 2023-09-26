@@ -1294,7 +1294,7 @@ function initProductVariants() {
     productUnitPrice: document.querySelector('[data-unit-price]'),
     productSku: document.querySelector('[data-sku]'),
     productInStock: document.querySelector('[data-inventory]'),
-    productAddToCartBtn: document.querySelector('[data-add-to-cart]'),
+    productAddToCartBtn: document.querySelector('[name="add"]'),
     variantSelectors: document.querySelectorAll('[data-selected-variant]'),
     productForm: document.querySelector('.product__form'),
     format: null,
