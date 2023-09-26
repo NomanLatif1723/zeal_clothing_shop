@@ -1509,6 +1509,10 @@ function initProductForm() {
         const cart = await res.json();
         updateCartItemCounts(cart.item_count);
 
+        // update Cart Drawer
+        updateCartDrawer();
+        
+        // open Cart Drawer
         openCartDrawer();
       }
     })
