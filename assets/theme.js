@@ -1120,10 +1120,12 @@ function initCartForm() {
   }
 
   function updateTotalDiscount(cartData) {
-    if (!selectors.totalDiscount) {
-      return;
-    }
-    selectors.totalDiscount.textContent = formatMoney(cartData.total_discount,selectors.format);
+    selectors.totalDiscount.forEach(selector => {
+      if (!selector) {
+        return
+      }
+      selector.textContent = formatMoney(cartData.total_discount,selectors.format);
+    })
   }
 
   function updateCartNote(cartNote) {
