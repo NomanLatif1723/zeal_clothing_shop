@@ -915,7 +915,7 @@ function initCartForm() {
     let key = wrapper.closest('[data-key]').dataset.key;
     const cartLineItem = wrapper.closest('[data-key]');
     const stockAvailable = cartLineItem.dataset.stockCount;
-    if (!isMinus || isPlus) {
+    if (!isMinus || !isPlus) {
       return;
     }
     isPlus.addEventListener('click', () => {
