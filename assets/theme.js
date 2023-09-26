@@ -972,7 +972,7 @@ function initCartForm() {
         body: JSON.stringify(requestData)
       })
     })
-  })
+  });
   // Checkout Form Submit
   selectors.termsEnabled.forEach(term => {
     if (!term) {
@@ -985,10 +985,10 @@ function initCartForm() {
         }
         form.addEventListener('click', (event) => {
           formSubmit(event);
-        })
-      })
+        });
+      });
     }
-  })
+  });
 
   function updateCart(key,quantity) {
     var requestData = {
