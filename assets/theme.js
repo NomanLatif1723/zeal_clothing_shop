@@ -1052,8 +1052,6 @@ function initCartForm() {
     })
     .then(function(response) {
       return response.json();
-      // console.log(response);
-      // removeLineItem(response.items);
     })
     .then(function(cartData) {
       updateLineItemPrices(cartData.items);
