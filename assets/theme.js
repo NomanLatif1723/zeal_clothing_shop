@@ -1502,7 +1502,8 @@ function initProductForm() {
           method: "POST",
           body: new FormData(form),
         });
-        
+
+        openCartDrawer();
       }
     })
   })
