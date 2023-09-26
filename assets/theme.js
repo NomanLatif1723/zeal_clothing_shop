@@ -1567,7 +1567,7 @@ function initProductForm() {
   
     document.querySelector("[data-cart]").innerHTML = newBox;
   
-    // addCartDrawerListeners();
+    initCartForm();
   }
   function cartDrawerListeners() {
     
