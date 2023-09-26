@@ -925,13 +925,13 @@ function initHandleCart() {
       bodyContainer.classList.remove('drawer__opening');
     }
   }
-  let cartNotebtn = document.querySelector('#cartNoteBtn');
-  let cartNote = document.querySelector('.cart__note');
-  if (cartNotebtn) {
-    cartNotebtn.addEventListener('click', () => {
-      cartNote.classList.toggle('hidden');
-    })
-  }
+  // let cartNotebtn = document.querySelector('#cartNoteBtn');
+  // let cartNote = document.querySelector('.cart__note');
+  // if (cartNotebtn) {
+  //   cartNotebtn.addEventListener('click', () => {
+  //     cartNote.classList.toggle('hidden');
+  //   })
+  // }
 }
 initHandleCart();
 
@@ -949,7 +949,9 @@ function initCartForm() {
     minusIcon: document.querySelector('.icon__minus'),
     subTotal: document.querySelector('[data-subTotal]'),
     totalDiscount: document.querySelector('[data-discount]'),
+    cartNoteBtn: document.querySelector('#cartNoteBtn'),
     cartNote: document.querySelector('[name="note"]'),
+    cartNoteContainer: document.querySelector('.cart__note'),
     freeShippingBar: document.querySelector('.free-shipping'),
     mainCartContainer: document.querySelector('.main-cart__wrapper .page__width'),
     cartItemCounter: document.querySelector('.cart-item__count'),
@@ -1005,9 +1007,12 @@ function initCartForm() {
   })
 
   // cartNote change Event
-  if (!selectors.cartNote) {
+  if (!selectors.cartNote || !selectors.cartNoteBtn || !selectors.cartNoteContainer) {
     return;
   }
+  selectors.cartNoteBtn.addEventListener('click', () => {
+    selectors.cartNoteContainer.classList.toggle('hidden');
+  })
   selectors.cartNote.addEventListener('keyup', (event) => {
     var requestData = {
       note: event.target.value
@@ -1496,23 +1501,25 @@ function initProductForm() {
           body: new FormData(form),
         });
         
-        // let addToCartForm = document.querySelector('form[action$="/cart/add"]');
-        // let formData = new FormData(form);
-        // console.log(formData);
-        // fetch('/cart/add', {
-        //   method: 'POST',
-        //   body: formData
-        // })
-        // .then(response => {
-        //   return response.json();
-        // })
-        // .catch((error) => {
-        //   console.error('Error:', error);
-        // });
-        
       }
     })
   })
+
+  function openCartDrawer() {
+    
+  }
+  function closeCartDrawer() {
+    
+  }
+  function cartItemCount() {
+    
+  }
+  function updateCartDrawer() {
+    
+  }
+  function cartDrawerListeners() {
+    
+  }
 }
 initProductForm();
 
