@@ -1119,7 +1119,7 @@ function initCartForm() {
         <div class="rte">${window.themeContent.strings.cartEmptyMessage}</div>
         <a href="${window.themeContent.routes.all_collections}" title="${window.themeContent.strings.continue_shopping}" class="form__links">${window.themeContent.strings.continue_shopping}</a>
       `;
-      selectors.cartContainer.appendChild(emptyCart);
+      selectors.cartContainer.forEach(container => { container.appendChild(emptyCart)});
     }
   }
 
