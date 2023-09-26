@@ -936,12 +936,12 @@ function initCartForm() {
     checkoutForm: document.querySelector('[name="checkout"]'),
     termsEnabled: document.querySelector('[data-checkout-terms]'),
     checkedInput: document.querySelector('[data-checkout-terms] input'),
-    cartContainer: document.querySelector('[data-cart]'),
+    cartContainer: document.querySelectorAll('[data-cart]'),
     cartForm: document.querySelectorAll('#cart_form'),
     plusIcon: document.querySelector('.icon__plus'),
     minusIcon: document.querySelector('.icon__minus'),
-    subTotal: document.querySelector('[data-subTotal]'),
-    totalDiscount: document.querySelector('[data-discount]'),
+    subTotal: document.querySelectorAll('[data-subTotal]'),
+    totalDiscount: document.querySelectorAll('[data-discount]'),
     cartNoteBtn: document.querySelectorAll('#cartNoteBtn'),
     cartNote: document.querySelector('[name="note"]'),
     freeShippingBar: document.querySelector('.free-shipping'),
@@ -951,14 +951,16 @@ function initCartForm() {
     progressBar: document.querySelector('.progress__bar'),
     format: null
   };
-  if (!selectors.cartContainer) {
-    return;
-  }
-  if (selectors.cartContainer) {
-    selectors.format = selectors.cartContainer.dataset.moneyFormat;
-  } else {
-    selectors.format = 'default';
-  }
+  selectors.cartContainer.forEach(container => {
+    if (!container) {
+      return;
+    }
+    if (container) {
+      selectors.format = container.dataset.moneyFormat;
+    } else {
+      selectors.format = 'default';
+    }
+  })
   
   selectors.quantitySelector.forEach(button => {
     if (!button) {
@@ -1109,10 +1111,12 @@ function initCartForm() {
   }
 
   function updateSubtotal(cartData) {
-    if (!selectors.subTotal) {
-      return;
-    }
-    selectors.subTotal.textContent = formatMoney(cartData.total_price,selectors.format);
+    selectors.subTotal.forEach(selector => {
+      if (!selector) {
+        return;
+      }
+      selector.textContent = formatMoney(cartData.total_price,selectors.format);
+    })
   }
 
   function updateTotalDiscount(cartData) {
