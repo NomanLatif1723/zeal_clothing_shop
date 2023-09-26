@@ -1030,14 +1030,21 @@ function initCartForm() {
   })
 
   // Checkout Form Submit
-  if (!selectors.termsEnabled || !selectors.checkoutForm) {
-    return;
-  }
-  if (selectors.termsEnabled) {
-     selectors.checkoutForm.addEventListener('click', (event) => {
-      formSubmit(event)
-    });
-  }
+  selectors.termsEnabled.forEach(term => {
+    if (!term) {
+      return;
+    }
+    if (term) {
+      selectors.checkoutForm.forEach(form => {
+        if (!form) {
+          return
+        }
+        form.addEventListener('click', (event) => {
+          formSubmit(event);
+        })
+      })
+    }
+  })
 
   function updateCart(key,quantity) {
     var requestData = {
