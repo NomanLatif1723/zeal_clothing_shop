@@ -56,7 +56,7 @@
           media_size: media_size 
         -%}
       </div>
-      <div class="product-grid__item {{ product_content_width }} product__content-container" data-cart-type>
+      <div class="product-grid__item {{ product_content_width }} product__content-container" data-cart-type="{{ settings.cart_type }}">
         {%- render 'product-form',
           product: product,
           block: block,
