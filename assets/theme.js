@@ -949,7 +949,7 @@ function initCartForm() {
     minusIcon: document.querySelector('.icon__minus'),
     subTotal: document.querySelector('[data-subTotal]'),
     totalDiscount: document.querySelector('[data-discount]'),
-    cartNoteBtn: document.querySelector('#cartNoteBtn'),
+    cartNoteBtn: document.querySelectorAll('#cartNoteBtn'),
     cartNote: document.querySelector('[name="note"]'),
     cartNoteContainer: document.querySelector('.cart__note'),
     freeShippingBar: document.querySelector('.free-shipping'),
@@ -1007,11 +1007,16 @@ function initCartForm() {
   })
 
   // cartNote change Event
-  if (!selectors.cartNote || !selectors.cartNoteBtn || !selectors.cartNoteContainer) {
+  if (!selectors.cartNote  || !selectors.cartNoteContainer) {
     return;
   }
-  selectors.cartNoteBtn.addEventListener('click', () => {
-    selectors.cartNoteContainer.classList.toggle('hidden');
+  selectors.cartNoteBtn.forEach(button => {
+    if (!button) {
+      return;
+    }
+    button.addEventListener('click', () => {
+      selectors.cartNoteContainer.classList.toggle('hidden');
+    })
   })
   selectors.cartNote.addEventListener('keyup', (event) => {
     var requestData = {
