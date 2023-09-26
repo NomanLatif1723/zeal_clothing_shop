@@ -1286,7 +1286,7 @@ initProductQuantitySelector();
 
 // Product Variants js
 function initProductVariants() {
-
+  
   let selectors = {
     masterVariantSelector: document.querySelector('.selected-variant__id'),
     productSalePrice: document.querySelector('[data-sale-price]'),
@@ -1342,7 +1342,6 @@ function initProductVariants() {
       updateInventory(matchedVariant);
       updateMedia(matchedVariant);
     }
-    
   }
 
   function updateMasterVariant(matchedVariant) {
