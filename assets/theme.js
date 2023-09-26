@@ -908,6 +908,7 @@ function initCartForm() {
     if (!wrapper) {
       return;
     }
+    console.log(wrapper);
     let isPlus = wrapper.querySelector('.icon__plu');
     let isMinus = wrapper.querySelector('.icon__minus');
     let quantityInput = wrapper.querySelector('input');
