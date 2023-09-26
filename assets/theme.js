@@ -1522,26 +1522,26 @@ function initProductForm() {
   })
 
   function openCartDrawer() {
-    if (cartDrawer.classList.contains('cart-drawer__left')) {
-        cartDrawer.classList.add('drawer-open__left');
-      } else if(cartDrawer.classList.contains('cart-drawer__right')) {
-        cartDrawer.classList.add('drawer-open__right');
-      } else if (cartDrawer.classList.contains('cart-popup')) {
-        cartDrawer.classList.add('open-cart__popup');
+    if (selectors.cartDrawer.classList.contains('cart-drawer__left')) {
+        selectors.cartDrawer.classList.add('drawer-open__left');
+      } else if(selectors.cartDrawer.classList.contains('cart-drawer__right')) {
+        selectors.cartDrawer.classList.add('drawer-open__right');
+      } else if (selectors.cartDrawer.classList.contains('cart-popup')) {
+        selectors.cartDrawer.classList.add('open-cart__popup');
       }
-      overlayShadow.classList.add('overlay__visible');
-      bodyContainer.classList.add('drawer__opening');
+      selectors.overlayShadow.classList.add('overlay__visible');
+      selectors.bodyContainer.classList.add('drawer__opening');
   }
   function closeCartDrawer() {
-    if (cartDrawer.classList.contains('cart-drawer__left')) {
-        cartDrawer.classList.remove('drawer-open__left');
-      } else if(cartDrawer.classList.contains('cart-drawer__right')) {
-        cartDrawer.classList.remove('drawer-open__right');
-      } else if (cartDrawer.classList.contains('cart-popup')) {
-        cartDrawer.classList.remove('open-cart__popup');
+    if (selectors.cartDrawer.classList.contains('cart-drawer__left')) {
+        selectors.cartDrawer.classList.remove('drawer-open__left');
+      } else if(selectors.cartDrawer.classList.contains('cart-drawer__right')) {
+        selectors.cartDrawer.classList.remove('drawer-open__right');
+      } else if (selectors.cartDrawer.classList.contains('cart-popup')) {
+        selectors.cartDrawer.classList.remove('open-cart__popup');
       }
-      overlayShadow.classList.remove('overlay__visible');
-      bodyContainer.classList.remove('drawer__opening');
+      selectors.overlayShadow.classList.remove('overlay__visible');
+      selectors.bodyContainer.classList.remove('drawer__opening');
   }
   function cartItemCount() {
     
