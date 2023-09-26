@@ -1508,7 +1508,7 @@ function initProductForm() {
   })
 
   selectors.cartHeaderButton.addEventListener('click', (event) => {
-      if (selectors.cartType == 'drawer' || selectors.cartType == 'popup') {
+      if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
         event.preventDefault();
       }
       openCartDrawer();
