@@ -120,7 +120,7 @@ function initHeaderNavigation() {
   let closeMenuDrawerBtn = document.querySelector('.nav-icon__close');
   let bodyContainer = document.querySelector('body');
 
-  let menuItem = document.querySelectorAll('.menu-item__link');
+  let menuItem = document.querySelectorAll('.drawer-menu__link');
   
   if (openMenuDrawerBtn) {
     openMenuDrawerBtn.addEventListener('click', () => {
