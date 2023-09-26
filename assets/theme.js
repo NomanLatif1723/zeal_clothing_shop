@@ -1472,8 +1472,12 @@ initProductVariants();
 // Product Form Add To Cart Ajax
 function initProductForm() {
   let selectors = {
-    productForm: document.querySelectorAll('[name="add"]')
+    productForm: document.querySelectorAll('[name="add"]'),
+    cartType: 'page'
   };
+  if (selectors.productForm) {
+    selectors.cartType = selectors.productForm.dataset.cartType;
+  }
 }
 initProductForm();
 
