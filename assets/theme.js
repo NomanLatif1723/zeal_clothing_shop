@@ -1475,7 +1475,6 @@ initProductVariants();
 function initProductForm() {
   let selectors = {
     productForm: document.querySelectorAll('form[action="/cart/add"]'),
-    productGrid: document.querySelector('.product__content-container'),
     cartDrawer: document.querySelector('[data-cart-modal]'),
     cartHeaderButton: document.querySelector('.icon__cart'),
     closeDrawerBtn: document.querySelector('.cart-icon__close'),
@@ -1484,9 +1483,6 @@ function initProductForm() {
     cartItemCounter: document.querySelector('[data-cart-count]'),
     cartType: 'page'
   };
-  // if (!selectors.productGrid || !selectors.cartDrawer || !selectors.overlayShadow || !selectors.closeDrawerBtn) {
-  //   return;
-  // }
   if (!selectors.cartHeaderButton) {
     return;
   }
@@ -1504,8 +1500,8 @@ function initProductForm() {
   selectors.overlayShadow.addEventListener('click', () => {
     closeCartDrawer();
   })
-    selectors.closeDrawerBtn.addEventListener('click', () => {
-      closeCartDrawer();
+  selectors.closeDrawerBtn.addEventListener('click', () => {
+    closeCartDrawer();
   })
   selectors.productForm.forEach(form => {
     if (!form) {
