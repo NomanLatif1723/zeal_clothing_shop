@@ -933,9 +933,9 @@ function initCartForm() {
   let selectors = {
     quantitySelector: document.querySelectorAll('.line__item-quantity button'),
     removeButton: document.querySelectorAll('.cart__item-remove'),
-    checkoutForm: document.querySelector('[name="checkout"]'),
-    termsEnabled: document.querySelector('[data-checkout-terms]'),
-    checkedInput: document.querySelector('[data-checkout-terms] input'),
+    checkoutForm: document.querySelectorAll('[name="checkout"]'),
+    termsEnabled: document.querySelectorAll('[data-checkout-terms]'),
+    checkedInput: document.querySelectorAll('[data-checkout-terms] input'),
     cartContainer: document.querySelectorAll('[data-cart]'),
     cartForm: document.querySelectorAll('#cart_form'),
     plusIcon: document.querySelector('.icon__plus'),
