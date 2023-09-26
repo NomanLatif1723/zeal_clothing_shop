@@ -26,9 +26,9 @@
       {{ 'cart.general.drawer_close' | t }}
     </button>
   </div>
-  {%- form 'cart', cart -%}
+  {%- form 'cart', cart, data-cart, data-money-format: shop.money_format -%}
     {%- if cart.item_count > 0 -%}
-      <div class="drawer__scrollable" data-cart data-money-format="{{ shop.money_format }}">
+      <div class="drawer__scrollable">
         {%- if free_shipping -%}
           <div class="free-shipping free-shipping__modal" data-free-shipping-threshold="{{ threshold_total }}">
             <div class="rte" data-free-shipping-bar>
