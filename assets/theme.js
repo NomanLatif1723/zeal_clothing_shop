@@ -1476,12 +1476,15 @@ function initProductForm() {
     productGrid: document.querySelector('.product__content-container'),
     cartType: 'page'
   };
+  if (!selectors.productGrid) {
+    return;
+  }
   if (selectors.productForm) {
     selectors.cartType = selectors.productGrid.dataset.cartType;
   }
   selectors.productForm.forEach(form => {
     form.addEventListener('submit', (event) => {
-      if (selectors.cartType == 'drawer') {
+      if (selectors.cartType === 'drawer') {
         event.preventDefault();
       }
     })
