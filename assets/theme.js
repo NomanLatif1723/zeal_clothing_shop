@@ -1487,12 +1487,13 @@ function initProductForm() {
   if (!selectors.productGrid || !selectors.cartDrawer || !selectors.overlayShadow || !selectors.closeDrawerBtn || !selectors.cartHeaderButton) {
     return;
   }
-  if (selectors.cartHeaderButton) {
-    selectors.cartType = selectors.cartHeaderButton.dataset.cartType;
-  }
+  // if (selectors.cartHeaderButton) {
+  selectors.cartType = selectors.cartHeaderButton.dataset.cartType;
+  // }
   console.log(selectors.cartType);
   selectors.cartHeaderButton.addEventListener('click', (event) => {
     if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
+      console.log(selectors.cartType);
       event.preventDefault();
     }
     openCartDrawer();
