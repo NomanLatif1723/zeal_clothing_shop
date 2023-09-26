@@ -1476,7 +1476,7 @@ function initProductForm() {
     cartType: 'page'
   };
   if (selectors.productForm) {
-    selectors.cartType = selectors.productForm.dataset.cartType;
+    selectors.cartType = selectors.productForm.forEach(form => {form.dataset.cartType});
   }
   console.log(selectors.cartType);
 }
