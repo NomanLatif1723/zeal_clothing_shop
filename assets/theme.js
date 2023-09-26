@@ -877,8 +877,8 @@ function initCartForm() {
   let selectors = {
     quantitySelector: document.querySelectorAll('.line__item-quantity button'),
     removeButton: document.querySelectorAll('.cart__item-remove'),
-    checkoutForm: document.querySelectorAll('[name="checkout"]'),
-    termsEnabled: document.querySelectorAll('[data-checkout-terms]'),
+    // checkoutForm: document.querySelectorAll('[name="checkout"]'),
+    // termsEnabled: document.querySelectorAll('[data-checkout-terms]'),
     cartContainer: document.querySelectorAll('[data-cart]'),
     cartForm: document.querySelectorAll('#cart_form'),
     subTotal: document.querySelectorAll('[data-subTotal]'),
@@ -970,22 +970,35 @@ function initCartForm() {
     })
   });
   // Checkout Form Submit
-  selectors.termsEnabled.forEach(term => {
-    if (!term) {
+  selectors.cartForm.forEach(form => {
+    const termsEnabled = form.querySelector('[data-checkout-terms]');
+    const checkoutButton = form.querySelector('[name="checkout"]');
+    const checkedInput = form.querySelector('[data-checkout-terms] input');
+    if (!termsEnabled || !checkoutButton || !checkedInput) {
       return;
     }
-    const checkedInput = term.querySelector('input');
-    if (term) {
-      selectors.checkoutForm.forEach(form => {
-        if (!form) {
-          return
-        }
-        form.addEventListener('click', (event) => {
-          formSubmit(event,checkedInput);
-        });
-      });
+    if (termsEnabled) {
+      checkoutButton.addEventListener('click', (event) => {
+        formSubmit(event,checkedInput);
+      })
     }
-  });
+  })
+  // selectors.termsEnabled.forEach(term => {
+  //   if (!term) {
+  //     return;
+  //   }
+    
+  //   if (term) {
+  //     selectors.checkoutForm.forEach(form => {
+  //       if (!form) {
+  //         return
+  //       }
+  //       form.addEventListener('click', (event) => {
+  //         formSubmit(event,checkedInput);
+  //       });
+  //     });
+  //   }
+  // });
 
   function updateCart(key,quantity) {
     var requestData = {
