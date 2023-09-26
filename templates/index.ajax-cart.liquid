@@ -1,4 +1,12 @@
-{% layout none %}
+{%- layout none -%}
+{%- liquid 
+  assign free_shipping = false
+   if settings.is_free_shipping_bar and settings.free_shipping_threshold != ''
+     assign free_shipping = true
+     assign threshold_total = settings.free_shipping_threshold | times: 100
+     assign threshold = threshold_total | money
+   endif
+-%}
 <div data-cart data-money-format="{{ shop.money_format }}">
   {%- form 'cart', cart -%}
     {%- if cart.item_count > 0 -%}
