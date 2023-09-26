@@ -1486,7 +1486,7 @@ function initProductForm() {
     if (!form) {
       return;
     }
-    form.addEventListener('click', async (event) => {
+    form.addEventListener('click', (event) => {
       if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
         event.preventDefault();
 
