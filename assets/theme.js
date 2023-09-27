@@ -1519,7 +1519,7 @@ function initProductForm() {
     console.log(cartData);
 
     // Update The Counter
-    cartItemCount(cart);
+    cartItemCount(cartData);
   }
   function openCartDrawer() {
     if (selectors.cartDrawer.classList.contains('cart-drawer__left')) {
