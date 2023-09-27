@@ -25,8 +25,14 @@
               sizes="{{ sizes }}"
               alt="{{ media.alt }}"
             />
-          {% elsif media.media_type == 'video' %}
+          {%- elsif media.media_type == 'video' -%}
             {{ media | media_tag: image_size: "2048x", autoplay: true, loop: loop, controls: true, preload: "none", class: "product-media__video" }}
+          {%- elsif media.media_type == 'external_video' -%}
+            {%- if media.host == 'youtube' -%}
+              {{ media | external_video_url: autoplay: true, loop: loop, playlist: media.external_id | external_video_tag: class: video_class, loading: "lazy" }}
+            {%- else -%}
+              {{ media | external_video_url: autoplay: true, loop: loop | external_video_tag: class: video_class, loading: "lazy" }}
+            {%- endif -%}
           {%- endif -%}
         </div>
       {%- endfor -%}
