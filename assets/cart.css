@@ -233,6 +233,7 @@ display: inline-block;
 .cart-drawer__box{
   max-width: calc(100% - 40px);
   width: 100%;
+  height: 100vh;
   background: white;
 }
 .cart-drawer__left{
