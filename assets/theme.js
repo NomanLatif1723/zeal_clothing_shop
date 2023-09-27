@@ -1568,6 +1568,7 @@ function initProductForm() {
   }
   async function updateCartPopup() {
     console.log("hy");
+    document.querySelector('.cart-popup__content').textContent = 'Item Added To Your Cart'
   }
 }
 initProductForm();
