@@ -873,8 +873,6 @@ function initHandleQuestions() {
 initHandleQuestions();
 
 // Cart Form Ajax
-      // checkoutForm: document.querySelectorAll('[name="checkout"]'),
-    // termsEnabled: document.querySelectorAll('[data-checkout-terms]'),
 function initCartForm() {
   let selectors = {
     quantitySelector: document.querySelectorAll('.line__item-quantity button'),
