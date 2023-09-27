@@ -1450,7 +1450,7 @@ function initProductForm() {
     return;
   }
   selectors.cartBox.addEventListener('click', (event) => {
-    console.log('click');
+    event.stopPropagation();
   })
   
   selectors.closeDrawerBtn.addEventListener('click', () => {
