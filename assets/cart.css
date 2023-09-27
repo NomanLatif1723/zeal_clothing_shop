@@ -234,7 +234,7 @@ display: inline-block;
 .cart-drawer {
   position: fixed;
   top: 0;
-  left: 0;
+  /* left: 0; */
   z-index: 999;
   background: rgba(1,1,1,0.7);
   /* max-width: calc(100% - 40px); */
