@@ -44,7 +44,7 @@
         </div>
         <div class="cart-popup__footer">
           <div class="cart__checkout-wrapper">
-            <a href="{{ routes.cart_url }}"class="btn btn__link btn__outline"title="{{ 'cart.general.view_cart' | t }}">{{ 'cart.general.view_cart' | t }}(<span class="cart-item__count">{{ cart.item_count }}</span>)</a>
+            <a href="{{ routes.cart_url }}"class="btn btn__link btn__outline"title="{{ 'cart.general.view_cart' | t }}">{{ 'cart.general.view_cart' | t }}(<span data-cart-count>{{ cart.item_count }}</span>)</a>
             <button class="btn btn__link btn__primary" type="submit" name="checkout" value="Checkout" aria-label="{{ 'cart.general.checkout' | t }}">
               {{ 'cart.general.checkout' | t }}
             </button>
