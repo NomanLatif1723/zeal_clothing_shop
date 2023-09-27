@@ -149,44 +149,47 @@
         </div>
       {%- endif -%}
       <div class="header__block header__icon-container">
-        
+        {%- if settings.enable_search -%}
           <a href="{{ routes.search_url }}" aria-label="{{ 'sections.search.title' | t }}" title="{{ 'sections.search.title' | t }}" class="icon icon__search{% unless show_icons %} icon__hide-desktop{% endunless %}">
             {%- render 'icon-search' -%}
           </a>
-          {%- if shop.customer_accounts_enabled -%}
-            <a href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}"
-              aria-label="{% if customer %}{{ 'sections.header.general.login' | t }}{% else %}{{ 'sections.header.general.account' | t }}{% endif %}"
-              title="{% if customer %}{{ 'sections.header.general.login' | t }}{% else %}{{ 'sections.header.general.account' | t }}{% endif %}" 
-              class="icon icon__accounts{% unless show_icons %} icon__hide-desktop{% endunless %}">
-              {%- render 'icon-account' -%}
-            </a>
+        {%- endif -%}
+        {%- if shop.customer_accounts_enabled -%}
+          <a href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}"
+            aria-label="{% if customer %}{{ 'sections.header.general.login' | t }}{% else %}{{ 'sections.header.general.account' | t }}{% endif %}"
+            title="{% if customer %}{{ 'sections.header.general.login' | t }}{% else %}{{ 'sections.header.general.account' | t }}{% endif %}" 
+            class="icon icon__accounts{% unless show_icons %} icon__hide-desktop{% endunless %}">
+            {%- render 'icon-account' -%}
+          </a>
+        {%- endif -%}
+        <a href="{{ routes.cart_url }}" data-cart-type="{{ settings.cart_type }}" aria-label="{{ 'sections.header.general.cart' | t }}" title="{{ 'sections.header.general.cart' | t }}" aria-controls="drawer" class="icon icon__cart{% unless show_icons %} icon__hide-desktop{% endunless %}">
+          {%- if cart_icon == 'cart' -%}
+            {%- render 'icon-cart' -%}
+          {%- elsif cart_icon == 'bag' -%}
+            {%- render 'icon-bag' -%}
+          {%- else -%}
+            {%- render 'icon-minimal-bag' -%}
           {%- endif -%}
-          <a href="{{ routes.cart_url }}" data-cart-type="{{ settings.cart_type }}" aria-label="{{ 'sections.header.general.cart' | t }}" title="{{ 'sections.header.general.cart' | t }}" aria-controls="drawer" class="icon icon__cart{% unless show_icons %} icon__hide-desktop{% endunless %}">
-            {%- if cart_icon == 'cart' -%}
-              {%- render 'icon-cart' -%}
-            {%- elsif cart_icon == 'bag' -%}
-              {%- render 'icon-bag' -%}
-            {%- else -%}
-              {%- render 'icon-minimal-bag' -%}
-            {%- endif -%}
+          <span data-cart-count class="cart-item__count{% if cart.item_count <= 0 %} hidden{% endif %}">{{ cart.item_count }}</span>
+        </a>
+        {%- unless show_icons -%}
+          {%- if settings.enable_search -%}
+            <a href="{{ routes.search_url }}" class="icon icon__search icon__hide-mobile">{{ 'sections.search.title' | t }}</a>
+          {%- endif -%}
+          {%- if shop.customer_accounts_enabled -%}
+              <a href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}"
+                class="icon icon__accounts icon__hide-mobile">
+                {% if customer %}
+                  {{ 'sections.header.general.login' | t }}
+                {% else %}
+                  {{ 'sections.header.general.account' | t }}
+                {% endif %}
+              </a>
+          {%- endif -%}
+          <a href="{{ routes.cart_url }}" data-cart-type="{{ settings.cart_type }}" aria-label="{{ 'sections.header.general.cart' | t }}" class="icon icon__cart icon__hide-mobile">
+            {{ 'sections.header.general.cart' | t }}
             <span data-cart-count class="cart-item__count{% if cart.item_count <= 0 %} hidden{% endif %}">{{ cart.item_count }}</span>
           </a>
-        {%- unless show_icons -%}
-            <a href="{{ routes.search_url }}" class="icon icon__search icon__hide-mobile">{{ 'sections.search.title' | t }}</a>
-            {%- if shop.customer_accounts_enabled -%}
-                <a href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}"
-                  class="icon icon__accounts icon__hide-mobile">
-                  {% if customer %}
-                    {{ 'sections.header.general.login' | t }}
-                  {% else %}
-                    {{ 'sections.header.general.account' | t }}
-                  {% endif %}
-                </a>
-            {%- endif -%}
-            <a href="{{ routes.cart_url }}" data-cart-type="{{ settings.cart_type }}" aria-label="{{ 'sections.header.general.cart' | t }}" class="icon icon__cart icon__hide-mobile">
-              {{ 'sections.header.general.cart' | t }}
-              <span data-cart-count class="cart-item__count{% if cart.item_count <= 0 %} hidden{% endif %}">{{ cart.item_count }}</span>
-            </a>
         {%- endunless -%}
       </div>
     </div>
