@@ -26,7 +26,7 @@
               alt="{{ media.alt }}"
             />
           {% elsif media.media_type == 'video' %}
-            {{ media | media_tag: image_size: "2048x", autoplay: true, loop: loop, controls: true, preload: "none" }}
+            {{ media | media_tag: image_size: "2048x", autoplay: true, loop: loop, controls: true, preload: "none", class: "product-media__video" }}
           {%- endif -%}
         </div>
       {%- endfor -%}
