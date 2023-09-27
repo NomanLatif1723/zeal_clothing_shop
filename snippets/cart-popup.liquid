@@ -43,6 +43,7 @@
           {%- endif -%}
           <div class="cart-popup__content">
           {% assign item = product.selected_or_first_available_variant %}
+          {{ item }}
             <div class="cart__item-block cart__item-modal">
               <div class="cart__item-image">
                 <a href="{{ item.url }}">
