@@ -299,18 +299,21 @@ margin-bottom: 10px;
   padding: 0 25px;
 }
 .cart-popup__top-right{
-top: -200%;
-right: 0;
+  top: -200%;
+  right: 0;
+}
+.cart-popup__top-right .cart-drawer__box{
+  margin-left: auto;
 }
 .cart-popup__top-left{
-top: -200%;
-left: 30px;
+  top: -200%;
+  left: 0;
 }
 .open-cart__popup{
-top: 0;
+  top: 0;
 }
 .cart-popup .cart__note{
-padding: 20px 0;
+  padding: 20px 0;
 }
 .cart__item-modal {
   border: none;
