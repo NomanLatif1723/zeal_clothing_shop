@@ -285,11 +285,11 @@ margin-bottom: 10px;
 /* Cart Popup */
 .cart-popup {
   position: fixed;
-  background: white;
+  background: rgba(1,1,1,0.3);
   z-index: 999;
-  max-width: calc(100% - 40px);
+  /* max-width: calc(100% - 40px); */
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   transition: all 0.5s ease;
 }
 .cart-popup__footer {
@@ -320,8 +320,8 @@ padding: 20px 0;
 .cart-popup__footer .btn {
   margin-bottom: 10px;
 }
-@media only screen and (min-width: 481px) {
+/* @media only screen and (min-width: 481px) {
   .cart-popup{
     max-width: 400px;
   }
-}
+} */
