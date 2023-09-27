@@ -981,22 +981,6 @@ function initCartForm() {
       });
     }
   });
-  // selectors.termsEnabled.forEach(term => {
-  //   if (!term) {
-  //     return;
-  //   }
-    
-  //   if (term) {
-  //     selectors.checkoutForm.forEach(form => {
-  //       if (!form) {
-  //         return
-  //       }
-  //       form.addEventListener('click', (event) => {
-  //         formSubmit(event,checkedInput);
-  //       });
-  //     });
-  //   }
-  // });
 
   function updateCart(key,quantity) {
     var requestData = {
