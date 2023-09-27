@@ -1495,6 +1495,10 @@ function initProductForm() {
       } else if (selectors.cartType === 'popup') {
         event.preventDefault();
 
+        // Submit Form With Ajax
+        await submitProductForm();
+
+        // Update Cart Popup
         await updateCartPopup();
       }
     })
