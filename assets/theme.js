@@ -896,7 +896,7 @@ function initCartForm() {
     } else {
       selectors.format = 'default';
     }
-  })
+  });
   
   selectors.quantitySelector.forEach(button => {
     if (!button) {
@@ -936,8 +936,8 @@ function initCartForm() {
       const itemToRemove = button.closest('[data-key]');
       const key = itemToRemove.dataset.key;
       removeItem(key,0,itemToRemove);
-    })
-  })
+    });
+  });
 
   // cartNote change Event
   selectors.cartNoteBtn.forEach(button => {
@@ -946,8 +946,8 @@ function initCartForm() {
     }
     button.addEventListener('click', () => {
       button.closest('[data-cart]').querySelector('.cart__note').classList.toggle('hidden');
-    })
-  })
+    });
+  });
   
   selectors.cartNote.forEach(note => {
     if (!note) {
@@ -964,8 +964,8 @@ function initCartForm() {
           'X-Requested-With': 'XMLHttpRequest'
         },
         body: JSON.stringify(requestData)
-      })
-    })
+      });
+    });
   });
   // Checkout Form Submit
   selectors.cartForm.forEach(form => {
@@ -978,9 +978,9 @@ function initCartForm() {
     if (termsEnabled) {
       checkoutButton.addEventListener('click', (event) => {
         formSubmit(event,checkedInput);
-      })
+      });
     }
-  })
+  });
   // selectors.termsEnabled.forEach(term => {
   //   if (!term) {
   //     return;
