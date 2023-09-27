@@ -1500,6 +1500,9 @@ function initProductForm() {
 
         // Update Cart Popup
         await updateCartPopup();
+
+        // Open Popup
+        openCartDrawer();
       }
     })
   })
