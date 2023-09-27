@@ -173,6 +173,38 @@ function initHeaderNavigation() {
 }
 initHeaderNavigation();
 
+// Header Search Events
+function initHeaderSearch() {
+  let selectors = {
+    searchIcon: document.querySelectorAll('.icon__search'),
+    searchContainer: document.querySelector('.site-search__container'),
+    closeIcon: document.querySelectorAll('#close__search-modal')
+  }
+  selectors.searchIcon.forEach(button => {
+    if (!button) {
+      return;
+    }
+    button.addEventListener('click', (event) => {
+      event.preventDefault();
+      if (!selectors.searchContainer) {
+        return;
+      }
+      selectors.searchContainer.classList.remove('hidden');
+    })
+    selectors.closeIcon.forEach(button => {
+      if (!button) {
+        return;
+      }
+      button.addEventListener('click', () => {
+        if (!selectors.searchContainer) {
+          return;
+        }
+        selectors.searchContainer.classList.add('hidden');
+      })
+    })
+  })
+}
+
 // Slideshow
 function initSlideshowSwipers() {
   // find all the slideshow wrappers on the page
