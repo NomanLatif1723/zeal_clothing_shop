@@ -1519,6 +1519,8 @@ function initProductForm() {
 
     // Update The Counter
     cartItemCount(cartData);
+
+    initCartForm();
   }
   async function updateCartDrawer() {
     const res = await fetch("/?view=ajax-cart");
