@@ -954,17 +954,6 @@ function initCartForm() {
     }
     note.addEventListener('keyup', (event) => {
       updateCartNote(event);
-      // var requestData = {
-      //   note: event.target.value
-      // };
-      // fetch('/cart/update.js', {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //     'X-Requested-With': 'XMLHttpRequest'
-      //   },
-      //   body: JSON.stringify(requestData)
-      // });
     });
   });
   // Checkout Form Submit
