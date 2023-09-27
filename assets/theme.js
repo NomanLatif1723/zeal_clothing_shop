@@ -1310,6 +1310,7 @@ function initProductVariants() {
       return;
     }
     selectors.masterVariantSelector.value = matchedVariant.id;
+    console.log(masterVariantSelector.value);
   }
 
   function updateUrl(matchedVariant) {
