@@ -1462,7 +1462,7 @@ function initProductForm() {
       return;
     }
     form.addEventListener('submit', async (event) => {
-      if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
+      if (selectors.cartType === 'drawer') {
         event.preventDefault();
 
         // Submit Form Ajax
@@ -1477,14 +1477,14 @@ function initProductForm() {
         cartItemCount(cart.item_count);
 
         // update Cart Drawer
-        if (selectors.cartType === 'drawer') {
-          await updateCartDrawer();
-        } else if (selectors.cartType === 'popup') {
-          await updateCartPopup();
-        }
+        await updateCartDrawer();
         
         // open Cart Drawer
         openCartDrawer();
+      } else if (selectors.cartType === 'popup') {
+        event.preventDefault();
+
+        await updateCartPopup();
       }
     })
   })
@@ -1496,7 +1496,6 @@ function initProductForm() {
       } else if (selectors.cartDrawer.classList.contains('cart-popup')) {
         selectors.cartDrawer.classList.add('open-cart__popup');
       }
-      // selectors.overlayShadow.classList.add('overlay__visible');
       selectors.bodyContainer.classList.add('drawer__opening');
   }
   function closeCartDrawer() {
@@ -1507,7 +1506,6 @@ function initProductForm() {
       } else if (selectors.cartDrawer.classList.contains('cart-popup')) {
         selectors.cartDrawer.classList.remove('open-cart__popup');
       }
-      // selectors.overlayShadow.classList.remove('overlay__visible');
       selectors.bodyContainer.classList.remove('drawer__opening');
   }
   function cartItemCount(count) {
