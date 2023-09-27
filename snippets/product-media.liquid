@@ -9,8 +9,8 @@
   <div id="product__media-{{ section.id }}" class="product-media__wrapper swiper">
     <div class="swiper-wrapper">
       {%- for media in product.media -%}
-        {% if media.media_type == 'image' %}
-          <div class="product__image swiper-slide" data-media-id="{{ section.id }}-{{ media.id }}">
+        <div class="product__image swiper-slide" data-media-id="{{ section.id }}-{{ media.id }}">
+          {%- if media.media_type == 'image' -%}
             <img
               src="{{ media | img_url: default }}"
               srcset="
@@ -24,9 +24,9 @@
               loading="lazy"
               sizes="{{ sizes }}"
               alt="{{ media.alt }}"
-              />
-          </div>
-        {% endif %}
+            />
+          {%- endif -%}
+        </div>
       {%- endfor -%}
     </div>
   </div>
