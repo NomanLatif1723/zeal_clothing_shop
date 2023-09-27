@@ -28,20 +28,18 @@
     </div>
     <div data-cart data-money-format="{{ shop.money_format }}">
       {% form 'cart', cart %}
-        {% comment %}
-          {%- if free_shipping -%}
-            <div class="free-shipping free-shipping__modal" data-free-shipping-threshold="{{ threshold_total }}">
-              <div class="rte" data-free-shipping-bar>
-                {%- if cart.total_price < threshold_total -%}
-                  <p>{{ 'cart.general.free_shipping_eligible'| t }}{{ shop.currency_symbol }}{{ threshold_total | minus: cart.total_price | money }}</p>
-                {%- else -%}
-                 <p>{{ 'cart.general.free_shipping_success_html' | t: amount: threshold }}</p>
-                {%- endif -%}
-              </div>
-              <div class="progress__bar" style="--progress: {{ cart.total_price | times: 1.0 | divided_by: threshold_total | at_most: 1 }}"></div>
+        {%- if free_shipping -%}
+          <div class="free-shipping free-shipping__modal" data-free-shipping-threshold="{{ threshold_total }}">
+            <div class="rte" data-free-shipping-bar>
+              {%- if cart.total_price < threshold_total -%}
+                <p>{{ 'cart.general.free_shipping_eligible'| t }}{{ shop.currency_symbol }}{{ threshold_total | minus: cart.total_price | money }}</p>
+              {%- else -%}
+               <p>{{ 'cart.general.free_shipping_success_html' | t: amount: threshold }}</p>
+              {%- endif -%}
             </div>
-          {%- endif -%}
-        {% endcomment %}
+            <div class="progress__bar" style="--progress: {{ cart.total_price | times: 1.0 | divided_by: threshold_total | at_most: 1 }}"></div>
+          </div>
+        {%- endif -%}
         <div class="cart-popup__content">
         </div>
         <div class="cart-popup__footer">
