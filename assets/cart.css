@@ -305,12 +305,16 @@ margin-bottom: 10px;
   top: -200%;
   right: 0;
 }
-.cart-popup__top-right .cart-drawer__box{
-  margin-left: auto;
-}
 .cart-popup__top-left{
   top: -200%;
   left: 0;
+}
+.cart-popup__top-right .cart-drawer__box{
+  margin-left: auto;
+  right: 10%;
+}
+.cart-popup__top-left .cart-drawer__box{
+  left: 10%;
 }
 .open-cart__popup{
   top: 0;
