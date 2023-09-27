@@ -1097,7 +1097,6 @@ function initCartForm() {
   }
 
   function removeLineItem(items,itemToRemove) {
-    itemToRemove.remove();
     if (items.length === 0) {
       selectors.freeShippingBar.forEach(bar => { bar.remove()});
       selectors.cartForm.forEach(form => { form.remove()});
@@ -1109,6 +1108,8 @@ function initCartForm() {
         <a href="${window.themeContent.routes.all_collections}" title="${window.themeContent.strings.continue_shopping}" class="form__links">${window.themeContent.strings.continue_shopping}</a>
       `;
       selectors.cartContainer.forEach(container => { container.appendChild(emptyCart)});
+    } else {
+      itemToRemove.remove();
     }
   }
 
