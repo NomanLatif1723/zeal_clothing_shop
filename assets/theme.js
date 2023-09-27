@@ -1117,20 +1117,6 @@ function initCartForm() {
         itemToRemove.remove();
       }
     })
-    // if (items.length === 0) {
-    //   selectors.freeShippingBar.forEach(bar => { bar.remove()});
-    //   selectors.cartForm.forEach(form => { form.remove()});
-      
-    //   const emptyCart = document.createElement('div');
-    //   emptyCart.className = 'cart__empty-message';
-    //   emptyCart.innerHTML = `
-    //     <div class="rte">${window.themeContent.strings.cartEmptyMessage}</div>
-    //     <a href="${window.themeContent.routes.all_collections}" title="${window.themeContent.strings.continue_shopping}" class="form__links">${window.themeContent.strings.continue_shopping}</a>
-    //   `;
-    //   selectors.cartContainer.forEach(container => { container.appendChild(emptyCart)});
-    // } else {
-    //   itemToRemove.remove();
-    // }
   }
 
   function updateSippingBar(cartData) {
