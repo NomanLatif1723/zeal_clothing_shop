@@ -1450,8 +1450,8 @@ function initProductForm() {
   selectors.cartHeaderButton.addEventListener('click', (event) => {
     if (selectors.cartType === 'drawer') {
       event.preventDefault();
+      openCartDrawer();
     }
-    openCartDrawer();
   })
 
   // Event for Main Cart Container Click
