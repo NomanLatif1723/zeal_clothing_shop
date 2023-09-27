@@ -161,7 +161,9 @@
       </div>
     {%- when 'buy_buttons' -%}
       {%- form 'product', product, id: product_form_id, class: "product__form", data-section-id: section.id, data-format: shop.money_format -%}
+        {% comment %}
         <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" class="selected-variant__id" />
+        {% endcomment %}
         <div class="product__block product__buy-buttons" {{ block.shopify_attributes }}>
           <button type="submit" name="add" aria-label="Add to cart" class="btn btn__link btn__primary"{% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>
             {% if product.selected_or_first_available_variant.available %}
@@ -174,8 +176,8 @@
             {{ form | payment_button }}
           {% endif %}
         </div>
-        {% comment %}
-        <select name="id" class="product-selected__variants hidden">
+
+        <select name="id" class="selected-variant__id hidden">
           {%- for variant in product.variants -%}
             {%- if variant.available -%}
               <option {% if variant == product.selected_or_first_available_variant %}
@@ -190,7 +192,7 @@
             {%- endif -%}
           {%- endfor -%}
         </select>
-        {% endcomment %}
+
       {%- endform -%}
     {%- when 'collapsables' -%}
       <div class="product__tabs" {{ block.shopify_attributes }}>
