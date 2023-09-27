@@ -1077,8 +1077,9 @@ function initCartForm() {
         return;
       }
       if (cartData.item_count > 0) {
-        counter.classList.remove('hidden');
+        
         counter.textContent = cartData.item_count;
+        counter.classList.remove('hidden');
       } else {
         counter.remove();
       }
