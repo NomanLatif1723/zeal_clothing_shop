@@ -1515,11 +1515,11 @@ function initProductForm() {
 
     // Get cart count
     const res = await fetch("/cart.js");
-    const cart = await res.json();
-    console.log(cart);
+    const cartData = await res.json();
+    console.log(cartData);
 
     // Update The Counter
-    cartItemCount(cart.item_count);
+    cartItemCount(cart);
   }
   function openCartDrawer() {
     if (selectors.cartDrawer.classList.contains('cart-drawer__left')) {
@@ -1541,15 +1541,18 @@ function initProductForm() {
       }
       selectors.bodyContainer.classList.remove('drawer__opening');
   }
-  function cartItemCount(count) {
+  function cartItemCount(cartData) {
     selectors.cartItemCounter.forEach(counter => {
       if (!counter) {
         return;
       }
-      // if () {
-        
-      // }
-      counter.textContent = count;
+      if (cartData.item_count > 0) {
+        counter.classList.remove('hidden');
+        counter.textContent = count;
+      } else {
+        counter.remove();
+      }
+      
     })
   }
   async function updateCartDrawer() {
