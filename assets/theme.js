@@ -1528,7 +1528,7 @@ function initProductForm() {
   
     initCartForm();
   }
-  async updateCartPopup() {
+  async function updateCartPopup() {
     console.log("hy");
   }
 }
