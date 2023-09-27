@@ -1386,13 +1386,13 @@ function initProductVariants() {
       `${window.location.protocol}//${window.location.host}${window.location.pathname}?variant=${matchedVariant.id}`)
       .then((response) => response.text())
       .then((responseText) => {
-        // if (matchedVariant.id !== requestedVariantId) return;
+        if (matchedVariant.id !== requestedVariantId) return;
         const html = new DOMParser().parseFromString(responseText, 'text/html');
         const inventorySource = html.querySelector('[data-inventory]');
         const inventoryDestination = document.querySelector('[data-inventory]');
-        // if (!inventorySource || inventoryDestination) {
-        //   return;
-        // }
+        if (!inventorySource || !inventoryDestination) {
+          return;
+        }
         if (inventorySource && inventoryDestination) inventoryDestination.innerHTML = inventorySource.innerHTML;
       });
   }
