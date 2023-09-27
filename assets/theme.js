@@ -1074,9 +1074,10 @@ function initCartForm() {
   function updateCartCount(cartData) {
     selectors.cartItemCounter.forEach(counter => {
       if (!counter) {
-        counter.remove();
+        return;
       }
       if (cartData.item_count > 0) {
+        counter.classList.remove('hidden');
         counter.textContent = cartData.item_count;
       } else {
         counter.remove();
