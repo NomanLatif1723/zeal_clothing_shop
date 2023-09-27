@@ -1485,7 +1485,7 @@ function initProductForm() {
         event.preventDefault();
 
         // Submit Form Ajax
-        await submitProductForm();
+        await submitProductForm(form);
 
         // update Cart Drawer
         await updateCartDrawer();
@@ -1496,7 +1496,7 @@ function initProductForm() {
         event.preventDefault();
 
         // Submit Form With Ajax
-        await submitProductForm();
+        await submitProductForm(form);
 
         // Update Cart Popup
         await updateCartPopup();
@@ -1504,7 +1504,7 @@ function initProductForm() {
     })
   })
 
-  async function submitProductForm() {
+  async function submitProductForm(form) {
     await fetch('/cart/add', {
       method: "POST",
       body: new FormData(form),
