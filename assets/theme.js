@@ -1535,7 +1535,7 @@ function initProductForm() {
     initCartForm();
   }
   async function updateCartPopup() {
-    document.querySelector('.cart-popup__content').textContent = 'Item Added To Your Cart'
+    document.querySelector('.cart-popup__content').textContent = window.themeContent.strings.itemAddedSuccess;
   }
   function openCartDrawer() {
     if (selectors.cartDrawer.classList.contains('cart-drawer__left')) {
