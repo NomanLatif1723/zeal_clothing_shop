@@ -179,7 +179,7 @@ function initHeaderSearch() {
     searchIcon: document.querySelectorAll('.icon__search'),
     searchContainer: document.querySelector('.site-search__container'),
     closeIcon: document.querySelectorAll('#close__search-modal')
-  }
+  };
   selectors.searchIcon.forEach(button => {
     if (!button) {
       return;
