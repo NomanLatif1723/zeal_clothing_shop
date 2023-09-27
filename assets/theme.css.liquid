@@ -2012,7 +2012,6 @@ input[type="radio"]:checked + label {
   .grandchild-menu__item a  {
     padding: 15px 20px;
   }
-
   .grandchild-menu__list {
     position: absolute;
     left: 100%;
@@ -2023,31 +2022,33 @@ input[type="radio"]:checked + label {
     transition: transform 0.3s ease;
     visibility: hidden;
   }
-  
   .child-menu__item:hover .grandchild-menu__list {
     visibility: visible;
     transform: translateY(0);
   }
-  
   .child-menu__item--link {
     justify-content: space-between;
   }
-
   .header__icon-container {
     flex: 1;
     justify-content: flex-end;
   }
-  
   .header__icon-container .icon {
     padding: 12px;
     display: inline-flex;
   }
-
   .header__icon-container .icon__accounts {
     display: none;
   }
   .icon__cart {
     position: relative;
+  }
+  .site-search__container {
+    padding: 30px 0;
+    background: #f7f7f7;
+  }
+  .site-search__container .search__form {
+    padding: 0;
   }
   .cart-item__count {
     position: absolute;
