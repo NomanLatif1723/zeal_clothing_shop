@@ -190,20 +190,21 @@ function initHeaderSearch() {
         return;
       }
       selectors.searchContainer.classList.remove('hidden');
-    })
-    selectors.closeIcon.forEach(button => {
-      if (!button) {
+    });
+  });
+  selectors.closeIcon.forEach(button => {
+    if (!button) {
+      return;
+    }
+    button.addEventListener('click', () => {
+      if (!selectors.searchContainer) {
         return;
       }
-      button.addEventListener('click', () => {
-        if (!selectors.searchContainer) {
-          return;
-        }
-        selectors.searchContainer.classList.add('hidden');
-      })
-    })
-  })
+      selectors.searchContainer.classList.add('hidden');
+    });
+  });
 }
+initHeaderSearch();
 
 // Slideshow
 function initSlideshowSwipers() {
