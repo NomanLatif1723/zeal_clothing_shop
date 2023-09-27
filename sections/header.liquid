@@ -200,7 +200,7 @@
     <div class="search__form">
       <form class="search-form__flex" action="{{ routes.search_url }}">
         <input class="form__input" type="text" placeholder="{{ 'search.general.search_placeholder' | t }}" name="q" value="{{ search.terms | escape }}">
-        <button class="btn btn__link btn__primary" type="submit" aria-label="{{ 'search.general.submit' | t }}">{{ 'search.general.cancel' | t }}</button>
+        <button type="button" class="btn btn__link btn__primary" aria-label="{{ 'search.general.cancel' | t }}">{{ 'search.general.cancel' | t }}</button>
       </form>
     </div>
   </div>
