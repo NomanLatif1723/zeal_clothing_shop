@@ -1309,8 +1309,8 @@ function initProductVariants() {
     if (!selectors.masterVariantSelector) {
       return;
     }
-    selectors.masterVariantSelector.value = matchedVariant.id;
-    console.log(masterVariantSelector.value);
+    const res = selectors.masterVariantSelector.value = matchedVariant.id;
+    console.log(res);
   }
 
   function updateUrl(matchedVariant) {
