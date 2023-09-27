@@ -1485,16 +1485,7 @@ function initProductForm() {
         event.preventDefault();
 
         // Submit Form Ajax
-        await fetch('/cart/add', {
-          method: "POST",
-          body: new FormData(form),
-        });
-
-        // Get cart count
-        const res = await fetch("/cart.js");
-        const cart = await res.json();
-        console.log(cart);
-        cartItemCount(cart.item_count);
+        await submitProductForm();
 
         // update Cart Drawer
         await updateCartDrawer();
@@ -1508,7 +1499,21 @@ function initProductForm() {
       }
     })
   })
-  
+
+  async function submitProductForm() {
+    await fetch('/cart/add', {
+      method: "POST",
+      body: new FormData(form),
+    });
+
+    // Get cart count
+    const res = await fetch("/cart.js");
+    const cart = await res.json();
+    console.log(cart);
+
+    // Update The Counter
+    cartItemCount(cart.item_count);
+  }
   function openCartDrawer() {
     if (selectors.cartDrawer.classList.contains('cart-drawer__left')) {
         selectors.cartDrawer.classList.add('drawer-open__left');
