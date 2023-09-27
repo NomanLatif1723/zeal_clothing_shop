@@ -1309,8 +1309,7 @@ function initProductVariants() {
     if (!selectors.masterVariantSelector) {
       return;
     }
-    const res = selectors.masterVariantSelector.value = matchedVariant.id;
-    console.log(res);
+    selectors.masterVariantSelector.value = matchedVariant.id;
   }
 
   function updateUrl(matchedVariant) {
