@@ -292,6 +292,9 @@ margin-bottom: 10px;
   height: 100vh;
   transition: all 0.5s ease;
 }
+.cart-popup .cart-drawer__box{
+  height: auto;
+}
 .cart-popup__footer {
   padding: 0 25px 20px;
 }
