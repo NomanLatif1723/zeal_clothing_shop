@@ -873,12 +873,12 @@ function initHandleQuestions() {
 initHandleQuestions();
 
 // Cart Form Ajax
+      // checkoutForm: document.querySelectorAll('[name="checkout"]'),
+    // termsEnabled: document.querySelectorAll('[data-checkout-terms]'),
 function initCartForm() {
   let selectors = {
     quantitySelector: document.querySelectorAll('.line__item-quantity button'),
     removeButton: document.querySelectorAll('.cart__item-remove'),
-    // checkoutForm: document.querySelectorAll('[name="checkout"]'),
-    // termsEnabled: document.querySelectorAll('[data-checkout-terms]'),
     cartContainer: document.querySelectorAll('[data-cart]'),
     cartForm: document.querySelectorAll('#cart_form'),
     subTotal: document.querySelectorAll('[data-subTotal]'),
