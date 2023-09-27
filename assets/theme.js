@@ -953,17 +953,18 @@ function initCartForm() {
       return;
     }
     note.addEventListener('keyup', (event) => {
-      var requestData = {
-        note: event.target.value
-      };
-      fetch('/cart/update.js', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-Requested-With': 'XMLHttpRequest'
-        },
-        body: JSON.stringify(requestData)
-      });
+      updateCartNote(event);
+      // var requestData = {
+      //   note: event.target.value
+      // };
+      // fetch('/cart/update.js', {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //     'X-Requested-With': 'XMLHttpRequest'
+      //   },
+      //   body: JSON.stringify(requestData)
+      // });
     });
   });
   // Checkout Form Submit
@@ -1067,8 +1068,18 @@ function initCartForm() {
     })
   }
 
-  function updateCartNote(cartNote) {
-    console.log(cartNote);
+  function updateCartNote(event) {
+    var requestData = {
+      note: event.target.value
+    };
+    fetch('/cart/update.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Requested-With': 'XMLHttpRequest'
+      },
+      body: JSON.stringify(requestData)
+    });
   }
 
   function updateCartCount(cartData) {
