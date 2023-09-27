@@ -29,7 +29,7 @@
             {{ media | media_tag: image_size: "2048x", autoplay: true, loop: loop, controls: true, preload: "none", class: "product-media__video" }}
           {%- elsif media.media_type == 'external_video' -%}
             {%- if media.host == 'youtube' -%}
-              <iframe class="product-media__video" title="{{ heading }}" src="https://www.youtube.com/embed/{{ media.external_id }}?playsinline=1&autoplay=1&mute=1&loop=1" allow="" allowfullscreen></iframe>
+              <iframe class="product-media__video" title="{{ heading }}" src="https://www.youtube.com/embed/{{ media.external_id }}?playsinline=1&mute=1&loop=1" allow="" allowfullscreen></iframe>
               {% comment %}
               {{ media | external_video_url: autoplay: true, loop: loop, playlist: media.external_id | external_video_tag: class: video_class, loading: "lazy", class: "product-media__video" }}
               {% endcomment %}
