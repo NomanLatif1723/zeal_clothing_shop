@@ -47,6 +47,7 @@
     "social_linkedin_url": "",
     "social_youtube_url": "",
     "social_vimeo_url": "",
+    "enable_search": true,
     "show_socials": false,
     "collection_layout": "slider",
     "color_button": "#111111",
