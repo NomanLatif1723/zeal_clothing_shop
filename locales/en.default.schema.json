@@ -2916,6 +2916,17 @@
         }
       }
     },
+    "search": {
+      "name": "Search",
+      "settings": {
+        "enable_search": {
+          "label": "Enable Search"
+        },
+        "enable_predictive_search": {
+          "label": "Enable Predictive Search"
+        }
+      }
+    },
     "typography": {
       "name": "Typography",
       "settings": {
