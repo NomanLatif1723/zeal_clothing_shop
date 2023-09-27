@@ -1477,7 +1477,9 @@ function initProductForm() {
         cartItemCount(cart.item_count);
 
         // update Cart Drawer
-        await updateCartDrawer();
+        if (selectors.cartType === 'drawer') {
+          await updateCartDrawer();
+        }
         
         // open Cart Drawer
         openCartDrawer();
