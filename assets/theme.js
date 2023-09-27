@@ -1074,7 +1074,7 @@ function initCartForm() {
   function updateCartCount(cartData) {
     selectors.cartItemCounter.forEach(counter => {
       if (!counter) {
-        return;
+        counter.remove();
       }
       if (cartData.item_count > 0) {
         counter.textContent = cartData.item_count;
