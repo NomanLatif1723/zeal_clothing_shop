@@ -1479,6 +1479,8 @@ function initProductForm() {
         // update Cart Drawer
         if (selectors.cartType === 'drawer') {
           await updateCartDrawer();
+        } else if (selectors.cartType === 'popup') {
+          await updateCartPopup();
         }
         
         // open Cart Drawer
@@ -1525,6 +1527,9 @@ function initProductForm() {
     document.querySelector("[data-cart]").innerHTML = newBox;
   
     initCartForm();
+  }
+  async updateCartPopup() {
+    console.log("hy");
   }
 }
 initProductForm();
