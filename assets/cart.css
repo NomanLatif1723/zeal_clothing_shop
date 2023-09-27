@@ -287,9 +287,9 @@ margin-bottom: 10px;
   height: 100vh;
 }
 @media only screen and (min-width: 481px) {
-  .cart-drawer {
+  /* .cart-drawer {
     max-width: 420px;
-  }
+  } */
 }
 /* Cart Popup */
 .cart-popup {
