@@ -80,6 +80,30 @@
                     {%- endif -%}
                   </div>
                 </div>
+                {%- unless item.product.has_only_default_variant -%}
+                  <div class="line__item-variants">
+                    {%- for option in item.options_with_values -%}
+                      <span>{{ option.value }}{% unless forloop.last %} / {% endunless %}</span>
+                    {%- endfor -%}
+                  </div>
+                {%- endunless -%}
+                {%- if product.selling_plan_allocation != empty -%}
+                  <div class="cart__item-variants">
+                    {{ product.selling_plan_allocation.selling_plan.name }}
+                  </div>
+                {%- endif -%}
+                {%- unless item.properties == empty -%}
+                  {%- for property in item.properties -%}
+                    <div class="cart__item-property">
+                      {{ property.first }}:
+                      {%- if property.last contains '/uploads/' -%}
+                        <a href="{{ property.last }}">{{ property.last | split: '/' | last }}</a>
+                      {%- else -%}
+                        {{ property.last }}
+                      {%- endif -%}
+                    </div>
+                  {%- endfor -%}
+                {%- endunless -%}
               </div>
               {%- unless item.product.has_only_default_variant -%}
                 <div class="line__item-variants">
