@@ -299,7 +299,7 @@ margin-bottom: 10px;
   padding: 0 25px 20px;
 }
 .cart-popup__content {
-  padding: 0 25px;
+  padding: 0 25px 25px;
 }
 .cart-popup__top-right{
   top: -200%;
