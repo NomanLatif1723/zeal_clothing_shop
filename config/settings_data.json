@@ -14,7 +14,7 @@
     "footer_text": "#ffffff",
     "heading_font_family": "lato_n6",
     "body_font_family": "futura_n4",
-    "cart_type": "popup",
+    "cart_type": "page",
     "cart_icon": "bag",
     "is_free_shipping_bar": true,
     "free_shipping_threshold": "2000",
