@@ -1521,19 +1521,19 @@ function initProductForm() {
     if (!form) {
       return;
     }
-    const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
-      console.log(stockCounter);
-      let selectedOptions = [];
-      let variantsCounter = selectors.product.variants.find(variant => {
-        return selectedOptions.every(option => variant.options.includes(option));
-      });
-      console.log(variantsCounter);
+    // const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
+    //   console.log(stockCounter);
+    //   let selectedOptions = [];
+    //   let variantsCounter = selectors.product.variants.find(variant => {
+    //     return selectedOptions.every(option => variant.options.includes(option));
+    //   });
+    //   console.log(variantsCounter);
 
-      if (variantsCounter) {
-        alert('All items are added to cart');
-      } else {
-        // form.submit();
-      }
+    //   if (variantsCounter) {
+    //     alert('All items are added to cart');
+    //   } else {
+    //     form.submit();
+    //   }
     form.addEventListener('submit', async (event) => {
       
       if (selectors.cartType === 'drawer') {
