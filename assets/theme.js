@@ -1521,10 +1521,7 @@ function initProductForm() {
     if (!form) {
       return;
     }
-    
-    form.addEventListener('submit', async (event) => {
-      event.preventDefault();
-      const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
+    const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
       console.log(stockCounter);
       let selectedOptions = [];
       let variantsCounter = selectors.product.variants.find(variant => {
@@ -1537,6 +1534,8 @@ function initProductForm() {
       } else {
         form.submit();
       }
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
       
       if (selectors.cartType === 'drawer') {
         event.preventDefault();
