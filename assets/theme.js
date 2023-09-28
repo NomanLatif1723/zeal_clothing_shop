@@ -1493,7 +1493,7 @@ function initProductVariants() {
     if (! selectors.formValidationErrorMessage) {
       return;
     }
-    selectors.formValidationErrorMessage.classList.add('hidden');
+    // selectors.formValidationErrorMessage.classList.add('hidden');
   }
 }
 initProductVariants();
@@ -1587,7 +1587,7 @@ function initProductForm() {
       if (!selectors.formValidationErrorMessage) {
         return;
       }
-      selectors.formValidationErrorMessage.classList.remove('hidden');
+      // selectors.formValidationErrorMessage.classList.remove('hidden');
     }
   }
   async function updateCartDrawer() {
