@@ -1390,7 +1390,7 @@ function initProductVariants() {
   }
 
   function updateButtons(matchedVariant) {
-    if (!selectors.productAddToCartBtn) {
+    if (!selectors.productAddToCartBtn || ! selectors.formValidationErrorMessage) {
       return;
     }
     if (matchedVariant.available) {
@@ -1400,6 +1400,7 @@ function initProductVariants() {
       selectors.productAddToCartBtn.textContent = window.themeContent.strings.soldOut;
       selectors.productAddToCartBtn.disabled = true;
     }
+    selectors.formValidationErrorMessage.classList.add('hidden');
   }
 
   function updateAvailability(matchedVariant) {
