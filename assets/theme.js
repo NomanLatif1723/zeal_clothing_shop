@@ -1546,6 +1546,9 @@ function initProductForm() {
     await fetch('/cart/add', {
       method: "POST",
       body: new FormData(form),
+    })
+    .catch(function(error) {
+      console.error('Error updating product:', error);
     });
 
     // Get cart count
