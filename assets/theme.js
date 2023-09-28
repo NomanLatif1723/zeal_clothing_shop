@@ -1295,7 +1295,8 @@ function initProductVariants() {
     variantSelectors: document.querySelectorAll('[data-selected-variant]'),
     productForm: document.querySelector('.product__form'),
     format: null,
-    product: window.themeContent.routes.product
+    product: window.themeContent.routes.product,
+    formValidationErrorMessage: document.querySelector('.product-form__errors')
   };
 
   if (selectors.productForm) {
@@ -1613,7 +1614,6 @@ function initProductForm() {
       
     })
   }
-  
 }
 initProductForm();
 
