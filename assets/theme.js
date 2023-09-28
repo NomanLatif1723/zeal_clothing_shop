@@ -1558,7 +1558,7 @@ function initProductForm() {
       // Update The Counter
       cartItemCount(cartData);
     } else {
-      if (!formValidationErrorMessage) {
+      if (!selectors.formValidationErrorMessage) {
         return;
       }
       selectors.formValidationErrorMessage.classList.remove('hidden');
