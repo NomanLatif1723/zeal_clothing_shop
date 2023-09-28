@@ -1533,17 +1533,21 @@ function initProductForm() {
         document.querySelector('.product-form__errors').classList.remove('hidden');
       }
       
-      // if (selectors.cartType === 'drawer') {
-      //   // event.preventDefault();
-        
-      //   // Submit Form Ajax
-      //   await submitProductForm(form);
-      //   // update Cart Drawer
-      //   await updateCartDrawer();
-      //   // open Cart Drawer
-      //   openCartDrawer();
-
-      // } else if (selectors.cartType === 'popup') {
+      if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
+        event.preventDefault();
+        if (cartData.item_count < stockCounter) {
+          // Submit Form Ajax
+          await submitProductForm(form);
+          // update Cart Drawer
+          await updateCartDrawer();
+          // open Cart Drawer
+          openCartDrawer();
+        } else {
+          document.querySelector('.product-form__errors').classList.remove('hidden');
+        }
+      }
+      
+      // else if (selectors.cartType === 'popup') {
       //   // event.preventDefault();
 
       //   await submitProductForm(form);
