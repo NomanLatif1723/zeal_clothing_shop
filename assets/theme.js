@@ -1390,7 +1390,8 @@ function initProductVariants() {
       return;
     }
     console.log(selectors.product);
-    if (matchedVariant.available) {
+    console.log(matchedVariant.inventory_quantity);
+    if (matchedVariant.inventory_quantity && matchedVariant.available) {
       selectors.productAddToCartBtn.textContent = window.themeContent.strings.addToCart;
       selectors.productAddToCartBtn.disabled = false;
     } else {
