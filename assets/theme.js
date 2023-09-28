@@ -1520,6 +1520,8 @@ function initProductForm() {
     if (!form) {
       return;
     }
+    const stockCounter = form.dataset.inventoryCount;
+    console.log(stockCounter);
     form.addEventListener('submit', async (event) => {
       if (selectors.cartType === 'drawer') {
         event.preventDefault();
