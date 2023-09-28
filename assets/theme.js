@@ -1423,7 +1423,7 @@ function initProductVariants() {
         const html = new DOMParser().parseFromString(responseText, 'text/html');
         const inventorySource = html.querySelector('[data-inventory]');
         const inventoryDestination = document.querySelector('[data-inventory]');
-        const inventorySource2 = html.querySelector('[data-inventory-count]');
+        const inventorySource2 = html.querySelector('[data-inventory-count]').dataset.inventoryCount;
         const inventoryDestination2 = document.querySelector('[data-inventory-count]');
         if (!inventorySource || !inventoryDestination) {
           return;
@@ -1432,7 +1432,7 @@ function initProductVariants() {
         if (!inventorySource2 || !inventoryDestination2) {
           return;
         }
-        if (inventorySource2 && inventoryDestination2) inventoryDestination2.setAttribute('data-inventory-count', inventorySource2.dataset.inventoryCount);
+        if (inventorySource2 && inventoryDestination2) inventoryDestination2.setAttribute('data-inventory-count', inventorySource2);
       });
     
   }
