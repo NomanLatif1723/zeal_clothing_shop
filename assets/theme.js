@@ -1484,7 +1484,8 @@ function initProductForm() {
     cartItemCounter: document.querySelectorAll('[data-cart-count]'),
     cartType: 'page',
     cartPopupContent: document.querySelector('.cart-popup__content'),
-    cartDrawerContent: document.querySelector("[data-cart]")
+    cartDrawerContent: document.querySelector("[data-cart]"),
+    formValidationErrorMessage: document.querySelector('.product-form__errors')
   };
   
   // Fetch The Cart Type Rather Page, Drawer or Popup
@@ -1557,7 +1558,10 @@ function initProductForm() {
       // Update The Counter
       cartItemCount(cartData);
     } else {
-      document.querySelector('.product-form__errors').classList.remove('hidden');
+      if (!formValidationErrorMessage) {
+        return;
+      }
+      selectors.formValidationErrorMessage.classList.remove('hidden');
     }
   }
   async function updateCartDrawer() {
