@@ -1306,7 +1306,7 @@ function initProductVariants() {
   }
 
   selectors.variantSelectors.forEach(selector => {
-    selector.addEventListener('change', () => {
+    selector.addEventListener('change', async () => {
       updateProductOptions();
     });
   });
