@@ -1530,6 +1530,8 @@ function initProductForm() {
 
       if (cartData.item_count < stockCounter) {
         await submitProductForm(form);
+      } else if (selectors.cartType === 'page') {
+        form.submit();
       } else {
         document.querySelector('.product-form__errors').classList.remove('hidden');
       }
