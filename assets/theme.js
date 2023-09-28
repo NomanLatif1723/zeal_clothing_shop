@@ -1527,17 +1527,17 @@ function initProductForm() {
       const res = await fetch("/cart.js");
       const cartData = await res.json();
 
-      if (cartData.item_count < stockCounter) {
-        await submitProductForm(form,event);
-      } else {
-        document.querySelector('.product-form__errors').classList.remove('hidden');
-      }
+      // if (cartData.item_count < stockCounter) {
+      //   await submitProductForm(form,event);
+      // } else {
+      //   document.querySelector('.product-form__errors').classList.remove('hidden');
+      // }
       
       if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
         event.preventDefault();
         if (cartData.item_count < stockCounter) {
           // Submit Form Ajax
-          await submitProductForm(form);
+          await submitProductForm(form, cartData);
           // update Cart Drawer
           await updateCartDrawer();
           // open Cart Drawer
@@ -1559,27 +1559,16 @@ function initProductForm() {
     });
   });
 
-  async function submitProductForm(form) {
-    if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
-      event.preventDefault();
-      await fetch('/cart/add', {
-        method: "POST",
-        body: new FormData(form),
-      });
-  
-      // update Cart Drawer
-      await updateCartDrawer();
-      // open Cart Drawer
-      openCartDrawer();
-      
-      // Update The Counter
-      cartItemCount(cartData);
-  
-      initCartForm();
-    } else {
-      // form.submit();
-      // window.location = window.themeContent.routes.cartUrl;
-    }
+  async function submitProductForm(form,cartData) {
+    await fetch('/cart/add', {
+      method: "POST",
+      body: new FormData(form),
+    });
+    
+    // Update The Counter
+    cartItemCount(cartData);
+
+    initCartForm();
     
   }
   async function updateCartDrawer() {
