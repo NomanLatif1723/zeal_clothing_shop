@@ -1543,9 +1543,26 @@ function initProductForm() {
   })
 
   async function submitProductForm(form) {
-    await fetch('/cart/add', {
-      method: "POST",
-      body: new FormData(form),
+    // await fetch('/cart/add', {
+    //   method: "POST",
+    //   body: new FormData(form),
+    // })
+    // .catch(function(error) {
+    //   console.error('Error updating product:', error);
+    // });
+    fetch('/cart/add', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Requested-With': 'XMLHttpRequest'
+      },
+      body: new FormData(form)
+    })
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(res) {
+      console.log(res);
     })
     .catch(function(error) {
       console.error('Error updating product:', error);
