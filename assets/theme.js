@@ -1555,10 +1555,14 @@ function initProductForm() {
 
   async function submitProductForm(form) {
     
-    await fetch('/cart/add', {
-      method: "POST",
-      body: new FormData(form),
-    });
+    if (cartData.item_count < stockCounter) {
+      await fetch('/cart/add', {
+        method: "POST",
+        body: new FormData(form),
+      });
+    } else {
+      document.querySelector('.product-form__errors').classList.remove('hidden');
+    }
     
     // Update The Counter
     cartItemCount(cartData);
