@@ -1530,6 +1530,7 @@ function initProductForm() {
       let variantsCounter = selectors.product.variants.find(variant => {
         return selectedOptions.every(option => variant.options.includes(option));
       });
+      console.log(variantsCounter);
 
       if (variantsCounter) {
         alert('All items are added to cart');
