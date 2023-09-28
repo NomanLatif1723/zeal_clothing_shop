@@ -1481,7 +1481,8 @@ function initProductForm() {
     bodyContainer: document.querySelector('body'),
     cartItemCounter: document.querySelectorAll('[data-cart-count]'),
     cartType: 'page',
-    product: window.themeContent.routes.product
+    cartPopupContent: document.querySelector('.cart-popup__content'),
+    cartDrawerContent: document.querySelector("[data-cart]")
   };
   
   // Fetch The Cart Type Rather Page, Drawer or Popup
@@ -1531,24 +1532,14 @@ function initProductForm() {
         // Submit Form Ajax
         await submitProductForm(form);
       }
-      
-      // else if (selectors.cartType === 'popup') {
-      //   // event.preventDefault();
-
-      //   await submitProductForm(form);
-      //   // Update Cart Popup
-      //   await updateCartPopup();
-      //   // Open Popup
-      //   openCartDrawer();
-      // }
     });
   });
 
   async function submitProductForm(form) {
-    // Get cart count
     const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
     const res = await fetch("/cart.js");
     const cartData = await res.json();
+    
     if (cartData.item_count < stockCounter) {
       await fetch('/cart/add', {
         method: "POST",
@@ -1566,7 +1557,6 @@ function initProductForm() {
     } else {
       document.querySelector('.product-form__errors').classList.remove('hidden');
     }
-    
   }
   async function updateCartDrawer() {
     if (selectors.cartType === 'drawer') {
@@ -1574,12 +1564,16 @@ function initProductForm() {
       const text = await res.text();
       const html = document.createElement("div");
       html.innerHTML = text;
-    
       const newBox = html.querySelector("[data-cart]").innerHTML;
-    
-      document.querySelector("[data-cart]").innerHTML = newBox;
+      if (!selectors.cartDrawerContent) {
+        return;
+      }
+      selectors.cartDrawerContent.innerHTML = newBox;
     } else if (selectors.cartType === 'popup') {
-      document.querySelector('.cart-popup__content').textContent = window.themeContent.strings.itemAddedSuccess;
+      if (!selectors.cartPopupContent) {
+        return;
+      }
+      selectors.cartPopupContent.textContent = window.themeContent.strings.itemAddedSuccess;
     }
     
   
