@@ -1532,10 +1532,9 @@ function initProductForm() {
       if (variantsCounter) {
         alert('All items are added to cart');
       } else {
-        form.submit();
+        // form.submit();
       }
     form.addEventListener('submit', async (event) => {
-      event.preventDefault();
       
       if (selectors.cartType === 'drawer') {
         event.preventDefault();
