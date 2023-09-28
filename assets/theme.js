@@ -1563,19 +1563,19 @@ function initProductForm() {
   })
 
   async function submitProductForm(form) {
-    await fetch('/cart/add', {
-      method: "POST",
-      body: new FormData(form),
-    })
-    .catch(function(error) {
-      console.error('Error updating product:', error);
-    });
-
     // Get cart count
+    const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
     const res = await fetch("/cart.js");
     const cartData = await res.json();
-
-    console.log(cartData);
+    if (cartData.item_count < stockCounter) {
+      await fetch('/cart/add', {
+        method: "POST",
+        body: new FormData(form),
+      });
+    } else {
+      document.querySelector('.product-form__errors').classList.remove('hidden');
+    }
+    
     // Update The Counter
     cartItemCount(cartData);
 
