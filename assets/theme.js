@@ -1535,16 +1535,16 @@ function initProductForm() {
       
       if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
         event.preventDefault();
-        if (cartData.item_count < stockCounter) {
+        // if (cartData.item_count < stockCounter) {
           // Submit Form Ajax
           await submitProductForm(form, cartData);
           // update Cart Drawer
           await updateCartDrawer();
           // open Cart Drawer
           openCartDrawer();
-        } else {
-          document.querySelector('.product-form__errors').classList.remove('hidden');
-        }
+        // } else {
+        //   document.querySelector('.product-form__errors').classList.remove('hidden');
+        // }
       }
       
       // else if (selectors.cartType === 'popup') {
