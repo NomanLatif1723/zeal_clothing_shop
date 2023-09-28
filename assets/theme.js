@@ -1389,8 +1389,6 @@ function initProductVariants() {
     if (!selectors.productAddToCartBtn) {
       return;
     }
-    console.log(selectors.product);
-    console.log(matchedVariant.inventory_quantity);
     if (matchedVariant.available) {
       selectors.productAddToCartBtn.textContent = window.themeContent.strings.addToCart;
       selectors.productAddToCartBtn.disabled = false;
