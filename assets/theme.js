@@ -1477,7 +1477,8 @@ function initProductForm() {
     cartBox: document.querySelector('[data-cart-modal] .cart-drawer__box'),
     bodyContainer: document.querySelector('body'),
     cartItemCounter: document.querySelectorAll('[data-cart-count]'),
-    cartType: 'page'
+    cartType: 'page',
+    product: window.themeContent.routes.product
   };
   
   // Fetch The Cart Type Rather Page, Drawer or Popup
@@ -1520,9 +1521,22 @@ function initProductForm() {
     if (!form) {
       return;
     }
-    const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
-    console.log(stockCounter);
+    
     form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
+      console.log(stockCounter);
+      let selectedOptions = [];
+      let variantsCounter = selectors.product.variants.find(variant => {
+        return selectedOptions.every(option => variant.options.includes(option));
+      });
+
+      if (variantsCounter) {
+        alert('All items are added to cart');
+      } else {
+        form.submit();
+      }
+      
       if (selectors.cartType === 'drawer') {
         event.preventDefault();
 
