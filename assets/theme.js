@@ -1530,6 +1530,8 @@ function initProductForm() {
 
       if (cartData.item_count < stockCounter) {
         await submitProductForm(form);
+      } else {
+        document.querySelector('.product-form__errors').classList.remove('hidden');
       }
       
       // if (selectors.cartType === 'drawer') {
@@ -1551,8 +1553,8 @@ function initProductForm() {
       //   // Open Popup
       //   openCartDrawer();
       // }
-    })
-  })
+    });
+  });
 
   async function submitProductForm(form) {
     await fetch('/cart/add', {
