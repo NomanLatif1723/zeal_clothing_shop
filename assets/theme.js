@@ -1522,24 +1522,27 @@ function initProductForm() {
       return;
     }
     form.addEventListener('submit', async (event) => {
+      event.prevenDefault();
       // Get cart count
       const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
       const res = await fetch("/cart.js");
       const cartData = await res.json();
       
       if (selectors.cartType === 'drawer') {
-        event.preventDefault();
+        // event.preventDefault();
 
-        // Submit Form Ajax
-        await submitProductForm(form);
-
-        // update Cart Drawer
-        await updateCartDrawer();
-        
-        // open Cart Drawer
-        openCartDrawer();
+        if (cartData.item_count < stockCounter) {
+          // Submit Form Ajax
+          await submitProductForm(form);
+  
+          // update Cart Drawer
+          await updateCartDrawer();
+          
+          // open Cart Drawer
+          openCartDrawer();
+        }
       } else if (selectors.cartType === 'popup') {
-        event.preventDefault();
+        // event.preventDefault();
 
         // Submit Form With Ajax
         await submitProductForm(form);
