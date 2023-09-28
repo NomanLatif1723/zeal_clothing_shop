@@ -1529,9 +1529,10 @@ function initProductForm() {
       const cartData = await res.json();
 
       if (cartData.item_count < stockCounter) {
-        event.preventDefault();
+        
         await submitProductForm(form);
       } else {
+        event.preventDefault();
         document.querySelector('.product-form__errors').classList.remove('hidden');
       }
       
