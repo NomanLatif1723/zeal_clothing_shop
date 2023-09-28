@@ -165,7 +165,7 @@
         <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" class="selected-variant__id" />
         {% endcomment %}
         <div class="product__block product__buy-buttons" {{ block.shopify_attributes }}>
-          <button type="submit" name="add" aria-label="Add to cart" class="btn btn__link btn__primary" disabled>
+          <button type="submit" name="add" aria-label="Add to cart" class="btn btn__link btn__primary"{% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>
             {% if product.selected_or_first_available_variant.available %}
               {{ 'products.add_to_cart' | t }}
             {% else %}
