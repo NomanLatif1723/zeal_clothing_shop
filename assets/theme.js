@@ -1390,7 +1390,7 @@ function initProductVariants() {
   }
 
   function updateButtons(matchedVariant) {
-    if (!selectors.productAddToCartBtn || ! selectors.formValidationErrorMessage) {
+    if (!selectors.productAddToCartBtn) {
       return;
     }
     if (matchedVariant.available) {
@@ -1400,7 +1400,6 @@ function initProductVariants() {
       selectors.productAddToCartBtn.textContent = window.themeContent.strings.soldOut;
       selectors.productAddToCartBtn.disabled = true;
     }
-    selectors.formValidationErrorMessage.classList.add('hidden');
   }
 
   function updateAvailability(matchedVariant) {
@@ -1468,6 +1467,13 @@ function initProductVariants() {
     // } catch (error) {
     //   console.error('Error updating media:', error);
     // }
+  }
+
+  function updateProductInfo(matchedVariant) {
+    if (! selectors.formValidationErrorMessage) {
+      return;
+    }
+    selectors.formValidationErrorMessage.classList.add('hidden');
   }
 }
 initProductVariants();
