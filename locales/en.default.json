@@ -65,7 +65,8 @@
       "minus": "Minus"
     },
     "items": {
-      "item_added": "Item Added To your Cart"
+      "item_added": "Item Added To your Cart",
+      "quantity_error_message": "All {{ quantity }} Items are Added to Cart"
     }
   },
   "collections": {
