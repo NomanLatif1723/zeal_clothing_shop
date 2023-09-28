@@ -1336,9 +1336,9 @@ function initProductVariants() {
       updateProductUnitPrice(matchedVariant);
       updateProductSku(matchedVariant);
       updateAvailability(matchedVariant);
-      updateInventory(matchedVariant);
+      await updateInventory(matchedVariant);
       updateButtons(matchedVariant);
-      updateProductInfo(matchedVariant);
+      await updateProductInfo(matchedVariant);
       updateMedia(matchedVariant);
     }
   }
@@ -1418,7 +1418,7 @@ function initProductVariants() {
     }
   }
 
-  function updateInventory(matchedVariant) {
+  async function updateInventory(matchedVariant) {
     const requestedVariantId = matchedVariant.id;
     fetch(
       `${window.location.protocol}//${window.location.host}${window.location.pathname}?variant=${matchedVariant.id}`)
@@ -1469,7 +1469,7 @@ function initProductVariants() {
     // }
   }
 
-  function updateProductInfo(matchedVariant) {
+  async function updateProductInfo(matchedVariant) {
     const requestedVariantId = matchedVariant.id;
     fetch(
       `${window.location.protocol}//${window.location.host}${window.location.pathname}?variant=${matchedVariant.id}`)
