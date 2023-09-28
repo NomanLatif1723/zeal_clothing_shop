@@ -1327,13 +1327,13 @@ function initProductVariants() {
 
     if (matchedVariant) {
       updateMasterVariant(matchedVariant);
-      updateButtons(matchedVariant);
       updateUrl(matchedVariant);
       updateProductPrice(matchedVariant);
       updateProductUnitPrice(matchedVariant);
       updateProductSku(matchedVariant);
       updateAvailability(matchedVariant);
       updateInventory(matchedVariant);
+      updateButtons(matchedVariant);
       updateMedia(matchedVariant);
     }
   }
