@@ -1425,11 +1425,18 @@ function initProductVariants() {
         const html = new DOMParser().parseFromString(responseText, 'text/html');
         const inventorySource = html.querySelector('[data-inventory]');
         const inventoryDestination = document.querySelector('[data-inventory]');
+        const inventorySource2 = html.querySelector('[data-inventory-count]');
+        const inventoryDestination2 = document.querySelector('[data-inventory-count]');
         if (!inventorySource || !inventoryDestination) {
           return;
         }
         if (inventorySource && inventoryDestination) inventoryDestination.innerHTML = inventorySource.innerHTML;
+        if (!inventorySource2 || !inventoryDestination2) {
+          return;
+        }
+        if (inventorySource2 && inventoryDestination2) inventoryDestination2.innerHTML = inventorySource2.innerHTML;
       });
+    
   }
 
   function updateMedia(matchedVariant) {
