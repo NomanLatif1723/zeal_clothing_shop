@@ -1432,7 +1432,7 @@ function initProductVariants() {
         if (!inventorySource2 || !inventoryDestination2) {
           return;
         }
-        if (inventorySource2 && inventoryDestination2) inventoryDestination2.innerHTML = inventorySource2.innerHTML;
+        if (inventorySource2 && inventoryDestination2) inventoryDestination2.dataset.inventoryCount = inventorySource2..dataset.inventoryCount;
       });
     
   }
