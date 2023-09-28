@@ -1528,7 +1528,6 @@ function initProductForm() {
       const cartData = await res.json();
 
       if (cartData.item_count < stockCounter) {
-        
         await submitProductForm(form,event);
       } else {
         document.querySelector('.product-form__errors').classList.remove('hidden');
@@ -1574,8 +1573,8 @@ function initProductForm() {
   
       initCartForm();
     } else {
-      form.submit();
-      window.location = window.themeContent.routes.cartUrl;
+      // form.submit();
+      // window.location = window.themeContent.routes.cartUrl;
     }
     
   }
