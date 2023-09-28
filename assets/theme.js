@@ -1522,13 +1522,14 @@ function initProductForm() {
       return;
     }
     form.addEventListener('submit', async (event) => {
-      event.prevenDefault();
+      // event.prevenDefault();
       // Get cart count
       const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
       const res = await fetch("/cart.js");
       const cartData = await res.json();
 
       if (cartData.item_count < stockCounter) {
+        event.preventDefault();
         await submitProductForm(form);
       } else {
         document.querySelector('.product-form__errors').classList.remove('hidden');
