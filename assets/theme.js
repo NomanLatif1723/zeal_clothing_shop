@@ -1523,9 +1523,9 @@ function initProductForm() {
     }
     form.addEventListener('submit', async (event) => {
       // Get cart count
-      const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
-      const res = await fetch("/cart.js");
-      const cartData = await res.json();
+      // const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
+      // const res = await fetch("/cart.js");
+      // const cartData = await res.json();
 
       // if (cartData.item_count < stockCounter) {
       //   await submitProductForm(form,event);
