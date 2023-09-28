@@ -1439,7 +1439,6 @@ function initProductVariants() {
         }
         if (inventorySource2 && inventoryDestination2) inventoryDestination2.setAttribute('data-inventory-count', inventorySource2);
       });
-    
   }
 
   function updateMedia(matchedVariant) {
@@ -1471,6 +1470,20 @@ function initProductVariants() {
   }
 
   function updateProductInfo(matchedVariant) {
+    const requestedVariantId = matchedVariant.id;
+    fetch(
+      `${window.location.protocol}//${window.location.host}${window.location.pathname}?variant=${matchedVariant.id}`)
+      .then((response) => response.text())
+      .then((responseText) => {
+        if (matchedVariant.id !== requestedVariantId) return;
+        const html = new DOMParser().parseFromString(responseText, 'text/html');
+        const inventoryErrorMessage = html.querySelector('[data-inventory-count]').dataset.inventoryCount;
+        const inventoryMessageDestination = document.querySelector('[data-inventory-count]');
+        if (!inventoryErrorMessage || !inventoryMessageDestination) {
+          return;
+        }
+        if (inventoryErrorMessage && inventoryMessageDestination) inventoryMessageDestination.setAttribute('data-inventory-count', inventoryErrorMessage);
+      });
     if (! selectors.formValidationErrorMessage) {
       return;
     }
