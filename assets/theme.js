@@ -1587,7 +1587,7 @@ function initProductForm() {
       if (!selectors.formValidationErrorMessage) {
         return;
       }
-      // selectors.formValidationErrorMessage.classList.remove('hidden');
+      selectors.formValidationErrorMessage.classList.remove('hidden');
     }
   }
   async function updateCartDrawer() {
