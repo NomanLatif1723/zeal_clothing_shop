@@ -1573,6 +1573,7 @@ function initProductForm() {
   
       initCartForm();
     } else {
+      form.submit();
       window.location = window.themeContent.routes.cartUrl;
     }
     
