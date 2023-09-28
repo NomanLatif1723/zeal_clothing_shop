@@ -1477,12 +1477,18 @@ function initProductVariants() {
       .then((responseText) => {
         if (matchedVariant.id !== requestedVariantId) return;
         const html = new DOMParser().parseFromString(responseText, 'text/html');
-        const inventoryErrorMessage = html.querySelector('[data-inventory-count]').dataset.inventoryCount;
-        const inventoryMessageDestination = document.querySelector('[data-inventory-count]');
-        if (!inventoryErrorMessage || !inventoryMessageDestination) {
+        const inventoryCount = html.querySelector('[data-inventory-count]').dataset.inventoryCount;
+        const inventoryCountDestination = document.querySelector('[data-inventory-count]');
+        const inventoryMessage = html.querySelector('.product-form__errors');
+        const inventoryMessageDestination = document.querySelector('.product-form__errors');
+        if (!inventoryCount || !inventoryCountDestination) {
           return;
         }
-        if (inventoryErrorMessage && inventoryMessageDestination) inventoryMessageDestination.setAttribute('data-inventory-count', inventoryErrorMessage);
+        if (inventoryCount && inventoryCountDestination) inventoryCountDestination.setAttribute('data-inventory-count', inventoryCount);
+        if (!inventoryMessage || !inventoryMessageDestination) {
+          return;
+        }
+        if (inventoryMessage && inventoryMessageDestination) inventoryCountDestination.setAttribute('data-inventory-count', inventoryCount);
       });
     if (! selectors.formValidationErrorMessage) {
       return;
