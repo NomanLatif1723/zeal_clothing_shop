@@ -1525,7 +1525,7 @@ function initProductForm() {
       console.log(stockCounter);
       let selectedOptions = [];
       let variantsCounter = selectors.product.variants.find(variant => {
-        return selectedOptions.every(option => variant.options.includes(option));
+        selectedOptions.every(option => variant.options.includes(option));
       });
       console.log(variantsCounter);
 
