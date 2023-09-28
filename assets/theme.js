@@ -1527,7 +1527,6 @@ function initProductForm() {
         event.preventDefault();
         // Submit Form Ajax
         await submitProductForm(form);
-        initCartForm();
       }
       
       // else if (selectors.cartType === 'popup') {
@@ -1560,7 +1559,7 @@ function initProductForm() {
     // Update The Counter
     cartItemCount(cartData);
 
-    
+    // initCartForm();
     
   }
   async function updateCartDrawer() {
