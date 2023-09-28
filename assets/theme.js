@@ -1522,7 +1522,6 @@ function initProductForm() {
       return;
     }
     form.addEventListener('submit', async (event) => {
-      // event.prevenDefault();
       // Get cart count
       const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
       const res = await fetch("/cart.js");
@@ -1530,9 +1529,8 @@ function initProductForm() {
 
       if (cartData.item_count < stockCounter) {
         
-        await submitProductForm(form);
+        await submitProductForm(form,event);
       } else {
-        event.preventDefault();
         document.querySelector('.product-form__errors').classList.remove('hidden');
       }
       
@@ -1560,6 +1558,7 @@ function initProductForm() {
 
   async function submitProductForm(form) {
     if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
+      event.preventDefault();
       await fetch('/cart/add', {
         method: "POST",
         body: new FormData(form),
