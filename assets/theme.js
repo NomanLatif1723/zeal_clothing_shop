@@ -1150,6 +1150,9 @@ function initCartForm() {
         <a href="${window.themeContent.routes.all_collections}" title="${window.themeContent.strings.continue_shopping}" class="form__links">${window.themeContent.strings.continue_shopping}</a>
       `;
       if (items.length === 0) {
+        if(!freeShippingBar || !cartForm){
+          return;
+        }
         freeShippingBar.remove();
         cartForm.remove();
         container.appendChild(emptyCart);
