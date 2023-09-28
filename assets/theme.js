@@ -1338,6 +1338,7 @@ function initProductVariants() {
       updateAvailability(matchedVariant);
       updateInventory(matchedVariant);
       updateButtons(matchedVariant);
+      updateProductInfo(matchedVariant);
       updateMedia(matchedVariant);
     }
   }
