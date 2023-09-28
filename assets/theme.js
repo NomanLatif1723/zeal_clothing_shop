@@ -1530,8 +1530,6 @@ function initProductForm() {
 
       if (cartData.item_count < stockCounter) {
         await submitProductForm(form);
-      } else if (selectors.cartType === 'page') {
-        form.submit();
       } else {
         document.querySelector('.product-form__errors').classList.remove('hidden');
       }
@@ -1559,20 +1557,25 @@ function initProductForm() {
   });
 
   async function submitProductForm(form) {
-    await fetch('/cart/add', {
-      method: "POST",
-      body: new FormData(form),
-    });
-
-    // update Cart Drawer
-    await updateCartDrawer();
-    // open Cart Drawer
-    openCartDrawer();
+    if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
+      await fetch('/cart/add', {
+        method: "POST",
+        body: new FormData(form),
+      });
+  
+      // update Cart Drawer
+      await updateCartDrawer();
+      // open Cart Drawer
+      openCartDrawer();
+      
+      // Update The Counter
+      cartItemCount(cartData);
+  
+      initCartForm();
+    } else {
+      window.location = window.themeContent.routes.cartUrl;
+    }
     
-    // Update The Counter
-    cartItemCount(cartData);
-
-    initCartForm();
   }
   async function updateCartDrawer() {
     if (selectors.cartType === 'drawer') {
