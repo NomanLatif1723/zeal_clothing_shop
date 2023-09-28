@@ -1522,29 +1522,15 @@ function initProductForm() {
       return;
     }
     form.addEventListener('submit', async (event) => {
-      // Get cart count
-      const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
-      const res = await fetch("/cart.js");
-      const cartData = await res.json();
-
-      // if (cartData.item_count < stockCounter) {
-      //   await submitProductForm(form,event);
-      // } else {
-      //   document.querySelector('.product-form__errors').classList.remove('hidden');
-      // }
       
       if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
         event.preventDefault();
-        if (cartData.item_count < stockCounter) {
-          // Submit Form Ajax
-          await submitProductForm(form, cartData);
-          // update Cart Drawer
-          await updateCartDrawer();
-          // open Cart Drawer
-          openCartDrawer();
-        } else {
-          document.querySelector('.product-form__errors').classList.remove('hidden');
-        }
+        // Submit Form Ajax
+        await submitProductForm(form, cartData);
+        // update Cart Drawer
+        await updateCartDrawer();
+        // open Cart Drawer
+        openCartDrawer();
       }
       
       // else if (selectors.cartType === 'popup') {
@@ -1560,6 +1546,11 @@ function initProductForm() {
   });
 
   async function submitProductForm(form,cartData) {
+    // Get cart count
+    const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
+    const res = await fetch("/cart.js");
+    const cartData = await res.json();
+    
     await fetch('/cart/add', {
       method: "POST",
       body: new FormData(form),
