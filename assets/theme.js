@@ -1488,7 +1488,7 @@ function initProductVariants() {
         if (!inventoryMessage || !inventoryMessageDestination) {
           return;
         }
-        if (inventoryMessage && inventoryMessageDestination) inventoryCountDestination.setAttribute('data-inventory-count', inventoryCount);
+        if (inventoryMessage && inventoryMessageDestination) inventoryCountDestination.innerHTML = inventoryMessage.innerHTML;
       });
     if (! selectors.formValidationErrorMessage) {
       return;
