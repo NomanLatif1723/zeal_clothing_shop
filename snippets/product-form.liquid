@@ -160,7 +160,7 @@
         </div>
       </div>
     {%- when 'buy_buttons' -%}
-      {%- form 'product', product, id: product_form_id, class: "product__form", data-section-id: section.id, data-format: shop.money_format -%}
+      {%- form 'product', product, id: product_form_id, class: "product__form", novalidate: 'novalidate', data-section-id: section.id, data-format: shop.money_format -%}
         {% comment %}
         <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" class="selected-variant__id" />
         {% endcomment %}
