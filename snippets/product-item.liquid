@@ -105,13 +105,15 @@
         {%- render 'product-options-swatches', product: product -%}
       {%- endif -%}
       {%- if settings.show_add_to_cart -%}
-        <button type="submit" name="add" aria-label="Add to cart" data-inventory-count="{{ product.selected_or_first_available_variant.inventory_quantity }}" class="btn btn__link btn__primary"{% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>
-          {% if product.selected_or_first_available_variant.available %}
-            {{ 'products.add_to_cart' | t }}
-          {% else %}
-            {{ 'products.sold_out' | t }}
-          {% endif %}
-        </button>
+        <div class="product__buy-buttons">
+          <button type="submit" name="add" aria-label="Add to cart" data-inventory-count="{{ product.selected_or_first_available_variant.inventory_quantity }}" class="btn btn__link btn__primary"{% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>
+            {% if product.selected_or_first_available_variant.available %}
+              {{ 'products.add_to_cart' | t }}
+            {% else %}
+              {{ 'products.sold_out' | t }}
+            {% endif %}
+          </button>
+        </div>
       {%- endif -%}
     </div>
     <div class="grid__badge">
