@@ -19,6 +19,7 @@
                   type="radio"
                   id="{{ option.name | handleize }}-{{ value | handleize }}"
                   value= "{{ value }}"
+                  form="{{ product_form_id }}"
                   name="{{ option.name }}"
                   />
                   <label for="{{ option.name | handleize }}-{{ value | handleize }}">
@@ -39,6 +40,7 @@
                   data-selected-variant
                   type="radio"
                   id="{{ option.name | handleize }}-{{ value | handleize }}"
+                  form="{{ product_form_id }}"
                   value= "{{ value }}"
                   name="{{ option.name }}"
                   />
