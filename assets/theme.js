@@ -1353,6 +1353,7 @@ function initProductVariants() {
 
     if (matchedVariant) {
       updateMasterVariant(matchedVariant);
+      updateOptionsNames(matchedVariant);
       updateUrl(matchedVariant);
       updateProductPrice(matchedVariant);
       updateProductUnitPrice(matchedVariant);
@@ -1524,10 +1525,10 @@ function initProductVariants() {
     selectors.formValidationErrorMessage.classList.add('hidden');
   }
 
-  function updateOptionsNames() {
-    optionElements.forEach((optionElement, index) => {
-      const selectedVariantName = variantSelectors[index].value;
-      const nameElement = optionElement.querySelector('.selected-variant-name');
+  function updateOptionsNames(matchedVariant) {
+    selectors.productOptions.forEach((optionElement, index) => {
+      const selectedVariantName = matchedVariant[index].value;
+      const nameElement = optionElement.querySelector('[data-option-name]');
       nameElement.textContent = selectedVariantName;
     });
   }
