@@ -1320,7 +1320,7 @@ function initProductVariants() {
     }
     selectors.variantSelectors.forEach(selector => {
       selector.addEventListener('change', () => {
-        updateProductOptions(selector);
+        updateProductOptions();
       });
     });
   });
@@ -1331,7 +1331,7 @@ function initProductVariants() {
   //   });
   // });
 
-  function updateProductOptions(selectors) {
+  function updateProductOptions() {
     let selectedOptions = [];
 
     selectors.variantSelectors.forEach(selector => {
