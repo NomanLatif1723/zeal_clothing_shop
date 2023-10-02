@@ -1481,7 +1481,7 @@ function initProductVariants() {
       if (!option) {
         return;
       }
-      option.textContent = matchedVariant.name;
+      option.textContent = option.name;
     })
     const requestedVariantId = matchedVariant.id;
     fetch(
