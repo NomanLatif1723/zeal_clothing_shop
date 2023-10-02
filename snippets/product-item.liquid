@@ -105,15 +105,17 @@
         {%- render 'product-options-swatches', product: product -%}
       {%- endif -%}
       {%- if settings.show_add_to_cart -%}
-        <div class="grid-buy__button product__buy-buttons">
-          <button type="submit" name="add" aria-label="Add to cart" data-inventory-count="{{ product.selected_or_first_available_variant.inventory_quantity }}" class="btn btn__link btn__primary"{% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>
-            {% if product.selected_or_first_available_variant.available %}
-              {{ 'products.add_to_cart' | t }}
-            {% else %}
-              {{ 'products.sold_out' | t }}
-            {% endif %}
-          </button>
-        </div>
+        {%- form 'product', product, id: product_form_id, class: "product__form", novalidate: 'novalidate', data-section-id: section.id, data-format: shop.money_format -%}
+          <div class="grid-buy__button product__buy-buttons">
+            <button type="submit" name="add" aria-label="Add to cart" data-inventory-count="{{ product.selected_or_first_available_variant.inventory_quantity }}" class="btn btn__link btn__primary"{% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>
+              {% if product.selected_or_first_available_variant.available %}
+                {{ 'products.add_to_cart' | t }}
+              {% else %}
+                {{ 'products.sold_out' | t }}
+              {% endif %}
+            </button>
+          </div>
+        {%- endform -%}
       {%- endif -%}
     </div>
     <div class="grid__badge">
