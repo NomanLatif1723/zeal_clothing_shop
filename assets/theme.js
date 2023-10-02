@@ -1294,6 +1294,7 @@ function initProductVariants() {
     productAddToCartBtn: document.querySelector('[name="add"]'),
     variantSelectors: document.querySelectorAll('[data-selected-variant]'),
     productOptionLabel: document.querySelectorAll('[data-option-name]'),
+    productOptions: document.querySelectorAll('.product-form__input'),
     productForm: document.querySelectorAll('.product__form'),
     format: null,
     product: window.themeContent.routes.product,
