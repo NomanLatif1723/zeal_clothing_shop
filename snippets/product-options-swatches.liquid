@@ -14,6 +14,7 @@
             {% if limit > 0 %}
               <div class="color-swatch__item">      
                 <input
+                  data-selected-variant
                   {% if option.selected_value == value %} checked {% endif %}
                   type="radio"
                   id="{{ option.name | handleize }}-{{ value | handleize }}"
@@ -35,6 +36,7 @@
             {%- for value in option.values offset: 5 -%}
               <div class="color-swatch__item">
                 <input
+                  data-selected-variant
                   type="radio"
                   id="{{ option.name | handleize }}-{{ value | handleize }}"
                   value= "{{ value }}"
