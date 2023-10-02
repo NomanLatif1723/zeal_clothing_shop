@@ -1477,6 +1477,12 @@ function initProductVariants() {
   }
 
   function updateProductInfo(matchedVariant) {
+    selectors.productOptionLabel.forEach(option => {
+      if (!option) {
+        return;
+      }
+      option.textContent = matchedVariant.value;
+    })
     const requestedVariantId = matchedVariant.id;
     fetch(
       `${window.location.protocol}//${window.location.host}${window.location.pathname}?variant=${matchedVariant.id}`)
