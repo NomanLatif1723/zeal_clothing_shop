@@ -4,7 +4,7 @@
   assign product_limit = products_per_row | times: products_to_show        
 -%}
 {%- style -%}
-  .main__section-{{ section.id }}{
+  .main__section-{{ section.id }} {
     margin-top: {{ section.settings.margin_top | times: 0.5 | round: 0 }}px;
     margin-bottom: {{ section.settings.margin_bottom | times: 0.5 | round: 0 }}px;
   }
