@@ -1299,12 +1299,18 @@ function initProductVariants() {
     product: window.themeContent.routes.product,
     formValidationErrorMessage: document.querySelector('.product-form__errors')
   };
-
-  if (selectors.productForm) {
-    selectors.format = selectors.productForm.dataset.format;
-  } else {
-    selectors.format = 'default';
-  }
+  selectors.productForm.forEach(productForm => {
+    if (productForm) {
+      selectors.format = productForm.dataset.format;
+    } else {
+      selectors.format = 'default';
+    }
+  });
+  // if (selectors.productForm) {
+  //   selectors.format = selectors.productForm.dataset.format;
+  // } else {
+  //   selectors.format = 'default';
+  // }
   // selectors.productForm.forEach(productForm => {
   //   if (!productForm) {
   //     return;
