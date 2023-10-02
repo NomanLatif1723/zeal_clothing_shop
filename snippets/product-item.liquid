@@ -106,6 +106,7 @@
       {%- endif -%}
       {%- if settings.show_add_to_cart -%}
         {%- form 'product', product, id: product_form_id, class: "product__form", novalidate: 'novalidate', data-section-id: section.id, data-format: shop.money_format -%}
+          {%- assign product_form_id = 'addToCartForm-' | append: section.id | append: '-' | append: product.id -%}
           <div class="grid-buy__button product__buy-buttons">
             <button type="submit" name="add" aria-label="Add to cart" data-inventory-count="{{ product.selected_or_first_available_variant.inventory_quantity }}" class="btn btn__link btn__primary"{% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>
               {% if product.selected_or_first_available_variant.available %}
@@ -115,6 +116,21 @@
               {% endif %}
             </button>
           </div>
+          <select name="id" class="selected-variant__id hidden">
+            {%- for variant in product.variants -%}
+              {%- if variant.available -%}
+                <option {% if variant == product.selected_or_first_available_variant %}
+                  selected="selected"{% endif %}
+                  value="{{ variant.id }}">
+                  {{ variant.title }} - {{ variant.price | money_with_currency }}
+                </option>
+              {%- else -%}
+                <option disabled="disabled">
+                  {{ variant.title }} - {{ 'products.badges.sold_out' | t }}
+                </option>
+              {%- endif -%}
+            {%- endfor -%}
+          </select>
         {%- endform -%}
       {%- endif -%}
     </div>
