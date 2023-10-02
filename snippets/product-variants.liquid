@@ -4,7 +4,7 @@
       <variant-radios data-section="{{ section.id }}" data-url="{{ product.url }}">
         <div class="product__options">
           {% for option in product.options_with_values %}
-            <fieldset class="product-form__input-{{ forloop.index }}">
+            <fieldset class="product-form__input product__input-{{ forloop.index }}">
               <legend class="product-form__label"><strong>{{ option.name }}</strong>(<span data-option-name>{{ option.selected_value }}</span>)</legend>
               {% for value in option.values %}
                 <input type="radio" data-selected-variant form="{{ product_form_id }}" name="{{ option.name }}" value="{{ value }}" {% if option.selected_value == value %}checked{% endif%} id="{{ option.name }}-{{ value }}">
