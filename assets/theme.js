@@ -1293,6 +1293,7 @@ function initProductVariants() {
     productInStock: document.querySelector('[data-inventory]'),
     productAddToCartBtn: document.querySelector('[name="add"]'),
     variantSelectors: document.querySelectorAll('[data-selected-variant]'),
+    productOptionLabel: document.querySelectorAll('[data-option-name]'),
     productForm: document.querySelector('.product__form'),
     format: null,
     product: window.themeContent.routes.product,
