@@ -1293,7 +1293,7 @@ function initProductVariants() {
     productInStock: document.querySelector('[data-inventory]'),
     productAddToCartBtn: document.querySelector('[name="add"]'),
     variantSelectors: document.querySelectorAll('[data-selected-variant]'),
-    productOptionLabel: document.querySelectorAll('[data-option-name]'),
+    productOptionLabel: document.querySelector('[data-option-name]'),
     productForm: document.querySelectorAll('.product__form'),
     format: null,
     product: window.themeContent.routes.product,
@@ -1336,6 +1336,7 @@ function initProductVariants() {
         if (selector.checked) {
           selectedOptions.push(selector.value);
           console.log(selector.value);
+          selectors.productOptionLabel.textContent = selector.value;
         }
       } else {
         selectedOptions.push(selector.value);
