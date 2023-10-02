@@ -1294,23 +1294,38 @@ function initProductVariants() {
     productAddToCartBtn: document.querySelector('[name="add"]'),
     variantSelectors: document.querySelectorAll('[data-selected-variant]'),
     productOptionLabel: document.querySelectorAll('[data-option-name]'),
-    productForm: document.querySelector('.product__form'),
+    productForm: document.querySelectorAll('.product__form'),
     format: null,
     product: window.themeContent.routes.product,
     formValidationErrorMessage: document.querySelector('.product-form__errors')
   };
 
-  if (selectors.productForm) {
-    selectors.format = selectors.productForm.dataset.format;
-  } else {
-    selectors.format = 'default';
-  }
-
-  selectors.variantSelectors.forEach(selector => {
-    selector.addEventListener('change', () => {
-      updateProductOptions();
+  // if (selectors.productForm) {
+  //   selectors.format = selectors.productForm.dataset.format;
+  // } else {
+  //   selectors.format = 'default';
+  // }
+  selectors.productForm.forEach(productForm => {
+    if (!productForm) {
+      return;
+    }
+    if (productForm) {
+      selectors.format = productForm.dataset.format;
+    } else {
+      selectors.format = 'default';
+    }
+    selectors.variantSelectors.forEach(selector => {
+      selector.addEventListener('change', () => {
+        updateProductOptions();
+      });
     });
-  });
+  })
+
+  // selectors.variantSelectors.forEach(selector => {
+  //   selector.addEventListener('change', () => {
+  //     updateProductOptions();
+  //   });
+  // });
 
   function updateProductOptions() {
     let selectedOptions = [];
