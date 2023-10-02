@@ -25,7 +25,7 @@
       <div class="product__options product-select__options">
         {% for option in product.options_with_values %}
           <div class="product-form__select">
-            <label class="product-form__label"><strong>{{ option.name }}</strong> ({{ option.selected_value }})</label>
+            <label class="product-form__label"><strong>{{ option.name }}</strong><span data-option-name>({{ option.selected_value }})</span></label>
             <select form="{{ product_form_id }}" class="product__select" data-selected-variant id="product-select-{{ forloop.index }}">
               {% for value in option.values %}
                 <option value="{{ value }}" {% if option.selected_value == value %}selected{% endif %}>
