@@ -1283,17 +1283,20 @@ initProductQuantitySelector();
 
 // Product Variants js
 function initProductVariants() {
-  
-  let selectors = {
-    productForm: document.querySelectorAll('.product__form')
-  };
+  const productForm  = document.querySelectorAll('.product__form');
+  // let selectors = {
+  //   productForm: document.querySelectorAll('.product__form')
+  // };
 
   // if (selectors.productForm) {
   //   selectors.format = selectors.productForm.dataset.format;
   // } else {
   //   selectors.format = 'default';
   // }
-  selectors.productForm.forEach(productForm => {
+  productForm.forEach(productForm => {
+    if (!productForm) {
+      return;
+    }
     let selectors = {
       masterVariantSelector: document.querySelectorAll('.selected-variant__id'),
       productSalePrice: document.querySelector('[data-sale-price]'),
@@ -1309,9 +1312,7 @@ function initProductVariants() {
       product: window.themeContent.routes.product,
       formValidationErrorMessage: document.querySelector('.product-form__errors')
     };
-    if (!productForm) {
-      return;
-    }
+    
     if (productForm) {
       selectors.format = productForm.dataset.format;
     } else {
