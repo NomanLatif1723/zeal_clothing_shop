@@ -1285,19 +1285,7 @@ initProductQuantitySelector();
 function initProductVariants() {
   
   let selectors = {
-    masterVariantSelector: document.querySelectorAll('.selected-variant__id'),
-    productSalePrice: document.querySelector('[data-sale-price]'),
-    productRegularPrice: document.querySelector('[data-regular-price]'),
-    productUnitPrice: document.querySelector('[data-unit-price]'),
-    productSku: document.querySelector('[data-sku]'),
-    productInStock: document.querySelector('[data-inventory]'),
-    productAddToCartBtn: document.querySelector('[name="add"]'),
-    variantSelectors: document.querySelectorAll('[data-selected-variant]'),
-    productOptionLabel: document.querySelectorAll('[data-option-name]'),
-    productForm: document.querySelectorAll('.product__form'),
-    format: null,
-    product: window.themeContent.routes.product,
-    formValidationErrorMessage: document.querySelector('.product-form__errors')
+    productForm: document.querySelectorAll('.product__form')
   };
 
   // if (selectors.productForm) {
@@ -1306,6 +1294,21 @@ function initProductVariants() {
   //   selectors.format = 'default';
   // }
   selectors.productForm.forEach(productForm => {
+    let selectors = {
+      masterVariantSelector: document.querySelectorAll('.selected-variant__id'),
+      productSalePrice: document.querySelector('[data-sale-price]'),
+      productRegularPrice: document.querySelector('[data-regular-price]'),
+      productUnitPrice: document.querySelector('[data-unit-price]'),
+      productSku: document.querySelector('[data-sku]'),
+      productInStock: document.querySelector('[data-inventory]'),
+      productAddToCartBtn: document.querySelector('[name="add"]'),
+      variantSelectors: document.querySelectorAll('[data-selected-variant]'),
+      productOptionLabel: document.querySelectorAll('[data-option-name]'),
+      productForm: document.querySelectorAll('.product__form'),
+      format: null,
+      product: window.themeContent.routes.product,
+      formValidationErrorMessage: document.querySelector('.product-form__errors')
+    };
     if (!productForm) {
       return;
     }
