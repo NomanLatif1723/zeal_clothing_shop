@@ -1307,7 +1307,6 @@ function initProductVariants() {
       productAddToCartBtn: document.querySelector('[name="add"]'),
       variantSelectors: document.querySelectorAll('[data-selected-variant]'),
       productOptionLabel: document.querySelectorAll('[data-option-name]'),
-      productForm: document.querySelectorAll('.product__form'),
       format: null,
       product: window.themeContent.routes.product,
       formValidationErrorMessage: document.querySelector('.product-form__errors')
@@ -1323,7 +1322,7 @@ function initProductVariants() {
         updateProductOptions();
       });
     });
-  })
+  });
 
   // selectors.variantSelectors.forEach(selector => {
   //   selector.addEventListener('change', () => {
