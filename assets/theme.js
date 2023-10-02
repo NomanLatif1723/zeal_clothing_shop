@@ -1335,10 +1335,10 @@ function initProductVariants() {
       if (selector.type === 'radio' || selector.type === 'checkbox') {
         if (selector.checked) {
           selectedOptions.push(selector.value);
-          console.log(selector.value);
-          selectors.productOptionLabel.forEach(label => {
-            label.textContent = selector.value;
-          });
+          // console.log(selector.value);
+          // selectors.productOptionLabel.forEach(label => {
+          //   label.textContent = selector.value;
+          // });
         }
       } else {
         selectedOptions.push(selector.value);
@@ -1521,6 +1521,14 @@ function initProductVariants() {
       return;
     }
     selectors.formValidationErrorMessage.classList.add('hidden');
+  }
+
+  function updateOptionsNames() {
+    optionElements.forEach((optionElement, index) => {
+      const selectedVariantName = variantSelectors[index].value;
+      const nameElement = optionElement.querySelector('.selected-variant-name');
+      nameElement.textContent = selectedVariantName;
+    });
   }
 }
 initProductVariants();
