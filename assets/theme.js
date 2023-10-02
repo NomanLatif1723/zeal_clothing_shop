@@ -1297,6 +1297,7 @@ function initProductVariants() {
     if (!productForm) {
       return;
     }
+    console.log("process form", productForm);
     let selectors = {
       masterVariantSelector: document.querySelectorAll('.selected-variant__id'),
       productSalePrice: document.querySelector('[data-sale-price]'),
