@@ -1283,53 +1283,44 @@ initProductQuantitySelector();
 
 // Product Variants js
 function initProductVariants() {
-  const productForm  = document.querySelectorAll('.product__form');
-  // let selectors = {
-  //   productForm: document.querySelectorAll('.product__form')
-  // };
+  
+  let selectors = {
+    masterVariantSelector: document.querySelectorAll('.selected-variant__id'),
+    productSalePrice: document.querySelector('[data-sale-price]'),
+    productRegularPrice: document.querySelector('[data-regular-price]'),
+    productUnitPrice: document.querySelector('[data-unit-price]'),
+    productSku: document.querySelector('[data-sku]'),
+    productInStock: document.querySelector('[data-inventory]'),
+    productAddToCartBtn: document.querySelector('[name="add"]'),
+    variantSelectors: document.querySelectorAll('[data-selected-variant]'),
+    productOptionLabel: document.querySelectorAll('[data-option-name]'),
+    productForm: document.querySelectorAll('.product__form'),
+    format: null,
+    product: window.themeContent.routes.product,
+    formValidationErrorMessage: document.querySelector('.product-form__errors')
+  };
 
-  // if (selectors.productForm) {
-  //   selectors.format = selectors.productForm.dataset.format;
-  // } else {
-  //   selectors.format = 'default';
-  // }
-  productForm.forEach(productForm => {
-    if (!productForm) {
-      return;
-    }
-    console.log("process form", productForm);
-    let selectors = {
-      masterVariantSelector: document.querySelectorAll('.selected-variant__id'),
-      productSalePrice: document.querySelector('[data-sale-price]'),
-      productRegularPrice: document.querySelector('[data-regular-price]'),
-      productUnitPrice: document.querySelector('[data-unit-price]'),
-      productSku: document.querySelector('[data-sku]'),
-      productInStock: document.querySelector('[data-inventory]'),
-      productAddToCartBtn: document.querySelector('[name="add"]'),
-      variantSelectors: document.querySelectorAll('[data-selected-variant]'),
-      productOptionLabel: document.querySelectorAll('[data-option-name]'),
-      format: null,
-      product: window.themeContent.routes.product,
-      formValidationErrorMessage: document.querySelector('.product-form__errors')
-    };
-    
-    if (productForm) {
-      selectors.format = productForm.dataset.format;
-    } else {
-      selectors.format = 'default';
-    }
-    selectors.variantSelectors.forEach(selector => {
-      selector.addEventListener('change', () => {
-        updateProductOptions();
-      });
+  if (selectors.productForm) {
+    selectors.format = selectors.productForm.dataset.format;
+  } else {
+    selectors.format = 'default';
+  }
+  // selectors.productForm.forEach(productForm => {
+  //   if (!productForm) {
+  //     return;
+  //   }
+  //   if (productForm) {
+  //     selectors.format = productForm.dataset.format;
+  //   } else {
+  //     selectors.format = 'default';
+  //   }
+  // })
+
+  selectors.variantSelectors.forEach(selector => {
+    selector.addEventListener('change', () => {
+      updateProductOptions();
     });
   });
-
-  // selectors.variantSelectors.forEach(selector => {
-  //   selector.addEventListener('change', () => {
-  //     updateProductOptions();
-  //   });
-  // });
 
   function updateProductOptions() {
     let selectedOptions = [];
