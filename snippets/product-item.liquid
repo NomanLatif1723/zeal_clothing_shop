@@ -105,7 +105,7 @@
         {%- render 'product-options-swatches', product: product -%}
       {%- endif -%}
       {%- if settings.show_add_to_cart -%}
-        <div class="product__buy-buttons">
+        <div class="grid-buy__button product__buy-buttons">
           <button type="submit" name="add" aria-label="Add to cart" data-inventory-count="{{ product.selected_or_first_available_variant.inventory_quantity }}" class="btn btn__link btn__primary"{% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>
             {% if product.selected_or_first_available_variant.available %}
               {{ 'products.add_to_cart' | t }}
