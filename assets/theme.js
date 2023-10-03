@@ -1511,8 +1511,8 @@ function initProductVariants() {
     //   variantValueElement.textContent = selectedVariantName;
     // });
     selectors.productOptions.forEach(selector => {
-      const selectElement = selector.querySelector('.variant-selector');
-      const selectedVariantName = selector.text;
+      const selectElement = selector.querySelector('.selected-variant-name');
+      const selectedVariantName = selectElement.input[selectElement.selectedIndex].text;
       const variantValueElement = selector.querySelector('[data-option-name]');
       variantValueElement.textContent = selectedVariantName;
     });
