@@ -1583,7 +1583,6 @@ function initProductForm() {
     const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
     const res = await fetch("/cart.js");
     const cartData = await res.json();
-    console.log(cartData);
     // if (cartData.item_count < stockCounter) {
       await fetch('/cart/add', {
         method: "POST",
