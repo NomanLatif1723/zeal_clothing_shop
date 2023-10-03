@@ -1642,6 +1642,9 @@ function initProductForm() {
       } else {
         const updatedQuantity = existingCartItem.quantity + 1;
         await addToCart(variantId, event);
+        await updateCartDrawer();
+        await openCartDrawer();
+        await cartItemCount(cartData);
       }
     } else {
       if (cartData.item_count >= quantity) {
