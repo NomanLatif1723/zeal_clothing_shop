@@ -1567,7 +1567,6 @@ function initProductForm() {
       return;
     }
     form.addEventListener('submit', async (event) => {
-      event.preventDefault();
       if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
         event.preventDefault();
         // Submit Form Ajax
