@@ -1572,23 +1572,12 @@ function initProductForm() {
         const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
         const res = await fetch("/cart.js");
         const cartData = await res.json();
-        console.log(cartData);
         const items = cartData.items
         items.forEach(item => {
           const itemsCount  = item.quantity;
-          if (itemsCount) {
-            // Submit Form Ajax
-            await submitProductForm(form);
-          } else {
-            if (!selectors.formValidationErrorMessage) {
-              return;
-            }
-            selectors.formValidationErrorMessage.classList.remove('hidden');
-          }
-        })
-        // console.log(itemsCount);
-        // // Submit Form Ajax
-        // await submitProductForm(form);
+        });
+        // Submit Form Ajax
+        await submitProductForm(form);
       }
     });
   });
