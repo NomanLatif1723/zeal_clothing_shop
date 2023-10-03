@@ -1329,8 +1329,8 @@
         "enable_image_zoom": {
           "label": "Enable Image Zoom"
         },
-        "media_layout": {
-          "label": "Desktop Layout",
+        "media_width": {
+          "label": "Desktop Width",
           "options": {
             "compact": {
               "label": "Compact"
@@ -1340,6 +1340,17 @@
             },
             "extended": {
               "label": "Extended"
+            }
+          }
+        },
+        "media_layout": {
+          "label": "Desktop Layout",
+          "options": {
+            "grid": {
+              "label": "Grid"
+            },
+            "thumbnail": {
+              "label": "Thumbnail"
             }
           }
         },
