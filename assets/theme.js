@@ -1587,7 +1587,7 @@ function initProductForm() {
       itemsCount = item.quantity;
     });
     console.log(itemsCount);
-    if (itemsCount < stockCounter) {
+    if (stockCounter > 0) {
       await fetch('/cart/add', {
         method: "POST",
         body: new FormData(form),
