@@ -77,6 +77,36 @@
         <div class="swiper-button-next swiper-button-{{ section.id }}"></div>
       {%- endif -%}
     </div>
+    {% else %}
+    <div>
+      {%- for media in product.media -%}
+          <div class="swiper-slide product-media-{{ media.id }}" >
+            <a href="#" class="product__thumbs">
+              {%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
+                <span class="product__play-icon">
+                  {%- render 'icon-play' -%}
+                </span>
+                
+              {%- endif -%}
+              <img
+                class="product__image"
+                src="{{ media | img_url: '360x' }}"
+                srcset="
+                  {{ media | img_url: '120x' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}120{% endif %}w,
+                  {{ media | img_url: '360x' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}360{% endif %}w,
+                  {{ media | img_url: '540x' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}540{% endif %}w,
+                  {{ media | img_url: '720x' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}720{% endif %}w"
+                width="{{ media.width }}"
+                height="{{ media.height }}"
+                loading="lazy"
+                sizes="{{ sizes }}"
+                alt="{{ media.alt }}"
+                data-media-id="{{ media.id }}"
+                />
+            </a>
+          </div>
+        {%- endfor -%}
+    </div>
   {%- endif -%}
   {%- if section.settings.thumbnail_position == 'left' and section.settings.media_layout == 'thumbnail' -%}
     </div>
