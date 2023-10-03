@@ -1540,6 +1540,12 @@ function initProductVariants() {
         id: variantId,
       }),
     });
+     if (res.ok) {
+      console.log('Variant added to cart successfully.');
+    } else {
+      console.error('Error adding variant to cart.');
+    }
+  }
 }
 initProductVariants();
 
