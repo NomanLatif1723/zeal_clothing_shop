@@ -1693,6 +1693,7 @@ function initProductRecommendations() {
       replaceContent();
     })
   }
+  initProductForm();
 }
 initProductRecommendations();
 })();
