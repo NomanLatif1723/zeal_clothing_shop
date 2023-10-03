@@ -1570,7 +1570,7 @@ function initProductForm() {
       event.preventDefault();
       const selectedVariantId = form.querySelector('.selected-variant__id').value;
       const stockCounter = form.dataset.inventoryCount;
-      checkInventoryAndAddToCart(selectedVariantId, stockCounter);
+      checkInventoryAddToCart(selectedVariantId, stockCounter);
       
       if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
         event.preventDefault();
