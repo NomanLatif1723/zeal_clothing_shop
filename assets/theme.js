@@ -1512,7 +1512,7 @@ function initProductVariants() {
     // });
     selectors.productOptions.forEach(selector => {
       const selectElement = selector.querySelector('.variant-selector');
-      const selectedVariantName = selectElement.options[selectElement.selectedIndex].text;
+      const selectedVariantName = selector.text;
       const variantValueElement = selector.querySelector('[data-option-name]');
       variantValueElement.textContent = selectedVariantName;
     });
