@@ -1,6 +1,6 @@
 {{ 'product.css' | asset_url | stylesheet_tag: preload: true }}
 {%- liquid
-  assign media_container_width = section.settings.media_layout
+  assign media_container_width = section.settings.media_width
   assign media_size = '760px'
   if media_container_width == 'compact'
     assign product_media_width = 'product-block__small'
@@ -98,9 +98,9 @@
       },
       {
         "type": "select",
-        "id": "media_layout",
+        "id": "media_width",
         "label": "t:sections.main-product.settings.media_layout.label",
-        "default": "compact",
+        "default": "large",
         "options": [
           {
             "value": "compact",
