@@ -1308,7 +1308,7 @@ function initProductVariants() {
 
   selectors.variantSelectors.forEach(selector => {
     selector.addEventListener('change', () => {
-      // updateProductOptions(selector);
+      updateProductOptions(selector);
     });
   });
 
@@ -1317,7 +1317,7 @@ function initProductVariants() {
     if (selector.type === 'radio' || selector.type === 'checkbox') {
       if (selector.checked) {
         selectedOptions.push(selector.value);
-        updateOptionsNames(selector);
+        // updateOptionsNames(selector);
       }
     } else {
       selectedOptions.push(selector.value);
