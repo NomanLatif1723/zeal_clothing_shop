@@ -1573,6 +1573,8 @@ function initProductForm() {
         const res = await fetch("/cart.js");
         const cartData = await res.json();
         console.log(cartData);
+        const itemsCount = cartData.items.forEach((item) => { item.quantity });
+        console.log(itemsCount);
         // Submit Form Ajax
         await submitProductForm(form);
       }
