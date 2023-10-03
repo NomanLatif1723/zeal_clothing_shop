@@ -1325,14 +1325,14 @@ function initProductVariants() {
 
   selectors.variantSelectors.forEach(selector => {
     selector.addEventListener('change', () => {
-      updateProductOptions();
+      updateProductOptions(selector);
     });
   });
 
-  function updateProductOptions() {
+  function updateProductOptions(selector) {
     let selectedOptions = [];
 
-    selectors.variantSelectors.forEach(selector => {
+    // selectors.variantSelectors.forEach(selector => {
       if (selector.type === 'radio' || selector.type === 'checkbox') {
         if (selector.checked) {
           selectedOptions.push(selector.value);
@@ -1340,7 +1340,7 @@ function initProductVariants() {
       } else {
         selectedOptions.push(selector.value);
       }
-    });
+    // });
 
     // Find the matched variant
     let matchedVariant = selectors.product.variants.find(variant => {
@@ -1520,26 +1520,18 @@ function initProductVariants() {
     selectors.formValidationErrorMessage.classList.add('hidden');
   }
 
-  function updateOptionsNames(matchedVariant) {
-    const variantSelectors = document.querySelectorAll('.product-form__input');
-    variantSelectors.forEach(selector => {
-      const selectedVariantName = selector.value;
-      const dataSelectedVariant = selector.dataset.selectedVariant;
-      const nameElement = document.querySelector('.selected-variant-name[data-selected-variant="' + dataSelectedVariant + '"]');
+  // function updateOptionsNames(matchedVariant) {
+  //   const variantSelectors = document.querySelectorAll('.product-form__input');
+  //   variantSelectors.forEach(selector => {
+  //     const selectedVariantName = selector.value;
+  //     const dataSelectedVariant = selector.dataset.selectedVariant;
+  //     const nameElement = document.querySelector('.selected-variant-name[data-selected-variant="' + dataSelectedVariant + '"]');
       
-      if (nameElement) {
-        nameElement.textContent = selectedVariantName;
-      }
-    });
-    // selectors.productOptions.forEach((optionElement, index) => {
-    //   const selectedVariantName = optionElement.value;
-    //   const dataSelectedVariant = optionElement.dataset.selectedVariant;
-    //   const nameElement = optionElement[index].querySelector('[data-option-name][data-selected-variant="' + dataSelectedVariant + '"]');
-    //   if (nameElement) {
-    //     nameElement.textContent = selectedVariantName;
-    //   }
-    // });
-  }
+  //     if (nameElement) {
+  //       nameElement.textContent = selectedVariantName;
+  //     }
+  //   });
+  // }
 }
 initProductVariants();
 
