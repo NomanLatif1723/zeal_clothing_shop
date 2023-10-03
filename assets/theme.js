@@ -1576,9 +1576,8 @@ function initProductForm() {
         const items = cartData.items
         items.forEach(item => {
           const itemsCount  = item.quantity;
-          console.log(itemsCount);
         })
-        
+        console.log(itemsCount);
         // Submit Form Ajax
         await submitProductForm(form);
       }
