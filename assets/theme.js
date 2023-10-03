@@ -1625,10 +1625,12 @@ function initProductForm() {
       return;
     }
     form.addEventListener('click', async (event) => {
-      event.preventDefault();
       const selectedVariantId = form.querySelector('.selected-variant__id').value;
       const stockCounter = form.dataset.inventoryCount;
-      checkInventoryAddToCart(selectedVariantId, stockCounter, event);
+      if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
+        event.prevenDefault();
+        checkInventoryAddToCart(selectedVariantId, stockCounter, event);
+      }
     });
   });
   
@@ -1640,7 +1642,6 @@ function initProductForm() {
       if (existingCartItem.quantity >= quantity) {
         console.log(existingCartItem.quantity, quantity);
         selectors.formValidationErrorMessage.classList.remove('hidden');
-        event.preventDefault();
       } else {
         const updatedQuantity = existingCartItem.quantity + 1;
         await addToCart(variantId, event);
@@ -1651,7 +1652,6 @@ function initProductForm() {
     } else {
       if (cartData.item_count >= quantity) {
         selectors.formValidationErrorMessage.classList.remove('hidden');
-        event.preventDefault();
       } else {
         await addToCart(variantId, event);
         await updateCartDrawer();
