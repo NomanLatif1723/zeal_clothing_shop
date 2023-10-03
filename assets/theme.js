@@ -1508,8 +1508,9 @@ function initProductVariants() {
     
   }
 
-  async function checkInventoryAndAddToCart(matchedVariant) {
+  function checkInventoryAndAddToCart(matchedVariant) {
     const stockCounter = document.querySelector('[name="add"]').dataset.inventoryCount;
+    console.log(stockCounter);
     const res = await fetch('/cart.js');
     const cartData = await res.json();
     const existingCartItem = cartData.items.find(item => item.variant_id === matchedVariant.value);
