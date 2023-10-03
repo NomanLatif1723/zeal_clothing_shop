@@ -1568,12 +1568,12 @@ function initProductForm() {
       return;
     }
     form.addEventListener('submit', async (event) => {
-      event.preventDefault();
       const selectedVariantId = form.querySelector('.selected-variant__id').value;
       const stockCounter = form.dataset.inventoryCount;
       checkInventoryAddToCart(selectedVariantId, stockCounter,event);
       
       if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
+        event.preventDefault();
       }
     });
   });
