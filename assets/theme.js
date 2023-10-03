@@ -1501,7 +1501,7 @@ function initProductVariants() {
     if (! selectors.formValidationErrorMessage) {
       return;
     }
-    selectors.formValidationErrorMessage.classList.add('hidden');
+    // selectors.formValidationErrorMessage.classList.add('hidden');
   }
 
   function updateOptionsNames(matchedVariant) {
