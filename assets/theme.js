@@ -1569,7 +1569,7 @@ function initProductForm() {
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
       const selectedVariantId = document.querySelector('.selected-variant__id').value;
-      const stockCounter = addToCartButton.dataset.inventoryCount;
+      const stockCounter = form.dataset.inventoryCount;
       checkInventoryAndAddToCart(selectedVariantId, stockCounter);
       
       if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
