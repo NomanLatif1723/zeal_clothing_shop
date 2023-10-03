@@ -1508,7 +1508,7 @@ function initProductVariants() {
     
   }
 
-  async function checkInventoryAndAddToCart() {
+  async function checkInventoryAndAddToCart(form) {
     const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
     const selectedVariantId = form.querySelector('.selected-variant__id').value;
     const res = await fetch('/cart.js');
