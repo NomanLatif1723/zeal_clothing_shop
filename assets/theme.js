@@ -1333,7 +1333,6 @@ function initProductVariants() {
     let selectedOptions = [];
 
     selectors.variantSelectors.forEach(selector => {
-      console.log(selector.value);
       if (selector.type === 'radio' || selector.type === 'checkbox') {
         if (selector.checked) {
           selectedOptions.push(selector.value);
