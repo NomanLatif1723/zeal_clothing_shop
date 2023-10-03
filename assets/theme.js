@@ -1341,7 +1341,7 @@ function initProductVariants() {
         selectedOptions.push(selector.value);
       }
     // });
-
+console.log(selectedOptions);
     // Find the matched variant
     let matchedVariant = selectors.product.variants.find(variant => {
       return selectedOptions.every(option => variant.options.includes(option));
