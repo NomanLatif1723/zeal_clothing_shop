@@ -41,7 +41,7 @@
       {%- endfor -%}
     </div>
   </div>
-  {%- if product.media.size > 1 %}
+  {%- if product.media.size > 1 and section.settings.media_layout == 'thumbnail' %}
     <div id="product__thumbnail-{{ section.id }}" class="product-media__thumbnails swiper">
       <div class="swiper-wrapper">
         {%- for media in product.media -%}
