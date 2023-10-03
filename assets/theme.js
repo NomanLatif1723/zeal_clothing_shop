@@ -1584,7 +1584,7 @@ function initProductForm() {
         if (cartData.item_count >= stockCounter) {
           selectors.formValidationErrorMessage.classList.remove('hidden');
         } else {
-          await addToCart(selectedVariantId, 1);
+          await addToCart(selectedVariantId);
         }
       }
       if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
