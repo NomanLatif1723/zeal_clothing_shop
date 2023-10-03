@@ -1598,7 +1598,6 @@ function initProductForm() {
     }
   }
   async function addToCart(variantId, quantity) {
-    // Send a request to add the variant to the cart
     const res = await fetch('/cart/add.js', {
       method: 'POST',
       headers: {
@@ -1611,7 +1610,8 @@ function initProductForm() {
     });
   
     if (res.ok) {
-      console.log('Variant added to cart successfully.');
+      updateCartDrawer();
+      openCartDrawer();
     } else {
       console.error('Error adding variant to cart.');
     }
