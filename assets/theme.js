@@ -1583,6 +1583,7 @@ function initProductForm() {
     const cartData = await res.json();
     console.log(cartData);
     const items = cartData.items
+    console.log(items);
     items.forEach(item => {
       itemsCount = item.quantity;
     });
