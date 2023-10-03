@@ -1533,7 +1533,7 @@ function initProductVariants() {
       const nameElement = document.querySelector('.selected-variant-name[data-selected-variant="' + dataSelectedVariant + '"]');
       
       if (nameElement) {
-        nameElement.textContent = selectedVariantName; // Update the displayed name
+        nameElement.textContent = selectedVariantName;
       }
     });
     // selectors.productOptions.forEach((optionElement, index) => {
