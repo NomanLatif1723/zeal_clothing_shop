@@ -1617,7 +1617,6 @@ function initProductForm() {
     const res = await fetch("/cart.js");
     const cartData = await res.json();
     console.log(cartData);
-    console.log(itemCount);
     if (selectors.cartType === 'drawer') {
       const res = await fetch("/?view=ajax-cart");
       const text = await res.text();
