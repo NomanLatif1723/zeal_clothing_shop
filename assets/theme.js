@@ -1519,31 +1519,12 @@ function initProductVariants() {
       if (existingCartItem.quantity >= stockCounter) {
         console.log('Limit reached. Cannot add more of this variant to the cart.');
       } else {
-        const updatedQuantity = existingCartItem.quantity + 1;
-        await addToCart(selectedVariantId);
       }
     } else {
       if (cartData.item_count >= stockCounter) {
         console.log('Limit reached. Cannot add more items to the cart.');
       } else {
-        await addToCart(selectedVariantId);
       }
-    }
-  }
-  async function addToCart(variantId) {
-    const res = await fetch('/cart/add.js', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        id: variantId,
-      }),
-    });
-     if (res.ok) {
-      console.log('Variant added to cart successfully.');
-    } else {
-      console.error('Error adding variant to cart.');
     }
   }
 }
