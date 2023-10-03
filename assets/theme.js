@@ -1306,14 +1306,14 @@ function initProductVariants() {
 
   selectors.variantSelectors.forEach(selector => {
     selector.addEventListener('change', () => {
-      updateProductOptions();
+      updateProductOptions(selector);
     });
   });
 
   function updateProductOptions() {
     let selectedOptions = [];
 
-    selectors.variantSelectors.forEach(selector => {
+    // selectors.variantSelectors.forEach(selector => {
       if (selector.type === 'radio' || selector.type === 'checkbox') {
         if (selector.checked) {
           selectedOptions.push(selector.value);
@@ -1321,7 +1321,7 @@ function initProductVariants() {
       } else {
         selectedOptions.push(selector.value);
       }
-    });
+    // });
 
     // Find the matched variant
     let matchedVariant = selectors.product.variants.find(variant => {
