@@ -1295,16 +1295,26 @@ function initProductVariants() {
     variantSelectors: document.querySelectorAll('[data-selected-variant]'),
     productOptionLabel: document.querySelectorAll('[data-option-name]'),
     productOptions: document.querySelectorAll('.product-form__input'),
-    productForm: document.querySelector('.product__form'),
+    productForm: document.querySelectorAll('.product__form'),
     format: null,
     product: window.themeContent.routes.product,
     formValidationErrorMessage: document.querySelector('.product-form__errors')
   };
-  if (selectors.productForm) {
-    selectors.format = selectors.productForm.dataset.format;
-  } else {
-    selectors.format = 'default';
-  }
+  selectors.productForm.forEach(form => {
+    if (!form) {
+      return;
+    }
+    if (form) {
+      selectors.format = form.dataset.format;
+    } else {
+      selectors.format = 'default';
+    }
+  });
+  // if (selectors.productForm) {
+  //   selectors.format = selectors.productForm.dataset.format;
+  // } else {
+  //   selectors.format = 'default';
+  // }
 
   selectors.variantSelectors.forEach(selector => {
     selector.addEventListener('change', () => {
