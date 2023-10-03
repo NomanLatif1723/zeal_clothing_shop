@@ -1503,20 +1503,19 @@ function initProductVariants() {
   }
 
   function updateOptionsNames(matchedVariant) {
+    // const optionElements = document.querySelectorAll('.option');
+    // optionElements.forEach(optionElement => {
+    //   const selectElement = optionElement.querySelector('.variant-selector');
+    //   const selectedVariantName = selectElement.options[selectElement.selectedIndex].text;
+    //   const variantValueElement = optionElement.querySelector('.variant-value');
+    //   variantValueElement.textContent = selectedVariantName;
+    // });
     selectors.productOptions.forEach(selector => {
-      const selectedVariantName = selector.value;
-      console.log(selectedVariantName);
-      const dataSelectedVariant = selector.dataset.selectedOption;
-      console.log(dataSelectedVariant);
-      const nameElement = document.querySelector('.selected-variant-name[data-selected-option="' + dataSelectedVariant + '"]');
-      console.log(nameElement);
-      
-      if (nameElement) {
-        nameElement.textContent = selectedVariantName;
-      }
+      const selectElement = selector.querySelector('.variant-selector');
+      const selectedVariantName = selectElement.options[selectElement.selectedIndex].text;
+      const variantValueElement = selector.querySelector('[data-option-name]');
+      variantValueElement.textContent = selectedVariantName;
     });
-    console.log(matchedVariant);
-    // selector.closest('.product-form__label').querySelector('[data-option-name]').textContent = selector.value;
   }
 }
 initProductVariants();
