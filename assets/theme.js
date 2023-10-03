@@ -1574,8 +1574,7 @@ function initProductForm() {
       
       if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
         event.preventDefault();
-        updateCartDrawer();
-        openCartDrawer();
+        
         // Submit Form Ajax
         // await submitProductForm(form);
       }
@@ -1591,12 +1590,18 @@ function initProductForm() {
       } else {
         const updatedQuantity = existingCartItem.quantity + 1;
         await addToCart(variantId,event);
+        await updateCartDrawer();
+        await openCartDrawer();
+        await cartItemCount(cartData);
       }
     } else {
       if (cartData.item_count >= quantity) {
         selectors.formValidationErrorMessage.classList.remove('hidden');
       } else {
         await addToCart(variantId, event);
+        await updateCartDrawer();
+        await openCartDrawer();
+        await cartItemCount(cartData);
       }
     }
   }
