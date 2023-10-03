@@ -1581,6 +1581,7 @@ function initProductForm() {
     const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
     const res = await fetch("/cart.js");
     const cartData = await res.json();
+    console.log(cartData);
     const items = cartData.items
     items.forEach(item => {
       itemsCount = item.quantity;
