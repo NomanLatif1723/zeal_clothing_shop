@@ -1283,21 +1283,23 @@ initProductQuantitySelector();
 
 // Product Variants js
 function initProductVariants() {
-
+  
   let selectors = {
     masterVariantSelector: document.querySelector('.selected-variant__id'),
     productSalePrice: document.querySelector('[data-sale-price]'),
     productRegularPrice: document.querySelector('[data-regular-price]'),
     productUnitPrice: document.querySelector('[data-unit-price]'),
     productSku: document.querySelector('[data-sku]'),
-    productInStock: document.querySelector('[data-availability]'),
-    productAddToCartBtn: document.querySelector('[data-add-to-cart]'),
+    productInStock: document.querySelector('[data-inventory]'),
+    productAddToCartBtn: document.querySelector('[name="add"]'),
     variantSelectors: document.querySelectorAll('[data-selected-variant]'),
+    productOptionLabel: document.querySelectorAll('[data-option-name]'),
+    productOptions: document.querySelectorAll('.product-form__input'),
     productForm: document.querySelector('.product__form'),
     format: null,
-    product: window.themeContent.routes.product
+    product: window.themeContent.routes.product,
+    formValidationErrorMessage: document.querySelector('.product-form__errors')
   };
-
   if (selectors.productForm) {
     selectors.format = selectors.productForm.dataset.format;
   } else {
@@ -1312,7 +1314,6 @@ function initProductVariants() {
 
   function updateProductOptions() {
     let selectedOptions = [];
-
     selectors.variantSelectors.forEach(selector => {
       if (selector.type === 'radio' || selector.type === 'checkbox') {
         if (selector.checked) {
@@ -1321,8 +1322,7 @@ function initProductVariants() {
       } else {
         selectedOptions.push(selector.value);
       }
-    });
-
+    })
     // Find the matched variant
     let matchedVariant = selectors.product.variants.find(variant => {
       return selectedOptions.every(option => variant.options.includes(option));
@@ -1330,13 +1330,14 @@ function initProductVariants() {
 
     if (matchedVariant) {
       updateMasterVariant(matchedVariant);
-      updateButtons(matchedVariant);
       updateUrl(matchedVariant);
       updateProductPrice(matchedVariant);
       updateProductUnitPrice(matchedVariant);
       updateProductSku(matchedVariant);
       updateAvailability(matchedVariant);
       updateInventory(matchedVariant);
+      updateButtons(matchedVariant);
+      updateProductInfo(matchedVariant);
       updateMedia(matchedVariant);
     }
   }
@@ -1345,6 +1346,12 @@ function initProductVariants() {
     if (!selectors.masterVariantSelector) {
       return;
     }
+    // selectors.masterVariantSelector.forEach(masterSelect => {
+    //   if (!masterSelect) {
+    //     return;
+    //   }
+    //   masterSelect.value = matchedVariant.id;
+    // })
     selectors.masterVariantSelector.value = matchedVariant.id;
   }
 
@@ -1382,6 +1389,9 @@ function initProductVariants() {
   }
 
   function updateProductSku(matchedVariant) {
+    if (!selectors.productSku) {
+      return;
+    }
     selectors.productSku.textContent = matchedVariant.sku;
   }
 
@@ -1389,7 +1399,6 @@ function initProductVariants() {
     if (!selectors.productAddToCartBtn) {
       return;
     }
-    // var addButton = document.querySelector('[name="add"]');
     if (matchedVariant.available) {
       selectors.productAddToCartBtn.textContent = window.themeContent.strings.addToCart;
       selectors.productAddToCartBtn.disabled = false;
@@ -1415,31 +1424,89 @@ function initProductVariants() {
   }
 
   function updateInventory(matchedVariant) {
-    if (!selectors.productInStock) {
-      return;
-    }
-    selectors.productInStock.textContent = matchedVariant.inventory_quantity;
+    const requestedVariantId = matchedVariant.id;
+    fetch(
+      `${window.location.protocol}//${window.location.host}${window.location.pathname}?variant=${matchedVariant.id}`)
+      .then((response) => response.text())
+      .then((responseText) => {
+        if (matchedVariant.id !== requestedVariantId) return;
+        const html = new DOMParser().parseFromString(responseText, 'text/html');
+        const inventorySource = html.querySelector('[data-inventory]');
+        const inventoryDestination = document.querySelector('[data-inventory]');
+        const inventorySource2 = html.querySelector('[data-inventory-count]').dataset.inventoryCount;
+        const inventoryDestination2 = document.querySelector('[data-inventory-count]');
+        if (!inventorySource || !inventoryDestination) {
+          return;
+        }
+        if (inventorySource && inventoryDestination) inventoryDestination.innerHTML = inventorySource.innerHTML;
+        if (!inventorySource2 || !inventoryDestination2) {
+          return;
+        }
+        if (inventorySource2 && inventoryDestination2) inventoryDestination2.setAttribute('data-inventory-count', inventorySource2);
+      });
   }
 
   function updateMedia(matchedVariant) {
-    // need to be done 
-     try {
-      var currentVariantImage = matchedVariant.featured_media || {};
-      var imageElement = document.querySelector('.product__image.swiper-slide-active img');
+    if (!matchedVariant) return;
+    if (!matchedVariant.featured_media) return;
+
+    const mediaGalleries = document.querySelectorAll('.product__image img');
+    mediaGalleries.forEach(mediaGallery => {
+      mediaGallery.setAttribute('src',`${matchedVariant.featured_media.id}`);
+    });
+
+    // const modalContent = document.querySelector(`#ProductModal-${this.dataset.section} .product-media-modal__content`);
+    // if (!modalContent) return;
+    // const newMediaModal = modalContent.querySelector(`[data-media-id="${this.currentVariant.featured_media.id}"]`);
+    // modalContent.prepend(newMediaModal);
+    //  try {
+    //   var currentVariantImage = matchedVariant.featured_media || {};
+    //   var imageElement = document.querySelector('.product__image.swiper-slide-active img');
   
-      if (imageElement && currentVariantImage.preview_image && currentVariantImage.preview_image.src) {
-        // Update the image source
-        imageElement.setAttribute('src', currentVariantImage.preview_image.src);
-        console.log('Image source updated:', currentVariantImage.preview_image.src);
-      } else {
-        console.warn('Image source not found or invalid:', currentVariantImage);
-      }
-    } catch (error) {
-      console.error('Error updating media:', error);
+    //   if (imageElement && currentVariantImage.preview_image && currentVariantImage.preview_image.src) {
+    //     imageElement.setAttribute('src', currentVariantImage.preview_image.src);
+    //     console.log('Image source updated:', currentVariantImage.preview_image.src);
+    //   } else {
+    //     console.warn('Image source not found or invalid:', currentVariantImage);
+    //   }
+    // } catch (error) {
+    //   console.error('Error updating media:', error);
+    // }
+  }
+
+  function updateProductInfo(matchedVariant) {
+    const requestedVariantId = matchedVariant.id;
+    fetch(
+      `${window.location.protocol}//${window.location.host}${window.location.pathname}?variant=${matchedVariant.id}`)
+      .then((response) => response.text())
+      .then((responseText) => {
+        if (matchedVariant.id !== requestedVariantId) return;
+        const html = new DOMParser().parseFromString(responseText, 'text/html');
+        const inventoryCount = html.querySelector('[data-inventory-count]').dataset.inventoryCount;
+        const inventoryCountDestination = document.querySelector('[data-inventory-count]');
+        const inventoryMessage = html.querySelector('.product-form__errors');
+        const inventoryMessageDestination = document.querySelector('.product-form__errors');
+        if (!inventoryCount || !inventoryCountDestination) {
+          return;
+        }
+        if (inventoryCount && inventoryCountDestination) inventoryCountDestination.setAttribute('data-inventory-count', inventoryCount);
+        if (!inventoryMessage || !inventoryMessageDestination) {
+          return;
+        }
+        if (inventoryMessage && inventoryMessageDestination) inventoryMessageDestination.innerHTML = inventoryMessage.innerHTML;
+      });
+    if (! selectors.formValidationErrorMessage) {
+      return;
     }
+    selectors.formValidationErrorMessage.classList.add('hidden');
+  }
+
+  function updateOptionsNames(selector) {
+    selector.closest('.product-form__label').querySelector('[data-option-name]').textContent = selector.value;
   }
 }
 initProductVariants();
+
 
 // Product Form Add To Cart Ajax
 function initProductForm() {
