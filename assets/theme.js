@@ -1318,7 +1318,6 @@ function initProductVariants() {
       if (selector.type === 'radio' || selector.type === 'checkbox') {
         if (selector.checked) {
           selectedOptions.push(selector.value);
-          updateOptionsNames(selector);
         }
       } else {
         selectedOptions.push(selector.value);
@@ -1340,6 +1339,7 @@ function initProductVariants() {
       updateButtons(matchedVariant);
       updateProductInfo(matchedVariant);
       updateMedia(matchedVariant);
+      updateOptionsNames(matchedVariant);
     }
   }
 
