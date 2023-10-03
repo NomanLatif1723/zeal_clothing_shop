@@ -1589,7 +1589,7 @@ function initProductForm() {
           }
         }
         // Submit Form Ajax
-        await submitProductForm(form);
+        // await submitProductForm(form);
       }
     });
   });
