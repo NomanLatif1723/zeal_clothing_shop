@@ -1295,23 +1295,23 @@ function initProductVariants() {
     variantSelectors: document.querySelectorAll('[data-selected-variant]'),
     productOptionLabel: document.querySelectorAll('[data-option-name]'),
     productOptions: document.querySelectorAll('.product-form__input'),
-    productForm: document.querySelector('.product__form'),
+    productForm: document.querySelectorAll('.product__form'),
     format: null,
     product: window.themeContent.routes.product,
     formValidationErrorMessage: document.querySelector('.product-form__errors')
   };
-  // selectors.productForm.forEach(productForm => {
-  //   if (productForm) {
-  //     selectors.format = productForm.dataset.format;
-  //   } else {
-  //     selectors.format = 'default';
-  //   }
-  // });
-  if (selectors.productForm) {
-    selectors.format = selectors.productForm.dataset.format;
-  } else {
-    selectors.format = 'default';
-  }
+  selectors.productForm.forEach(productForm => {
+    if (productForm) {
+      selectors.format = productForm.dataset.format;
+    } else {
+      selectors.format = 'default';
+    }
+  });
+  // if (selectors.productForm) {
+  //   selectors.format = selectors.productForm.dataset.format;
+  // } else {
+  //   selectors.format = 'default';
+  // }
   // selectors.productForm.forEach(productForm => {
   //   if (!productForm) {
   //     return;
@@ -1341,7 +1341,6 @@ function initProductVariants() {
         selectedOptions.push(selector.value);
       }
     // });
-console.log(selectedOptions);
     // Find the matched variant
     let matchedVariant = selectors.product.variants.find(variant => {
       return selectedOptions.every(option => variant.options.includes(option));
