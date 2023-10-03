@@ -1312,19 +1312,6 @@ function initProductVariants() {
       });
     }
   });
-  
-  
-  // if (selectors.productForm) {
-  //   selectors.format = selectors.productForm.dataset.format;
-  // } else {
-  //   selectors.format = 'default';
-  // }
-
-  // selectors.variantSelectors.forEach(selector => {
-  //   selector.addEventListener('change', () => {
-  //     updateProductOptions();
-  //   });
-  // });
 
   function updateProductOptions() {
     let selectedOptions = [];
