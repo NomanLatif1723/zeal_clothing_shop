@@ -1226,8 +1226,8 @@ function initProductmediaSlideShow() {
         let thumbnailPosition = thumbnailMediaPosition.dataset.thumbnail;
         if (thumbnailPosition === 'left') {
           thumbsSwiperOptions.direction = "vertical";
-          thumbsSwiperOptions.spaceBetween = 10;
-          thumbsSwiperOptions.mousewheel = true;
+          // thumbsSwiperOptions.spaceBetween = 10;
+          // thumbsSwiperOptions.mousewheel = true;
         }
       }
       
