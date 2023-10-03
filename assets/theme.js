@@ -1503,6 +1503,16 @@ function initProductVariants() {
   }
 
   function updateOptionsNames(matchedVariant) {
+    const variantSelectors = document.querySelectorAll('.variant-selector');
+    variantSelectors.forEach(selector => {
+      const selectedVariantName = selector.value;
+      const dataSelectedVariant = selector.dataset.selectedVariant;
+      const nameElement = document.querySelector('.selected-variant-name[data-selected-variant="' + dataSelectedVariant + '"]');
+      
+      if (nameElement) {
+        nameElement.textContent = selectedVariantName; // Update the displayed name
+      }
+    });
     console.log(matchedVariant);
     // selector.closest('.product-form__label').querySelector('[data-option-name]').textContent = selector.value;
   }
