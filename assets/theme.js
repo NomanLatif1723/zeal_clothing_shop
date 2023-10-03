@@ -1285,7 +1285,7 @@ initProductQuantitySelector();
 function initProductVariants() {
   
   let selectors = {
-    masterVariantSelector: document.querySelectorAll('.selected-variant__id'),
+    masterVariantSelector: document.querySelector('.selected-variant__id'),
     productSalePrice: document.querySelector('[data-sale-price]'),
     productRegularPrice: document.querySelector('[data-regular-price]'),
     productUnitPrice: document.querySelector('[data-unit-price]'),
@@ -1342,16 +1342,16 @@ function initProductVariants() {
   }
 
   function updateMasterVariant(matchedVariant) {
-    // if (!selectors.masterVariantSelector) {
-    //   return;
-    // }
-    selectors.masterVariantSelector.forEach(masterSelect => {
-      if (!masterSelect) {
-        return;
-      }
-      masterSelect.value = matchedVariant.id;
-    })
-    // selectors.masterVariantSelector.value = matchedVariant.id;
+    if (!selectors.masterVariantSelector) {
+      return;
+    }
+    // selectors.masterVariantSelector.forEach(masterSelect => {
+    //   if (!masterSelect) {
+    //     return;
+    //   }
+    //   masterSelect.value = matchedVariant.id;
+    // })
+    selectors.masterVariantSelector.value = matchedVariant.id;
   }
 
   function updateUrl(matchedVariant) {
