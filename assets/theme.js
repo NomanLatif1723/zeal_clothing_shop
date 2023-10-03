@@ -1569,25 +1569,61 @@ function initProductForm() {
     form.addEventListener('submit', async (event) => {
       if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
         event.preventDefault();
-        
+        const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
+        const selectedVariantId = form.querySelector('.selected-variant__id').value;
+        const res = await fetch('/cart.js');
+        const cartData = await res.json();
+        const existingCartItem = cartData.items.find(item => item.variant_id === selectedVariantId);
+        if (existingCartItem) {
+          if (existingCartItem.quantity >= stockCounter) {
+            selectors.formValidationErrorMessage.classList.remove('hidden');
+          } else {
+            const updatedQuantity = existingCartItem.quantity + 1;
+            await addToCart(selectedVariantId, updatedQuantity);
+          }
+        } else {
+          if (cartData.item_count >= stockCounter) {
+            selectors.formValidationErrorMessage.classList.remove('hidden');
+          } else {
+            await addToCart(selectedVariantId, 1);
+          }
+        }
         // Submit Form Ajax
         await submitProductForm(form);
       }
     });
   });
-
-  async function submitProductForm(form) {
-    let itemsCount = null;
-    const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
-    const res = await fetch("/cart.js");
-    const cartData = await res.json();
-    console.log(cartData);
-    const items = cartData.items
-    console.log(items);
-    items.forEach(item => {
-      itemsCount = item.quantity;
+  async function addToCart(variantId, quantity) {
+    // Send a request to add the variant to the cart
+    const res = await fetch('/cart/add.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        id: variantId,
+        quantity: quantity,
+      }),
     });
-    console.log(itemsCount);
+  
+    if (res.ok) {
+      console.log('Variant added to cart successfully.');
+    } else {
+      console.error('Error adding variant to cart.');
+    }
+  }
+  async function submitProductForm(form) {
+    // let itemsCount = null;
+    // const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
+    // const res = await fetch("/cart.js");
+    // const cartData = await res.json();
+    // console.log(cartData);
+    // const items = cartData.items
+    // console.log(items);
+    // items.forEach(item => {
+    //   itemsCount = item.quantity;
+    // });
+    // console.log(itemsCount);
     if (stockCounter) {
       await fetch('/cart/add', {
         method: "POST",
