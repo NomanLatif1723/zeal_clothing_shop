@@ -1333,13 +1333,10 @@ function initProductVariants() {
     let selectedOptions = [];
 
     selectors.variantSelectors.forEach(selector => {
+      console.log(selector.value);
       if (selector.type === 'radio' || selector.type === 'checkbox') {
         if (selector.checked) {
           selectedOptions.push(selector.value);
-          // console.log(selector.value);
-          // selectors.productOptionLabel.forEach(label => {
-          //   label.textContent = selector.value;
-          // });
         }
       } else {
         selectedOptions.push(selector.value);
@@ -1353,7 +1350,7 @@ function initProductVariants() {
 
     if (matchedVariant) {
       updateMasterVariant(matchedVariant);
-      updateOptionsNames(matchedVariant);
+      // updateOptionsNames(matchedVariant);
       updateUrl(matchedVariant);
       updateProductPrice(matchedVariant);
       updateProductUnitPrice(matchedVariant);
