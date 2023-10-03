@@ -1638,6 +1638,7 @@ function initProductForm() {
     const existingCartItem = cartData.items.find(item => item.variant_id === variantId);
     if (existingCartItem) {
       if (existingCartItem.quantity >= quantity) {
+        console.log(existingCartItem.quantity, quantity);
         selectors.formValidationErrorMessage.classList.remove('hidden');
         event.preventDefault();
       } else {
