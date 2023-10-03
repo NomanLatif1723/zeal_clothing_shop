@@ -1317,6 +1317,7 @@ function initProductVariants() {
     if (selector.type === 'radio' || selector.type === 'checkbox') {
       if (selector.checked) {
         selectedOptions.push(selector.value);
+        console.log(selector.value)
       }
     } else {
       selectedOptions.push(selector.value);
