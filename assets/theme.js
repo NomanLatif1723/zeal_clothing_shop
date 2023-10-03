@@ -1502,7 +1502,7 @@ function initProductVariants() {
     selectors.formValidationErrorMessage.classList.add('hidden');
   }
 
-  function updateOptionsNames(selector) {
+  function updateOptionsNames(matchedVariant) {
     selector.closest('.product-form__label').querySelector('[data-option-name]').textContent = selector.value;
   }
 }
