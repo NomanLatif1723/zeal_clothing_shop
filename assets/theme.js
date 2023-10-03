@@ -1590,7 +1590,7 @@ function initProductForm() {
         });
     
         // update Cart Drawer
-        await updateCartDrawer();
+        updateCartDrawer();
         
         // open Cart Drawer
         openCartDrawer();
@@ -1605,7 +1605,7 @@ function initProductForm() {
       }
     });
   }
-  async function updateCartDrawer() {
+  function updateCartDrawer() {
     if (selectors.cartType === 'drawer') {
       const res = await fetch("/?view=ajax-cart");
       const text = await res.text();
