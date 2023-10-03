@@ -1651,6 +1651,9 @@ function initProductForm() {
         selectors.formValidationErrorMessage.classList.remove('hidden');
       } else {
         await addToCart(variantId, event);
+        await updateCartDrawer();
+        await openCartDrawer();
+        await cartItemCount(cartData);
       }
     }
   }
