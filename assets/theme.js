@@ -1507,7 +1507,9 @@ function initProductVariants() {
       const selectedVariantName = selector.value;
       console.log(selectedVariantName);
       const dataSelectedVariant = selector.dataset.selectedOption;
+      console.log(dataSelectedVariant);
       const nameElement = document.querySelector('.selected-variant-name[data-selected-option="' + dataSelectedVariant + '"]');
+      console.log(nameElement);
       
       if (nameElement) {
         nameElement.textContent = selectedVariantName;
