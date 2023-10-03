@@ -1317,7 +1317,7 @@ function initProductVariants() {
     if (selector.type === 'radio' || selector.type === 'checkbox') {
       if (selector.checked) {
         selectedOptions.push(selector.value);
-        console.log(selector.value);
+        console.log(selector);
         selector.closest('.product-form__label').querySelector('[data-option-name]').textContent = selector.value;
       }
     } else {
