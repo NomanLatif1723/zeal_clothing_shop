@@ -1308,7 +1308,7 @@ function initProductVariants() {
 
   selectors.variantSelectors.forEach(selector => {
     selector.addEventListener('change', () => {
-      updateProductOptions(selector);
+      // updateProductOptions(selector);
     });
   });
 
