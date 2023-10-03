@@ -1574,7 +1574,8 @@ function initProductForm() {
       
       if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
         event.preventDefault();
-        
+        updateCartDrawer();
+        openCartDrawer();
         // Submit Form Ajax
         // await submitProductForm(form);
       }
@@ -1611,8 +1612,7 @@ function initProductForm() {
     });
   
     if (res.ok) {
-      updateCartDrawer();
-      openCartDrawer();
+      
     } else {
       event.preventDefault();
       console.error('Error adding variant to cart.');
