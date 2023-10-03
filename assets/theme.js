@@ -1283,27 +1283,26 @@ initProductQuantitySelector();
 
 // Product Variants js
 function initProductVariants() {
-  const productForm = document.querySelectorAll('.product__form');
-  productForm.forEach(form => {
+  let selectors = {
+    masterVariantSelector: document.querySelectorAll('.selected-variant__id'),
+    productSalePrice: document.querySelector('[data-sale-price]'),
+    productRegularPrice: document.querySelector('[data-regular-price]'),
+    productUnitPrice: document.querySelector('[data-unit-price]'),
+    productSku: document.querySelector('[data-sku]'),
+    productInStock: document.querySelector('[data-inventory]'),
+    productAddToCartBtn: document.querySelector('[name="add"]'),
+    variantSelectors: document.querySelectorAll('[data-selected-variant]'),
+    productOptionLabel: document.querySelectorAll('[data-option-name]'),
+    productOptions: document.querySelectorAll('.product-form__input'),
+    productForm: document.querySelectorAll('.product__form'),
+    format: null,
+    product: window.themeContent.routes.product,
+    formValidationErrorMessage: document.querySelector('.product-form__errors')
+  };
+  selectors.productForm.forEach(form => {
     if (!form) {
       return;
     }
-    let selectors = {
-      masterVariantSelector: document.querySelectorAll('.selected-variant__id'),
-      productSalePrice: document.querySelector('[data-sale-price]'),
-      productRegularPrice: document.querySelector('[data-regular-price]'),
-      productUnitPrice: document.querySelector('[data-unit-price]'),
-      productSku: document.querySelector('[data-sku]'),
-      productInStock: document.querySelector('[data-inventory]'),
-      productAddToCartBtn: document.querySelector('[name="add"]'),
-      variantSelectors: document.querySelectorAll('[data-selected-variant]'),
-      productOptionLabel: document.querySelectorAll('[data-option-name]'),
-      productOptions: document.querySelectorAll('.product-form__input'),
-      productForm: document.querySelectorAll('.product__form'),
-      format: null,
-      product: window.themeContent.routes.product,
-      formValidationErrorMessage: document.querySelector('.product-form__errors')
-    };
     if (form) {
       selectors.format = form.dataset.format || 'default';
       selectors.variantSelectors.forEach(selector => {
