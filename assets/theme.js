@@ -1515,17 +1515,17 @@ function initProductVariants() {
     const cartData = await res.json();
     const existingCartItem = cartData.items.find(item => item.variant_id === matchedVariant.value);
   
-    if (existingCartItem) {
-      if (existingCartItem.quantity >= stockCounter) {
+    // if (existingCartItem) {
+      if (matchedVariant.quantity >= stockCounter) {
         console.log('Limit reached. Cannot add more of this variant to the cart.');
       } else {
       }
-    } else {
-      if (cartData.item_count >= stockCounter) {
-        console.log('Limit reached. Cannot add more items to the cart.');
-      } else {
-      }
-    }
+    // } else {
+    //   if (cartData.item_count >= stockCounter) {
+    //     console.log('Limit reached. Cannot add more items to the cart.');
+    //   } else {
+    //   }
+    // }
   }
 }
 initProductVariants();
