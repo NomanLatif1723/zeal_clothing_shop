@@ -1341,7 +1341,6 @@ function initProductVariants() {
       updateProductInfo(matchedVariant);
       updateMedia(matchedVariant);
       updateOptionsNames(matchedVariant);
-      checkInventoryAndAddToCart(matchedVariant);
     }
   }
 
@@ -1501,31 +1500,11 @@ function initProductVariants() {
     if (! selectors.formValidationErrorMessage) {
       return;
     }
-    // selectors.formValidationErrorMessage.classList.add('hidden');
+    selectors.formValidationErrorMessage.classList.add('hidden');
   }
 
   function updateOptionsNames(matchedVariant) {
     
-  }
-
-  async function checkInventoryAndAddToCart(matchedVariant) {
-    const stockCounter = document.querySelector('[name="add"]').dataset.inventoryCount;
-    console.log(stockCounter);
-    const res = await fetch('/cart.js');
-    const cartData = await res.json();
-    const existingCartItem = cartData.items.find(item => item.variant_id === matchedVariant.value);
-  
-    // if (existingCartItem) {
-      if (matchedVariant.quantity >= stockCounter) {
-        console.log('Limit reached. Cannot add more of this variant to the cart.');
-      } else {
-      }
-    // } else {
-    //   if (cartData.item_count >= stockCounter) {
-    //     console.log('Limit reached. Cannot add more items to the cart.');
-    //   } else {
-    //   }
-    // }
   }
 }
 initProductVariants();
