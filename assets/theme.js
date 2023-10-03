@@ -1586,20 +1586,19 @@ function initProductForm() {
   });
 
   async function submitProductForm(form) {
-    const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
-    const res = await fetch("/cart.js");
-    const cartData = await res.json();
-    console.log(cartData);
-    const itemCount = cartData.items.forEach(item => item.quantity );
-    console.log(itemCount);
-    if (itemCount < stockCounter) {
+    // const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
+    // const res = await fetch("/cart.js");
+    // const cartData = await res.json();
+    // console.log(cartData);
+    // console.log(itemCount);
+    if (cartData.item_count < stockCounter) {
       await fetch('/cart/add', {
         method: "POST",
         body: new FormData(form),
       });
   
       // update Cart Drawer
-      await updateCartDrawer();
+      await updateCartDrawer(form);
       
       // open Cart Drawer
       openCartDrawer();
@@ -1613,7 +1612,12 @@ function initProductForm() {
       selectors.formValidationErrorMessage.classList.remove('hidden');
     }
   }
-  async function updateCartDrawer() {
+  async function updateCartDrawer(form) {
+    const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
+    const res = await fetch("/cart.js");
+    const cartData = await res.json();
+    console.log(cartData);
+    console.log(itemCount);
     if (selectors.cartType === 'drawer') {
       const res = await fetch("/?view=ajax-cart");
       const text = await res.text();
