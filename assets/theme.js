@@ -1587,14 +1587,14 @@ function initProductForm() {
     const cartData = await res.json();
     const existingCartItem = cartData.items.find(item => item.variant_id === variantId);
     if (existingCartItem) {
-      if (existingCartItem.quantity >= stockCounter) {
+      if (existingCartItem.quantity >= quantity) {
         selectors.formValidationErrorMessage.classList.remove('hidden');
       } else {
         const updatedQuantity = existingCartItem.quantity + 1;
         await addToCart(variantId);
       }
     } else {
-      if (cartData.item_count >= stockCounter) {
+      if (cartData.item_count >= quantity) {
         selectors.formValidationErrorMessage.classList.remove('hidden');
       } else {
         await addToCart(variantId);
