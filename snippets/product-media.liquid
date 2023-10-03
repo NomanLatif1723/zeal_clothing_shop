@@ -3,7 +3,7 @@
     assign default = 'grande'
     assign sizes = '(min-width: 1200px) 650px, 45vw'
 -%}
-{%- if section.settings.thumbnail_position == 'left' -%}
+{%- if section.settings.thumbnail_position == 'left' and section.settings.media_layout == 'thumbnail' -%}
   <div class="product-media__grid" data-thumbnail="{{ section.settings.thumbnail_position }}">
 {%- endif -%}
   <div id="product__media-{{ section.id }}" class="product-media__wrapper swiper">
@@ -78,6 +78,6 @@
       {%- endif -%}
     </div>
   {%- endif -%}
-  {%- if section.settings.thumbnail_position == 'left' -%}
+  {%- if section.settings.thumbnail_position == 'left' and section.settings.media_layout == 'thumbnail' -%}
     </div>
   {%- endif -%}
