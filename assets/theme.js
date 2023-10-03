@@ -1317,8 +1317,7 @@ function initProductVariants() {
     if (selector.type === 'radio' || selector.type === 'checkbox') {
       if (selector.checked) {
         selectedOptions.push(selector.value);
-        console.log(selector);
-        selector.closest('.product-form__label').querySelector('[data-option-name]').textContent = selector.value;
+        updateOptionsNames(selector);
       }
     } else {
       selectedOptions.push(selector.value);
@@ -1501,18 +1500,9 @@ function initProductVariants() {
     selectors.formValidationErrorMessage.classList.add('hidden');
   }
 
-  // function updateOptionsNames(matchedVariant) {
-  //   const variantSelectors = document.querySelectorAll('.product-form__input');
-  //   variantSelectors.forEach(selector => {
-  //     const selectedVariantName = selector.value;
-  //     const dataSelectedVariant = selector.dataset.selectedVariant;
-  //     const nameElement = document.querySelector('.selected-variant-name[data-selected-variant="' + dataSelectedVariant + '"]');
-      
-  //     if (nameElement) {
-  //       nameElement.textContent = selectedVariantName;
-  //     }
-  //   });
-  // }
+  function updateOptionsNames(selector) {
+    selector.closest('.product-form__label').querySelector('[data-option-name]').textContent = selector.value;
+  }
 }
 initProductVariants();
 
