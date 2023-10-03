@@ -5,7 +5,7 @@
         <div class="product__options">
           {% for option in product.options_with_values %}
             <fieldset class="product-form__input" data-selected-variant="selectedVariant{{ forloop.index }}">
-              <legend class="product-form__label"><strong>{{ option.name }}</strong>(<span data-option-name>{{ option.selected_value }}</span>)</legend>
+              <legend class="product-form__label"><strong>{{ option.name }}</strong>(<span class="selected-variant-name" data-option-name>{{ option.selected_value }}</span>)</legend>
               {% for value in option.values %}
                 <input type="radio" data-selected-variant form="{{ product_form_id }}" name="{{ option.name }}" value="{{ value }}" {% if option.selected_value == value %}checked{% endif%} id="{{ option.name }}-{{ value }}">
                   <label for="{{ option.name }}-{{ value }}">
