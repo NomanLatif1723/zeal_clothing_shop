@@ -1511,32 +1511,22 @@ function initProductVariants() {
   async function checkInventoryAndAddToCart() {
     const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
     const selectedVariantId = form.querySelector('.selected-variant__id').value;
-  
-    // Fetch the current cart data
     const res = await fetch('/cart.js');
     const cartData = await res.json();
-  
-    // Check if the selected variant is already in the cart
     const existingCartItem = cartData.items.find(item => item.variant_id === selectedVariantId);
   
     if (existingCartItem) {
-      // Variant is already in the cart, check if the limit is reached
       if (existingCartItem.quantity >= stockCounter) {
         console.log('Limit reached. Cannot add more of this variant to the cart.');
-        // You can display a message to the user here
       } else {
-        // Increment the quantity of the existing item in the cart
         const updatedQuantity = existingCartItem.quantity + 1;
-        await addToCart(selectedVariantId, updatedQuantity);
+        await addToCart(selectedVariantId);
       }
     } else {
-      // Variant is not in the cart, check if it can be added
       if (cartData.item_count >= stockCounter) {
         console.log('Limit reached. Cannot add more items to the cart.');
-        // You can display a message to the user here
       } else {
-        // Variant is not in the cart and limit is not reached, add it to the cart
-        await addToCart(selectedVariantId, 1);
+        await addToCart(selectedVariantId);
       }
     }
   }
