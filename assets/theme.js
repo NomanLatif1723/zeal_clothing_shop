@@ -1527,9 +1527,15 @@ function initProductVariants() {
 
   function updateOptionsNames(matchedVariant) {
     selectors.productOptions.forEach((optionElement, index) => {
-      const selectedVariantName = matchedVariant[index].value;
-      const nameElement = optionElement.querySelector('[data-option-name]');
-      nameElement.textContent = selectedVariantName;
+      const selectedVariantName = optionElement.value;
+      const dataSelectedVariant = optionElement.dataset.selectedVariant;
+      const nameElement = optionElement[index].querySelector('.product-form__input[data-selected-variant="' + dataSelectedVariant + '"]');
+    
+      if (nameElement) {
+        nameElement.textContent = selectedVariantName;
+      }
+      // const nameElement = optionElement.querySelector('[data-option-name]');
+      // nameElement.textContent = selectedVariantName;
     });
   }
 }
