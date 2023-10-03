@@ -166,7 +166,7 @@
         {% endcomment %}
         <div class="product-form__errors rte hidden">{{ 'cart.items.quantity_error_message' | t: quantity: product.selected_or_first_available_variant.inventory_quantity }}</div>
         <div class="product__block product__buy-buttons" {{ block.shopify_attributes }}>
-          <button type="submit" name="add" aria-label="Add to cart" data-inventory-count="{{ product.selected_or_first_available_variant.inventory_quantity }}" class="btn btn__link btn__primary"{% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>
+          <button type="submit" name="add" aria-label="Add to cart" data-inventory-count="{{ product.selected_or_first_available_variant.inventory_quantity }}" class="btn btn__link btn__primary">
             {% if product.selected_or_first_available_variant.available %}
               {{ 'products.add_to_cart' | t }}
             {% else %}
