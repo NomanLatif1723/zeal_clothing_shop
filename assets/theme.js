@@ -1639,6 +1639,7 @@ function initProductForm() {
     if (existingCartItem) {
       if (existingCartItem.quantity >= quantity) {
         selectors.formValidationErrorMessage.classList.remove('hidden');
+        event.preventDefault();
       } else {
         const updatedQuantity = existingCartItem.quantity + 1;
         await addToCart(variantId, event);
@@ -1649,6 +1650,7 @@ function initProductForm() {
     } else {
       if (cartData.item_count >= quantity) {
         selectors.formValidationErrorMessage.classList.remove('hidden');
+        event.preventDefault();
       } else {
         await addToCart(variantId, event);
         await updateCartDrawer();
