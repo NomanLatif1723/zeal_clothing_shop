@@ -1312,7 +1312,7 @@ function initProductVariants() {
     });
   });
 
-  function updateProductOptions(selector) {
+  function updateProductOptions() {
     let selectedOptions = [];
 
     selectors.variantSelectors.forEach(selector => {
