@@ -1305,14 +1305,12 @@ function initProductVariants() {
       formValidationErrorMessage: document.querySelector('.product-form__errors')
     };
     if (form) {
-      selectors.format = form.dataset.format;
+      selectors.format = form.dataset.format || 'default';
       selectors.variantSelectors.forEach(selector => {
         selector.addEventListener('change', () => {
           updateProductOptions();
         });
       });
-    } else {
-      selectors.format = 'default';
     }
   });
   
