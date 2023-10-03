@@ -1503,19 +1503,7 @@ function initProductVariants() {
   }
 
   function updateOptionsNames(matchedVariant) {
-    // const optionElements = document.querySelectorAll('.option');
-    // optionElements.forEach(optionElement => {
-    //   const selectElement = optionElement.querySelector('.variant-selector');
-    //   const selectedVariantName = selectElement.options[selectElement.selectedIndex].text;
-    //   const variantValueElement = optionElement.querySelector('.variant-value');
-    //   variantValueElement.textContent = selectedVariantName;
-    // });
-    selectors.productOptions.forEach(selector => {
-      const selectElement = selector.querySelector('.selected-variant-name');
-      const selectedVariantName = selectElement.input[selectElement.selectedIndex].text;
-      const variantValueElement = selector.querySelector('[data-option-name]');
-      variantValueElement.textContent = selectedVariantName;
-    });
+    
   }
 }
 initProductVariants();
