@@ -1310,7 +1310,7 @@ function initProductVariants() {
     });
   });
 
-  function updateProductOptions() {
+  function updateProductOptions(selector) {
     let selectedOptions = [];
 
     // selectors.variantSelectors.forEach(selector => {
