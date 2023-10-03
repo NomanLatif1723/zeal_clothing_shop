@@ -1569,13 +1569,7 @@ function initProductForm() {
     form.addEventListener('submit', async (event) => {
       if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
         event.preventDefault();
-        const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
-        const res = await fetch("/cart.js");
-        const cartData = await res.json();
-        const items = cartData.items
-        items.forEach(item => {
-          const itemsCount  = item.quantity;
-        });
+        
         // Submit Form Ajax
         await submitProductForm(form);
       }
@@ -1586,26 +1580,30 @@ function initProductForm() {
     const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
     const res = await fetch("/cart.js");
     const cartData = await res.json();
-    // if (cartData.item_count < stockCounter) {
-      await fetch('/cart/add', {
-        method: "POST",
-        body: new FormData(form),
-      });
-  
-      // update Cart Drawer
-      await updateCartDrawer();
-      
-      // open Cart Drawer
-      openCartDrawer();
-      
-      // Update The Counter
-      cartItemCount(cartData);
-    // } else {
-    //   if (!selectors.formValidationErrorMessage) {
-    //     return;
-    //   }
-    //   selectors.formValidationErrorMessage.classList.remove('hidden');
-    // }
+    const items = cartData.items
+    items.forEach(item => {
+      const itemsCount  = item.quantity;
+      if (itemsCount < stockCounter) {
+        await fetch('/cart/add', {
+          method: "POST",
+          body: new FormData(form),
+        });
+    
+        // update Cart Drawer
+        await updateCartDrawer();
+        
+        // open Cart Drawer
+        openCartDrawer();
+        
+        // Update The Counter
+        cartItemCount(cartData);
+      } else {
+        if (!selectors.formValidationErrorMessage) {
+          return;
+        }
+        selectors.formValidationErrorMessage.classList.remove('hidden');
+      }
+    });
   }
   async function updateCartDrawer() {
     if (selectors.cartType === 'drawer') {
