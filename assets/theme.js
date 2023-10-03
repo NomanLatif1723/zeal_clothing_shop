@@ -1562,6 +1562,64 @@ function initProductForm() {
   })
 
   // Event For product Form Submit Using Ajax If Cart Type set to Drawer or Popup
+  
+  // selectors.productForm.forEach(form => {
+  //   if (!form) {
+  //     return;
+  //   }
+  //   form.addEventListener('submit', async (event) => {
+  //     event.preventDefault();
+  //     const selectedVariantId = form.querySelector('.selected-variant__id').value;
+  //     const stockCounter = form.dataset.inventoryCount;
+  //     checkInventoryAddToCart(selectedVariantId, stockCounter,event);
+      
+  //     if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
+  //     }
+  //   });
+  // });
+  // async function checkInventoryAddToCart(variantId, quantity, event) {
+  //   const res = await fetch('/cart.js');
+  //   const cartData = await res.json();
+  //   const existingCartItem = cartData.items.find(item => item.variant_id === variantId);
+  //   if (existingCartItem) {
+  //     if (existingCartItem.quantity >= quantity) {
+  //       selectors.formValidationErrorMessage.classList.remove('hidden');
+  //     } else {
+  //       const updatedQuantity = existingCartItem.quantity + 1;
+  //       await addToCart(variantId,event);
+  //       await updateCartDrawer();
+  //       await openCartDrawer();
+  //       await cartItemCount(cartData);
+  //     }
+  //   } else {
+  //     if (cartData.item_count >= quantity) {
+  //       selectors.formValidationErrorMessage.classList.remove('hidden');
+  //     } else {
+  //       await addToCart(variantId, event);
+  //       await updateCartDrawer();
+  //       await openCartDrawer();
+  //       await cartItemCount(cartData);
+  //     }
+  //   }
+  // }
+  // async function addToCart(variantId,event) {
+  //   const res = await fetch('/cart/add.js', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //     },
+  //     body: JSON.stringify({
+  //       id: variantId,
+  //     }),
+  //   });
+  
+  //   if (res.ok) {
+      
+  //   } else {
+  //     event.preventDefault();
+  //     console.error('Error adding variant to cart.');
+  //   }
+  // }
   selectors.productForm.forEach(form => {
     if (!form) {
       return;
@@ -1570,16 +1628,10 @@ function initProductForm() {
       event.preventDefault();
       const selectedVariantId = form.querySelector('.selected-variant__id').value;
       const stockCounter = form.dataset.inventoryCount;
-      checkInventoryAddToCart(selectedVariantId, stockCounter,event);
-      
-      if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
-        event.preventDefault();
-        
-        // Submit Form Ajax
-        // await submitProductForm(form);
-      }
+      checkInventoryAddToCart(selectedVariantId, stockCounter, event);
     });
   });
+  
   async function checkInventoryAddToCart(variantId, quantity, event) {
     const res = await fetch('/cart.js');
     const cartData = await res.json();
@@ -1589,23 +1641,18 @@ function initProductForm() {
         selectors.formValidationErrorMessage.classList.remove('hidden');
       } else {
         const updatedQuantity = existingCartItem.quantity + 1;
-        await addToCart(variantId,event);
-        await updateCartDrawer();
-        await openCartDrawer();
-        await cartItemCount(cartData);
+        await addToCart(variantId, event);
       }
     } else {
       if (cartData.item_count >= quantity) {
         selectors.formValidationErrorMessage.classList.remove('hidden');
       } else {
         await addToCart(variantId, event);
-        await updateCartDrawer();
-        await openCartDrawer();
-        await cartItemCount(cartData);
       }
     }
   }
-  async function addToCart(variantId,event) {
+  
+  async function addToCart(variantId, event) {
     const res = await fetch('/cart/add.js', {
       method: 'POST',
       headers: {
@@ -1617,12 +1664,14 @@ function initProductForm() {
     });
   
     if (res.ok) {
-      
+      // Add more logic if needed
     } else {
-      event.preventDefault();
+      // Remove event.preventDefault() if not needed
+      // event.preventDefault(); // This may not be necessary depending on your form structure
       console.error('Error adding variant to cart.');
     }
   }
+
   async function submitProductForm(form) {
     // let itemsCount = null;
     // const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
