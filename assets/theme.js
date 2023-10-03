@@ -1567,6 +1567,7 @@ function initProductForm() {
       return;
     }
     form.addEventListener('submit', async (event) => {
+      event.preventDefault();
       const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
       const selectedVariantId = form.querySelector('.selected-variant__id').value;
       const res = await fetch('/cart.js');
