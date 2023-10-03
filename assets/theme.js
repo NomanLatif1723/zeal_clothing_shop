@@ -1503,7 +1503,8 @@ function initProductVariants() {
   }
 
   function updateOptionsNames(matchedVariant) {
-    selector.closest('.product-form__label').querySelector('[data-option-name]').textContent = selector.value;
+    console.log(matchedVariant);
+    // selector.closest('.product-form__label').querySelector('[data-option-name]').textContent = selector.value;
   }
 }
 initProductVariants();
