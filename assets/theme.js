@@ -1675,8 +1675,7 @@ function initProductForm() {
     if (res.ok) {
       // Add more logic if needed
     } else {
-      // Remove event.preventDefault() if not needed
-      // event.preventDefault(); // This may not be necessary depending on your form structure
+      event.preventDefault();
       console.error('Error adding variant to cart.');
     }
   }
