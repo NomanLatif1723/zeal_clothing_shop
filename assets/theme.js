@@ -1308,7 +1308,6 @@ function initProductVariants() {
       selectors.variantSelectors.forEach(selector => {
         selector.addEventListener('change', () => {
           updateProductOptions();
-          checkInventoryAndAddToCart(form);
         });
       });
     }
@@ -1342,6 +1341,7 @@ function initProductVariants() {
       updateProductInfo(matchedVariant);
       updateMedia(matchedVariant);
       updateOptionsNames(matchedVariant);
+      checkInventoryAndAddToCart(matchedVariant);
     }
   }
 
@@ -1508,12 +1508,11 @@ function initProductVariants() {
     
   }
 
-  async function checkInventoryAndAddToCart(form) {
-    const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
-    const selectedVariantId = form.querySelector('.selected-variant__id').value;
+  async function checkInventoryAndAddToCart(matchedVariant) {
+    const stockCounter = document.querySelector('[name="add"]').dataset.inventoryCount;
     const res = await fetch('/cart.js');
     const cartData = await res.json();
-    const existingCartItem = cartData.items.find(item => item.variant_id === selectedVariantId);
+    const existingCartItem = cartData.items.find(item => item.variant_id === matchedVariant.value);
   
     if (existingCartItem) {
       if (existingCartItem.quantity >= stockCounter) {
