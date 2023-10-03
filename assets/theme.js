@@ -1570,7 +1570,7 @@ function initProductForm() {
       event.preventDefault();
       const selectedVariantId = form.querySelector('.selected-variant__id').value;
       const stockCounter = form.dataset.inventoryCount;
-      checkInventoryAddToCart(selectedVariantId, stockCounter);
+      checkInventoryAddToCart(selectedVariantId, stockCounter,event);
       
       if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
         event.preventDefault();
@@ -1580,7 +1580,7 @@ function initProductForm() {
       }
     });
   });
-  async function checkInventoryAddToCart(variantId, quantity) {
+  async function checkInventoryAddToCart(variantId, quantity, event) {
     const res = await fetch('/cart.js');
     const cartData = await res.json();
     const existingCartItem = cartData.items.find(item => item.variant_id === variantId);
@@ -1589,17 +1589,17 @@ function initProductForm() {
         selectors.formValidationErrorMessage.classList.remove('hidden');
       } else {
         const updatedQuantity = existingCartItem.quantity + 1;
-        await addToCart(variantId);
+        await addToCart(variantId,event);
       }
     } else {
       if (cartData.item_count >= quantity) {
         selectors.formValidationErrorMessage.classList.remove('hidden');
       } else {
-        await addToCart(variantId);
+        await addToCart(variantId, event);
       }
     }
   }
-  async function addToCart(variantId) {
+  async function addToCart(variantId,event) {
     const res = await fetch('/cart/add.js', {
       method: 'POST',
       headers: {
@@ -1614,6 +1614,7 @@ function initProductForm() {
       updateCartDrawer();
       openCartDrawer();
     } else {
+      event.preventDefault();
       console.error('Error adding variant to cart.');
     }
   }
