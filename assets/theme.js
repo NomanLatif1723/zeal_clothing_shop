@@ -1526,25 +1526,24 @@ function initProductVariants() {
   }
 
   function updateOptionsNames(matchedVariant) {
-    // const variantSelectors = document.querySelectorAll('.product-form__input');
-    // const optionElements = document.querySelectorAll('.option');
-    // variantSelectors.forEach((selector, index) => {
-    //   const selectedVariantName = selector.value;
-    //   const dataSelectedVariant = selector.dataset.selectedVariant;
-    //   const nameElement = optionElements[index].querySelector('.selected-variant-name[data-selected-variant="' + dataSelectedVariant + '"]');
+    const variantSelectors = document.querySelectorAll('.product-form__input');
+    variantSelectors.forEach(selector => {
+      const selectedVariantName = selector.value;
+      const dataSelectedVariant = selector.dataset.selectedVariant;
+      const nameElement = document.querySelector('.selected-variant-name[data-selected-variant="' + dataSelectedVariant + '"]');
       
-    //   if (nameElement) {
-    //     nameElement.textContent = selectedVariantName; // Update the displayed name
-    //   }
-    // });
-    selectors.productOptions.forEach((optionElement, index) => {
-      const selectedVariantName = optionElement.value;
-      const dataSelectedVariant = optionElement.dataset.selectedVariant;
-      const nameElement = optionElement[index].querySelector('[data-option-name][data-selected-variant="' + dataSelectedVariant + '"]');
       if (nameElement) {
-        nameElement.textContent = selectedVariantName;
+        nameElement.textContent = selectedVariantName; // Update the displayed name
       }
     });
+    // selectors.productOptions.forEach((optionElement, index) => {
+    //   const selectedVariantName = optionElement.value;
+    //   const dataSelectedVariant = optionElement.dataset.selectedVariant;
+    //   const nameElement = optionElement[index].querySelector('[data-option-name][data-selected-variant="' + dataSelectedVariant + '"]');
+    //   if (nameElement) {
+    //     nameElement.textContent = selectedVariantName;
+    //   }
+    // });
   }
 }
 initProductVariants();
