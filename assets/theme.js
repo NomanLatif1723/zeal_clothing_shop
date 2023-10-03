@@ -1503,8 +1503,7 @@ function initProductVariants() {
   }
 
   function updateOptionsNames(matchedVariant) {
-    const variantSelectors = document.querySelectorAll('.variant-selector');
-    variantSelectors.forEach(selector => {
+    selectors.productOptions.forEach(selector => {
       const selectedVariantName = selector.value;
       const dataSelectedVariant = selector.dataset.selectedVariant;
       const nameElement = document.querySelector('.selected-variant-name[data-selected-variant="' + dataSelectedVariant + '"]');
