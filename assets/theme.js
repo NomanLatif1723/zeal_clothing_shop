@@ -1578,7 +1578,7 @@ function initProductForm() {
           selectors.formValidationErrorMessage.classList.remove('hidden');
         } else {
           const updatedQuantity = existingCartItem.quantity + 1;
-          await addToCart(selectedVariantId, updatedQuantity);
+          await addToCart(selectedVariantId);
         }
       } else {
         if (cartData.item_count >= stockCounter) {
@@ -1595,7 +1595,7 @@ function initProductForm() {
       }
     });
   });
-  async function addToCart(variantId, quantity) {
+  async function addToCart(variantId) {
     const res = await fetch('/cart/add.js', {
       method: 'POST',
       headers: {
@@ -1603,7 +1603,6 @@ function initProductForm() {
       },
       body: JSON.stringify({
         id: variantId,
-        quantity: quantity,
       }),
     });
   
