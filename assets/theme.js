@@ -1581,8 +1581,6 @@ function initProductForm() {
     });
   });
   async function checkInventoryAddToCart(variantId, quantity) {
-    // const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
-    // const selectedVariantId = form.querySelector('.selected-variant__id').value;
     const res = await fetch('/cart.js');
     const cartData = await res.json();
     const existingCartItem = cartData.items.find(item => item.variant_id === variantId);
