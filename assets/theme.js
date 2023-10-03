@@ -1591,7 +1591,7 @@ function initProductForm() {
     // const cartData = await res.json();
     // console.log(cartData);
     // console.log(itemCount);
-    if (cartData.item_count < stockCounter) {
+    // if (cartData.item_count < stockCounter) {
       await fetch('/cart/add', {
         method: "POST",
         body: new FormData(form),
@@ -1605,12 +1605,12 @@ function initProductForm() {
       
       // Update The Counter
       cartItemCount(cartData);
-    } else {
-      if (!selectors.formValidationErrorMessage) {
-        return;
-      }
-      selectors.formValidationErrorMessage.classList.remove('hidden');
-    }
+    // } else {
+    //   if (!selectors.formValidationErrorMessage) {
+    //     return;
+    //   }
+    //   selectors.formValidationErrorMessage.classList.remove('hidden');
+    // }
   }
   async function updateCartDrawer(form) {
     const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
