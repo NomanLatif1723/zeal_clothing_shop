@@ -1567,7 +1567,7 @@ function initProductForm() {
       return;
     }
     form.addEventListener('submit', async (event) => {
-      checkInventoryAddToCart();
+      checkInventoryAddToCart(form);
       if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
         event.preventDefault();
         
@@ -1576,7 +1576,7 @@ function initProductForm() {
       }
     });
   });
-  async function checkInventoryAddToCart() {
+  async function checkInventoryAddToCart(form) {
     const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
     const selectedVariantId = form.querySelector('.selected-variant__id').value;
     const res = await fetch('/cart.js');
