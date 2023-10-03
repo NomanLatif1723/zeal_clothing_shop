@@ -1577,13 +1577,13 @@ function initProductForm() {
   });
 
   async function submitProductForm(form) {
-    const itemsCount = null;
+    let itemsCount = null;
     const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
     const res = await fetch("/cart.js");
     const cartData = await res.json();
     const items = cartData.items
     items.forEach(item => {
-      itemsCount  = item.quantity;
+      itemsCount = item.quantity;
     });
     if (itemsCount < stockCounter) {
       await fetch('/cart/add', {
