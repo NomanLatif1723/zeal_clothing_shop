@@ -1567,32 +1567,36 @@ function initProductForm() {
       return;
     }
     form.addEventListener('submit', async (event) => {
+      checkInventoryAddToCart();
       if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
         event.preventDefault();
-        const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
-        const selectedVariantId = form.querySelector('.selected-variant__id').value;
-        const res = await fetch('/cart.js');
-        const cartData = await res.json();
-        const existingCartItem = cartData.items.find(item => item.variant_id === selectedVariantId);
-        if (existingCartItem) {
-          if (existingCartItem.quantity >= stockCounter) {
-            selectors.formValidationErrorMessage.classList.remove('hidden');
-          } else {
-            const updatedQuantity = existingCartItem.quantity + 1;
-            await addToCart(selectedVariantId, updatedQuantity);
-          }
-        } else {
-          if (cartData.item_count >= stockCounter) {
-            selectors.formValidationErrorMessage.classList.remove('hidden');
-          } else {
-            await addToCart(selectedVariantId, 1);
-          }
-        }
+        
         // Submit Form Ajax
         // await submitProductForm(form);
       }
     });
   });
+  async function checkInventoryAddToCart() {
+    const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
+    const selectedVariantId = form.querySelector('.selected-variant__id').value;
+    const res = await fetch('/cart.js');
+    const cartData = await res.json();
+    const existingCartItem = cartData.items.find(item => item.variant_id === selectedVariantId);
+    if (existingCartItem) {
+      if (existingCartItem.quantity >= stockCounter) {
+        selectors.formValidationErrorMessage.classList.remove('hidden');
+      } else {
+        const updatedQuantity = existingCartItem.quantity + 1;
+        await addToCart(selectedVariantId, updatedQuantity);
+      }
+    } else {
+      if (cartData.item_count >= stockCounter) {
+        selectors.formValidationErrorMessage.classList.remove('hidden');
+      } else {
+        await addToCart(selectedVariantId, 1);
+      }
+    }
+  }
   async function addToCart(variantId, quantity) {
     // Send a request to add the variant to the cart
     const res = await fetch('/cart/add.js', {
