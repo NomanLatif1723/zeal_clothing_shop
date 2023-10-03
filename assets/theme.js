@@ -1530,6 +1530,16 @@ function initProductVariants() {
       }
     }
   }
+  async function addToCart(variantId) {
+    const res = await fetch('/cart/add.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        id: variantId,
+      }),
+    });
 }
 initProductVariants();
 
