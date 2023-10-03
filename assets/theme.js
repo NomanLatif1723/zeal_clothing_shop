@@ -1505,11 +1505,11 @@ function initProductVariants() {
   function updateOptionsNames(matchedVariant) {
     selectors.productOptions.forEach(selector => {
       const selectedVariantName = selector.value;
-      const dataSelectedVariant = selector.dataset.selectedVariant;
-      const nameElement = document.querySelector('.selected-variant-name[data-selected-variant="' + dataSelectedVariant + '"]');
+      const dataSelectedVariant = selector.dataset.selectedOption;
+      const nameElement = document.querySelector('.selected-variant-name[data-selected-option="' + dataSelectedVariant + '"]');
       
       if (nameElement) {
-        nameElement.textContent = selectedVariantName; // Update the displayed name
+        nameElement.textContent = selectedVariantName;
       }
     });
     console.log(matchedVariant);
