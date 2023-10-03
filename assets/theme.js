@@ -1624,7 +1624,7 @@ function initProductForm() {
     if (!form) {
       return;
     }
-    form.addEventListener('submit', async (event) => {
+    form.addEventListener('click', async (event) => {
       event.preventDefault();
       const selectedVariantId = form.querySelector('.selected-variant__id').value;
       const stockCounter = form.dataset.inventoryCount;
