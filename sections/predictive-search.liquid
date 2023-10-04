@@ -1,3 +1,9 @@
+{%- liquid
+    assign articleImage = article.image
+    assign ratio = 0.75
+    assign default = 'grande'
+    assign sizes = '100vw'
+-%}
 {%- if predictive_search.performed -%}
   <div id="predictive-search-results">
     {%- if predictive_search.resources.products.size > 0 -%}
@@ -48,13 +54,20 @@
           <div class="grid__item grid-product small--one-half medium-up--one-quarter" data-aos="row-of-4">
             <a href="{{ article.url }}" class="grid-product__link grid-product__link--inline">
               <div class="image-wrap">
-                <div
-                  class="grid__image-ratio grid__image-ratio--square">
-                  {%- render 'image-element',
-                    img: article.image,
-                    widths: '360, 540, 720, 900, 1080',
-                    sizes: '80px',
-                  -%}
+                <div class="grid__image-ratio grid__image-ratio--square">
+                   <img style="aspect-ratio: {{ imageAspectRatio }};"src="{{ articleImage | img_url: default }}"srcset="
+                      {{ articleImage | img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
+                      {{ articleImage | img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
+                      {{ articleImage | img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
+                      {{ articleImage | img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
+                      {{ articleImage | img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
+                      "
+                      width="{{ articleImage.width }}"
+                      height="{{ articleImage.height }}"
+                      loading="{{ lazyloading }}"
+                      sizes="{{ sizes }}"
+                      alt="{{ articleImage.alt }}"
+                    >
                 </div>
               </div>
               <div class="grid-product__meta">
