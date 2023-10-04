@@ -196,12 +196,14 @@
             <div class="site-search__wrapper">
               <div class="page__width">
                 <div class="search__form">
-                  <form class="search-form__flex" action="{{ routes.search_url }}">
-                    <input class="form__input" type="search" placeholder="{{ 'search.general.search_placeholder' | t }}" name="q" value="{{ search.terms | escape }}" autocomplete="off" 
-                      autocorrect="off" autocapitalize="off" role="combobox" aria-expanded="false" aria-owns="predictive-search-results" aria-controls="predictive-search-results"
-                      aria-haspopup="listbox" aria-autocomplete="list">
-                    <button type="submit" class="btn btn__link btn__secondary" aria-label="{{ 'search.general.submit' | t }}">{{ 'search.general.submit' | t }}</button>
-                    <button type="button" id="close__search-modal" class="btn btn__link" aria-label="{{ 'search.general.cancel' | t }}">{{ 'search.general.cancel' | t }}</button>
+                  <form action="{{ routes.search_url }}">
+                    <div class="search-form__flex">
+                      <input class="form__input" type="search" placeholder="{{ 'search.general.search_placeholder' | t }}" name="q" value="{{ search.terms | escape }}" autocomplete="off" 
+                        autocorrect="off" autocapitalize="off" role="combobox" aria-expanded="false" aria-owns="predictive-search-results" aria-controls="predictive-search-results"
+                        aria-haspopup="listbox" aria-autocomplete="list">
+                      <button type="submit" class="btn btn__link btn__secondary" aria-label="{{ 'search.general.submit' | t }}">{{ 'search.general.submit' | t }}</button>
+                      <button type="button" id="close__search-modal" class="btn btn__link" aria-label="{{ 'search.general.cancel' | t }}">{{ 'search.general.cancel' | t }}</button>
+                    </div>
                     {%- if settings.enable_predictive_search -%}
                       <div id="PredictiveResults" class="predictive-results hidden"></div>
                     {%- endif -%}
