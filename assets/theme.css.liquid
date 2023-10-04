@@ -3814,8 +3814,6 @@ table {
   transform: translate(-50%, -50%);
   background: white;
   z-index: 99;
-  /* max-width: 650px;
-  width: 100%; */
 }
 .sizeguide__overlay:before {
   content: '';
@@ -3995,6 +3993,16 @@ iframe.product-media__video {
 }
 .product__image-container .swiper-slide {
   height: auto;
+}
+.product-media__gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+.product__image {
+  flex: 1 0 33.33%;
+}
+.product__image:nth-child(4n+ 1) {
+  flex: 1 0 100%;
 }
 @media only screen and (min-width: 768px) {
   .product-grid {
