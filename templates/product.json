@@ -140,7 +140,7 @@
       ],
       "settings": {
         "show_breadcrumbs": true,
-        "show_rating": false,
+        "show_rating": true,
         "media_position": false,
         "enable_image_zoom": true,
         "media_width": "large",
