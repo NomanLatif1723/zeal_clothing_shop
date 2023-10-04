@@ -204,18 +204,17 @@
       </form>
       {%- if settings.enable_predictive_search -%}
         <div id="PredictiveWrapper" class="predictive-results hidden">
-            <div id="PredictiveResults" class="predictive-result__layout"></div>
-            <div class="text-center predictive-results__footer">
-              <button type="button" class="btn btn--small" data-predictive-search-button>
-                <small>
-                  View More
-                </small>
-              </button>
-            </div>
+          <div id="PredictiveResults" class="predictive-result__layout"></div>
+          <div class="text-center predictive-results__footer">
+            <button type="button" class="btn btn--small" data-predictive-search-button>
+              <small>
+                View More
+              </small>
+            </button>
+          </div>
         </div>
       {%- endif -%}
     </div>
-    
   </div>
 </div>
 {% schema %}
