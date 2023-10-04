@@ -8,7 +8,7 @@
   <div id="predictive-search-results">
     {%- if predictive_search.resources.products.size > 0 -%}
       <h3 id="predictive-search-products">Products</h3>
-      <ul class="predictive-search__results--list" data-type-products>
+      <ul class="predictive-search__results--list">
         {%- for product in predictive_search.resources.products -%}
           <li class="predictive-search__list--item">
             <a class="predictive-search__item--link" href="{{ product.url }}" title="{{ product.title }}">
@@ -32,37 +32,33 @@
           </li>
         {%- endfor -%}
       </ul>
-    {% endif %}
+    {%- endif -%}
   
     {%- if predictive_search.resources.collections.size > 0 -%}
-      <div data-type-collections>
-        <h3 id="predictive-search-collections">Collections</h3>
-        <ul class="predictive-search__results--list">
-          {% for collection in predictive_search.resources.collections %}
-            <li class="predictive-search__list--item">
-              <a href="{{ collection.url }}" title="{{ collection.title }}">
-                {{ collection.title }}
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-    {% endif %}
+      <h3 id="predictive-search-collections">Collections</h3>
+      <ul class="predictive-search__results--list">
+        {%- for collection in predictive_search.resources.collections -%}
+          <li class="predictive-search__list--item">
+            <a href="{{ collection.url }}" title="{{ collection.title }}">
+              {{ collection.title }}
+            </a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
   
     {%- if predictive_search.resources.pages.size > 0 -%}
-      <div data-type-pages>
-        <h3 id="predictive-search-pages">Pages</h3>
-        <ul class="predictive-search__results--list">
-          {%- for page in predictive_search.resources.pages -%}
-            <li class="predictive-search__list--item">
-              <a href="{{ page.url }}" title="{{ page.title }}">
-                {{ page.title }}
-              </a>
-            </li>
-          {%- endfor -%}
-        </ul>
-      </div>
-    {% endif %}
+      <h3 id="predictive-search-pages">Pages</h3>
+      <ul class="predictive-search__results--list">
+        {%- for page in predictive_search.resources.pages -%}
+          <li class="predictive-search__list--item">
+            <a href="{{ page.url }}" title="{{ page.title }}">
+              {{ page.title }}
+            </a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
   
     {%- if predictive_search.resources.articles.size > 0 -%}
       <div data-type-articles="{{ predictive_search.resources.articles.size }}">
@@ -94,6 +90,6 @@
           {%- endfor -%}
         </ul>
       </div>
-    {% endif %}
+    {%- endif -%}
   </div>
 {%- endif -%}
