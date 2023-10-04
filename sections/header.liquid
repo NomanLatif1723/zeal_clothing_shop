@@ -193,8 +193,8 @@
         {%- endunless -%}
         <predictive-search>
           <div class="site-search__container hidden">
-            <div class="page__width">
-              <div class="site-search__wrapper">
+            <div class="site-search__wrapper">
+              <div class="page__width">
                 <div class="search__form">
                   <form class="search-form__flex" action="{{ routes.search_url }}">
                     <input class="form__input" type="search" placeholder="{{ 'search.general.search_placeholder' | t }}" name="q" value="{{ search.terms | escape }}" autocomplete="off" 
