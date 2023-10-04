@@ -222,7 +222,7 @@ class PredictiveSearch extends HTMLElement {
     super();
 
     this.input = this.querySelector('input[type="search"]');
-    this.predictiveSearchResults = this.querySelector('#PredictiveResults');
+    this.predictiveSearchResults = this.querySelector('#PredictiveWrapper');
 
     this.input.addEventListener('input', this.debounce((event) => {
       this.onChange(event);
@@ -263,11 +263,11 @@ class PredictiveSearch extends HTMLElement {
   }
 
   open() {
-    this.predictiveSearchResults.style.display = 'block';
+    this.predictiveSearchResults.classList.remove('hidden');
   }
 
   close() {
-    this.predictiveSearchResults.style.display = 'none';
+    this.predictiveSearchResults.classList.add('hidden');
   }
 
   debounce(fn, wait) {
