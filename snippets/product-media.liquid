@@ -9,7 +9,7 @@
   <div {% if section.settings.media_layout == 'thumbnail' %}id="product__media-{{ section.id }}"{% endif %} class="product-media__wrapper{% if section.settings.media_layout == 'thumbnail' %} swiper{% endif %}">
     <div class="product-media__gallery--{{ section.settings.media_layout }}{% if section.settings.media_layout == 'thumbnail' %} swiper-wrapper{% endif %}">
       {%- for media in product.media -%}
-        <div class="product__image{% if section.settings.media_layout == 'thumbnail' %} swiper-slide{% endif %} product-media__{{ section.settings.media_layout }}" data-media-id="{{ section.id }}-{{ media.id }}">
+        <div class="product__image{% if section.settings.media_layout == 'thumbnail' %} swiper-slide{% endif %} product-image__{{ section.settings.media_layout }}" data-media-id="{{ section.id }}-{{ media.id }}">
           {%- if media.media_type == 'image' -%}
             <img
               src="{{ media | img_url: default }}"
