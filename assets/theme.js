@@ -185,7 +185,7 @@ function initHeaderSearch() {
     return;
   }
   selectors.searchContainer.addEventListener('click', () => {
-    selectors.searchContainer.classList.remove('hidden');
+    selectors.searchContainer.classList.add('hidden');
   });
   selectors.searchBox.addEventListener('click', (event) => {
     event.stopPropagation();
