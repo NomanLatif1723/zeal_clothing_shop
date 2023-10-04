@@ -275,6 +275,10 @@
       "inventory_low_stock_count": "Low Stock: {{ items }} Left",
       "inventory_out_of_stock_contine_selling": "In Stock",
       "inventory_out_of_stock": "Out of Stock"
+    },
+    "accessibility": {
+      "star_reviews_info": "ghfgajg ",
+      "total_reviews": "Total Reviews {{ count }}"
     }
   },
   "sections": {
