@@ -201,6 +201,7 @@
                       autocorrect="off" autocapitalize="off" role="combobox" aria-expanded="false" aria-owns="predictive-search-results" aria-controls="predictive-search-results"
                       aria-haspopup="listbox" aria-autocomplete="list">
                     <button type="submit" class="btn btn__link btn__secondary" aria-label="{{ 'search.general.submit' | t }}">{{ 'search.general.submit' | t }}</button>
+                    <button type="button" id="close__search-modal" class="btn btn__link" aria-label="{{ 'search.general.cancel' | t }}">{{ 'search.general.cancel' | t }}</button>
                   </form>
                   {%- if settings.enable_predictive_search -%}
                     <div id="PredictiveResults" class="predictive-results hidden">
