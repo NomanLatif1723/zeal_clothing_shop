@@ -12,7 +12,9 @@
         {%- for product in predictive_search.resources.products -%}
           <li class="predictive-search__list--item">
             <a class="predictive-search__item--link" href="{{ product.url }}" title="{{ product.title }}">
-              <img class="predictive-search__image" src="{{ product.featured_image | product_img_url: "100x" }}" width="" height="" loading="lazy" />
+              <div class="predictive-search__image">
+                <img src="{{ product.featured_image | product_img_url: "100x" }}" width="" height="" loading="lazy" />
+              </div>
               <div class="predictive-search__item--content">
                 <div class="grid-product__title">
                   <a href="{{ product.url }}" title="{{ product.title }}">
