@@ -144,7 +144,7 @@
         "media_position": false,
         "enable_image_zoom": false,
         "media_width": "large",
-        "media_layout": "grid",
+        "media_layout": "thumbnail",
         "thumbnail_position": "below",
         "show_thumbnail_arrows": true,
         "size_chart_page": "size-chart",
