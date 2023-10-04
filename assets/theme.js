@@ -181,6 +181,9 @@ function initHeaderSearch() {
     searchBox: document.querySelector('.site-search__wrapper'),
     closeIcon: document.querySelectorAll('#close__search-modal')
   };
+  if (!selectors.searchContainer || !selectors.searchBox) {
+    return;
+  }
   selectors.searchContainer.addEventListener('click', () => {
     selectors.searchContainer.classList.remove('hidden');
   });
