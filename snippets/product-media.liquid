@@ -6,10 +6,10 @@
 {%- if section.settings.thumbnail_position == 'left' -%}
   <div class="product-media__grid" data-thumbnail="{{ section.settings.thumbnail_position }}">
 {%- endif -%}
-  <div id="product__media-{{ section.id }}" class="product-media__wrapper{% if section.settings.media_layout == 'grid' %} swiper{% endif %}">
-    <div {% if section.settings.media_layout == 'grid' %}class="swiper-wrapper"{% endif %}>
+  <div id="product__media-{{ section.id }}" class="product-media__wrapper{% if section.settings.media_layout == 'thumbnail' %} swiper{% endif %}">
+    <div {% if section.settings.media_layout == 'thumbnail' %}class="swiper-wrapper"{% endif %}>
       {%- for media in product.media -%}
-        <div class="product__image{% if section.settings.media_layout == 'grid' %} swiper-slide{% endif %}" data-media-id="{{ section.id }}-{{ media.id }}">
+        <div class="product__image{% if section.settings.media_layout == 'thumbnail' %} swiper-slide{% endif %}" data-media-id="{{ section.id }}-{{ media.id }}">
           {%- if media.media_type == 'image' -%}
             <img
               src="{{ media | img_url: default }}"
