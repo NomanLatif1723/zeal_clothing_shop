@@ -142,7 +142,7 @@
         "show_breadcrumbs": true,
         "show_rating": false,
         "media_position": false,
-        "enable_image_zoom": false,
+        "enable_image_zoom": true,
         "media_width": "large",
         "media_layout": "thumbnail",
         "thumbnail_position": "below",
