@@ -195,7 +195,7 @@
           <div class="site-search__wrapper">
             <div class="search__form">
               <form class="search-form__flex" action="{{ routes.search_url }}">
-                <input class="form__input" type="text" placeholder="{{ 'search.general.search_placeholder' | t }}" name="q" value="{{ search.terms | escape }}" autocomplete="off" autocorrect="off" autocapitalize="off">
+                <input class="form__input" type="search" placeholder="{{ 'search.general.search_placeholder' | t }}" name="q" value="{{ search.terms | escape }}" autocomplete="off" autocorrect="off" autocapitalize="off">
                 <button type="submit" class="btn btn__link btn__secondary" aria-label="{{ 'search.general.submit' | t }}">{{ 'search.general.submit' | t }}</button>
               </form>
               {%- if settings.enable_predictive_search -%}
