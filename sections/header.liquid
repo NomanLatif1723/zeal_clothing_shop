@@ -202,18 +202,12 @@
                 <div id="PredictiveWrapper" class="predictive-results hidden">
                   <div id="PredictiveResults" class="predictive-result__layout"></div>
                   <div class="text-center predictive-results__footer">
-                    <button type="button" class="btn btn--small" data-predictive-search-button>
-                      <small>
-                        View More
-                      </small>
-                    </button>
+                    <button type="button" class="btn btn--small" data-predictive-search-button>View More</button>
                   </div>
                 </div>
               {%- endif -%}
             </div>
-            <button type="button" id="close__search-modal" aria-label="{{ 'search.general.cancel' | t }}">
-              {%- render 'icon-close' -%}
-            </button>
+            <button type="button" id="close__search-modal" aria-label="{{ 'search.general.cancel' | t }}">{%- render 'icon-close' -%}</button>
           </div>
         </div>
       </div>
