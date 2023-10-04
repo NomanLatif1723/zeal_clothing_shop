@@ -8,13 +8,16 @@
   <div id="predictive-search-results">
     {%- if predictive_search.resources.products.size > 0 -%}
       <h2 id="predictive-search-products">Products</h2>
-      <div class="collection-grid" data-type-products>
+      <ul class="predictive-search__results--list" data-type-products>
         {%- for product in predictive_search.resources.products -%}
-          {%- render 'product-item',
-            product: product
-          -%}
+          <li>
+            <a href="{{ product.url }}" title="{{ product.title }}">
+              <img class="predictive-search__image" src="{{ product.featured_image | product_img_url: "100x" }}" width="" height="" loading="lazy" />
+              <div class="predictive-search__item--content"></div>
+            </a>
+          </li>
         {%- endfor -%}
-      </div>
+      </ul>
     {% endif %}
   
     {%- if predictive_search.resources.collections.size > 0 -%}
