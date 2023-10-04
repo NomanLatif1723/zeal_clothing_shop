@@ -192,11 +192,11 @@
           </a>
         {%- endunless -%}
         <div class="site-search__container hidden">
-          <div class="page__width">
+          <div class="site-search__wrapper">
             <div class="search__form">
               <form class="search-form__flex" action="{{ routes.search_url }}">
                 <input class="form__input" type="text" placeholder="{{ 'search.general.search_placeholder' | t }}" name="q" value="{{ search.terms | escape }}">
-                <button id="close__search-modal" type="button" class="btn btn__link btn__secondary" aria-label="{{ 'search.general.submit' | t }}">{{ 'search.general.submit' | t }}</button>
+                <button type="submit" class="btn btn__link btn__secondary" aria-label="{{ 'search.general.submit' | t }}">{{ 'search.general.submit' | t }}</button>
               </form>
               {%- if settings.enable_predictive_search -%}
                 <div id="PredictiveWrapper" class="predictive-results hidden">
@@ -211,6 +211,9 @@
                 </div>
               {%- endif -%}
             </div>
+            <button type="button" id="close__search-modal" aria-label="{{ 'search.general.cancel' | t }}">
+              {%- render 'icon-close' -%}
+            </button>
           </div>
         </div>
       </div>
