@@ -178,8 +178,15 @@ function initHeaderSearch() {
   let selectors = {
     searchIcon: document.querySelectorAll('.icon__search'),
     searchContainer: document.querySelector('.site-search__container'),
+    searchBox: document.querySelector('.site-search__wrapper'),
     closeIcon: document.querySelectorAll('#close__search-modal')
   };
+  selectors.searchContainer.addEventListener('click', () => {
+    selectors.searchContainer.classList.remove('hidden');
+  });
+  selectors.searchBox.addEventListener('click', (event) => {
+    event.stopPropagation();
+  });
   selectors.searchIcon.forEach(button => {
     if (!button) {
       return;
