@@ -7,13 +7,27 @@
 {%- if predictive_search.performed -%}
   <div id="predictive-search-results">
     {%- if predictive_search.resources.products.size > 0 -%}
-      <h2 id="predictive-search-products">Products</h2>
+      <h3 id="predictive-search-products">Products</h3>
       <ul class="predictive-search__results--list" data-type-products>
         {%- for product in predictive_search.resources.products -%}
           <li>
             <a href="{{ product.url }}" title="{{ product.title }}">
               <img class="predictive-search__image" src="{{ product.featured_image | product_img_url: "100x" }}" width="" height="" loading="lazy" />
-              <div class="predictive-search__item--content"></div>
+              <div class="predictive-search__item--content">
+                <div class="grid-product__title">
+                  <a href="{{ product.url }}" title="{{ product.title }}">
+                    <h4>{{ product.title }}</h4>
+                  </a>
+                </div>
+                <div class="grid-product__price">
+                  <span class="visually__hidden">{{ 'products.price.sale_price' | t }}</span>
+                  <span class="product__sale-price">{{ product.price | money_without_trailing_zeros }}</span>
+                  {%- if product.compare_at_price > product.price -%}
+                    <span class="visually__hidden">{{ 'products.price.regular_price' | t }}</span>
+                    <span class="product__compare-price">{{ product.compare_at_price | money_without_trailing_zeros }}</span>
+                  {%- endif -%}
+                </div>
+              </div>
             </a>
           </li>
         {%- endfor -%}
@@ -22,7 +36,7 @@
   
     {%- if predictive_search.resources.collections.size > 0 -%}
       <div data-type-collections>
-        <h2 id="predictive-search-collections">Collections</h2>
+        <h3 id="predictive-search-collections">Collections</h3>
         <ul class="no-bullets">
           {% for collection in predictive_search.resources.collections %}
             <li>
@@ -37,7 +51,7 @@
   
     {%- if predictive_search.resources.pages.size > 0 -%}
       <div data-type-pages>
-        <h2 id="predictive-search-pages">Pages</h2>
+        <h3 id="predictive-search-pages">Pages</h3>
         <ul class="no-bullets">
           {%- for page in predictive_search.resources.pages -%}
             <li>
@@ -52,7 +66,7 @@
   
     {%- if predictive_search.resources.articles.size > 0 -%}
       <div data-type-articles="{{ predictive_search.resources.articles.size }}">
-        <h2 id="predictive-search-articles">Articles</h2>
+        <h3 id="predictive-search-articles">Articles</h3>
         {%- for article in predictive_search.resources.articles -%}
           <div class="grid__item grid-product small--one-half medium-up--one-quarter">
             <a href="{{ article.url }}" class="grid-product__link grid-product__link--inline">
