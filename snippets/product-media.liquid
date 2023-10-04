@@ -6,7 +6,7 @@
 {%- if section.settings.thumbnail_position == 'left' -%}
   <div class="product-media__grid" data-thumbnail="{{ section.settings.thumbnail_position }}">
 {%- endif -%}
-  <div id="product__media-{{ section.id }}" class="product-media__wrapper swiper">
+  <div class="product-media__wrapper swiper">
     <div class="swiper-wrapper">
       {%- for media in product.media -%}
         <div class="product__image swiper-slide" data-media-id="{{ section.id }}-{{ media.id }}">
