@@ -1,6 +1,7 @@
 {%- if predictive_search.performed -%}
   <div id="predictive-search-results">
     {%- if predictive_search.resources.products.size > 0 -%}
+      <h2 id="predictive-search-products">Products</h2>
       <div class="collection-grid" data-type-products>
         {%- for product in predictive_search.resources.products -%}
           {%- render 'product-item',
@@ -12,7 +13,7 @@
   
     {%- if predictive_search.resources.collections.size > 0 -%}
       <div data-type-collections>
-        <p class="h6 predictive__label">Collections</p>
+        <h2 id="predictive-search-collections">Collections</h2>
         <ul class="no-bullets">
           {% for collection in predictive_search.resources.collections %}
             <li>
@@ -27,7 +28,7 @@
   
     {%- if predictive_search.resources.pages.size > 0 -%}
       <div data-type-pages>
-        <p class="h6 predictive__label">Pages</p>
+        <h2 id="predictive-search-pages">Pages</h2>
         <ul class="no-bullets">
           {%- for page in predictive_search.resources.pages -%}
             <li>
@@ -42,7 +43,7 @@
   
     {%- if predictive_search.resources.articles.size > 0 -%}
       <div data-type-articles="{{ predictive_search.resources.articles.size }}">
-        <p class="h6 predictive__label">Articles</p>
+        <h2 id="predictive-search-articles">Articles</h2>
         {%- for article in predictive_search.resources.articles -%}
           <div class="grid__item grid-product small--one-half medium-up--one-quarter" data-aos="row-of-4">
             <a href="{{ article.url }}" class="grid-product__link grid-product__link--inline">
