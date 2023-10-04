@@ -204,11 +204,7 @@
                     <button type="button" id="close__search-modal" class="btn btn__link" aria-label="{{ 'search.general.cancel' | t }}">{{ 'search.general.cancel' | t }}</button>
                   </form>
                   {%- if settings.enable_predictive_search -%}
-                    <div id="PredictiveResults" class="predictive-results hidden">
-                      <div class="text-center predictive-results__footer">
-                        <button type="button" class="btn btn--small" data-predictive-search-button>View More</button>
-                      </div>
-                    </div>
+                    <div id="PredictiveResults" class="predictive-results hidden"></div>
                   {%- endif -%}
                   {% comment %}
                   <button type="button" id="close__search-modal" aria-label="{{ 'search.general.cancel' | t }}">{%- render 'icon-close' -%}</button>
