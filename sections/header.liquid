@@ -191,27 +191,29 @@
             <span data-cart-count class="cart-item__count{% if cart.item_count <= 0 %} hidden{% endif %}">{{ cart.item_count }}</span>
           </a>
         {%- endunless -%}
-        <div class="site-search__container hidden">
-          <div class="site-search__wrapper">
-            <div class="search__form">
-              <form class="search-form__flex" action="{{ routes.search_url }}">
-                <input class="form__input" type="search" placeholder="{{ 'search.general.search_placeholder' | t }}" name="q" value="{{ search.terms | escape }}" autocomplete="off" 
-                  autocorrect="off" autocapitalize="off" role="combobox" aria-expanded="false" aria-owns="predictive-search-results" aria-controls="predictive-search-results"
-                  aria-haspopup="listbox" aria-autocomplete="list">
-                <button type="submit" class="btn btn__link btn__secondary" aria-label="{{ 'search.general.submit' | t }}">{{ 'search.general.submit' | t }}</button>
-              </form>
-              {%- if settings.enable_predictive_search -%}
-                <div id="PredictiveWrapper" class="predictive-results hidden">
-                  <div id="PredictiveResults" class="predictive-result__layout"></div>
-                  <div class="text-center predictive-results__footer">
-                    <button type="button" class="btn btn--small" data-predictive-search-button>View More</button>
+        <predictive-search>
+          <div class="site-search__container hidden">
+            <div class="site-search__wrapper">
+              <div class="search__form">
+                <form class="search-form__flex" action="{{ routes.search_url }}">
+                  <input class="form__input" type="search" placeholder="{{ 'search.general.search_placeholder' | t }}" name="q" value="{{ search.terms | escape }}" autocomplete="off" 
+                    autocorrect="off" autocapitalize="off" role="combobox" aria-expanded="false" aria-owns="predictive-search-results" aria-controls="predictive-search-results"
+                    aria-haspopup="listbox" aria-autocomplete="list">
+                  <button type="submit" class="btn btn__link btn__secondary" aria-label="{{ 'search.general.submit' | t }}">{{ 'search.general.submit' | t }}</button>
+                </form>
+                {%- if settings.enable_predictive_search -%}
+                  <div id="PredictiveWrapper" class="predictive-results hidden">
+                    <div id="PredictiveResults" class="predictive-result__layout"></div>
+                    <div class="text-center predictive-results__footer">
+                      <button type="button" class="btn btn--small" data-predictive-search-button>View More</button>
+                    </div>
                   </div>
-                </div>
-              {%- endif -%}
-              <button type="button" id="close__search-modal" aria-label="{{ 'search.general.cancel' | t }}">{%- render 'icon-close' -%}</button>
+                {%- endif -%}
+                <button type="button" id="close__search-modal" aria-label="{{ 'search.general.cancel' | t }}">{%- render 'icon-close' -%}</button>
+              </div>
             </div>
           </div>
-        </div>
+        </predictive-search>
       </div>
     </div>
   </div>
