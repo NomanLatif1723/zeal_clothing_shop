@@ -54,7 +54,7 @@
         {%- endif -%}
       {%- endfor -%}
     </span>
-    <span class="rating__caption">{{- product.metafields.reviews.rating.value }} /{{ product.metafields.reviews.rating.value.scale_max -}}</span>
+    <span class="rating__caption">({{- product.metafields.reviews.rating.value }} /{{ product.metafields.reviews.rating.value.scale_max -}})</span>
     <span class="rating__caption visually__hidden">{{ 'products.accessibility.total_reviews' | t: count: product.metafields.reviews.rating_count.value }}</span>
   </div>
 {%- else -%}
