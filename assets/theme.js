@@ -930,6 +930,7 @@ function initCollections() {
     let overlayShadow = document.querySelector('.drawer__overlay-container');
     let closefilterDrawerBtn = document.querySelector('.filter-icon__close');
     let filterOptions = document.querySelectorAll('.filter-group input[type="checkbox"]');
+    let filterPriceOptions = document.querySelectorAll('.filter-group input[type="number"]');
     let bodyContainer = document.querySelector('body');
     filterItem.forEach(item => {
       if (!item) {
@@ -978,6 +979,14 @@ function initCollections() {
         return
       }
       option.addEventListener('change', () => {
+        filterSubmitForm();
+      });
+    });
+    filterPriceOptions.forEach(option => {
+      if (!option) {
+        return
+      }
+      option.addEventListener('input', () => {
         filterSubmitForm();
       });
     });
