@@ -912,7 +912,7 @@ function initCollections() {
           .then(data => {
             let html = document.createElement('div');
             html.innerHTML = data;
-            let productData = div.querySelector('.collection-grid');
+            let productData = html.querySelector('.collection-grid');
             document.querySelector('.collection-grid').innerHTML = productData;
           })
           // Shopify.queryParams.sort_by = value;
