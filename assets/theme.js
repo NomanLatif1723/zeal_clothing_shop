@@ -993,15 +993,14 @@ function initCollections() {
     function filterSubmitForm() {
       const filterForm = document.querySelector('.filter-form');
       const queryString = new URLSearchParams(new FormData(filterForm)).toString();
+      console.log(queryString);
       fetch(`${window.themeContent.routes.collection}?${queryString}`)
         .then(responce => responce.text())
         .then(data => {
-          
           let html = document.createElement('div');
           html.innerHTML = data;
-          console.log(html.innerHTML);
-          let productData = html.querySelector('.catalog__wrapper').innerHTML;
-          document.querySelector('.catalog__wrapper').innerHTML = productData;
+          let productData = html.querySelector('.collection-grid').innerHTML;
+          document.querySelector('.collection-grid').innerHTML = productData;
           history.replaceState(null,null, '?'+ queryString);
         })
         .catch(error => console.log('Error', error));
