@@ -907,8 +907,16 @@ function initCollections() {
       sortContainer.forEach(el => {
         el.addEventListener('change', function(e) {
           var value = e.target.value;
-          Shopify.queryParams.sort_by = value;
-          location.search = new URLSearchParams(Shopify.queryParams).toString();
+          fetch('/collections/all?sort_by='+ e.target.value)
+          .then(responce => responce.text())
+          .then(data => {
+            let html = document.createElement('div');
+            div.innerHTML = data;
+            let productData = div.querySelector('.collection-grid');
+            document.querySelector('.collection-grid').innerHTML = productData;
+          })
+          // Shopify.queryParams.sort_by = value;
+          // location.search = new URLSearchParams(Shopify.queryParams).toString();
         });
       })
       
