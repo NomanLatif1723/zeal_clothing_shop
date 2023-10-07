@@ -1,6 +1,8 @@
 <form class="filter-form">
   <div class="active-filters">
+    {% comment %}
     <a href="{{ collection.url }}?sort_by={{ collection.sort_by }}" class="active-filters__clear">Clear all</a>
+    {% endcomment %}
     {%- for filter in filters -%}
       {%- if filter.type == "price_range" -%}
         {%- if filter.min_value.value != nil or filter.max_value.value != nil -%}
