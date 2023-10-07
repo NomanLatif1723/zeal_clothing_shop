@@ -999,8 +999,8 @@ function initCollections() {
         .then(data => {
           let html = document.createElement('div');
           html.innerHTML = data;
-          let productData = html.querySelector('.collection-grid').innerHTML;
-          document.querySelector('.collection-grid').innerHTML = productData;
+          let productData = html.querySelector('.catalog__wrapper').innerHTML;
+          document.querySelector('.catalog__wrapper').innerHTML = productData;
           history.replaceState(null,null, '?'+ queryString);
         })
         .catch(error => console.log('Error', error));
