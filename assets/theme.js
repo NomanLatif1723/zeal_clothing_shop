@@ -993,7 +993,6 @@ function initCollections() {
     function filterSubmitForm() {
       const filterForm = document.querySelector('.filter-form');
       const queryString = new URLSearchParams(new FormData(filterForm)).toString();
-      console.log(queryString);
       fetch(`${window.themeContent.routes.collection}?${queryString}`)
         .then(responce => responce.text())
         .then(data => {
