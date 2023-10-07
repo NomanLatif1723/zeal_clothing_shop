@@ -915,6 +915,7 @@ function initCollections() {
             let productData = html.querySelector('.collection-grid');
             document.querySelector('.collection-grid').innerHTML = productData;
           })
+          .catch(error => console.log('Error', error));
           // Shopify.queryParams.sort_by = value;
           // location.search = new URLSearchParams(Shopify.queryParams).toString();
         });
