@@ -929,6 +929,7 @@ function initCollections() {
     let filterDrawer = document.querySelector('.filter-drawer');
     let overlayShadow = document.querySelector('.drawer__overlay-container');
     let closefilterDrawerBtn = document.querySelector('.filter-icon__close');
+    let filterOptions = document.querySelectorAll('.filter-group input[type="checkbox"]');
     let bodyContainer = document.querySelector('body');
     filterItem.forEach(item => {
       if (!item) {
@@ -972,7 +973,14 @@ function initCollections() {
         bodyContainer.classList.remove('drawer__opening');
       }
     }
-    
+    filterOptions.forEach(option => {
+      if (!option) {
+        return
+      }
+      option.addEventListener('change', () => {
+        console.log("change click");
+      })
+    })
   }
 }
 initCollections();
