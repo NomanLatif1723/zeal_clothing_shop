@@ -907,7 +907,6 @@ function initCollections() {
       sortContainer.forEach(el => {
         el.addEventListener('change', function(e) {
           var value = e.target.value;
-          console.log(window.themeContent.routes.collection);
           fetch(`${window.themeContent.routes.collection}?sort_by=${e.target.value}`)
           .then(responce => responce.text())
           .then(data => {
