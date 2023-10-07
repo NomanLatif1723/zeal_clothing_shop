@@ -2868,9 +2868,6 @@
         "show_second_image": {
           "label": "Hover to Reveal Second Image"
         },
-        "show_add_to_cart": {
-          "label": "Show Add To Cart"
-        },
         "header_colors": {
           "label": "Colors",
           "sale_badge_color": {
