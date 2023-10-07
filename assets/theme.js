@@ -931,11 +931,14 @@ function initCollections() {
     let closefilterDrawerBtn = document.querySelector('.filter-icon__close');
     let bodyContainer = document.querySelector('body');
     filterItem.forEach(item => {
+      if (!item) {
+        return;
+      }
         item.addEventListener('click', (event) => {
           event.target.closest('.filter-group').querySelector('.filter-group__dropdown').classList.toggle('hidden');
           event.target.closest('.filter-group').querySelector('.icon__arrow').classList.toggle('icon__rotate');
-        })
-    })
+        });
+    });
     if (filterBtn) {
       filterBtn.addEventListener('click', () => {
         openFilterDrawer();
