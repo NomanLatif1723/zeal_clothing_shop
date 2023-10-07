@@ -901,7 +901,7 @@ function initCollections() {
       }
     }
   
-    // Update sort_by query parameter on select change
+    // Update sort_by query parameter on select change Using Ajax
     const sortContainer = document.querySelectorAll('#sort-by');
     if (sortContainer) {
       sortContainer.forEach(el => {
