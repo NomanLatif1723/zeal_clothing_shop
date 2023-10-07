@@ -978,7 +978,9 @@ function initCollections() {
         return
       }
       option.addEventListener('change', () => {
-        console.log("change click");
+        const filterForm = document.querySelector('.filter-form');
+        const queryString = new URLSearchParams(new FormData(filterForm)).toString();
+        console.log(queryString);
       })
     })
   }
