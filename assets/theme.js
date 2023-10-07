@@ -911,7 +911,7 @@ function initCollections() {
           .then(responce => responce.text())
           .then(data => {
             let html = document.createElement('div');
-            div.innerHTML = data;
+            html.innerHTML = data;
             let productData = div.querySelector('.collection-grid');
             document.querySelector('.collection-grid').innerHTML = productData;
           })
