@@ -38,7 +38,8 @@
           product: {{ product | json }},
           productRecommendation: {{ routes.product_recommendations_url | json }},
           all_collections: {{ routes.all_products_collection_url | json }},
-          cartUrl: {{ routes.cart_url | json }}
+          cartUrl: {{ routes.cart_url | json }},
+          collection: {{ routes.collections_url | json }}
         },
         strings: {
           addToCart: "{{ 'products.add_to_cart' | t }}",
