@@ -914,6 +914,7 @@ function initCollections() {
             html.innerHTML = data;
             let productData = html.querySelector('.collection-grid').innerHTML;
             document.querySelector('.collection-grid').innerHTML = productData;
+            history.replaceState(null,null, '?sort_by='+ e.target.value);
           })
           .catch(error => console.log('Error', error));
           // Shopify.queryParams.sort_by = value;
