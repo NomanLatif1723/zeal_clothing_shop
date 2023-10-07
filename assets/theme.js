@@ -912,7 +912,7 @@ function initCollections() {
           .then(data => {
             let html = document.createElement('div');
             html.innerHTML = data;
-            let productData = html.querySelector('.collection-grid');
+            let productData = html.querySelector('.collection-grid').innerHTML;
             document.querySelector('.collection-grid').innerHTML = productData;
           })
           .catch(error => console.log('Error', error));
