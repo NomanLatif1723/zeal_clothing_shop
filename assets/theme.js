@@ -990,21 +990,22 @@ function initCollections() {
         filterSubmitForm();
       });
     });
-    funtion filterSubmitForm() {
-      const filterForm = document.querySelector('.filter-form');
-      const queryString = new URLSearchParams(new FormData(filterForm)).toString();
-      console.log(queryString);
-      fetch(`${window.themeContent.routes.collection}?${queryString}`)
-        .then(responce => responce.text())
-        .then(data => {
-          let html = document.createElement('div');
-          html.innerHTML = data;
-          let productData = html.querySelector('.collection-grid').innerHTML;
-          document.querySelector('.collection-grid').innerHTML = productData;
-          history.replaceState(null,null, '?'+ queryString);
-        })
-        .catch(error => console.log('Error', error));
-    }
+    
+  }
+  funtion filterSubmitForm() {
+    const filterForm = document.querySelector('.filter-form');
+    const queryString = new URLSearchParams(new FormData(filterForm)).toString();
+    console.log(queryString);
+    fetch(`${window.themeContent.routes.collection}?${queryString}`)
+      .then(responce => responce.text())
+      .then(data => {
+        let html = document.createElement('div');
+        html.innerHTML = data;
+        let productData = html.querySelector('.collection-grid').innerHTML;
+        document.querySelector('.collection-grid').innerHTML = productData;
+        history.replaceState(null,null, '?'+ queryString);
+      })
+      .catch(error => console.log('Error', error));
   }
 }
 initCollections();
