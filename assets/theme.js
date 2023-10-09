@@ -876,7 +876,7 @@ function initCollectionEventListeners() {
     bodyContainer: document.querySelector('body')
   }
   document.addEventListener('click', (event) => {
-    
+    console.log(event.target.className);
     if (event.target.classList.contains('filter-group__item')) {
       event.target.closest('.filter-group').querySelector('.filter-group__dropdown').classList.toggle('hidden');
       event.target.closest('.filter-group').querySelector('.icon__arrow').classList.toggle('icon__rotate');
@@ -885,7 +885,7 @@ function initCollectionEventListeners() {
       openFilterDrawer();
     }
     if (event.target.classList.contains('filter-icon__close')) {
-      console.log("hello there");
+      console.log("button clicked");
       closeFilterDrawer();
     }
     if (event.target.classList.contains('filter-drawer')) {
