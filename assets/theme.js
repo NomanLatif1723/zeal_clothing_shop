@@ -888,6 +888,11 @@ function initCollectionEventListeners() {
     if (event.target.classList.contains('filter__btn')) {
       openFilterDrawer();
     }
+    if (event.target.classList.contains('show-more__swatches')) {
+      let hiddenSwatches = event.target.closest('.color-swatch__list').querySelector('.hidden__swatches');
+      event.target.classList.add('hide');
+      hiddenSwatches.classList.add('show');
+    }
   })
   // selectors.filterItem.forEach(item => {
   //   if (!item) return;
