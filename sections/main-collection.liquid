@@ -32,7 +32,7 @@
 <div class="catalog-content__wrapper main__section-{{ section.id }}">
   <div class="page__width">
     {%- render 'loader' -%}
-    <div class="catalog__wrapper">
+    <div class="{% if show_filtering %}catalog__wrapper{% endif %}">
       {%- if show_filtering -%}
         <div class="catalog-filter__block">
           <div class="drawer__overlay-container"></div>
