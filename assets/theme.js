@@ -884,6 +884,7 @@ initCustomerForms();
 
 // Collection Sorting Using Ajax
 function initCollections() {
+  const loader = document.querySelector('.loader');
   collectionSort();
   collectionFilters();
   function collectionSort() {
@@ -905,6 +906,7 @@ function initCollections() {
     if (sortContainer) {
       sortContainer.forEach(el => {
         el.addEventListener('change', function(e) {
+          loader.classList.remove('hidden');
           var value = e.target.value;
           fetch(`${window.themeContent.routes.collection}?sort_by=${e.target.value}`)
           .then(responce => responce.text())
@@ -915,7 +917,8 @@ function initCollections() {
             document.querySelector('.collection-grid').innerHTML = productData;
             history.replaceState(null,null, '?sort_by='+ e.target.value);
           })
-          .catch(error => console.log('Error', error));
+          .catch(error => console.log('Error', error))
+          .finally(() => loader.classList.add('hidden'));
           // Shopify.queryParams.sort_by = value;
           // location.search = new URLSearchParams(Shopify.queryParams).toString();
         });
