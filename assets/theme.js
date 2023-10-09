@@ -950,7 +950,7 @@ function initCollections() {
       closeFilterDrawer();
     });
     if(!selectors.filterDrawer) return;
-    selectors.fiterDrawer.addEventListener('click', () => {
+    selectors.filterDrawer.addEventListener('click', () => {
       closeFilterDrawer();
     });
     if(!selectors.FilterBoxContainer) return;
