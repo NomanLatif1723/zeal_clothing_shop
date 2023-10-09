@@ -31,6 +31,7 @@
 {%- endstyle -%}
 <div class="catalog-content__wrapper main__section-{{ section.id }}">
   <div class="page__width">
+    {%- render 'loader' -%}
     <div class="catalog__wrapper">
       {%- if show_filtering -%}
         <div class="catalog-filter__block">
