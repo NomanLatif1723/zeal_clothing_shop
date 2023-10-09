@@ -873,14 +873,8 @@ initFilterFacetForm();
 function initCollectionEventListeners() {
   document.addEventListener('click', (event) => {
     if (event.target.classList.contains('filter-group__item')) {
-      
-
-
-
-          event.target.closest('.filter-group').querySelector('.filter-group__dropdown').classList.toggle('hidden');
-          event.target.closest('.filter-group').querySelector('.icon__arrow').classList.toggle('icon__rotate');
-
-
+      event.target.closest('.filter-group').querySelector('.filter-group__dropdown').classList.toggle('hidden');
+      event.target.closest('.filter-group').querySelector('.icon__arrow').classList.toggle('icon__rotate');
     }
   })
   // selectors.filterItem.forEach(item => {
