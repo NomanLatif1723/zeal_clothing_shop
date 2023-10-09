@@ -886,6 +886,7 @@ initCustomerForms();
 function initCollections() {
   let selectors = {
     sortContainer: document.querySelectorAll('#sort-by'),
+    loader: document.querySelector('.loader'),
     filterItem: document.querySelectorAll('.filter-group__item'),
     filterBtn: document.querySelector('.filter__btn'),
     filterDrawer: document.querySelector('.filter-drawer'),
@@ -896,47 +897,31 @@ function initCollections() {
     activeFilterRemove: document.querySelectorAll('.active-filters__remove-filter'),
     bodyContainer: document.querySelector('body')
   }
-  const loader = document.querySelector('.loader');
+  // const loader = document.querySelector('.loader');
   collectionSort();
   collectionFilters();
   function collectionSort() {
     Shopify.queryParams = {};
-    // // Preserve existing query parameters
-    // if (location.search.length) {
-    //   var params = location.search.substr(1).split('&');
-  
-    //   for (var i = 0; i < params.length; i++) {
-    //     var keyValue = params[i].split('=');
-  
-    //     if (keyValue.length) {
-    //       Shopify.queryParams[decodeURIComponent(keyValue[0])] = decodeURIComponent(keyValue[1]);
-    //     }
-    //   }
-    // }
-  
-    const sortContainer = document.querySelectorAll('#sort-by');
-    if (sortContainer) {
-      sortContainer.forEach(el => {
-        el.addEventListener('change', function(e) {
-          loader.classList.remove('hidden');
-          var value = e.target.value;
-          fetch(`${window.themeContent.routes.collection}?sort_by=${e.target.value}`)
-          .then(responce => responce.text())
-          .then(data => {
-            let html = document.createElement('div');
-            html.innerHTML = data;
-            let productData = html.querySelector('.collection-grid').innerHTML;
-            document.querySelector('.collection-grid').innerHTML = productData;
-            history.replaceState(null,null, '?sort_by='+ e.target.value);
-          })
-          .catch(error => console.log('Error', error))
-          .finally(() => loader.classList.add('hidden'));
-          // Shopify.queryParams.sort_by = value;
-          // location.search = new URLSearchParams(Shopify.queryParams).toString();
-        });
-      })
-      
-    }
+    if(!selectors.sortContainer) return;
+    selectors.sortContainer.forEach(el => {
+      el.addEventListener('change', function(e) {
+        loader.classList.remove('hidden');
+        var value = e.target.value;
+        fetch(`${window.themeContent.routes.collection}?sort_by=${e.target.value}`)
+        .then(responce => responce.text())
+        .then(data => {
+          let html = document.createElement('div');
+          html.innerHTML = data;
+          let productData = html.querySelector('.collection-grid').innerHTML;
+          document.querySelector('.collection-grid').innerHTML = productData;
+          history.replaceState(null,null, '?sort_by='+ e.target.value);
+        })
+        .catch(error => console.log('Error', error))
+        .finally(() => loader.classList.add('hidden'));
+        // Shopify.queryParams.sort_by = value;
+        // location.search = new URLSearchParams(Shopify.queryParams).toString();
+      });
+    })
   }
   function collectionFilters() {
     // let filterItem = document.querySelectorAll('.filter-group__item');
