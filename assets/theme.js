@@ -994,15 +994,15 @@ function initCollections() {
         // filterSubmitForm();
       });
     });
-    activeFilterRemove.forEach(button => {
-      if (!button) {
-        return
-      }
-      button.addEventListener('click', (event) => {
-        event.preventDefault();
-        filterSubmitForm();
-      });
-    });
+    // activeFilterRemove.forEach(button => {
+    //   if (!button) {
+    //     return
+    //   }
+    //   button.addEventListener('click', (event) => {
+    //     event.preventDefault();
+    //     filterSubmitForm();
+    //   });
+    // });
     function filterSubmitForm() {
       const filterForm = document.querySelector('.filter-form');
       const queryString = new URLSearchParams(new FormData(filterForm)).toString();
