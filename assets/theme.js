@@ -907,36 +907,9 @@ function initCollectionEventListeners() {
       // openFilterDrawer();
     }
   });
-  // selectors.filterItem.forEach(item => {
-  //   if (!item) return;
-  //   item.addEventListener('click', (event) => {
-  //     event.target.closest('.filter-group').querySelector('.filter-group__dropdown').classList.toggle('hidden');
-  //     event.target.closest('.filter-group').querySelector('.icon__arrow').classList.toggle('icon__rotate');
-  //   });
-  // });
   // if (!selectors.closefilterDrawerBtn) return;
   // selectors.closefilterDrawerBtn.addEventListener('click', () => {
   //   closeFilterDrawer();
-  // });
-  // if(!selectors.filterDrawer) return;
-  // selectors.filterDrawer.addEventListener('click', () => {
-  //   closeFilterDrawer();
-  // });
-  // if(!selectors.FilterBoxContainer) return;
-  // selectors.FilterBoxContainer.addEventListener('click', (event) => {
-  //   event.stopPropagation();
-  // });
-  // if (!selectors.filterBtn) return;
-  // selectors.filterBtn.addEventListener('click', () => {
-  //   openFilterDrawer();
-  // });
-  // selectors.moreSwatchesBtn.forEach(btn => {
-  //   if (!btn) return;
-  //   btn.addEventListener('click', () => {
-  //     let hiddenSwatches = btn.closest('.color-swatch__list').querySelector('.hidden__swatches');
-  //     btn.classList.add('hide');
-  //     hiddenSwatches.classList.add('show');
-  //   });
   // });
   // selectors.activeFilterRemove.forEach(button => {
   //   if (!button) return;
