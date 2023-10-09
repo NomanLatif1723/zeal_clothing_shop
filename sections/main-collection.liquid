@@ -155,7 +155,7 @@
             </button>
           </div>
         </div>
-
+        {% assign filters = collection.filters %}
         <div class="active-filters">
           {% comment %}
           <a href="{{ collection.url }}?sort_by={{ collection.sort_by }}" class="active-filters__clear">Clear all</a>
