@@ -892,110 +892,110 @@ function initCollections() {
     if(!selectors.sortContainer || !selectors.loader) return;
     selectors.sortContainer.forEach(el => {
       el.addEventListener('change', function(e) {
-        selectors.loader.classList.remove('hidden');
-        var value = e.target.value;
-        fetch(`${window.themeContent.routes.collection}?sort_by=${e.target.value}`)
-        .then(responce => responce.text())
-        .then(data => {
-          let html = document.createElement('div');
-          html.innerHTML = data;
-          let productData = html.querySelector('.collection-grid').innerHTML;
-          document.querySelector('.collection-grid').innerHTML = productData;
-          history.replaceState(null,null, '?sort_by='+ e.target.value);
-        })
-        .catch(error => console.log('Error', error))
-        .finally(() => selectors.loader.classList.add('hidden'));
-        // Shopify.queryParams.sort_by = value;
-        // location.search = new URLSearchParams(Shopify.queryParams).toString();
+        sortingSubmitForm();
       });
     })
   }
-  function collectionFilters() {
-    selectors.filterItem.forEach(item => {
-      if (!item) return;
-      item.addEventListener('click', (event) => {
-        event.target.closest('.filter-group').querySelector('.filter-group__dropdown').classList.toggle('hidden');
-        event.target.closest('.filter-group').querySelector('.icon__arrow').classList.toggle('icon__rotate');
+  selectors.filterItem.forEach(item => {
+    if (!item) return;
+    item.addEventListener('click', (event) => {
+      event.target.closest('.filter-group').querySelector('.filter-group__dropdown').classList.toggle('hidden');
+      event.target.closest('.filter-group').querySelector('.icon__arrow').classList.toggle('icon__rotate');
+    });
+  });
+  if (!selectors.closefilterDrawerBtn) return;
+  selectors.closefilterDrawerBtn.addEventListener('click', () => {
+    closeFilterDrawer();
+  });
+  if(!selectors.filterDrawer) return;
+  selectors.filterDrawer.addEventListener('click', () => {
+    closeFilterDrawer();
+  });
+  if(!selectors.FilterBoxContainer) return;
+  selectors.FilterBoxContainer.addEventListener('click', (event) => {
+    event.stopPropagation();
+  });
+  selectors.filterOptions.forEach(option => {
+    if (!option) return;
+    option.addEventListener('change', () => {
+      filterSubmitForm();
+    });
+  });
+  selectors.filterPriceOptions.forEach(option => {
+    if (!option) return;
+    option.addEventListener('input', () => {
+      // filterSubmitForm();
+    });
+  });
+  function buttonEvents() {
+    if (!selectors.filterBtn) return;
+    selectors.filterBtn.addEventListener('click', () => {
+      openFilterDrawer();
+    });
+    selectors.moreSwatchesBtn.forEach(btn => {
+      if (!btn) return;
+      btn.addEventListener('click', () => {
+        let hiddenSwatches = btn.closest('.color-swatch__list').querySelector('.hidden__swatches');
+        btn.classList.add('hide');
+        hiddenSwatches.classList.add('show');
       });
     });
-    if (!selectors.closefilterDrawerBtn) return;
-    selectors.closefilterDrawerBtn.addEventListener('click', () => {
-      closeFilterDrawer();
-    });
-    if(!selectors.filterDrawer) return;
-    selectors.filterDrawer.addEventListener('click', () => {
-      closeFilterDrawer();
-    });
-    if(!selectors.FilterBoxContainer) return;
-    selectors.FilterBoxContainer.addEventListener('click', (event) => {
-      event.stopPropagation();
-    });
-    selectors.filterOptions.forEach(option => {
-      if (!option) return;
-      option.addEventListener('change', () => {
-        filterSubmitForm();
-      });
-    });
-    selectors.filterPriceOptions.forEach(option => {
-      if (!option) return;
-      option.addEventListener('input', () => {
-        // filterSubmitForm();
-      });
-    });
-    buttonEvents();
-    function buttonEvents() {
-      if (!selectors.filterBtn) return;
-      selectors.filterBtn.addEventListener('click', () => {
-        openFilterDrawer();
-      });
-      selectors.moreSwatchesBtn.forEach(btn => {
-        if (!btn) return;
-        btn.addEventListener('click', () => {
-          let hiddenSwatches = btn.closest('.color-swatch__list').querySelector('.hidden__swatches');
-          btn.classList.add('hide');
-          hiddenSwatches.classList.add('show');
-        });
-      });
-      // selectors.activeFilterRemove.forEach(button => {
-      //   if (!button) return;
-      //   button.addEventListener('click', (event) => {
-      //     event.preventDefault();
-      //     filterSubmitForm();
-      //   });
-      // });
+    // selectors.activeFilterRemove.forEach(button => {
+    //   if (!button) return;
+    //   button.addEventListener('click', (event) => {
+    //     event.preventDefault();
+    //     filterSubmitForm();
+    //   });
+    // });
+  }
+  function openFilterDrawer() {
+    if (selectors.filterDrawer.classList.contains('filter-drawer__left')) {
+      selectors.filterDrawer.classList.add('drawer-open__left');
+    } else {
+      selectors.filterDrawer.classList.add('drawer-open__right');
     }
-    function openFilterDrawer() {
-      if (selectors.filterDrawer.classList.contains('filter-drawer__left')) {
-        selectors.filterDrawer.classList.add('drawer-open__left');
-      } else {
-        selectors.filterDrawer.classList.add('drawer-open__right');
-      }
-      selectors.bodyContainer.classList.add('drawer__opening');
+    selectors.bodyContainer.classList.add('drawer__opening');
+  }
+  function closeFilterDrawer() {
+    if (selectors.filterDrawer.classList.contains('filter-drawer__left')) {
+      selectors.filterDrawer.classList.remove('drawer-open__left');
+    } else {
+      selectors.filterDrawer.classList.remove('drawer-open__right');
     }
-    function closeFilterDrawer() {
-      if (selectors.filterDrawer.classList.contains('filter-drawer__left')) {
-        selectors.filterDrawer.classList.remove('drawer-open__left');
-      } else {
-        selectors.filterDrawer.classList.remove('drawer-open__right');
-      }
-      selectors.bodyContainer.classList.remove('drawer__opening');
-    }
-    function filterSubmitForm() {
-      const queryString = new URLSearchParams(new FormData(selectors.filterForm)).toString();
-      selectors.loader.classList.remove('hidden');
-      fetch(`${window.themeContent.routes.collection}?${queryString}`)
-        .then(responce => responce.text())
-        .then(data => {
-          let html = document.createElement('div');
-          html.innerHTML = data;
-          let productData = html.querySelector('.catalog__content').innerHTML;
-          document.querySelector('.catalog__content').innerHTML = productData;
-          history.replaceState(null,null, '?'+ queryString);
-          buttonEvents();
-        })
-        .catch(error => console.log('Error', error))
-        .finally(() => selectors.loader.classList.add('hidden'));
-    }
+    selectors.bodyContainer.classList.remove('drawer__opening');
+  }
+  function sortingSubmitForm() {
+    selectors.loader.classList.remove('hidden');
+    let value = e.target.value;
+    fetch(`${window.themeContent.routes.collection}?sort_by=${value}`)
+    .then(responce => responce.text())
+    .then(data => {
+      let html = document.createElement('div');
+      html.innerHTML = data;
+      let productData = html.querySelector('.collection-grid').innerHTML;
+      document.querySelector('.collection-grid').innerHTML = productData;
+      history.replaceState(null,null, '?sort_by='+ value);
+    })
+    .catch(error => console.log('Error', error))
+    .finally(() => selectors.loader.classList.add('hidden'));
+    // Shopify.queryParams.sort_by = value;
+    // location.search = new URLSearchParams(Shopify.queryParams).toString();
+  }
+  function filterSubmitForm() {
+    const queryString = new URLSearchParams(new FormData(selectors.filterForm)).toString();
+    selectors.loader.classList.remove('hidden');
+    fetch(`${window.themeContent.routes.collection}?${queryString}`)
+      .then(responce => responce.text())
+      .then(data => {
+        let html = document.createElement('div');
+        html.innerHTML = data;
+        let productData = html.querySelector('.catalog__content').innerHTML;
+        document.querySelector('.catalog__content').innerHTML = productData;
+        history.replaceState(null,null, '?'+ queryString);
+        buttonEvents();
+      })
+      .catch(error => console.log('Error', error))
+      .finally(() => selectors.loader.classList.add('hidden'));
   }
 }
 initCollections();
