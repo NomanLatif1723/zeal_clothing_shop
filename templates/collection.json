@@ -20,7 +20,7 @@
         "products_to_show": 30,
         "products_per_row": 4,
         "show_sorting": true,
-        "show_filtering": true,
+        "show_filtering": false,
         "show_collection_count": true,
         "text_alignment": "center",
         "lazyload_images": true,
