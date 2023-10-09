@@ -890,8 +890,7 @@ function initCollectionSort() {
         let html = document.createElement('div');
         html.innerHTML = data;
         let productData = html.querySelector('.collection-grid').innerHTML;
-        document.querySelector('.collection-grid').innerHTML = productData;
-        
+        selectors.collectionContainer.innerHTML = productData;
       })
       .catch(error => console.log('Error', error))
       .finally(() => selectors.loader.classList.add('hidden'));
@@ -905,6 +904,25 @@ function initCollectionSort() {
 }
 initCollectionSort();
 
+// Collection Facets Filters 
+function initFilterFacetForm() {
+  let selectors = {
+    sortContainer: document.querySelectorAll('#sort-by'),
+    loader: document.querySelector('.loader'),
+    filterForm: document.querySelector('.filter-form'),
+    filterItem: document.querySelectorAll('.filter-group__item'),
+    filterBtn: document.querySelector('.filter__btn'),
+    filterDrawer: document.querySelector('.filter-drawer'),
+    FilterBoxContainer: document.querySelector('.filter-drawer__box'),
+    closefilterDrawerBtn: document.querySelector('.filter-icon__close'),
+    filterOptions: document.querySelectorAll('.filter-group input[type="checkbox"]'),
+    filterPriceOptions: document.querySelectorAll('.filter-group input[type="number"]'),
+    activeFilterRemove: document.querySelectorAll('.active-filters__remove-filter'),
+    bodyContainer: document.querySelector('body'),
+    moreSwatchesBtn: document.querySelectorAll('.show-more__swatches')
+  }
+}
+initFilterFacetForm();
 function initCollections() {
   let selectors = {
     sortContainer: document.querySelectorAll('#sort-by'),
