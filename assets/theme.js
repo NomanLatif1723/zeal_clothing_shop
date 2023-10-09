@@ -892,16 +892,33 @@ function initCollectionEventListeners() {
     if (event.target.classList.contains('filter__btn')) {
       openFilterDrawer();
     }
-    if (event.target.classList.contains('show-more__swatches')) {
-      console.log("hy");
-      let hiddenSwatches = event.target.closest('.color-swatch__list').querySelector('.hidden__swatches');
-      event.target.classList.add('hide');
-      hiddenSwatches.classList.add('show');
+    // if (event.target.classList.contains('show-more__swatches')) {
+    //   console.log("hy");
+    //   let hiddenSwatches = event.target.closest('.color-swatch__list').querySelector('.hidden__swatches');
+    //   event.target.classList.add('hide');
+    //   hiddenSwatches.classList.add('show');
+    // }
+     if (event.target.classList.contains('show-more__swatches')) {
+        console.log("Clicked on a 'show-more__swatches' button");
+        
+        // Find the closest '.color-swatch__list' element relative to the clicked button
+        let colorSwatchList = event.target.closest('.color-swatch__list');
+        
+        if (colorSwatchList) {
+            // Find the '.hidden__swatches' element within the same '.color-swatch__list'
+            let hiddenSwatches = colorSwatchList.querySelector('.hidden__swatches');
+            
+            if (hiddenSwatches) {
+                // Toggle classes to show/hide content
+                event.target.classList.add('hide');
+                hiddenSwatches.classList.add('show');
+            }
+        }
     }
     if (event.target.classList.contains('active-filters__remove-filter')) {
       // openFilterDrawer();
     }
-  })
+  });
   // selectors.filterItem.forEach(item => {
   //   if (!item) return;
   //   item.addEventListener('click', (event) => {
