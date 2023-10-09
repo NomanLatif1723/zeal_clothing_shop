@@ -873,14 +873,14 @@ initFilterFacetForm();
 function initCollectionEventListeners() {
   document.addEventListener('click', (event) => {
     if (event.target.classList.contains('filter-group__item')) {
-      const filterItem = document.querySelectorAll('.filter-group__item');
-      filterItem.forEach(item => {
-        if (!item) return;
-        item.addEventListener('click', (event) => {
+      
+
+
+
           event.target.closest('.filter-group').querySelector('.filter-group__dropdown').classList.toggle('hidden');
           event.target.closest('.filter-group').querySelector('.icon__arrow').classList.toggle('icon__rotate');
-        });
-      });
+
+
     }
   })
   // selectors.filterItem.forEach(item => {
