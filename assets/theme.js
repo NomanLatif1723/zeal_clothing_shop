@@ -1013,7 +1013,6 @@ function initCollections() {
           let html = document.createElement('div');
           html.innerHTML = data;
           let productData = html.querySelector('.catalog__content').innerHTML;
-          console.log(productData);
           document.querySelector('.catalog__content').innerHTML = productData;
           history.replaceState(null,null, '?'+ queryString);
         })
