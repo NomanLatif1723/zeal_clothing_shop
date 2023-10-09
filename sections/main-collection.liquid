@@ -62,7 +62,7 @@
           </div>
         </div>
       {%- endif -%}
-      <div class="catalog__content{% if show_filtering %}catalog-list__banner{% endif %}">
+      <div class="catalog__content{% if show_filtering %} catalog-list__banner{% endif %}">
         {%- for block in section.blocks -%}
           {%- liquid
               assign banner_heading = block.settings.banner_heading
