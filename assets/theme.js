@@ -884,7 +884,7 @@ function initCollectionEventListeners() {
     if (event.target.classList.contains('filter__btn')) {
       openFilterDrawer();
     }
-    if (event.target.classList.contains('filter-icon__close')) {
+    if (event.target.classList.contains('icon__close')) {
       console.log("button clicked");
       closeFilterDrawer();
     }
