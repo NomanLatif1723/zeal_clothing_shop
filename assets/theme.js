@@ -982,7 +982,7 @@ function initCollections() {
       } else {
         selectors.filterDrawer.classList.add('drawer-open__right');
       }
-      bodyContainer.classList.add('drawer__opening');
+      selectors.bodyContainer.classList.add('drawer__opening');
     }
     function closeFilterDrawer() {
       if (selectors.filterDrawer.classList.contains('filter-drawer__left')) {
@@ -990,7 +990,7 @@ function initCollections() {
       } else {
         selectors.filterDrawer.classList.remove('drawer-open__right');
       }
-      bodyContainer.classList.remove('drawer__opening');
+      selectors.bodyContainer.classList.remove('drawer__opening');
     }
     function filterSubmitForm() {
       const queryString = new URLSearchParams(new FormData(selectors.filterForm)).toString();
