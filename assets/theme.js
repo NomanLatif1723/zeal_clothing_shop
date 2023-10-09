@@ -933,51 +933,36 @@ function initCollections() {
     // let filterPriceOptions = document.querySelectorAll('.filter-group input[type="number"]');
     // let activeFilterRemove = document.querySelectorAll('.active-filters__remove-filter');
     // let bodyContainer = document.querySelector('body');
-    filterItem.forEach(item => {
-      if (!item) {
-        return;
-      }
-        item.addEventListener('click', (event) => {
-          event.target.closest('.filter-group').querySelector('.filter-group__dropdown').classList.toggle('hidden');
-          event.target.closest('.filter-group').querySelector('.icon__arrow').classList.toggle('icon__rotate');
-        });
+    selectors.filterItem.forEach(item => {
+      if (!item) return;
+      item.addEventListener('click', (event) => {
+        event.target.closest('.filter-group').querySelector('.filter-group__dropdown').classList.toggle('hidden');
+        event.target.closest('.filter-group').querySelector('.icon__arrow').classList.toggle('icon__rotate');
+      });
     });
-    if (!filterBtn) return;
-    filterBtn.addEventListener('click', () => {
+    if (!selectors.filterBtn) return;
+    selectors.filterBtn.addEventListener('click', () => {
       openFilterDrawer();
     })
-    // if (overlayShadow) {
-    //   overlayShadow.addEventListener('click', () => {
-    //     closeFilterDrawer();
-    //   })
-    // }
-    if (!closefilterDrawerBtn) return;
-    if (closefilterDrawerBtn) {
-      closefilterDrawerBtn.addEventListener('click', () => {
-        closeFilterDrawer();
-      })
-    }
+    if (!selectors.closefilterDrawerBtn) return;
+    selectors.closefilterDrawerBtn.addEventListener('click', () => {
+      closeFilterDrawer();
+    })
     
-    filterOptions.forEach(option => {
-      if (!option) {
-        return
-      }
+    selectors.filterOptions.forEach(option => {
+      if (!option) return;
       option.addEventListener('change', () => {
         filterSubmitForm();
       });
     });
-    filterPriceOptions.forEach(option => {
-      if (!option) {
-        return
-      }
+    selectors.filterPriceOptions.forEach(option => {
+      if (!option) return;
       option.addEventListener('input', () => {
         // filterSubmitForm();
       });
     });
-    // activeFilterRemove.forEach(button => {
-    //   if (!button) {
-    //     return
-    //   }
+    // selectors.activeFilterRemove.forEach(button => {
+    //   if (!button) return;
     //   button.addEventListener('click', (event) => {
     //     event.preventDefault();
     //     filterSubmitForm();
