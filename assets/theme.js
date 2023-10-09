@@ -458,21 +458,6 @@ function initTestimonialSwipers() {
 }
 initTestimonialSwipers();
 
-// Featured Collection Show More Swatches Event
-function initFeaturedSwatches() {
-  let moreSwatchesBtn = document.querySelectorAll('.show-more__swatches');
-  moreSwatchesBtn.forEach(btn => {
-    if (btn) {
-      btn.addEventListener('click', () => {
-        let hiddenSwatches = btn.closest('.color-swatch__list').querySelector('.hidden__swatches');
-        btn.classList.add('hide');
-        hiddenSwatches.classList.add('show');
-      })
-    }
-  })
-}
-initFeaturedSwatches();
-
 // Video Section Events
 function initVideoSection() {
   let videoPlayIcon = document.querySelectorAll('.video-section__playicon');
@@ -896,7 +881,8 @@ function initCollections() {
     filterOptions: document.querySelectorAll('.filter-group input[type="checkbox"]'),
     filterPriceOptions: document.querySelectorAll('.filter-group input[type="number"]'),
     activeFilterRemove: document.querySelectorAll('.active-filters__remove-filter'),
-    bodyContainer: document.querySelector('body')
+    bodyContainer: document.querySelector('body'),
+    moreSwatchesBtn: document.querySelectorAll('.show-more__swatches')
   }
   // const loader = document.querySelector('.loader');
   collectionSort();
@@ -925,15 +911,6 @@ function initCollections() {
     })
   }
   function collectionFilters() {
-    // let filterItem = document.querySelectorAll('.filter-group__item');
-    // let filterBtn = document.querySelector('.filter__btn');
-    // let filterDrawer = document.querySelector('.filter-drawer');
-    // let overlayShadow = document.querySelector('.drawer__overlay-container');
-    // let closefilterDrawerBtn = document.querySelector('.filter-icon__close');
-    // let filterOptions = document.querySelectorAll('.filter-group input[type="checkbox"]');
-    // let filterPriceOptions = document.querySelectorAll('.filter-group input[type="number"]');
-    // let activeFilterRemove = document.querySelectorAll('.active-filters__remove-filter');
-    // let bodyContainer = document.querySelector('body');
     selectors.filterItem.forEach(item => {
       if (!item) return;
       item.addEventListener('click', (event) => {
@@ -1012,6 +989,18 @@ function initCollections() {
         .finally(() => selectors.loader.classList.add('hidden'));
     }
   }
+  // Featured Collection Show More Swatches Event
+function initFeaturedSwatches() {
+  selectors.moreSwatchesBtn.forEach(btn => {
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+      let hiddenSwatches = btn.closest('.color-swatch__list').querySelector('.hidden__swatches');
+      btn.classList.add('hide');
+      hiddenSwatches.classList.add('show');
+    });
+  });
+}
+initFeaturedSwatches();
 }
 initCollections();
 
