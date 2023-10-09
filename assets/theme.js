@@ -887,6 +887,7 @@ function initCollections() {
   let selectors = {
     sortContainer: document.querySelectorAll('#sort-by'),
     loader: document.querySelector('.loader'),
+    filterForm: document.querySelector('.filter-form'),
     filterItem: document.querySelectorAll('.filter-group__item'),
     filterBtn: document.querySelector('.filter__btn'),
     filterDrawer: document.querySelector('.filter-drawer'),
