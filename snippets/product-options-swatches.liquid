@@ -23,9 +23,7 @@
             {% endif %}
           {% endfor %}
         {%- if option.values.size > 5 -%}
-          <div class="color-swatch__item show-more__swatches">+
-            <span class="icon__plus">+</span>
-          </div>
+          <div class="color-swatch__item show-more__swatches">+</div>
           <div class="hidden__swatches">
             {%- for value in option.values offset: 5 -%}
               <div class="color-swatch__item">
