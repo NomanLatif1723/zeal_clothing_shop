@@ -1005,6 +1005,7 @@ function initCollections() {
           let productData = html.querySelector('.catalog__content').innerHTML;
           document.querySelector('.catalog__content').innerHTML = productData;
           history.replaceState(null,null, '?'+ queryString);
+          buttonEvents();
         })
         .catch(error => console.log('Error', error))
         .finally(() => selectors.loader.classList.add('hidden'));
