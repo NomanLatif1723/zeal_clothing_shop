@@ -988,6 +988,7 @@ function initCollectionSort() {
         html.innerHTML = data;
         let productData = html.querySelector('.collection-grid').innerHTML;
         selectors.collectionContainer.innerHTML = productData;
+        initCollectionEventListeners();
       })
       .catch(error => console.log('Error', error))
       .finally(() => selectors.loader.classList.add('hidden'));
