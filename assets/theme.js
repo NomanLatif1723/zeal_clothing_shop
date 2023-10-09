@@ -881,6 +881,9 @@ function initCollectionEventListeners() {
       event.target.closest('.filter-group').querySelector('.filter-group__dropdown').classList.toggle('hidden');
       event.target.closest('.filter-group').querySelector('.icon__arrow').classList.toggle('icon__rotate');
     }
+    if (event.target.classList.contains('filter__btn')) {
+      openFilterDrawer();
+    }
     if (event.target.classList.contains('filter-icon__close')) {
       closeFilterDrawer();
     }
@@ -889,9 +892,6 @@ function initCollectionEventListeners() {
     }
     if (event.target.classList.contains('filter-drawer__box')) {
       event.stopPropagation();
-    }
-    if (event.target.classList.contains('filter__btn')) {
-      openFilterDrawer();
     }
     if (event.target.classList.contains('show-more__swatches')) {
       let colorSwatchList = event.target.closest('.color-swatch__list');
