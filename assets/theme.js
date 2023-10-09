@@ -876,6 +876,15 @@ function initCollectionEventListeners() {
       event.target.closest('.filter-group').querySelector('.filter-group__dropdown').classList.toggle('hidden');
       event.target.closest('.filter-group').querySelector('.icon__arrow').classList.toggle('icon__rotate');
     }
+    if (event.target.classList.contains('filter-icon__close')) {
+      closeFilterDrawer();
+    }
+    if (event.target.classList.contains('filter-drawer')) {
+      closeFilterDrawer();
+    }
+    if (event.target.classList.contains('filter-drawer__box')) {
+      event.stopPropagation();
+    }
   })
   // selectors.filterItem.forEach(item => {
   //   if (!item) return;
