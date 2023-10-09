@@ -871,6 +871,20 @@ initFilterFacetForm();
 
 // Document General Event Listeners
 function initCollectionEventListeners() {
+  let selectors = {
+    loader: document.querySelector('.loader'),
+    filterForm: document.querySelector('.filter-form'),
+    filterItem: document.querySelectorAll('.filter-group__item'),
+    filterBtn: document.querySelector('.filter__btn'),
+    filterDrawer: document.querySelector('.filter-drawer'),
+    FilterBoxContainer: document.querySelector('.filter-drawer__box'),
+    closefilterDrawerBtn: document.querySelector('.filter-icon__close'),
+    filterOptions: document.querySelectorAll('.filter-group input[type="checkbox"]'),
+    filterPriceOptions: document.querySelectorAll('.filter-group input[type="number"]'),
+    activeFilterRemove: document.querySelectorAll('.active-filters__remove-filter'),
+    bodyContainer: document.querySelector('body'),
+    moreSwatchesBtn: document.querySelectorAll('.show-more__swatches')
+  }
   document.addEventListener('click', (event) => {
     if (event.target.classList.contains('filter-group__item')) {
       event.target.closest('.filter-group').querySelector('.filter-group__dropdown').classList.toggle('hidden');
@@ -997,16 +1011,8 @@ function initFilterFacetForm() {
   let selectors = {
     loader: document.querySelector('.loader'),
     filterForm: document.querySelector('.filter-form'),
-    filterItem: document.querySelectorAll('.filter-group__item'),
-    filterBtn: document.querySelector('.filter__btn'),
-    filterDrawer: document.querySelector('.filter-drawer'),
-    FilterBoxContainer: document.querySelector('.filter-drawer__box'),
-    closefilterDrawerBtn: document.querySelector('.filter-icon__close'),
     filterOptions: document.querySelectorAll('.filter-group input[type="checkbox"]'),
-    filterPriceOptions: document.querySelectorAll('.filter-group input[type="number"]'),
-    activeFilterRemove: document.querySelectorAll('.active-filters__remove-filter'),
-    bodyContainer: document.querySelector('body'),
-    moreSwatchesBtn: document.querySelectorAll('.show-more__swatches')
+    filterPriceOptions: document.querySelectorAll('.filter-group input[type="number"]')
   }
   selectors.filterOptions.forEach(option => {
     if (!option) return;
