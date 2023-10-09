@@ -890,9 +890,9 @@ function initCollectionEventListeners() {
     if (event.target.classList.contains('filter-drawer')) {
       closeFilterDrawer();
     }
-    // if (event.target.classList.contains('filter-drawer__box')) {
-    //   event.stopPropagation();
-    // }
+    if (event.target.classList.contains('filter-drawer__box')) {
+      event.stopPropagation();
+    }
     if (event.target.classList.contains('show-more__swatches')) {
       let colorSwatchList = event.target.closest('.color-swatch__list');
       if (colorSwatchList) {
