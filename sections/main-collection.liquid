@@ -37,28 +37,30 @@
         <div class="catalog-filter__block">
           <!-- <div class="drawer__overlay-container"></div> -->
           <div class="filter-drawer filter-drawer__{{ filter_drawer_position }}">
-            <div class="drawer__header filter-drawer__header">
-              <div class="drawer__title">{{ 'collections.general.filter_drawer' | t }}</div>
-              <button class="drawer-icon__close filter-icon__close">
-                {%- render 'icon-close' -%}
-              </button>
-            </div>
-            {%- render 'filter-facets', filters: collection.filters -%}
-            <div class="drawer__header filter-drawer__header">
-              <div class="drawer__title">{{ 'collections.general.sort_drawer' | t }}</div>
-            </div>
-            {%- if show_sorting -%}
-              <div class="catalog-sorting__drawer filter-drawer__header">
-                <select id="sort-by">
-                  {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
-                  {%- for option in collection.sort_options -%}
-                    <option value="{{ option.value }}" {% if option.value == sort_by %}selected="selected"{% endif %}>
-                      {{ option.name }}
-                    </option>
-                  {%- endfor -%}
-                </select>
+            <div class="filter-drawer__box">
+              <div class="drawer__header filter-drawer__header">
+                <div class="drawer__title">{{ 'collections.general.filter_drawer' | t }}</div>
+                <button class="drawer-icon__close filter-icon__close">
+                  {%- render 'icon-close' -%}
+                </button>
               </div>
-            {%- endif -%}
+              {%- render 'filter-facets', filters: collection.filters -%}
+              <div class="drawer__header filter-drawer__header">
+                <div class="drawer__title">{{ 'collections.general.sort_drawer' | t }}</div>
+              </div>
+              {%- if show_sorting -%}
+                <div class="catalog-sorting__drawer filter-drawer__header">
+                  <select id="sort-by">
+                    {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
+                    {%- for option in collection.sort_options -%}
+                      <option value="{{ option.value }}" {% if option.value == sort_by %}selected="selected"{% endif %}>
+                        {{ option.name }}
+                      </option>
+                    {%- endfor -%}
+                  </select>
+                </div>
+              {%- endif -%}
+            </div>
           </div>
         </div>
       {%- endif -%}
