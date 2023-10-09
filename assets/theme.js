@@ -867,6 +867,70 @@ function initCustomerForms() {
 }
 initCustomerForms();
 
+initFilterFacetForm();
+
+// Document General Event Listeners
+function initCollectionEventListeners() {
+  document.addEventListener('click', (event) => {
+    console.log(event.target.className);
+  })
+  // selectors.filterItem.forEach(item => {
+  //   if (!item) return;
+  //   item.addEventListener('click', (event) => {
+  //     event.target.closest('.filter-group').querySelector('.filter-group__dropdown').classList.toggle('hidden');
+  //     event.target.closest('.filter-group').querySelector('.icon__arrow').classList.toggle('icon__rotate');
+  //   });
+  // });
+  // if (!selectors.closefilterDrawerBtn) return;
+  // selectors.closefilterDrawerBtn.addEventListener('click', () => {
+  //   closeFilterDrawer();
+  // });
+  // if(!selectors.filterDrawer) return;
+  // selectors.filterDrawer.addEventListener('click', () => {
+  //   closeFilterDrawer();
+  // });
+  // if(!selectors.FilterBoxContainer) return;
+  // selectors.FilterBoxContainer.addEventListener('click', (event) => {
+  //   event.stopPropagation();
+  // });
+  // if (!selectors.filterBtn) return;
+  // selectors.filterBtn.addEventListener('click', () => {
+  //   openFilterDrawer();
+  // });
+  // selectors.moreSwatchesBtn.forEach(btn => {
+  //   if (!btn) return;
+  //   btn.addEventListener('click', () => {
+  //     let hiddenSwatches = btn.closest('.color-swatch__list').querySelector('.hidden__swatches');
+  //     btn.classList.add('hide');
+  //     hiddenSwatches.classList.add('show');
+  //   });
+  // });
+  // selectors.activeFilterRemove.forEach(button => {
+  //   if (!button) return;
+  //   button.addEventListener('click', (event) => {
+  //     event.preventDefault();
+  //     filterSubmitForm();
+  //   });
+  // });
+  function openFilterDrawer() {
+    if (selectors.filterDrawer.classList.contains('filter-drawer__left')) {
+      selectors.filterDrawer.classList.add('drawer-open__left');
+    } else {
+      selectors.filterDrawer.classList.add('drawer-open__right');
+    }
+    selectors.bodyContainer.classList.add('drawer__opening');
+  }
+  function closeFilterDrawer() {
+    if (selectors.filterDrawer.classList.contains('filter-drawer__left')) {
+      selectors.filterDrawer.classList.remove('drawer-open__left');
+    } else {
+      selectors.filterDrawer.classList.remove('drawer-open__right');
+    }
+    selectors.bodyContainer.classList.remove('drawer__opening');
+  }
+}
+initCollectionEventListeners();
+
 // Collection Sorting Using Ajax
 function initCollectionSort() {
   let selectors = {
@@ -949,66 +1013,6 @@ function initFilterFacetForm() {
       .finally(() => selectors.loader.classList.add('hidden'));
   }
 }
-initFilterFacetForm();
-function initCollections() {
-  function collectionEventListeners() {
-    selectors.filterItem.forEach(item => {
-      if (!item) return;
-      item.addEventListener('click', (event) => {
-        event.target.closest('.filter-group').querySelector('.filter-group__dropdown').classList.toggle('hidden');
-        event.target.closest('.filter-group').querySelector('.icon__arrow').classList.toggle('icon__rotate');
-      });
-    });
-    if (!selectors.closefilterDrawerBtn) return;
-    selectors.closefilterDrawerBtn.addEventListener('click', () => {
-      closeFilterDrawer();
-    });
-    if(!selectors.filterDrawer) return;
-    selectors.filterDrawer.addEventListener('click', () => {
-      closeFilterDrawer();
-    });
-    if(!selectors.FilterBoxContainer) return;
-    selectors.FilterBoxContainer.addEventListener('click', (event) => {
-      event.stopPropagation();
-    });
-    if (!selectors.filterBtn) return;
-    selectors.filterBtn.addEventListener('click', () => {
-      openFilterDrawer();
-    });
-    selectors.moreSwatchesBtn.forEach(btn => {
-      if (!btn) return;
-      btn.addEventListener('click', () => {
-        let hiddenSwatches = btn.closest('.color-swatch__list').querySelector('.hidden__swatches');
-        btn.classList.add('hide');
-        hiddenSwatches.classList.add('show');
-      });
-    });
-    // selectors.activeFilterRemove.forEach(button => {
-    //   if (!button) return;
-    //   button.addEventListener('click', (event) => {
-    //     event.preventDefault();
-    //     filterSubmitForm();
-    //   });
-    // });
-  }
-  function openFilterDrawer() {
-    if (selectors.filterDrawer.classList.contains('filter-drawer__left')) {
-      selectors.filterDrawer.classList.add('drawer-open__left');
-    } else {
-      selectors.filterDrawer.classList.add('drawer-open__right');
-    }
-    selectors.bodyContainer.classList.add('drawer__opening');
-  }
-  function closeFilterDrawer() {
-    if (selectors.filterDrawer.classList.contains('filter-drawer__left')) {
-      selectors.filterDrawer.classList.remove('drawer-open__left');
-    } else {
-      selectors.filterDrawer.classList.remove('drawer-open__right');
-    }
-    selectors.bodyContainer.classList.remove('drawer__opening');
-  }
-}
-initCollections();
 
 // FAQ'S Section 
 function initHandleQuestions() {
