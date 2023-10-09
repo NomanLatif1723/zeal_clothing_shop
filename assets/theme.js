@@ -969,21 +969,19 @@ function initCollections() {
     //   });
     // });
     function openFilterDrawer() {
-      if (filterDrawer.classList.contains('filter-drawer__left')) {
-        filterDrawer.classList.add('drawer-open__left');
+      if (selectors.filterDrawer.classList.contains('filter-drawer__left')) {
+        selectors.filterDrawer.classList.add('drawer-open__left');
       } else {
-        filterDrawer.classList.add('drawer-open__right');
+        selectors.filterDrawer.classList.add('drawer-open__right');
       }
-      overlayShadow.classList.add('overlay__visible');
       bodyContainer.classList.add('drawer__opening');
     }
     function closeFilterDrawer() {
-      if (filterDrawer.classList.contains('filter-drawer__left')) {
-        filterDrawer.classList.remove('drawer-open__left');
+      if (selectors.filterDrawer.classList.contains('filter-drawer__left')) {
+        selectors.filterDrawer.classList.remove('drawer-open__left');
       } else {
-        filterDrawer.classList.remove('drawer-open__right');
+        selectors.filterDrawer.classList.remove('drawer-open__right');
       }
-      overlayShadow.classList.remove('overlay__visible');
       bodyContainer.classList.remove('drawer__opening');
     }
     function filterSubmitForm() {
