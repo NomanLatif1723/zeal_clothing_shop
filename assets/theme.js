@@ -986,9 +986,8 @@ function initCollections() {
       bodyContainer.classList.remove('drawer__opening');
     }
     function filterSubmitForm() {
-      const filterForm = document.querySelector('.filter-form');
-      const queryString = new URLSearchParams(new FormData(filterForm)).toString();
-      loader.classList.remove('hidden');
+      const queryString = new URLSearchParams(new FormData(selectors.filterForm)).toString();
+      selectors.loader.classList.remove('hidden');
       fetch(`${window.themeContent.routes.collection}?${queryString}`)
         .then(responce => responce.text())
         .then(data => {
@@ -999,10 +998,9 @@ function initCollections() {
           history.replaceState(null,null, '?'+ queryString);
         })
         .catch(error => console.log('Error', error))
-        .finally(() => loader.classList.add('hidden'));
+        .finally(() => selectors.loader.classList.add('hidden'));
     }
   }
-  
 }
 initCollections();
 
