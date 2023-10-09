@@ -1000,10 +1000,10 @@ function initCollections() {
       fetch(`${window.themeContent.routes.collection}?${queryString}`)
         .then(responce => responce.text())
         .then(data => {
-          console.log(data);
           let html = document.createElement('div');
           html.innerHTML = data;
           let productData = html.querySelector('.collection-grid').innerHTML;
+          console.log(productData);
           document.querySelector('.collection-grid').innerHTML = productData;
           history.replaceState(null,null, '?'+ queryString);
         })
