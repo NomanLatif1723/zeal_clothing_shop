@@ -990,7 +990,7 @@ function initCollections() {
         return
       }
       option.addEventListener('input', () => {
-        filterSubmitForm();
+        // filterSubmitForm();
       });
     });
     function filterSubmitForm() {
