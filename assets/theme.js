@@ -885,6 +885,9 @@ function initCollectionEventListeners() {
     if (event.target.classList.contains('filter-drawer__box')) {
       event.stopPropagation();
     }
+    if (event.target.classList.contains('filter__btn')) {
+      openFilterDrawer();
+    }
   })
   // selectors.filterItem.forEach(item => {
   //   if (!item) return;
