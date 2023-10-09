@@ -884,6 +884,18 @@ initCustomerForms();
 
 // Collection Sorting Using Ajax
 function initCollections() {
+  let selectors = {
+    sortContainer: document.querySelectorAll('#sort-by'),
+    filterItem: document.querySelectorAll('.filter-group__item'),
+    filterBtn: document.querySelector('.filter__btn'),
+    filterDrawer: document.querySelector('.filter-drawer'),
+    FilterBoxContainer: document.querySelector('.filter-drawer__box'),
+    closefilterDrawerBtn: document.querySelector('.filter-icon__close'),
+    filterOptions: document.querySelectorAll('.filter-group input[type="checkbox"]'),
+    filterPriceOptions: document.querySelectorAll('.filter-group input[type="number"]'),
+    activeFilterRemove: document.querySelectorAll('.active-filters__remove-filter'),
+    bodyContainer: document.querySelector('body')
+  }
   const loader = document.querySelector('.loader');
   collectionSort();
   collectionFilters();
@@ -927,15 +939,15 @@ function initCollections() {
     }
   }
   function collectionFilters() {
-    let filterItem = document.querySelectorAll('.filter-group__item');
-    let filterBtn = document.querySelector('.filter__btn');
-    let filterDrawer = document.querySelector('.filter-drawer');
-    let overlayShadow = document.querySelector('.drawer__overlay-container');
-    let closefilterDrawerBtn = document.querySelector('.filter-icon__close');
-    let filterOptions = document.querySelectorAll('.filter-group input[type="checkbox"]');
-    let filterPriceOptions = document.querySelectorAll('.filter-group input[type="number"]');
-    let activeFilterRemove = document.querySelectorAll('.active-filters__remove-filter');
-    let bodyContainer = document.querySelector('body');
+    // let filterItem = document.querySelectorAll('.filter-group__item');
+    // let filterBtn = document.querySelector('.filter__btn');
+    // let filterDrawer = document.querySelector('.filter-drawer');
+    // let overlayShadow = document.querySelector('.drawer__overlay-container');
+    // let closefilterDrawerBtn = document.querySelector('.filter-icon__close');
+    // let filterOptions = document.querySelectorAll('.filter-group input[type="checkbox"]');
+    // let filterPriceOptions = document.querySelectorAll('.filter-group input[type="number"]');
+    // let activeFilterRemove = document.querySelectorAll('.active-filters__remove-filter');
+    // let bodyContainer = document.querySelector('body');
     filterItem.forEach(item => {
       if (!item) {
         return;
@@ -945,39 +957,22 @@ function initCollections() {
           event.target.closest('.filter-group').querySelector('.icon__arrow').classList.toggle('icon__rotate');
         });
     });
-    if (filterBtn) {
-      filterBtn.addEventListener('click', () => {
-        openFilterDrawer();
+    if (!filterBtn) return;
+    filterBtn.addEventListener('click', () => {
+      openFilterDrawer();
+    })
+    // if (overlayShadow) {
+    //   overlayShadow.addEventListener('click', () => {
+    //     closeFilterDrawer();
+    //   })
+    // }
+    if (!closefilterDrawerBtn) return;
+    if (closefilterDrawerBtn) {
+      closefilterDrawerBtn.addEventListener('click', () => {
+        closeFilterDrawer();
       })
-      if (overlayShadow) {
-        overlayShadow.addEventListener('click', () => {
-          closeFilterDrawer();
-        })
-      }
-      if (closefilterDrawerBtn) {
-        closefilterDrawerBtn.addEventListener('click', () => {
-          closeFilterDrawer();
-        })
-      }
-      function openFilterDrawer() {
-        if (filterDrawer.classList.contains('filter-drawer__left')) {
-          filterDrawer.classList.add('drawer-open__left');
-        } else {
-          filterDrawer.classList.add('drawer-open__right');
-        }
-        overlayShadow.classList.add('overlay__visible');
-        bodyContainer.classList.add('drawer__opening');
-      }
-      function closeFilterDrawer() {
-        if (filterDrawer.classList.contains('filter-drawer__left')) {
-          filterDrawer.classList.remove('drawer-open__left');
-        } else {
-          filterDrawer.classList.remove('drawer-open__right');
-        }
-        overlayShadow.classList.remove('overlay__visible');
-        bodyContainer.classList.remove('drawer__opening');
-      }
     }
+    
     filterOptions.forEach(option => {
       if (!option) {
         return
@@ -1003,6 +998,24 @@ function initCollections() {
     //     filterSubmitForm();
     //   });
     // });
+    function openFilterDrawer() {
+      if (filterDrawer.classList.contains('filter-drawer__left')) {
+        filterDrawer.classList.add('drawer-open__left');
+      } else {
+        filterDrawer.classList.add('drawer-open__right');
+      }
+      overlayShadow.classList.add('overlay__visible');
+      bodyContainer.classList.add('drawer__opening');
+    }
+    function closeFilterDrawer() {
+      if (filterDrawer.classList.contains('filter-drawer__left')) {
+        filterDrawer.classList.remove('drawer-open__left');
+      } else {
+        filterDrawer.classList.remove('drawer-open__right');
+      }
+      overlayShadow.classList.remove('overlay__visible');
+      bodyContainer.classList.remove('drawer__opening');
+    }
     function filterSubmitForm() {
       const filterForm = document.querySelector('.filter-form');
       const queryString = new URLSearchParams(new FormData(filterForm)).toString();
