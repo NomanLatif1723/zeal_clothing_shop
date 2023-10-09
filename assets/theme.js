@@ -902,7 +902,7 @@ function initCollections() {
   collectionFilters();
   function collectionSort() {
     Shopify.queryParams = {};
-    if(!selectors.sortContainer) return;
+    if(!selectors.sortContainer || !selectors.loader) return;
     selectors.sortContainer.forEach(el => {
       el.addEventListener('change', function(e) {
         selectors.loader.classList.remove('hidden');
