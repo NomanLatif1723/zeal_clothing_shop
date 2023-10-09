@@ -874,6 +874,34 @@ function initCollectionSort() {
     loader: document.querySelector('.loader'),
     collectionContainer: document.querySelector('.collection-grid')
   }
+  Shopify.queryParams = {};
+  if(!selectors.sortContainer || !selectors.loader) return;
+  selectors.sortContainer.forEach(el => {
+    el.addEventListener('change', function(event) {
+      sortingSubmitForm(event);
+      updateUrl(event);
+    });
+    function sortingSubmitForm(event) {
+      selectors.loader.classList.remove('hidden');
+      let value = event.target.value;
+      fetch(`${window.themeContent.routes.collection}?sort_by=${value}`)
+      .then(responce => responce.text())
+      .then(data => {
+        let html = document.createElement('div');
+        html.innerHTML = data;
+        let productData = html.querySelector('.collection-grid').innerHTML;
+        document.querySelector('.collection-grid').innerHTML = productData;
+        
+      })
+      .catch(error => console.log('Error', error))
+      .finally(() => selectors.loader.classList.add('hidden'));
+      // Shopify.queryParams.sort_by = value;
+      // location.search = new URLSearchParams(Shopify.queryParams).toString();
+    }
+    function updateUrl(event) {
+      history.replaceState(null,null, '?sort_by='+ event.target.value);
+    }
+  })
 }
 initCollectionSort();
 
@@ -894,13 +922,7 @@ function initCollections() {
     moreSwatchesBtn: document.querySelectorAll('.show-more__swatches')
   }
 // Collection Sorting Using Ajax
-  Shopify.queryParams = {};
-  if(!selectors.sortContainer || !selectors.loader) return;
-  selectors.sortContainer.forEach(el => {
-    el.addEventListener('change', function(e) {
-      sortingSubmitForm();
-    });
-  })
+ 
   selectors.filterOptions.forEach(option => {
     if (!option) return;
     option.addEventListener('change', () => {
@@ -969,23 +991,7 @@ function initCollections() {
     }
     selectors.bodyContainer.classList.remove('drawer__opening');
   }
-  function sortingSubmitForm() {
-    selectors.loader.classList.remove('hidden');
-    let value = e.target.value;
-    fetch(`${window.themeContent.routes.collection}?sort_by=${value}`)
-    .then(responce => responce.text())
-    .then(data => {
-      let html = document.createElement('div');
-      html.innerHTML = data;
-      let productData = html.querySelector('.collection-grid').innerHTML;
-      document.querySelector('.collection-grid').innerHTML = productData;
-      history.replaceState(null,null, '?sort_by='+ value);
-    })
-    .catch(error => console.log('Error', error))
-    .finally(() => selectors.loader.classList.add('hidden'));
-    // Shopify.queryParams.sort_by = value;
-    // location.search = new URLSearchParams(Shopify.queryParams).toString();
-  }
+  
   function filterSubmitForm() {
     const queryString = new URLSearchParams(new FormData(selectors.filterForm)).toString();
     selectors.loader.classList.remove('hidden');
