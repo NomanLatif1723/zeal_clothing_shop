@@ -934,6 +934,7 @@ function initCollections() {
     let closefilterDrawerBtn = document.querySelector('.filter-icon__close');
     let filterOptions = document.querySelectorAll('.filter-group input[type="checkbox"]');
     let filterPriceOptions = document.querySelectorAll('.filter-group input[type="number"]');
+    let activeFilterRemove = document.querySelectorAll('.active-filters__remove-filter');
     let bodyContainer = document.querySelector('body');
     filterItem.forEach(item => {
       if (!item) {
@@ -991,6 +992,15 @@ function initCollections() {
       }
       option.addEventListener('input', () => {
         // filterSubmitForm();
+      });
+    });
+    activeFilterRemove.forEach(button => {
+      if (!button) {
+        return
+      }
+      option.addEventListener('click', (event) => {
+        event.preventDefault();
+        filterSubmitForm();
       });
     });
     function filterSubmitForm() {
