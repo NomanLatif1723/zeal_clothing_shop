@@ -889,6 +889,7 @@ function initCollectionEventListeners() {
       openFilterDrawer();
     }
     if (event.target.classList.contains('show-more__swatches')) {
+      console.log("hy");
       let hiddenSwatches = event.target.closest('.color-swatch__list').querySelector('.hidden__swatches');
       event.target.classList.add('hide');
       hiddenSwatches.classList.add('show');
