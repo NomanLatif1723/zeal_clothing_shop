@@ -996,6 +996,7 @@ function initCollections() {
     function filterSubmitForm() {
       const filterForm = document.querySelector('.filter-form');
       const queryString = new URLSearchParams(new FormData(filterForm)).toString();
+      loader.classList.remove('hidden');
       fetch(`${window.themeContent.routes.collection}?${queryString}`)
         .then(responce => responce.text())
         .then(data => {
@@ -1005,7 +1006,8 @@ function initCollections() {
           document.querySelector('.collection-grid').innerHTML = productData;
           history.replaceState(null,null, '?'+ queryString);
         })
-        .catch(error => console.log('Error', error));
+        .catch(error => console.log('Error', error))
+        .finally(() => loader.classList.add('hidden'));
     }
   }
   
