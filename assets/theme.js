@@ -948,6 +948,14 @@ function initCollections() {
       selectors.filterBtn.addEventListener('click', () => {
         openFilterDrawer();
       });
+      selectors.moreSwatchesBtn.forEach(btn => {
+        if (!btn) return;
+        btn.addEventListener('click', () => {
+          let hiddenSwatches = btn.closest('.color-swatch__list').querySelector('.hidden__swatches');
+          btn.classList.add('hide');
+          hiddenSwatches.classList.add('show');
+        });
+      });
       // selectors.activeFilterRemove.forEach(button => {
       //   if (!button) return;
       //   button.addEventListener('click', (event) => {
@@ -989,18 +997,6 @@ function initCollections() {
         .finally(() => selectors.loader.classList.add('hidden'));
     }
   }
-  // Featured Collection Show More Swatches Event
-function initFeaturedSwatches() {
-  selectors.moreSwatchesBtn.forEach(btn => {
-    if (!btn) return;
-    btn.addEventListener('click', () => {
-      let hiddenSwatches = btn.closest('.color-swatch__list').querySelector('.hidden__swatches');
-      btn.classList.add('hide');
-      hiddenSwatches.classList.add('show');
-    });
-  });
-}
-initFeaturedSwatches();
 }
 initCollections();
 
