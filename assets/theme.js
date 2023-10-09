@@ -893,6 +893,9 @@ function initCollectionEventListeners() {
       event.target.classList.add('hide');
       hiddenSwatches.classList.add('show');
     }
+    if (event.target.classList.contains('active-filters__remove-filter')) {
+      // openFilterDrawer();
+    }
   })
   // selectors.filterItem.forEach(item => {
   //   if (!item) return;
