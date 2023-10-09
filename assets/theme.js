@@ -998,7 +998,7 @@ function initCollections() {
       if (!button) {
         return
       }
-      option.addEventListener('click', (event) => {
+      button.addEventListener('click', (event) => {
         event.preventDefault();
         filterSubmitForm();
       });
