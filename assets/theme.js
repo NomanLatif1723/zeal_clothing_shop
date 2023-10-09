@@ -965,6 +965,7 @@ function initCollections() {
         // filterSubmitForm();
       });
     });
+    buttonEvents();
     function buttonEvents() {
       if (!selectors.filterBtn) return;
       selectors.filterBtn.addEventListener('click', () => {
