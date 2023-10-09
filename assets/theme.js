@@ -941,10 +941,6 @@ function initCollections() {
         event.target.closest('.filter-group').querySelector('.icon__arrow').classList.toggle('icon__rotate');
       });
     });
-    if (!selectors.filterBtn) return;
-    selectors.filterBtn.addEventListener('click', () => {
-      openFilterDrawer();
-    });
     if (!selectors.closefilterDrawerBtn) return;
     selectors.closefilterDrawerBtn.addEventListener('click', () => {
       closeFilterDrawer();
@@ -969,13 +965,19 @@ function initCollections() {
         // filterSubmitForm();
       });
     });
-    // selectors.activeFilterRemove.forEach(button => {
-    //   if (!button) return;
-    //   button.addEventListener('click', (event) => {
-    //     event.preventDefault();
-    //     filterSubmitForm();
-    //   });
-    // });
+    function buttonEvents() {
+      if (!selectors.filterBtn) return;
+      selectors.filterBtn.addEventListener('click', () => {
+        openFilterDrawer();
+      });
+      // selectors.activeFilterRemove.forEach(button => {
+      //   if (!button) return;
+      //   button.addEventListener('click', (event) => {
+      //     event.preventDefault();
+      //     filterSubmitForm();
+      //   });
+      // });
+    }
     function openFilterDrawer() {
       if (selectors.filterDrawer.classList.contains('filter-drawer__left')) {
         selectors.filterDrawer.classList.add('drawer-open__left');
