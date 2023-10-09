@@ -868,6 +868,15 @@ function initCustomerForms() {
 initCustomerForms();
 
 // Collection Sorting Using Ajax
+function initCollectionSort() {
+  let selectors = {
+    sortContainer: document.querySelectorAll('#sort-by'),
+    loader: document.querySelector('.loader'),
+    collectionContainer: document.querySelector('.collection-grid')
+  }
+}
+initCollectionSort();
+
 function initCollections() {
   let selectors = {
     sortContainer: document.querySelectorAll('#sort-by'),
