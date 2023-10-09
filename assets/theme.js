@@ -884,37 +884,14 @@ function initCollections() {
     bodyContainer: document.querySelector('body'),
     moreSwatchesBtn: document.querySelectorAll('.show-more__swatches')
   }
-  // const loader = document.querySelector('.loader');
-  collectionSort();
-  collectionFilters();
-  function collectionSort() {
-    Shopify.queryParams = {};
-    if(!selectors.sortContainer || !selectors.loader) return;
-    selectors.sortContainer.forEach(el => {
-      el.addEventListener('change', function(e) {
-        sortingSubmitForm();
-      });
-    })
-  }
-  selectors.filterItem.forEach(item => {
-    if (!item) return;
-    item.addEventListener('click', (event) => {
-      event.target.closest('.filter-group').querySelector('.filter-group__dropdown').classList.toggle('hidden');
-      event.target.closest('.filter-group').querySelector('.icon__arrow').classList.toggle('icon__rotate');
+// Collection Sorting Using Ajax
+  Shopify.queryParams = {};
+  if(!selectors.sortContainer || !selectors.loader) return;
+  selectors.sortContainer.forEach(el => {
+    el.addEventListener('change', function(e) {
+      sortingSubmitForm();
     });
-  });
-  if (!selectors.closefilterDrawerBtn) return;
-  selectors.closefilterDrawerBtn.addEventListener('click', () => {
-    closeFilterDrawer();
-  });
-  if(!selectors.filterDrawer) return;
-  selectors.filterDrawer.addEventListener('click', () => {
-    closeFilterDrawer();
-  });
-  if(!selectors.FilterBoxContainer) return;
-  selectors.FilterBoxContainer.addEventListener('click', (event) => {
-    event.stopPropagation();
-  });
+  })
   selectors.filterOptions.forEach(option => {
     if (!option) return;
     option.addEventListener('change', () => {
@@ -927,7 +904,26 @@ function initCollections() {
       // filterSubmitForm();
     });
   });
-  function buttonEvents() {
+  function collectionEventListeners() {
+    selectors.filterItem.forEach(item => {
+      if (!item) return;
+      item.addEventListener('click', (event) => {
+        event.target.closest('.filter-group').querySelector('.filter-group__dropdown').classList.toggle('hidden');
+        event.target.closest('.filter-group').querySelector('.icon__arrow').classList.toggle('icon__rotate');
+      });
+    });
+    if (!selectors.closefilterDrawerBtn) return;
+    selectors.closefilterDrawerBtn.addEventListener('click', () => {
+      closeFilterDrawer();
+    });
+    if(!selectors.filterDrawer) return;
+    selectors.filterDrawer.addEventListener('click', () => {
+      closeFilterDrawer();
+    });
+    if(!selectors.FilterBoxContainer) return;
+    selectors.FilterBoxContainer.addEventListener('click', (event) => {
+      event.stopPropagation();
+    });
     if (!selectors.filterBtn) return;
     selectors.filterBtn.addEventListener('click', () => {
       openFilterDrawer();
@@ -992,11 +988,13 @@ function initCollections() {
         let productData = html.querySelector('.catalog__content').innerHTML;
         document.querySelector('.catalog__content').innerHTML = productData;
         history.replaceState(null,null, '?'+ queryString);
-        buttonEvents();
+        collectionEventListeners();
       })
       .catch(error => console.log('Error', error))
       .finally(() => selectors.loader.classList.add('hidden'));
   }
+
+  collectionEventListeners();
 }
 initCollections();
 
