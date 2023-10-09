@@ -944,12 +944,19 @@ function initCollections() {
     if (!selectors.filterBtn) return;
     selectors.filterBtn.addEventListener('click', () => {
       openFilterDrawer();
-    })
+    });
     if (!selectors.closefilterDrawerBtn) return;
     selectors.closefilterDrawerBtn.addEventListener('click', () => {
       closeFilterDrawer();
-    })
-    
+    });
+    if(!selectors.filterDrawer) return;
+    selectors.fiterDrawer.addEventListener('click', () => {
+      closeFilterDrawer();
+    });
+    if(!selectors.FilterBoxContainer) return;
+    selectors.FilterBoxContainer.addEventListener('click', (event) => {
+      event.stopPropagation();
+    });
     selectors.filterOptions.forEach(option => {
       if (!option) return;
       option.addEventListener('change', () => {
