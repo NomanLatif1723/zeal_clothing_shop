@@ -983,18 +983,21 @@ function initFilterFacetForm() {
     filterOptions: document.querySelectorAll('.filter-group input[type="checkbox"]'),
     filterPriceOptions: document.querySelectorAll('.filter-group input[type="number"]')
   }
-  selectors.filterOptions.forEach(option => {
-    if (!option) return;
-    option.addEventListener('change', () => {
-      filterSubmitForm();
+  function filterEventListeners() {
+    selectors.filterOptions.forEach(option => {
+      if (!option) return;
+      option.addEventListener('change', () => {
+        filterSubmitForm();
+      });
     });
-  });
-  selectors.filterPriceOptions.forEach(option => {
-    if (!option) return;
-    option.addEventListener('input', () => {
-      // filterSubmitForm();
+    selectors.filterPriceOptions.forEach(option => {
+      if (!option) return;
+      option.addEventListener('input', () => {
+        // filterSubmitForm();
+      });
     });
-  });
+  }
+  filterEventListeners();
   function filterSubmitForm() {
     const queryString = new URLSearchParams(new FormData(selectors.filterForm)).toString();
     selectors.loader.classList.remove('hidden');
@@ -1007,6 +1010,7 @@ function initFilterFacetForm() {
         document.querySelector('.catalog__wrapper').innerHTML = productData;
         history.replaceState(null,null, '?'+ queryString);
         initCollectionEventListeners();
+        filterEventListeners();
       })
       .catch(error => console.log('Error', error))
       .finally(() => selectors.loader.classList.add('hidden'));
