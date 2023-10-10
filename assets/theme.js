@@ -967,19 +967,19 @@ function initCollectionSort() {
       selectors.loader.classList.remove('hidden');
       let value = event.target.value;
       
-      fetch(`${window.themeContent.routes.collection}?sort_by=${value}`)
-      .then(responce => responce.text())
-      .then(data => {
-        let html = document.createElement('div');
-        html.innerHTML = data;
-        let productData = html.querySelector('.collection-grid').innerHTML;
-        selectors.collectionContainer.innerHTML = productData;
-        initCollectionEventListeners();
-      })
-      .catch(error => console.log('Error', error))
-      .finally(() => selectors.loader.classList.add('hidden'));
-      // Shopify.queryParams.sort_by = value;
-      // location.search = new URLSearchParams(Shopify.queryParams).toString();
+      // fetch(`${window.themeContent.routes.collection}?sort_by=${value}`)
+      // .then(responce => responce.text())
+      // .then(data => {
+      //   let html = document.createElement('div');
+      //   html.innerHTML = data;
+      //   let productData = html.querySelector('.collection-grid').innerHTML;
+      //   selectors.collectionContainer.innerHTML = productData;
+      //   initCollectionEventListeners();
+      // })
+      // .catch(error => console.log('Error', error))
+      // .finally(() => selectors.loader.classList.add('hidden'));
+      Shopify.queryParams.sort_by = value;
+      location.search = new URLSearchParams(Shopify.queryParams).toString();
     }
     function updateUrl(event) {
       history.replaceState(null,null, '?sort_by='+ event.target.value);
