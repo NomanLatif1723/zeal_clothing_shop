@@ -905,7 +905,9 @@ function initCollectionEventListeners() {
     }
     if (event.target.classList.contains('active-filters__remove-filter')) {
       event.preventDefault();
-      removeActiveFilters();
+      const filterType = this.getAttribute('data-filter-type');
+      const filterValue = this.getAttribute('data-filter-value');
+      removeActiveFilters(filterType, filterValue);
     }
   });
   function openFilterDrawer() {
@@ -924,51 +926,23 @@ function initCollectionEventListeners() {
     }
     selectors.bodyContainer.classList.remove('drawer__opening');
   }
-  function removeActiveFilters() {
-    // Identify the filter(s) you want to remove, e.g., 'category' and 'price'
-    const filtersToRemove = ['category', 'price'];
-  
-    const queryString = new URLSearchParams(window.location.search);
-  
-    // Remove the specified filter parameters from the query string
-    filtersToRemove.forEach(filter => {
-      queryString.delete(`filter.${filter}`);
+  function removeActiveFilters(filterType,filterValue) {
+    fetch(`/remove-filter?filterType=${filterType}&filterValue=${filterValue}`, {
+      method: 'POST', // or 'GET' depending on your server-side implementation
+    })
+    .then(response => {
+      if (response.ok) {
+        // Filter removed successfully, update the UI accordingly
+        // For example, you can remove the filter element from the DOM
+        this.parentElement.removeChild(this);
+      } else {
+        console.error('Failed to remove filter');
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
     });
-  
-    // Show Loader 
-    selectors.loader.classList.remove('hidden');
-  
-    fetch(`${window.themeContent.routes.collection}?${queryString}`)
-      .then(response => response.text())
-      .then(data => {
-        let html = document.createElement('div');
-        html.innerHTML = data;
-  
-        // Check if there are no products
-        const noProductsMessage = html.querySelector('.empty-products__message');
-        if (noProductsMessage) {
-          document.querySelector('.empty-products__message').classList.remove('hidden');
-        } else {
-          // Preserve existing sorting parameters
-          const existingSortParam = new URLSearchParams(window.location.search).get('sort_by');
-          if (existingSortParam) {
-            queryString.set('sort_by', existingSortParam);
-          }
-  
-          // Update the URL without the removed filter parameters
-          history.replaceState(null, null, '?' + queryString.toString());
-  
-          // Update the product list and sorting
-          let productData = html.querySelector('.catalog__content').innerHTML;
-          document.querySelector('.catalog__content').innerHTML = productData;
-          initCollectionEventListeners();
-          initCollectionSort();
-        }
-      })
-      .catch(error => console.log('Error', error))
-      .finally(() => selectors.loader.classList.add('hidden'));
   }
-
 }
 initCollectionEventListeners();
 
