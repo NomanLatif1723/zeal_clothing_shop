@@ -953,7 +953,8 @@ function initCollectionSort() {
     function sortingSubmitForm(event) {
       selectors.loader.classList.remove('hidden');
       let value = event.target.value;
-      fetch(`${window.themeContent.routes.collection}?sort_by=${value}`)
+      const queryString = new URLSearchParams(new FormData(selectors.filterForm)).toString();
+      fetch(`${window.themeContent.routes.collection}?${queryString}`)
       .then(responce => responce.text())
       .then(data => {
         let html = document.createElement('div');
