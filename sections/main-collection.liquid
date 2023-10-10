@@ -200,12 +200,12 @@
                 lazyloadImages: section.settings.lazyload_images
               -%}
             {%- endfor -%}
-            {% unless collection.products_count == 0 %}
+            {% if collection.products_count == 0 %}
               <div class="empty-products__message">
                 <h2>No Products Found</h2>
                 <a href="{{ routes.collections_url }}" title="Remove Filters">Remove Filters</a>
               </div>
-            {% endunless %}
+            {% endif %}
           </div>
           {%- if paginate.pages > 1 -%}
             {%- render 'pagination',
