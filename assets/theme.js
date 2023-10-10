@@ -941,7 +941,7 @@ function initCollectionSort() {
   let selectors = {
     sortContainer: document.querySelectorAll('#sort-by'),
     loader: document.querySelector('.loader'),
-    filterForm: document.querySelectorAll('.filter-form'),
+    filterForm: document.querySelector('.filter-form'),
     collectionContainer: document.querySelector('.collection-grid')
   }
   Shopify.queryParams = {};
@@ -949,7 +949,7 @@ function initCollectionSort() {
   selectors.sortContainer.forEach(el => {
     el.addEventListener('change', function(event) {
       // const queryString = new URLSearchParams(new FormData(selectors.filterForm)).toString();
-      const queryString = new URLSearchParams(new FormData(selectors.filterForm.forEach(form => form))).toString();
+      const queryString = new URLSearchParams(new FormData(selectors.filterForm)).toString();
       sortingSubmitForm(queryString);
       updateUrl(queryString);
     });
