@@ -948,13 +948,14 @@ function initCollectionSort() {
   if(!selectors.sortContainer || !selectors.loader) return;
   selectors.sortContainer.forEach(el => {
     el.addEventListener('change', function(event) {
-      sortingSubmitForm(event);
-      updateUrl(event);
+      const queryString = new URLSearchParams(new FormData(selectors.filterForm)).toString();
+      sortingSubmitForm(queryString);
+      updateUrl(queryString);
     });
-    function sortingSubmitForm(event) {
+    function sortingSubmitForm(queryString) {
       selectors.loader.classList.remove('hidden');
       let value = event.target.value;
-      const queryString = new URLSearchParams(new FormData(selectors.filterForm)).toString();
+      
       fetch(`${window.themeContent.routes.collection}?${queryString}`)
       .then(responce => responce.text())
       .then(data => {
@@ -969,7 +970,7 @@ function initCollectionSort() {
       // Shopify.queryParams.sort_by = value;
       // location.search = new URLSearchParams(Shopify.queryParams).toString();
     }
-    function updateUrl(event) {
+    function updateUrl(queryString) {
       history.replaceState(null,null, '?'+ queryString);
     }
   })
