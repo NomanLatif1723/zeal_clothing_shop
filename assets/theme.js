@@ -1000,7 +1000,7 @@ function initFilterFacetForm() {
     selectors.filterOptions.forEach(option => {
       if (option.checked) {
         queryString.append(option.name, option.value);
-        option.closest('.filter-group__dropdown--list-item').classList.toggle('selected');
+        option.closest('.filter-group__dropdown--list-item').classList.add('selected');
       }
     });
     selectors.filterPriceOptions.forEach(option => {
