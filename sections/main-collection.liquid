@@ -142,7 +142,7 @@
             {%- endif -%}
             {%- if show_sorting -%}
             <div class="catalog__sorting">
-              <form class="filter-form">
+              <form class="filter-form2">
                 <select id="sort-by">
                   {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
                   {%- for option in collection.sort_options -%}
