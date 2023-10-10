@@ -1017,6 +1017,13 @@ function initFilterFacetForm() {
     const maxPriceInput = document.querySelector('input[name="filter.v.price.lte"]');
     queryString.set('filter.v.price.gte', minPriceInput.value.trim());
     queryString.set('filter.v.price.lte', maxPriceInput.value.trim());
+
+    if (minPriceValue !== '') {
+      queryString.set('min_price', minPriceValue);
+    }
+    if (maxPriceValue !== '') {
+      queryString.set('max_price', maxPriceValue);
+    }
     
     // const queryString = new URLSearchParams(new FormData(selectors.filterForm)).toString();
     selectors.loader.classList.remove('hidden');
