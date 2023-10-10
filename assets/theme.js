@@ -903,12 +903,12 @@ function initCollectionEventListeners() {
         }
       }
     }
-    if (event.target.classList.contains('active-filters__remove-filter')) {
-      event.preventDefault();
-      const filterName = event.target.getAttribute('data-filter-name');
-      const filterValue = event.target.getAttribute('data-filter-value');
-      removeFilterAjax(filterName, filterValue);
-    }
+    // if (event.target.classList.contains('active-filters__remove-filter')) {
+    //   event.preventDefault();
+    //   const filterName = event.target.getAttribute('data-filter-name');
+    //   const filterValue = event.target.getAttribute('data-filter-value');
+    //   removeFilterAjax(filterName, filterValue);
+    // }
   });
   // Open Filter Drawer Function
   function openFilterDrawer() {
@@ -928,64 +928,6 @@ function initCollectionEventListeners() {
     }
     selectors.bodyContainer.classList.remove('drawer__opening');
   }
-  // Remove Active Filters
-  // function removeActiveFilters(filterType,filterValue) {
-  //   fetch(`/remove-filter?filterType=${filterType}&filterValue=${filterValue}`, {
-  //     method: 'POST',
-  //   })
-  //   .then(response => {
-  //     if (response.ok) {
-  //       this.parentElement.removeChild(this);
-  //     } else {
-  //       console.error('Failed to remove filter');
-  //     }
-  //   })
-  //   .catch(error => {
-  //     console.error('Error:', error);
-  //   });
-  // }
-  function removeFilterAjax(filterName, filterValue) {
-  const queryString = new URLSearchParams(window.location.search);
-
-  // Remove the specific filter parameter based on filterName and filterValue
-  queryString.delete(`filter.v.option.${filterValue}`);
-  
-  const updatedUrl = `${window.themeContent.routes.collection}?${queryString.toString()}`;
-  selectors.loader.classList.remove('hidden');
-
-  fetch(updatedUrl)
-    .then(response => {
-      if (response.ok) {
-        return response.text();
-      } else {
-        throw new Error('Failed to fetch content');
-      }
-    })
-    .then(data => {
-      let html = document.createElement('div');
-      html.innerHTML = data;
-      let productData = html.querySelector('.catalog__content').innerHTML;
-      document.querySelector('.catalog__content').innerHTML = productData;
-
-      // Check if there are no products
-      const noProductsMessage = html.querySelector('.empty-products__message');
-      if (noProductsMessage) {
-        document.querySelector('.empty-products__message').classList.remove('hidden');
-      } else {
-        // Preserve existing sorting parameters
-        const existingSortParam = new URLSearchParams(window.location.search).get('sort_by');
-        if (existingSortParam) {
-          queryString.set('sort_by', existingSortParam);
-        }
-        history.replaceState(null, null, updatedUrl);
-        initCollectionEventListeners();
-        initCollectionSort();
-      }
-    })
-    .catch(error => console.error('Error', error))
-    .finally(() => selectors.loader.classList.add('hidden'));
-}
-
 }
 initCollectionEventListeners();
 
