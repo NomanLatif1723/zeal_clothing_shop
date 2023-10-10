@@ -200,6 +200,9 @@
                 lazyloadImages: section.settings.lazyload_images
               -%}
             {%- endfor -%}
+            <div class="empty-products__message">
+              <h2>No Products Found</h2>
+            </div>
           </div>
           {%- if paginate.pages > 1 -%}
             {%- render 'pagination',
