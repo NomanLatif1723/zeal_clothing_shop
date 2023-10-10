@@ -1013,7 +1013,7 @@ function initFilterFacetForm() {
     //     queryString.set(option.name, priceValue);
     //   }
     // });
-     const minPriceInput = document.querySelector('input[name="filter.v.price.gte"]');
+    const minPriceInput = document.querySelector('input[name="filter.v.price.gte"]');
     const maxPriceInput = document.querySelector('input[name="filter.v.price.lte"]');
     const minPriceValue = minPriceInput.value.trim();
     const maxPriceValue = maxPriceInput.value.trim();
