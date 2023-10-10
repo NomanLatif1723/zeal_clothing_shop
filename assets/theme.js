@@ -998,6 +998,7 @@ function initFilterFacetForm() {
   function filterSubmitForm() {
     const queryString = new URLSearchParams();
     selectors.filterOptions.forEach(option => {
+      option.closest('.filter-group__dropdown--list-item').classList.remove('selected');
       if (option.checked) {
         queryString.append(option.name, option.value);
         option.closest('.filter-group__dropdown--list-item').classList.add('selected');
