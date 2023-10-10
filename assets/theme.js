@@ -903,6 +903,7 @@ function initCollectionEventListeners() {
       }
     }
     if (event.target.classList.contains('active-filters__remove-filter')) {
+      event.preventDefault();
       removeActiveFilters();
     }
   });
