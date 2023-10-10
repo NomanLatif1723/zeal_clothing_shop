@@ -1000,24 +1000,24 @@ function initFilterFacetForm() {
         queryString.append(option.name, option.value);
       }
     });
-    // selectors.filterPriceOptions.forEach(option => {
-    //   const priceValue = option.value.trim();
-    //   if (priceValue !== '') {
-    //     queryString.set(option.name, priceValue);
-    //   }
-    // });
-    const minPriceInput = document.querySelector('input[name="filter.v.price.gte"]');
-    const maxPriceInput = document.querySelector('input[name="filter.v.price.lte"]');
-    const minPriceValue = minPriceInput.value.trim();
-    const maxPriceValue = maxPriceInput.value.trim();
+    selectors.filterPriceOptions.forEach(option => {
+      const priceValue = option.value.trim();
+      if (priceValue !== '') {
+        queryString.set(option.name, priceValue);
+      }
+    });
+    // const minPriceInput = document.querySelector('input[name="filter.v.price.gte"]');
+    // const maxPriceInput = document.querySelector('input[name="filter.v.price.lte"]');
+    // const minPriceValue = minPriceInput.value.trim();
+    // const maxPriceValue = maxPriceInput.value.trim();
     
-    // Check if minPriceValue and maxPriceValue are not empty or undefined before adding to the query string
-    if (minPriceValue !== '' && minPriceValue !== 'undefined') {
-      queryString.set('filter.v.price.gte', minPriceValue);
-    }
-    if (maxPriceValue !== '' && maxPriceValue !== 'undefined') {
-      queryString.set('filter.v.price.lte', maxPriceValue);
-    }
+    // // Check if minPriceValue and maxPriceValue are not empty or undefined before adding to the query string
+    // if (minPriceValue !== '' && minPriceValue !== 'undefined') {
+    //   queryString.set('filter.v.price.gte', minPriceValue);
+    // }
+    // if (maxPriceValue !== '' && maxPriceValue !== 'undefined') {
+    //   queryString.set('filter.v.price.lte', maxPriceValue);
+    // }
     
     // const queryString = new URLSearchParams(new FormData(selectors.filterForm)).toString();
     selectors.loader.classList.remove('hidden');
