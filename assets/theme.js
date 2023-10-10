@@ -910,8 +910,15 @@ function initCollectionEventListeners() {
       const filterValue = event.target.getAttribute('data-filter-value');
       console.log(filterName,filterValue);
 
-      // Perform an AJAX request to update the content
-      removeFilterViaAjax(filterName, filterValue);
+      // Get the current URL and remove the filter parameter
+      const currentUrl = window.location.href;
+      const updatedUrl = removeFilterFromUrl(currentUrl, filterName, filterValue);
+
+      // Update the URL without the removed filter
+      history.replaceState(null, null, updatedUrl);
+
+      // Fetch new content based on the updated URL
+      fetchContent(updatedUrl);
     }
   });
   // Open Filter Drawer Function
@@ -948,25 +955,27 @@ function initCollectionEventListeners() {
   //     console.error('Error:', error);
   //   });
   // }
-  function removeFilterViaAjax(filterName, filterValue) {
-    // Perform an AJAX request to update the content based on the removed filter
-    // Replace this with your actual AJAX logic to remove the filter and update the content
+  function removeFilterFromUrl(url, filterName, filterValue) {
+    const urlObj = new URL(url);
+    const searchParams = new URLSearchParams(urlObj.search);
 
-    // Example: You might send a request to your server to remove the filter
-    // You could use fetch or another AJAX library for this
-    fetch(`/?filter.v.option.${filterName}=${filterValue}`, {
-      method: 'POST',
-    })
+    // Remove the filter parameter from the search params
+    searchParams.delete(`filter.v.option.${filterName}`);
+    urlObj.search = searchParams.toString();
+
+    return urlObj.toString();
+  }
+
+  function fetchContent(url) {
+    // Fetch new content based on the updated URL
+    // Replace this with your actual AJAX logic to update the content
+
+    fetch(url)
       .then(response => {
         if (response.ok) {
-          // Filter removed successfully, update the UI accordingly
-          // For example, you can remove the filter element from the DOM
-          this.parentElement.removeChild(this);
-
-          // Update the content based on the server's response
           return response.text();
         } else {
-          console.error('Failed to remove filter');
+          console.error('Failed to fetch content');
         }
       })
       .then(data => {
