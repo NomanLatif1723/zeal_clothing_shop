@@ -909,16 +909,6 @@ function initCollectionEventListeners() {
       const filterName = event.target.getAttribute('data-filter-name');
       const filterValue = event.target.getAttribute('data-filter-value');
       console.log(filterName,filterValue);
-
-      // Get the current URL and remove the filter parameter
-      const currentUrl = window.location.href;
-      const updatedUrl = removeFilterFromUrl(currentUrl, filterName, filterValue);
-
-      // Update the URL without the removed filter
-      history.replaceState(null, null, updatedUrl);
-
-      // Fetch new content based on the updated URL
-      fetchContent(updatedUrl);
     }
   });
   // Open Filter Drawer Function
@@ -955,42 +945,6 @@ function initCollectionEventListeners() {
   //     console.error('Error:', error);
   //   });
   // }
-  function removeFilterFromUrl(url, filterName, filterValue) {
-    const urlObj = new URL(url);
-    const searchParams = new URLSearchParams(urlObj.search);
-
-    // Remove the filter parameter from the search params
-    searchParams.delete(`filter.v.option.${filterName}`);
-    urlObj.search = searchParams.toString();
-
-    return urlObj.toString();
-  }
-
-  function fetchContent(url) {
-    // Fetch new content based on the updated URL
-    // Replace this with your actual AJAX logic to update the content
-
-    fetch(url)
-      .then(response => {
-        if (response.ok) {
-          return response.text();
-        } else {
-          console.error('Failed to fetch content');
-        }
-      })
-      .then(data => {
-        // Replace the content with the updated data
-        // For example, you can replace the entire content of a container
-        document.querySelector('.catalog__content').innerHTML = data;
-
-        // Additional logic to handle the content update
-        initCollectionEventListeners();
-        initCollectionSort();
-      })
-      .catch(error => {
-        console.error('Error:', error);
-      });
-  }
 }
 initCollectionEventListeners();
 
