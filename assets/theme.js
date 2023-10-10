@@ -981,6 +981,7 @@ function initCollectionEventListeners() {
       .catch(error => {
         console.error('Error:', error);
       });
+  }
 }
 initCollectionEventListeners();
 
