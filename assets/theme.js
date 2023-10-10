@@ -996,7 +996,7 @@ function initFilterFacetForm() {
   selectors.filterPriceOptions.forEach(option => {
     if (!option) return;
     option.addEventListener('input', () => {
-      // filterSubmitForm();
+      filterSubmitForm();
     });
   });
   function filterSubmitForm() {
@@ -1005,6 +1005,12 @@ function initFilterFacetForm() {
     selectors.filterOptions.forEach(option => {
       if (option.checked) {
         queryString.append(option.name, option.value);
+      }
+    });
+    selectors.filterPriceOptions.forEach(option => {
+      const priceValue = option.value.trim();
+      if (priceValue !== '') {
+        queryString.set(option.name, priceValue);
       }
     });
     
