@@ -985,7 +985,7 @@ function initFilterFacetForm() {
   selectors.filterOptions.forEach(option => {
     if (!option) return;
     option.addEventListener('change', () => {
-      option.closest('.filter-group__dropdown--list-item').classList.toggle('selected');
+      
       filterSubmitForm();
     });
   });
@@ -1000,6 +1000,7 @@ function initFilterFacetForm() {
     selectors.filterOptions.forEach(option => {
       if (option.checked) {
         queryString.append(option.name, option.value);
+        option.closest('.filter-group__dropdown--list-item').classList.toggle('selected');
       }
     });
     selectors.filterPriceOptions.forEach(option => {
