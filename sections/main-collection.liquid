@@ -172,7 +172,7 @@
                 {%- if filter.min_value.value != nil or filter.max_value.value != nil -%}
                   {%- assign min_value = filter.min_value.value | default: 0 -%}
                   {%- assign max_value = filter.max_value.value | default: filter.range_max -%}
-                  <a class="active-filters__remove-filter" data-filter-name="{{ filter.label }}" data-filter-value="{{ min_value }} - {{ max_value }}" href="{{ filter.url_to_remove }}">
+                  <a class="active-filters__remove-filter" data-filter-name="{{ filter.label }}" data-filter-value="{{ min_value | money }} - {{ max_value | money }}" href="{{ filter.url_to_remove }}">
                     {{ min_value | money }} - {{ max_value | money }} X
                   </a>
                 {%- endif -%}
