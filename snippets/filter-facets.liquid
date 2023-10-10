@@ -24,7 +24,7 @@
           {%- when 'boolean' or 'list' -%}
           <ul class="filter-group__dropdown--list">
             {%- for filter_value in filter.values -%}
-              {% unless filter_value == 'color' or 'colour' %}
+              {% if filter_value != 'color' or filter_value != 'colour' %}
                 <li class="filter-group__dropdown--list-item">
                   <input
                     class="form__input"
@@ -59,7 +59,7 @@
                     </span>
                   </label>
                 </li>
-              {% endunless %}
+              {% endif %}
             {%- endfor -%}
           </ul>
           {%- when 'price_range' -%}
