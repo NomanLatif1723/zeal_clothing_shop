@@ -948,17 +948,14 @@ function initCollectionSort() {
   if(!selectors.sortContainer || !selectors.loader) return;
   selectors.sortContainer.forEach(el => {
     el.addEventListener('change', function(event) {
-      const searchParams = event.state ? event.state.searchParams : selectors.filterForm.searchParamsInitial;
-      // const queryString = new URLSearchParams(new FormData(selectors.filterForm)).toString();
-      // const queryString = new URLSearchParams(new FormData(selectors.filterForm)).toString();
-      sortingSubmitForm(searchParams);
-      updateUrl(searchParams);
+      sortingSubmitForm(event);
+      updateUrl(event);
     });
-    function sortingSubmitForm(searchParams) {
+    function sortingSubmitForm(event) {
       selectors.loader.classList.remove('hidden');
       let value = event.target.value;
       
-      fetch(`${window.themeContent.routes.collection}?${searchParams}`)
+      fetch(`${window.themeContent.routes.collection}?sort_by=${value}`)
       .then(responce => responce.text())
       .then(data => {
         let html = document.createElement('div');
@@ -972,9 +969,8 @@ function initCollectionSort() {
       // Shopify.queryParams.sort_by = value;
       // location.search = new URLSearchParams(Shopify.queryParams).toString();
     }
-    function updateUrl(searchParams) {
-      history.pushState({ searchParams }, '', `${window.location.pathname}${searchParams && '?'.concat(searchParams)}`);
-      // history.replaceState(null,null, '?'+ queryString);
+    function updateUrl(event) {
+      history.replaceState(null,null, '?'+ event.target.value);
     }
   })
 }
