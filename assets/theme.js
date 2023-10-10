@@ -969,7 +969,7 @@ function initCollectionSort() {
       // location.search = new URLSearchParams(Shopify.queryParams).toString();
     }
     function updateUrl(event) {
-      history.replaceState(null,null, '?sort_by='+ event.target.value);
+      history.replaceState(null,null, '?'+ queryString);
     }
   })
 }
