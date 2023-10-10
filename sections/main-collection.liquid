@@ -201,7 +201,7 @@
               -%}
             {%- endfor -%}
             {% unless collection.products_count == 0 %}
-              <div class="empty-products__message hidden">
+              <div class="empty-products__message">
                 <h2>No Products Found</h2>
                 <a href="{{ routes.collections_url }}" title="Remove Filters">Remove Filters</a>
               </div>
