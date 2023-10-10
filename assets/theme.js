@@ -999,51 +999,110 @@ function initFilterFacetForm() {
       filterSubmitForm();
     });
   });
-  function filterSubmitForm() {
-    const queryString = new URLSearchParams();
-    // Add the filter parameters from the form
-    selectors.filterOptions.forEach(option => {
-      if (option.checked) {
-        queryString.append(option.name, option.value);
-      }
-    });
-    selectors.filterPriceOptions.forEach(option => {
-      const priceValue = option.value.trim();
-      if (priceValue !== '') {
-        queryString.set(option.name, priceValue);
-      }
-    });
+  // function filterSubmitForm() {
+  //   const queryString = new URLSearchParams();
+  //   // Add the filter parameters from the form
+  //   selectors.filterOptions.forEach(option => {
+  //     if (option.checked) {
+  //       queryString.append(option.name, option.value);
+  //     }
+  //   });
+  //   selectors.filterPriceOptions.forEach(option => {
+  //     const priceValue = option.value.trim();
+  //     if (priceValue !== '') {
+  //       queryString.set(option.name, priceValue);
+  //     }
+  //   });
     
-    // const queryString = new URLSearchParams(new FormData(selectors.filterForm)).toString();
-    selectors.loader.classList.remove('hidden');
-    fetch(`${window.themeContent.routes.collection}?${queryString}`)
-      .then(responce => responce.text())
-      .then(data => {
-        let html = document.createElement('div');
-        html.innerHTML = data;
-        let productData = html.querySelector('.catalog__content').innerHTML;
+  //   // const queryString = new URLSearchParams(new FormData(selectors.filterForm)).toString();
+  //   selectors.loader.classList.remove('hidden');
+  //   fetch(`${window.themeContent.routes.collection}?${queryString}`)
+  //     .then(responce => responce.text())
+  //     .then(data => {
+  //       let html = document.createElement('div');
+  //       html.innerHTML = data;
+  //       let productData = html.querySelector('.catalog__content').innerHTML;
         
 
-        // Check if there are no products
-        const noProductsMessage = html.querySelector('.empty-products__message');
+  //       // Check if there are no products
+  //       const noProductsMessage = html.querySelector('.empty-products__message');
 
-        if (noProductsMessage) {
-          document.querySelector('.catalog__content').innerHTML = productData;
-          document.querySelector('.empty-products__message').classList.remove('hidden');
-        } else {
-          // Preserve existing sorting parameters
-          const existingSortParam = new URLSearchParams(window.location.search).get('sort_by');
-          if (existingSortParam) {
-            queryString.set('sort_by', existingSortParam);
-          }
-          history.replaceState(null, null, '?' + queryString.toString());
-          initCollectionEventListeners();
-          initCollectionSort();
+  //       if (noProductsMessage) {
+  //         document.querySelector('.catalog__content').innerHTML = productData;
+  //         document.querySelector('.empty-products__message').classList.remove('hidden');
+  //       } else {
+  //         // Preserve existing sorting parameters
+  //         const existingSortParam = new URLSearchParams(window.location.search).get('sort_by');
+  //         if (existingSortParam) {
+  //           queryString.set('sort_by', existingSortParam);
+  //         }
+  //         history.replaceState(null, null, '?' + queryString.toString());
+  //         initCollectionEventListeners();
+  //         initCollectionSort();
+  //       }
+  //     })
+  //     .catch(error => console.log('Error', error))
+  //     .finally(() => selectors.loader.classList.add('hidden'));
+  // }
+
+  function filterSubmitForm() {
+  const queryString = new URLSearchParams();
+
+  // Add the filter parameters from the form
+  selectors.filterOptions.forEach(option => {
+    if (option.checked) {
+      queryString.append(option.name, option.value);
+    }
+  });
+
+  selectors.filterPriceOptions.forEach(option => {
+    const priceValue = option.value.trim();
+    if (priceValue !== '') {
+      // Assuming the price input fields have names like "min_price" and "max_price"
+      queryString.set(option.name, priceValue);
+    }
+  });
+
+  selectors.loader.classList.remove('hidden');
+  fetch(`${window.themeContent.routes.collection}?${queryString.toString()}`)
+    .then(response => response.text())
+    .then(data => {
+      let html = document.createElement('div');
+      html.innerHTML = data;
+
+      // Check if there are matching products
+      const catalogContent = document.querySelector('.catalog__content');
+      const emptyProductsMessageContainer = html.querySelector('.empty-products__message');
+
+      if (emptyProductsMessageContainer) {
+        // Hide the empty products message when there are matching products
+        emptyProductsMessageContainer.classList.add('hidden');
+        catalogContent.innerHTML = '';
+        catalogContent.appendChild(emptyProductsMessageContainer);
+      } else {
+        // Show the empty products message when there are no matching products
+        catalogContent.innerHTML = '';
+        catalogContent.appendChild(emptyProductsMessageContainer);
+
+        // Update the product list as usual
+        let productData = html.querySelector('.catalog__content').innerHTML;
+        document.querySelector('.catalog__content').innerHTML = productData;
+
+        // Preserve existing sorting parameters
+        const existingSortParam = new URLSearchParams(window.location.search).get('sort_by');
+        if (existingSortParam) {
+          queryString.set('sort_by', existingSortParam);
         }
-      })
-      .catch(error => console.log('Error', error))
-      .finally(() => selectors.loader.classList.add('hidden'));
-  }
+
+        history.replaceState(null, null, '?' + queryString.toString());
+        initCollectionEventListeners();
+        initCollectionSort();
+      }
+    })
+    .catch(error => console.log('Error', error))
+    .finally(() => selectors.loader.classList.add('hidden'));
+}
+
 }
 initFilterFacetForm();
   
