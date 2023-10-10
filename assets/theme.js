@@ -925,18 +925,25 @@ function initCollectionEventListeners() {
     selectors.bodyContainer.classList.remove('drawer__opening');
   }
   function removeActiveFilters() {
-    console.log("filter remove event");
-    const queryString = new URLSearchParams();
+    // Identify the filter(s) you want to remove, e.g., 'category' and 'price'
+    const filtersToRemove = ['category', 'price'];
+  
+    const queryString = new URLSearchParams(window.location.search);
+  
+    // Remove the specified filter parameters from the query string
+    filtersToRemove.forEach(filter => {
+      queryString.delete(`filter.${filter}`);
+    });
+  
     // Show Loader 
     selectors.loader.classList.remove('hidden');
+  
     fetch(`${window.themeContent.routes.collection}?${queryString}`)
-      .then(responce => responce.text())
+      .then(response => response.text())
       .then(data => {
         let html = document.createElement('div');
         html.innerHTML = data;
-        let productData = html.querySelector('.catalog__content').innerHTML;
-        document.querySelector('.catalog__content').innerHTML = productData;
-
+  
         // Check if there are no products
         const noProductsMessage = html.querySelector('.empty-products__message');
         if (noProductsMessage) {
@@ -947,7 +954,13 @@ function initCollectionEventListeners() {
           if (existingSortParam) {
             queryString.set('sort_by', existingSortParam);
           }
+  
+          // Update the URL without the removed filter parameters
           history.replaceState(null, null, '?' + queryString.toString());
+  
+          // Update the product list and sorting
+          let productData = html.querySelector('.catalog__content').innerHTML;
+          document.querySelector('.catalog__content').innerHTML = productData;
           initCollectionEventListeners();
           initCollectionSort();
         }
@@ -955,6 +968,7 @@ function initCollectionEventListeners() {
       .catch(error => console.log('Error', error))
       .finally(() => selectors.loader.classList.add('hidden'));
   }
+
 }
 initCollectionEventListeners();
 
