@@ -1029,6 +1029,7 @@ function initFilterFacetForm() {
 
         if (noProductsMessage) {
           document.querySelector('.catalog__content').innerHTML = productData;
+          document.querySelector('.empty-products__message').classList.remove('hidden');
         } else {
           // Preserve existing sorting parameters
           const existingSortParam = new URLSearchParams(window.location.search).get('sort_by');
