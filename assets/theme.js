@@ -904,7 +904,7 @@ function initCollectionEventListeners() {
       }
     }
     if (event.target.classList.contains('active-filters__remove-filter')) {
-      event.preventDefault();
+      // event.preventDefault();
     }
   });
   // Open Filter Drawer Function
@@ -925,21 +925,22 @@ function initCollectionEventListeners() {
     }
     selectors.bodyContainer.classList.remove('drawer__opening');
   }
-  function removeActiveFilters(filterType,filterValue) {
-    fetch(`/remove-filter?filterType=${filterType}&filterValue=${filterValue}`, {
-      method: 'POST',
-    })
-    .then(response => {
-      if (response.ok) {
-        this.parentElement.removeChild(this);
-      } else {
-        console.error('Failed to remove filter');
-      }
-    })
-    .catch(error => {
-      console.error('Error:', error);
-    });
-  }
+  // Remove Active Filters
+  // function removeActiveFilters(filterType,filterValue) {
+  //   fetch(`/remove-filter?filterType=${filterType}&filterValue=${filterValue}`, {
+  //     method: 'POST',
+  //   })
+  //   .then(response => {
+  //     if (response.ok) {
+  //       this.parentElement.removeChild(this);
+  //     } else {
+  //       console.error('Failed to remove filter');
+  //     }
+  //   })
+  //   .catch(error => {
+  //     console.error('Error:', error);
+  //   });
+  // }
 }
 initCollectionEventListeners();
 
