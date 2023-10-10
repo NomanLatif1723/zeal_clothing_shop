@@ -48,8 +48,10 @@
                       {% if filter_value.active -%}checked{%- endif %}
                       {% if filter_value.count == 0 and filter_value.active == false -%}disabled{%- endif %}>
                   <label class="form__label" for="Filter-{{ filter.param_name }}-{{ forloop.index }}">
+                    <span>
                       {{ filter_value.label }}
                       {%- if filter_value.count > 0 -%}<span>({{ filter_value.count }})</span>{%- endif -%}
+                    </span>
                   </label>
               </li>
             {%- endfor -%}
