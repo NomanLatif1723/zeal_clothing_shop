@@ -954,7 +954,7 @@ function initCollectionEventListeners() {
 
     // Example: You might send a request to your server to remove the filter
     // You could use fetch or another AJAX library for this
-    fetch(`/filter.v.option.${filterName}=${filterValue}`, {
+    fetch(`/?filter.v.option.${filterName}=${filterValue}`, {
       method: 'POST',
     })
       .then(response => {
