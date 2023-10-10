@@ -1017,7 +1017,7 @@ function initFilterFacetForm() {
     const maxPriceInput = document.querySelector('input[name="filter.v.price.lte"]');
     const minPriceValue = minPriceInput.value.trim();
     const maxPriceValue = maxPriceInput.value.trim();
-  
+    
     // Check if minPriceValue and maxPriceValue are not empty or undefined before adding to the query string
     if (minPriceValue !== '' && minPriceValue !== 'undefined') {
       queryString.set('filter.v.price.gte', minPriceValue);
