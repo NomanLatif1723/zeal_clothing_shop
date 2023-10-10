@@ -1022,18 +1022,23 @@ function initFilterFacetForm() {
         let html = document.createElement('div');
         html.innerHTML = data;
         let productData = html.querySelector('.catalog__content').innerHTML;
-        document.querySelector('.catalog__content').innerHTML = productData;
         
-        // Preserve existing sorting parameters
-        const existingSortParam = new URLSearchParams(window.location.search).get('sort_by');
-        if (existingSortParam) {
-          queryString.set('sort_by', existingSortParam);
+
+        // Check if there are no products
+        const noProductsMessage = html.querySelector('.empty-products__message');
+
+        if (noProductsMessage) {
+          document.querySelector('.catalog__content').innerHTML = productData;
+        } else {
+          // Preserve existing sorting parameters
+          const existingSortParam = new URLSearchParams(window.location.search).get('sort_by');
+          if (existingSortParam) {
+            queryString.set('sort_by', existingSortParam);
+          }
+          history.replaceState(null, null, '?' + queryString.toString());
+          initCollectionEventListeners();
+          initCollectionSort();
         }
-        history.replaceState(null, null, '?' + queryString.toString());
-        // history.replaceState(null,null, '?'+ queryString);
-        
-        initCollectionEventListeners();
-        initCollectionSort();
       })
       .catch(error => console.log('Error', error))
       .finally(() => selectors.loader.classList.add('hidden'));
