@@ -906,7 +906,7 @@ function initCollectionEventListeners() {
     if (event.target.classList.contains('active-filters__remove-filter')) {
       event.preventDefault();
       // Extract the filter name from the data attribute
-      const filterName = this.getAttribute('data-filter-name');
+      const filterName = event.target.getAttribute('data-filter-name');
 
       // Get the current URL and remove the filter parameter
       const currentUrl = window.location.href;
