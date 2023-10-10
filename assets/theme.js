@@ -1015,14 +1015,14 @@ function initFilterFacetForm() {
     // });
     const minPriceInput = document.querySelector('input[name="filter.v.price.gte"]');
     const maxPriceInput = document.querySelector('input[name="filter.v.price.lte"]');
-    const minPriceValue = queryString.set('filter.v.price.gte', minPriceInput.value.trim());
-    const maxPriceValue = queryString.set('filter.v.price.lte', maxPriceInput.value.trim());
+    const minPriceValue = queryString.set('min_price', minPriceInput.value.trim());
+    const maxPriceValue = queryString.set('max_price', maxPriceInput.value.trim());
 
     if (minPriceValue !== '') {
-      queryString.set('filter.v.price.gte', minPriceValue);
+      queryString.set('min_price', minPriceValue);
     }
     if (maxPriceValue !== '') {
-      queryString.set('filter.v.price.lte', maxPriceValue);
+      queryString.set('max_price', maxPriceValue);
     }
     
     // const queryString = new URLSearchParams(new FormData(selectors.filterForm)).toString();
