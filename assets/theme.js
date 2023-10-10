@@ -928,12 +928,10 @@ function initCollectionEventListeners() {
   }
   function removeActiveFilters(filterType,filterValue) {
     fetch(`/remove-filter?filterType=${filterType}&filterValue=${filterValue}`, {
-      method: 'POST', // or 'GET' depending on your server-side implementation
+      method: 'POST',
     })
     .then(response => {
       if (response.ok) {
-        // Filter removed successfully, update the UI accordingly
-        // For example, you can remove the filter element from the DOM
         this.parentElement.removeChild(this);
       } else {
         console.error('Failed to remove filter');
