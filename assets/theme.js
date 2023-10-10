@@ -904,7 +904,14 @@ function initCollectionEventListeners() {
       }
     }
     if (event.target.classList.contains('active-filters__remove-filter')) {
-      // event.preventDefault();
+      event.preventDefault();
+      // Extract the filter name and value from the data attributes
+      const filterName = event.target.getAttribute('data-filter-name');
+      const filterValue = event.target.getAttribute('data-filter-value');
+      console.log(filterName,filterValue);
+
+      // Perform an AJAX request to update the content
+      removeFilterViaAjax(filterName, filterValue);
     }
   });
   // Open Filter Drawer Function
@@ -941,6 +948,39 @@ function initCollectionEventListeners() {
   //     console.error('Error:', error);
   //   });
   // }
+  function removeFilterViaAjax(filterName, filterValue) {
+    // Perform an AJAX request to update the content based on the removed filter
+    // Replace this with your actual AJAX logic to remove the filter and update the content
+
+    // Example: You might send a request to your server to remove the filter
+    // You could use fetch or another AJAX library for this
+    fetch(`/remove-filter?filterName=${filterName}&filterValue=${filterValue}`, {
+      method: 'POST', // or 'GET' depending on your server-side implementation
+    })
+      .then(response => {
+        if (response.ok) {
+          // Filter removed successfully, update the UI accordingly
+          // For example, you can remove the filter element from the DOM
+          this.parentElement.removeChild(this);
+
+          // Update the content based on the server's response
+          return response.text();
+        } else {
+          console.error('Failed to remove filter');
+        }
+      })
+      .then(data => {
+        // Replace the content with the updated data
+        // For example, you can replace the entire content of a container
+        document.querySelector('.catalog__content').innerHTML = data;
+
+        // Additional logic to handle the content update
+        initCollectionEventListeners();
+        initCollectionSort();
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
 }
 initCollectionEventListeners();
 
