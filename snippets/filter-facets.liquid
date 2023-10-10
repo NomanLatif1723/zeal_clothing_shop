@@ -24,8 +24,8 @@
           {%- when 'boolean' or 'list' -%}
           <ul class="filter-group__dropdown--list">
             {%- for filter_value in filter.values -%}
-              {{ filter_value }}
-              {% if filter_value != 'color' or filter_value != 'colour' %}
+              {{ filter_value.label }}
+              {% if filter_value.label != 'color' or filter_value.label != 'colour' %}
                 <li class="filter-group__dropdown--list-item">
                   <input
                     class="form__input"
