@@ -25,34 +25,20 @@
           <ul class="filter-group__dropdown--list">
             {%- for filter_value in filter.values -%}
               <li class="filter-group__dropdown--list-item">
-                {% comment %}
+                <input
+                  class="form__input"
+                  type="checkbox"
+                  name="{{ filter_value.param_name }}"
+                  value="{{ filter_value.value }}"
+                  id="Filter-{{ filter.param_name }}-{{ forloop.index }}"
+                  {% if filter_value.active -%}checked{%- endif %}
+                  {% if filter_value.count == 0 and filter_value.active == false -%}disabled{%- endif %}>
                 <label class="form__label" for="Filter-{{ filter.param_name }}-{{ forloop.index }}">
-                  <input
-                    class="form__input"
-                    type="checkbox"
-                    name="{{ filter_value.param_name }}"
-                    value="{{ filter_value.value }}"
-                    id="Filter-{{ filter.param_name }}-{{ forloop.index }}"
-                    {% if filter_value.active -%}checked{%- endif %}
-                    {% if filter_value.count == 0 and filter_value.active == false -%}disabled{%- endif %}>{{ filter_value.label }}
+                  <span>
+                    {{ filter_value.label }}
                     {%- if filter_value.count > 0 -%}<span>({{ filter_value.count }})</span>{%- endif -%}
-                  </label>
-              {% endcomment %}
-                  
-                    <input
-                      class="form__input"
-                      type="checkbox"
-                      name="{{ filter_value.param_name }}"
-                      value="{{ filter_value.value }}"
-                      id="Filter-{{ filter.param_name }}-{{ forloop.index }}"
-                      {% if filter_value.active -%}checked{%- endif %}
-                      {% if filter_value.count == 0 and filter_value.active == false -%}disabled{%- endif %}>
-                  <label class="form__label" for="Filter-{{ filter.param_name }}-{{ forloop.index }}">
-                    <span>
-                      {{ filter_value.label }}
-                      {%- if filter_value.count > 0 -%}<span>({{ filter_value.count }})</span>{%- endif -%}
-                    </span>
-                  </label>
+                  </span>
+                </label>
               </li>
             {%- endfor -%}
           </ul>
