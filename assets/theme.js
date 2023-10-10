@@ -925,6 +925,33 @@ function initCollectionEventListeners() {
   }
   function removeActiveFilters() {
     console.log("filter remove event");
+    // Show Loader 
+    selectors.loader.classList.remove('hidden');
+    fetch(`${window.themeContent.routes.collection}?${queryString}`)
+      .then(responce => responce.text())
+      .then(data => {
+        let html = document.createElement('div');
+        html.innerHTML = data;
+        let productData = html.querySelector('.catalog__content').innerHTML;
+        document.querySelector('.catalog__content').innerHTML = productData;
+
+        // Check if there are no products
+        const noProductsMessage = html.querySelector('.empty-products__message');
+        if (noProductsMessage) {
+          document.querySelector('.empty-products__message').classList.remove('hidden');
+        } else {
+          // Preserve existing sorting parameters
+          const existingSortParam = new URLSearchParams(window.location.search).get('sort_by');
+          if (existingSortParam) {
+            queryString.set('sort_by', existingSortParam);
+          }
+          history.replaceState(null, null, '?' + queryString.toString());
+          initCollectionEventListeners();
+          initCollectionSort();
+        }
+      })
+      .catch(error => console.log('Error', error))
+      .finally(() => selectors.loader.classList.add('hidden'));
   }
 }
 initCollectionEventListeners();
