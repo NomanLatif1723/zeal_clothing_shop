@@ -941,15 +941,16 @@ function initCollectionSort() {
   let selectors = {
     sortContainer: document.querySelectorAll('#sort-by'),
     loader: document.querySelector('.loader'),
-    filterForm: document.querySelector('.filter-form2'),
+    filterForm: document.querySelector('.filter-form'),
     collectionContainer: document.querySelector('.collection-grid')
   }
   Shopify.queryParams = {};
   if(!selectors.sortContainer || !selectors.loader) return;
   selectors.sortContainer.forEach(el => {
     el.addEventListener('change', function(event) {
+      const searchParams = event.state ? event.state.searchParams : selectors.filterForm.searchParamsInitial;
       // const queryString = new URLSearchParams(new FormData(selectors.filterForm)).toString();
-      const queryString = new URLSearchParams(new FormData(selectors.filterForm)).toString();
+      // const queryString = new URLSearchParams(new FormData(selectors.filterForm)).toString();
       sortingSubmitForm(queryString);
       updateUrl(queryString);
     });
@@ -972,7 +973,8 @@ function initCollectionSort() {
       // location.search = new URLSearchParams(Shopify.queryParams).toString();
     }
     function updateUrl(queryString) {
-      history.replaceState(null,null, '?'+ queryString);
+      history.pushState({ searchParams }, '', `${window.location.pathname}${searchParams && '?'.concat(searchParams)}`);
+      // history.replaceState(null,null, '?'+ queryString);
     }
   })
 }
