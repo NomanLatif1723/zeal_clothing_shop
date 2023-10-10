@@ -968,7 +968,12 @@ function initCollectionSort() {
       .finally(() => selectors.loader.classList.add('hidden'));
     }
     function updateUrl(event) {
-      history.replaceState(null,null, '?sort_by='+ event.target.value);
+      const currentValue = event.target.value;
+      const currentParams = new URLSearchParams(window.location.search);
+      currentParams.set('sort_by', currentValue);
+      const newUrl = window.location.pathname + '?' + currentParams.toString();
+      history.replaceState(null, null, newUrl);
+      // history.replaceState(null,null, '?sort_by='+ event.target.value);
     }
   })
 }
