@@ -75,7 +75,9 @@
       "products_count": "{{ products_count }} Results",
       "fiter_collection": "Filter\/Sort",
       "filter_drawer": "Filter By",
-      "sort_drawer": "Sort By"
+      "sort_drawer": "Sort By",
+      "remove_filters": "Remove Filters",
+      "empty_collection_message": "No Products Found"
     }
   },
   "collection-list": {
