@@ -1007,12 +1007,16 @@ function initFilterFacetForm() {
         queryString.append(option.name, option.value);
       }
     });
-    selectors.filterPriceOptions.forEach(option => {
-      const priceValue = option.value.trim();
-      if (priceValue !== '') {
-        queryString.set(option.name, priceValue);
-      }
-    });
+    // selectors.filterPriceOptions.forEach(option => {
+    //   const priceValue = option.value.trim();
+    //   if (priceValue !== '') {
+    //     queryString.set(option.name, priceValue);
+    //   }
+    // });
+    const minPriceInput = document.querySelector('input[name="filter.v.price.gte"]');
+    const maxPriceInput = document.querySelector('input[name="filter.v.price.lte"]');
+    queryString.set('min_price', minPriceInput.value.trim());
+    queryString.set('max_price', maxPriceInput.value.trim());
     
     // const queryString = new URLSearchParams(new FormData(selectors.filterForm)).toString();
     selectors.loader.classList.remove('hidden');
