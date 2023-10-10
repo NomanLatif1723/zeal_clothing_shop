@@ -905,10 +905,9 @@ function initCollectionEventListeners() {
     }
     if (event.target.classList.contains('active-filters__remove-filter')) {
       event.preventDefault();
-      // Extract the filter name and value from the data attributes
       const filterName = event.target.getAttribute('data-filter-name');
       const filterValue = event.target.getAttribute('data-filter-value');
-      console.log(filterName,filterValue);
+      removeFilterAjax(filterName, filterValue);
     }
   });
   // Open Filter Drawer Function
@@ -945,6 +944,36 @@ function initCollectionEventListeners() {
   //     console.error('Error:', error);
   //   });
   // }
+  function removeFilterAjax(filterName,filterValue) {
+    console.log(filterName,filterValue);
+    const queryString = new URLSearchParams();
+    selectors.loader.classList.remove('hidden');
+    fetch(`${window.themeContent.routes.collection}?${queryString}`)
+      .then(responce => responce.text())
+      .then(data => {
+        let html = document.createElement('div');
+        html.innerHTML = data;
+        let productData = html.querySelector('.catalog__content').innerHTML;
+        document.querySelector('.catalog__content').innerHTML = productData;
+
+        // Check if there are no products
+        const noProductsMessage = html.querySelector('.empty-products__message');
+        if (noProductsMessage) {
+          document.querySelector('.empty-products__message').classList.remove('hidden');
+        } else {
+          // Preserve existing sorting parameters
+          const existingSortParam = new URLSearchParams(window.location.search).get('sort_by');
+          if (existingSortParam) {
+            queryString.set('sort_by', existingSortParam);
+          }
+          history.replaceState(null, null, '?' + queryString.toString());
+          initCollectionEventListeners();
+          initCollectionSort();
+        }
+      })
+      .catch(error => console.log('Error', error))
+      .finally(() => selectors.loader.classList.add('hidden'));
+  }
 }
 initCollectionEventListeners();
 
