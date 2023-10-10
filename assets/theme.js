@@ -1006,8 +1006,7 @@ function initFilterFacetForm() {
         queryString.set(option.name, priceValue);
       }
     });
-    
-    // const queryString = new URLSearchParams(new FormData(selectors.filterForm)).toString();
+    // Show Loader 
     selectors.loader.classList.remove('hidden');
     fetch(`${window.themeContent.routes.collection}?${queryString}`)
       .then(responce => responce.text())
@@ -1019,9 +1018,7 @@ function initFilterFacetForm() {
 
         // Check if there are no products
         const noProductsMessage = html.querySelector('.empty-products__message');
-
         if (noProductsMessage) {
-          
           document.querySelector('.empty-products__message').classList.remove('hidden');
         } else {
           // Preserve existing sorting parameters
