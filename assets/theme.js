@@ -926,6 +926,7 @@ function initCollectionEventListeners() {
   }
   function removeActiveFilters() {
     console.log("filter remove event");
+    const queryString = new URLSearchParams();
     // Show Loader 
     selectors.loader.classList.remove('hidden');
     fetch(`${window.themeContent.routes.collection}?${queryString}`)
