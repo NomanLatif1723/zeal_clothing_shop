@@ -178,7 +178,7 @@
                 {%- endif -%}
               {%- else -%}
                 {%- for filter_value in filter.active_values -%}
-                  <a class="active-filters__remove-filter" data-filter-type="{{ filter.type }}" data-filter-label="{{ filter.label }}" href="{{ filter_value.url_to_remove }}">
+                  <a class="active-filters__remove-filter" data-filter-type="{{ filter.type }}" data-filter-value="{{ filter_value.label }}" href="{{ filter_value.url_to_remove }}">
                     {{ filter.label }}: {{ filter_value.label }} X
                   </a>
                 {%- endfor -%}
