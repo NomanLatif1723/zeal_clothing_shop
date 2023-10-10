@@ -994,7 +994,6 @@ function initFilterFacetForm() {
   });
   function filterSubmitForm() {
     const queryString = new URLSearchParams();
-    // Add the filter parameters from the form
     selectors.filterOptions.forEach(option => {
       if (option.checked) {
         queryString.append(option.name, option.value);
