@@ -1023,7 +1023,8 @@ function initFilterFacetForm() {
       .finally(() => selectors.loader.classList.add('hidden'));
   }
 }
-
+initFilterFacetForm();
+  
 // FAQ'S Section 
 function initHandleQuestions() {
   let questionWrapper = document.querySelectorAll('.faq__wrapper');
