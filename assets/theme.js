@@ -1022,13 +1022,13 @@ function initFilterFacetForm() {
         let html = document.createElement('div');
         html.innerHTML = data;
         let productData = html.querySelector('.catalog__content').innerHTML;
-        
+        document.querySelector('.catalog__content').innerHTML = productData;
 
         // Check if there are no products
         const noProductsMessage = html.querySelector('.empty-products__message');
 
         if (noProductsMessage) {
-          document.querySelector('.catalog__content').innerHTML = productData;
+          
           document.querySelector('.empty-products__message').classList.remove('hidden');
         } else {
           // Preserve existing sorting parameters
