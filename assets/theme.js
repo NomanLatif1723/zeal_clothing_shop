@@ -1007,23 +1007,23 @@ function initFilterFacetForm() {
         queryString.append(option.name, option.value);
       }
     });
-    // selectors.filterPriceOptions.forEach(option => {
-    //   const priceValue = option.value.trim();
-    //   if (priceValue !== '') {
-    //     queryString.set(option.name, priceValue);
-    //   }
-    // });
-    const minPriceInput = document.querySelector('input[name="filter.v.price.gte"]');
-    const maxPriceInput = document.querySelector('input[name="filter.v.price.lte"]');
-    const minPriceValue = queryString.set('filter.v.price.gte', minPriceInput.value.trim());
-    const maxPriceValue = queryString.set('filter.v.price.lte', maxPriceInput.value.trim());
+    selectors.filterPriceOptions.forEach(option => {
+      const priceValue = option.value.trim();
+      if (priceValue !== '') {
+        queryString.set(option.name, priceValue);
+      }
+    });
+    // const minPriceInput = document.querySelector('input[name="filter.v.price.gte"]');
+    // const maxPriceInput = document.querySelector('input[name="filter.v.price.lte"]');
+    // const minPriceValue = queryString.set('filter.v.price.gte', minPriceInput.value.trim());
+    // const maxPriceValue = queryString.set('filter.v.price.lte', maxPriceInput.value.trim());
 
-    if (minPriceValue !== '') {
-      queryString.set('filter.v.price.gte', minPriceValue);
-    }
-    if (maxPriceValue !== '') {
-      queryString.set('filter.v.price.lte', maxPriceValue);
-    }
+    // if (minPriceValue !== '') {
+    //   queryString.set('filter.v.price.gte', minPriceValue);
+    // }
+    // if (maxPriceValue !== '') {
+    //   queryString.set('filter.v.price.lte', maxPriceValue);
+    // }
     
     // const queryString = new URLSearchParams(new FormData(selectors.filterForm)).toString();
     selectors.loader.classList.remove('hidden');
