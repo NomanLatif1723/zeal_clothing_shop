@@ -905,21 +905,9 @@ function initCollectionEventListeners() {
     }
     if (event.target.classList.contains('active-filters__remove-filter')) {
       event.preventDefault();
-      // Extract the filter name from the data attribute
-      const filterName = event.target.getAttribute('data-filter-name');
-
-      // Get the current URL and remove the filter parameter
-      const currentUrl = window.location.href;
-      const updatedUrl = removeFilterParameter(currentUrl, filterName);
-
-      // Update the URL without the removed filter
-      history.replaceState(null, null, updatedUrl);
-
-      // Reload the page to reflect the changes
-      location.reload();
-      // removeActiveFilters(filterType, filterValue);
     }
   });
+  // Open Filter Drawer Function
   function openFilterDrawer() {
     if (selectors.filterDrawer.classList.contains('filter-drawer__left')) {
       selectors.filterDrawer.classList.add('drawer-open__left');
@@ -928,6 +916,7 @@ function initCollectionEventListeners() {
     }
     selectors.bodyContainer.classList.add('drawer__opening');
   }
+  // Close Filter Drawer Function
   function closeFilterDrawer() {
     if (selectors.filterDrawer.classList.contains('filter-drawer__left')) {
       selectors.filterDrawer.classList.remove('drawer-open__left');
@@ -950,19 +939,6 @@ function initCollectionEventListeners() {
     .catch(error => {
       console.error('Error:', error);
     });
-  }
-  function removeFilterParameter(url, paramName) {
-    const urlObj = new URL(url);
-    const searchParams = new URLSearchParams(urlObj.search);
-
-    // Remove the parameter from the search params
-    searchParams.delete(paramName);
-
-    // Update the search property of the URL object
-    urlObj.search = searchParams.toString();
-
-    // Get the updated URL as a string
-    return urlObj.toString();
   }
 }
 initCollectionEventListeners();
