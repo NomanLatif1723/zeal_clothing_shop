@@ -872,6 +872,7 @@ initFilterFacetForm();
 // Document General Event Listeners
 function initCollectionEventListeners() {
   let selectors = {
+    loader: document.querySelector('.loader'),
     filterDrawer: document.querySelector('.filter-drawer'),
     bodyContainer: document.querySelector('body')
   }
