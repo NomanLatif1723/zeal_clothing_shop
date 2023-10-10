@@ -985,7 +985,7 @@ function initFilterFacetForm() {
   selectors.filterOptions.forEach(option => {
     if (!option) return;
     option.addEventListener('change', () => {
-      open.closest('.filter-group__dropdown--list-item').classList.toggle('selected');
+      option.closest('.filter-group__dropdown--list-item').classList.toggle('selected');
       filterSubmitForm();
     });
   });
