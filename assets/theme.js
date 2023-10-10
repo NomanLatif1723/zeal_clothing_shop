@@ -953,9 +953,11 @@ function initCollectionSort() {
     });
     function sortingSubmitForm(event) {
       selectors.loader.classList.remove('hidden');
+      const sortValue = event.target.value;
+      const filterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
       let value = event.target.value;
       
-      fetch(`${window.themeContent.routes.collection}?sort_by=${value}`)
+      fetch(`${window.themeContent.routes.collection}?${filterParams}&sort_by=${sortValue}`)
       .then(responce => responce.text())
       .then(data => {
         let html = document.createElement('div');
@@ -968,12 +970,10 @@ function initCollectionSort() {
       .finally(() => selectors.loader.classList.add('hidden'));
     }
     function updateUrl(event) {
-      const currentValue = event.target.value;
-      const currentParams = new URLSearchParams(window.location.search);
-      currentParams.set('sort_by', currentValue);
-      const newUrl = window.location.pathname + '?' + currentParams.toString();
+      const currentSortValue = event.target.value;
+      const currentFilterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
+      const newUrl = window.location.pathname + '?' + currentFilterParams + '&sort_by=' + currentSortValue;
       history.replaceState(null, null, newUrl);
-      // history.replaceState(null,null, '?sort_by='+ event.target.value);
     }
   })
 }
