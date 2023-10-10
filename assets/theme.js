@@ -905,8 +905,8 @@ function initCollectionEventListeners() {
     }
     if (event.target.classList.contains('active-filters__remove-filter')) {
       event.preventDefault();
-      const filterType = this.getAttribute('data-filter-type');
-      const filterValue = this.getAttribute('data-filter-value');
+      const filterType = event.target.getAttribute('data-filter-type');
+      const filterValue = event.target.getAttribute('data-filter-value');
       removeActiveFilters(filterType, filterValue);
     }
   });
