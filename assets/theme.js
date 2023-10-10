@@ -1007,6 +1007,7 @@ function initFilterFacetForm() {
         document.querySelector('.catalog__content').innerHTML = productData;
         history.replaceState(null,null, '?'+ queryString);
         initCollectionEventListeners();
+        initCollectionSort();
       })
       .catch(error => console.log('Error', error))
       .finally(() => selectors.loader.classList.add('hidden'));
