@@ -941,6 +941,7 @@ function initCollectionSort() {
   let selectors = {
     sortContainer: document.querySelectorAll('#sort-by'),
     loader: document.querySelector('.loader'),
+    filterForm: document.querySelector('.filter-form'),
     collectionContainer: document.querySelector('.collection-grid')
   }
   Shopify.queryParams = {};
