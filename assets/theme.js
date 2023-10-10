@@ -1000,7 +1000,13 @@ function initFilterFacetForm() {
     });
   });
   function filterSubmitForm() {
-    const queryString = new URLSearchParams(new FormData(selectors.filterForm)).toString();
+    const queryString = new URLSearchParams(window.location.search);
+    // Add the filter parameters from the form
+    const formData = new FormData(selectors.filterForm);
+    formData.forEach((value, key) => {
+      queryString.set(key, value);
+    });
+    // const queryString = new URLSearchParams(new FormData(selectors.filterForm)).toString();
     selectors.loader.classList.remove('hidden');
     fetch(`${window.themeContent.routes.collection}?${queryString}`)
       .then(responce => responce.text())
