@@ -906,10 +906,6 @@ function initCollectionEventListeners() {
       // openFilterDrawer();
     }
   });
-  // if (!selectors.closefilterDrawerBtn) return;
-  // selectors.closefilterDrawerBtn.addEventListener('click', () => {
-  //   closeFilterDrawer();
-  // });
   // selectors.activeFilterRemove.forEach(button => {
   //   if (!button) return;
   //   button.addEventListener('click', (event) => {
