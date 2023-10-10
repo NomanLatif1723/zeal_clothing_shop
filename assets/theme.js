@@ -941,14 +941,15 @@ function initCollectionSort() {
   let selectors = {
     sortContainer: document.querySelectorAll('#sort-by'),
     loader: document.querySelector('.loader'),
-    filterForm: document.querySelector('.filter-form'),
+    filterForm: document.querySelectorAll('.filter-form'),
     collectionContainer: document.querySelector('.collection-grid')
   }
   Shopify.queryParams = {};
   if(!selectors.sortContainer || !selectors.loader) return;
   selectors.sortContainer.forEach(el => {
     el.addEventListener('change', function(event) {
-      const queryString = new URLSearchParams(new FormData(selectors.filterForm)).toString();
+      // const queryString = new URLSearchParams(new FormData(selectors.filterForm)).toString();
+      const queryString = new URLSearchParams(new FormData(selectors.filterForm.forEach(form => form))).toString();
       sortingSubmitForm(queryString);
       updateUrl(queryString);
     });
