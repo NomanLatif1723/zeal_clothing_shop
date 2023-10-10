@@ -1000,12 +1000,14 @@ function initFilterFacetForm() {
     });
   });
   function filterSubmitForm() {
-    const queryString = new URLSearchParams(window.location.search);
+    const queryString = new URLSearchParams();
     // Add the filter parameters from the form
-    const formData = new FormData(selectors.filterForm);
-    formData.forEach((value, key) => {
-      queryString.set(key, value);
+    selectors.filterOptions.forEach(option => {
+      if (option.checked) {
+        queryString.append(option.name, option.value);
+      }
     });
+    
     // const queryString = new URLSearchParams(new FormData(selectors.filterForm)).toString();
     selectors.loader.classList.remove('hidden');
     fetch(`${window.themeContent.routes.collection}?${queryString}`)
@@ -1015,7 +1017,15 @@ function initFilterFacetForm() {
         html.innerHTML = data;
         let productData = html.querySelector('.catalog__content').innerHTML;
         document.querySelector('.catalog__content').innerHTML = productData;
-        history.replaceState(null,null, '?'+ queryString);
+        
+        // Preserve existing sorting parameters
+        const existingSortParam = new URLSearchParams(window.location.search).get('sort_by');
+        if (existingSortParam) {
+          queryString.set('sort_by', existingSortParam);
+        }
+        history.replaceState(null, null, '?' + queryString.toString());
+        // history.replaceState(null,null, '?'+ queryString);
+        
         initCollectionEventListeners();
         initCollectionSort();
       })
