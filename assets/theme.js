@@ -948,7 +948,7 @@ function initCollectionEventListeners() {
   const queryString = new URLSearchParams(window.location.search);
 
   // Remove the specific filter parameter based on filterName and filterValue
-  queryString.delete(`filter.v.option.${filterName}`);
+  queryString.delete(`filter.v.option.${filterValue}`);
   
   const updatedUrl = `${window.themeContent.routes.collection}?${queryString.toString()}`;
   selectors.loader.classList.remove('hidden');
