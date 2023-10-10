@@ -951,14 +951,14 @@ function initCollectionSort() {
       const searchParams = event.state ? event.state.searchParams : selectors.filterForm.searchParamsInitial;
       // const queryString = new URLSearchParams(new FormData(selectors.filterForm)).toString();
       // const queryString = new URLSearchParams(new FormData(selectors.filterForm)).toString();
-      sortingSubmitForm(queryString);
-      updateUrl(queryString);
+      sortingSubmitForm(searchParams);
+      updateUrl(searchParams);
     });
-    function sortingSubmitForm(queryString) {
+    function sortingSubmitForm(searchParams) {
       selectors.loader.classList.remove('hidden');
       let value = event.target.value;
       
-      fetch(`${window.themeContent.routes.collection}?${queryString}`)
+      fetch(`${window.themeContent.routes.collection}?${searchParams}`)
       .then(responce => responce.text())
       .then(data => {
         let html = document.createElement('div');
@@ -972,7 +972,7 @@ function initCollectionSort() {
       // Shopify.queryParams.sort_by = value;
       // location.search = new URLSearchParams(Shopify.queryParams).toString();
     }
-    function updateUrl(queryString) {
+    function updateUrl(searchParams) {
       history.pushState({ searchParams }, '', `${window.location.pathname}${searchParams && '?'.concat(searchParams)}`);
       // history.replaceState(null,null, '?'+ queryString);
     }
