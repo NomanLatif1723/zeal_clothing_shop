@@ -46,14 +46,14 @@
     <div class="featured-grid__image{% if product.media.size > 1 and settings.show_second_image %} has-secondary__image{% endif %}">
       {%- if settings.show_quick_view -%}
         <div class="quick-shop__wrapper">
-          <button class="quick-shop__flex">
-            <span class="quick-shop__text">
+          <div class="quick-shop__flex">
+            <div class="quick-shop__text">
               {{ settings.quick_button_text }}
-            </span>
-            <span class="icon quick-shop__icon">
+            </div>
+            <div class="icon quick-shop__icon">
               {%- render 'icon-quickview' -%}
-            </span>
-          </button>
+            </div>
+          </div>
         </div>
       {%- endif -%}
       <a href="{{ product.url }}" title="{{ image.alt }}">
