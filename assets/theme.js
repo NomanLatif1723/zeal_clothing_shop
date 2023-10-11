@@ -1817,9 +1817,37 @@ initProductForm();
 // Product Quick View 
 function initQuickShopCollection() {
   let selectors = {
-    quickShopBtn: document.querySelectorAll('')
+    quickShopBtn: document.querySelectorAll('.quick-shop__btn'),
+    quickShopModal: document.querySelector('.quick-shop__modal'),
+    modalCloseBtn: document.querySelector('.quickview-modal__close'),
+    quickShopModalBox: document.querySelector('quick-shop__box')
   }
+  if(!selectors.modalCloseBtn || !selectors.quickShopModal || !selectors.quickShopModalBox) return;
   
+  selectors.quickShopBtn.forEach(button => {
+    if (!button) return;
+    button.addEventListener('click', () => {
+      openQuickShopModal();
+    });
+  });
+  selectors.modalCloseBtn.addEventListener('click', () => {
+    closeQuickShopModal();
+  });
+
+  selectors.quickShopModal.addEventListener('click', () => {
+    closeQuickShopModal();
+  });
+
+  selectors.quickShopModalBox.addEventListener('click', (event) => {
+    event.StopPropagation();
+  });
+
+  function openQuickShopModal() {
+    selectors.quickShopModal.classList.remove('hidden');
+  }
+  function closeQuickShopModal() {
+    selectors.quickShopModal.classList.add('hidden');
+  }
 }
 initQuickShopCollection();
 
