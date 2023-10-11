@@ -1843,7 +1843,7 @@ function initQuickShopCollection() {
     quickShopBtn: document.querySelectorAll('.quick-shop__btn'),
     quickShopModal: document.querySelector('.quick-shop__modal'),
     modalCloseBtn: document.querySelector('.quickview-modal__close'),
-    quickShopModalBox: document.querySelector('quick-shop__box')
+    quickShopModalBox: document.querySelector('.quick-shop__box')
   }
   
   selectors.quickShopBtn.forEach(button => {
