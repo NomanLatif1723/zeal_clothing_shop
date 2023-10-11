@@ -38,12 +38,15 @@
   assign default = 'grande'
   assign sizes = '(min-width: 1200px) 650px, 45vw'
 -%}
+{%- if settings.show_quick_view -%}
+  {%- render 'quick-view-modal', product: product -%}
+{%- endif -%}
 <div class="collection-grid__item {{ itemWidth }} {% if stackProduct == false %}list-scroller__item{% endif %}">
   <div class="featured-grid__content">
     <div class="featured-grid__image{% if product.media.size > 1 and settings.show_second_image %} has-secondary__image{% endif %}">
       {%- if settings.show_quick_view -%}
         <div class="quick-shop__wrapper">
-          <button class="quick-shop__flex">
+          <button class="quick-shop__btn" aria-label="{{ settings.quick_button_text }}">
             <span class="quick-shop__text">
               {{ settings.quick_button_text }}
             </span>
@@ -51,7 +54,6 @@
               {%- render 'icon-quickview' -%}
             </span>
           </button>
-          {%- render 'quick-view-modal', product: product -%}
         </div>
       {%- endif -%}
       <a href="{{ product.url }}" title="{{ image.alt }}">
