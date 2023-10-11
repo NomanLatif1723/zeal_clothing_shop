@@ -879,6 +879,7 @@ function initCollectionEventListeners() {
     filterSortBtn: document.querySelector('.filter__btn')
   }
   selectors.filterItem.forEach(item => {
+    if (!item) return;
     item.addEventListener('click', () => {
       item.closest('.filter-group').querySelector('.filter-group__dropdown').classList.toggle('hidden');
       item.closest('.filter-group').querySelector('.icon__arrow').classList.toggle('icon__rotate');
