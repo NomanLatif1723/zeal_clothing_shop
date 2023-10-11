@@ -1830,14 +1830,18 @@ function initQuickShopCollection() {
       openQuickShopModal();
     });
   });
+  
+  if(!selectors.modalCloseBtn) return;
   selectors.modalCloseBtn.addEventListener('click', () => {
     closeQuickShopModal();
   });
 
+  if(!selectors.quickShopModal) return;
   selectors.quickShopModal.addEventListener('click', () => {
     closeQuickShopModal();
   });
 
+  if(!selectors.quickShopModalBox) return;
   selectors.quickShopModalBox.addEventListener('click', (event) => {
     event.StopPropagation();
   });
