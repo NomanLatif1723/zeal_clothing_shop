@@ -874,42 +874,56 @@ function initCollectionEventListeners() {
   let selectors = {
     loader: document.querySelector('.loader'),
     filterDrawer: document.querySelector('.filter-drawer'),
-    bodyContainer: document.querySelector('body')
+    bodyContainer: document.querySelector('body'),
+    filterItem: document.querySelectorAll('.filter-group__item'),
+    filterSortBtn: document.querySelector('.filter__btn')
   }
-  document.addEventListener('click', (event) => {
-    if (event.target.classList.contains('filter-group__item')) {
-      event.target.closest('.filter-group').querySelector('.filter-group__dropdown').classList.toggle('hidden');
-      event.target.closest('.filter-group').querySelector('.icon__arrow').classList.toggle('icon__rotate');
-    }
-    if (event.target.classList.contains('filter__btn')) {
-      openFilterDrawer();
-    }
-    if (event.target.classList.contains('icon__close')) {
-      closeFilterDrawer();
-    }
-    if (event.target.classList.contains('filter-drawer')) {
-      closeFilterDrawer();
-    }
-    if (event.target.classList.contains('filter-drawer__box')) {
-      event.stopPropagation();
-    }
-    if (event.target.classList.contains('show-more__swatches')) {
-      let colorSwatchList = event.target.closest('.color-swatch__list');
-      if (colorSwatchList) {
-        let hiddenSwatches = colorSwatchList.querySelector('.hidden__swatches');
-        if (hiddenSwatches) {
-          event.target.classList.add('hide');
-          hiddenSwatches.classList.add('show');
-        }
-      }
-    }
-    // if (event.target.classList.contains('active-filters__remove-filter')) {
-    //   event.preventDefault();
-    //   const filterName = event.target.getAttribute('data-filter-name');
-    //   const filterValue = event.target.getAttribute('data-filter-value');
-    //   removeFilterAjax(filterName, filterValue);
-    // }
+  selectors.filterItem.forEach(item => {
+    item.addEventListener('click', () => {
+      item.closest('.filter-group').querySelector('.filter-group__dropdown').classList.toggle('hidden');
+      item.closest('.filter-group').querySelector('.icon__arrow').classList.toggle('icon__rotate');
+    });
   });
+
+  if (!selectors.filterSortBtn) return;
+  selectors.filterSortBtn.addEventListener('click', () => {
+    openFilterDrawer();
+  });
+  
+  // document.addEventListener('click', (event) => {
+  //   if (event.target.classList.contains('filter-group__item')) {
+  //     event.target.closest('.filter-group').querySelector('.filter-group__dropdown').classList.toggle('hidden');
+  //     event.target.closest('.filter-group').querySelector('.icon__arrow').classList.toggle('icon__rotate');
+  //   }
+  //   if (event.target.classList.contains('filter__btn')) {
+  //     openFilterDrawer();
+  //   }
+  //   if (event.target.classList.contains('icon__close')) {
+  //     closeFilterDrawer();
+  //   }
+  //   if (event.target.classList.contains('filter-drawer')) {
+  //     closeFilterDrawer();
+  //   }
+  //   if (event.target.classList.contains('filter-drawer__box')) {
+  //     event.stopPropagation();
+  //   }
+  //   if (event.target.classList.contains('show-more__swatches')) {
+  //     let colorSwatchList = event.target.closest('.color-swatch__list');
+  //     if (colorSwatchList) {
+  //       let hiddenSwatches = colorSwatchList.querySelector('.hidden__swatches');
+  //       if (hiddenSwatches) {
+  //         event.target.classList.add('hide');
+  //         hiddenSwatches.classList.add('show');
+  //       }
+  //     }
+  //   }
+  //   // if (event.target.classList.contains('active-filters__remove-filter')) {
+  //   //   event.preventDefault();
+  //   //   const filterName = event.target.getAttribute('data-filter-name');
+  //   //   const filterValue = event.target.getAttribute('data-filter-value');
+  //   //   removeFilterAjax(filterName, filterValue);
+  //   // }
+  // });
   // Open Filter Drawer Function
   function openFilterDrawer() {
     if (selectors.filterDrawer.classList.contains('filter-drawer__left')) {
