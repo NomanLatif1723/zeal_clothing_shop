@@ -1822,7 +1822,6 @@ function initQuickShopCollection() {
     modalCloseBtn: document.querySelector('.quickview-modal__close'),
     quickShopModalBox: document.querySelector('quick-shop__box')
   }
-  if(!selectors.modalCloseBtn || !selectors.quickShopModal || !selectors.quickShopModalBox) return;
   
   selectors.quickShopBtn.forEach(button => {
     if (!button) return;
