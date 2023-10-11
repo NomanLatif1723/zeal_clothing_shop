@@ -1814,6 +1814,15 @@ function initProductForm() {
 }
 initProductForm();
 
+// Product Quick View 
+function initQuickShopCollection() {
+  let selectors = {
+    quickShopBtn: document.querySelectorAll('')
+  }
+  
+}
+initQuickShopCollection();
+
 // Product Recommendations
 function initProductRecommendations() {
   const productRecommendationContainer = document.querySelectorAll('product-recommendations');
