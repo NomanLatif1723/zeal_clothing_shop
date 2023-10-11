@@ -1850,9 +1850,9 @@ function initProductRecommendations() {
 }
 initProductRecommendations();
 
-  document.querySelectorAll('.collection-grid__content a').forEach(item => {
-    item.addEventListener('click', (e) => {
-      e.preventDefault();
-    })
-  })
+  // document.querySelectorAll('.collection-grid__content a').forEach(item => {
+  //   item.addEventListener('click', (e) => {
+  //     e.preventDefault();
+  //   })
+  // })
 })();
