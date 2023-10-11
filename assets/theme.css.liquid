@@ -1716,6 +1716,42 @@ input[type="radio"]:checked + label {
     border: 1px solid var(--colorBodyText);
     display: inline-block;
 }
+.quick-shop__modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 99;
+    cursor: auto;
+}
+.quick-shop__modal:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(1,1,1,0.1);
+    cursor: pointer;
+}
+.modal__inner {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    background: white;
+    transform: translate(-50%,-50%);
+    max-width: 600px;
+    padding: 50px;
+}
+.quickview-modal__close {
+    position: absolute;
+    top: -15px;
+    right: -13px;
+    background: black;
+    padding: 6px;
+}
+.quickview-modal__close .icon__close {
+    stroke: white;
+}
 @media only screen and (max-width: 1200px){
   .block__item--auto{
     width: 25%;
