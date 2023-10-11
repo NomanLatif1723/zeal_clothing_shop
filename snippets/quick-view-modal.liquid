@@ -1,0 +1,12 @@
+<div id="QuickShopModal-{{ product.id }}" class="modal modal--square modal--quick-shop" data-product-id="{{ product.id }}">
+  <div class="modal__inner">
+    <div class="modal__centered">
+      <div class="modal__centered-content">
+        <div id="QuickShopHolder-{{ product.handle }}"></div>
+      </div>
+      <button type="button" class="quickview-modal__close">
+        {%- render 'icon-close' -%}
+      </button>
+    </div>
+  </div>
+</div>
