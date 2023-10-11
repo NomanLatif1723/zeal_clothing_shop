@@ -1842,7 +1842,7 @@ function initQuickShopCollection() {
 
   if(!selectors.quickShopModalBox) return;
   selectors.quickShopModalBox.addEventListener('click', (event) => {
-    event.StopPropagation();
+    event.stopPropagation();
   });
 
   function openQuickShopModal() {
