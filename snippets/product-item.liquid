@@ -39,7 +39,7 @@
   assign sizes = '(min-width: 1200px) 650px, 45vw'
 -%}
 {%- if settings.show_quick_view -%}
-  
+  {%- render 'quick-view-modal' -%}
 {%- endif -%}
 <div class="collection-grid__item {{ itemWidth }} {% if stackProduct == false %}list-scroller__item{% endif %}">
   <div class="featured-grid__content">
