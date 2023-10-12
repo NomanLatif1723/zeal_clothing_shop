@@ -1901,17 +1901,17 @@ function initQuickShopCollection() {
       let doc = parser.parseFromString(data, 'text/html');
       const html = document.createElement('div');
       html.innerHTML = data;
-      const newData = doc.querySelector('.product-grid[data-product-handle="'+handle+'"]');
+      let newData = doc.querySelector('.product-grid[data-product-handle="'+handle+'"]');
 
-      const productMedia = newData.querySelector('.product__image-container');
-      const productDescription = newData.querySelector('.product__content-container');
-      const productVendor = productDescription.querySelector('.product__vendor');
-      const productTitle = productDescription.querySelector('.product__title');
-      const productPrice = productDescription.querySelector('.product__price');
-      const productVariants = productDescription.querySelector('.product__variants');
-      const productSalesTimer = productDescription.querySelector('.product__sales-timer');
-      const productQuantitySelector = productDescription.querySelector('.product__quantity');
-      const productButtons = productDescription.querySelector('.product__buy-buttons');
+      let productMedia = newData.querySelector('.product__image-container');
+      let productDescription = newData.querySelector('.product__content-container');
+      let productVendor = productDescription.querySelector('.product__vendor');
+      let productTitle = productDescription.querySelector('.product__title');
+      let productPrice = productDescription.querySelector('.product__price');
+      let productVariants = productDescription.querySelector('.product__variants');
+      let productSalesTimer = productDescription.querySelector('.product__sales-timer');
+      let productQuantitySelector = productDescription.querySelector('.product__quantity');
+      let productButtons = productDescription.querySelector('.product__buy-buttons');
       productDescription.appendChild(productVendor);
       productDescription.appendChild(productTitle);
       productDescription.appendChild(productPrice);
