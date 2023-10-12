@@ -1924,7 +1924,6 @@ function initQuickShopCollection() {
       }
 
       if (newData) {
-        newData.innerHTML = '';
         newData.appendChild(productMedia);
         newData.appendChild(productDescription);
       }
