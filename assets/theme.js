@@ -1923,14 +1923,17 @@ function initQuickShopCollection() {
         productDescription.appendChild(productButtons);
       }
 
-      // newData.innerHTML = '';
-      // newData.appendChild(productMedia);
-      // newData.appendChild(productDescription);
+      if (newData) {
+        newData.innerHTML = '';
+        newData.appendChild(productMedia);
+        newData.appendChild(productDescription);
+      }
+      
 
       if (!selectors.quickViewContainer) return;
       selectors.quickViewContainer.innerHTML = '';
-      selectors.quickViewContainer.appendChild(productMedia);
-      selectors.quickViewContainer.appendChild(productDescription);
+      selectors.quickViewContainer.appendChild(newData);
+      // selectors.quickViewContainer.appendChild(productDescription);
       initProductmediaSlideShow();
       initProductVariants();
       initProductCollapsibles();
