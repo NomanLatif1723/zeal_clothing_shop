@@ -1909,7 +1909,7 @@ function initQuickShopCollection() {
       const newData = doc.querySelector('.product-grid[data-product-handle="'+handle+'"]');
       const quickViewContainer = document.querySelector('.quick-view__container');
       quickViewContainer.innerHTML = '';
-      quickViewContainer.appenChild(newData);
+      quickViewContainer.appendChild(newData);
     })
     .catch(function(error) {
       console.log('Error', error);
