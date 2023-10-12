@@ -1896,23 +1896,52 @@ function initQuickShopCollection() {
   }
   function preloadProductModal(handle, productId, btn) {
     var holder = document.getElementById('QuickShopHolder-' + handle);
+    if (!holder) {
+        console.log('Quick view container not found for handle: ' + handle);
+        return;
+    }
+
     var url = window.themeContent.routes.home + '/products/' + handle + '?view=quick-view';
     url = url.replace('//', '/');
-    fetch(url).then(function(response) {
-      return response.text();
-    }).then(function(html) {
-      var parser = new DOMParser();
-      var doc = parser.parseFromString(html, 'text/html');
-      var div = doc.querySelector('.product-grid[data-product-handle="'+handle+'"]');
-      if (!holder) {
-        return;
-      }
-      holder.innerHTML = '';
-      holder.append(div);
-      var modalId = 'QuickShopModal-' + productId;
-      var name = 'quick-modal-' + productId;
-    });
-  }
+    
+    fetch(url)
+        .then(function(response) {
+            return response.text();
+        })
+        .then(function(html) {
+            var parser = new DOMParser();
+            var doc = parser.parseFromString(html, 'text/html');
+            var div = doc.querySelector('.product-grid[data-product-handle="'+handle+'"]');
+            
+            if (div) {
+                // Replace the content of the quick view container
+                holder.innerHTML = '';
+                holder.appendChild(div);
+            } else {
+                console.log('Product data not found for handle: ' + handle);
+            }
+        });
+}
+
+  // function preloadProductModal(handle, productId, btn) {
+  //   var holder = document.getElementById('QuickShopHolder-' + handle);
+  //   var url = window.themeContent.routes.home + '/products/' + handle + '?view=quick-view';
+  //   url = url.replace('//', '/');
+  //   fetch(url).then(function(response) {
+  //     return response.text();
+  //   }).then(function(html) {
+  //     var parser = new DOMParser();
+  //     var doc = parser.parseFromString(html, 'text/html');
+  //     var div = doc.querySelector('.product-grid[data-product-handle="'+handle+'"]');
+  //     if (!holder) {
+  //       return;
+  //     }
+  //     holder.innerHTML = '';
+  //     holder.append(div);
+  //     var modalId = 'QuickShopModal-' + productId;
+  //     var name = 'quick-modal-' + productId;
+  //   });
+  // }
 }
 initQuickShopCollection();
 
