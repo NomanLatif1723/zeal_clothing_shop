@@ -1,29 +1,50 @@
 {%- unless product.has_only_default_variant -%}
   {%- if block.settings.variant_type == 'button' -%}
-    {% if product.variants.size > 1 %}
+    {%- if product.variants.size > 1 -%}
       <variant-radios data-section="{{ section.id }}" data-url="{{ product.url }}">
         <div class="product__options">
           {% for option in product.options_with_values %}
-            <fieldset class="product-form__input" data-selected-option="selectedOption{{ forloop.index }}">
-              <legend class="product-form__label"><strong>{{ option.name }}</strong>(<span data-option-name>{{ option.selected_value }}</span>)</legend>
-              {% for value in option.values %}
-                <input type="radio" data-selected-variant form="{{ product_form_id }}" name="{{ option.name }}" value="{{ value }}" {% if option.selected_value == value %}checked{% endif %} id="{{ option.name }}-{{ value }}">
-                  <label for="{{ option.name }}-{{ value }}">
-                  {{ value }}
-                </label>
+            {%- if block.settings.enable_color_swatches -%}
+              {%- liquid 
+                assign optionName = option.name | downcase
+                assign isColorOption = false
+                if optionName == 'color' or optionName == 'colour'
+                assign isColorOption = true
+                 endif
+              -%}
+              {%- if isColorOption -%}
+                {%- for value in option.values -%}
+                  <div class="product__swatches" data-selected-option="selectedOption{{ forloop.index }}">      
+                    <input data-selected-variant {% if option.selected_value == value %}checked{% endif %} type="radio" id="{{ option.name }}-{{ value }}"
+                      value= "{{ value }}" form="{{ product_form_id }}" name="{{ option.name }}"/>
+                      <label for="{{ option.name }}-{{ value }}">
+                        <span class="product__swatches-option" style="background:{{ value | downcase }}"></span>
+                      </label>
+                  </div>
               {% endfor %}
-            </fieldset>
-          {% endfor %}
+            {% endif %}
+            {%- else -%}
+              <fieldset class="product-form__input" data-selected-option="selectedOption{{ forloop.index }}">
+                <legend class="product-form__label"><strong>{{ option.name }}</strong>(<span data-option-name>{{ option.selected_value }}</span>)</legend>
+                {% for value in option.values %}
+                  <input type="radio" data-selected-variant form="{{ product_form_id }}" name="{{ option.name }}" value="{{ value }}" {% if option.selected_value == value %}checked{% endif %} id="{{ option.name }}-{{ value }}">
+                    <label for="{{ option.name }}-{{ value }}">
+                    {{ value }}
+                  </label>
+                {%- endfor -%}
+              </fieldset>
+            {%- endif -%}
+          {%- endfor -%}
         </div>
         <script type="application/json">
         {{ product.variants | json }}
       </script>
       </variant-radios>
-    {% endif %}
-  {% elsif block.settings.variant_type == 'dropdown' %}
+    {%- endif -%}
+  {%- elsif block.settings.variant_type == 'dropdown' -%}
     <variant-selects data-section="{{ section.id }}" data-url="{{ product.url }}">
       <div class="product__options product-select__options">
-        {% for option in product.options_with_values %}
+        {%- for option in product.options_with_values -%}
           <div class="product-form__select">
             <label class="product-form__label"><strong>{{ option.name }}</strong>(<span data-option-name>{{ option.selected_value }}</span>)</label>
             <select form="{{ product_form_id }}" class="product__select" data-selected-variant id="product-select-{{ forloop.index }}">
@@ -34,11 +55,11 @@
               {% endfor %}
             </select>
           </div>
-        {% endfor %}
+        {%- endfor -%}
       </div>
       <script type="application/json">
         {{ product.variants | json }}
       </script>
     </variant-selects>
-  {% endif %}
-{% endunless %}
+  {%- endif -%}
+{%- endunless -%}
