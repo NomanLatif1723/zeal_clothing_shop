@@ -1888,35 +1888,37 @@ function initQuickShopCollection() {
   });
 
   function productMouseover(evt) {
-    var el = evt.currentTarget;
-    var productId = el.dataset.productId;
-    var handle = el.dataset.productHandle;
-    var btn = el.querySelector('.quick-shop__btn');
+    let el = evt.currentTarget;
+    let productId = el.dataset.productId;
+    let handle = el.dataset.productHandle;
+    let btn = el.querySelector('.quick-shop__btn');
     preloadProductModal(handle, productId, btn);
   }
-function preloadProductModal(handle, productId) {
-    var url = window.themeContent.routes.home + '/products/' + handle + '?view=quick-view';
+  function preloadProductModal(handle, productId) {
+    const res = fetch(`${window.themeContent.routes.home}/products/${handle}?view=quick-view`);
+    const text = res.text();
+    console.log(text);
+    let url = window.themeContent.routes.home + '/products/' + handle + '?view=quick-view';
     url = url.replace('//', '/');
-
     fetch(url)
-        .then(function(response) {
-            return response.text();
-        })
-        .then(function(html) {
-            var parser = new DOMParser();
-            var doc = parser.parseFromString(html, 'text/html');
-            var div = doc.querySelector('.product-grid[data-product-handle="'+handle+'"]');
-            
-            if (div) {
-                // Replace the content of the shared quick view container
-                var container = document.querySelector('.quick-view__container');
-                container.innerHTML = '';
-                container.appendChild(div);
-            } else {
-                console.log('Product data not found for handle: ' + handle);
-            }
-        });
-}
+    .then(function(response) {
+        return response.text();
+    })
+    .then(function(html) {
+      let parser = new DOMParser();
+      let doc = parser.parseFromString(html, 'text/html');
+      let div = doc.querySelector('.product-grid[data-product-handle="'+handle+'"]');
+      
+      if (div) {
+          // Replace the content of the shared quick view container
+          let container = document.querySelector('.quick-view__container');
+          container.innerHTML = '';
+          container.appendChild(div);
+      } else {
+          console.log('Product data not found for handle: ' + handle);
+      }
+    });
+  }
 
 
   // function preloadProductModal(handle, productId, btn) {
