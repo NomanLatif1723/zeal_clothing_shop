@@ -1497,7 +1497,7 @@ function initProductVariants() {
         selector.closest('.product__swatches-options').classList.remove('selected');
         if (selector.checked) {
           selectedOptions.push(selector.value);
-          // selector.closest('.product__swatches-options').classList.add('selected');
+          selector.closest('.product__swatches-options').classList.add('selected');
         }
       } else {
         selectedOptions.push(selector.value);
