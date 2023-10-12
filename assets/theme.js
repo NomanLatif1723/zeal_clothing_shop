@@ -1886,17 +1886,16 @@ function initQuickShopCollection() {
 
   products.forEach(product => {
     product.addEventListener('mouseover', productMouseover);
-    function productMouseover(evt) {
-      var el = evt.currentTarget;
-      var productId = el.dataset.productId;
-      var handle = el.dataset.productHandle;
-      var btn = el.querySelector('.quick-shop__btn');
-      console.log(productId,handle,btn);
-      // preloadProductModal(handle, productId, btn);
-    }
   });
 
-  
+  function productMouseover(evt) {
+    var el = evt.currentTarget;
+    var productId = el.dataset.productId;
+    var handle = el.dataset.productHandle;
+    var btn = el.querySelector('.quick-shop__btn');
+    console.log(productId,handle,btn);
+    // preloadProductModal(handle, productId, btn);
+  }
   function preloadProductModal(handle, productId, btn) {
     var holder = document.getElementById('QuickShopHolder-' + handle);
     var url = window.themeContent.routes.home + '/products/' + handle + '?view=modal';
