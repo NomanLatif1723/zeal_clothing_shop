@@ -1893,6 +1893,7 @@ function initQuickShopCollection() {
     var productId = el.dataset.productId;
     var handle = el.dataset.productHandle;
     var btn = el.querySelector('.quick-product__btn');
+    console.log(productId,handle,btn);
     preloadProductModal(handle, productId, btn);
   }
   function preloadProductModal(handle, productId, btn) {
