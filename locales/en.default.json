@@ -243,6 +243,7 @@
     "shipping_policy_html": "<a href='{{ link }}'>Shipping<\/a> calculated at checkout.",
     "share_social": "Share:",
     "item_added_success_message": "Item Added To Your Cart Successfully",
+    "view_full_info": "View Full Info",
     "price": {
       "regular_price": "Regular Price",
       "sale_price": "Sale Price"
