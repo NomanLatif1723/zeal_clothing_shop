@@ -1760,26 +1760,19 @@ function initProductForm() {
     const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
     const res = await fetch("/cart.js");
     const cartData = await res.json();
-    // if (cartData.item_count < stockCounter) {
-      await fetch('/cart/add', {
-        method: "POST",
-        body: new FormData(form),
-      });
-  
-      // update Cart Drawer
-      await updateCartDrawer();
-      
-      // open Cart Drawer
-      openCartDrawer();
-      
-      // Update The Counter
-      cartItemCount(cartData);
-    // } else {
-    //   if (!selectors.formValidationErrorMessage) {
-    //     return;
-    //   }
-    //   selectors.formValidationErrorMessage.classList.remove('hidden');
-    // }
+    await fetch('/cart/add', {
+      method: "POST",
+      body: new FormData(form),
+    });
+
+    // update Cart Drawer
+    await updateCartDrawer();
+    
+    // open Cart Drawer
+    openCartDrawer();
+    
+    // Update The Counter
+    cartItemCount(cartData);
   }
   async function updateCartDrawer() {
     if (selectors.cartType === 'drawer') {
