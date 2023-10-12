@@ -175,7 +175,7 @@
           <div class="product-form__errors rte hidden">{{ 'cart.items.quantity_error_message' | t: quantity: product.selected_or_first_available_variant.inventory_quantity }}</div>
             <button type="submit" name="add" aria-label="Add to cart" data-inventory-count="{{ product.selected_or_first_available_variant.inventory_quantity }}" class="btn btn__link btn__primary"{% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>
               {% if product.selected_or_first_available_variant.available %}
-                {{ 'products.add_to_cart' | t }}
+                {{ add_to_cart_text }}
               {% else %}
                 {{ 'products.sold_out' | t }}
               {% endif %}
