@@ -1904,7 +1904,7 @@ function initQuickShopCollection() {
     .then(function(data) {
       const html = document.createElement('div');
       html.innerHTML = data;
-      const newData = html.querySelector('.product-grid[data-product-handle="'+handle+'"]').innerHTML;
+      const newData = html.querySelector('.product-grid[data-product-handle="'+handle+'"]');
       const quickViewContainer = document.querySelector('.quick-view__container');
       quickViewContainer.innerHTML = newData;
     })
