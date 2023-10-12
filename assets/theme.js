@@ -1903,7 +1903,6 @@ function initQuickShopCollection() {
       html.innerHTML = data;
       let newData = doc.querySelector('.product-grid[data-product-handle="'+handle+'"]');
 
-      newData.innerHTML = '';
       let productMedia = newData.querySelector('.product__image-container');
       let productDescription = newData.querySelector('.product__content-container');
       let productVendor = productDescription.querySelector('.product__vendor');
@@ -1921,6 +1920,7 @@ function initQuickShopCollection() {
       productDescription.appendChild(productQuantitySelector);
       productDescription.appendChild(productButtons);
 
+      newData.innerHTML = '';
       newData.appendChild(productMedia);
       newData.appendChild(productDescription);
 
