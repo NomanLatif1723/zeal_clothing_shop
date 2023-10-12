@@ -1905,22 +1905,20 @@ function initQuickShopCollection() {
 
       const productMedia = newData.querySelector('.product__image-container');
       const productDescription = newData.querySelector('.product__content-container');
-      productDescription.append(
-        productDescription.querySelector('.product__vendor');
-        productDescription.querySelector('.product__title');
-        productDescription.querySelector('.product__price');
-        productDescription.querySelector('.product__variants');
-        productDescription.querySelector('.product__sales-timer');
-        productDescription.querySelector('.product__quantity');
-        productDescription.querySelector('.product__buy-buttons');
-      );
-      // const productVendor = productDescription.querySelector('.product__vendor');
-      // const productTitle = productDescription.querySelector('.product__title');
-      // const productPrice = productDescription.querySelector('.product__price');
-      // const productVariants = productDescription.querySelector('.product__variants');
-      // const productSalesTimer = productDescription.querySelector('.product__sales-timer');
-      // const productQuantitySelector = productDescription.querySelector('.product__quantity');
-      // const productSalesTimer = productDescription.querySelector('.product__buy-buttons');
+      const productVendor = productDescription.querySelector('.product__vendor');
+      const productTitle = productDescription.querySelector('.product__title');
+      const productPrice = productDescription.querySelector('.product__price');
+      const productVariants = productDescription.querySelector('.product__variants');
+      const productSalesTimer = productDescription.querySelector('.product__sales-timer');
+      const productQuantitySelector = productDescription.querySelector('.product__quantity');
+      const productButtons = productDescription.querySelector('.product__buy-buttons');
+      productDescription.appendChild(productVendor);
+      productDescription.appendChild(productTitle);
+      productDescription.appendChild(productPrice);
+      productDescription.appendChild(productVariants);
+      productDescription.appendChild(productSalesTimer);
+      productDescription.appendChild(productQuantitySelector);
+      productDescription.appendChild(productButtons);
 
       if (!selectors.quickViewContainer) return;
       selectors.quickViewContainer.innerHTML = '';
