@@ -1900,8 +1900,49 @@ function initQuickShopCollection() {
       var productId = el.dataset.productId;
       var handle = el.dataset.productHandle;
       var btn = el.querySelector('.quick-product__btn');
-      theme.preloadProductModal(handle, productId, btn);
+      preloadProductModal(handle, productId, btn);
     // }
+  }
+  function preloadProductModal(handle, productId, btn) {
+    var holder = document.getElementById('QuickShopHolder-' + handle);
+    var url = window.themeContent.routes.home + '/products/' + handle + '?view=modal';
+  
+    // remove double `/` in case shop might have /en or language in URL
+    url = url.replace('//', '/');
+  
+    fetch(url).then(function(response) {
+      return response.text();
+    }).then(function(html) {
+      // Convert the HTML string into a document object
+      var parser = new DOMParser();
+      var doc = parser.parseFromString(html, 'text/html');
+      var div = doc.querySelector('.product-section[data-product-handle="'+handle+'"]');
+  
+      if (!holder) {
+        return;
+      }
+  
+      holder.innerHTML = '';
+      holder.append(div);
+  
+      // Setup quick view modal
+      var modalId = 'QuickShopModal-' + productId;
+      var name = 'quick-modal-' + productId;
+      new theme.Modals(modalId, name);
+  
+      // Register product template inside quick view
+      theme.sections.register('product', theme.Product, holder);
+  
+      // Register collapsible elements
+      theme.collapsibles.init();
+  
+      // Register potential video modal links (when video has sound)
+      theme.videoModal();
+  
+      if (btn) {
+        btn.classList.remove('quick-product__btn--not-ready');
+      }
+    });
   }
 }
 initQuickShopCollection();
