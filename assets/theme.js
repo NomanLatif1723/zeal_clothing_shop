@@ -1903,25 +1903,28 @@ function initQuickShopCollection() {
       html.innerHTML = data;
       let newData = doc.querySelector('.product-grid[data-product-handle="'+handle+'"]');
 
-      let productMedia = newData.querySelector('.product__image-container');
-      let productDescription = newData.querySelector('.product__content-container');
-      let productVendor = productDescription.querySelector('.product__vendor');
-      let productTitle = productDescription.querySelector('.product__title');
-      let productPrice = productDescription.querySelector('.product__price');
-      let productVariants = productDescription.querySelector('.product__variants');
-      let productSalesTimer = productDescription.querySelector('.product__sales-timer');
-      let productQuantitySelector = productDescription.querySelector('.product__quantity');
-      let productButtons = productDescription.querySelector('.product__buy-buttons');
-      productDescription.appendChild(productVendor);
-      productDescription.appendChild(productTitle);
-      productDescription.appendChild(productPrice);
-      productDescription.appendChild(productVariants);
-      productDescription.appendChild(productSalesTimer);
-      productDescription.appendChild(productQuantitySelector);
-      productDescription.appendChild(productButtons);
-
-      newData.appendChild(productMedia);
-      newData.appendChild(productDescription);
+      if (newData) {
+        newData.innerHTML = ''
+        let productMedia = newData.querySelector('.product__image-container');
+        let productDescription = newData.querySelector('.product__content-container');
+        let productVendor = productDescription.querySelector('.product__vendor');
+        let productTitle = productDescription.querySelector('.product__title');
+        let productPrice = productDescription.querySelector('.product__price');
+        let productVariants = productDescription.querySelector('.product__variants');
+        let productSalesTimer = productDescription.querySelector('.product__sales-timer');
+        let productQuantitySelector = productDescription.querySelector('.product__quantity');
+        let productButtons = productDescription.querySelector('.product__buy-buttons');
+        productDescription.appendChild(productVendor);
+        productDescription.appendChild(productTitle);
+        productDescription.appendChild(productPrice);
+        productDescription.appendChild(productVariants);
+        productDescription.appendChild(productSalesTimer);
+        productDescription.appendChild(productQuantitySelector);
+        productDescription.appendChild(productButtons);
+  
+        newData.appendChild(productMedia);
+        newData.appendChild(productDescription);
+      }
 
       if (!selectors.quickViewContainer) return;
       selectors.quickViewContainer.innerHTML = '';
