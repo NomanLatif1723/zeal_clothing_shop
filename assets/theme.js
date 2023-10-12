@@ -1912,21 +1912,25 @@ function initQuickShopCollection() {
       let productSalesTimer = productDescription.querySelector('.product__sales-timer');
       let productQuantitySelector = productDescription.querySelector('.product__quantity');
       let productButtons = productDescription.querySelector('.product__buy-buttons');
-      productDescription.appendChild(productVendor);
-      productDescription.appendChild(productTitle);
-      productDescription.appendChild(productPrice);
-      productDescription.appendChild(productVariants);
-      productDescription.appendChild(productSalesTimer);
-      productDescription.appendChild(productQuantitySelector);
-      productDescription.appendChild(productButtons);
+      if (productDescription) {
+        productDescription.innerHTML = '';
+        productDescription.appendChild(productVendor);
+        productDescription.appendChild(productTitle);
+        productDescription.appendChild(productPrice);
+        productDescription.appendChild(productVariants);
+        productDescription.appendChild(productSalesTimer);
+        productDescription.appendChild(productQuantitySelector);
+        productDescription.appendChild(productButtons);
+      }
 
-      newData.innerHTML = '';
-      newData.appendChild(productMedia);
-      newData.appendChild(productDescription);
+      // newData.innerHTML = '';
+      // newData.appendChild(productMedia);
+      // newData.appendChild(productDescription);
 
       if (!selectors.quickViewContainer) return;
       selectors.quickViewContainer.innerHTML = '';
-      selectors.quickViewContainer.appendChild(newData);
+      selectors.quickViewContainer.appendChild(productMedia);
+      selectors.quickViewContainer.appendChild(productDescription);
       initProductmediaSlideShow();
       initProductVariants();
       initProductCollapsibles();
