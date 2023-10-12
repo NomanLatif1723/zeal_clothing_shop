@@ -1935,7 +1935,6 @@ function initQuickShopCollection() {
       document.querySelector('.product-full__info--btn').classList.remove('hidden');
       initProductmediaSlideShow();
       initProductVariants();
-      initProductCollapsibles();
     })
     .catch(function(error) {
       console.log('Error', error);
