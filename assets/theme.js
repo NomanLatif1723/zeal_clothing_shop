@@ -1877,7 +1877,7 @@ function initQuickShopCollection() {
     selectors.quickShopModal.classList.add('hidden');
   }
   
-  var products = document.querySelectorAll('.collection-grid__item');
+  const products = document.querySelectorAll('.collection-grid__item');
 
   if (!products.length || !window.themeContent.settings.quickView) {
     return;
@@ -1895,29 +1895,16 @@ function initQuickShopCollection() {
     preloadProductModal(handle, productId, btn);
   }
   function preloadProductModal(handle, productId) {
-    const res = fetch(`${window.themeContent.routes.home}/products/${handle}?view=quick-view`);
-    const text = res.text();
-    console.log(text);
-    let url = window.themeContent.routes.home + '/products/' + handle + '?view=quick-view';
+    let url = `${window.themeContent.routes.home}/products/${handle}?view=quick-view`;
     url = url.replace('//', '/');
     fetch(url)
-    .then(function(response) {
-        return response.text();
+    .then(function(responce) {
+      return responce.text();
+      console.log(responce);
+      console.log(responce.text());
     })
-    .then(function(html) {
-      let parser = new DOMParser();
-      let doc = parser.parseFromString(html, 'text/html');
-      let div = doc.querySelector('.product-grid[data-product-handle="'+handle+'"]');
-      
-      if (div) {
-          // Replace the content of the shared quick view container
-          let container = document.querySelector('.quick-view__container');
-          container.innerHTML = '';
-          container.appendChild(div);
-      } else {
-          console.log('Product data not found for handle: ' + handle);
-      }
-    });
+    
+    
   }
 
 
