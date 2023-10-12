@@ -1902,11 +1902,14 @@ function initQuickShopCollection() {
       return responce.text();
     })
     .then(function(data) {
+      let parser = new DOMParser();
+      let doc = parser.parseFromString(data, 'text/html');
       const html = document.createElement('div');
       html.innerHTML = data;
-      const newData = html.querySelector('.product-grid[data-product-handle="'+handle+'"]');
+      const newData = doc.querySelector('.product-grid[data-product-handle="'+handle+'"]');
       const quickViewContainer = document.querySelector('.quick-view__container');
-      quickViewContainer.innerHTML = newData;
+      quickViewContainer.innerHTML = '';
+      quickViewContainer.appenChild(newData);
     })
     .catch(function(error) {
       console.log('Error', error);
