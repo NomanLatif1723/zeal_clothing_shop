@@ -1,1 +1,68 @@
-{% section 'main-product' %}
+{%- liquid
+  assign media_container_width = section.settings.media_width
+  assign media_size = '760px'
+  if media_container_width == 'compact'
+    assign product_media_width = 'product-block__small'
+    assign product_content_width = 'product-block__large'
+    assign media_size = '420px'
+  elsif media_container_width == 'large'
+    assign product_media_width = 'product-block__half'
+    assign product_content_width = 'product-block__half'
+    assign media_size = '650px'
+  else 
+    assign product_media_width = 'product-block__extended'
+    assign product_content_width = 'product-block__extra--small'
+    assign media_size = '760px'
+  endif
+-%}
+{%- style -%}
+  .main__section-{{ section.id }}{
+    margin-top: {{ section.settings.margin_top | times: 0.5 | round: 0 }}px;
+    margin-bottom: {{ section.settings.margin_bottom | times: 0.5 | round: 0 }}px;
+  }
+  @media only screen and (min-width: 769px) {
+    .main__section-{{ section.id }}{
+      margin-top: {{ section.settings.margin_top }}px;
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<div class="main-product__wrapper main__section-{{ section.id }}">
+  <div class="page__width">
+    {%- if section.settings.show_breadcrumbs -%}
+      <nav role="navigation" aria-label="breadcrumb" class="product-breadcrumbs">
+        <ul class="breadcrumb__list">
+          <li class="breadcrumb__item">
+            <a href="{{ routes.root_url }}" title="{{ 'general.breadcrumbs.home' | t }}">{{ 'general.breadcrumbs.home' | t }}</a>
+          </li>
+          <span class="separater__icon">{% render 'icon-arrow-down' %}</span>
+          <li class="breadcrumb__item">
+            <a href="{{ routes.collections_url }}" title="{{ 'general.breadcrumbs.collection' | t }}">{{ 'general.breadcrumbs.collection' | t }}</a>
+          </li>
+          <span class="separater__icon">{% render 'icon-arrow-down' %}</span>
+          <li class="breadcrumb__item" aria-current="page">
+            <span>{{ product.title }}</span>
+          </li>
+        </ul>
+      </nav>
+    {%- endif -%}
+    <div class="product-grid{% if section.settings.media_position %} product-grid__reverse{% endif %}" data-section-id="{{ section.id }}" data-product-handle="{{ product.handle }}">
+      <div class="product-grid__item {{ product_media_width }} product__image-container">
+        {%- render 'product-media', 
+          product: product,
+          block: block,
+          section: section,
+          media_size: media_size 
+        -%}
+      </div>
+      <div class="product-grid__item {{ product_content_width }} product__content-container">
+        {%- render 'product-form',
+          product: product,
+          block: block,
+          section: section,
+          show_vendor: settings.show_vendor,
+        -%}
+      </div>
+    </div>
+  </div>
+</div>
