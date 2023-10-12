@@ -1908,11 +1908,10 @@ function initQuickShopCollection() {
       // Convert the HTML string into a document object
       var parser = new DOMParser();
       var doc = parser.parseFromString(html, 'text/html');
-      var div = doc.querySelector('.product-grid[data-product-handle="'+handle+'"]');
+      var div = doc.querySelector('.product-grid[data-product-handle="'+handle+'"]').innerHTML;
       if (!holder) {
         return;
       }
-  
       holder.innerHTML = div;
   
       // Setup quick view modal
