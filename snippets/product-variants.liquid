@@ -17,7 +17,7 @@
               <legend class="product-form__label"><strong>{{ option.name }}</strong>(<span data-option-name>{{ option.selected_value }}</span>)</legend>
               <div class="product__swatches">
                 {% for value in option.values %}
-                  <div class="product__swatches-options">
+                  <div class="product__swatches-options{% if isColorOption %} product__swatches-border{% endif %}">
                     <input type="radio" data-selected-variant form="{{ product_form_id }}" name="{{ option.name }}" value="{{ value }}" {% if option.selected_value == value %}checked{% endif %} id="{{ option.name }}-{{ value }}">
                     {%- if isColorOption -%}
                       <label class="product__swatches-label" for="{{ option.name }}-{{ value }}" style="background:{{ value | downcase }}"></label>
