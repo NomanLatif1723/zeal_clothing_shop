@@ -1900,8 +1900,9 @@ function initQuickShopCollection() {
     fetch(url)
     .then(function(responce) {
       return responce.text();
-      console.log(responce);
-      console.log(responce.text());
+    })
+    .then(function(data) {
+      console.log(data);
     })
     
     
