@@ -1912,8 +1912,8 @@ function initQuickShopCollection() {
       if (!holder) {
         return;
       }
-      holder.innerHTML = div;
-  
+      holder.innerHTML = '';
+      holder.append(div);
       // Setup quick view modal
       var modalId = 'QuickShopModal-' + productId;
       var name = 'quick-modal-' + productId;
