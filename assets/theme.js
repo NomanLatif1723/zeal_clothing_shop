@@ -1902,7 +1902,11 @@ function initQuickShopCollection() {
       return responce.text();
     })
     .then(function(data) {
-      console.log(data);
+      const html = document.createElement('div');
+      html.innerHTML = data;
+      const newData = html.querySelector('.product-grid[data-product-handle="'+handle+'"]').innerHTML;
+      const quickViewContainer = document.querySelector('.quick-view__container');
+      quickViewContainer.innerHTML = newData;
     })
     
     
