@@ -1912,6 +1912,8 @@ function initQuickShopCollection() {
       if (!selectors.quickViewContainer) return;
       selectors.quickViewContainer.innerHTML = '';
       selectors.quickViewContainer.appendChild(newData);
+      initProductmediaSlideShow();
+      initProductVariants();
     })
     .catch(function(error) {
       console.log('Error', error);
