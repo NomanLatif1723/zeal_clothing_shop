@@ -1916,7 +1916,7 @@ function initQuickShopCollection() {
       // Convert the HTML string into a document object
       var parser = new DOMParser();
       var doc = parser.parseFromString(html, 'text/html');
-      var div = doc.querySelector('.product-section[data-product-handle="'+handle+'"]');
+      var div = doc.querySelector('.product-grid[data-product-handle="'+handle+'"]');
   
       if (!holder) {
         return;
