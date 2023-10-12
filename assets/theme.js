@@ -1494,7 +1494,7 @@ function initProductVariants() {
     let selectedOptions = [];
     selectors.variantSelectors.forEach(selector => {
       if (selector.type === 'radio' || selector.type === 'checkbox') {
-        document.querySelector('.product__swatches-options').classList.remove('selected');
+        // document.querySelector('.product__swatches-options').classList.remove('selected');
         if (selector.checked) {
           selectedOptions.push(selector.value);
           selector.closest('.product__swatches-options').classList.add('selected');
