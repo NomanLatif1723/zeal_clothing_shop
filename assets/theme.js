@@ -1920,6 +1920,7 @@ function initQuickShopCollection() {
       productDescription.appendChild(productQuantitySelector);
       productDescription.appendChild(productButtons);
 
+      newData.innerHTML = '';
       newData.appendChild(productMedia);
       newData.appendChild(productDescription);
 
