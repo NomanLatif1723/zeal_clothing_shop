@@ -1897,7 +1897,7 @@ function initQuickShopCollection() {
   }
   function preloadProductModal(handle, productId, btn) {
     var holder = document.getElementById('QuickShopHolder-' + handle);
-    var url = window.themeContent.routes.home + '/products/' + handle + '?section_id=main-product';
+    var url = window.themeContent.routes.home + '/products/' + handle + '?view=quick-view';
   
     // remove double `/` in case shop might have /en or language in URL
     url = url.replace('//', '/');
