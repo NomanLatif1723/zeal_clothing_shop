@@ -1909,7 +1909,7 @@ function preloadProductModal(handle, productId) {
             
             if (div) {
                 // Replace the content of the shared quick view container
-                var container = document.getElementById('QuickShopContainer');
+                var container = document.getElementById('QuickShopContainer-'+ handle);
                 container.innerHTML = '';
                 container.appendChild(div);
             } else {
