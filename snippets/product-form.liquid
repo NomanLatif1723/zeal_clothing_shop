@@ -191,6 +191,9 @@
             {%- endfor -%}
           </select>
         {%- endform -%}
+        <div class="product-more__info hidden">
+          <a href="{{ product.url }}" title="{{  }}">{{  }}</a>
+        </div>
       </div>
     {%- when 'collapsables' -%}
       <div class="product__tabs" {{ block.shopify_attributes }}>
