@@ -1892,7 +1892,7 @@ function initQuickShopCollection() {
     var el = evt.currentTarget;
     var productId = el.dataset.productId;
     var handle = el.dataset.productHandle;
-    var btn = el.querySelector('.quick-product__btn');
+    var btn = el.querySelector('.quick-shop__btn');
     console.log(productId,handle,btn);
     // preloadProductModal(handle, productId, btn);
   }

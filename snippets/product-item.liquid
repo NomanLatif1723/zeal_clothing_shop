@@ -41,7 +41,7 @@
 {%- if settings.show_quick_view -%}
   {%- render 'quick-view-modal', product: product -%}
 {%- endif -%}
-<div class="collection-grid__item {{ itemWidth }} {% if stackProduct == false %}list-scroller__item{% endif %}">
+<div class="collection-grid__item {{ itemWidth }} {% if stackProduct == false %}list-scroller__item{% endif %}" data-product-id="{{ product.id }}" data-product-handle="{{ product.handle }}">
   <div class="featured-grid__content">
     <div class="featured-grid__image{% if product.media.size > 1 and settings.show_second_image %} has-secondary__image{% endif %}">
       {%- if settings.show_quick_view -%}
