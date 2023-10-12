@@ -1894,7 +1894,7 @@ function initQuickShopCollection() {
     var handle = el.dataset.productHandle;
     var btn = el.querySelector('.quick-product__btn');
     console.log(productId,handle,btn);
-    preloadProductModal(handle, productId, btn);
+    // preloadProductModal(handle, productId, btn);
   }
   function preloadProductModal(handle, productId, btn) {
     var holder = document.getElementById('QuickShopHolder-' + handle);
