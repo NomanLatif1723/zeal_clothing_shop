@@ -17,8 +17,7 @@
                   <div class="product__swatches" data-selected-option="selectedOption{{ forloop.index }}">      
                     <input data-selected-variant {% if option.selected_value == value %}checked{% endif %} type="radio" id="{{ option.name }}-{{ value }}"
                       value= "{{ value }}" form="{{ product_form_id }}" name="{{ option.name }}"/>
-                    <label for="{{ option.name }}-{{ value }}">
-                      <span class="product__swatches-option" style="background:{{ value | downcase }}"></span>
+                    <label class="product__swatches-option" for="{{ option.name }}-{{ value }}" style="background:{{ value | downcase }}">
                     </label>
                   </div>
               {% endfor %}
