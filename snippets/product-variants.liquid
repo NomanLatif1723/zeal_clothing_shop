@@ -14,10 +14,10 @@
               -%}
               {%- if isColorOption -%}
                 {%- for value in option.values -%}
-                  <div class="product__swatches" data-selected-option="selectedOption{{ forloop.index }}">      
+                  <div class="product__swatches-options" data-selected-option="selectedOption{{ forloop.index }}">      
                     <input data-selected-variant {% if option.selected_value == value %}checked{% endif %} type="radio" id="{{ option.name }}-{{ value }}"
                       value= "{{ value }}" form="{{ product_form_id }}" name="{{ option.name }}"/>
-                    <label class="product__swatches-option" for="{{ option.name }}-{{ value }}" style="background:{{ value | downcase }}">
+                    <label for="{{ option.name }}-{{ value }}" style="background:{{ value | downcase }}">
                     </label>
                   </div>
               {% endfor %}
