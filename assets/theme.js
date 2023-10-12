@@ -1484,7 +1484,7 @@ function initProductVariants() {
       selectors.format = form.dataset.format || 'default';
       selectors.variantSelectors.forEach(selector => {
         selector.addEventListener('change', () => {
-          // document.querySelectorAll('.product__swatches-options').classList.remove('selected');
+          selector.closest('.product__swatches-options').classList.remove('selected');
           updateProductOptions();
         });
       });
@@ -1495,7 +1495,6 @@ function initProductVariants() {
     let selectedOptions = [];
     selectors.variantSelectors.forEach(selector => {
       if (selector.type === 'radio' || selector.type === 'checkbox') {
-        selector.closest('.product__swatches-options').classList.remove('selected');
         if (selector.checked) {
           selectedOptions.push(selector.value);
           // selector.closest('.product__swatches-options').classList.add('selected');
