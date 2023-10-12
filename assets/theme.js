@@ -1928,16 +1928,16 @@ function initQuickShopCollection() {
       // Setup quick view modal
       var modalId = 'QuickShopModal-' + productId;
       var name = 'quick-modal-' + productId;
-      new theme.Modals(modalId, name);
+      // new theme.Modals(modalId, name);
   
       // Register product template inside quick view
-      theme.sections.register('product', theme.Product, holder);
+      // theme.sections.register('product', theme.Product, holder);
   
       // Register collapsible elements
-      theme.collapsibles.init();
+      // theme.collapsibles.init();
   
       // Register potential video modal links (when video has sound)
-      theme.videoModal();
+      // theme.videoModal();
   
       if (btn) {
         btn.classList.remove('quick-product__btn--not-ready');
