@@ -1876,8 +1876,6 @@ function initQuickShopCollection() {
   function closeQuickShopModal() {
     selectors.quickShopModal.classList.add('hidden');
   }
-
-  var ids = [];
   var products = document.querySelectorAll('.collection-grid__item');
 
   if (!products.length || !window.themeContent.settings.quickView) {
