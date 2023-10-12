@@ -1894,16 +1894,10 @@ function initQuickShopCollection() {
     var btn = el.querySelector('.quick-shop__btn');
     preloadProductModal(handle, productId, btn);
   }
-  function preloadProductModal(handle, productId, btn) {
-    var holder = document.getElementById('QuickShopHolder-' + handle);
-    if (!holder) {
-        console.log('Quick view container not found for handle: ' + handle);
-        return;
-    }
-
+function preloadProductModal(handle, productId) {
     var url = window.themeContent.routes.home + '/products/' + handle + '?view=quick-view';
     url = url.replace('//', '/');
-    
+
     fetch(url)
         .then(function(response) {
             return response.text();
@@ -1914,14 +1908,16 @@ function initQuickShopCollection() {
             var div = doc.querySelector('.product-grid[data-product-handle="'+handle+'"]');
             
             if (div) {
-                // Replace the content of the quick view container
-                holder.innerHTML = '';
-                holder.appendChild(div);
+                // Replace the content of the shared quick view container
+                var container = document.getElementById('QuickShopContainer');
+                container.innerHTML = '';
+                container.appendChild(div);
             } else {
                 console.log('Product data not found for handle: ' + handle);
             }
         });
 }
+
 
   // function preloadProductModal(handle, productId, btn) {
   //   var holder = document.getElementById('QuickShopHolder-' + handle);
