@@ -4061,12 +4061,16 @@ table {
 .product-form__input input[type="radio"]+label {
   color: var(--bodyTextColor);
   padding: 10px 12px;
-  display: inline-block;
+  display: block;
   border: 1px solid #e2e2e2;
   font-size: 14px;
   letter-spacing: 0.7px;
   cursor: pointer;
-  margin-right: 6px;
+  /* margin-right: 6px; */
+}
+.product__swatches-label{
+  width: 35px;
+  height: 35px;
 }
 .product-form__input input[type="radio"]:checked+label {
   background: #111111;
@@ -4167,26 +4171,6 @@ iframe.product-media__video {
   font-size: 12px;
   text-transform: capitalize;
 }
-/* .product__swatches-options {
-  display: inline-block;
-} */
-/* .product__swatches-options input[type="radio"]+label {
-  width: 35px;
-  height: 35px;
-  display: block;
-} */
-.product__swatches-label{
-  width: 35px;
-  height: 35px;
-  
-}
-/* .product__swatches-options input {
-  display: none;
-}
-.product__swatches-options {
-  padding: 2px;
-  border: 1px solid #E2E2E2;
-} */
 @media only screen and (min-width: 768px) {
   .product-grid {
     display: flex;
