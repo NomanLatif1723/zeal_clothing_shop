@@ -1890,18 +1890,10 @@ function initQuickShopCollection() {
 
   function productMouseover(evt) {
     var el = evt.currentTarget;
-    // No quick view on mobile breakpoint
-    // if (!theme.config.bpSmall) {
-      el.removeEventListener('mouseover', productMouseover);
-      if (!el || !el.dataset.productId) {
-        // Onboarding product, no real data
-        return;
-      }
-      var productId = el.dataset.productId;
-      var handle = el.dataset.productHandle;
-      var btn = el.querySelector('.quick-product__btn');
-      preloadProductModal(handle, productId, btn);
-    // }
+    var productId = el.dataset.productId;
+    var handle = el.dataset.productHandle;
+    var btn = el.querySelector('.quick-product__btn');
+    preloadProductModal(handle, productId, btn);
   }
   function preloadProductModal(handle, productId, btn) {
     var holder = document.getElementById('QuickShopHolder-' + handle);
