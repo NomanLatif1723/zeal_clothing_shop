@@ -1905,15 +1905,27 @@ function initQuickShopCollection() {
 
       const productMedia = newData.querySelector('.product__image-container');
       const productDescription = newData.querySelector('.product__content-container');
-      const productVendor = productDescription.querySelector('.product__vendor');
-      const productTitle = productDescription.querySelector('.product__title');
-      const productPrice = productDescription.querySelector('.product__price');
-      const productVariants = productDescription.querySelector('.product__variants');
-      const productSalesTimer = productDescription.querySelector('.product__sales-timer');
+      productDescription.append(
+        productDescription.querySelector('.product__vendor');
+        productDescription.querySelector('.product__title');
+        productDescription.querySelector('.product__price');
+        productDescription.querySelector('.product__variants');
+        productDescription.querySelector('.product__sales-timer');
+        productDescription.querySelector('.product__quantity');
+        productDescription.querySelector('.product__buy-buttons');
+      );
+      // const productVendor = productDescription.querySelector('.product__vendor');
+      // const productTitle = productDescription.querySelector('.product__title');
+      // const productPrice = productDescription.querySelector('.product__price');
+      // const productVariants = productDescription.querySelector('.product__variants');
+      // const productSalesTimer = productDescription.querySelector('.product__sales-timer');
+      // const productQuantitySelector = productDescription.querySelector('.product__quantity');
+      // const productSalesTimer = productDescription.querySelector('.product__buy-buttons');
 
       if (!selectors.quickViewContainer) return;
       selectors.quickViewContainer.innerHTML = '';
-      selectors.quickViewContainer.appendChild(newData);
+      selectors.quickViewContainer.appendChild(productMedia);
+      selectors.quickViewContainer.appendChild(productDescription);
       initProductmediaSlideShow();
       initProductVariants();
       initProductCollapsibles();
