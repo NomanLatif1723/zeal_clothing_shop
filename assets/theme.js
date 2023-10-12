@@ -1920,10 +1920,12 @@ function initQuickShopCollection() {
       productDescription.appendChild(productQuantitySelector);
       productDescription.appendChild(productButtons);
 
+      newData.appendChild(productMedia);
+      newData.appendChild(productDescription);
+
       if (!selectors.quickViewContainer) return;
       selectors.quickViewContainer.innerHTML = '';
-      selectors.quickViewContainer.appendChild(productMedia);
-      selectors.quickViewContainer.appendChild(productDescription);
+      selectors.quickViewContainer.appendChild(newData);
       initProductmediaSlideShow();
       initProductVariants();
       initProductCollapsibles();
