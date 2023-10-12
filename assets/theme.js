@@ -1758,12 +1758,13 @@ function initProductForm() {
 
   async function submitProductForm(form) {
     const stockCounter = form.querySelector('[name="add"]').dataset.inventoryCount;
-    const res = await fetch("/cart.js");
-    const cartData = await res.json();
     await fetch('/cart/add', {
       method: "POST",
       body: new FormData(form),
     });
+
+    const res = await fetch("/cart.js");
+    const cartData = await res.json();
 
     // update Cart Drawer
     await updateCartDrawer();
