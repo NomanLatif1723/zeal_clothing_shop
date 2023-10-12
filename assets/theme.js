@@ -1917,7 +1917,7 @@ function initQuickShopCollection() {
       var parser = new DOMParser();
       var doc = parser.parseFromString(html, 'text/html');
       var div = doc.querySelector('.product-grid[data-product-handle="'+handle+'"]');
-  
+  console.log(div);
       if (!holder) {
         return;
       }
