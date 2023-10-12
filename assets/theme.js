@@ -1845,7 +1845,8 @@ function initQuickShopCollection() {
     quickShopBtn: document.querySelectorAll('.quick-shop__btn'),
     quickShopModal: document.querySelector('.quick-shop__modal'),
     modalCloseBtn: document.querySelector('.quickview-modal__close'),
-    quickShopModalBox: document.querySelector('.quick-shop__box')
+    quickShopModalBox: document.querySelector('.quick-shop__box'),
+    quickViewContainer: document.querySelector('.quick-view__container')
   }
   
   selectors.quickShopBtn.forEach(button => {
@@ -1907,9 +1908,10 @@ function initQuickShopCollection() {
       const html = document.createElement('div');
       html.innerHTML = data;
       const newData = doc.querySelector('.product-grid[data-product-handle="'+handle+'"]');
-      const quickViewContainer = document.querySelector('.quick-view__container');
-      quickViewContainer.innerHTML = '';
-      quickViewContainer.appendChild(newData);
+
+      if (!selectors.quickViewContainer) return;
+      selectors.quickViewContainer.innerHTML = '';
+      selectors.quickViewContainer.appendChild(newData);
     })
     .catch(function(error) {
       console.log('Error', error);
