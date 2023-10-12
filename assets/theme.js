@@ -1892,7 +1892,6 @@ function initQuickShopCollection() {
   }
   function preloadProductModal(handle, productId) {
     let url = `${window.themeContent.routes.home}products/${handle}?view=quick-view`;
-    console.log(url);
     fetch(url)
     .then(function(responce) {
       return responce.text();
@@ -1903,6 +1902,14 @@ function initQuickShopCollection() {
       const html = document.createElement('div');
       html.innerHTML = data;
       const newData = doc.querySelector('.product-grid[data-product-handle="'+handle+'"]');
+
+      const productMedia = newData.querySelector('.product__image-container');
+      const productDescription = newData.querySelector('.product__content-container');
+      const productVendor = productDescription.querySelector('.product__vendor');
+      const productTitle = productDescription.querySelector('.product__title');
+      const productPrice = productDescription.querySelector('.product__price');
+      const productVariants = productDescription.querySelector('.product__variants');
+      const productSalesTimer = productDescription.querySelector('.product__sales-timer');
 
       if (!selectors.quickViewContainer) return;
       selectors.quickViewContainer.innerHTML = '';
