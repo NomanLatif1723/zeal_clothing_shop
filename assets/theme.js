@@ -1484,7 +1484,7 @@ function initProductVariants() {
       selectors.format = form.dataset.format || 'default';
       selectors.variantSelectors.forEach(selector => {
         selector.addEventListener('change', () => {
-          document.querySelector('.product__swatches-options').classList.remove('selected');
+          // document.querySelectorAll('.product__swatches-options').classList.remove('selected');
           updateProductOptions();
         });
       });
@@ -1498,7 +1498,7 @@ function initProductVariants() {
         // document.querySelector('.product__swatches-options').classList.remove('selected');
         if (selector.checked) {
           selectedOptions.push(selector.value);
-          selector.closest('.product__swatches-options').classList.add('selected');
+          // selector.closest('.product__swatches-options').classList.add('selected');
         }
       } else {
         selectedOptions.push(selector.value);
