@@ -122,7 +122,7 @@
         {%- render 'product-variants', block: block, product: product, product_form_id: product_form_id -%}
       </div>
     {%- when 'sale_timer' -%}
-    <div class="product__block">
+    <div class="product__block product__sales-timer">
       <div class="promo-sale__message">{{ 'products.promotional_message' | t }}</div>
       {%- render 'promotional-countdown', block: block -%}
     </div>
