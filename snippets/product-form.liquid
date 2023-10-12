@@ -162,6 +162,14 @@
         </div>
       </div>
     {%- when 'buy_buttons' -%}
+      {%- liquid
+         if template contains 'preorder'
+           assign add_to_cart_text = 'products.preorder' | t
+         else
+           assign add_to_cart_text = 'products.add_to_cart' | t
+         endif
+      
+      -%}
       <div class="product__block product__buy-buttons" {{ block.shopify_attributes }}>
         {%- form 'product', product, id: product_form_id, class: "product__form", novalidate: 'novalidate', data-section-id: section.id, data-format: shop.money_format -%}
           <div class="product-form__errors rte hidden">{{ 'cart.items.quantity_error_message' | t: quantity: product.selected_or_first_available_variant.inventory_quantity }}</div>
