@@ -1484,6 +1484,7 @@ function initProductVariants() {
       selectors.format = form.dataset.format || 'default';
       selectors.variantSelectors.forEach(selector => {
         selector.addEventListener('change', () => {
+          document.querySelector('.product__swatches-options').classList.remove('selected');
           updateProductOptions();
         });
       });
