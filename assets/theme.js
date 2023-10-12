@@ -1903,7 +1903,7 @@ function initQuickShopCollection() {
       html.innerHTML = data;
       let newData = doc.querySelector('.product-grid[data-product-handle="'+handle+'"]');
 
-      newData.innerHTML = ''
+      newData.innerHTML = '';
       let productMedia = newData.querySelector('.product__image-container');
       let productDescription = newData.querySelector('.product__content-container');
       let productVendor = productDescription.querySelector('.product__vendor');
