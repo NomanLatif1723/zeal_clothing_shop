@@ -49,6 +49,9 @@
           continue_shopping: "{{ 'cart.general.continue_shopping' | t }}",
           freeShippingSuccess: "{{ 'cart.general.free_shipping_success_html' | t: amount: threshold }}",
           itemAddedSuccess: "{{ 'products.item_added_success_message' | t }}"
+        },
+        settings: {
+          quickView: {{ settings.show_quick_view }}
         }
       }
     </script>
