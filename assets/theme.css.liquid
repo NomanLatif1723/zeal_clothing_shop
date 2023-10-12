@@ -1718,32 +1718,35 @@ input[type="radio"]:checked + label {
     display: inline-block;
 }
 .quick-shop__modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 99;
-    cursor: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99;
+  cursor: auto;
+  overflow: auto;
 }
 .quick-shop__modal:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background: rgba(1,1,1,0.3);
-    cursor: pointer;
+  content: '';
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: rgba(1,1,1,0.3);
+  cursor: pointer;
 }
 .quick-shop__box {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    background: white;
-    transform: translate(-50%,-50%);
-    max-width: 880px;
-    height: 90vh;
-    overflow: auto;
-    padding: 50px;
+  position: relative;
+  /* top: 50%;
+  left: 50%; */
+  background: white;
+  /* transform: translate(-50%,-50%); */
+  max-width: 880px;
+  /* height: 90vh; */
+  /* overflow: auto; */
+  padding: 50px;
+  margin: 3% auto;
+  
 }
 .quickview-modal__close {
     position: absolute;
