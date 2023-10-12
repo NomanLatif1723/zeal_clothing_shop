@@ -1893,7 +1893,6 @@ function initQuickShopCollection() {
     var productId = el.dataset.productId;
     var handle = el.dataset.productHandle;
     var btn = el.querySelector('.quick-shop__btn');
-    console.log(productId,handle,btn);
     preloadProductModal(handle, productId, btn);
   }
   function preloadProductModal(handle, productId, btn) {
@@ -1910,13 +1909,11 @@ function initQuickShopCollection() {
       var parser = new DOMParser();
       var doc = parser.parseFromString(html, 'text/html');
       var div = doc.querySelector('.product-grid[data-product-handle="'+handle+'"]');
-      console.log(div);
       if (!holder) {
         return;
       }
   
-      holder.innerHTML = '';
-      holder.append(div);
+      holder.innerHTML = div;
   
       // Setup quick view modal
       var modalId = 'QuickShopModal-' + productId;
