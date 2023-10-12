@@ -1908,8 +1908,9 @@ function initQuickShopCollection() {
       const quickViewContainer = document.querySelector('.quick-view__container');
       quickViewContainer.innerHTML = newData;
     })
-    
-    
+    .catch(function(error) {
+      console.log('Error', error);
+    });
   }
 
 
