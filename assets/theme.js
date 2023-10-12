@@ -1932,7 +1932,7 @@ function initQuickShopCollection() {
       if (!selectors.quickViewContainer) return;
       selectors.quickViewContainer.innerHTML = '';
       selectors.quickViewContainer.appendChild(newData);
-      document.querySelector('.product-full__info--btn').classList.add('hidden')
+      document.querySelector('.product-full__info--btn').classList.add('hidden');
       initProductmediaSlideShow();
       initProductVariants();
       initProductCollapsibles();
