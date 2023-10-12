@@ -1909,6 +1909,7 @@ function initQuickShopCollection() {
       selectors.quickViewContainer.appendChild(newData);
       initProductmediaSlideShow();
       initProductVariants();
+      initProductCollapsibles();
     })
     .catch(function(error) {
       console.log('Error', error);
