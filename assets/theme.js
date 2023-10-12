@@ -1894,7 +1894,7 @@ function initQuickShopCollection() {
     var handle = el.dataset.productHandle;
     var btn = el.querySelector('.quick-shop__btn');
     console.log(productId,handle,btn);
-    // preloadProductModal(handle, productId, btn);
+    preloadProductModal(handle, productId, btn);
   }
   function preloadProductModal(handle, productId, btn) {
     var holder = document.getElementById('QuickShopHolder-' + handle);
@@ -1910,7 +1910,7 @@ function initQuickShopCollection() {
       var parser = new DOMParser();
       var doc = parser.parseFromString(html, 'text/html');
       var div = doc.querySelector('.product-grid[data-product-handle="'+handle+'"]');
-  console.log(div);
+      console.log(div);
       if (!holder) {
         return;
       }
@@ -1932,9 +1932,9 @@ function initQuickShopCollection() {
       // Register potential video modal links (when video has sound)
       // theme.videoModal();
   
-      if (btn) {
-        btn.classList.remove('quick-product__btn--not-ready');
-      }
+      // if (btn) {
+      //   btn.classList.remove('quick-product__btn--not-ready');
+      // }
     });
   }
 }
