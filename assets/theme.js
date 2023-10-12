@@ -1876,6 +1876,7 @@ function initQuickShopCollection() {
   function closeQuickShopModal() {
     selectors.quickShopModal.classList.add('hidden');
   }
+  
   var products = document.querySelectorAll('.collection-grid__item');
 
   if (!products.length || !window.themeContent.settings.quickView) {
@@ -1894,57 +1895,24 @@ function initQuickShopCollection() {
     preloadProductModal(handle, productId, btn);
   }
   function preloadProductModal(handle, productId, btn) {
+    var holder = document.getElementById('QuickShopHolder-' + handle);
     var url = window.themeContent.routes.home + '/products/' + handle + '?view=quick-view';
     url = url.replace('//', '/');
-    
-    fetch(url)
-        .then(function(response) {
-            return response.text();
-        })
-        .then(function(html) {
-            var parser = new DOMParser();
-            var doc = parser.parseFromString(html, 'text/html');
-            var div = doc.querySelector('.product-grid[data-product-handle="'+handle+'"]');
-            
-            if (div) {
-                // Create a new modal for each product
-                var modalId = 'QuickShopModal-' + productId;
-                var name = 'quick-modal-' + productId;
-                var modal = document.createElement('div');
-                modal.id = modalId;
-                modal.className = 'quick-modal';
-                modal.innerHTML = div.innerHTML;
-
-                // Append the modal to the document
-                document.body.appendChild(modal);
-
-                // Show the modal or handle it as you wish
-                // You might want to add an event listener to a button (btn) to trigger modal display.
-            } else {
-                console.log('Product not found or data is empty for handle: ' + handle);
-            }
-        });
-}
-
-  // function preloadProductModal(handle, productId, btn) {
-  //   var holder = document.getElementById('QuickShopHolder-' + handle);
-  //   var url = window.themeContent.routes.home + '/products/' + handle + '?view=quick-view';
-  //   url = url.replace('//', '/');
-  //   fetch(url).then(function(response) {
-  //     return response.text();
-  //   }).then(function(html) {
-  //     var parser = new DOMParser();
-  //     var doc = parser.parseFromString(html, 'text/html');
-  //     var div = doc.querySelector('.product-grid[data-product-handle="'+handle+'"]');
-  //     if (!holder) {
-  //       return;
-  //     }
-  //     holder.innerHTML = '';
-  //     holder.append(div);
-  //     var modalId = 'QuickShopModal-' + productId;
-  //     var name = 'quick-modal-' + productId;
-  //   });
-  // }
+    fetch(url).then(function(response) {
+      return response.text();
+    }).then(function(html) {
+      var parser = new DOMParser();
+      var doc = parser.parseFromString(html, 'text/html');
+      var div = doc.querySelector('.product-grid[data-product-handle="'+handle+'"]');
+      if (!holder) {
+        return;
+      }
+      holder.innerHTML = '';
+      holder.append(div);
+      var modalId = 'QuickShopModal-' + productId;
+      var name = 'quick-modal-' + productId;
+    });
+  }
 }
 initQuickShopCollection();
 
