@@ -1690,7 +1690,6 @@ initProductVariants();
 
 
 // Product Form Add To Cart Ajax
-
 function initProductForm() {
   let selectors = {
     productForm: document.querySelectorAll('form[action="/cart/add"]'),
