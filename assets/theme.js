@@ -1840,8 +1840,7 @@ function initQuickShopCollection() {
     quickShopModal: document.querySelector('.quick-shop__modal'),
     modalCloseBtn: document.querySelector('.quickview-modal__close'),
     quickShopModalBox: document.querySelector('.quick-shop__box'),
-    quickViewContainer: document.querySelector('.quick-view__container'),
-    product: window.themeContent.routes.product
+    quickViewContainer: document.querySelector('.quick-view__container')
   }
   
   selectors.quickShopBtn.forEach(button => {
