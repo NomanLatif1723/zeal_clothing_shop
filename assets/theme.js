@@ -1668,8 +1668,6 @@ function initProductVariants() {
   }
 
   function updateOptionsNames(matchedVariant) {
-    console.log(matchedVariant);
-    let optionLabel = document.querySelector('[data-selected-option]').dataset.selectedOption;
     let option1 = document.querySelector('[data-selected-option="selectedOption1"]');
     let option2 = document.querySelector('[data-selected-option="selectedOption2"]');
     let option3 = document.querySelector('[data-selected-option="selectedOption3"]');
