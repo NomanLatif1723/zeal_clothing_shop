@@ -1664,7 +1664,8 @@ function initProductVariants() {
         if (!inventoryMessage || !inventoryMessageDestination) return;
         if (inventoryMessage && inventoryMessageDestination) inventoryMessageDestination.innerHTML = inventoryMessage.innerHTML;
 
-        
+        if (!optionName || !optionNameDestination) return;
+        if (optionName && optionNameDestination) optionNameDestination.innerHTML = optionName.innerHTML;
       });
       if (! selectors.formValidationErrorMessage) return;
       selectors.formValidationErrorMessage.classList.add('hidden');
