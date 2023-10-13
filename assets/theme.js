@@ -773,8 +773,7 @@ function initCustomerForms() {
   const recoverPasswordForm = document.querySelector('#recoverPasswordForm');
   const formContainer = document.querySelectorAll('[data-form]');
   const passwordShowBtn = document.querySelectorAll('.password__show-btn');
-  
-  // const passwordHideBtn = document.querySelectorAll('.password__hide-btn');
+  const passwordHideBtn = document.querySelectorAll('.password__hide-btn');
   
   formContainer.forEach(form => {
     if (form) {
