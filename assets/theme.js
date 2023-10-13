@@ -782,7 +782,12 @@ function initCustomerForms() {
     recoverPasswordForm: document.querySelector('#recoverPasswordForm'),
     formContainer: document.querySelectorAll('[data-form]'),
     passwordShowBtn: document.querySelectorAll('.password__show-btn'),
-    passwordHideBtn: document.querySelectorAll('.password__hide-btn')
+    passwordHideBtn: document.querySelectorAll('.password__hide-btn'),
+    addAddressBtn: document.querySelector('.address-btn__add'),
+    editAddressBtn: document.querySelectorAll('.address-btn__edit'),
+    deleteAddressBtn: document.querySelectorAll('.address-btn__delete'),
+    newAddressForm: document.querySelector('#addNewAddressForm'),
+    deleteForm: document.querySelectorAll('#deleteAddressForm')
   };
   
   selectors.formContainer.forEach(form => {
@@ -817,33 +822,36 @@ function initCustomerForms() {
   });
   
   function customerAddressesForm() {
-    const addAddressBtn = document.querySelector('.address-btn__add');
-    const editAddressBtn = document.querySelectorAll('.address-btn__edit');
-    const deleteAddressBtn = document.querySelectorAll('.address-btn__delete');
-
-    if (addAddressBtn) {
-      addAddressBtn.addEventListener('click', () => {
-        document.querySelector('#addNewAddressForm').classList.remove('hidden');
+    if (!selectors.addAddressBtn) return;
+      selectors.addAddressBtn.addEventListener('click', () => {
+        selectors.newAddressForm.classList.remove('hidden');
       })
-    }
-    editAddressBtn.forEach(editBtn => {
-      if (editBtn) {
+    selectors.editAddressBtn.forEach(editBtn => {
+      if (!editBtn) return;
         editBtn.addEventListener('click', () => {
-          editBtn.closest('.address-grid__item').querySelector('#editAddressForm').classList.remove('hidden');
-        })
-      }
-    })
-    deleteAddressBtn.forEach(deleteBtn => {
-      if (deleteBtn) {
-        deleteBtn.addEventListener('click', (event) => {
-          event.preventDefault();
-          const deleteFormId = document.getElementById('deleteAddressForm');
-          const confirmMessage = deleteBtn.getAttribute('data-confirm-message');
-          if (confirm(confirmMessage || 'Are you sure you wish to delete this address?')) {
-             deleteFormId.submit();
-          }
-        })
-      }
+        editBtn.closest('.address-grid__item').querySelector('#editAddressForm').classList.remove('hidden');
+      });
+    });
+    // selectors.deleteAddressBtn.forEach(deleteBtn => {
+    //   if (deleteBtn) return;
+    //   deleteBtn.addEventListener('click', (event) => {
+    //     event.preventDefault();
+    //     const deleteFormId = document.getElementById('deleteAddressForm');
+    //     const confirmMessage = deleteBtn.getAttribute('data-confirm-message');
+    //     if (confirm(confirmMessage || 'Are you sure you wish to delete this address?')) {
+    //        deleteFormId.submit();
+    //     }
+    //   })
+    // })
+    selectors.deleteForm.forEach(form => {
+      if (!form) return;
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const confirmMessage = deleteBtn.getAttribute('data-confirm-message');
+        if (confirm(confirmMessage || 'Are you sure you wish to delete this address?')) {
+           form.submit();
+        }
+      })
     })
   }
   customerAddressesForm();
