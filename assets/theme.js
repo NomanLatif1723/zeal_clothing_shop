@@ -776,12 +776,15 @@ customElements.define('localization-form', LocalizationForm);
 
 // Customers Form
 function initCustomerForms() {
-  const forgetPasswordBtn = document.querySelector('.forget-password__btn');
-  const loginForm = document.querySelector('#loginForm');
-  const recoverPasswordForm = document.querySelector('#recoverPasswordForm');
-  const formContainer = document.querySelectorAll('[data-form]');
-  const passwordShowBtn = document.querySelectorAll('.password__show-btn');
-  // const passwordHideBtn = document.querySelectorAll('.password__hide-btn');
+  let selectors = {
+    forgetPasswordBtn: document.querySelector('.forget-password__btn'),
+    loginForm: document.querySelector('#loginForm'),
+    recoverPasswordForm: document.querySelector('#recoverPasswordForm'),
+    formContainer: document.querySelectorAll('[data-form]'),
+    passwordShowBtn: document.querySelectorAll('.password__show-btn'),
+    passwordHideBtn: document.querySelectorAll('.password__hide-btn')
+  };
+  
   
   formContainer.forEach(form => {
     if (form) {
