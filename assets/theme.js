@@ -1670,9 +1670,15 @@ function initProductVariants() {
   function updateOptionsNames(matchedVariant) {
     console.log(matchedVariant);
     let optionLabel = document.querySelector('[data-selected-option]').dataset.selectedOption;
-    document.querySelector('[data-selected-option="selectedOption1"]').querySelector('[data-option-name]').textContent = matchedVariant.option1;
-    document.querySelector('[data-selected-option="selectedOption2"]').querySelector('[data-option-name]').textContent = matchedVariant.option2;
-    document.querySelector('[data-selected-option="selectedOption3"]').querySelector('[data-option-name]').textContent = matchedVariant.option3;
+    let option1 = document.querySelector('[data-selected-option="selectedOption1"]');
+    let option2 = document.querySelector('[data-selected-option="selectedOption2"]');
+    let option3 = document.querySelector('[data-selected-option="selectedOption3"]');
+    if(!option1) return;
+    option1.querySelector('[data-option-name]').textContent = matchedVariant.option1;
+    if(!option2) return;
+    option2.querySelector('[data-option-name]').textContent = matchedVariant.option2;
+    if(!option3) return;
+    option3.querySelector('[data-option-name]').textContent = matchedVariant.option3;
   }
 }
 initProductVariants();
