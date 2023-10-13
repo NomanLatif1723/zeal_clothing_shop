@@ -870,7 +870,7 @@ function initCustomerForms() {
 }
 initCustomerForms();
 
-initFilterFacetForm();
+// initFilterFacetForm();
 
 // Document General Event Listeners
 function initCollectionEventListeners() {
