@@ -798,23 +798,8 @@ function initCustomerForms() {
     })
   }
 
-  // if (passwordShowBtn) {
-  //   passwordShowBtn.forEach(btn => {
-  //     btn.addEventListener('click', (event) => {
-  //       console.log("show");
-  //       showPassword(event);
-  //     })
-  //   })
-  // }
-  // if (passwordHideBtn) {
-  //   passwordHideBtn.forEach(btn => {
-  //     console.log("hide");
-  //     btn.addEventListener('click', (event) => {
-  //       hidePassword(event);
-  //     })
-  //   })
-  // }
   passwordGroup.forEach(group => {
+    if(!group) return;
     let password = group.querySelector('input[type="password"]');
     let showButton = group.querySelector('.password__show-btn');
     let hideButton = group.querySelector('.password__hide-btn');
@@ -823,14 +808,13 @@ function initCustomerForms() {
       password.setAttribute('type', 'text');
       hideButton.classList.remove('hidden');
       showButton.classList.add('hidden');
-    })
+    });
     hideButton.addEventListener('click', () => {
       password.setAttribute('type', 'password');
       hideButton.classList.add('hidden');
       showButton.classList.remove('hidden');
-    })
-    
-  })
+    });
+  });
   
   function customerAddressesForm() {
     const addAddressBtn = document.querySelector('.address-btn__add');
@@ -871,19 +855,6 @@ function initCustomerForms() {
     })
   }
   customerAddressesForm();
-
-  function showPassword(event) {
-    let password = event.target.closest('.password__group').querySelector('input[type="password"]');
-    password.setAttribute('type', 'text');
-    event.target.closest('.password__group').querySelector('.password__show-btn').classList.add('hidden');
-    event.target.closest('.password__group').querySelector('.password__hide-btn').classList.remove('hidden');
-  }
-  function hidePassword(event) {
-    let password = event.target.closest('.password__group').querySelector('input[type="password"]');
-    password.setAttribute('type', 'password');
-    event.target.closest('.password__group').querySelector('.password__show-btn').classList.remove('hidden');
-    event.target.closest('.password__group').querySelector('.password__hide-btn').classList.add('hidden');
-  }
 }
 initCustomerForms();
 // function initCustomerForms() {
