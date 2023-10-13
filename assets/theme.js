@@ -1665,7 +1665,7 @@ function initProductVariants() {
         if (inventoryMessage && inventoryMessageDestination) inventoryMessageDestination.innerHTML = inventoryMessage.innerHTML;
 
         if (!optionName || !optionNameDestination) return;
-        if (optionName && optionNameDestination) optionNameDestination.innerHTML = optionName.innerHTML;
+        if (optionName && optionNameDestination) optionNameDestination.setAttribute('data-option-name', optionName);
       });
       if (! selectors.formValidationErrorMessage) return;
       selectors.formValidationErrorMessage.classList.add('hidden');
