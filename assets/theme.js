@@ -777,17 +777,16 @@ function initCustomerForms() {
   // const passwordHideBtn = document.querySelectorAll('.password__hide-btn');
   
   formContainer.forEach(form => {
-    if (form) {
-      const backBtn = form.querySelector('.back__btn');
-      if (backBtn) {
-        backBtn.addEventListener('click', (event) => {
-          event.preventDefault();
-          backBtn.closest('[data-form]').classList.add('hidden');
-          if (loginForm) {
-            loginForm.classList.remove('hidden');
-          }
-        })
-      }
+    if (!form) return;
+    const backBtn = form.querySelector('.back__btn');
+    if (backBtn) {
+      backBtn.addEventListener('click', (event) => {
+        event.preventDefault();
+        backBtn.closest('[data-form]').classList.add('hidden');
+        if (loginForm) {
+          loginForm.classList.remove('hidden');
+        }
+      })
     }
   })
   if (forgetPasswordBtn) {
