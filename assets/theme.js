@@ -1924,7 +1924,7 @@ function initQuickShopCollection() {
         productDescription.appendChild(productSalesTimer);
         productDescription.appendChild(productQuantitySelector);
         productDescription.appendChild(productButtons);
-        productDescription.appenChild(viewButton);
+        productDescription.appendChild(viewButton);
       }
 
       if (newData) {
