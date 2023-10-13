@@ -804,13 +804,13 @@ function initCustomerForms() {
       })
     })
   }
-  // if (passwordHideBtn) {
-  //   passwordHideBtn.forEach(btn => {
-  //     btn.addEventListener('click', (event) => {
-  //       hidePassword(event);
-  //     })
-  //   })
-  // }
+  if (passwordHideBtn) {
+    passwordHideBtn.forEach(btn => {
+      btn.addEventListener('click', (event) => {
+        hidePassword(event);
+      })
+    })
+  }
   
   function customerAddressesForm() {
     const addAddressBtn = document.querySelector('.address-btn__add');
@@ -854,8 +854,8 @@ function initCustomerForms() {
 
   function showPassword(event) {
     let password = event.target.closest('.password__group').querySelector('input[type="password"]');
-    let type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-    password.setAttribute('type', type);
+    // let type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', 'text');
     event.target.closest('.password__group').querySelector('.password__show-btn').classList.toggle('hidden');
     event.target.closest('.password__group').querySelector('.password__hide-btn').classList.toggle('hidden');
   }
