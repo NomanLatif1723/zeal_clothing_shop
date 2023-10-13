@@ -845,14 +845,14 @@ function initCustomerForms() {
     // })
     selectors.deleteForm.forEach(form => {
       if (!form) return;
-      form.addEventListener('submit', (event) => {
+      form.addEventListener('click', (event) => {
         event.preventDefault();
         const confirmMessage = deleteBtn.getAttribute('data-confirm-message');
         if (confirm(confirmMessage || 'Are you sure you wish to delete this address?')) {
            form.submit();
         }
-      })
-    })
+      });
+    });
   }
   customerAddressesForm();
 
