@@ -774,6 +774,7 @@ function initCustomerForms() {
   const formContainer = document.querySelectorAll('[data-form]');
   const passwordShowBtn = document.querySelectorAll('.password__show-btn');
   const passwordHideBtn = document.querySelectorAll('.password__hide-btn');
+  const passwordGroup = document.querySelectorAll('.password__group')
   
   formContainer.forEach(form => {
     if (form) {
