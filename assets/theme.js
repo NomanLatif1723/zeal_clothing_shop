@@ -1991,10 +1991,10 @@ function initProductRecommendations() {
         const data = await fetchData();
         if (data !== null) {
           container.innerHTML = data;
+          initQuickShopCollection();
         }
       }
       replaceContent();
-      initQuickShopCollection();
     })
   }
 }
