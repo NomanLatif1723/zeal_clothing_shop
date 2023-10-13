@@ -777,30 +777,34 @@ function initCustomerForms() {
   // const passwordHideBtn = document.querySelectorAll('.password__hide-btn');
   
   formContainer.forEach(form => {
-    if (!form) return;
-    const backBtn = form.querySelector('.back__btn');
-    if (!backBtn) return;
-    backBtn.addEventListener('click', (event) => {
-      event.preventDefault();
-      backBtn.closest('[data-form]').classList.add('hidden');
-      if (loginForm) {
-        loginForm.classList.remove('hidden');
+    if (form) {
+      const backBtn = form.querySelector('.back__btn');
+      if (backBtn) {
+        backBtn.addEventListener('click', (event) => {
+          event.preventDefault();
+          backBtn.closest('[data-form]').classList.add('hidden');
+          if (loginForm) {
+            loginForm.classList.remove('hidden');
+          }
+        })
       }
+    }
+  })
+  if (forgetPasswordBtn) {
+    forgetPasswordBtn.addEventListener('click', (event) => {
+      event.preventDefault();
+      loginForm.classList.add('hidden');
+      recoverPasswordForm.classList.remove('hidden');
     })
-  })
-  if (!forgetPasswordBtn) return;
-  forgetPasswordBtn.addEventListener('click', (event) => {
-    event.preventDefault();
-    loginForm.classList.add('hidden');
-    recoverPasswordForm.classList.remove('hidden');
-  })
+  }
 
-  if (!passwordShowBtn) return;
-  passwordShowBtn.forEach(btn => {
-    btn.addEventListener('click', (event) => {
-      showPassword(event);
+  if (passwordShowBtn) {
+    passwordShowBtn.forEach(btn => {
+      btn.addEventListener('click', (event) => {
+        showPassword(event);
+      })
     })
-  })
+  }
   // if (passwordHideBtn) {
   //   passwordHideBtn.forEach(btn => {
   //     btn.addEventListener('click', (event) => {
@@ -840,10 +844,11 @@ function initCustomerForms() {
       }
     })
     closeModal.forEach(button => {
-      if (!button) return;
+      if (button) {
         button.addEventListener('click', () => {
           button.closest('#editAddressForm').classList.add('hidden');
         })
+      }
     })
   }
   customerAddressesForm();
