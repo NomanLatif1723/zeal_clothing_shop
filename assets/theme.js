@@ -795,13 +795,12 @@ function initCustomerForms() {
     recoverPasswordForm.classList.remove('hidden');
   })
 
-  if (passwordShowBtn) {
-    passwordShowBtn.forEach(btn => {
-      btn.addEventListener('click', (event) => {
-        showPassword(event);
-      })
+  if (!passwordShowBtn) return;
+  passwordShowBtn.forEach(btn => {
+    btn.addEventListener('click', (event) => {
+      showPassword(event);
     })
-  }
+  })
   // if (passwordHideBtn) {
   //   passwordHideBtn.forEach(btn => {
   //     btn.addEventListener('click', (event) => {
