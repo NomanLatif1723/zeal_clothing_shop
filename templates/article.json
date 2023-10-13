@@ -27,8 +27,8 @@
         "show_view_all_btn": false,
         "post_image_size": "natural",
         "lazyload_images": false,
-        "margin_top": 16,
-        "margin_bottom": 16
+        "margin_top": 60,
+        "margin_bottom": 60
       }
     }
   },
