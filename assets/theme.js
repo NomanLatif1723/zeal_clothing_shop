@@ -1816,7 +1816,6 @@ function initProductForm() {
       selectors.bodyContainer.classList.remove('drawer__opening');
   }
   function cartItemCount(cartData) {
-    console.log(cartData);
     selectors.cartItemCounter.forEach(counter => {
       if (!counter) {
         return;
