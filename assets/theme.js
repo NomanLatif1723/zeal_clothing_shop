@@ -825,6 +825,7 @@ function initCustomerForms() {
     editAddressBtn.forEach(editBtn => {
       if (editBtn) {
         editBtn.addEventListener('click', () => {
+          console.log("hy");
           editBtn.closest('#editAddressForm').classList.remove('hidden');
         })
       }
