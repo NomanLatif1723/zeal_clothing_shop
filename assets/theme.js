@@ -808,17 +808,17 @@ function initCustomerForms() {
   //     })
   //   })
   // }
-  
+  if (!addAddressBtn) return;
+    addAddressBtn.addEventListener('click', () => {
+      document.querySelector('#addNewAddressForm').classList.remove('hidden');
+    })
   function customerAddressesForm() {
     const addAddressBtn = document.querySelector('.address-btn__add');
     const editAddressBtn = document.querySelectorAll('.address-btn__edit');
     const deleteAddressBtn = document.querySelectorAll('.address-btn__delete');
     const closeModal = document.querySelectorAll('.edit-close__btn');
 
-    if (!addAddressBtn) return;
-    addAddressBtn.addEventListener('click', () => {
-      document.querySelector('#addNewAddressForm').classList.remove('hidden');
-    })
+    
     editAddressBtn.forEach(editBtn => {
       if (!editBtn) return;
       editBtn.addEventListener('click', () => {
