@@ -108,7 +108,8 @@
       "password": "Password",
       "confirm_password": "Confirm Password",
       "cancel": "Back",
-      "show_password": "Show"
+      "show_password": "Show",
+      "hide_password": "Hide"
     },
     "addresses": {
       "title": "Addresses",
@@ -179,6 +180,7 @@
       "email": "Email Address",
       "password": "Password",
       "show_password": "Show",
+      "hide_password": "Hide",
       "submit": "Create Account",
       "login_user": "Already Have an Account\/Login"
     },
@@ -189,7 +191,8 @@
       "password": "Password",
       "confirm_password": "Confirm Password",
       "cancel": "Back",
-      "show_password": "Show"
+      "show_password": "Show",
+      "hide_password": "Hide"
     }
   },
   "general": {
