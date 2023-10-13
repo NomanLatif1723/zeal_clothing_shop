@@ -17,8 +17,8 @@
       "type": "posts",
       "settings": {
         "text_alignment": "center",
-        "posts_main_heading": "Blog Posts",
-        "posts_main_text": "Blog Post Text",
+        "posts_main_heading": "You May Also Like",
+        "posts_main_text": "",
         "blog": "testing",
         "posts_to_show": 3,
         "show_date": false,
