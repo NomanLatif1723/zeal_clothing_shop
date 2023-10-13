@@ -824,6 +824,12 @@ function initCustomerForms() {
       hideButton.classList.remove('hidden');
       showButton.classList.add('hidden');
     })
+    hideButton.addEventListener('click', () => {
+      password.setAttribute('type', 'password');
+      hideButton.classList.add('hidden');
+      showButton.classList.remove('hidden');
+    })
+    
   })
   
   function customerAddressesForm() {
