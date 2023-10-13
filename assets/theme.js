@@ -821,40 +821,37 @@ function initCustomerForms() {
     });
   });
   
-  function customerAddressesForm() {
-    if (!selectors.addAddressBtn) return;
-      selectors.addAddressBtn.addEventListener('click', () => {
-        selectors.newAddressForm.classList.remove('hidden');
-      })
-    selectors.editAddressBtn.forEach(editBtn => {
-      if (!editBtn) return;
-        editBtn.addEventListener('click', () => {
-        editBtn.closest('.address-grid__item').querySelector('#editAddressForm').classList.remove('hidden');
-      });
+  if (!selectors.addAddressBtn) return;
+    selectors.addAddressBtn.addEventListener('click', () => {
+      selectors.newAddressForm.classList.remove('hidden');
+    })
+  selectors.editAddressBtn.forEach(editBtn => {
+    if (!editBtn) return;
+      editBtn.addEventListener('click', () => {
+      editBtn.closest('.address-grid__item').querySelector('#editAddressForm').classList.remove('hidden');
     });
-    // selectors.deleteAddressBtn.forEach(deleteBtn => {
-    //   if (deleteBtn) return;
-    //   deleteBtn.addEventListener('click', (event) => {
-    //     event.preventDefault();
-    //     const deleteFormId = document.getElementById('deleteAddressForm');
-    //     const confirmMessage = deleteBtn.getAttribute('data-confirm-message');
-    //     if (confirm(confirmMessage || 'Are you sure you wish to delete this address?')) {
-    //        deleteFormId.submit();
-    //     }
-    //   })
-    // })
-    selectors.deleteForm.forEach(form => {
-      if (!form) return;
-      form.addEventListener('click', (event) => {
-        event.preventDefault();
-        const confirmMessage = deleteBtn.getAttribute('data-confirm-message');
-        if (confirm(confirmMessage || 'Are you sure you wish to delete this address?')) {
-           form.submit();
-        }
-      });
+  });
+  // selectors.deleteAddressBtn.forEach(deleteBtn => {
+  //   if (deleteBtn) return;
+  //   deleteBtn.addEventListener('click', (event) => {
+  //     event.preventDefault();
+  //     const deleteFormId = document.getElementById('deleteAddressForm');
+  //     const confirmMessage = deleteBtn.getAttribute('data-confirm-message');
+  //     if (confirm(confirmMessage || 'Are you sure you wish to delete this address?')) {
+  //        deleteFormId.submit();
+  //     }
+  //   })
+  // })
+  selectors.deleteForm.forEach(form => {
+    if (!form) return;
+    form.addEventListener('click', (event) => {
+      event.preventDefault();
+      const confirmMessage = deleteBtn.getAttribute('data-confirm-message');
+      if (confirm(confirmMessage || 'Are you sure you wish to delete this address?')) {
+         form.submit();
+      }
     });
-  }
-  customerAddressesForm();
+  });
 
   function showPassword(event) {
     let password = event.target.closest('.password__group').querySelector('input[type="password"]');
