@@ -779,15 +779,14 @@ function initCustomerForms() {
   formContainer.forEach(form => {
     if (!form) return;
     const backBtn = form.querySelector('.back__btn');
-    if (backBtn) {
-      backBtn.addEventListener('click', (event) => {
-        event.preventDefault();
-        backBtn.closest('[data-form]').classList.add('hidden');
-        if (loginForm) {
-          loginForm.classList.remove('hidden');
-        }
-      })
-    }
+    if (!backBtn) return;
+    backBtn.addEventListener('click', (event) => {
+      event.preventDefault();
+      backBtn.closest('[data-form]').classList.add('hidden');
+      if (loginForm) {
+        loginForm.classList.remove('hidden');
+      }
+    })
   })
   if (forgetPasswordBtn) {
     forgetPasswordBtn.addEventListener('click', (event) => {
