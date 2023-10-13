@@ -816,6 +816,7 @@ function initCustomerForms() {
   });
   if (!selectors.passwordHideBtn) return;
   selectors.passwordHideBtn.forEach(btn => {
+    if (!btn) return;
     btn.addEventListener('click', (event) => {
       hidePassword(event);
     });
