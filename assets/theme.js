@@ -819,7 +819,11 @@ function initCustomerForms() {
     let showButton = group.querySelector('.password__show-btn');
     let hideButton = group.querySelector('.password__hide-btn');
 
-    console.log(password,showButton,hideButton);
+    showButton.addEventListener('click', () => {
+      password.setAttribute('type', 'text');
+      hideButton.classList.remove('hidden');
+      showButton.classList.add('hidden');
+    })
   })
   
   function customerAddressesForm() {
