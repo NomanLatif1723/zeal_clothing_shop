@@ -1930,7 +1930,7 @@ function initQuickShopCollection() {
       if (!selectors.quickViewContainer) return;
       selectors.quickViewContainer.innerHTML = '';
       selectors.quickViewContainer.appendChild(newData);
-      document.querySelector('.product-full__info--btn').classList.remove('hidden');
+      document.querySelector('.quick-view__container .product-full__info--btn').classList.remove('hidden');
       initProductmediaSlideShow();
       initProductVariants();
       initProductForm();
