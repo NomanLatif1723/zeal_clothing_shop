@@ -808,33 +808,36 @@ function initCustomerForms() {
   //     })
   //   })
   // }
-  if (!addAddressBtn) return;
-    addAddressBtn.addEventListener('click', () => {
-      document.querySelector('#addNewAddressForm').classList.remove('hidden');
-    })
+  
   function customerAddressesForm() {
     const addAddressBtn = document.querySelector('.address-btn__add');
     const editAddressBtn = document.querySelectorAll('.address-btn__edit');
     const deleteAddressBtn = document.querySelectorAll('.address-btn__delete');
     const closeModal = document.querySelectorAll('.edit-close__btn');
 
-    
-    editAddressBtn.forEach(editBtn => {
-      if (!editBtn) return;
-      editBtn.addEventListener('click', () => {
-        editBtn.closest('.address-grid__item').querySelector('#editAddressForm').classList.remove('hidden');
+    if (addAddressBtn) {
+      addAddressBtn.addEventListener('click', () => {
+        document.querySelector('#addNewAddressForm').classList.remove('hidden');
       })
+    }
+    editAddressBtn.forEach(editBtn => {
+      if (editBtn) {
+        editBtn.addEventListener('click', () => {
+          editBtn.closest('.address-grid__item').querySelector('#editAddressForm').classList.remove('hidden');
+        })
+      }
     })
     deleteAddressBtn.forEach(deleteBtn => {
-      if (!deleteBtn) return;
-      deleteBtn.addEventListener('click', (event) => {
-        event.preventDefault();
-        const deleteFormId = document.getElementById('deleteAddressForm');
-        const confirmMessage = deleteBtn.getAttribute('data-confirm-message');
-        if (confirm(confirmMessage || 'Are you sure you wish to delete this address?')) {
-           deleteFormId.submit();
-        }
-      })
+      if (deleteBtn) {
+        deleteBtn.addEventListener('click', (event) => {
+          event.preventDefault();
+          const deleteFormId = document.getElementById('deleteAddressForm');
+          const confirmMessage = deleteBtn.getAttribute('data-confirm-message');
+          if (confirm(confirmMessage || 'Are you sure you wish to delete this address?')) {
+             deleteFormId.submit();
+          }
+        })
+      }
     })
     closeModal.forEach(button => {
       if (!button) return;
