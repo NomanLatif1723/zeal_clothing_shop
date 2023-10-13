@@ -801,6 +801,7 @@ function initCustomerForms() {
       selectors.loginForm.classList.remove('hidden');
     });
   });
+  
   if (!selectors.forgetPasswordBtn) return;
   selectors.forgetPasswordBtn.addEventListener('click', (event) => {
     event.preventDefault();
@@ -808,14 +809,13 @@ function initCustomerForms() {
     selectors.recoverPasswordForm.classList.remove('hidden');
   });
 
-  if (!selectors.passwordShowBtn) return;
   selectors.passwordShowBtn.forEach(btn => {
     if (!btn) return;
     btn.addEventListener('click', (event) => {
       showPassword(event);
     });
   });
-  if (!selectors.passwordHideBtn) return;
+
   selectors.passwordHideBtn.forEach(btn => {
     if (!btn) return;
     btn.addEventListener('click', (event) => {
