@@ -854,7 +854,6 @@ function initCustomerForms() {
 
   function showPassword(event) {
     let password = event.target.closest('.password__group').querySelector('input[type="password"]');
-    // let type = password.getAttribute('type') === 'password' ? 'text' : 'password';
     password.setAttribute('type', 'text');
     event.target.closest('.password__group').querySelector('.password__show-btn').classList.add('hidden');
     event.target.closest('.password__group').querySelector('.password__hide-btn').classList.remove('hidden');
