@@ -22,10 +22,18 @@
               <label for="email" class="form__label">{{ 'customers.register.email' | t }}</label>
               <input type="email" id="email" name="customer[email]" value="{%- if customer -%}{{ customer.email }}{%- endif -%}" class="form__input" required aria-label="{{ 'customers.register.email' | t }}">
             </div>
+            {% comment %}
             <div class="form__group password__group">
               <label for="password" class="form__label">{{ 'customers.register.password' | t }}</label>
               <input type="password" id="password" name="customer[password]" class="form__input" required value="">
               <span class="password__toggle-btn">{{ 'customers.register.show_password' | t }}</span>
+            </div>
+            {% endcomment %}
+            <div class="form__group password__group">
+              <label for="password" class="form__label">{{ 'customers.register.password' | t }}</label>
+              <input type="password" id="password" name="customer[password]" class="form__input" required value="">
+              <span class="password__toggle-btn password__show-btn">{{ 'customers.register.show_password' | t }}</span>
+              <span class="password__toggle-btn password__hide-btn hidden">{{ 'customers.register.hide_password' | t }}</span>
             </div>
             <div class="form__submit">
               <button type="submit" class="btn btn__link btn__primary" aria-label="{{ 'customers.register.submit' | t }}">{{ 'customers.register.submit' | t }}</button>
