@@ -1668,7 +1668,7 @@ function initProductVariants() {
   }
 
   function updateOptionsNames(matchedVariant) {
-    
+    console.log(matchedVariant);
   }
 }
 initProductVariants();
