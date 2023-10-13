@@ -774,7 +774,7 @@ function initCustomerForms() {
   const formContainer = document.querySelectorAll('[data-form]');
   const passwordShowBtn = document.querySelectorAll('.password__show-btn');
   const passwordHideBtn = document.querySelectorAll('.password__hide-btn');
-  const passwordGroup = document.querySelectorAll('.password__group')
+  const passwordGroup = document.querySelectorAll('.password__group');
   
   formContainer.forEach(form => {
     if (form) {
@@ -798,22 +798,29 @@ function initCustomerForms() {
     })
   }
 
-  if (passwordShowBtn) {
-    passwordShowBtn.forEach(btn => {
-      btn.addEventListener('click', (event) => {
-        console.log("show");
-        showPassword(event);
-      })
-    })
-  }
-  if (passwordHideBtn) {
-    passwordHideBtn.forEach(btn => {
-      console.log("hide");
-      btn.addEventListener('click', (event) => {
-        hidePassword(event);
-      })
-    })
-  }
+  // if (passwordShowBtn) {
+  //   passwordShowBtn.forEach(btn => {
+  //     btn.addEventListener('click', (event) => {
+  //       console.log("show");
+  //       showPassword(event);
+  //     })
+  //   })
+  // }
+  // if (passwordHideBtn) {
+  //   passwordHideBtn.forEach(btn => {
+  //     console.log("hide");
+  //     btn.addEventListener('click', (event) => {
+  //       hidePassword(event);
+  //     })
+  //   })
+  // }
+  passwordGroup.forEach(group => {
+    let password = group.querySelector('input[type="password"]');
+    let showButton = group.querySelector('.password__show-btn');
+    let hideButton = group.querySelector('.password__hide-btn');
+
+    console.log(password,showButton,hideButton);
+  })
   
   function customerAddressesForm() {
     const addAddressBtn = document.querySelector('.address-btn__add');
