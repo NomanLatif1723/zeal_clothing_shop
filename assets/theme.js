@@ -817,6 +817,7 @@ function initCustomerForms() {
   
   if (!selectors.addAddressBtn) return;
     selectors.addAddressBtn.addEventListener('click', () => {
+      console.log("hy");
       selectors.newAddressForm.classList.remove('hidden');
     })
   selectors.editAddressBtn.forEach(editBtn => {
