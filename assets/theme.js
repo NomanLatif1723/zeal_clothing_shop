@@ -1669,6 +1669,14 @@ function initProductVariants() {
 
   function updateOptionsNames(matchedVariant) {
     console.log(matchedVariant);
+    let optionLabel = document.querySelector('[data-selected-option]').dataset.selectedOption;
+    if (optionLabel == 'selectedOption1') {
+      document.querySelector('[data-selected-option="selectedOption1"]').querySelector('[data-option-name]').textContent = matchedVariant.option1;
+    } else if (optionLabel == 'selectedOption2') {
+      document.querySelector('[data-selected-option="selectedOption2"]').querySelector('[data-option-name]').textContent = matchedVariant.option2;
+    } else {
+      document.querySelector('[data-selected-option="selectedOption3"]').querySelector('[data-option-name]').textContent = matchedVariant.option3;
+    }
   }
 }
 initProductVariants();
