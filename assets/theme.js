@@ -785,8 +785,8 @@ function initCustomerForms() {
     passwordHideBtn: document.querySelectorAll('.password__hide-btn')
   };
   
-  selectorsformContainer.forEach(form => {
-    if (!form) return
+  selectors.formContainer.forEach(form => {
+    if (!form) return;
     const backBtn = form.querySelector('.back__btn');
     if (!backBtn) return;
     backBtn.addEventListener('click', (event) => {
