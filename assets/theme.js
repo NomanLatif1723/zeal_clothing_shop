@@ -844,11 +844,10 @@ function initCustomerForms() {
       }
     })
     closeModal.forEach(button => {
-      if (button) {
+      if (!button) return;
         button.addEventListener('click', () => {
           button.closest('#editAddressForm').classList.add('hidden');
         })
-      }
     })
   }
   customerAddressesForm();
