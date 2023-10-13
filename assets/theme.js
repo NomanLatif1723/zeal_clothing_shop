@@ -788,13 +788,12 @@ function initCustomerForms() {
       }
     })
   })
-  if (forgetPasswordBtn) {
-    forgetPasswordBtn.addEventListener('click', (event) => {
-      event.preventDefault();
-      loginForm.classList.add('hidden');
-      recoverPasswordForm.classList.remove('hidden');
-    })
-  }
+  if (!forgetPasswordBtn) return;
+  forgetPasswordBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    loginForm.classList.add('hidden');
+    recoverPasswordForm.classList.remove('hidden');
+  })
 
   if (passwordShowBtn) {
     passwordShowBtn.forEach(btn => {
