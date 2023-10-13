@@ -18,7 +18,7 @@
     <div class="addresses-form__container">
       <div class="form__header account-form__header">
         <h2>{{ 'customers.addresses.title' | t }}</h2>
-        <button class="btn btn__link btn__primary address-btn__add" aria-label="{{ 'customers.addresses.add' | t }}">{{ 'customers.addresses.add' | t }}</button>
+        <button type="button" class="btn btn__link btn__primary address-btn__add" aria-label="{{ 'customers.addresses.add' | t }}">{{ 'customers.addresses.add' | t }}</button>
       </div>
       <div id="addNewAddressForm" class="hidden" data-form>
         {%- form 'customer_address', customer.new_address -%}
@@ -81,7 +81,7 @@
           </div>
           <div class="form__buttons">
             <button class="btn btn__link btn__primary" type="submit" aria-label="{{ 'customers.addresses.add_new' | t }}">{{ 'customers.addresses.add_new' | t }}</button>
-            <button class="btn btn__link btn__outline back__btn" aria-label="{{ 'customers.addresses.cancel' | t }}">{{ 'customers.addresses.cancel' | t }}</button>
+            <button type="button" class="btn btn__link btn__outline back__btn" aria-label="{{ 'customers.addresses.cancel' | t }}">{{ 'customers.addresses.cancel' | t }}</button>
           </div>
         {%- endform -%}
       </div>
@@ -95,7 +95,7 @@
                 {%- endif -%}
                 <div class="rte">{{ address | format_address }}</div>
                 <div class="form__buttons">
-                  <button class="btn btn__link btn__primary address-btn__edit" aria-label="{{ 'customers.addresses.edit' | t }}">{{ 'customers.addresses.edit' | t }}</button>
+                  <button type="button" class="btn btn__link btn__primary address-btn__edit" aria-label="{{ 'customers.addresses.edit' | t }}">{{ 'customers.addresses.edit' | t }}</button>
                   <form id="deleteAddressForm" method="post" action="{{ address.url }}">
                     <input type="hidden" name="_method" value="delete">
                     <button type="button" class="btn btn__link btn__outline address-btn__delete" data-confirm-message="{{ 'customers.addresses.confirm_delete' | t }}" aria-label="{{ 'customers.addresses.delete' | t }}">{{ 'customers.addresses.delete' | t }}</button>
@@ -159,8 +159,8 @@
                       <label for="address_default_address_new" class="form__label">{{ 'customers.addresses.set_default' | t }}</label>
                     </div>
                     <div class="form__buttons">
-                      <button class="btn btn__link btn__primary" aria-label="{{ 'customers.addresses.update' | t }}">{{ 'customers.addresses.update' | t }}</button>
-                      <button class="btn btn__link btn__outline back__btn" aria-label="{{ 'customers.addresses.cancel' | t }}">{{ 'customers.addresses.cancel' | t }}</button>
+                      <button type="submit" class="btn btn__link btn__primary" aria-label="{{ 'customers.addresses.update' | t }}">{{ 'customers.addresses.update' | t }}</button>
+                      <button type="button" class="btn btn__link btn__outline back__btn" aria-label="{{ 'customers.addresses.cancel' | t }}">{{ 'customers.addresses.cancel' | t }}</button>
                     </div>
                     <button type="button" class="edit-close__btn back__btn" title="{{ 'general.accessibility.close-modal' | t }}">
                       {%- render 'icon-close' -%}
