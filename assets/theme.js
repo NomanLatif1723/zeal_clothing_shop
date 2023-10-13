@@ -846,10 +846,11 @@ function initCustomerForms() {
       }
     })
     closeModal.forEach(button => {
-      if (!button) return;
-      button.addEventListener('click', () => {
-        button.closest('#editAddressForm').classList.add('hidden')
-      })
+      if (button) {
+        button.addEventListener('click', () => {
+          button.closest('#editAddressForm').classList.add('hidden');
+        })
+      }
     })
   }
   customerAddressesForm();
