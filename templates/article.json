@@ -12,9 +12,28 @@
         "margin_top": 60,
         "margin_bottom": 60
       }
+    },
+    "5a34de36-4984-4b21-89ff-7ca183f0600f": {
+      "type": "posts",
+      "settings": {
+        "text_alignment": "center",
+        "posts_main_heading": "Blog Posts",
+        "posts_main_text": "Blog Post Text",
+        "blog": "testing",
+        "posts_to_show": 3,
+        "show_date": false,
+        "show_tags": false,
+        "show_category": false,
+        "show_view_all_btn": false,
+        "post_image_size": "natural",
+        "lazyload_images": false,
+        "margin_top": 16,
+        "margin_bottom": 16
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "5a34de36-4984-4b21-89ff-7ca183f0600f"
   ]
 }
