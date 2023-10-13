@@ -772,8 +772,6 @@ function initCustomerForms() {
   const loginForm = document.querySelector('#loginForm');
   const recoverPasswordForm = document.querySelector('#recoverPasswordForm');
   const formContainer = document.querySelectorAll('[data-form]');
-  const passwordShowBtn = document.querySelectorAll('.password__show-btn');
-  const passwordHideBtn = document.querySelectorAll('.password__hide-btn');
   const passwordGroup = document.querySelectorAll('.password__group');
   
   formContainer.forEach(form => {
@@ -859,103 +857,6 @@ function initCustomerForms() {
   customerAddressesForm();
 }
 initCustomerForms();
-// function initCustomerForms() {
-//   let selectors = {
-//     forgetPasswordBtn: document.querySelector('.forget-password__btn'),
-//     loginForm: document.querySelector('#loginForm'),
-//     recoverPasswordForm: document.querySelector('#recoverPasswordForm'),
-//     formContainer: document.querySelectorAll('[data-form]'),
-//     passwordShowBtn: document.querySelectorAll('.password__show-btn'),
-//     passwordHideBtn: document.querySelectorAll('.password__hide-btn'),
-//     addAddressBtn: document.querySelector('.address-btn__add'),
-//     editAddressBtn: document.querySelectorAll('.address-btn__edit'),
-//     deleteAddressBtn: document.querySelectorAll('.address-btn__delete'),
-//     newAddressForm: document.querySelector('#addNewAddressForm'),
-//     deleteForm: document.querySelectorAll('#deleteAddressForm')
-//   };
-  
-//   selectors.formContainer.forEach(form => {
-//     if (!form) return;
-//     const backBtn = form.querySelector('.back__btn');
-//     if (!backBtn) return;
-//     backBtn.addEventListener('click', (event) => {
-//       event.preventDefault();
-//       backBtn.closest('[data-form]').classList.add('hidden');
-//       if (!selectors.loginForm) return;
-//       selectors.loginForm.classList.remove('hidden');
-//     });
-//   });
-  
-//   if (!selectors.forgetPasswordBtn) return;
-//   selectors.forgetPasswordBtn.addEventListener('click', (event) => {
-//     event.preventDefault();
-//     selectors.loginForm.classList.add('hidden');
-//     selectors.recoverPasswordForm.classList.remove('hidden');
-//   });
-
-//   selectors.passwordShowBtn.forEach(btn => {
-//     if (!btn) return;
-//     btn.addEventListener('click', (event) => {
-//       showPassword(event);
-//     });
-//   });
-
-//   selectors.passwordHideBtn.forEach(btn => {
-//     if (!btn) return;
-//     btn.addEventListener('click', (event) => {
-//       hidePassword(event);
-//     });
-//   });
-  
-//   if (!selectors.addAddressBtn) return;
-//     selectors.addAddressBtn.addEventListener('click', () => {
-//       console.log("hy");
-//       selectors.newAddressForm.classList.remove('hidden');
-//     })
-//   selectors.editAddressBtn.forEach(editBtn => {
-//     if (!editBtn) return;
-//       editBtn.addEventListener('click', () => {
-//       editBtn.closest('.address-grid__item').querySelector('#editAddressForm').classList.remove('hidden');
-//     });
-//   });
-//   // selectors.deleteAddressBtn.forEach(deleteBtn => {
-//   //   if (deleteBtn) return;
-//   //   deleteBtn.addEventListener('click', (event) => {
-//   //     event.preventDefault();
-//   //     const deleteFormId = document.getElementById('deleteAddressForm');
-//   //     const confirmMessage = deleteBtn.getAttribute('data-confirm-message');
-//   //     if (confirm(confirmMessage || 'Are you sure you wish to delete this address?')) {
-//   //        deleteFormId.submit();
-//   //     }
-//   //   })
-//   // })
-//   selectors.deleteForm.forEach(form => {
-//     if (!form) return;
-//     form.addEventListener('click', (event) => {
-//       event.preventDefault();
-//       const confirmMessage = deleteBtn.getAttribute('data-confirm-message');
-//       if (confirm(confirmMessage || 'Are you sure you wish to delete this address?')) {
-//          form.submit();
-//       }
-//     });
-//   });
-
-//   function showPassword(event) {
-//     let password = event.target.closest('.password__group').querySelector('input[type="password"]');
-//     let type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-//     password.setAttribute('type', type);
-//     event.target.closest('.password__group').querySelector('.password__show-btn').classList.toggle('hidden');
-//     event.target.closest('.password__group').querySelector('.password__hide-btn').classList.toggle('hidden');
-//   }
-//   function hidePassword(event) {
-//     // event.target.closest('.password__group').querySelector('input[type="password"]').setAttribute('type', 'password');
-//     event.target.closest('.password__group').querySelector('.password__show-btn').classList.remove('hidden');
-//     event.target.closest('.password__group').querySelector('.password__hide-btn').classList.add('hidden');
-//   }
-// }
-// initCustomerForms();
-
-// initFilterFacetForm();
 
 // Document General Event Listeners
 function initCollectionEventListeners() {
