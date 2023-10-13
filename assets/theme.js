@@ -1933,7 +1933,8 @@ function initQuickShopCollection() {
       selectors.quickViewContainer.appendChild(newData);
       document.querySelector('.product-full__info--btn').classList.remove('hidden');
       initProductmediaSlideShow();
-      initProductVariants();
+      // initProductVariants();
+      initProductForm();
     })
     .catch(function(error) {
       console.log('Error', error);
