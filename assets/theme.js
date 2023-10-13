@@ -785,43 +785,37 @@ function initCustomerForms() {
     passwordHideBtn: document.querySelectorAll('.password__hide-btn')
   };
   
-  
-  formContainer.forEach(form => {
-    if (form) {
-      const backBtn = form.querySelector('.back__btn');
-      if (backBtn) {
-        backBtn.addEventListener('click', (event) => {
-          event.preventDefault();
-          backBtn.closest('[data-form]').classList.add('hidden');
-          if (loginForm) {
-            loginForm.classList.remove('hidden');
-          }
-        })
-      }
-    }
-  })
-  if (forgetPasswordBtn) {
-    forgetPasswordBtn.addEventListener('click', (event) => {
+  selectorsformContainer.forEach(form => {
+    if (!form) return
+    const backBtn = form.querySelector('.back__btn');
+    if (!backBtn) return;
+    backBtn.addEventListener('click', (event) => {
       event.preventDefault();
-      loginForm.classList.add('hidden');
-      recoverPasswordForm.classList.remove('hidden');
-    })
-  }
+      backBtn.closest('[data-form]').classList.add('hidden');
+      if (loginForm) {
+        loginForm.classList.remove('hidden');
+      }
+    });
+  });
+  if (!selectors.forgetPasswordBtn) return;
+  selectors.forgetPasswordBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    selectors.loginForm.classList.add('hidden');
+    selectors.recoverPasswordForm.classList.remove('hidden');
+  });
 
-  if (passwordShowBtn) {
-    passwordShowBtn.forEach(btn => {
-      btn.addEventListener('click', (event) => {
-        showPassword(event);
-      })
-    })
-  }
-  // if (passwordHideBtn) {
-  //   passwordHideBtn.forEach(btn => {
-  //     btn.addEventListener('click', (event) => {
-  //       hidePassword(event);
-  //     })
-  //   })
-  // }
+  if (!selectors.passwordShowBtn) return;
+  selectors.passwordShowBtn.forEach(btn => {
+    btn.addEventListener('click', (event) => {
+      showPassword(event);
+    });
+  });
+  if (!selectors.passwordHideBtn) return;
+  selectors.passwordHideBtn.forEach(btn => {
+    btn.addEventListener('click', (event) => {
+      hidePassword(event);
+    });
+  });
   
   function customerAddressesForm() {
     const addAddressBtn = document.querySelector('.address-btn__add');
