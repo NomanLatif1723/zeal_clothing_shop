@@ -784,16 +784,16 @@ function initCustomerForms() {
           if (loginForm) {
             loginForm.classList.remove('hidden');
           }
-        })
+        });
       }
     }
-  })
+  });
   if (forgetPasswordBtn) {
     forgetPasswordBtn.addEventListener('click', (event) => {
       event.preventDefault();
       loginForm.classList.add('hidden');
       recoverPasswordForm.classList.remove('hidden');
-    })
+    });
   }
 
   passwordGroup.forEach(group => {
@@ -825,15 +825,15 @@ function initCustomerForms() {
     if (addAddressBtn) {
       addAddressBtn.addEventListener('click', () => {
         document.querySelector('#addNewAddressForm').classList.remove('hidden');
-      })
+      });
     }
     editAddressBtn.forEach(editBtn => {
       if (editBtn) {
         editBtn.addEventListener('click', () => {
           editBtn.closest('.address-grid__item').querySelector('#editAddressForm').classList.remove('hidden');
-        })
+        });
       }
-    })
+    });
     deleteAddressBtn.forEach(deleteBtn => {
       if (deleteBtn) {
         deleteBtn.addEventListener('click', (event) => {
@@ -843,16 +843,16 @@ function initCustomerForms() {
           if (confirm(confirmMessage || 'Are you sure you wish to delete this address?')) {
              deleteFormId.submit();
           }
-        })
+        });
       }
-    })
+    });
     closeModal.forEach(button => {
       if (button) {
         button.addEventListener('click', () => {
           button.closest('#editAddressForm').classList.add('hidden');
-        })
+        });
       }
-    })
+    });
   }
   customerAddressesForm();
 }
