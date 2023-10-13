@@ -25,7 +25,7 @@
         "show_tags": true,
         "show_category": true,
         "show_view_all_btn": false,
-        "post_image_size": "natural",
+        "post_image_size": "square",
         "lazyload_images": false,
         "margin_top": 60,
         "margin_bottom": 60
