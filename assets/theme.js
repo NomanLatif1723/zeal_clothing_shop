@@ -1910,7 +1910,7 @@ function initQuickShopCollection() {
       let productSalesTimer = productDescription.querySelector('.product__sales-timer');
       let productQuantitySelector = productDescription.querySelector('.product__quantity');
       let productButtons = productDescription.querySelector('.product__buy-buttons');
-      const viewButton = document.creatElement('div');
+      const viewButton = document.createElement('div');
       viewButton.className = 'product__block product-full__info--btn';
       viewButton.innerHTML = `
         <a href="{{ product.url }}" title="{{ 'products.view_full_info' | t }}">{{ 'products.view_full_info' | t }}</a>
