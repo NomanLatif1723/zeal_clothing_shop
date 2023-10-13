@@ -792,9 +792,8 @@ function initCustomerForms() {
     backBtn.addEventListener('click', (event) => {
       event.preventDefault();
       backBtn.closest('[data-form]').classList.add('hidden');
-      if (loginForm) {
-        loginForm.classList.remove('hidden');
-      }
+      if (!loginForm) return;
+      selectors.loginForm.classList.remove('hidden');
     });
   });
   if (!selectors.forgetPasswordBtn) return;
