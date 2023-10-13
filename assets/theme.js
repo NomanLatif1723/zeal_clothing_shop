@@ -810,6 +810,7 @@ function initCustomerForms() {
 
   if (!selectors.passwordShowBtn) return;
   selectors.passwordShowBtn.forEach(btn => {
+    if (!btn) return;
     btn.addEventListener('click', (event) => {
       showPassword(event);
     });
