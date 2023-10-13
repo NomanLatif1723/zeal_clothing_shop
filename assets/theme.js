@@ -1910,11 +1910,6 @@ function initQuickShopCollection() {
       let productSalesTimer = productDescription.querySelector('.product__sales-timer');
       let productQuantitySelector = productDescription.querySelector('.product__quantity');
       let productButtons = productDescription.querySelector('.product__buy-buttons');
-      const viewButton = document.createElement('div');
-      viewButton.className = 'product__block product-full__info--btn';
-      viewButton.innerHTML = `
-        <a href="${window.themeContent.routes.productUrl}" title="${window.themeContent.strings.view_full_info}">${window.themeContent.strings.view_full_info}</a>
-      `;
       if (productDescription) {
         productDescription.innerHTML = '';
         productDescription.appendChild(productVendor);
@@ -1924,7 +1919,6 @@ function initQuickShopCollection() {
         productDescription.appendChild(productSalesTimer);
         productDescription.appendChild(productQuantitySelector);
         productDescription.appendChild(productButtons);
-        productDescription.appendChild(viewButton);
       }
 
       if (newData) {
@@ -1936,7 +1930,7 @@ function initQuickShopCollection() {
       if (!selectors.quickViewContainer) return;
       selectors.quickViewContainer.innerHTML = '';
       selectors.quickViewContainer.appendChild(newData);
-      // document.querySelector('.product-full__info--btn').classList.remove('hidden');
+      document.querySelector('.product-full__info--btn').classList.remove('hidden');
       initProductmediaSlideShow();
       initProductVariants();
       initProductForm();
