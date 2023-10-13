@@ -812,8 +812,6 @@ function initCustomerForms() {
   //     })
   //   })
   // }
-
-
   
   function customerAddressesForm() {
     const addAddressBtn = document.querySelector('.address-btn__add');
