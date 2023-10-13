@@ -800,12 +800,14 @@ function initCustomerForms() {
   if (passwordShowBtn) {
     passwordShowBtn.forEach(btn => {
       btn.addEventListener('click', (event) => {
+        console.log("show");
         showPassword(event);
       })
     })
   }
   if (passwordHideBtn) {
     passwordHideBtn.forEach(btn => {
+      console.log("hide");
       btn.addEventListener('click', (event) => {
         hidePassword(event);
       })
