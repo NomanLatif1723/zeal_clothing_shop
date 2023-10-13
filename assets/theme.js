@@ -804,11 +804,13 @@ function initCustomerForms() {
     let showButton = group.querySelector('.password__show-btn');
     let hideButton = group.querySelector('.password__hide-btn');
 
+    if(!showButton) return;
     showButton.addEventListener('click', () => {
       password.setAttribute('type', 'text');
       hideButton.classList.remove('hidden');
       showButton.classList.add('hidden');
     });
+    if(!hideButton) return;
     hideButton.addEventListener('click', () => {
       password.setAttribute('type', 'password');
       hideButton.classList.add('hidden');
