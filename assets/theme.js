@@ -1913,7 +1913,7 @@ function initQuickShopCollection() {
       const viewButton = document.createElement('div');
       viewButton.className = 'product__block product-full__info--btn';
       viewButton.innerHTML = `
-        <a href="{{ product.url }}" title="{{ 'products.view_full_info' | t }}">{{ 'products.view_full_info' | t }}</a>
+        <a href="${window.themeContent.routes.productUrl}" title="${window.themeContent.strings.view_full_info}">${window.themeContent.strings.view_full_info}</a>
       `;
       if (productDescription) {
         productDescription.innerHTML = '';
