@@ -98,7 +98,7 @@
                   <button class="btn btn__link btn__primary address-btn__edit" aria-label="{{ 'customers.addresses.edit' | t }}">{{ 'customers.addresses.edit' | t }}</button>
                   <form id="deleteAddressForm" method="post" action="{{ address.url }}">
                     <input type="hidden" name="_method" value="delete">
-                    <button class="btn btn__link btn__outline address-btn__delete" data-confirm-message="{{ 'customers.addresses.confirm_delete' | t }}" aria-label="{{ 'customers.addresses.delete' | t }}">{{ 'customers.addresses.delete' | t }}</button>
+                    <button type="button" class="btn btn__link btn__outline address-btn__delete" data-confirm-message="{{ 'customers.addresses.confirm_delete' | t }}" aria-label="{{ 'customers.addresses.delete' | t }}">{{ 'customers.addresses.delete' | t }}</button>
                   </form>
                 </div>
                 <div id="editAddressForm" class="hidden" data-form>
