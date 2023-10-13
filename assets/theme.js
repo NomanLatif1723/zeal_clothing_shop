@@ -1994,6 +1994,7 @@ function initProductRecommendations() {
         }
       }
       replaceContent();
+      initQuickShopCollection();
     })
   }
 }
