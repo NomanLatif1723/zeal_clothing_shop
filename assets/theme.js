@@ -773,6 +773,7 @@ function initCustomerForms() {
   const recoverPasswordForm = document.querySelector('#recoverPasswordForm');
   const formContainer = document.querySelectorAll('[data-form]');
   const passwordShowBtn = document.querySelectorAll('.password__show-btn');
+  
   // const passwordHideBtn = document.querySelectorAll('.password__hide-btn');
   
   formContainer.forEach(form => {
@@ -811,11 +812,14 @@ function initCustomerForms() {
   //     })
   //   })
   // }
+
+
   
   function customerAddressesForm() {
     const addAddressBtn = document.querySelector('.address-btn__add');
     const editAddressBtn = document.querySelectorAll('.address-btn__edit');
     const deleteAddressBtn = document.querySelectorAll('.address-btn__delete');
+    const closeModal = document.querySelectorAll('.edit-close__btn');
 
     if (addAddressBtn) {
       addAddressBtn.addEventListener('click', () => {
@@ -840,6 +844,12 @@ function initCustomerForms() {
           }
         })
       }
+    })
+    closeModal.forEach(button => {
+      if (!button) return;
+      button.addEventListener('click', () => {
+        button.closest('#editAddressForm').classList.add('hidden')
+      })
     })
   }
   customerAddressesForm();
