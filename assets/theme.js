@@ -1968,6 +1968,4 @@ function initProductRecommendations() {
 }
 initProductRecommendations();
 })();
-document.querySelectorAll('.product__image').forEach(image => {
-      image.click();
-    })
+document.querySelector('.swiper-slide[data-index="3"]').click();
