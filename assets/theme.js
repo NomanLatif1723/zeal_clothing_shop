@@ -1621,19 +1621,10 @@ function initProductVariants() {
     // console.log(matchedVariant);
     const productImages = document.querySelector('#product__gallery');
     const mediaId = matchedVariant.featured_media.id;
-    // const slide = document.querySelector(`[data-media-id="${mediaId}"]`);
-    // console.log(slide);
-    // slide.closest('.swiper-slide').click();
+    const slide = document.querySelector(`[data-media-id="${mediaId}"]`);
+    console.log(slide);
+    slide.closest('.swiper-slide').click();
 
-    const slides = productImages.querySelectorAll('.swiper-slide');
-      slides.forEach(slide => {
-        let image = slide.querySelector('img');
-        if (image.getAttribute('data-media-id') === mediaId) {
-          slide.style.display = 'block';
-        } else {
-          slide.style.display = 'none';
-        }
-      });
     // swiper.slideTo(swiper.slides.indexOf(slide));
     
     // document.querySelector(`[data-media-id="${matchedVariant.featured_media.id}"]`).closest('.swiper-slide').click();
