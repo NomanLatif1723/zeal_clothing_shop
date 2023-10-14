@@ -1969,7 +1969,5 @@ function initProductRecommendations() {
 initProductRecommendations();
 })();
 document.querySelectorAll('.product__image').forEach(image => {
-      image.addEventListener('click', () => {
-        console.log('hy');
-      })
+      image.click();
     })
