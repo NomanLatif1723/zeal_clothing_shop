@@ -1619,7 +1619,7 @@ function initProductVariants() {
   function updateMedia(matchedVariant) {
     // console.log('image updated');
     // console.log(matchedVariant);
-    // const productImages = document.querySelector('#product__gallery');
+    const productImages = document.querySelector('#product__gallery');
     // const mediaId = matchedVariant.featured_media.id;
     // const slide = document.querySelector(`[data-media-id="${mediaId}"]`);
     // console.log(slide);
