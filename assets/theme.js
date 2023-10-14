@@ -1621,13 +1621,15 @@ function initProductVariants() {
     // document.querySelector('.product__variants-'+ matchedVariant.id).click();
 
     document.querySelector('.swiper-slide-active img').setAttribute('src', matchedVariant.featured_media.src);
-    const id = document.querySelector('.product-grid').dataset.sectionId;
-    const modalContent = document.querySelector(`#product__gallery-${id} .product__image`);
+    // const id = document.querySelector('.product-grid').dataset.sectionId;
+    // const modalContent = document.querySelector(`#product__gallery-${id} .product__image`);
     
-    if (!modalContent) return;
-    const newMediaModal = modalContent.querySelector(`[data-media-id="${matchedVariant.featured_media.id}"]`);
-    console.log(newMediaModal);
-    modalContent.prepend(newMediaModal);
+    // if (!modalContent) return;
+    // const newMediaModal = modalContent.querySelector(`[data-media-id="${matchedVariant.featured_media.id}"]`);
+    // console.log(newMediaModal);
+    // modalContent.prepend(newMediaModal);
+
+    
     // const modalContent = document.querySelector(`#ProductModal-${this.dataset.section} .product-media-modal__content`);
     // if (!modalContent) return;
     // const newMediaModal = modalContent.querySelector(`[data-media-id="${this.currentVariant.featured_media.id}"]`);
