@@ -11,7 +11,7 @@
   <div class="product-media__grid" data-thumbnail="{{ section.settings.thumbnail_position }}">
 {%- endif -%}
   <div {% if thumbnails %}id="product__media-{{ section.id }}"{% endif %} class="product-media__wrapper{% if thumbnails %} swiper{% endif %}">
-    <div class="product-media__gallery--{{ section.settings.media_layout }}{% if thumbnails %} swiper-wrapper{% endif %}">
+    <div id="product__gallery-{{ section.id }}" class="product-media__gallery--{{ section.settings.media_layout }}{% if thumbnails %} swiper-wrapper{% endif %}">
       {%- for media in product.media -%}
         <div class="product__image{% if thumbnails %} swiper-slide{% endif %} product-image__{{ section.settings.media_layout }}" data-media-id="{{ section.id }}-{{ media.id }}">
           {%- if media.media_type == 'image' -%}
