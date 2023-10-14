@@ -1621,6 +1621,7 @@ function initProductVariants() {
     // document.querySelector('.product__variants-'+ matchedVariant.id).click();
 
     const modalContent = document.querySelector(`#product__gallery-${this.dataset.section} .product__image`);
+    console.log(modalContent);
     if (!modalContent) return;
     const newMediaModal = modalContent.querySelector(`[data-media-id="${matchedVariant.featured_media.id}"]`);
     modalContent.prepend(newMediaModal);
