@@ -1623,7 +1623,6 @@ function initProductVariants() {
 
     initProductmediaSlideShow();
     const mediaId = matchedVariant.featured_media.id;
-    // Find the corresponding image slide and activate it
     const slide = productImages.querySelector(`[data-media-id="${mediaId}"]`);
     swiper.slideTo(swiper.slides.indexOf(slide));
     
