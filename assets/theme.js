@@ -1,4 +1,5 @@
 (function(){
+  let mediaSwiper;
 // shopify formate money function
 function formatMoney(cents, format) {
   if (typeof cents == 'string') { cents = cents.replace('.',''); }
@@ -1413,7 +1414,7 @@ function initProductmediaSlideShow() {
           swiper: swiperThumbs
         },
       }
-      let mediaSwiper = new Swiper(MediaSliderContainer, mediaSwiperOptions);
+      mediaSwiper = new Swiper(MediaSliderContainer, mediaSwiperOptions);
     }
   })
 }
