@@ -1624,7 +1624,7 @@ function initProductVariants() {
     initProductmediaSlideShow();
     const mediaId = matchedVariant.featured_media.id;
     const slide = productImages.querySelector(`[data-media-id="${mediaId}"]`);
-    swiper.slideTo(swiper.slides.indexOf(slide));
+    // swiper.slideTo(swiper.slides.indexOf(slide));
     
     // document.querySelector(`[data-media-id="${matchedVariant.featured_media.id}"]`).closest('.swiper-slide').click();
     // const id = document.querySelector('.product-grid').dataset.sectionId;
