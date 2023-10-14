@@ -1619,6 +1619,7 @@ function initProductVariants() {
   function updateMedia(matchedVariant) {
     console.log('image updated');
     console.log(matchedVariant);
+    const productImages = document.querySelector('#product__gallery');
     document.querySelector(`[data-media-id="${matchedVariant.featured_media.id}"]`).closest('.swiper-slide').click();
     // const id = document.querySelector('.product-grid').dataset.sectionId;
     // const modalContent = document.querySelector(`#product__gallery-${id} .product__image`);
