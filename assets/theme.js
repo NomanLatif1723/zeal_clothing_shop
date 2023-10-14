@@ -1630,7 +1630,7 @@ function initProductVariants() {
     console.log('Slides:', slides);
 
     // Find the slide with a matching data-media-id attribute
-    const slideToUpdate = slides.find(slide => slide.getAttribute('data-media-id') === mediaId);
+    const slideToUpdate = slides.find(slide => slide.getAttribute('data-media-id'));
     console.log(slideToUpdate);
 
     if (slideToUpdate) {
