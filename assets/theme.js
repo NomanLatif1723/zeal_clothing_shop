@@ -1933,27 +1933,6 @@ function initQuickShopCollection() {
       console.log('Error', error);
     });
   }
-
-
-  // function preloadProductModal(handle, productId, btn) {
-  //   var holder = document.getElementById('QuickShopHolder-' + handle);
-  //   var url = window.themeContent.routes.home + '/products/' + handle + '?view=quick-view';
-  //   url = url.replace('//', '/');
-  //   fetch(url).then(function(response) {
-  //     return response.text();
-  //   }).then(function(html) {
-  //     var parser = new DOMParser();
-  //     var doc = parser.parseFromString(html, 'text/html');
-  //     var div = doc.querySelector('.product-grid[data-product-handle="'+handle+'"]');
-  //     if (!holder) {
-  //       return;
-  //     }
-  //     holder.innerHTML = '';
-  //     holder.append(div);
-  //     var modalId = 'QuickShopModal-' + productId;
-  //     var name = 'quick-modal-' + productId;
-  //   });
-  // }
 }
 initQuickShopCollection();
 
