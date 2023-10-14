@@ -67,7 +67,7 @@
     <div id="product__thumbnail-{{ section.id }}" class="product-media__thumbnails swiper">
       <div class="swiper-wrapper">
         {%- for media in product.media -%}
-          <div class="swiper-slide product-media-{{ media.id }}" >
+          <div class="swiper-slide product-media-{{ media.id }}">
             <a href="#" class="product__thumbs">
               {%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
                 <span class="product__play-icon">
@@ -90,6 +90,25 @@
             </a>
           </div>
         {%- endfor -%}
+        {% for variant in product.variants %}
+          <div class="swiper-slide product-media-{{ variant.id }}">
+            <a href="#" class="product__thumbs">
+               <img class="product__image" src="{{ variant.image | img_url: '360x' }}"
+                srcset="
+                  {{ variant.image | img_url: '120x' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}120{% endif %}w,
+                  {{ variant.image | img_url: '360x' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}360{% endif %}w,
+                  {{ variant.image | img_url: '540x' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}540{% endif %}w,
+                  {{ variant.image | img_url: '720x' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}720{% endif %}w"
+                width="{{ variant.image.width }}"
+                height="{{ variant.image.height }}"
+                loading="lazy"
+                sizes="{{ sizes }}"
+                alt="{{ variant.image.alt }}"
+                data-media-id="{{ variant.image.id }}"
+                />
+            </a>
+          </div>
+        {% endfor %}
       </div>
       {%- if section.settings.show_thumbnail_arrows -%}
         <div class="swiper-button-prev swiper-button-{{ section.id }}"></div>
