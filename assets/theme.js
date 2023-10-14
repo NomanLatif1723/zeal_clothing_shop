@@ -1618,13 +1618,14 @@ function initProductVariants() {
   }
 
   function updateMedia(matchedVariant) {
-    mediaSwiper.slideTo();
-    // console.log('image updated');
-    console.log(matchedVariant);
-    const productImages = document.querySelector('#product__gallery');
     const mediaId = matchedVariant.featured_media.id;
     console.log(mediaId);
     const slide = document.querySelector(`[data-media-id="${mediaId}"]`);
+    mediaSwiper.slideTo(slide);
+    // console.log('image updated');
+    console.log(matchedVariant);
+    const productImages = document.querySelector('#product__gallery');
+   
     console.log(slide);
     initProductmediaSlideShow();
     const slides = mediaSwiper.slides;
