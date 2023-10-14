@@ -1618,7 +1618,7 @@ function initProductVariants() {
   }
 
   function updateMedia(matchedVariant) {
-    swiperThumbs.goToSlide(3);
+    mediaSwiper.goToSlide(3);
     // console.log('image updated');
     console.log(matchedVariant);
     const productImages = document.querySelector('#product__gallery');
