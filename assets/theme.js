@@ -1620,7 +1620,7 @@ function initProductVariants() {
     console.log('image updated');
     // document.querySelector('.product__variants-'+ matchedVariant.id).click();
     console.log(matchedVariant);
-    document.querySelector(`[data-media-id="${matchedVariant.featured_media.id}"]`).closest('.swiper-slide')click();
+    document.querySelector(`[data-media-id="${matchedVariant.featured_media.id}"]`).closest('.swiper-slide').click();
     // const id = document.querySelector('.product-grid').dataset.sectionId;
     // const modalContent = document.querySelector(`#product__gallery-${id} .product__image`);
     
