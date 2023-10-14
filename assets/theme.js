@@ -1631,6 +1631,7 @@ function initProductVariants() {
 
     // Find the slide with a matching data-media-id attribute
     const slideToUpdate = slides.find(slide => slide.getAttribute('data-media-id') === mediaId);
+    console.log(slideToUpdate);
 
     if (slideToUpdate) {
       // Update the src attribute of the image within the slide
