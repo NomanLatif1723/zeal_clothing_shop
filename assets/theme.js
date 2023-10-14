@@ -1633,7 +1633,10 @@ function initProductVariants() {
     // Find the slide with a matching data-media-id attribute
     slides.find(slide => {
       const id = slide.dataset.mediaId;
-      console.log(id);
+      if (id === mediaId) {
+        console.log(id);
+      }
+      
     });
 
     if (slideToUpdate) {
