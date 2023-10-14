@@ -1927,6 +1927,7 @@ function initQuickShopCollection() {
       initProductmediaSlideShow();
       initProductVariants();
       initProductForm();
+      initCountdown();
     })
     .catch(function(error) {
       console.log('Error', error);
