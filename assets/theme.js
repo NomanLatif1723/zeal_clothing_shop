@@ -1619,7 +1619,7 @@ function initProductVariants() {
   function updateMedia(matchedVariant) {
     console.log('image updated');
     // document.querySelector('.product__variants-'+ matchedVariant.id).click();
-
+console.log(matchedVariant);
     document.querySelector('.swiper-slide-active img').setAttribute('src', matchedVariant.featured_media.src);
     // const id = document.querySelector('.product-grid').dataset.sectionId;
     // const modalContent = document.querySelector(`#product__gallery-${id} .product__image`);
