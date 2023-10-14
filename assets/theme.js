@@ -1634,18 +1634,10 @@ function initProductVariants() {
     slides.find(slide => {
       const id = slide.dataset.mediaId;
       if (id === mediaId) {
-        console.log(id);
-      }
-      
-    });
-
-    if (slideToUpdate) {
-      // Update the src attribute of the image within the slide
-      const imageElement = slideToUpdate.querySelector('img');
-      if (imageElement) {
+        const imageElement = slide.querySelector('img');
         imageElement.src = matchedVariant.featured_image.src;
       }
-    }
+    });
 
     // mediaSwiper.slideTo(mediaSwiper.slides.indexOf(slide));
     
