@@ -1617,6 +1617,7 @@ function initProductVariants() {
   }
 
   function updateMedia(matchedVariant) {
+    console.log('image updated');
     // document.querySelector('.product__variants-'+ matchedVariant.id).click();
 
     // const modalContent = document.querySelector(`#ProductModal-${this.dataset.section} .product-media-modal__content`);
