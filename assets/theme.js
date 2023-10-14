@@ -1620,8 +1620,6 @@ function initProductVariants() {
     console.log('image updated');
     console.log(matchedVariant);
     const productImages = document.querySelector('#product__gallery');
-
-    initProductmediaSlideShow();
     const mediaId = matchedVariant.featured_media.id;
     const slide = productImages.querySelector(`[data-media-id="${mediaId}"]`);
     console.log(slide);
