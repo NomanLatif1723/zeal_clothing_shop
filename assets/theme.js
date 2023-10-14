@@ -1968,4 +1968,3 @@ function initProductRecommendations() {
 }
 initProductRecommendations();
 })();
-document.querySelector('.swiper-slide[data-index="3"]').click();
