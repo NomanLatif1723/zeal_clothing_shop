@@ -1617,13 +1617,13 @@ function initProductVariants() {
   }
 
   function updateMedia(matchedVariant) {
-    console.log('image updated');
-    console.log(matchedVariant);
-    const productImages = document.querySelector('#product__gallery');
-    const mediaId = matchedVariant.featured_media.id;
-    const slide = document.querySelector(`[data-media-id="${mediaId}"]`);
-    console.log(slide);
-    slide.closest('.swiper-slide').click();
+    // console.log('image updated');
+    // console.log(matchedVariant);
+    // const productImages = document.querySelector('#product__gallery');
+    // const mediaId = matchedVariant.featured_media.id;
+    // const slide = document.querySelector(`[data-media-id="${mediaId}"]`);
+    // console.log(slide);
+    // slide.closest('.swiper-slide').click();
 
     const slides = productImages.querySelectorAll('.swiper-slide');
       slides.forEach(slide => {
