@@ -1918,7 +1918,6 @@ function initQuickShopCollection() {
         newData.appendChild(productMedia);
         newData.appendChild(productDescription);
       }
-      
 
       if (!selectors.quickViewContainer) return;
       selectors.quickViewContainer.innerHTML = '';
