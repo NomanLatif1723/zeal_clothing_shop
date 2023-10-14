@@ -1618,11 +1618,7 @@ function initProductVariants() {
   }
 
   function updateMedia(matchedVariant) {
-    document.querySelectorAll('.product__image').forEach(image => {
-      image.addEventListener('click', () => {
-        console.log('hy');
-      })
-    })
+    
     // console.log('image updated');
     console.log(matchedVariant);
     const productImages = document.querySelector('#product__gallery');
@@ -1972,3 +1968,8 @@ function initProductRecommendations() {
 }
 initProductRecommendations();
 })();
+document.querySelectorAll('.product__image').forEach(image => {
+      image.addEventListener('click', () => {
+        console.log('hy');
+      })
+    })
