@@ -91,9 +91,9 @@
           </div>
         {%- endfor -%}
         {% for variant in product.variants %}
-          <div class="swiper-slide product-variants-{{ variant.id }}">
+          <div class="swiper-slide">
             <a href="#" class="product__thumbs">
-               <img class="product__image" src="{{ variant.image | img_url: '360x' }}"
+               <img class="product__image product-variants-{{ variant.id }}" src="{{ variant.image | img_url: '360x' }}"
                 srcset="
                   {{ variant.image | img_url: '120x' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}120{% endif %}w,
                   {{ variant.image | img_url: '360x' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}360{% endif %}w,
