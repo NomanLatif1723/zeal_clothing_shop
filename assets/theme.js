@@ -1618,8 +1618,9 @@ function initProductVariants() {
   }
 
   function updateMedia(matchedVariant) {
+    
     // console.log('image updated');
-    // console.log(matchedVariant);
+    console.log(matchedVariant);
     const productImages = document.querySelector('#product__gallery');
     const mediaId = matchedVariant.featured_media.id;
     const slide = document.querySelector(`[data-media-id="${mediaId}"]`);
@@ -1628,6 +1629,17 @@ function initProductVariants() {
     // slide.closest('.swiper-slide').click();
     const slides = mediaSwiper.slides;
     console.log('Slides:', slides);
+
+    // Find the slide with a matching data-media-id attribute
+    const slideToUpdate = slides.find(slide => slide.getAttribute('data-media-id') === mediaId);
+
+    if (slideToUpdate) {
+      // Update the src attribute of the image within the slide
+      const imageElement = slideToUpdate.querySelector('img');
+      if (imageElement) {
+        imageElement.src = matchedVariant.featured_image.src;
+      }
+    }
 
     mediaSwiper.slideTo(mediaSwiper.slides.indexOf(slide));
     
