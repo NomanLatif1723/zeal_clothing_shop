@@ -1627,7 +1627,7 @@ function initProductVariants() {
     initProductmediaSlideShow();
     // slide.closest('.swiper-slide').click();
 
-    swiper.slideTo(swiper.slides.indexOf(slide));
+    mediaSwiper.slideTo(mediaSwiper.slides.indexOf(slide));
     
     // document.querySelector(`[data-media-id="${matchedVariant.featured_media.id}"]`).closest('.swiper-slide').click();
     // const id = document.querySelector('.product-grid').dataset.sectionId;
