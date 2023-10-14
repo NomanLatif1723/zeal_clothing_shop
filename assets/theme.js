@@ -1617,13 +1617,7 @@ function initProductVariants() {
   }
 
   function updateMedia(matchedVariant) {
-    if (!matchedVariant) return;
-    if (!matchedVariant.featured_media) return;
-
-    const mediaGalleries = document.querySelectorAll('.product__image img');
-    mediaGalleries.forEach(mediaGallery => {
-      mediaGallery.setAttribute('src',`${matchedVariant.featured_media.id}`);
-    });
+    document.querySelector('.product__variants-'+ matchedVariant.id).click();
 
     // const modalContent = document.querySelector(`#ProductModal-${this.dataset.section} .product-media-modal__content`);
     // if (!modalContent) return;
