@@ -91,7 +91,7 @@
           </div>
         {%- endfor -%}
         {% for variant in product.variants %}
-          <div class="swiper-slide product-media-{{ variant.id }}">
+          <div class="swiper-slide product-variants-{{ variant.id }}">
             <a href="#" class="product__thumbs">
                <img class="product__image" src="{{ variant.image | img_url: '360x' }}"
                 srcset="
