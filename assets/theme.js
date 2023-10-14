@@ -1618,7 +1618,6 @@ function initProductVariants() {
 
   function updateMedia(matchedVariant) {
     console.log('image updated');
-    // document.querySelector('.product__variants-'+ matchedVariant.id).click();
     console.log(matchedVariant);
     document.querySelector(`[data-media-id="${matchedVariant.featured_media.id}"]`).closest('.swiper-slide').click();
     // const id = document.querySelector('.product-grid').dataset.sectionId;
@@ -1628,25 +1627,6 @@ function initProductVariants() {
     // const newMediaModal = modalContent.querySelector(`[data-media-id="${matchedVariant.featured_media.id}"]`);
     // console.log(newMediaModal);
     // modalContent.prepend(newMediaModal);
-
-    
-    // const modalContent = document.querySelector(`#ProductModal-${this.dataset.section} .product-media-modal__content`);
-    // if (!modalContent) return;
-    // const newMediaModal = modalContent.querySelector(`[data-media-id="${this.currentVariant.featured_media.id}"]`);
-    // modalContent.prepend(newMediaModal);
-    //  try {
-    //   var currentVariantImage = matchedVariant.featured_media || {};
-    //   var imageElement = document.querySelector('.product__image.swiper-slide-active img');
-  
-    //   if (imageElement && currentVariantImage.preview_image && currentVariantImage.preview_image.src) {
-    //     imageElement.setAttribute('src', currentVariantImage.preview_image.src);
-    //     console.log('Image source updated:', currentVariantImage.preview_image.src);
-    //   } else {
-    //     console.warn('Image source not found or invalid:', currentVariantImage);
-    //   }
-    // } catch (error) {
-    //   console.error('Error updating media:', error);
-    // }
   }
 
   function updateProductInfo(matchedVariant) {
