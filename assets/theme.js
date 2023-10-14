@@ -1623,6 +1623,7 @@ function initProductVariants() {
     const mediaId = matchedVariant.featured_media.id;
     const slide = document.querySelector(`[data-media-id="${mediaId}"]`);
     console.log(slide);
+    slide.click();
     // swiper.slideTo(swiper.slides.indexOf(slide));
     
     // document.querySelector(`[data-media-id="${matchedVariant.featured_media.id}"]`).closest('.swiper-slide').click();
