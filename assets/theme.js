@@ -1634,7 +1634,7 @@ function initProductVariants() {
     slides.find(slide => {
       const id = slide.dataset.mediaId;
       if (id === mediaId) {
-        const imageElement = slide.querySelector('img');
+        const imageElement = document.querySelector('.swiper-slide-active img');
         imageElement.src = matchedVariant.featured_image.src;
       }
     });
