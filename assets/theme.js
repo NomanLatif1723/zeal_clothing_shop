@@ -1622,9 +1622,10 @@ function initProductVariants() {
 
     const id = document.querySelector('.product-grid').dataset.sectionId;
     const modalContent = document.querySelector(`#product__gallery-${id} .product__image`);
-    console.log(modalContent);
+    
     if (!modalContent) return;
     const newMediaModal = modalContent.querySelector(`[data-media-id="${matchedVariant.featured_media.id}"]`);
+    console.log(newMediaModal);
     modalContent.prepend(newMediaModal);
     // const modalContent = document.querySelector(`#ProductModal-${this.dataset.section} .product-media-modal__content`);
     // if (!modalContent) return;
