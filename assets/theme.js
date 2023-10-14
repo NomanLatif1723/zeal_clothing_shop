@@ -1626,6 +1626,8 @@ function initProductVariants() {
     console.log(slide);
     initProductmediaSlideShow();
     // slide.closest('.swiper-slide').click();
+    const slides = swiper.slides;
+    console.log('Slides:', slides);
 
     mediaSwiper.slideTo(mediaSwiper.slides.indexOf(slide));
     
