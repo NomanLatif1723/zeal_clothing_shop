@@ -1631,7 +1631,7 @@ function initProductVariants() {
       }
     });
     initProductmediaSlideShow();
-    mediaSwiper.slideTo(matchedVariant.featured_media.id);
+    mediaSwiper.slideTo(5);
     
     // const mediaId = matchedVariant.featured_media.id;
     // console.log(mediaId);
