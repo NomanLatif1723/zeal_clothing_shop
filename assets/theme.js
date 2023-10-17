@@ -1622,7 +1622,7 @@ function initProductVariants() {
     var selectedVariantIndex = 0;
     var variantMedia = document.querySelectorAll('#product__gallery .product__image');
     const slide = document.querySelector(`[data-media-id="${selectedVariantId}"]`);
-    console.log(slide);
+    // console.log(slide);
     // variantMedia.forEach(function (media, index) {
     //   var mediaId = media.getAttribute('data-media-id');
     //     console.log(mediaId, selectedVariantId);
@@ -1633,7 +1633,7 @@ function initProductVariants() {
     //   }
     // });
     initProductmediaSlideShow();
-    mediaSwiper.slideTo(5);
+    mediaSwiper.slideTo(slide);
     
     // const mediaId = matchedVariant.featured_media.id;
     // console.log(mediaId);
