@@ -1630,11 +1630,10 @@ function initProductVariants() {
       if (!item) return;
       item.classList.remove('active');
     });
-    if (activeGridItem) {
-      activeGridItem.closest('.product__image').classList.add('active');
-      const index = activeGridItem.dataset.index;
-      console.log(index);
-    }
+    if (!activeGridItem) return;
+    activeGridItem.closest('.product__image').classList.add('active');
+    const index = activeGridItem.dataset.index;
+    console.log(index);
   }
 
   function updateProductInfo(matchedVariant) {
