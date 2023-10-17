@@ -1635,6 +1635,7 @@ function initProductVariants() {
     activeGridItem.closest('.product__image').classList.add('active');
     const index = activeGridItem.dataset.index;
     console.log(index);
+    productGrid.insertBefore(activeGridItem.closest('.product__image'), productGrid.firstChild);
   }
 
   function updateProductInfo(matchedVariant) {
