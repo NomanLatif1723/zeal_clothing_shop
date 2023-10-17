@@ -1630,10 +1630,8 @@ function initProductVariants() {
       var index = gridArray.findIndex(function(item) {
         return item.getAttribute('data-media-id') === selectedVariantId;
       });
-      if (selectedVariantIndex !== -1) {
+      if (index !== -1) {
         gridArray.unshift(gridArray.splice(index, 1)[0]);
-  
-        // Update the DOM with the reordered thumbnails
         productGrid.innerHTML = '';
         gridArray.forEach(function(item) {
           productGrid.appendChild(item);
