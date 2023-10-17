@@ -1627,7 +1627,7 @@ function initProductVariants() {
     const productGrid = document.querySelector('.product-media__gallery--grid');
     if (productGrid) {
       var gridArray = Array.from(productGrid.querySelectorAll('.product-image'));
-      var index = productGrid.findIndex(function(item) {
+      var index = gridArray.findIndex(function(item) {
         return item.getAttribute('data-media-id') === selectedVariantId;
       });
       if (selectedVariantIndex !== -1) {
