@@ -1626,7 +1626,7 @@ function initProductVariants() {
       mediaSwiper.slideTo(index - 1);
     }
     productGrid.forEach(item => {
-      if (!item) return;
+      // if (!item) return;
       const activeGridItem = item.querySelector(`[data-media-id="${selectedVariantId}"]`);
       console.log(activeGridItem)
       item.classList.remove('active');
