@@ -1618,7 +1618,7 @@ function initProductVariants() {
   }
 
   function updateMedia(matchedVariant, index) {
-    var selectedVariantId = matchedVariant.value;
+    var selectedVariantId = matchedVariant.featured_media.id;
     var selectedVariantIndex = 0;
     var variantMedia = document.querySelectorAll('.product__image');
     variantMedia.forEach(function (media, index) {
