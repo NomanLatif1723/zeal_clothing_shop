@@ -1624,11 +1624,18 @@ function initProductVariants() {
       const index = slide.dataset.index;
       mediaSwiper.slideTo(index - 1);
     }
-    const productGrid = document.querySelector(`.product-media__gallery--grid [data-media-id="${selectedVariantId}"]`);
-    if (productGrid) {
-      const index = productGrid.dataset.index;
+    const productGrid = document.querySelectorAll(`.product-media__gallery--grid .product__image`);
+    
+    productGrid.forEach(item => {
+      if (!item) return;
+      const activeGridItem = item.querySelector(`[data-media-id="${selectedVariantId}"]`);
+      item.classList.remove('active');
+      activeGridItem.classList.add('active');
+      const index = activeGridItem.dataset.index;
       console.log(index);
-    }
+    })
+    
+      
   }
 
   function updateProductInfo(matchedVariant) {
