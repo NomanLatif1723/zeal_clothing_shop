@@ -1626,16 +1626,7 @@ function initProductVariants() {
     const index = slide.dataset.index;
     console.log(selectedVariantId);
     console.log(index);
-    // variantMedia.forEach(function (media, index) {
-    //   var mediaId = media.getAttribute('data-media-id');
-    //     console.log(mediaId, selectedVariantId);
-      
-    //   if (mediaId === selectedVariantId) {
-    //     selectedVariantIndex = index;
-    //     console.log('index', selectedVariantIndex, index);
-    //   }
-    // });
-    initProductmediaSlideShow();
+    // initProductmediaSlideShow();
     mediaSwiper.slideTo(index - 1);
     
     // const mediaId = matchedVariant.featured_media.id;
