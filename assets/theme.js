@@ -1621,15 +1621,17 @@ function initProductVariants() {
     var selectedVariantId = matchedVariant.featured_media.id;
     var selectedVariantIndex = 0;
     var variantMedia = document.querySelectorAll('#product__gallery .product__image');
-    variantMedia.forEach(function (media, index) {
-      var mediaId = media.getAttribute('data-media-id');
-        console.log(mediaId, selectedVariantId);
+    const slide = document.querySelector(`[data-media-id="${mediaId}"]`);
+    console.log(slide);
+    // variantMedia.forEach(function (media, index) {
+    //   var mediaId = media.getAttribute('data-media-id');
+    //     console.log(mediaId, selectedVariantId);
       
-      if (mediaId === selectedVariantId) {
-        selectedVariantIndex = index;
-        console.log('index', selectedVariantIndex, index);
-      }
-    });
+    //   if (mediaId === selectedVariantId) {
+    //     selectedVariantIndex = index;
+    //     console.log('index', selectedVariantIndex, index);
+    //   }
+    // });
     initProductmediaSlideShow();
     mediaSwiper.slideTo(5);
     
