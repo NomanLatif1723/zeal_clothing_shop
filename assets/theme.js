@@ -1619,37 +1619,9 @@ function initProductVariants() {
 
   function updateMedia(matchedVariant) {
     var selectedVariantId = matchedVariant.featured_media.id;
-    var selectedVariantIndex = 0;
-    var variantMedia = document.querySelectorAll('#product__gallery .product__image');
     const slide = document.querySelector(`[data-media-id="${selectedVariantId}"]`);
-    // console.log(slide);
     const index = slide.dataset.index;
-    console.log(selectedVariantId);
-    console.log(index);
-    // initProductmediaSlideShow();
     mediaSwiper.slideTo(index - 1);
-    
-    // const mediaId = matchedVariant.featured_media.id;
-    // console.log(mediaId);
-    // const slide = document.querySelector(`[data-media-id="${mediaId}"]`);
-    // mediaSwiper.slideTo(slide);
-    // // console.log('image updated');
-    // console.log(matchedVariant);
-    // const productImages = document.querySelector('#product__gallery');
-   
-    // // console.log(slide);
-    // initProductmediaSlideShow();
-    // const slides = mediaSwiper.slides;
-    // // console.log('Slides:', slides);
-
-    // // Find the slide with a matching data-media-id attribute
-    // slides.find(slide => {
-    //   const id = slide.dataset.mediaId;
-    //   if (id === mediaId) {
-    //     const imageElement = document.querySelector('.swiper-slide-active img');
-    //     imageElement.src = matchedVariant.featured_image.src;
-    //   }
-    // });
   }
 
   function updateProductInfo(matchedVariant) {
