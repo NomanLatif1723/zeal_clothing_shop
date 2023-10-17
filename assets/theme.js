@@ -1624,6 +1624,7 @@ function initProductVariants() {
     const slide = document.querySelector(`[data-media-id="${selectedVariantId}"]`);
     // console.log(slide);
     const index = slide.dataset.index;
+    console.log(selectedVariantId);
     console.log(index);
     // variantMedia.forEach(function (media, index) {
     //   var mediaId = media.getAttribute('data-media-id');
