@@ -1630,6 +1630,7 @@ function initProductVariants() {
       var index = gridArray.findIndex(item => {
         return item.querySelector('img').getAttribute('data-media-id') === selectedVariantId;
       });
+      console.log(index);
       gridArray.unshift(gridArray.splice(index, 1)[0]);
       productGrid.innerHTML = '';
       gridArray.forEach(item => {
