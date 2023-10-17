@@ -1508,7 +1508,7 @@ function initProductVariants() {
       updateInventory(matchedVariant);
       updateButtons(matchedVariant);
       updateProductInfo(matchedVariant);
-      updateMedia(matchedVariant, sele);
+      updateMedia(matchedVariant);
       updateOptionsNames(matchedVariant);
     }
   }
