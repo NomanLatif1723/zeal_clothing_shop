@@ -13,7 +13,7 @@
   <div {% if thumbnails %}id="product__media-{{ section.id }}"{% endif %} class="product-media__wrapper{% if thumbnails %} swiper{% endif %}">
     <div id="product__gallery" class="product-media__gallery--{{ section.settings.media_layout }}{% if thumbnails %} swiper-wrapper{% endif %}">
       {%- for media in product.media -%}
-        <div class="product__image{% if thumbnails %} swiper-slide{% endif %} product-image__{{ section.settings.media_layout }}" data-media-id="{{ media.id }}">
+        <div class="product__image{% if thumbnails %} swiper-slide{% endif %} product-image__{{ section.settings.media_layout }}" data-media-id="{{ media.id }}" data-index="{{ forloop.index }}">
           {%- if media.media_type == 'image' -%}
             <img
               src="{{ media | img_url: default }}"
@@ -49,7 +49,7 @@
     <div id="product__thumbnail-{{ section.id }}" class="product-media__thumbnails swiper">
       <div class="swiper-wrapper">
         {%- for media in product.media -%}
-          <div class="swiper-slide product-media-{{ media.id }}" data-index="{{ forloop.index }}">
+          <div class="swiper-slide product-media-{{ media.id }}">
             <a href="#" class="product__thumbs">
               {%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
                 <span class="product__play-icon">
