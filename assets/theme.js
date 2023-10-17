@@ -1626,17 +1626,8 @@ function initProductVariants() {
     }
     const productGrid = document.querySelector(`.product-media__gallery--grid [data-media-id="${selectedVariantId}"]`);
     if (productGrid) {
-      // var gridArray = Array.from(productGrid.querySelectorAll('.product-image'));
-      // var index = gridArray.findIndex(item => {
-      //   return item.querySelector('img').dataset.index === selectedVariantId;
-      // });
       const index = productGrid.dataset.index;
       console.log(index);
-      // gridArray.unshift(gridArray.splice(index, 1)[0]);
-      // productGrid.innerHTML = '';
-      // gridArray.forEach(item => {
-      //   productGrid.appendChild(item);
-      // });
     }
   }
 
