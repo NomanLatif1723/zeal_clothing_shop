@@ -1617,7 +1617,7 @@ function initProductVariants() {
       });
   }
 
-  function updateMedia(matchedVariant, index) {
+  function updateMedia(matchedVariant) {
     var selectedVariantId = matchedVariant.featured_media.id;
     var selectedVariantIndex = 0;
     var variantMedia = document.querySelectorAll('.product__image');
