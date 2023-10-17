@@ -1629,7 +1629,7 @@ function initProductVariants() {
       if (!item) return;
       const activeGridItem = item.querySelector(`[data-media-id="${selectedVariantId}"]`);
       item.classList.remove('active');
-      activeGridItem.classList.add('active');
+      activeGridItem.closest('.product__image').classList.add('active');
       
       const index = activeGridItem.dataset.index;
       console.log(index);
