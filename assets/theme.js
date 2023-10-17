@@ -1621,7 +1621,7 @@ function initProductVariants() {
     var selectedVariantId = matchedVariant.featured_media.id;
     var selectedVariantIndex = 0;
     var variantMedia = document.querySelectorAll('#product__gallery .product__image');
-    const slide = document.querySelector(`[data-media-id="${mediaId}"]`);
+    const slide = document.querySelector(`[data-media-id="${selectedVariantId}"]`);
     console.log(slide);
     // variantMedia.forEach(function (media, index) {
     //   var mediaId = media.getAttribute('data-media-id');
