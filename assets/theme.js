@@ -1629,7 +1629,7 @@ function initProductVariants() {
         selectedVariantIndex = index;
       }
     });
-
+    initProductmediaSlideShow();
     mediaSwiper.slideTo(selectedVariantIndex);
     
     // const mediaId = matchedVariant.featured_media.id;
