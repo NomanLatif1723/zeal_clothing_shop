@@ -1629,6 +1629,8 @@ function initProductVariants() {
         selectedVariantIndex = index;
       }
     });
+
+    mediaSwiper.slideTo(selectedVariantIndex);
     
     // const mediaId = matchedVariant.featured_media.id;
     // console.log(mediaId);
