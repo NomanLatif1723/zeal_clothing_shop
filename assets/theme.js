@@ -1620,13 +1620,14 @@ function initProductVariants() {
   function updateMedia(matchedVariant) {
     var selectedVariantId = matchedVariant.featured_media.id;
     const slide = document.querySelector(`.product__thumbs [data-media-id="${selectedVariantId}"]`);
-    const productGrid = document.querySelectorAll(`.product-media__gallery--grid .product__image`);
+    const productGrid = document.querySelectorAll('.product-media__gallery--grid');
+    const gridItems = productGrid.querySelectorAll('.product__image');
     const activeGridItem = document.querySelector(`[data-media-id="${selectedVariantId}"]`);
     if (slide) {
       const index = slide.dataset.index;
       mediaSwiper.slideTo(index - 1);
     }
-    productGrid.forEach(item => {
+    gridItems.forEach(item => {
       if (!item) return;
       item.classList.remove('active');
     });
