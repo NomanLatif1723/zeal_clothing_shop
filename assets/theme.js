@@ -1621,20 +1621,23 @@ function initProductVariants() {
     var selectedVariantId = matchedVariant.featured_media.id;
     const slide = document.querySelector(`.product__thumbs [data-media-id="${selectedVariantId}"]`);
     const productGrid = document.querySelector('.product-media__gallery--grid');
-    const gridItems = productGrid.querySelectorAll('.product__image');
-    const activeGridItem = document.querySelector(`[data-media-id="${selectedVariantId}"]`);
+    
     if (slide) {
       const index = slide.dataset.index;
       mediaSwiper.slideTo(index - 1);
     }
-    gridItems.forEach(item => {
-      if (!item) return;
-      item.classList.remove('active');
-    });
-    if (!activeGridItem) return;
-    activeGridItem.closest('.product__image').classList.add('active');
-    const index = activeGridItem.dataset.index;
-    productGrid.insertBefore(activeGridItem.closest('.product__image'), productGrid.firstChild);
+    if (productGrid) {
+      const gridItems = productGrid.querySelectorAll('.product__image');
+      const activeGridItem = productGrid.querySelector(`[data-media-id="${selectedVariantId}"]`);
+      gridItems.forEach(item => {
+        if (!item) return;
+        item.classList.remove('active');
+      });
+      if (!activeGridItem) return;
+      activeGridItem.closest('.product__image').classList.add('active');
+      const index = activeGridItem.dataset.index;
+      productGrid.insertBefore(activeGridItem.closest('.product__image'), productGrid.firstChild);
+    }
   }
 
   function updateProductInfo(matchedVariant) {
