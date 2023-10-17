@@ -1624,7 +1624,7 @@ function initProductVariants() {
       const index = slide.dataset.index;
       mediaSwiper.slideTo(index - 1);
     }
-    const productGrid = document.querySelector(`.product-media__gallery--grid [data-media-id=${selectedVariantId}]`);
+    const productGrid = document.querySelector(`.product-media__gallery--grid [data-media-id="${selectedVariantId}"]`);
     if (productGrid) {
       // var gridArray = Array.from(productGrid.querySelectorAll('.product-image'));
       // var index = gridArray.findIndex(item => {
