@@ -1630,13 +1630,13 @@ function initProductVariants() {
       var index = gridArray.findIndex(function(item) {
         return item.querySelector('img').getAttribute('data-media-id') === selectedVariantId;
       });
-      if (index !== -1) {
+      // if (index !== -1) {
         gridArray.unshift(gridArray.splice(index, 1)[0]);
         productGrid.innerHTML = '';
         gridArray.forEach(function(item) {
           productGrid.appendChild(item);
         });
-      }
+      // }
     }
   }
 
