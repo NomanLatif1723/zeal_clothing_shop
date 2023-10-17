@@ -1620,7 +1620,7 @@ function initProductVariants() {
   function updateMedia(matchedVariant) {
     var selectedVariantId = matchedVariant.featured_media.id;
     var selectedVariantIndex = 0;
-    var variantMedia = document.querySelectorAll('.product__image');
+    var variantMedia = document.querySelectorAll('#product__gallery .product__image');
     variantMedia.forEach(function (media, index) {
       var mediaId = media.getAttribute('data-media-id');
         console.log(mediaId, selectedVariantId);
