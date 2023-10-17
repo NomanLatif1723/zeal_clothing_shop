@@ -1631,10 +1631,12 @@ function initProductVariants() {
       item.classList.remove('active');
     });
     const activeGridItem = document.querySelector(`[data-media-id="${selectedVariantId}"]`);
-    activeGridItem.closest('.product__image').classList.add('active');
+    if (activeGridItem) {
+      activeGridItem.closest('.product__image').classList.add('active');
+      const index = activeGridItem.dataset.index;
+      console.log(index);
+    }
     
-    const index = activeGridItem.dataset.index;
-    console.log(index);
   }
 
   function updateProductInfo(matchedVariant) {
