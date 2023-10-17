@@ -1625,7 +1625,7 @@ function initProductVariants() {
       var mediaId = media.getAttribute('data-media-id');
       if (mediaId === selectedVariantId) {
         selectedVariantIndex = index;
-        console.log('index', selectedVariantIndex);
+        console.log('index', selectedVariantIndex, index);
       }
     });
     initProductmediaSlideShow();
