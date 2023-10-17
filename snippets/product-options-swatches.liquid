@@ -15,7 +15,7 @@
               <div class="color-swatch__item">      
                 <input data-selected-variant {% if option.selected_value == value %}checked{% endif %} type="radio" id="{{ option.name }}-{{ value }}"
                   value= "{{ value }}" form="{{ product_form_id }}" name="{{ option.name }}"/>
-                  <label for="{{ option.name | handleize }}-{{ value | handleize }}">
+                  <label for="{{ option.name }}-{{ value }}">
                     <span class="color-swatch__option" style="background:{{ value | downcase }}"></span>
                   </label>
               </div>
@@ -27,8 +27,8 @@
           <div class="hidden__swatches">
             {%- for value in option.values offset: 5 -%}
               <div class="color-swatch__item">
-                <input data-selected-variant type="radio" id="{{ option.name | handleize }}-{{ value | handleize }}" form="{{ product_form_id }}" value= "{{ value }}" name="{{ option.name }}"/>
-                  <label for="{{ option.name | handleize }}-{{ value | handleize }}">
+                <input data-selected-variant type="radio" id="{{ option.name }}-{{ value }}" form="{{ product_form_id }}" value= "{{ value }}" name="{{ option.name }}"/>
+                  <label for="{{ option.name }}-{{ value }}">
                     <span class="color-swatch__option" style="background:{{ value | downcase }}"></span>
                   </label>
               </div>
