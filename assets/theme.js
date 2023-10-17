@@ -1625,8 +1625,12 @@ function initProductVariants() {
       mediaSwiper.slideTo(index - 1);
     }
     const productGrid = document.querySelector('.product-media__gallery--grid');
-
-    var gridArray = Array.from(productGrid.querySelectorAll('.product-image'));
+    if (productGrid) {
+      var gridArray = Array.from(productGrid.querySelectorAll('.product-image'));
+      var index = productGrid.findIndex(function(item) {
+        return item.getAttribute('data-media-id') === selectedVariantId;
+      });
+    }
   }
 
   function updateProductInfo(matchedVariant) {
