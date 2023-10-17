@@ -1622,7 +1622,7 @@ function initProductVariants() {
     var selectedVariantIndex = 0;
     var variantMedia = document.querySelectorAll('#product__gallery .product__image');
     const slide = document.querySelector(`[data-media-id="${selectedVariantId}"]`);
-    console.log(slide);
+    // console.log(slide);
     const index = slide.dataset.index;
     console.log(index);
     // variantMedia.forEach(function (media, index) {
