@@ -1508,7 +1508,7 @@ function initProductVariants() {
       updateInventory(matchedVariant);
       updateButtons(matchedVariant);
       updateProductInfo(matchedVariant);
-      updateMedia(matchedVariant);
+      updateMedia(matchedVariant, sele);
       updateOptionsNames(matchedVariant);
     }
   }
@@ -1619,7 +1619,7 @@ function initProductVariants() {
 
   function updateMedia(matchedVariant, index) {
 
-    var selectedVariantId = selector.value;
+    var selectedVariantId = matchedVariant.featured_media.id;
       
     var selectedVariantIndex = 0;
     var variantMedia = document.querySelectorAll('.product__image');
@@ -1630,27 +1630,27 @@ function initProductVariants() {
       }
     });
     
-    const mediaId = matchedVariant.featured_media.id;
-    console.log(mediaId);
-    const slide = document.querySelector(`[data-media-id="${mediaId}"]`);
-    mediaSwiper.slideTo(slide);
-    // console.log('image updated');
-    console.log(matchedVariant);
-    const productImages = document.querySelector('#product__gallery');
+    // const mediaId = matchedVariant.featured_media.id;
+    // console.log(mediaId);
+    // const slide = document.querySelector(`[data-media-id="${mediaId}"]`);
+    // mediaSwiper.slideTo(slide);
+    // // console.log('image updated');
+    // console.log(matchedVariant);
+    // const productImages = document.querySelector('#product__gallery');
    
-    // console.log(slide);
-    initProductmediaSlideShow();
-    const slides = mediaSwiper.slides;
-    // console.log('Slides:', slides);
+    // // console.log(slide);
+    // initProductmediaSlideShow();
+    // const slides = mediaSwiper.slides;
+    // // console.log('Slides:', slides);
 
-    // Find the slide with a matching data-media-id attribute
-    slides.find(slide => {
-      const id = slide.dataset.mediaId;
-      if (id === mediaId) {
-        const imageElement = document.querySelector('.swiper-slide-active img');
-        imageElement.src = matchedVariant.featured_image.src;
-      }
-    });
+    // // Find the slide with a matching data-media-id attribute
+    // slides.find(slide => {
+    //   const id = slide.dataset.mediaId;
+    //   if (id === mediaId) {
+    //     const imageElement = document.querySelector('.swiper-slide-active img');
+    //     imageElement.src = matchedVariant.featured_image.src;
+    //   }
+    // });
   }
 
   function updateProductInfo(matchedVariant) {
