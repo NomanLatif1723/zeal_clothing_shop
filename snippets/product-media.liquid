@@ -29,6 +29,7 @@
               sizes="{{ sizes }}"
               alt="{{ media.alt }}"
               data-media-id="{{ media.id }}"
+              data-index="{{ forloop.index }}"
             />
           {%- elsif media.media_type == 'video' -%}
             {{ media | media_tag: image_size: "2048x", autoplay: true, loop: loop, controls: true, preload: "none", class: "product-media__video" }}
