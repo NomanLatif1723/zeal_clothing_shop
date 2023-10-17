@@ -1501,6 +1501,7 @@ function initProductVariants() {
     if (matchedVariant) {
       updateMasterVariant(matchedVariant);
       updateMedia(matchedVariant);
+      updateOptionsNames(matchedVariant);
       updateUrl(matchedVariant);
       updateProductPrice(matchedVariant);
       updateProductUnitPrice(matchedVariant);
@@ -1509,7 +1510,6 @@ function initProductVariants() {
       updateInventory(matchedVariant);
       updateButtons(matchedVariant);
       updateProductInfo(matchedVariant);
-      updateOptionsNames(matchedVariant);
     }
   }
 
