@@ -1631,11 +1631,11 @@ function initProductVariants() {
         return item.querySelector('img').dataset.index === selectedVariantId;
       });
       console.log(index);
-      gridArray.unshift(gridArray.splice(index, 1)[0]);
-      productGrid.innerHTML = '';
-      gridArray.forEach(item => {
-        productGrid.appendChild(item);
-      });
+      // gridArray.unshift(gridArray.splice(index, 1)[0]);
+      // productGrid.innerHTML = '';
+      // gridArray.forEach(item => {
+      //   productGrid.appendChild(item);
+      // });
     }
   }
 
