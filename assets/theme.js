@@ -1628,7 +1628,7 @@ function initProductVariants() {
     if (productGrid) {
       var gridArray = Array.from(productGrid.querySelectorAll('.product-image'));
       var index = gridArray.findIndex(item => {
-        return item.querySelector('img').getAttribute('data-media-id') === selectedVariantId;
+        return item.querySelector('img').dataset.index === selectedVariantId;
       });
       console.log(index);
       gridArray.unshift(gridArray.splice(index, 1)[0]);
