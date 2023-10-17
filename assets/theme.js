@@ -1628,13 +1628,13 @@ function initProductVariants() {
     }
     productGrid.forEach(item => {
       if (!item) return;
-      const activeGridItem = item.querySelector(`[data-media-id="${selectedVariantId}"]`);
       item.classList.remove('active');
-      activeGridItem.closest('.product__image').classList.add('active');
-      
-      const index = activeGridItem.dataset.index;
-      console.log(index);
     });
+    const activeGridItem = document.querySelector(`[data-media-id="${selectedVariantId}"]`);
+    activeGridItem.closest('.product__image').classList.add('active');
+    
+    const index = activeGridItem.dataset.index;
+    console.log(index);
   }
 
   function updateProductInfo(matchedVariant) {
