@@ -1626,10 +1626,10 @@ function initProductVariants() {
     console.log(matchedVariant);
     const productImages = document.querySelector('#product__gallery');
    
-    console.log(slide);
+    // console.log(slide);
     initProductmediaSlideShow();
     const slides = mediaSwiper.slides;
-    console.log('Slides:', slides);
+    // console.log('Slides:', slides);
 
     // Find the slide with a matching data-media-id attribute
     slides.find(slide => {
