@@ -1621,12 +1621,13 @@ function initProductVariants() {
     var selectedVariantId = matchedVariant.featured_media.id;
     const slide = document.querySelector(`.product__thumbs [data-media-id="${selectedVariantId}"]`);
     const productGrid = document.querySelectorAll(`.product-media__gallery--grid .product__image`);
+    console.log(productGrid);
     if (slide) {
       const index = slide.dataset.index;
       mediaSwiper.slideTo(index - 1);
     }
     productGrid.forEach(item => {
-      // if (!item) return;
+      if (!item) return;
       const activeGridItem = item.querySelector(`[data-media-id="${selectedVariantId}"]`);
       console.log(activeGridItem)
       item.classList.remove('active');
