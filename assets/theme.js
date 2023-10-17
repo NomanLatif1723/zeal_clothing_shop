@@ -1620,8 +1620,10 @@ function initProductVariants() {
   function updateMedia(matchedVariant) {
     var selectedVariantId = matchedVariant.featured_media.id;
     const slide = document.querySelector(`.product__thumbs [data-media-id="${selectedVariantId}"]`);
-    const index = slide.dataset.index;
-    mediaSwiper.slideTo(index - 1);
+    if (slide) {
+      const index = slide.dataset.index;
+      mediaSwiper.slideTo(index - 1);
+    }
   }
 
   function updateProductInfo(matchedVariant) {
