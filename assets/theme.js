@@ -1618,17 +1618,14 @@ function initProductVariants() {
   }
 
   function updateMedia(matchedVariant, index) {
-
     var selectedVariantId = matchedVariant.featured_media.id;
-      console.log('selectedId', selectedVariantId);
     var selectedVariantIndex = 0;
-    console.log('index', selectedVariantIndex);
     var variantMedia = document.querySelectorAll('.product__image');
     variantMedia.forEach(function (media, index) {
       var mediaId = media.getAttribute('data-media-id');
-      console.log('mediaId', mediaId);
       if (mediaId === selectedVariantId) {
         selectedVariantIndex = index;
+        console.log('index', selectedVariantIndex);
       }
     });
     initProductmediaSlideShow();
