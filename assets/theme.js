@@ -1631,11 +1631,10 @@ function initProductVariants() {
       const activeGridItem = item.querySelector(`[data-media-id="${selectedVariantId}"]`);
       item.classList.remove('active');
       activeGridItem.classList.add('active');
+      
       const index = activeGridItem.dataset.index;
       console.log(index);
-    })
-    
-      
+    });
   }
 
   function updateProductInfo(matchedVariant) {
