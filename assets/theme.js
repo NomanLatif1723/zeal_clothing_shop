@@ -1628,7 +1628,7 @@ function initProductVariants() {
     }
     productGrid.forEach(item => {
       if (!item) return;
-      const activeGridItem = document.querySelector(`[data-media-id="${selectedVariantId}"]`);
+      const activeGridItem = item.querySelector(`[data-media-id="${selectedVariantId}"]`);
       item.classList.remove('active');
       activeGridItem.closest('.product__image').classList.add('active');
       
