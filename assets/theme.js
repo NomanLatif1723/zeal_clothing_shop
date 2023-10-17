@@ -1623,8 +1623,9 @@ function initProductVariants() {
     var variantMedia = document.querySelectorAll('.product__image');
     variantMedia.forEach(function (media, index) {
       var mediaId = media.getAttribute('data-media-id');
-      if (mediaId === selectedVariantId) {
         console.log(mediaId, selectedVariantId);
+      
+      if (mediaId === selectedVariantId) {
         selectedVariantIndex = index;
         console.log('index', selectedVariantIndex, index);
       }
