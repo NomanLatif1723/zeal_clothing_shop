@@ -1617,7 +1617,19 @@ function initProductVariants() {
       });
   }
 
-  function updateMedia(matchedVariant) {
+  function updateMedia(matchedVariant, index) {
+
+    var selectedVariantId = selector.value;
+      
+    var selectedVariantIndex = 0;
+    var variantMedia = document.querySelectorAll('.product__image');
+    variantMedia.forEach(function (media, index) {
+      var mediaId = media.getAttribute('data-media-id');
+      if (mediaId === selectedVariantId) {
+        selectedVariantIndex = index;
+      }
+    });
+    
     const mediaId = matchedVariant.featured_media.id;
     console.log(mediaId);
     const slide = document.querySelector(`[data-media-id="${mediaId}"]`);
