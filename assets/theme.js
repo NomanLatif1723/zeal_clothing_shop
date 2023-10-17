@@ -1630,13 +1630,11 @@ function initProductVariants() {
       var index = gridArray.findIndex(item => {
         return item.querySelector('img').getAttribute('data-media-id') === selectedVariantId;
       });
-      // if (index !== -1) {
-        gridArray.unshift(gridArray.splice(index, 1)[0]);
-        productGrid.innerHTML = '';
-        gridArray.forEach(item => {
-          productGrid.appendChild(item);
-        });
-      // }
+      gridArray.unshift(gridArray.splice(index, 1)[0]);
+      productGrid.innerHTML = '';
+      gridArray.forEach(item => {
+        productGrid.appendChild(item);
+      });
     }
   }
 
