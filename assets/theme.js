@@ -1627,13 +1627,13 @@ function initProductVariants() {
     const productGrid = document.querySelector('.product-media__gallery--grid');
     if (productGrid) {
       var gridArray = Array.from(productGrid.querySelectorAll('.product-image'));
-      var index = gridArray.findIndex(function(item) {
+      var index = gridArray.findIndex(item => {
         return item.querySelector('img').getAttribute('data-media-id') === selectedVariantId;
       });
       // if (index !== -1) {
         gridArray.unshift(gridArray.splice(index, 1)[0]);
         productGrid.innerHTML = '';
-        gridArray.forEach(function(item) {
+        gridArray.forEach(item => {
           productGrid.appendChild(item);
         });
       // }
