@@ -174,32 +174,11 @@
       }
     });
 
-    const getProductData = () => {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        const productData = window.themeContent.routes.product;
-        if (productData) {
-          resolve(productData);
-        } else {
-          reject("Product data is not available.");
-        }
-      }, 1000);
-    });
-  };
-  
-  getProductData()
-    .then(productData => {
-      console.log("Product Data:", productData);
-    })
-    .catch(error => {
-      console.error(error);
-    });
-
     
     // Find the matched variant
     const product = JSON.parse(document.querySelector('[type="application/json"]').textContent);
-    console.log(selectors.product);
-    let matchedVariant = selectors.product.variants.find(variant => {
+    console.log(product);
+    let matchedVariant = product.variants.find(variant => {
       return selectedOptions.every(option => variant.options.includes(option));
     });
 
