@@ -173,6 +173,31 @@
         selectedOptions.push(selector.value);
       }
     });
+
+    const getProductData = () => {
+    return new Promise((resolve, reject) => {
+      // Simulate data loading or use your actual data loading method
+      setTimeout(() => {
+        const productData = window.themeContent.routes.product;
+        if (productData) {
+          resolve(productData);
+        } else {
+          reject("Product data is not available.");
+        }
+      }, 1000); // Simulate a 1-second delay
+    });
+  };
+  
+  getProductData()
+    .then(productData => {
+      // Your code to work with the product data goes here
+      console.log("Product Data:", productData);
+    })
+    .catch(error => {
+      console.error(error);
+    });
+
+    
     // Find the matched variant
     const product = JSON.parse(document.querySelector('[type="application/json"]').textContent);
     console.log(selectors.product);
