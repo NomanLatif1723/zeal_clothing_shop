@@ -1,4 +1,5 @@
 {%- liquid
+  assign product = all_products[section.settings.featured_product]
   assign media_container_width = section.settings.media_width
   assign media_size = '760px'
   if media_container_width == 'compact'
@@ -27,6 +28,28 @@
     }
   }
 {%- endstyle -%}
+<div class="main-product__wrapper main__section-{{ section.id }}">
+  <div class="page__width">
+    <div class="product-grid{% if section.settings.media_position %} product-grid__reverse{% endif %}" data-section-id="{{ section.id }}" data-product-handle="{{ product.handle }}">
+      <div class="product-grid__item {{ product_media_width }} product__image-container">
+        {%- render 'product-media', 
+          product: product,
+          block: block,
+          section: section,
+          media_size: media_size 
+        -%}
+      </div>
+      <div class="product-grid__item {{ product_content_width }} product__content-container">
+        {%- render 'product-form',
+          product: product,
+          block: block,
+          section: section,
+          show_vendor: settings.show_vendor,
+        -%}
+      </div>
+    </div>
+  </div>
+</div>
 {% schema %}
   {
     "name": "t:sections.main-product.name",
