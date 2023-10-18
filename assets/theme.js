@@ -1494,8 +1494,10 @@ function initProductVariants() {
       }
     });
     // Find the matched variant
-    console.log(selectors.product);
-    let matchedVariant = selectors.product.variants.find(variant => {
+    
+    const product = JSON.parse(document.querySelector('[type="application/json"]').textContent);
+    console.log(product);
+    let matchedVariant = product.variants.find(variant => {
       return selectedOptions.every(option => variant.options.includes(option));
     });
     
