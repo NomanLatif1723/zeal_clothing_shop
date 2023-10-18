@@ -20,47 +20,53 @@
     </div>
     {%- when 'price' -%}    
     <div class="product__block product__price" {{ block.shopify_attributes }}>
-      <div class="product__price-container">
-        <div class="product__price-flex">
-          <span class="visually__hidden">{{ 'products.price.sale_price' | t }}</span>
-          <span class="sale__price product__sale-price" data-sale-price>{{ product.selected_or_first_available_variant.price | money }}</span>
-          <span class="visually__hidden">{{ 'products.price.regular_price' | t }}</span>
-          <span class="sale__price product__compare-price {% unless product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %}hidden{% endunless %}" data-regular-price>
-            {{ product.selected_or_first_available_variant.compare_at_price | money }}
-          </span>
-          {%- if block.settings.show_sale_badges -%}
-            <span class="badge sale__badge{% if settings.sale_badge_color contains '#f' %} badge-color__dark{% else %} badge-color__light{% endif %}">{{ 'products.badges.on_sale' | t }}</span>
-            <span class="badge hidden soldout__badge{% if settings.soldout_badge_color contains '#f' %} badge-color__dark{% else %} badge-color__light{% endif %}">{{ 'products.badges.sold_out' | t }}</span>
-          {%- endif -%}
-        </div>
-        <div data-unit-price class="product__unit-price hidden">
-          {%- if product.selected_or_first_available_variant.price > 0 -%}
-            {%- if product.selected_or_first_available_variant.unit_price_measurement -%}
-              <div>{{ product.selected_or_first_available_variant.unit_price }}/
-                {%- if product.selected_or_first_available_variant.unit_price_measurement.reference_value != 1 -%}
-                  {{ product.selected_or_first_available_variant.unit_price_measurement.reference_value }}
-                {%- endif -%}
-                  {{ product.selected_or_first_available_variant.unit_price_measurement.reference_unit }}
-              </div>
+      {%- unless product.empty? -%}
+        <div class="product__price-container">
+          <div class="product__price-flex">
+            <span class="visually__hidden">{{ 'products.price.sale_price' | t }}</span>
+            <span class="sale__price product__sale-price" data-sale-price>{{ product.selected_or_first_available_variant.price | money }}</span>
+            <span class="visually__hidden">{{ 'products.price.regular_price' | t }}</span>
+            <span class="sale__price product__compare-price {% unless product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %}hidden{% endunless %}" data-regular-price>
+              {{ product.selected_or_first_available_variant.compare_at_price | money }}
+            </span>
+            {%- if block.settings.show_sale_badges -%}
+              <span class="badge sale__badge{% if settings.sale_badge_color contains '#f' %} badge-color__dark{% else %} badge-color__light{% endif %}">{{ 'products.badges.on_sale' | t }}</span>
+              <span class="badge hidden soldout__badge{% if settings.soldout_badge_color contains '#f' %} badge-color__dark{% else %} badge-color__light{% endif %}">{{ 'products.badges.sold_out' | t }}</span>
             {%- endif -%}
-            {%- else -%}
-              {{ 'products.free_unit_price' | t }}
-          {%- endif -%}
+          </div>
+          <div data-unit-price class="product__unit-price hidden">
+            {%- if product.selected_or_first_available_variant.price > 0 -%}
+              {%- if product.selected_or_first_available_variant.unit_price_measurement -%}
+                <div>{{ product.selected_or_first_available_variant.unit_price }}/
+                  {%- if product.selected_or_first_available_variant.unit_price_measurement.reference_value != 1 -%}
+                    {{ product.selected_or_first_available_variant.unit_price_measurement.reference_value }}
+                  {%- endif -%}
+                    {{ product.selected_or_first_available_variant.unit_price_measurement.reference_unit }}
+                </div>
+              {%- endif -%}
+              {%- else -%}
+                {{ 'products.free_unit_price' | t }}
+            {%- endif -%}
+          </div>
+          <div class="product__tax-policies rte{% unless shop.taxes_included or shop.shipping_policy.body != blank %} hidden{% endunless %}">
+            {%- if shop.taxes_included -%}
+              <span>{{ 'products.taxes_included' | t }}</span>
+            {%- endif -%}
+            {%- if shop.shipping_policy.body != blank -%}
+              <span>{{ 'products.shipping_policy_html' | t: link: shop.shipping_policy.url  }}</span>
+            {%- endif -%}
+          </div>
         </div>
-        <div class="product__tax-policies rte{% unless shop.taxes_included or shop.shipping_policy.body != blank %} hidden{% endunless %}">
-          {%- if shop.taxes_included -%}
-            <span>{{ 'products.taxes_included' | t }}</span>
-          {%- endif -%}
-          {%- if shop.shipping_policy.body != blank -%}
-            <span>{{ 'products.shipping_policy_html' | t: link: shop.shipping_policy.url  }}</span>
-          {%- endif -%}
+        {%- if section.settings.show_rating -%}
+          <div class="product__rating">
+            {%- render 'product-rating' -%}
+          </div>
+        {%- endif -%}
+      {%- else -%}
+        <div class="product__price-flex">
+          <span class="sale__price product__sale-price">{{ 'products.onboarding.product_price' | t }}</span>
         </div>
-      </div>
-      {%- if section.settings.show_rating -%}
-        <div class="product__rating">
-          {%- render 'product-rating' -%}
-        </div>
-      {%- endif -%}
+      {%- endunless -%}
     </div>
     {%- when 'description' -%}
     <div class="product__block product__description rte" {{ block.shopify_attributes }}>
