@@ -61,7 +61,8 @@
 {%- endunless -%}
 <script>
   function initProductVariants() {
-    let product = {{ product | json }}
+    let product = {{ product | json }};
+    console.log(product);
   let selectors = {
     masterVariantSelector: document.querySelectorAll('.selected-variant__id'),
     productSalePrice: document.querySelector('[data-sale-price]'),
