@@ -719,6 +719,9 @@
         "sku": {
           "name": "Sku"
         }
+      },
+      "presets": {
+        "name": "Featured Product"
       }
     },
     "faq": {
