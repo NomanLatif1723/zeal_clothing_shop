@@ -1533,7 +1533,7 @@ function initProductVariants() {
     // return variants.find(variant => {
     //   return selectedOptions.every(option => variant.options.includes(option));
     // });
-    let variantData = JSON.parse(this.querySelector('[type="application/json"]').textContent);
+    let variantData = JSON.parse(document.querySelector('[type="application/json"]').textContent);
     return variantData;
   }
   function updateMasterVariant(matchedVariant) {
