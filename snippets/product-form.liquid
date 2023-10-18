@@ -57,16 +57,16 @@
             {%- endif -%}
           </div>
         </div>
-        {%- if section.settings.show_rating -%}
-          <div class="product__rating">
-            {%- render 'product-rating' -%}
-          </div>
-        {%- endif -%}
       {%- else -%}
         <div class="product__price-flex">
           <span class="sale__price product__sale-price">{{ 'products.onboarding.product_price' | t }}</span>
         </div>
       {%- endunless -%}
+      {%- if section.settings.show_rating -%}
+        <div class="product__rating">
+          {%- render 'product-rating' -%}
+        </div>
+      {%- endif -%}
     </div>
     {%- when 'description' -%}
     <div class="product__block product__description rte" {{ block.shopify_attributes }}>
