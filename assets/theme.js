@@ -1499,7 +1499,6 @@ function initProductVariants() {
     let matchedVariant = selectors.product.variants.find(variant => {
       return selectedOptions.every(option => variant.options.includes(option));
     });
-     // let matchedVariant = findMatchedVariant(selectors.product.variants, selectedOptions);
 
     if (matchedVariant) {
       updateMasterVariant(matchedVariant);
@@ -1515,12 +1514,7 @@ function initProductVariants() {
       updateProductInfo(matchedVariant);
     }
   }
-
-  // function findMatchedVariant(variants, selectedOptions) {
-  //   return variants.find(variant => {
-  //     return selectedOptions.every(option => variant.options.includes(option));
-  //   });
-  // }
+  
   function updateMasterVariant(matchedVariant) {
     // if (!selectors.masterVariantSelector) {
     //   return;
