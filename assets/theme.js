@@ -1502,21 +1502,21 @@ function initProductVariants() {
     // });
 
     console.log("Product Data:", product);
-    console.log("Selected Options:", selectedOptions);
-    
-    let matchedVariant = product.variants.find(variant => {
-      console.log("Checking Variant:", variant);
-      return selectedOptions.every(option => {
-        console.log("Comparing Option:", option);
-        return variant.options.includes(option);
-      });
-    });
-    
-    if (matchedVariant) {
-      console.log("Matched Variant:", matchedVariant);
-    } else {
-      console.log("No matching variant found.");
-    }
+
+if (product && Array.isArray(product.variants)) {
+  let matchedVariant = product.variants.find(variant => {
+    return selectedOptions.every(option => variant.options.includes(option));
+  });
+
+  if (matchedVariant) {
+    console.log("Matched Variant:", matchedVariant);
+  } else {
+    console.log("No matching variant found.");
+  }
+} else {
+  console.error("Product or variants data is missing or invalid.");
+}
+
     
      // let matchedVariant = findMatchedVariant(selectors.product.variants, selectedOptions);
 
