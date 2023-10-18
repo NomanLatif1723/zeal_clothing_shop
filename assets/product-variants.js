@@ -178,7 +178,7 @@
     // Find the matched variant
     const product = JSON.parse(document.querySelector('[type="application/json"]').innerHTML);
     console.log(product);
-    let matchedVariant = product.variants.find(variant => {
+    let matchedVariant = selectors.product.variants.find(variant => {
       return selectedOptions.every(option => variant.options.includes(option));
     });
 
