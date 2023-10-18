@@ -936,7 +936,7 @@
         "template--19980215124290__c0a967db-8ba7-41d1-833e-fbe96989c9c1-variants_picker-1": {
           "type": "variants_picker",
           "settings": {
-            "variant_type": "dropdown",
+            "variant_type": "button",
             "enable_color_swatches": false
           }
         },
