@@ -1,3 +1,32 @@
+{%- liquid
+  assign media_container_width = section.settings.media_width
+  assign media_size = '760px'
+  if media_container_width == 'compact'
+    assign product_media_width = 'product-block__small'
+    assign product_content_width = 'product-block__large'
+    assign media_size = '420px'
+  elsif media_container_width == 'large'
+    assign product_media_width = 'product-block__half'
+    assign product_content_width = 'product-block__half'
+    assign media_size = '650px'
+  else 
+    assign product_media_width = 'product-block__extended'
+    assign product_content_width = 'product-block__extra--small'
+    assign media_size = '760px'
+  endif
+-%}
+{%- style -%}
+  .main__section-{{ section.id }}{
+    margin-top: {{ section.settings.margin_top | times: 0.5 | round: 0 }}px;
+    margin-bottom: {{ section.settings.margin_bottom | times: 0.5 | round: 0 }}px;
+  }
+  @media only screen and (min-width: 769px) {
+    .main__section-{{ section.id }}{
+      margin-top: {{ section.settings.margin_top }}px;
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+  }
+{%- endstyle -%}
 {% schema %}
   {
     "name": "t:sections.main-product.name",
