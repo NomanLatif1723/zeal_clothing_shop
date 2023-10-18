@@ -485,6 +485,239 @@
         "name": "Featured Collection"
       }
     },
+    "featured-product": {
+      "name": "Featured Product",
+      "settings": {
+        "show_rating": {
+          "label": "Add Product Rating",
+          "info": "To display a rating, add a product rating app. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/theme-structure\/theme-features#featured-product-rating)"
+        },
+        "media_position": {
+          "label": "Media on the Right"
+        },
+        "enable_image_zoom": {
+          "label": "Enable Image Zoom"
+        },
+        "media_width": {
+          "label": "Desktop Width",
+          "options": {
+            "compact": {
+              "label": "Compact"
+            },
+            "large": {
+              "label": "Large"
+            },
+            "extended": {
+              "label": "Extended"
+            }
+          }
+        },
+        "media_layout": {
+          "label": "Desktop Layout",
+          "options": {
+            "grid": {
+              "label": "Grid"
+            },
+            "thumbnail": {
+              "label": "Thumbnail"
+            }
+          }
+        },
+        "thumbnail_position": {
+          "label": "Thumbnail Positions",
+          "options": {
+            "left": {
+              "label": "Left"
+            },
+            "below": {
+              "label": "Below"
+            }
+          }
+        },
+        "show_thumbnail_arrows": {
+          "label": "Show Arrows"
+        },
+        "header_size_chart": {
+          "label": "Size Chart",
+          "size_chart_page": {
+            "label": "Size Chart Page",
+            "info": "Select a Page for Size Chart"
+          }
+        },
+        "header_spacing": {
+          "label": "Section Spacing",
+          "top_spacing": {
+            "label": "Spacing Top"
+          },
+          "bottom_spacing": {
+            "label": "Spacing Bottom"
+          }
+        }
+      },
+      "blocks": {
+        "title": {
+          "name": "Title"
+        },
+        "description": {
+          "name": "Short Description"
+        },
+        "full_description": {
+          "name": "Full Description",
+          "settings": {
+            "description_as_tab": {
+              "label": "Description as a tab"
+            },
+            "heading": {
+              "label": "Heading"
+            }
+          }
+        },
+        "variants_picker": {
+          "name": "variants Picker",
+          "settings": {
+            "variant_type": {
+              "label": "Variants Type",
+              "options": {
+                "dropdown": {
+                  "label": "Dropdown"
+                },
+                "button": {
+                  "label": "Buttons"
+                }
+              }
+            },
+            "enable_color_swatches": {
+              "label": "Enable Color Swatches"
+            }
+          }
+        },
+        "collapsables": {
+          "name": "Collapsables",
+          "settings": {
+            "heading": {
+              "label": "Heading"
+            },
+            "text": {
+              "label": "Text"
+            }
+          }
+        },
+        "price": {
+          "name": "Price",
+          "settings": {
+            "show_sale_badges": {
+              "label": "Show Sale Badges"
+            }
+          }
+        },
+        "quantity_selector": {
+          "name": "Quantity Selector"
+        },
+        "buy_buttons": {
+          "name": "Buy Buttons",
+          "settings": {
+            "enable_dynamic_checkout": {
+              "label": "Enable Dynamic Checkout Buttons",
+              "info": "Using the payment methods available on your store, customers see their preferred option, like PayPal or Apple Pay. [Learn more](https:\/\/help.shopify.com\/manual\/using-themes\/change-the-layout\/dynamic-checkout)"
+            }
+          }
+        },
+        "custom_liquid": {
+          "name": "Custom Liquid",
+          "settings": {
+            "custom_content": {
+              "label": "Liquid",
+              "info": "Add app snippets or other Liquid code to create advanced customizations."
+            }
+          }
+        },
+        "sale_timer": {
+          "name": "Sale Timer",
+          "settings": {
+            "year": {
+              "label": "Year"
+            },
+            "month": {
+              "label": "Month",
+              "options": {
+                "01": {
+                  "label": "January"
+                },
+                "02": {
+                  "label": "Febrary"
+                },
+                "03": {
+                  "label": "March"
+                },
+                "04": {
+                  "label": "April"
+                },
+                "05": {
+                  "label": "May"
+                },
+                "06": {
+                  "label": "June"
+                },
+                "07": {
+                  "label": "July"
+                },
+                "08": {
+                  "label": "August"
+                },
+                "09": {
+                  "label": "September"
+                },
+                "10": {
+                  "label": "October"
+                },
+                "11": {
+                  "label": "November"
+                },
+                "12": {
+                  "label": "December"
+                }
+              }
+            },
+            "day": {
+              "label": "Day"
+            },
+            "hour": {
+              "label": "Hour"
+            },
+            "minutes": {
+              "label": "Minute"
+            },
+            "timer_completion_message": {
+              "label": "Completion Message"
+            }
+          }
+        },
+        "social_share": {
+          "name": "Social Sharing"
+        },
+        "stock": {
+          "name": "Stock Counter",
+          "settings": {
+            "stock_threshold": {
+              "label": "Stock Threshold",
+              "info": "Choose 0 to always show in stock if available."
+            },
+            "stock_count": {
+              "label": "Show Stock Count"
+            }
+          }
+        },
+        "tags": {
+          "name": "Tags"
+        },
+        "category": {
+          "name": "Category"
+        },
+        "sku": {
+          "name": "Sku"
+        }
+      }
+    },
     "faq": {
       "name": "FAQ",
       "settings": {
