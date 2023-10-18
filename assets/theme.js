@@ -1504,7 +1504,7 @@ function initProductVariants() {
 //     return variant.options.includes(option);
 //   });
 // });
-    let matchedVariant = getVariantData().find((variant) => {
+    let matchedVariant = product.find((variant) => {
       return !variant.options
         .map((option, index) => {
           return this.options[index] === option;
