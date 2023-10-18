@@ -488,6 +488,9 @@
     "featured-product": {
       "name": "Featured Product",
       "settings": {
+        "product": {
+          "label": "Product"
+        },
         "show_rating": {
           "label": "Add Product Rating",
           "info": "To display a rating, add a product rating app. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/theme-structure\/theme-features#featured-product-rating)"
