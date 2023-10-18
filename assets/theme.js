@@ -1496,10 +1496,27 @@ function initProductVariants() {
     // Find the matched variant
     
     const product = JSON.parse(document.querySelector('[type="application/json"]').textContent);
-    console.log(product);
-    let matchedVariant = product.find(variant => {
-      return selectedOptions.every(option => variant.options.includes(option));
+    // console.log(product);
+    // let matchedVariant = product.find(variant => {
+    //   return selectedOptions.every(option => variant.options.includes(option));
+    // });
+
+    console.log("Product Data:", product);
+    console.log("Selected Options:", selectedOptions);
+    
+    let matchedVariant = product.variants.find(variant => {
+      console.log("Checking Variant:", variant);
+      return selectedOptions.every(option => {
+        console.log("Comparing Option:", option);
+        return variant.options.includes(option);
+      });
     });
+    
+    if (matchedVariant) {
+      console.log("Matched Variant:", matchedVariant);
+    } else {
+      console.log("No matching variant found.");
+    }
     
      // let matchedVariant = findMatchedVariant(selectors.product.variants, selectedOptions);
 
