@@ -1497,6 +1497,7 @@ function initProductVariants() {
     // let matchedVariant = selectors.product.variants.find(variant => {
     //   return selectedOptions.every(option => variant.options.includes(option));
     // });
+    console.log(selectors.product);
      let matchedVariant = findMatchedVariant(selectors.product.variants, selectedOptions);
 
     if (matchedVariant) {
