@@ -1494,15 +1494,15 @@ function initProductVariants() {
       }
     });
     // Find the matched variant
-    const product = JSON.parse(document.querySelector('[type="application/json"]').textContent);
-    const productData = [
-      product
-    ];
-    console.log(productData);
-    // console.log(product);
-    // let matchedVariant = product.find(variant => {
-    //   return selectedOptions.every(option => variant.options.includes(option));
-    // });
+    // const product = JSON.parse(document.querySelector('[type="application/json"]').textContent);
+    // const productData = [
+    //   product
+    // ];
+    // console.log(productData);
+    console.log(product);
+    let matchedVariant = selectors.product.find(variant => {
+      return selectedOptions.every(option => variant.options.includes(option));
+    });
 
     
      // let matchedVariant = findMatchedVariant(selectors.product.variants, selectedOptions);
