@@ -1497,7 +1497,7 @@ function initProductVariants() {
     
     const product = JSON.parse(document.querySelector('[type="application/json"]').textContent);
     console.log(product);
-    let matchedVariant = product.variants.find(variant => {
+    let matchedVariant = product.find(variant => {
       return selectedOptions.every(option => variant.options.includes(option));
     });
     
