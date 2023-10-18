@@ -913,6 +913,60 @@
         "margin_top": 16,
         "margin_bottom": 16
       }
+    },
+    "c0a967db-8ba7-41d1-833e-fbe96989c9c1": {
+      "type": "featured-product",
+      "blocks": {
+        "template--19980215124290__c0a967db-8ba7-41d1-833e-fbe96989c9c1-title-1": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "template--19980215124290__c0a967db-8ba7-41d1-833e-fbe96989c9c1-price-1": {
+          "type": "price",
+          "settings": {
+            "show_sale_badges": false
+          }
+        },
+        "template--19980215124290__c0a967db-8ba7-41d1-833e-fbe96989c9c1-description-1": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "template--19980215124290__c0a967db-8ba7-41d1-833e-fbe96989c9c1-variants_picker-1": {
+          "type": "variants_picker",
+          "settings": {
+            "variant_type": "dropdown",
+            "enable_color_swatches": false
+          }
+        },
+        "template--19980215124290__c0a967db-8ba7-41d1-833e-fbe96989c9c1-buy_buttons-1": {
+          "type": "buy_buttons",
+          "settings": {
+            "enable_dynamic_checkout": false
+          }
+        }
+      },
+      "block_order": [
+        "template--19980215124290__c0a967db-8ba7-41d1-833e-fbe96989c9c1-title-1",
+        "template--19980215124290__c0a967db-8ba7-41d1-833e-fbe96989c9c1-price-1",
+        "template--19980215124290__c0a967db-8ba7-41d1-833e-fbe96989c9c1-description-1",
+        "template--19980215124290__c0a967db-8ba7-41d1-833e-fbe96989c9c1-variants_picker-1",
+        "template--19980215124290__c0a967db-8ba7-41d1-833e-fbe96989c9c1-buy_buttons-1"
+      ],
+      "settings": {
+        "product": "",
+        "show_rating": false,
+        "media_position": false,
+        "enable_image_zoom": false,
+        "media_width": "large",
+        "media_layout": "thumbnail",
+        "thumbnail_position": "below",
+        "show_thumbnail_arrows": false,
+        "size_chart_page": "",
+        "margin_top": 16,
+        "margin_bottom": 16
+      }
     }
   },
   "order": [
@@ -937,6 +991,7 @@
     "9913ff1c-3076-4a2f-ba8f-22edb1d6e44e",
     "c9d4b637-1e16-4b9e-8993-6eab77d74c0a",
     "f249ce19-4e8a-4a13-977d-7b0bbe5aaf13",
-    "eb12ada6-c091-44e1-b0a3-3f74ef93b5ad"
+    "eb12ada6-c091-44e1-b0a3-3f74ef93b5ad",
+    "c0a967db-8ba7-41d1-833e-fbe96989c9c1"
   ]
 }
