@@ -309,5 +309,5 @@
     option3.querySelector('[data-option-name]').textContent = matchedVariant.option3;
   }
 }
-initProductVariants();
+  initProductVariants();
 })();
