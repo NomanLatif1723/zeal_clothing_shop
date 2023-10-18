@@ -1484,10 +1484,10 @@ function initProductVariants() {
     let selectedOptions = [];
     selectors.variantSelectors.forEach(selector => {
       if (selector.type === 'radio' || selector.type === 'checkbox') {
-        // selector.closest('.product__swatches-options').classList.remove('selected');
+        selector.closest('.product__swatches-options').classList.remove('selected');
         if (selector.checked) {
           selectedOptions.push(selector.value);
-          // selector.closest('.product__swatches-options').classList.add('selected');
+          selector.closest('.product__swatches-options').classList.add('selected');
         }
       } else {
         selectedOptions.push(selector.value);
@@ -1499,8 +1499,6 @@ function initProductVariants() {
     let matchedVariant = selectors.product.variants.find(variant => {
       return selectedOptions.every(option => variant.options.includes(option));
     });
-
-    
      // let matchedVariant = findMatchedVariant(selectors.product.variants, selectedOptions);
 
     if (matchedVariant) {
