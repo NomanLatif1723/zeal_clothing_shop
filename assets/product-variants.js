@@ -1,4 +1,5 @@
 (function(){
+  let mediaSwiper;
   // function for product Media Sliders
   function initProductmediaSlideShow() {
     let productmediaWrapper = document.querySelectorAll('.product-grid');
