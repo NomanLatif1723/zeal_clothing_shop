@@ -1514,6 +1514,12 @@ function initProductVariants() {
     }
   }
 
+  function findMatchedVariant(variants, selectedOptions) {
+    // Implement custom logic to find the matched variant based on selectedOptions
+    // This function should handle variations in HTML structure
+    return variants.find(variant => {
+      return selectedOptions.every(option => variant.options.includes(option));
+  });
   function updateMasterVariant(matchedVariant) {
     // if (!selectors.masterVariantSelector) {
     //   return;
