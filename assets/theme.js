@@ -1367,86 +1367,86 @@ function initProductCollapsibles() {
 }
 initProductCollapsibles();
 
-// function for product Media Sliders
-function initProductmediaSlideShow() {
-  let productmediaWrapper = document.querySelectorAll('.product-grid');
-  let swiperThumbs;
-  productmediaWrapper.forEach(wrapper => {
-    let id = wrapper.dataset.sectionId;
-    let MediaSliderContainer = wrapper.querySelector('#product__media-' + id);
-    let ThumbnailSliderContainer = wrapper.querySelector('#product__thumbnail-' + id);
-    let thumbnailMediaPosition = wrapper.querySelector('.product-media__grid');
-    if (ThumbnailSliderContainer) {
-      if (ThumbnailSliderContainer.swiper) {
-        ThumbnailSliderContainer.swiper.destroy();
-      }
-      let thumbsSwiperOptions = {
-        slidesPerView: 5,
-        spaceBetween: 20,
-        watchSlidesProgress: true,
-        navigation: {
-          nextEl: '.swiper-button-next.swiper-button-' + id,
-          prevEl: '.swiper-button-prev.swiper-button-' + id
-        },
-      }
-      if (thumbnailMediaPosition) {
-        let thumbnailPosition = thumbnailMediaPosition.dataset.thumbnail;
-        if (thumbnailPosition === 'left') {
-          thumbsSwiperOptions.direction = "vertical";
-          // thumbsSwiperOptions.spaceBetween = 10;
-          thumbsSwiperOptions.mousewheel = true;
-        }
-      }
+// // function for product Media Sliders
+// function initProductmediaSlideShow() {
+//   let productmediaWrapper = document.querySelectorAll('.product-grid');
+//   let swiperThumbs;
+//   productmediaWrapper.forEach(wrapper => {
+//     let id = wrapper.dataset.sectionId;
+//     let MediaSliderContainer = wrapper.querySelector('#product__media-' + id);
+//     let ThumbnailSliderContainer = wrapper.querySelector('#product__thumbnail-' + id);
+//     let thumbnailMediaPosition = wrapper.querySelector('.product-media__grid');
+//     if (ThumbnailSliderContainer) {
+//       if (ThumbnailSliderContainer.swiper) {
+//         ThumbnailSliderContainer.swiper.destroy();
+//       }
+//       let thumbsSwiperOptions = {
+//         slidesPerView: 5,
+//         spaceBetween: 20,
+//         watchSlidesProgress: true,
+//         navigation: {
+//           nextEl: '.swiper-button-next.swiper-button-' + id,
+//           prevEl: '.swiper-button-prev.swiper-button-' + id
+//         },
+//       }
+//       if (thumbnailMediaPosition) {
+//         let thumbnailPosition = thumbnailMediaPosition.dataset.thumbnail;
+//         if (thumbnailPosition === 'left') {
+//           thumbsSwiperOptions.direction = "vertical";
+//           // thumbsSwiperOptions.spaceBetween = 10;
+//           thumbsSwiperOptions.mousewheel = true;
+//         }
+//       }
       
-      swiperThumbs = new Swiper(ThumbnailSliderContainer, thumbsSwiperOptions);
-    }
-    if (MediaSliderContainer) {
-      if (MediaSliderContainer.swiper) {
-        MediaSliderContainer.swiper.destroy();
-      }
-      let mediaSwiperOptions = {
-        slidesPerView: 1,
-        navigation: {
-          nextEl: '.swiper-button-next.swiper-button-' + id,
-          prevEl: '.swiper-button-prev.swiper-button-' + id
-        },
-        thumbs: {
-          swiper: swiperThumbs
-        },
-      }
-      mediaSwiper = new Swiper(MediaSliderContainer, mediaSwiperOptions);
-    }
-  })
-}
-initProductmediaSlideShow();
+//       swiperThumbs = new Swiper(ThumbnailSliderContainer, thumbsSwiperOptions);
+//     }
+//     if (MediaSliderContainer) {
+//       if (MediaSliderContainer.swiper) {
+//         MediaSliderContainer.swiper.destroy();
+//       }
+//       let mediaSwiperOptions = {
+//         slidesPerView: 1,
+//         navigation: {
+//           nextEl: '.swiper-button-next.swiper-button-' + id,
+//           prevEl: '.swiper-button-prev.swiper-button-' + id
+//         },
+//         thumbs: {
+//           swiper: swiperThumbs
+//         },
+//       }
+//       mediaSwiper = new Swiper(MediaSliderContainer, mediaSwiperOptions);
+//     }
+//   })
+// }
+// initProductmediaSlideShow();
 
 // Product Quantity Selectors Event
-function initProductQuantitySelector() {
-  const quantityWrapper = document.querySelectorAll('.product__item-quantity');
-  quantityWrapper.forEach(wrapper => {
-    if (!wrapper) {
-      return;
-    }
-    const quantityButton = wrapper.querySelectorAll('button');
-    quantityButton.forEach(button => {
-      if (!button) {
-        return;
-      }
-      button.addEventListener('click', () => {
-        let quantityInput = button.parentElement.querySelector('input');
-        let quantityValue = Number(quantityInput.value);
-        const isPlus = button.classList.contains('icon__plus');
-        if (isPlus) {
-          quantityInput.value = quantityValue + 1;
-        } else if(quantityValue > 1) {
-          quantityInput.value = quantityValue - 1;
-        }
-      })
-    })
-  })
+// function initProductQuantitySelector() {
+//   const quantityWrapper = document.querySelectorAll('.product__item-quantity');
+//   quantityWrapper.forEach(wrapper => {
+//     if (!wrapper) {
+//       return;
+//     }
+//     const quantityButton = wrapper.querySelectorAll('button');
+//     quantityButton.forEach(button => {
+//       if (!button) {
+//         return;
+//       }
+//       button.addEventListener('click', () => {
+//         let quantityInput = button.parentElement.querySelector('input');
+//         let quantityValue = Number(quantityInput.value);
+//         const isPlus = button.classList.contains('icon__plus');
+//         if (isPlus) {
+//           quantityInput.value = quantityValue + 1;
+//         } else if(quantityValue > 1) {
+//           quantityInput.value = quantityValue - 1;
+//         }
+//       })
+//     })
+//   })
   
-}
-initProductQuantitySelector(); 
+// }
+// initProductQuantitySelector(); 
 
 // Product Variants js
 // function initProductVariants() {
