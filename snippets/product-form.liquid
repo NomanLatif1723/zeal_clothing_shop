@@ -1,7 +1,11 @@
 {%- assign product_form_id = 'addToCartForm-' | append: section.id | append: '-' | append: product.id -%}
 {%- if show_vendor -%}
   <div class="product__vendor">
-    {{ product.vendor | link_to_vendor }}
+    {%- unless product.empty? -%}
+      {{ product.vendor | link_to_vendor }}
+    {%- else -%}
+      {{ 'products.onboading.product_vendor' | t }}
+    {%- endunless -%}
   </div>
 {%- endif -%}
 {%- for block in section.blocks -%}
