@@ -1499,7 +1499,7 @@ function initProductVariants() {
     //   product
     // ];
     // console.log(productData);
-    console.log(product);
+    // console.log(product);
     let matchedVariant = selectors.product.variants.find(variant => {
       return selectedOptions.every(option => variant.options.includes(option));
     });
