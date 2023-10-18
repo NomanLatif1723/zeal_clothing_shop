@@ -983,6 +983,13 @@
             "text": "<p>We offer fast and reliable shipping services to deliver your desired products right to your doorstep. Once you've placed your order, our dedicated team works diligently to ensure it is processed and dispatched in a timely manner. You can track your order every step of the way and rest assured that it will be handled with the utmost care.<\/p>"
           }
         },
+        "9b792796-868f-42f7-b770-888f8aad8ee4": {
+          "type": "collapsables",
+          "settings": {
+            "heading": "DIMENSIONS",
+            "text": "<p>We offer fast and reliable shipping services to deliver your desired products right to your doorstep. Once you've placed your order, our dedicated team works diligently to ensure it is processed and dispatched in a timely manner. You can track your order every step of the way and rest assured that it will be handled with the utmost care.<\/p>"
+          }
+        },
         "ca29da07-26f1-4a4f-8567-116c86cf605b": {
           "type": "social_share",
           "settings": {
@@ -1000,6 +1007,7 @@
         "bee06aca-deb8-406a-9d5e-bc0656aca227",
         "28506a18-a2b0-4731-8797-203b927e28d3",
         "6046aa21-05a2-4870-a8b2-c5e4dbe02ca8",
+        "9b792796-868f-42f7-b770-888f8aad8ee4",
         "ca29da07-26f1-4a4f-8567-116c86cf605b"
       ],
       "settings": {
