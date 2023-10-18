@@ -1500,7 +1500,7 @@ function initProductVariants() {
     // ];
     // console.log(productData);
     console.log(product);
-    let matchedVariant = selectors.product.find(variant => {
+    let matchedVariant = selectors.product.variants.find(variant => {
       return selectedOptions.every(option => variant.options.includes(option));
     });
 
