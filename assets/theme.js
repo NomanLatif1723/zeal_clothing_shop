@@ -1497,19 +1497,8 @@ function initProductVariants() {
     
     const product = JSON.parse(document.querySelector('[type="application/json"]').textContent);
     console.log(product);
-//     let matchedVariant = product.find(variant => {
-//   console.log("Checking Variant:", variant);
-//   return selectedOptions.every(option => {
-//     console.log("Comparing Option:", option);
-//     return variant.options.includes(option);
-//   });
-// });
-    let matchedVariant = product.find((variant) => {
-      return !variant.options
-        .map((option, index) => {
-          return this.options[index] === option;
-        })
-        .includes(false);
+    let matchedVariant = product.variants.find(variant => {
+      return selectedOptions.every(option => variant.options.includes(option));
     });
     
      // let matchedVariant = findMatchedVariant(selectors.product.variants, selectedOptions);
@@ -1529,13 +1518,11 @@ function initProductVariants() {
     }
   }
 
-  function getVariantData() {
-    // return variants.find(variant => {
-    //   return selectedOptions.every(option => variant.options.includes(option));
-    // });
-    let variantData = JSON.parse(document.querySelector('[type="application/json"]').textContent);
-    return variantData;
-  }
+  // function findMatchedVariant(variants, selectedOptions) {
+  //   return variants.find(variant => {
+  //     return selectedOptions.every(option => variant.options.includes(option));
+  //   });
+  // }
   function updateMasterVariant(matchedVariant) {
     // if (!selectors.masterVariantSelector) {
     //   return;
