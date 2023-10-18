@@ -231,6 +231,124 @@
         "margin_bottom": 60
       }
     },
+    "c0a967db-8ba7-41d1-833e-fbe96989c9c1": {
+      "type": "featured-product",
+      "blocks": {
+        "template--19980215124290__c0a967db-8ba7-41d1-833e-fbe96989c9c1-title-1": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "template--19980215124290__c0a967db-8ba7-41d1-833e-fbe96989c9c1-price-1": {
+          "type": "price",
+          "settings": {
+            "show_sale_badges": false
+          }
+        },
+        "template--19980215124290__c0a967db-8ba7-41d1-833e-fbe96989c9c1-description-1": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "template--19980215124290__c0a967db-8ba7-41d1-833e-fbe96989c9c1-variants_picker-1": {
+          "type": "variants_picker",
+          "settings": {
+            "variant_type": "button",
+            "enable_color_swatches": false
+          }
+        },
+        "8f8c6a47-1efa-405f-aaa9-0c3b09c36fa9": {
+          "type": "sale_timer",
+          "settings": {
+            "years": 2024,
+            "months": "08",
+            "days": 31,
+            "hours": 12,
+            "minutes": 12,
+            "timer_completion_message": ""
+          }
+        },
+        "277743ad-26b5-4afc-864f-bcf3a0b12acb": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "template--19980215124290__c0a967db-8ba7-41d1-833e-fbe96989c9c1-buy_buttons-1": {
+          "type": "buy_buttons",
+          "settings": {
+            "enable_dynamic_checkout": false
+          }
+        },
+        "bee06aca-deb8-406a-9d5e-bc0656aca227": {
+          "type": "full_description",
+          "settings": {
+            "description_as_tab": true,
+            "description_tab_heading": "Description"
+          }
+        },
+        "28506a18-a2b0-4731-8797-203b927e28d3": {
+          "type": "collapsables",
+          "settings": {
+            "heading": "SHIPPING & RETURNS",
+            "text": "<p><strong>Shipping:<\/strong><\/p><p>We offer fast and reliable shipping services to deliver your desired products right to your doorstep. Once you've placed your order, our dedicated team works diligently to ensure it is processed and dispatched in a timely manner. You can track your order every step of the way and rest assured that it will be handled with the utmost care.<\/p><p><strong>Returns:<\/strong><\/p><p>We understand that sometimes you may need to make a return or exchange. That's why we have a straightforward and customer-friendly returns policy. If you're not completely satisfied with your purchase, you can initiate a return within [number of days] of receiving your order.<\/p>"
+          }
+        },
+        "6046aa21-05a2-4870-a8b2-c5e4dbe02ca8": {
+          "type": "collapsables",
+          "settings": {
+            "heading": "MATERIALS",
+            "text": "<p>We offer fast and reliable shipping services to deliver your desired products right to your doorstep. Once you've placed your order, our dedicated team works diligently to ensure it is processed and dispatched in a timely manner. You can track your order every step of the way and rest assured that it will be handled with the utmost care.<\/p>"
+          }
+        },
+        "9b792796-868f-42f7-b770-888f8aad8ee4": {
+          "type": "collapsables",
+          "settings": {
+            "heading": "DIMENSIONS",
+            "text": "<p>We offer fast and reliable shipping services to deliver your desired products right to your doorstep. Once you've placed your order, our dedicated team works diligently to ensure it is processed and dispatched in a timely manner. You can track your order every step of the way and rest assured that it will be handled with the utmost care.<\/p>"
+          }
+        },
+        "c26ca595-6559-413d-84d3-6d3a59814886": {
+          "type": "collapsables",
+          "settings": {
+            "heading": "CARE INSTRUCTIONS",
+            "text": "<p>We offer fast and reliable shipping services to deliver your desired products right to your doorstep. Once you've placed your order, our dedicated team works diligently to ensure it is processed and dispatched in a timely manner. You can track your order every step of the way and rest assured that it will be handled with the utmost care.<\/p>"
+          }
+        },
+        "ca29da07-26f1-4a4f-8567-116c86cf605b": {
+          "type": "social_share",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "template--19980215124290__c0a967db-8ba7-41d1-833e-fbe96989c9c1-title-1",
+        "template--19980215124290__c0a967db-8ba7-41d1-833e-fbe96989c9c1-price-1",
+        "template--19980215124290__c0a967db-8ba7-41d1-833e-fbe96989c9c1-description-1",
+        "template--19980215124290__c0a967db-8ba7-41d1-833e-fbe96989c9c1-variants_picker-1",
+        "8f8c6a47-1efa-405f-aaa9-0c3b09c36fa9",
+        "277743ad-26b5-4afc-864f-bcf3a0b12acb",
+        "template--19980215124290__c0a967db-8ba7-41d1-833e-fbe96989c9c1-buy_buttons-1",
+        "bee06aca-deb8-406a-9d5e-bc0656aca227",
+        "28506a18-a2b0-4731-8797-203b927e28d3",
+        "6046aa21-05a2-4870-a8b2-c5e4dbe02ca8",
+        "9b792796-868f-42f7-b770-888f8aad8ee4",
+        "c26ca595-6559-413d-84d3-6d3a59814886",
+        "ca29da07-26f1-4a4f-8567-116c86cf605b"
+      ],
+      "settings": {
+        "featured_product": "team-training-jersey",
+        "show_rating": false,
+        "media_position": false,
+        "enable_image_zoom": false,
+        "media_width": "large",
+        "media_layout": "thumbnail",
+        "thumbnail_position": "below",
+        "show_thumbnail_arrows": false,
+        "size_chart_page": "",
+        "margin_top": 16,
+        "margin_bottom": 16
+      }
+    },
     "b2c49c1e-4880-4b9e-90e7-0135ddd0a9b9": {
       "type": "richtext",
       "blocks": {
@@ -913,124 +1031,6 @@
         "margin_top": 16,
         "margin_bottom": 16
       }
-    },
-    "c0a967db-8ba7-41d1-833e-fbe96989c9c1": {
-      "type": "featured-product",
-      "blocks": {
-        "template--19980215124290__c0a967db-8ba7-41d1-833e-fbe96989c9c1-title-1": {
-          "type": "title",
-          "settings": {
-          }
-        },
-        "template--19980215124290__c0a967db-8ba7-41d1-833e-fbe96989c9c1-price-1": {
-          "type": "price",
-          "settings": {
-            "show_sale_badges": false
-          }
-        },
-        "template--19980215124290__c0a967db-8ba7-41d1-833e-fbe96989c9c1-description-1": {
-          "type": "description",
-          "settings": {
-          }
-        },
-        "template--19980215124290__c0a967db-8ba7-41d1-833e-fbe96989c9c1-variants_picker-1": {
-          "type": "variants_picker",
-          "settings": {
-            "variant_type": "button",
-            "enable_color_swatches": false
-          }
-        },
-        "8f8c6a47-1efa-405f-aaa9-0c3b09c36fa9": {
-          "type": "sale_timer",
-          "settings": {
-            "years": 2024,
-            "months": "08",
-            "days": 31,
-            "hours": 12,
-            "minutes": 12,
-            "timer_completion_message": ""
-          }
-        },
-        "277743ad-26b5-4afc-864f-bcf3a0b12acb": {
-          "type": "quantity_selector",
-          "settings": {
-          }
-        },
-        "template--19980215124290__c0a967db-8ba7-41d1-833e-fbe96989c9c1-buy_buttons-1": {
-          "type": "buy_buttons",
-          "settings": {
-            "enable_dynamic_checkout": false
-          }
-        },
-        "bee06aca-deb8-406a-9d5e-bc0656aca227": {
-          "type": "full_description",
-          "settings": {
-            "description_as_tab": true,
-            "description_tab_heading": "Description"
-          }
-        },
-        "28506a18-a2b0-4731-8797-203b927e28d3": {
-          "type": "collapsables",
-          "settings": {
-            "heading": "SHIPPING & RETURNS",
-            "text": "<p><strong>Shipping:<\/strong><\/p><p>We offer fast and reliable shipping services to deliver your desired products right to your doorstep. Once you've placed your order, our dedicated team works diligently to ensure it is processed and dispatched in a timely manner. You can track your order every step of the way and rest assured that it will be handled with the utmost care.<\/p><p><strong>Returns:<\/strong><\/p><p>We understand that sometimes you may need to make a return or exchange. That's why we have a straightforward and customer-friendly returns policy. If you're not completely satisfied with your purchase, you can initiate a return within [number of days] of receiving your order.<\/p>"
-          }
-        },
-        "6046aa21-05a2-4870-a8b2-c5e4dbe02ca8": {
-          "type": "collapsables",
-          "settings": {
-            "heading": "MATERIALS",
-            "text": "<p>We offer fast and reliable shipping services to deliver your desired products right to your doorstep. Once you've placed your order, our dedicated team works diligently to ensure it is processed and dispatched in a timely manner. You can track your order every step of the way and rest assured that it will be handled with the utmost care.<\/p>"
-          }
-        },
-        "9b792796-868f-42f7-b770-888f8aad8ee4": {
-          "type": "collapsables",
-          "settings": {
-            "heading": "DIMENSIONS",
-            "text": "<p>We offer fast and reliable shipping services to deliver your desired products right to your doorstep. Once you've placed your order, our dedicated team works diligently to ensure it is processed and dispatched in a timely manner. You can track your order every step of the way and rest assured that it will be handled with the utmost care.<\/p>"
-          }
-        },
-        "c26ca595-6559-413d-84d3-6d3a59814886": {
-          "type": "collapsables",
-          "settings": {
-            "heading": "CARE INSTRUCTIONS",
-            "text": "<p>We offer fast and reliable shipping services to deliver your desired products right to your doorstep. Once you've placed your order, our dedicated team works diligently to ensure it is processed and dispatched in a timely manner. You can track your order every step of the way and rest assured that it will be handled with the utmost care.<\/p>"
-          }
-        },
-        "ca29da07-26f1-4a4f-8567-116c86cf605b": {
-          "type": "social_share",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "template--19980215124290__c0a967db-8ba7-41d1-833e-fbe96989c9c1-title-1",
-        "template--19980215124290__c0a967db-8ba7-41d1-833e-fbe96989c9c1-price-1",
-        "template--19980215124290__c0a967db-8ba7-41d1-833e-fbe96989c9c1-description-1",
-        "template--19980215124290__c0a967db-8ba7-41d1-833e-fbe96989c9c1-variants_picker-1",
-        "8f8c6a47-1efa-405f-aaa9-0c3b09c36fa9",
-        "277743ad-26b5-4afc-864f-bcf3a0b12acb",
-        "template--19980215124290__c0a967db-8ba7-41d1-833e-fbe96989c9c1-buy_buttons-1",
-        "bee06aca-deb8-406a-9d5e-bc0656aca227",
-        "28506a18-a2b0-4731-8797-203b927e28d3",
-        "6046aa21-05a2-4870-a8b2-c5e4dbe02ca8",
-        "9b792796-868f-42f7-b770-888f8aad8ee4",
-        "c26ca595-6559-413d-84d3-6d3a59814886",
-        "ca29da07-26f1-4a4f-8567-116c86cf605b"
-      ],
-      "settings": {
-        "featured_product": "team-training-jersey",
-        "show_rating": false,
-        "media_position": false,
-        "enable_image_zoom": false,
-        "media_width": "large",
-        "media_layout": "thumbnail",
-        "thumbnail_position": "below",
-        "show_thumbnail_arrows": false,
-        "size_chart_page": "",
-        "margin_top": 16,
-        "margin_bottom": 16
-      }
     }
   },
   "order": [
@@ -1038,6 +1038,7 @@
     "d534c664-a5a4-4f55-b829-6446be3b3cdb",
     "82c03348-6eae-4f16-8533-d3ae96f7f7c5",
     "ec23ba6e-97c1-4933-a005-5a626fabddf8",
+    "c0a967db-8ba7-41d1-833e-fbe96989c9c1",
     "b2c49c1e-4880-4b9e-90e7-0135ddd0a9b9",
     "eb20ecc0-4470-4624-b140-f1161cf8823f",
     "211390c4-4881-4386-992f-62907dc8d4a0",
@@ -1055,7 +1056,6 @@
     "9913ff1c-3076-4a2f-ba8f-22edb1d6e44e",
     "c9d4b637-1e16-4b9e-8993-6eab77d74c0a",
     "f249ce19-4e8a-4a13-977d-7b0bbe5aaf13",
-    "eb12ada6-c091-44e1-b0a3-3f74ef93b5ad",
-    "c0a967db-8ba7-41d1-833e-fbe96989c9c1"
+    "eb12ada6-c091-44e1-b0a3-3f74ef93b5ad"
   ]
 }
