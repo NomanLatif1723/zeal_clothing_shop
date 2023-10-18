@@ -1519,7 +1519,8 @@ function initProductVariants() {
     // This function should handle variations in HTML structure
     return variants.find(variant => {
       return selectedOptions.every(option => variant.options.includes(option));
-  });
+    });
+  }
   function updateMasterVariant(matchedVariant) {
     // if (!selectors.masterVariantSelector) {
     //   return;
