@@ -160,12 +160,13 @@
 
   function updateProductOptions() {
     let selectedOptions = [];
-    selectors.variantSelectors.forEach(option => {
-      if (option.type === 'radio' || option.type === 'checkbox') {
+    selectors.variantSelectors.forEach(selector => {
+      console.log(selector);
+      if (selector.type === 'radio' || selector.type === 'checkbox') {
         document.querySelector('.product__swatches-options').classList.remove('selected');
-        if (option.checked) {
-          selectedOptions.push(option.value);
-          option.closest('.product__swatches-options').classList.add('selected');
+        if (selector.checked) {
+          selectedOptions.push(selector.value);
+          selector.closest('.product__swatches-options').classList.add('selected');
         }
       } else {
         selectedOptions.push(selector.value);
