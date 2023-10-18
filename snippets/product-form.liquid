@@ -11,8 +11,12 @@
       {%- render block -%}
     </div>    
     {%- when 'title' -%}    
-    <div class="product__block product__title" {{ block.shopify_attributes }}>    
-      <h2>{{ product.title }}</h2>
+    <div class="product__block product__title" {{ block.shopify_attributes }}>
+      {%- unless product.empty? -%}
+        <h2>{{ product.title }}</h2>
+      {%- else -%}
+        <h2>{{ 'products.onboarding.product_title' | t }}</h2>
+      {%- endunless -%}
     </div>
     {%- when 'price' -%}    
     <div class="product__block product__price" {{ block.shopify_attributes }}>
