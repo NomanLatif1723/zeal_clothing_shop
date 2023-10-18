@@ -51,6 +51,8 @@
     })
   }
   initProductmediaSlideShow();
+
+  // Product Quantity Selectors Event
   function initProductQuantitySelector() {
     const quantityWrapper = document.querySelectorAll('.product__item-quantity');
     quantityWrapper.forEach(wrapper => {
@@ -77,7 +79,8 @@
     
   }
   initProductQuantitySelector(); 
-  
+
+  // Product Variants js
   function initProductVariants() {
   let selectors = {
     masterVariantSelector: document.querySelectorAll('.selected-variant__id'),
