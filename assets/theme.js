@@ -1498,8 +1498,12 @@ function initProductVariants() {
     const product = JSON.parse(document.querySelector('[type="application/json"]').textContent);
     console.log(product);
     let matchedVariant = product.variants.find(variant => {
-      return selectedOptions.every(option => variant.options.includes(option));
-    });
+  console.log("Checking Variant:", variant);
+  return selectedOptions.every(option => {
+    console.log("Comparing Option:", option);
+    return variant.options.includes(option);
+  });
+});
     
      // let matchedVariant = findMatchedVariant(selectors.product.variants, selectedOptions);
 
