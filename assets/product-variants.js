@@ -163,7 +163,7 @@
     selectors.variantSelectors.forEach(selector => {
       
       if (selector.type === 'radio' || selector.type === 'checkbox') {
-        document.querySelector('.product__swatches-options').classList.remove('selected');
+        selector.closest('.product__swatches-options').classList.remove('selected');
         if (selector.checked) {
           console.log(selector);
           selectedOptions.push(selector.value);
