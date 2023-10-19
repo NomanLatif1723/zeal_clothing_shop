@@ -1507,7 +1507,7 @@ function initProductVariants() {
 
     let handle = document.querySelector('.product-grid').dataset.productHandle;
     console.log(handle);
-    let url = `/products/${handle}.js`;
+    let url = `/products.js`;
     fetch(url)
     .then(function(responce) {
       return responce.json();
