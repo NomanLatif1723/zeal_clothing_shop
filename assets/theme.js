@@ -1507,16 +1507,16 @@ function initProductVariants() {
 
     let handle = document.querySelector('.product-grid').dataset.productHandle;
     console.log(handle);
-    let url = `/product.js`;
+    let url = `/products/${handle}.js`;
     fetch(url)
     .then(function(responce) {
       return responce.json();
     })
     .then(function(products) {
       console.log(products);
-      // let matchedVariant = products.variants.find(variant => {
-      //   return selectedOptions.every(option => variant.options.includes(option));
-      // });
+      let matchedVariant = products.variants.find(variant => {
+        return selectedOptions.every(option => variant.options.includes(option));
+      });
     })
     .catch(function(error) {
       console.log('Error', error);
