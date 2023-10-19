@@ -1498,7 +1498,7 @@ function initProductVariants() {
       }
     });
     // Find the matched variant
-    let product = Array.from(document.querySelector('[type="application/json"]').textContent);
+    let product = Array.from(document.querySelector('[type="application/json"]'));
     console.log(product);
     let matchedVariant = selectors.product.variants.find(variant => {
       return selectedOptions.every(option => variant.options.includes(option));
