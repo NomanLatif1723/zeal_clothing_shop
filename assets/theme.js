@@ -1473,9 +1473,6 @@ function initProductVariants() {
       selectors.format = form.dataset.format || 'default';
       selectors.variantSelectors.forEach(selector => {
         selector.addEventListener('change', () => {
-          const scriptElement = document.querySelector('script[type="application/json"]');
-    const productVariants = JSON.parse(scriptElement.textContent);
-          console.log(scriptElement,productVariants);
           updateProductOptions();
         });
       });
@@ -1501,13 +1498,14 @@ function initProductVariants() {
       }
     });
     // Find the matched variant
-    
-    const matchedVariant = productVariants.find(variant => {
-      return selectedOptions.every(option => variant.options.includes(option));
-    });
-    // let matchedVariant = selectors.product.variants.find(variant => {
+    // const scriptElement = document.querySelector('script[type="application/json"]');
+    // const productVariants = JSON.parse(scriptElement.textContent);
+    // const matchedVariant = productVariants.find(variant => {
     //   return selectedOptions.every(option => variant.options.includes(option));
     // });
+    let matchedVariant = selectors.product.variants.find(variant => {
+      return selectedOptions.every(option => variant.options.includes(option));
+    });
 
     if (matchedVariant) {
       updateMasterVariant(matchedVariant);
