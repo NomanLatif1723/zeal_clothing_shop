@@ -1479,14 +1479,21 @@ function initProductVariants() {
     }
   });
 
-  selectors.productGrid.forEach(product => {
-    if(!product) return;
-    const variantSelectors = product.querySelectorAll('[data-selected-variant]');
-    variantSelectors.forEach(selector => {
-      selector.addEventListener('change', () => {
-        updateProductOptions(selector);
-      });
-    });
+  // selectors.productGrid.forEach(product => {
+  //   if(!product) return;
+  //   const variantSelectors = product.querySelectorAll('[data-selected-variant]');
+  //   variantSelectors.forEach(selector => {
+  //     selector.addEventListener('change', () => {
+  //       updateProductOptions(selector);
+  //     });
+  //   });
+  // });
+
+  document.body.addEventListener('change', (event) => {
+    const selector = event.target;
+    if (selector.hasAttribute('data-selected-variant')) {
+      updateProductOptions(selector);
+    }
   });
 
   function updateProductOptions(selector) {
