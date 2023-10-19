@@ -1530,6 +1530,14 @@ function initProductVariants() {
   }
   
   function updateMasterVariant(matchedVariant) {
+    let currentVariant = getVariantData().find((variant) => {
+      return !variant.options
+        .map((option, index) => {
+          return options[index] === option;
+        })
+        .includes(false);
+    });
+    console.log(currentVariant);
     if (!selectors.masterVariantSelector) {
       return;
     }
@@ -1542,6 +1550,10 @@ function initProductVariants() {
     selectors.masterVariantSelector.value = matchedVariant.id;
   }
 
+  getVariantData() {
+    variantData = this.variantData || JSON.parse(document.querySelector('[type="application/json"]').textContent);
+    return variantData;
+  }
   function updateUrl(matchedVariant) {
     if (!history.replaceState || !matchedVariant) {
       return;
