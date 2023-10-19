@@ -1465,10 +1465,7 @@ function initProductVariants() {
     product: window.themeContent.routes.product,
     formValidationErrorMessage: document.querySelector('.product-form__errors')
   };
-  const scriptElement = document.querySelector('script[type="application/json"]');
-  const productVariants = JSON.parse(scriptElement.textContent);
-  console.log(scriptElement);
-  console.log(productVariants);
+
   selectors.productForm.forEach(form => {
     if (!form) {
       return;
@@ -1504,12 +1501,15 @@ function initProductVariants() {
     // Find the matched variant
     // const scriptElement = document.querySelector('script[type="application/json"]');
     // const productVariants = JSON.parse(scriptElement.textContent);
-    const matchedVariant = productVariants.find(variant => {
-      return selectedOptions.every(option => variant.options.includes(option));
-    });
-    // let matchedVariant = selectors.product.variants.find(variant => {
+    // const matchedVariant = productVariants.find(variant => {
     //   return selectedOptions.every(option => variant.options.includes(option));
     // });
+    fetch('/products/team-training-jersey.js', {
+      
+    })
+    let matchedVariant = selectors.product.variants.find(variant => {
+      return selectedOptions.every(option => variant.options.includes(option));
+    });
 
     if (matchedVariant) {
       updateMasterVariant(matchedVariant);
