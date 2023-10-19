@@ -1518,11 +1518,11 @@ function initProductVariants() {
     });
     
     // Find the matched variant
-    getVariant(selectedOptions);
+    getVariant(selectedOptions,product);
   }
 
-  function getVariant(selectedOptions) {
-    selectors.productGrid.forEach(product => {
+  function getVariant(selectedOptions, product) {
+    // selectors.productGrid.forEach(product => {
       const handle = product.dataset.productHandle;
       let url = `/products/${handle}.js`;
       fetch(url)
@@ -1551,7 +1551,7 @@ function initProductVariants() {
       .catch(function(error) {
         console.log('Error', error);
       });
-    })
+    // })
   }
   
   function updateMasterVariant(matchedVariant) {
