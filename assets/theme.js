@@ -1544,6 +1544,7 @@ function initProductVariants() {
       });
     })
   }
+  
   function updateMasterVariant(matchedVariant) {
     if (!selectors.masterVariantSelector) {
       return;
