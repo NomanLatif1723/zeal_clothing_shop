@@ -65,7 +65,9 @@
     </div>
   </div>
 </div>
-<a href="{{ product | json }}">link</a>
+<script>
+  {{ product | json }}
+</script>
 {% schema %}
   {
     "name": "t:sections.main-product.name",
