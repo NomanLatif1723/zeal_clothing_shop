@@ -1550,7 +1550,7 @@ function initProductVariants() {
     selectors.masterVariantSelector.value = matchedVariant.id;
   }
 
-  getVariantData() {
+  function getVariantData() {
     variantData = this.variantData || JSON.parse(document.querySelector('[type="application/json"]').textContent);
     return variantData;
   }
