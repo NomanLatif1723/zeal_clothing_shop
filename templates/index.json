@@ -1020,6 +1020,9 @@
       ],
       "settings": {
         "featured_product": "team-training-jersey",
+        "heading": "Featured Product",
+        "text": "Discover our carefully curated products of loose-fitting clothing that combines comfort and style in perfect harmony.",
+        "text_alignment": "center",
         "show_rating": false,
         "media_position": false,
         "enable_image_zoom": false,
