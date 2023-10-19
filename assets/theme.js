@@ -1511,8 +1511,8 @@ function initProductVariants() {
     // });
     // Find the matched variant
     console.log(window.themeContent.routes.rootUrlWithoutSlash);
-    const response = await fetch(`/products/team-training-jersey.js`);
-    const responseAsJson = await response.json();
+    const response = fetch(`/products/team-training-jersey.js`);
+    const responseAsJson = response.json();
     resolve(responseAsJson);
     console.log(responseAsJson)
     let matchedVariant = responseAsJson.variants.find(variant => {
