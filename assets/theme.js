@@ -1505,7 +1505,7 @@ function initProductVariants() {
     //   return selectedOptions.every(option => variant.options.includes(option));
     // });
 
-    let handle = document.querySelector('.product-grid').dataset.handle;
+    let handle = document.querySelector('.product-grid').dataset.productHandle;
     console.log(handle);
     let url = `/products/${handle}.js`;
     fetch(url)
