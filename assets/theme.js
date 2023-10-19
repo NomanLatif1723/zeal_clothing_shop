@@ -1498,6 +1498,8 @@ function initProductVariants() {
 
   function updateProductOptions(selector) {
     let selectedOptions = [];
+    const product = selector.closest('.product-grid');
+    const variantSelectors = product.querySelectorAll('[data-selected-variant]');
     variantSelectors.forEach(selector => {
       if (selector) {
         if (selector.type === 'radio' || selector.type === 'checkbox') {
