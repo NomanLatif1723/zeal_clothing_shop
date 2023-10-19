@@ -1479,15 +1479,49 @@ function initProductVariants() {
     }
   });
 
-  selectors.productGrid.forEach(product => {
-    if(!product) return;
-    const variantSelectors = product.querySelectorAll('[data-selected-variant]');
-    variantSelectors.forEach(selector => {
-      selector.addEventListener('change', () => {
-        updateProductOptions(variantSelectors, product);
-      });
-    });
+  // selectors.productGrid.forEach(product => {
+  //   if(!product) return;
+  //   const variantSelectors = product.querySelectorAll('[data-selected-variant]');
+  //   variantSelectors.forEach(selector => {
+  //     selector.addEventListener('change', () => {
+  //       updateProductOptions(variantSelectors, product);
+  //     });
+  //   });
+  // });
+
+  // Add an event listener to the product grid container
+  const productGridContainer = document.querySelector('.main-product__wrapper');
+  productGridContainer.addEventListener('change', (event) => {
+    const selector = event.target;
+  
+    if (selector.hasAttribute('data-selected-variant')) {
+      const product = selector.closest('.product-grid');
+      updateProductOptions(selector, product);
+    }
   });
+  
+  // Add an event listener to the Quick View container
+  const quickViewContainer = document.querySelector('.quick-view-container');
+  quickViewContainer.addEventListener('change', (event) => {
+    const selector = event.target;
+  
+    if (selector.hasAttribute('data-selected-variant')) {
+      const product = selector.closest('.product'); // Find the parent product element
+      updateProductOptions(selector, product);
+    }
+  });
+  
+  // Add an event listener to the Featured Collection container
+  const featuredCollectionContainer = document.querySelector('.featured-collection-container');
+  featuredCollectionContainer.addEventListener('change', (event) => {
+    const selector = event.target;
+  
+    if (selector.hasAttribute('data-selected-variant')) {
+      const product = selector.closest('.product'); // Find the parent product element
+      updateProductOptions(selector, product);
+    }
+  });
+
 
   // document.body.addEventListener('change', (event) => {
   //   const selector = event.target;
