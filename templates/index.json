@@ -1026,7 +1026,7 @@
         "media_width": "large",
         "media_layout": "thumbnail",
         "thumbnail_position": "below",
-        "show_thumbnail_arrows": false,
+        "show_thumbnail_arrows": true,
         "size_chart_page": "",
         "margin_top": 60,
         "margin_bottom": 60
