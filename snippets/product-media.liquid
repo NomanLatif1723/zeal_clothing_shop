@@ -7,7 +7,7 @@
   assign default = 'grande'
   assign sizes = '(min-width: 1200px) 650px, 45vw'
 -%}
-
+{%- unless product.empty? -%}
 {%- if section.settings.thumbnail_position == 'left' -%}
   <div class="product-media__grid" data-thumbnail="{{ section.settings.thumbnail_position }}">
 {%- endif -%}
@@ -86,3 +86,12 @@
   {%- if section.settings.thumbnail_position == 'left' -%}
     </div>
   {%- endif -%}
+{%- else -%}
+  <div class="product-media__wrapper">
+    <div id="product__gallery">
+      <div class="product__image" data-index="{{ forloop.index0 }}">
+        {{ 'product-1' | placeholder_svg_tag: "placeholder__image" }}
+      </div>
+    </div>
+  </div>
+{%- endunless -%}
