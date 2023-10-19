@@ -1510,6 +1510,7 @@ function initProductVariants() {
     //   }
     // });
     // Find the matched variant
+    console.log(window.themeContent.routes.rootUrlWithoutSlash);
     let matchedVariant = selectors.product.variants.find(variant => {
       return selectedOptions.every(option => variant.options.includes(option));
     });
