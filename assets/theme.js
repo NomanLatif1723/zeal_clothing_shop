@@ -1510,11 +1510,10 @@ function initProductVariants() {
     //   }
     // });
     // Find the matched variant
-    console.log(window.themeContent.routes.rootUrlWithoutSlash);
     const response = fetch(`${window.themeContent.routes.home}/products/team-training-jersey.js`);
     const responseAsJson = response.json();
     // resolve(responseAsJson);
-    console.log(responseAsJson)
+    // console.log(responseAsJson)
     let matchedVariant = selectors.product.variants.find(variant => {
       return selectedOptions.every(option => variant.options.includes(option));
     });
