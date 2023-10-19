@@ -1514,9 +1514,9 @@ function initProductVariants() {
     })
     .then(function(products) {
       console.log(products);
-      let matchedVariant = products.variants.find(variant => {
-        return selectedOptions.every(option => variant.options.includes(option));
-      });
+      // let matchedVariant = products.variants.find(variant => {
+      //   return selectedOptions.every(option => variant.options.includes(option));
+      // });
     })
     .catch(function(error) {
       console.log('Error', error);
