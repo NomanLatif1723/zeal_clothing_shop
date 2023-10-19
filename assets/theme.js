@@ -1463,7 +1463,8 @@ function initProductVariants() {
     productForm: document.querySelectorAll('.product__form'),
     format: null,
     product: window.themeContent.routes.product,
-    formValidationErrorMessage: document.querySelector('.product-form__errors')
+    formValidationErrorMessage: document.querySelector('.product-form__errors'),
+    productGrid: document.querySelectorAll('.product-grid')
   };
 
   selectors.productForm.forEach(form => {
@@ -1501,28 +1502,10 @@ function initProductVariants() {
     
     // Find the matched variant
     getVariant(selectedOptions);
-    
-    // let matchedVariant = selectors.product.variants.find(variant => {
-    //   return selectedOptions.every(option => variant.options.includes(option));
-    // });
-
-    // if (matchedVariant) {
-    //   updateMasterVariant(matchedVariant);
-    //   updateOptionsNames(matchedVariant);
-    //   updateUrl(matchedVariant);
-    //   updateProductPrice(matchedVariant);
-    //   updateProductUnitPrice(matchedVariant);
-    //   updateProductSku(matchedVariant);
-    //   updateAvailability(matchedVariant);
-    //   updateInventory(matchedVariant);
-    //   updateButtons(matchedVariant);
-    //   updateProductInfo(matchedVariant);
-    //   updateMedia(matchedVariant);
-    // }
   }
 
   function getVariant(selectedOptions) {
-    document.querySelectorAll('.product-grid').forEach(product => {
+    selectors.productGrid.forEach(product => {
       const handle = product.dataset.productHandle;
       let url = `/products/${handle}.js`;
       fetch(url)
