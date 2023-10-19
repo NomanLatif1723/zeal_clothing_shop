@@ -1502,6 +1502,7 @@ function initProductVariants() {
   
   // Add an event listener to the Quick View container
   const quickViewContainer = document.querySelector('.quick-view__container');
+  if(!quickViewContainer) return;
   quickViewContainer.addEventListener('change', (event) => {
     const selector = event.target;
   
