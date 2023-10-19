@@ -1510,7 +1510,8 @@ function initProductVariants() {
     //   }
     // });
     // Find the matched variant
-    let product = {{ product | json }};
+    let product = document.querySelector('.product-grid').dataset.product;
+    console.log(product);
     let matchedVariant = selectors.product.variants.find(variant => {
       return selectedOptions.every(option => variant.options.includes(option));
     });
