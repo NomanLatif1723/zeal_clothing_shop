@@ -1474,7 +1474,6 @@ function initProductVariants() {
       selectors.variantSelectors.forEach(selector => {
         selector.addEventListener('change', () => {
           const event = new Event('change', { bubbles: true });
-          selector.dispatchEvent(event);
           updateProductOptions();
         });
       });
