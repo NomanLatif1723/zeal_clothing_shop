@@ -1465,6 +1465,8 @@ function initProductVariants() {
     product: window.themeContent.routes.product,
     formValidationErrorMessage: document.querySelector('.product-form__errors')
   };
+  const scriptElement = document.querySelector('script[type="application/json"]');
+  const productVariants = JSON.parse(scriptElement.textContent);
   selectors.productForm.forEach(form => {
     if (!form) {
       return;
