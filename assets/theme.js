@@ -1475,6 +1475,7 @@ function initProductVariants() {
         selector.addEventListener('change', () => {
           const scriptElement = document.querySelector('script[type="application/json"]');
     const productVariants = JSON.parse(scriptElement.textContent);
+          console.log(scriptElement,productVariants);
           updateProductOptions();
         });
       });
