@@ -1491,6 +1491,7 @@ function initProductVariants() {
 
   // Add an event listener to the product grid container
   const productGridContainer = document.querySelector('.main-product__wrapper');
+  if(!productGridContainer) return;
   productGridContainer.addEventListener('change', (event) => {
     const selector = event.target;
   
@@ -1514,6 +1515,7 @@ function initProductVariants() {
   
   // Add an event listener to the Featured Collection container
   const featuredCollectionContainer = document.querySelector('.featured-product__wrapper');
+  if(!featuredCollectionContainer) return;
   featuredCollectionContainer.addEventListener('change', (event) => {
     const selector = event.target;
   
