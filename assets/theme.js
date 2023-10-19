@@ -1530,7 +1530,7 @@ function initProductVariants() {
   }
   
   function updateMasterVariant(matchedVariant) {
-    let currentVariant = getVariantData().variants.find((variant) => {
+    let currentVariant = getVariantData().find((variant) => {
       return !variant.options
         .map((option, index) => {
           return options[index] === option;
