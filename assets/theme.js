@@ -1498,11 +1498,14 @@ function initProductVariants() {
       }
     });
     // Find the matched variant
-    let product = Array.from(document.querySelector('[type="application/json"]'));
-    console.log(product);
-    let matchedVariant = selectors.product.variants.find(variant => {
+    const scriptElement = document.querySelector('script[type="application/json"]');
+    const productVariants = JSON.parse(scriptElement.textContent);
+    const matchedVariant = productVariants.find(variant => {
       return selectedOptions.every(option => variant.options.includes(option));
     });
+    // let matchedVariant = selectors.product.variants.find(variant => {
+    //   return selectedOptions.every(option => variant.options.includes(option));
+    // });
 
     if (matchedVariant) {
       updateMasterVariant(matchedVariant);
