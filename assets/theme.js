@@ -1505,13 +1505,15 @@ function initProductVariants() {
     //   return selectedOptions.every(option => variant.options.includes(option));
     // });
 
-    let url = '/products/team-training-jersey.js';
+    let handle = document.querySelector('.product-grid').dataset.handle;
+    console.log(handle);
+    let url = `/products/${handle}.js`;
     fetch(url)
     .then(function(responce) {
       return responce.json();
     })
-    .then(function(data) {
-      console.log(data);
+    .then(function(products) {
+      console.log(products);
     })
     .catch(function(error) {
       console.log('Error', error);
