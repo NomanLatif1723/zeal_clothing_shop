@@ -1486,15 +1486,15 @@ function initProductVariants() {
     const variantSelectors = product.querySelectorAll('[data-selected-variant]');
     variantSelectors.forEach(selector => {
       selector.addEventListener('change', () => {
-        updateProductOptions(variantSelectors);
+        updateProductOptions(selector);
       });
     });
   })
 
-  function updateProductOptions(variantSelectors) {
+  function updateProductOptions(selector) {
     let selectedOptions = [];
-    variantSelectors.forEach(selector => {
-      if (selector) {
+    // variantSelectors.forEach(selector => {
+      // if (selector) {
         if (selector.type === 'radio' || selector.type === 'checkbox') {
           const swatchesOptions = selector.closest('.product__swatches-options');
           if (swatchesOptions) {
@@ -1507,8 +1507,8 @@ function initProductVariants() {
         } else {
           selectedOptions.push(selector.value);
         }
-      }
-    });
+      // }
+    // });
     
     // Find the matched variant
     getVariant(selectedOptions);
