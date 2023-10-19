@@ -1517,6 +1517,7 @@ function initProductVariants() {
       let matchedVariant = products.variants.find(variant => {
         return selectedOptions.every(option => variant.options.includes(option));
       });
+      console.log(matchedVariant);
     })
     .catch(function(error) {
       console.log('Error', error);
