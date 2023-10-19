@@ -1484,16 +1484,16 @@ function initProductVariants() {
   selectors.productGrid.forEach(product => {
     if(!product) return;
     const variantSelectors = product.querySelectorAll('[data-selected-variant]');
-    selectors.variantSelectors.forEach(selector => {
+    variantSelectors.forEach(selector => {
       selector.addEventListener('change', () => {
-        updateProductOptions();
+        updateProductOptions(variantSelectors);
       });
     });
   })
 
-  function updateProductOptions() {
+  function updateProductOptions(variantSelectors) {
     let selectedOptions = [];
-    selectors.variantSelectors.forEach(selector => {
+    variantSelectors.forEach(selector => {
       if (selector) {
         if (selector.type === 'radio' || selector.type === 'checkbox') {
           const swatchesOptions = selector.closest('.product__swatches-options');
