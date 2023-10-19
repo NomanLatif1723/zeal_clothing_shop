@@ -1497,18 +1497,6 @@ function initProductVariants() {
         }
       }
     });
-
-    // selectors.variantSelectors.forEach(selector => {
-    //   if (selector.type === 'radio' || selector.type === 'checkbox') {
-    //     selector.closest('.product__swatches-options').classList.remove('selected');
-    //     if (selector.checked) {
-    //       selectedOptions.push(selector.value);
-    //       selector.closest('.product__swatches-options').classList.add('selected');
-    //     }
-    //   } else {
-    //     selectedOptions.push(selector.value);
-    //   }
-    // });
     // Find the matched variant
     let product = document.querySelector('.product-grid').dataset.product;
     console.log(product);
