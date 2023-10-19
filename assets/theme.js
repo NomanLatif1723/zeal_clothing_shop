@@ -1488,6 +1488,8 @@ function initProductVariants() {
           if (swatchesOptions) {
             swatchesOptions.classList.remove('selected');
             if (selector.checked) {
+              const event = new Event('change', { bubbles: true });
+              selector.dispatchEvent(event);
               selectedOptions.push(selector.value);
               swatchesOptions.classList.add('selected');
             }
