@@ -1479,27 +1479,25 @@ function initProductVariants() {
     }
   });
 
-  // selectors.productGrid.forEach(product => {
-  //   if(!product) return;
-  //   const variantSelectors = product.querySelectorAll('[data-selected-variant]');
-  //   variantSelectors.forEach(selector => {
-  //     selector.addEventListener('change', () => {
-  //       updateProductOptions(selector);
-  //     });
-  //   });
-  // });
-
-  document.body.addEventListener('change', (event) => {
-    const selector = event.target;
-    if (selector.hasAttribute('data-selected-variant')) {
-      updateProductOptions(selector);
-    }
+  selectors.productGrid.forEach(product => {
+    if(!product) return;
+    const variantSelectors = product.querySelectorAll('[data-selected-variant]');
+    variantSelectors.forEach(selector => {
+      selector.addEventListener('change', () => {
+        updateProductOptions(variantSelectors, product);
+      });
+    });
   });
 
-  function updateProductOptions(selector) {
+  // document.body.addEventListener('change', (event) => {
+  //   const selector = event.target;
+  //   if (selector.hasAttribute('data-selected-variant')) {
+  //     updateProductOptions(selector);
+  //   }
+  // });
+
+  function updateProductOptions(variantSelectors, product) {
     let selectedOptions = [];
-    const product = selector.closest('.product-grid');
-    const variantSelectors = product.querySelectorAll('[data-selected-variant]');
     variantSelectors.forEach(selector => {
       if (selector) {
         if (selector.type === 'radio' || selector.type === 'checkbox') {
@@ -1522,36 +1520,34 @@ function initProductVariants() {
   }
 
   function getVariant(selectedOptions, product) {
-    // selectors.productGrid.forEach(product => {
-      const handle = product.dataset.productHandle;
-      let url = `/products/${handle}.js`;
-      fetch(url)
-      .then(function(responce) {
-        return responce.json();
-      })
-      .then(function(products) {
-        let matchedVariant = products.variants.find(variant => {
-          return selectedOptions.every(option => variant.options.includes(option));
-        });
-        console.log(matchedVariant);
-        if (matchedVariant) {
-          updateMasterVariant(matchedVariant);
-          updateOptionsNames(matchedVariant);
-          updateUrl(matchedVariant);
-          updateProductPrice(matchedVariant);
-          updateProductUnitPrice(matchedVariant);
-          updateProductSku(matchedVariant);
-          updateAvailability(matchedVariant);
-          updateInventory(matchedVariant);
-          updateButtons(matchedVariant);
-          updateProductInfo(matchedVariant);
-          updateMedia(matchedVariant);
-        }
-      })
-      .catch(function(error) {
-        console.log('Error', error);
+    const handle = product.dataset.productHandle;
+    let url = `/products/${handle}.js`;
+    fetch(url)
+    .then(function(responce) {
+      return responce.json();
+    })
+    .then(function(products) {
+      let matchedVariant = products.variants.find(variant => {
+        return selectedOptions.every(option => variant.options.includes(option));
       });
-    // })
+      console.log(matchedVariant);
+      if (matchedVariant) {
+        updateMasterVariant(matchedVariant);
+        updateOptionsNames(matchedVariant);
+        updateUrl(matchedVariant);
+        updateProductPrice(matchedVariant);
+        updateProductUnitPrice(matchedVariant);
+        updateProductSku(matchedVariant);
+        updateAvailability(matchedVariant);
+        updateInventory(matchedVariant);
+        updateButtons(matchedVariant);
+        updateProductInfo(matchedVariant);
+        updateMedia(matchedVariant);
+      }
+    })
+    .catch(function(error) {
+      console.log('Error', error);
+    });
   }
   
   function updateMasterVariant(matchedVariant) {
