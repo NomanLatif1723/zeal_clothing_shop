@@ -1479,51 +1479,51 @@ function initProductVariants() {
     }
   });
 
-  // selectors.productGrid.forEach(product => {
-  //   if(!product) return;
-  //   const variantSelectors = product.querySelectorAll('[data-selected-variant]');
-  //   variantSelectors.forEach(selector => {
-  //     selector.addEventListener('change', () => {
-  //       updateProductOptions(variantSelectors, product);
-  //     });
-  //   });
-  // });
+  selectors.productGrid.forEach(product => {
+    if(!product) return;
+    const variantSelectors = product.querySelectorAll('[data-selected-variant]');
+    variantSelectors.forEach(selector => {
+      selector.addEventListener('change', () => {
+        updateProductOptions(variantSelectors, product);
+      });
+    });
+  });
 
-  // Add an event listener to the product grid container
-  const productGridContainer = document.querySelector('.main-product__wrapper');
-  if(!productGridContainer) return;
-  productGridContainer.addEventListener('change', (event) => {
-    const selector = event.target;
+  // // Add an event listener to the product grid container
+  // const productGridContainer = document.querySelector('.main-product__wrapper');
+  // if(!productGridContainer) return;
+  // productGridContainer.addEventListener('change', (event) => {
+  //   const selector = event.target;
   
-    if (selector.hasAttribute('data-selected-variant')) {
-      const product = selector.closest('.product-grid');
-      updateProductOptions(selector, product);
-    }
-  });
+  //   if (selector.hasAttribute('data-selected-variant')) {
+  //     const product = selector.closest('.product-grid');
+  //     updateProductOptions(selector, product);
+  //   }
+  // });
   
-  // Add an event listener to the Quick View container
-  const quickViewContainer = document.querySelector('.quick-view__container');
-  if(!quickViewContainer) return;
-  quickViewContainer.addEventListener('change', (event) => {
-    const selector = event.target;
+  // // Add an event listener to the Quick View container
+  // const quickViewContainer = document.querySelector('.quick-view__container');
+  // if(!quickViewContainer) return;
+  // quickViewContainer.addEventListener('change', (event) => {
+  //   const selector = event.target;
   
-    if (selector.hasAttribute('data-selected-variant')) {
-      const product = selector.closest('.product-grid');
-      updateProductOptions(selector, product);
-    }
-  });
+  //   if (selector.hasAttribute('data-selected-variant')) {
+  //     const product = selector.closest('.product-grid');
+  //     updateProductOptions(selector, product);
+  //   }
+  // });
   
-  // Add an event listener to the Featured Collection container
-  const featuredCollectionContainer = document.querySelector('.featured-product__wrapper');
-  if(!featuredCollectionContainer) return;
-  featuredCollectionContainer.addEventListener('change', (event) => {
-    const selector = event.target;
+  // // Add an event listener to the Featured Collection container
+  // const featuredCollectionContainer = document.querySelector('.featured-product__wrapper');
+  // if(!featuredCollectionContainer) return;
+  // featuredCollectionContainer.addEventListener('change', (event) => {
+  //   const selector = event.target;
   
-    if (selector.hasAttribute('data-selected-variant')) {
-      const product = selector.closest('.product-grid');
-      updateProductOptions(selector, product);
-    }
-  });
+  //   if (selector.hasAttribute('data-selected-variant')) {
+  //     const product = selector.closest('.product-grid');
+  //     updateProductOptions(selector, product);
+  //   }
+  // });
 
 
   // document.body.addEventListener('change', (event) => {
@@ -1533,10 +1533,10 @@ function initProductVariants() {
   //   }
   // });
 
-  function updateProductOptions(selector, product) {
+  function updateProductOptions(variantSelectors, product) {
     let selectedOptions = [];
-    // variantSelectors.forEach(selector => {
-      // if (selector) {
+    variantSelectors.forEach(selector => {
+      if (selector) {
         if (selector.type === 'radio' || selector.type === 'checkbox') {
           const swatchesOptions = selector.closest('.product__swatches-options');
           if (swatchesOptions) {
@@ -1549,8 +1549,8 @@ function initProductVariants() {
         } else {
           selectedOptions.push(selector.value);
         }
-      // }
-    // });
+      }
+    });
     
     // Find the matched variant
     getVariant(selectedOptions,product);
