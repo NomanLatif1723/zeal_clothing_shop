@@ -1473,7 +1473,6 @@ function initProductVariants() {
       selectors.format = form.dataset.format || 'default';
       selectors.variantSelectors.forEach(selector => {
         selector.addEventListener('change', () => {
-          const event = new Event('change', { bubbles: true });
           updateProductOptions();
         });
       });
