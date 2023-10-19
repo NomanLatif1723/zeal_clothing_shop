@@ -1530,13 +1530,14 @@ function initProductVariants() {
   }
   
   function updateMasterVariant(matchedVariant) {
-    let currentVariant = getVariantData().find((variant) => {
+    let currentVariant = getVariantData().variants.find((variant) => {
       return !variant.options
         .map((option, index) => {
           return options[index] === option;
         })
         .includes(false);
     });
+    
     console.log(currentVariant);
     if (!selectors.masterVariantSelector) {
       return;
