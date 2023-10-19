@@ -30,6 +30,18 @@
 {%- endstyle -%}
 <div class="featured-product__wrapper main__section-{{ section.id }}">
   <div class="page__width">
+    <div class="collection__header text__align-{{ section.settings.text_alignment }}">
+      {%- if section.settings.heading != blank -%}
+        <div class="main__heading collection__title">
+          <h2>{{ section.settings.heading }}</h2>
+        </div>
+      {%- endif -%}
+      {%- if section.settings.text != blank -%}
+        <div class="collection__text rte">
+          {{ section.settings.text }}
+        </div>
+      {%- endif -%}
+    </div>
     <div class="product-grid{% if section.settings.media_position %} product-grid__reverse{% endif %}" data-section-id="{{ section.id }}" data-product-handle="{{ product.handle }}">
       <div class="product-grid__item {{ product_media_width }} product__image-container">
         {%- render 'product-media', 
@@ -57,6 +69,36 @@
         "type": "product",
         "id": "featured_product",
         "label": "t:sections.featured-product.settings.show_rating.label"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "t:sections.featured-product.settings.heading.label",
+        "default": "Featured Collection"
+      },
+      {
+        "type": "textarea",
+        "id": "text",
+        "label": "t:sections.featured-product.settings.text.label",
+        "default": "Write Small Description About Your Collection"
+      },
+      {
+        "type": "select",
+        "id": "text_alignment",
+        "label": "t:sections.featured-product.settings.header_alignment.alignment.label",
+        "options": [
+          {
+            "value": "left",
+            "label": "t:sections.featured-product.settings.header_alignment.alignment.options.left.label"
+          }, {
+            "value": "center",
+            "label": "t:sections.featured-product.settings.header_alignment.alignment.options.center.label"
+          }, {
+            "value": "right",
+            "label": "t:sections.featured-product.settings.header_alignment.alignment.options.right.label"
+          }
+        ],
+        "default": "center"
       },
       {
         "type": "checkbox",
