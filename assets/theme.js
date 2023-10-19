@@ -1515,7 +1515,7 @@ function initProductVariants() {
     const responseAsJson = response.json();
     resolve(responseAsJson);
     console.log(responseAsJson)
-    let matchedVariant = responseAsJson.variants.find(variant => {
+    let matchedVariant = selectors.product.variants.find(variant => {
       return selectedOptions.every(option => variant.options.includes(option));
     });
 
