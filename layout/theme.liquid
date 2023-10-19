@@ -36,6 +36,7 @@
       window.themeContent = {
         routes: {
           product: {{ product | json }},
+          rootUrlWithoutSlash: {% if routes.root_url == '/' %}''{% else %}{{ routes.root_url | json }}{% endif %},
           productRecommendation: {{ routes.product_recommendations_url | json }},
           all_collections: {{ routes.all_products_collection_url | json }},
           cartUrl: {{ routes.cart_url | json }},
