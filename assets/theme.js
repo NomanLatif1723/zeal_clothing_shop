@@ -1467,6 +1467,8 @@ function initProductVariants() {
   };
   const scriptElement = document.querySelector('script[type="application/json"]');
   const productVariants = JSON.parse(scriptElement.textContent);
+  console.log(scriptElement);
+  console.log(productVariants);
   selectors.productForm.forEach(form => {
     if (!form) {
       return;
