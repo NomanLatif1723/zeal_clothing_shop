@@ -1487,7 +1487,7 @@ function initProductVariants() {
         updateProductOptions(selector);
       });
     });
-  })
+  });
 
   function updateProductOptions(selector) {
     let selectedOptions = [];
