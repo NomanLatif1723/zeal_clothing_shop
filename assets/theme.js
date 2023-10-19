@@ -1493,7 +1493,7 @@ function initProductVariants() {
       }
     });
     // Find the matched variant
-    const product = JSON.parse(document.querySelector('[type="application/json"]').textContent);
+    // const product = JSON.parse(document.querySelector('[type="application/json"]').textContent);
     // console.log(product);
     let matchedVariant = selectors.product.variants.find(variant => {
       return selectedOptions.every(option => variant.options.includes(option));
