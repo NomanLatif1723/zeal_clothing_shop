@@ -1498,41 +1498,10 @@ function initProductVariants() {
         }
       }
     });
+    
     // Find the matched variant
-    // const scriptElement = document.querySelector('script[type="application/json"]');
-    // const productVariants = JSON.parse(scriptElement.textContent);
-    // const matchedVariant = productVariants.find(variant => {
-    //   return selectedOptions.every(option => variant.options.includes(option));
-    // });
-
-    let handle = document.querySelector('.product-grid').dataset.productHandle;
-    let url = `/products/${handle}.js`;
-    fetch(url)
-    .then(function(responce) {
-      return responce.json();
-    })
-    .then(function(products) {
-      let matchedVariant = products.variants.find(variant => {
-        return selectedOptions.every(option => variant.options.includes(option));
-      });
-      console.log(matchedVariant);
-      if (matchedVariant) {
-        updateMasterVariant(matchedVariant);
-        updateOptionsNames(matchedVariant);
-        updateUrl(matchedVariant);
-        updateProductPrice(matchedVariant);
-        updateProductUnitPrice(matchedVariant);
-        updateProductSku(matchedVariant);
-        updateAvailability(matchedVariant);
-        updateInventory(matchedVariant);
-        updateButtons(matchedVariant);
-        updateProductInfo(matchedVariant);
-        updateMedia(matchedVariant);
-      }
-    })
-    .catch(function(error) {
-      console.log('Error', error);
-    });
+    matchedVariant();
+    
     // let matchedVariant = selectors.product.variants.find(variant => {
     //   return selectedOptions.every(option => variant.options.includes(option));
     // });
@@ -1551,7 +1520,39 @@ function initProductVariants() {
     //   updateMedia(matchedVariant);
     // }
   }
-  
+
+  function matchedVariant() {
+    document.querySelectorAll('.product-grid').forEach(product => {
+      const handle = product.dataset.productHandle;
+      let url = `/products/${handle}.js`;
+      fetch(url)
+      .then(function(responce) {
+        return responce.json();
+      })
+      .then(function(products) {
+        let matchedVariant = products.variants.find(variant => {
+          return selectedOptions.every(option => variant.options.includes(option));
+        });
+        console.log(matchedVariant);
+        if (matchedVariant) {
+          updateMasterVariant(matchedVariant);
+          updateOptionsNames(matchedVariant);
+          updateUrl(matchedVariant);
+          updateProductPrice(matchedVariant);
+          updateProductUnitPrice(matchedVariant);
+          updateProductSku(matchedVariant);
+          updateAvailability(matchedVariant);
+          updateInventory(matchedVariant);
+          updateButtons(matchedVariant);
+          updateProductInfo(matchedVariant);
+          updateMedia(matchedVariant);
+        }
+      })
+      .catch(function(error) {
+        console.log('Error', error);
+      });
+    })
+  }
   function updateMasterVariant(matchedVariant) {
     if (!selectors.masterVariantSelector) {
       return;
