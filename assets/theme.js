@@ -1513,6 +1513,9 @@ function initProductVariants() {
     .then(function(data) {
       console.log(data);
     })
+    .catch(function(error) {
+      console.log('Error', error);
+    });
     let matchedVariant = selectors.product.variants.find(variant => {
       return selectedOptions.every(option => variant.options.includes(option));
     });
