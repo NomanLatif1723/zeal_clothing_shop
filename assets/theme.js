@@ -1506,18 +1506,29 @@ function initProductVariants() {
     // });
 
     let handle = document.querySelector('.product-grid').dataset.productHandle;
-    console.log(handle);
     let url = `/products/${handle}.js`;
     fetch(url)
     .then(function(responce) {
       return responce.json();
     })
     .then(function(products) {
-      console.log(products);
       let matchedVariant = products.variants.find(variant => {
         return selectedOptions.every(option => variant.options.includes(option));
       });
       console.log(matchedVariant);
+      if (matchedVariant) {
+        updateMasterVariant(matchedVariant);
+        updateOptionsNames(matchedVariant);
+        updateUrl(matchedVariant);
+        updateProductPrice(matchedVariant);
+        updateProductUnitPrice(matchedVariant);
+        updateProductSku(matchedVariant);
+        updateAvailability(matchedVariant);
+        updateInventory(matchedVariant);
+        updateButtons(matchedVariant);
+        updateProductInfo(matchedVariant);
+        updateMedia(matchedVariant);
+      }
     })
     .catch(function(error) {
       console.log('Error', error);
@@ -1526,19 +1537,19 @@ function initProductVariants() {
     //   return selectedOptions.every(option => variant.options.includes(option));
     // });
 
-    if (matchedVariant) {
-      updateMasterVariant(matchedVariant);
-      updateOptionsNames(matchedVariant);
-      updateUrl(matchedVariant);
-      updateProductPrice(matchedVariant);
-      updateProductUnitPrice(matchedVariant);
-      updateProductSku(matchedVariant);
-      updateAvailability(matchedVariant);
-      updateInventory(matchedVariant);
-      updateButtons(matchedVariant);
-      updateProductInfo(matchedVariant);
-      updateMedia(matchedVariant);
-    }
+    // if (matchedVariant) {
+    //   updateMasterVariant(matchedVariant);
+    //   updateOptionsNames(matchedVariant);
+    //   updateUrl(matchedVariant);
+    //   updateProductPrice(matchedVariant);
+    //   updateProductUnitPrice(matchedVariant);
+    //   updateProductSku(matchedVariant);
+    //   updateAvailability(matchedVariant);
+    //   updateInventory(matchedVariant);
+    //   updateButtons(matchedVariant);
+    //   updateProductInfo(matchedVariant);
+    //   updateMedia(matchedVariant);
+    // }
   }
   
   function updateMasterVariant(matchedVariant) {
