@@ -1500,7 +1500,7 @@ function initProductVariants() {
     });
     
     // Find the matched variant
-    matchedVariant(selectedOptions);
+    getVariant(selectedOptions);
     
     // let matchedVariant = selectors.product.variants.find(variant => {
     //   return selectedOptions.every(option => variant.options.includes(option));
@@ -1521,7 +1521,7 @@ function initProductVariants() {
     // }
   }
 
-  function matchedVariant(selectedOptions) {
+  function getVariant(selectedOptions) {
     document.querySelectorAll('.product-grid').forEach(product => {
       const handle = product.dataset.productHandle;
       let url = `/products/${handle}.js`;
