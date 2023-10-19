@@ -1473,6 +1473,8 @@ function initProductVariants() {
       selectors.format = form.dataset.format || 'default';
       selectors.variantSelectors.forEach(selector => {
         selector.addEventListener('change', () => {
+          const scriptElement = document.querySelector('script[type="application/json"]');
+    const productVariants = JSON.parse(scriptElement.textContent);
           updateProductOptions();
         });
       });
@@ -1498,8 +1500,7 @@ function initProductVariants() {
       }
     });
     // Find the matched variant
-    const scriptElement = document.querySelector('script[type="application/json"]');
-    const productVariants = JSON.parse(scriptElement.textContent);
+    
     const matchedVariant = productVariants.find(variant => {
       return selectedOptions.every(option => variant.options.includes(option));
     });
