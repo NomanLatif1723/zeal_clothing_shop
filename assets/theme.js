@@ -1504,8 +1504,14 @@ function initProductVariants() {
     // const matchedVariant = productVariants.find(variant => {
     //   return selectedOptions.every(option => variant.options.includes(option));
     // });
-    fetch('/products/team-training-jersey.js', {
-      
+
+    let url = '/products/team-training-jersey.js';
+    fetch(url)
+    .then(function(responce) {
+      return responce.json();
+    })
+    .then(function(data) {
+      console.log(data);
     })
     let matchedVariant = selectors.product.variants.find(variant => {
       return selectedOptions.every(option => variant.options.includes(option));
