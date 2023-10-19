@@ -1473,28 +1473,28 @@ function initProductVariants() {
     }
     if (form) {
       selectors.format = form.dataset.format || 'default';
-      selectors.variantSelectors.forEach(selector => {
-        selector.addEventListener('change', () => {
-          updateProductOptions();
-        });
-      });
+      // selectors.variantSelectors.forEach(selector => {
+      //   selector.addEventListener('change', () => {
+      //     updateProductOptions();
+      //   });
+      // });
     }
   });
 
   selectors.productGrid.forEach(product => {
     if(!product) return;
     const variantSelectors = product.querySelectorAll('[data-selected-variant]');
-    variantSelectors.forEach(selector => {
+    selectors.variantSelectors.forEach(selector => {
       selector.addEventListener('change', () => {
-        updateProductOptions(selector);
+        updateProductOptions();
       });
     });
   })
 
-  function updateProductOptions(selector) {
+  function updateProductOptions() {
     let selectedOptions = [];
-    // variantSelectors.forEach(selector => {
-      // if (selector) {
+    selectors.variantSelectors.forEach(selector => {
+      if (selector) {
         if (selector.type === 'radio' || selector.type === 'checkbox') {
           const swatchesOptions = selector.closest('.product__swatches-options');
           if (swatchesOptions) {
@@ -1507,8 +1507,8 @@ function initProductVariants() {
         } else {
           selectedOptions.push(selector.value);
         }
-      // }
-    // });
+      }
+    });
     
     // Find the matched variant
     getVariant(selectedOptions);
