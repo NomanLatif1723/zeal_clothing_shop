@@ -1501,23 +1501,23 @@ function initProductVariants() {
   });
   
   // Add an event listener to the Quick View container
-  const quickViewContainer = document.querySelector('.quick-view-container');
+  const quickViewContainer = document.querySelector('.quick-view__container');
   quickViewContainer.addEventListener('change', (event) => {
     const selector = event.target;
   
     if (selector.hasAttribute('data-selected-variant')) {
-      const product = selector.closest('.product'); // Find the parent product element
+      const product = selector.closest('.product-grid');
       updateProductOptions(selector, product);
     }
   });
   
   // Add an event listener to the Featured Collection container
-  const featuredCollectionContainer = document.querySelector('.featured-collection-container');
+  const featuredCollectionContainer = document.querySelector('.featured-product__wrapper');
   featuredCollectionContainer.addEventListener('change', (event) => {
     const selector = event.target;
   
     if (selector.hasAttribute('data-selected-variant')) {
-      const product = selector.closest('.product'); // Find the parent product element
+      const product = selector.closest('.product-grid');
       updateProductOptions(selector, product);
     }
   });
