@@ -1551,7 +1551,7 @@ function initProductVariants() {
   }
 
   function getVariantData() {
-    variantData = this.variantData || JSON.parse(document.querySelector('[type="application/json"]').textContent);
+    variantData = JSON.parse(document.querySelector('[type="application/json"]').textContent);
     return variantData;
   }
   function updateUrl(matchedVariant) {
