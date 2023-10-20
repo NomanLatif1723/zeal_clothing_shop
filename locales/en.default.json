@@ -176,8 +176,8 @@
       "subtotal": "Subtotal",
       "shipping": "Shipping",
       "tax": "Tax",
-      "cancelled_html": "Canceled At {{ date }}",
-      "cancelled_reason": "Reasons"
+      "cancelled_html": "Order Canceled On {{ date }}",
+      "cancelled_reason": "Reason: {{ reason }}"
     },
     "recover_password": {
       "title": "Forgot Your Password",
