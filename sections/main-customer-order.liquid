@@ -42,7 +42,19 @@
             </div>
             <p>{{ 'customers.order.payment_status_html' | t: status: order.financial_status_label }}</p>
             <div class="customer__header">{{ customer.name }}</div>
-           <div class="rte"> {{ customer.default_address | format_address }}</div>
+           <div class="rte">
+             {% if order.billing_address.company != blank %}
+              {{ order.billing_address.company }}<br>
+             {% endif %}
+             {{ order.billing_address.street }}<br>
+             {{ order.billing_address.city }}<br>
+             {% if order.billing_address.province != blank %}
+              {{ order.billing_address.province }}<br>
+             {% endif %}
+             {{ order.billing_address.zip | upcase }}<br>
+             {{ order.billing_address.country }}<br>
+             {{ order.billing_address.phone }}
+           </div>
           </div>
           <hr>
           <div class="shipping__address">
