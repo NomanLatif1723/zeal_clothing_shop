@@ -175,7 +175,9 @@
       "total": "Total",
       "subtotal": "Subtotal",
       "shipping": "Shipping",
-      "tax": "Tax"
+      "tax": "Tax",
+      "cancelled_html": "Canceled At {{ date }}",
+      "cancelled_reason": "Reasons"
     },
     "recover_password": {
       "title": "Forgot Your Password",
