@@ -3057,9 +3057,7 @@ table {
     display: flex;
     justify-content: space-between;
 }
-td.mobile__hidden {
-    display: none;
-}
+
 .customer__header {
     text-transform: uppercase;
     letter-spacing: 0.2em;
@@ -3073,6 +3071,9 @@ td.mobile__hidden {
 }
 @media only screen and (max-width: 768px) {
   .orders__table thead {
+    display: none;
+  }
+  td.mobile__hidden {
     display: none;
   }
 }
