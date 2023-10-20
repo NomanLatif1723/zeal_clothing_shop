@@ -177,7 +177,8 @@
       "shipping": "Shipping",
       "tax": "Tax",
       "cancelled_html": "Order Canceled On {{ date }}",
-      "cancelled_reason": "Reason: {{ reason }}"
+      "cancelled_reason": "Reason: {{ reason }}",
+      "fulfilled_html": "Fulfilled {{ date }}"
     },
     "recover_password": {
       "title": "Forgot Your Password",
