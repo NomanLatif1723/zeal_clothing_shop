@@ -12,6 +12,13 @@
           <div class="form__header">
             {%- assign order_date = order.created_at | time_tag: format: "date_at_time" -%}
             <h4>{{ 'customers.order.date_html' | t: date: order_date }}</h4>
+            {% if order.cancelled %}
+              <div class="errors">
+                {%- assign cancelled_at = order.cancelled_at | time_tag: format: "date_at_time" -%}
+                <p >{{ 'customers.order.cancelled_html' | t: date: cancelled_at }}</p>
+                <p>{{ 'customers.order.cancelled_reason' | t: reason: order.cancel_reason }}</p>
+              </div>
+            {% endif %}
           </div>
           <table role="table" class="orders__table">
             <thead>
