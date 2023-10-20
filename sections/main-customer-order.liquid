@@ -132,6 +132,10 @@
                   <td><label class="label__hidden">{{ 'customers.order.tax' | t }}</label>{{ tax_line.price | money }}</td>
                 </tr>
               {% endfor %}
+              <tr>
+                <td colspan="4" class="mobile__hidden text-left">{{ 'customers.order.total' | t }}</td>
+                <td><label class="label__hidden">{{ 'customers.order.total' | t }}</label>{{ order.total_price | money }} {{ order.currency }}</td>
+              </tr>
             </tfoot>
           </table>
         </div>
