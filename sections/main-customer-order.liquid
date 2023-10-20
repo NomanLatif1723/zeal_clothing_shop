@@ -42,9 +42,6 @@
             </div>
             <div class="customer__header">{{ customer.name }}</div>
            <div class="rte"> {{ customer.default_address | format_address }}</div>
-            <a class="btn__link" href="{{ routes.account_addresses_url }}">
-              {{ 'customers.account.view_addresses' | t }} ({{ customer.addresses_count }})
-            </a>
           </div>
           <div class="shipping__address">
             <div class="form__header">
@@ -52,9 +49,6 @@
             </div>
             <div class="customer__header">{{ customer.name }}</div>
            <div class="rte"> {{ customer.default_address | format_address }}</div>
-            <a class="btn__link" href="{{ routes.account_addresses_url }}">
-              {{ 'customers.account.view_addresses' | t }} ({{ customer.addresses_count }})
-            </a>
           </div>
         </div>
       </div>
