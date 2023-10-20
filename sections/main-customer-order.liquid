@@ -63,7 +63,19 @@
             </div>
             <p>{{ 'customers.order.fulfillment_status_html' | t: status: order.fulfillment_status_label }}</p>
             <div class="customer__header">{{ customer.name }}</div>
-           <div class="rte"> {{ customer.default_address | format_address }}</div>
+           <div class="rte">
+            {% if order.shipping_address.company != blank %}
+              {{ order.shipping_address.company }}<br>
+            {% endif %}
+            {{ order.shipping_address.street }}<br>
+            {{ order.shipping_address.city }}<br>
+            {% if order.shipping_address.province != blank %}
+              {{ order.shipping_address.province }}<br>
+            {% endif %}
+            {{ order.shipping_address.zip | upcase }}<br>
+            {{ order.shipping_address.country }}<br>
+            {{ order.shipping_address.phone }}
+           </div>
           </div>
         </div>
       </div>
