@@ -120,6 +120,12 @@
                 <td colspan="4" class="mobile__hidden text-left">{{ 'customers.order.subtotal' | t }}</td>
                 <td><label class="label__hidden">{{ 'customers.order.subtotal' | t }}</label>{{ order.line_items_subtotal_price | money }}</td>
               </tr>
+              {% for shipping_method in order.shipping_methods %}
+                <tr>
+                  <td colspan="4" class="mobile__hidden text-left">{{ 'customers.order.shipping' | t }} ({{ shipping_method.title }})</td>
+                  <td><label class="label__hidden">{{ 'customers.order.shipping' | t }}</label>{{ shipping_method.price | money }}</td>
+                </tr>
+              {% endfor %}
             </tfoot>
           </table>
         </div>
