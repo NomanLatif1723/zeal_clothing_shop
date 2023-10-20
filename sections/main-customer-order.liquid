@@ -118,7 +118,7 @@
             <tfoot>
               <tr>
                 <td colspan="4">{{ 'customers.order.subtotal' | t }}</td>
-                <td data-label="{{ 'customers.order.subtotal' | t }}" class="text-right">{{ order.line_items_subtotal_price | money }}</td>
+                <td><label class="label__hidden">{{ 'customers.order.subtotal' | t }}</label>{{ order.line_items_subtotal_price | money }}</td>
               </tr>
             </tfoot>
           </table>
