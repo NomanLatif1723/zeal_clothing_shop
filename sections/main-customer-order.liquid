@@ -10,7 +10,8 @@
       <div class="account-form__grid">
         <div class="form__grid-item orders__container">
           <div class="form__header">
-            <h4>{{ 'customers.order.sub_text' | t }}</h4>
+            {%- assign order_date = order.created_at | time_tag: format: "date_at_time" -%}
+            <h4>{{ 'customers.order.date_html' | t: date: order_date }}</h4>
           </div>
           <table role="table" class="orders__table">
             <thead>
