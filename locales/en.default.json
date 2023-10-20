@@ -163,7 +163,7 @@
     "order": {
       "title": "Order {{ name }}",
       "return_url": "Back To Accounts",
-      "sub_text": "Order Details",
+      "date_html": "Placed on {{ date }}",
       "billing_address": "Billing Address",
       "shipping_address": "Shipping Address",
       "payment_status_html": "<strong>Payment Status:<\/strong> {{ status }}",
