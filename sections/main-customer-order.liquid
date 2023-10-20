@@ -36,14 +36,26 @@
           </table>
         </div>
         <div class="form__grid-item form__addresses-container">
-          <div class="form__header">
-            <h4>{{ 'customers.account.details' | t }}</h4>
+          <div class="billing__address">
+            <div class="form__header">
+              <h4>{{ 'customers.account.details' | t }}</h4>
+            </div>
+            <div class="customer__header">{{ customer.name }}</div>
+           <div class="rte"> {{ customer.default_address | format_address }}</div>
+            <a class="btn__link" href="{{ routes.account_addresses_url }}">
+              {{ 'customers.account.view_addresses' | t }} ({{ customer.addresses_count }})
+            </a>
           </div>
-          <div class="customer__header">{{ customer.name }}</div>
-         <div class="rte"> {{ customer.default_address | format_address }}</div>
-          <a class="btn__link" href="{{ routes.account_addresses_url }}">
-            {{ 'customers.account.view_addresses' | t }} ({{ customer.addresses_count }})
-          </a>
+          <div class="shipping__address">
+            <div class="form__header">
+              <h4>{{ 'customers.account.details' | t }}</h4>
+            </div>
+            <div class="customer__header">{{ customer.name }}</div>
+           <div class="rte"> {{ customer.default_address | format_address }}</div>
+            <a class="btn__link" href="{{ routes.account_addresses_url }}">
+              {{ 'customers.account.view_addresses' | t }} ({{ customer.addresses_count }})
+            </a>
+          </div>
         </div>
       </div>
     </orders-details>
