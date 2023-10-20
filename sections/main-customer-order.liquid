@@ -160,8 +160,8 @@
           <div class="billing__address">
             <div class="form__header">
               <h4>{{ 'customers.order.billing_address' | t }}</h4>
+              <p>{{ 'customers.order.payment_status_html' | t: status: order.financial_status_label }}</p>
             </div>
-            <p>{{ 'customers.order.payment_status_html' | t: status: order.financial_status_label }}</p>
             <div class="customer__header">{{ order.billing_address.name }}</div>
            <div class="rte">
              {% if order.billing_address.company != blank %}
@@ -177,12 +177,12 @@
              {{ order.billing_address.phone }}
            </div>
           </div>
-          <hr>
+          <hr class="line-gap">
           <div class="shipping__address">
             <div class="form__header">
               <h4>{{ 'customers.order.shipping_address' | t }}</h4>
+              <p>{{ 'customers.order.fulfillment_status_html' | t: status: order.fulfillment_status_label }}</p>
             </div>
-            <p>{{ 'customers.order.fulfillment_status_html' | t: status: order.fulfillment_status_label }}</p>
             <div class="customer__header">{{ order.shipping_address.name }}</div>
            <div class="rte">
             {% if order.shipping_address.company != blank %}
