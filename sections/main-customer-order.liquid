@@ -115,6 +115,12 @@
                 </tr>
               {% endfor %}
             </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="4" class="table--small-hide">{{ 'customers.order.subtotal' | t }}</td>
+                <td data-label="{{ 'customers.order.subtotal' | t }}" class="text-right">{{ order.line_items_subtotal_price | money }}</td>
+              </tr>
+            </tfoot>
           </table>
         </div>
         <div class="form__grid-item form__addresses-container">
