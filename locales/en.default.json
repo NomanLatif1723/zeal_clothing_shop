@@ -163,7 +163,9 @@
     "order": {
       "title": "Order {{ name }}",
       "return_url": "Back To Accounts",
-      "sub_text": "Order Details"
+      "sub_text": "Order Details",
+      "billing_address": "Billing Address",
+      "shipping_address": "Shipping Address"
     },
     "recover_password": {
       "title": "Forgot Your Password",
