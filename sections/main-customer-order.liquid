@@ -38,14 +38,14 @@
         <div class="form__grid-item form__addresses-container">
           <div class="billing__address">
             <div class="form__header">
-              <h4>{{ 'customers.account.details' | t }}</h4>
+              <h4>{{ 'customers.order.billing_address' | t }}</h4>
             </div>
             <div class="customer__header">{{ customer.name }}</div>
            <div class="rte"> {{ customer.default_address | format_address }}</div>
           </div>
           <div class="shipping__address">
             <div class="form__header">
-              <h4>{{ 'customers.account.details' | t }}</h4>
+              <h4>{{ 'customers.order.shipping_address' | t }}</h4>
             </div>
             <div class="customer__header">{{ customer.name }}</div>
            <div class="rte"> {{ customer.default_address | format_address }}</div>
