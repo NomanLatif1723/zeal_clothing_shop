@@ -126,6 +126,12 @@
                   <td><label class="label__hidden">{{ 'customers.order.shipping' | t }}</label>{{ shipping_method.price | money }}</td>
                 </tr>
               {% endfor %}
+              {% for tax_line in order.tax_lines %}
+                <tr>
+                  <td colspan="4" class="mobile__hidden text-left">{{ 'customers.order.tax' | t }} ({{ tax_line.title }} {{ tax_line.rate | times: 100 }}%)</td>
+                  <td><label class="label__hidden">{{ 'customers.order.tax' | t }}</label>{{ tax_line.price | money }}</td>
+                </tr>
+              {% endfor %}
             </tfoot>
           </table>
         </div>
