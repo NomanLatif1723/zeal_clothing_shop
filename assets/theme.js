@@ -872,6 +872,20 @@ function initCollectionEventListeners() {
     ShowMoreSwatches: document.querySelectorAll('.show-more__swatches'),
     removeActiveFilters: document.querySelectorAll('.active-filters__remove-filter'),
   }
+  selectors.ShowMoreSwatches.forEach(swatch => {
+    if (!swatch) return;
+    swatch.addEventListener('click', () => {
+      let colorSwatchList = event.target.closest('.color-swatch__list');
+      if (colorSwatchList) {
+        let hiddenSwatches = colorSwatchList.querySelector('.hidden__swatches');
+        if (hiddenSwatches) {
+          event.target.classList.add('hide');
+          hiddenSwatches.classList.add('show');
+        }
+      }
+    });
+  });
+  
   selectors.filterItem.forEach(item => {
     if (!item) return;
     item.addEventListener('click', () => {
@@ -898,20 +912,6 @@ function initCollectionEventListeners() {
   if (!selectors.filterDrawerBox) return;
   selectors.filterDrawerBox.addEventListener('click', (event) => {
      event.stopPropagation();
-  });
-
-  selectors.ShowMoreSwatches.forEach(swatch => {
-    if (!swatch) return;
-    swatch.addEventListener('click', () => {
-      let colorSwatchList = event.target.closest('.color-swatch__list');
-      if (colorSwatchList) {
-        let hiddenSwatches = colorSwatchList.querySelector('.hidden__swatches');
-        if (hiddenSwatches) {
-          event.target.classList.add('hide');
-          hiddenSwatches.classList.add('show');
-        }
-      }
-    });
   });
 
   // selectors.removeActiveFilters.forEach(button => {
