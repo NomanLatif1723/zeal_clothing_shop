@@ -39,8 +39,8 @@
           <div class="billing__address">
             <div class="form__header">
               <h4>{{ 'customers.order.billing_address' | t }}</h4>
-              <p>{{ 'customers.order.payment_status_html' | t: status: order.financial_status_label }}</p>
             </div>
+            <p>{{ 'customers.order.payment_status_html' | t: status: order.financial_status_label }}</p>
             <div class="customer__header">{{ customer.name }}</div>
            <div class="rte"> {{ customer.default_address | format_address }}</div>
           </div>
