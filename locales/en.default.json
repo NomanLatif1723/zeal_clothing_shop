@@ -167,7 +167,15 @@
       "billing_address": "Billing Address",
       "shipping_address": "Shipping Address",
       "payment_status_html": "<strong>Payment Status:<\/strong> {{ status }}",
-      "fulfillment_status_html": "<strong>Fulfillment Status:<\/strong> {{ status }}"
+      "fulfillment_status_html": "<strong>Fulfillment Status:<\/strong> {{ status }}",
+      "product": "Product",
+      "sku": "SKU",
+      "price": "Price",
+      "quantity": "Quantity",
+      "total": "Total",
+      "subtotal": "Subtotal",
+      "shipping": "Shipping",
+      "tax": "Tax"
     },
     "recover_password": {
       "title": "Forgot Your Password",
