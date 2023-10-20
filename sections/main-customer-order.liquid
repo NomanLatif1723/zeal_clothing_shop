@@ -49,7 +49,7 @@
             <div class="form__header">
               <h4>{{ 'customers.order.shipping_address' | t }}</h4>
             </div>
-            <p>{{ 'customers.order.payment_status_html' | t: status: order.fulfillment_status_label }}</p>
+            <p>{{ 'customers.order.fulfillment_status_html' | t: status: order.fulfillment_status_label }}</p>
             <div class="customer__header">{{ customer.name }}</div>
            <div class="rte"> {{ customer.default_address | format_address }}</div>
           </div>
