@@ -120,6 +120,23 @@
                 <td colspan="4" class="mobile__hidden text-left">{{ 'customers.order.subtotal' | t }}</td>
                 <td><label class="label__hidden">{{ 'customers.order.subtotal' | t }}</label>{{ order.line_items_subtotal_price | money }}</td>
               </tr>
+              {%- if order.cart_level_discount_applications != blank -%}
+                <tr>
+                  {%- for discount_application in order.cart_level_discount_applications -%}
+                    <th scope="row" colspan="4" class="small--hide">
+                      {{ 'customers.order.discount' | t }} | {{ discount_application.title }}
+                    </th>
+                    <td class="text-right" data-label="{{ 'customers.order.discount' | t }}">
+                      <div class="cart__discount">
+                        <span class="medium-up--hide">
+                          {{ discount_application.title }}
+                        </span>
+                        <span class="cart__discount">-{{ discount_application.total_allocated_amount | money }}</span>
+                      </div>
+                    </td>
+                  {%- endfor -%}
+                </tr>
+              {%- endif -%}
               {% for shipping_method in order.shipping_methods %}
                 <tr>
                   <td colspan="4" class="mobile__hidden text-left">{{ 'customers.order.shipping' | t }} ({{ shipping_method.title }})</td>
