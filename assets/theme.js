@@ -1467,17 +1467,17 @@ function initProductVariants() {
     productGrid: document.querySelectorAll('.product-grid')
   };
 
-  selectors.productForm.forEach(form => {
-    if (!form) return;
-    if (form) {
-      selectors.format = form.dataset.format || 'default';
-      // selectors.variantSelectors.forEach(selector => {
-      //   selector.addEventListener('change', () => {
-      //     updateProductOptions();
-      //   });
-      // });
-    }
-  });
+  // selectors.productForm.forEach(form => {
+  //   if (!form) return;
+  //   if (form) {
+  //     selectors.format = form.dataset.format || 'default';
+  //     // selectors.variantSelectors.forEach(selector => {
+  //     //   selector.addEventListener('change', () => {
+  //     //     updateProductOptions();
+  //     //   });
+  //     // });
+  //   }
+  // });
 
   selectors.productGrid.forEach(product => {
     if(!product) return;
