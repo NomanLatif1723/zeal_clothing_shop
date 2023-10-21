@@ -7,9 +7,9 @@
       {%- assign closest_location = pick_up_availabilities.first -%}
 
       {%- if closest_location.available -%}
-        {% render 'icon-in-stock' %}
+        {% render 'icon-map' %}
       {%- else -%}
-        {% render 'icon-out-of-stock' %}
+        {% render 'icon-play' %}
       {%- endif -%}
 
       <div class="pickup-availability-information-container">
@@ -83,9 +83,9 @@
             </h3>
             <div class="pickup-availability-list__stock pickup-availability-small-text">
               {%- if availability.available -%}
-                {% render 'icon-in-stock' %} {{ 'pickup_availability.general.pick_up_available' | t }}, {{ availability.pick_up_time | downcase }}
+                {% render 'icon-map' %} {{ 'pickup_availability.general.pick_up_available' | t }}, {{ availability.pick_up_time | downcase }}
               {%- else -%}
-                {% render 'icon-out-of-stock' %} {{ 'pickup_availability.general.pick_up_currently_unavailable' | t }}
+                {% render 'icon-play' %} {{ 'pickup_availability.general.pick_up_currently_unavailable' | t }}
               {%- endif -%}
             </div>
             {%- assign address = availability.location.address -%}
