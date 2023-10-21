@@ -14,7 +14,7 @@
 {% endstyle %}
 <div class="main-cart__wrapper">
   <div class="page__width">
-    <div  data-cart data-money-format="{{ shop.money_format }}">
+    <div data-cart>
       <div class="cart__header text__align-{{ section.settings.text_alignment }}">
         <div class="main__heading cart__main-heading"><h2>{{ 'cart.general.title' | t }}</h2></div>
         {%- if free_shipping and cart.item_count > 0 -%}
