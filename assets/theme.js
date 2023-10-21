@@ -1,49 +1,98 @@
 (function(){
   let mediaSwiper;
 // shopify formate money function
+// function formatMoney(cents, format) {
+//   if (typeof cents == 'string') { cents = cents.replace('.',''); }
+//   var value = '';
+//   var placeholderRegex = /\{\{\s*(\w+)\s*\}\}/;
+//   var formatString = (format || this.money_format);
+
+//   function defaultOption(opt, def) {
+//      return (typeof opt == 'undefined' ? def : opt);
+//   }
+
+//   function formatWithDelimiters(number, precision, thousands, decimal) {
+//     precision = defaultOption(precision, 2);
+//     thousands = defaultOption(thousands, ',');
+//     decimal   = defaultOption(decimal, '.');
+
+//     if (isNaN(number) || number == null) { return 0; }
+
+//     number = (number/100.0).toFixed(precision);
+
+//     var parts   = number.split('.'),
+//         dollars = parts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1' + thousands),
+//         cents   = parts[1] ? (decimal + parts[1]) : '';
+
+//     return dollars + cents;
+//   }
+
+//   switch(formatString.match(placeholderRegex)[1]) {
+//     case 'amount':
+//       value = formatWithDelimiters(cents, 2);
+//       break;
+//     case 'amount_no_decimals':
+//       value = formatWithDelimiters(cents, 0);
+//       break;
+//     case 'amount_with_comma_separator':
+//       value = formatWithDelimiters(cents, 2, '.', ',');
+//       break;
+//     case 'amount_no_decimals_with_comma_separator':
+//       value = formatWithDelimiters(cents, 0, '.', ',');
+//       break;
+//   }
+
+//   return formatString.replace(placeholderRegex, value);
+// };
+const moneyFormat = '${{amount}}';
 function formatMoney(cents, format) {
-  if (typeof cents == 'string') { cents = cents.replace('.',''); }
-  var value = '';
-  var placeholderRegex = /\{\{\s*(\w+)\s*\}\}/;
-  var formatString = (format || this.money_format);
-
-  function defaultOption(opt, def) {
-     return (typeof opt == 'undefined' ? def : opt);
-  }
-
-  function formatWithDelimiters(number, precision, thousands, decimal) {
-    precision = defaultOption(precision, 2);
-    thousands = defaultOption(thousands, ',');
-    decimal   = defaultOption(decimal, '.');
-
-    if (isNaN(number) || number == null) { return 0; }
-
-    number = (number/100.0).toFixed(precision);
-
-    var parts   = number.split('.'),
-        dollars = parts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1' + thousands),
-        cents   = parts[1] ? (decimal + parts[1]) : '';
-
-    return dollars + cents;
-  }
-
-  switch(formatString.match(placeholderRegex)[1]) {
-    case 'amount':
-      value = formatWithDelimiters(cents, 2);
-      break;
-    case 'amount_no_decimals':
-      value = formatWithDelimiters(cents, 0);
-      break;
-    case 'amount_with_comma_separator':
-      value = formatWithDelimiters(cents, 2, '.', ',');
-      break;
-    case 'amount_no_decimals_with_comma_separator':
-      value = formatWithDelimiters(cents, 0, '.', ',');
-      break;
-  }
-
+    if (typeof cents === 'string') {
+      cents = cents.replace('.', '');
+    }
+    let value = '';
+    const placeholderRegex = /\{\{\s*(\w+)\s*\}\}/;
+    const formatString = format || moneyFormat;
+  
+    function formatWithDelimiters(
+      number,
+      precision = 2,
+      thousands = ',',
+      decimal = '.'
+    ) {
+      if (isNaN(number) || number == null) {
+        return 0;
+      }
+    
+      number = (number / 100.0).toFixed(precision);
+    
+      const parts = number.split('.');
+      const dollarsAmount = parts[0].replace(
+        /(\d)(?=(\d\d\d)+(?!\d))/g,
+        `$1${thousands}`
+      );
+      const centsAmount = parts[1] ? decimal + parts[1] : '';
+    
+      return dollarsAmount + centsAmount;
+    }
+  
+    switch (formatString.match(placeholderRegex)[1]) {
+      case 'amount':
+        value = formatWithDelimiters(cents, 2);
+        break;
+      case 'amount_no_decimals':
+        value = formatWithDelimiters(cents, 0);
+        break;
+      case 'amount_with_comma_separator':
+        value = formatWithDelimiters(cents, 2, '.', ',');
+        break;
+      case 'amount_no_decimals_with_comma_separator':
+        value = formatWithDelimiters(cents, 0, '.', ',');
+        break;
+    }
+  
   return formatString.replace(placeholderRegex, value);
-};
+}
+var formatMoney = (val => formatMoney(val, window.theme.moneyFormat || "${{amount}}"));
   
 // Announcement Bar Timer 
 function announcementTimer(hours, minutes, id, timerContainer) {
