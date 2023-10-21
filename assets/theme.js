@@ -1448,24 +1448,11 @@ function initProductVariants() {
     productSku: document.querySelector('[data-sku]'),
     productInStock: document.querySelector('[data-inventory]'),
     productAddToCartBtn: document.querySelector('[name="add"]'),
-    variantSelectors: document.querySelectorAll('[data-selected-variant]'),
     productOptionLabel: document.querySelectorAll('[data-option-name]'),
     productOptions: document.querySelectorAll('.product-form__input'),
-    productForm: document.querySelectorAll('.product__form'),
     formValidationErrorMessage: document.querySelector('.product-form__errors'),
     productGrid: document.querySelectorAll('.product-grid')
   };
-
-  // selectors.productForm.forEach(form => {
-  //   if (!form) return;
-  //   if (form) {
-  //     // selectors.variantSelectors.forEach(selector => {
-  //     //   selector.addEventListener('change', () => {
-  //     //     updateProductOptions();
-  //     //   });
-  //     // });
-  //   }
-  // });
 
   selectors.productGrid.forEach(product => {
     if(!product) return;
