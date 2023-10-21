@@ -311,7 +311,8 @@
       "pick_up_available_at_html": "Pickup Available at {{ location_name }}",
       "view_store_info": "View Store Info",
       "check_other_stores": "Check Other Stores",
-      "pick_up_unavailable_at_html": "Pickup UnAvailable at {{ location_name }}"
+      "pick_up_unavailable_at_html": "Pickup UnAvailable at {{ location_name }}",
+      "pick_up_available": "Pickup Available"
     }
   },
   "sections": {
