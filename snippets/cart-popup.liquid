@@ -26,7 +26,7 @@
         {%- render 'icon-close' -%}
       </button>
     </div>
-    <div data-cart data-money-format="{{ shop.money_format }}">
+    <div data-cart>
       {% form 'cart', cart %}
         {% comment %}
           {%- if free_shipping -%}
