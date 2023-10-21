@@ -334,7 +334,6 @@ class PredictiveSearch extends HTMLElement {
     };
   }
 }
-
 customElements.define('predictive-search', PredictiveSearch);
 
 // Slideshow
@@ -813,7 +812,6 @@ class LocalizationForm extends HTMLElement {
     }
   }
 }
-
 customElements.define('localization-form', LocalizationForm);
 
 // Customers Form
