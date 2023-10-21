@@ -41,7 +41,8 @@
           cartUrl: {{ routes.cart_url | json }},
           collection: {{ collection.url | json }},
           home: {{ routes.root_url | json }},
-          productUrl: {{ product.url | json }}
+          productUrl: {{ product.url | json }},
+          money_format: {{ shop.money_format | json }}
         },
         strings: {
           addToCart: "{{ 'products.add_to_cart' | t }}",
