@@ -1452,7 +1452,6 @@ function initProductVariants() {
     productOptionLabel: document.querySelectorAll('[data-option-name]'),
     productOptions: document.querySelectorAll('.product-form__input'),
     productForm: document.querySelectorAll('.product__form'),
-    format: null,
     product: window.themeContent.routes.product,
     formValidationErrorMessage: document.querySelector('.product-form__errors'),
     productGrid: document.querySelectorAll('.product-grid')
@@ -1461,7 +1460,6 @@ function initProductVariants() {
   // selectors.productForm.forEach(form => {
   //   if (!form) return;
   //   if (form) {
-  //     selectors.format = form.dataset.format || 'default';
   //     // selectors.variantSelectors.forEach(selector => {
   //     //   selector.addEventListener('change', () => {
   //     //     updateProductOptions();
