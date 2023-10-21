@@ -1452,7 +1452,6 @@ function initProductVariants() {
     productOptionLabel: document.querySelectorAll('[data-option-name]'),
     productOptions: document.querySelectorAll('.product-form__input'),
     productForm: document.querySelectorAll('.product__form'),
-    product: window.themeContent.routes.product,
     formValidationErrorMessage: document.querySelector('.product-form__errors'),
     productGrid: document.querySelectorAll('.product-grid')
   };
