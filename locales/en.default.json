@@ -306,6 +306,11 @@
       "total_reviews": "Total Reviews {{ count }}"
     }
   },
+  "pickup_availability": {
+    "general": {
+      "pick_up_available_at_html": "Pickup Available at {{ location_name }}"
+    }
+  },
   "sections": {
     "announcement-bar": {
       "header_announcement": "Announcement Bar"
