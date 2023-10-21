@@ -223,7 +223,15 @@
         <div class="product-full__info--btn hidden">
           <a href="{{ product.url }}" title="{{ 'products.view_full_info' | t }}">{{ 'products.view_full_info' | t }}</a>
         </div>
+        <div class="product-single__store-availability-container"
+          data-store-availability-container
+          data-product-title=""
+          data-has-only-default-variant=""
+          data-base-url=""
+        >
+        </div>
       </div>
+    
     {%- when 'collapsables' -%}
       <div class="product__tabs" {{ block.shopify_attributes }}>
         <div class="product-tab__container">
