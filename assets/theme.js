@@ -1288,7 +1288,7 @@ function initCartForm() {
         return;
       }
       let finalPriceContainer = document.querySelectorAll(`[data-key="${item.key}"] .final-line__price`);
-      let itemPrice =  formatMoney(item.final_line_price,selectors.format);
+      let itemPrice =  formatMoney(item.final_line_price);
       finalPriceContainer.forEach(lineItem => { lineItem.textContent = itemPrice});
     });
   }
@@ -1298,7 +1298,7 @@ function initCartForm() {
       if (!selector) {
         return;
       }
-      selector.textContent = formatMoney(cartData.total_price,selectors.format);
+      selector.textContent = formatMoney(cartData.total_price);
     })
   }
 
@@ -1307,7 +1307,7 @@ function initCartForm() {
       if (!selector) {
         return
       }
-      selector.textContent = formatMoney(cartData.total_discount,selectors.format);
+      selector.textContent = formatMoney(cartData.total_discount);
     })
   }
 
@@ -1387,7 +1387,7 @@ function initCartForm() {
       const freeShippingText = bar.querySelector('[data-free-shipping-bar]');
       progressBar.style.setProperty('--progress', progress);
       if (cartTotal < thresholdTotal) {
-        const remainingAmount = formatMoney(thresholdTotal - cartTotal, selectors.format);
+        const remainingAmount = formatMoney(thresholdTotal - cartTotal);
         freeShippingText.innerHTML = `Spend ${remainingAmount} more to qualify for free shipping.`;
       } else {
         freeShippingText.textContent = window.themeContent.strings.freeShippingSuccess;
@@ -1662,8 +1662,8 @@ function initProductVariants() {
     if (!selectors.productSalePrice || !selectors.productRegularPrice) {
       return;
     }
-    selectors.productSalePrice.textContent = formatMoney(matchedVariant.price,selectors.format);
-    selectors.productRegularPrice.textContent = formatMoney(matchedVariant.compare_at_price, selectors.format);
+    selectors.productSalePrice.textContent = formatMoney(matchedVariant.price);
+    selectors.productRegularPrice.textContent = formatMoney(matchedVariant.compare_at_price);
 
     matchedVariant.compare_at_price > matchedVariant.price ?
       selectors.productRegularPrice.classList.remove('hidden') :
