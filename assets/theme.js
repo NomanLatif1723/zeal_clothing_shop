@@ -1088,21 +1088,8 @@ function initCartForm() {
     cartNoteBtn: document.querySelectorAll('#cartNoteBtn'),
     cartNote: document.querySelectorAll('[name="note"]'),
     freeShippingBar: document.querySelectorAll('.free-shipping'),
-    cartItemCounter: document.querySelectorAll('[data-cart-count]'),
-    format: null
+    cartItemCounter: document.querySelectorAll('[data-cart-count]')
   };
-
-  // Get the Money Format
-  // selectors.cartContainer.forEach(container => {
-  //   if (!container) {
-  //     return;
-  //   }
-  //   if (container) {
-  //     selectors.format = container.dataset.moneyFormat;
-  //   } else {
-  //     selectors.format = 'default';
-  //   }
-  // });
 
   // quantity Change Event
   selectors.quantitySelector.forEach(button => {
