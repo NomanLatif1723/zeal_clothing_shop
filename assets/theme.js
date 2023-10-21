@@ -1089,16 +1089,16 @@ function initCartForm() {
   };
 
   // Get the Money Format
-  selectors.cartContainer.forEach(container => {
-    if (!container) {
-      return;
-    }
-    if (container) {
-      selectors.format = container.dataset.moneyFormat;
-    } else {
-      selectors.format = 'default';
-    }
-  });
+  // selectors.cartContainer.forEach(container => {
+  //   if (!container) {
+  //     return;
+  //   }
+  //   if (container) {
+  //     selectors.format = container.dataset.moneyFormat;
+  //   } else {
+  //     selectors.format = 'default';
+  //   }
+  // });
 
   // quantity Change Event
   selectors.quantitySelector.forEach(button => {
