@@ -45,7 +45,7 @@
 //   return formatString.replace(placeholderRegex, value);
 // };
 const moneyFormat = '${{amount}}';
-function formatMoney(cents, format) {
+function formatMoney$1(cents, format) {
     if (typeof cents === 'string') {
       cents = cents.replace('.', '');
     }
@@ -92,7 +92,7 @@ function formatMoney(cents, format) {
   
   return formatString.replace(placeholderRegex, value);
 }
-var formatMoney = (val => formatMoney(val, window.theme.moneyFormat || "${{amount}}"));
+var formatMoney = (val => formatMoney$1(val, window.theme.moneyFormat || "${{amount}}"));
   
 // Announcement Bar Timer 
 function announcementTimer(hours, minutes, id, timerContainer) {
