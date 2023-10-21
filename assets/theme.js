@@ -1514,14 +1514,6 @@ function initProductVariants() {
   //   }
   // });
 
-
-  // document.body.addEventListener('change', (event) => {
-  //   const selector = event.target;
-  //   if (selector.hasAttribute('data-selected-variant')) {
-  //     updateProductOptions(selector);
-  //   }
-  // });
-
   function updateProductOptions(variantSelectors, product) {
     let selectedOptions = [];
     variantSelectors.forEach(selector => {
