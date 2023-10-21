@@ -26,7 +26,7 @@
         {{ 'cart.general.drawer_close' | t }}
       </button>
     </div>
-    <div data-cart data-money-format="{{ shop.money_format }}">
+    <div data-cart>
       {%- form 'cart', cart -%}
         {%- if cart.item_count > 0 -%}
           <div class="drawer__scrollable">
