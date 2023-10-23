@@ -2008,4 +2008,15 @@ function initProductRecommendations() {
   }
 }
 initProductRecommendations();
+
+function backToTopScrolling() {
+  const backBtn = document.querySelector('.back-top__btn');
+  if (backBtn) {
+    if (window.scrollY == 300) {
+      backBtn.style.display = 'block';
+    } else {
+      backBtn.style.display = 'none';
+    }
+  }
+}
 })();
