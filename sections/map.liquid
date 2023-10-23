@@ -22,7 +22,14 @@
       </div>
       <div class="map__section-text">
         <div class="map__section-box text__position-{{ section.settings.content_position }}">
-          <div class="map__section-shadow text__align-{{ section.settings.text_alignment }}"></div>
+          <div class="map__section-shadow text__align-{{ section.settings.text_alignment }}">
+            {%- if section.settings.heading != blank -%}
+              <h3 class="map__heading">{{ section.settings.heading }}</h3>
+            {%- endif -%}
+            {%- if section.settings.address != blank -%}
+              <div class="map__address">{{ section.settings.address }}</div>
+            {%- endif -%}
+          </div>
         </div>
       </div>
     </div>
