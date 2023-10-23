@@ -297,6 +297,10 @@
         "default": false
       },
       {
+        "type": "header",
+        "content": "t:schema_settings.typography.settings.header_back_top_top.label"
+      },
+      {
         "type": "checkbox",
         "id": "show_back_to_top",
         "label": "t:schema_settings.extras.settings.show_back_to_top.label",
