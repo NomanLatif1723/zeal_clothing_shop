@@ -334,6 +334,56 @@
     "customer-order": {
       "name": "Customer Order"
     },
+    "complementary-product": {
+      "name": "Complementary Products",
+      "settings": {
+        "show_dynamic_recommendation": {
+          "info": "Dynamic recommendations use order and product information to change and improve over time. [Learn more](https:\/\/help.shopify.com\/en\/themes\/development\/recommended-products)"
+        },
+        "heading": {
+          "label": "Heading"
+        },
+        "products_to_show": {
+          "label": "Products To Show"
+        },
+        "products_per_row": {
+          "label": "Products Per Row"
+        },
+        "header_alignment": {
+          "label": "Alignment",
+          "alignment": {
+            "label": "Text alignment",
+            "options": {
+              "left": {
+                "label": "Left"
+              },
+              "center": {
+                "label": "Center"
+              },
+              "right": {
+                "label": "Right"
+              }
+            }
+          }
+        },
+        "lazyload_images": {
+          "label": "Enable LazyLoad Images",
+          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+        },
+        "header_spacing": {
+          "label": "Section Spacing",
+          "top_spacing": {
+            "label": "Spacing Top"
+          },
+          "bottom_spacing": {
+            "label": "Spacing Bottom"
+          }
+        }
+      },
+      "presets": {
+        "name": "Complementary Products"
+      }
+    },
     "events-popup": {
       "name": "Events Popup",
       "settings": {
