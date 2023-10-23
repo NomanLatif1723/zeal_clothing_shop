@@ -2020,4 +2020,5 @@ function backToTopScrolling() {
     }
   }
 }
+backToTopScrolling();
 })();
