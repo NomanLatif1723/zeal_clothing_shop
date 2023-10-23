@@ -192,7 +192,7 @@
     "b23656f0-bf8f-45ab-8d52-88216dc9f000": {
       "type": "complementary-product",
       "settings": {
-        "heading": "You May Also Like",
+        "heading": "Pairs Well With",
         "text_alignment": "center",
         "products_to_show": 4,
         "products_per_row": 4,
