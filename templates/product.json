@@ -191,6 +191,7 @@
     },
     "b23656f0-bf8f-45ab-8d52-88216dc9f000": {
       "type": "complementary-product",
+      "disabled": true,
       "settings": {
         "heading": "Pairs Well With",
         "text_alignment": "center",
