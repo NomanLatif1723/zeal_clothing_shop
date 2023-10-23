@@ -213,7 +213,8 @@
   },
   "general": {
     "accessibility": {
-      "close-modal": "Close Modal"
+      "close-modal": "Close Modal",
+      "back-to-top": "Back To Top"
     },
     "404": {
       "text": "404 Error",
