@@ -3131,20 +3131,23 @@
         "show_breadcrumbs": {
           "label": "Show Breadcrumbs"
         },
-        "show_back_to_top": {
-          "label": "Enable Back To Top"
-        },
-        "back_button_position": {
-          "label": "Position",
-          "options": {
-            "bottom_left": {
-              "label": "Bottom Left"
-            },
-            "bottom_center": {
-              "label": "Bottom Center"
-            },
-            "bottom_right": {
-              "label": "Bottom Right"
+        "header_back_top_top": {
+          "label": "Back To Top",
+          "show_back_to_top": {
+            "label": "Enable Back To Top"
+          },
+          "back_button_position": {
+            "label": "Position",
+            "options": {
+              "bottom_left": {
+                "label": "Bottom Left"
+              },
+              "bottom_center": {
+                "label": "Bottom Center"
+              },
+              "bottom_right": {
+                "label": "Bottom Right"
+              }
             }
           }
         }
