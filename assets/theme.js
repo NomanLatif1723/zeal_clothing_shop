@@ -2009,6 +2009,7 @@ function initProductRecommendations() {
 }
 initProductRecommendations();
 
+// Back To Top Function
 function backToTopScrolling() {
   const backBtn = document.querySelector('.back-top__btn');
   if (backBtn) {
