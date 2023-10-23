@@ -1864,6 +1864,46 @@
     "map": {
       "name": "Map",
       "settings": {
+        "section_height_desktop": {
+          "label": "Desktop Height",
+          "options": {
+            "natural": {
+              "label": "Natural"
+            },
+            "compact": {
+              "label": "Compact (450px)"
+            },
+            "standard": {
+              "label": "Standard (650px)"
+            },
+            "extended": {
+              "label": "Extended (750px)"
+            },
+            "full": {
+              "label": "Full Screen"
+            }
+          }
+        },
+        "section_height_mobile": {
+          "label": "Mobile Height",
+          "options": {
+            "auto": {
+              "label": "Auto"
+            },
+            "compact": {
+              "label": "Compact (300px)"
+            },
+            "standard": {
+              "label": "Standard (400px)"
+            },
+            "extended": {
+              "label": "Extended (500px)"
+            },
+            "full": {
+              "label": "Full Screen"
+            }
+          }
+        }
       },
       "presets": {
         "name": "Map"
