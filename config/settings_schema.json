@@ -295,6 +295,12 @@
         "id": "show_breadcrumbs",
         "label": "t:schema_settings.extras.settings.show_breadcrumbs.label",
         "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "show_back_to_top",
+        "label": "t:schema_settings.extras.settings.show_back_to_top.label",
+        "default": false
       }
     ]
   },
