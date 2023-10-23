@@ -301,6 +301,26 @@
         "id": "show_back_to_top",
         "label": "t:schema_settings.extras.settings.show_back_to_top.label",
         "default": false
+      },
+      {
+        "type": "select",
+        "id": "back_button_position",
+        "label": "t:schema_settings.extras.settings.back_button_position.label",
+        "default": "bottom_right",
+        "options": [
+          {
+            "value": "bottom_left",
+            "label": "t:schema_settings.extras.settings.back_button_position.options.bottom_left.label"
+          },
+          {
+            "value": "bottom_center",
+            "label": "t:schema_settings.extras.settings.back_button_position.options.bottom_center.label"
+          },
+          {
+            "value": "bottom_right",
+            "label": "t:schema_settings.extras.settings.back_button_position.options.bottom_right.label"
+          }
+        ]
       }
     ]
   },
