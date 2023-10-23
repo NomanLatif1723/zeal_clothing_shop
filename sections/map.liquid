@@ -20,7 +20,11 @@
           {{ 'lifestyle-1' | placeholder_svg_tag: "placeholder__image" }}
         {%- endif -%}
       </div>
-      <div class="map__section-text"></div>
+      <div class="map__section-text">
+        <div class="map__section-box text__position-{{ section.settings.content_position }}">
+          <div class="map__section-shadow text__align-{{ section.settings.text_alignment }}"></div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
