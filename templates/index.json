@@ -1038,7 +1038,7 @@
     "eae58e81-cb24-49fe-aea2-dcdb5f38409c": {
       "type": "map",
       "settings": {
-        "section_height_desktop": "natural",
+        "section_height_desktop": "compact",
         "section_height_mobile": "auto",
         "map_embed_code": "",
         "heading": "Maple Avenue Store",
