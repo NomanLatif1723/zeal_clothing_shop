@@ -49,7 +49,7 @@
                   <textarea name="note" rows="10" class="form__input" id="CartNote" placeholder="{{ 'cart.general.note_placeholder' | t }}">{{ cart.note }}</textarea>
                 </div>
               {%- endif -%}
-              {%- if cart.cart_level_discount_applications != blank -%}
+              {%- if cart.cart_level_discount_applications.size > 0 -%}
                 <div class="cart__discounts">
                   <h3>{{ 'cart.general.discount' | t }}</h3>
                 {%- for cart__discount in cart.cart_level_discount_applications -%}
