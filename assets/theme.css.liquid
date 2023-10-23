@@ -1,21 +1,17 @@
-
-
 /* resets  */
-*,:before ,:after ,
-input {
+*,:before ,:after ,input {
   box-sizing: border-box;
 }
-
-body,
-html {
+body,html {
   padding: 0;
   margin: 0;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 li {
   list-style: none;
 }
-
 a {
   text-decoration: none;
   color: #111111;
@@ -27,14 +23,7 @@ ul {
   padding: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote {
+h1,h2,h3,h4,h5,h6,p,blockquote {
   margin: 0;
 }
 h1 {
@@ -46,7 +35,6 @@ h2 {
   line-height: 32px;
   text-transform: uppercase;
 }
-
 h3 {
   font-size: 18px;
   line-height: 30px;
@@ -57,7 +45,6 @@ h4 {
   font-size: 14px;
   line-height: 18px;
 }
-
 img {
   display: block;
   width: 100%;
@@ -68,9 +55,7 @@ img {
 #MainContent {
     min-height: 700px;
 }
-input,
-select,
-textarea {
+input,select,textarea {
   background-color: inherit;
   color: inherit;
   /* padding: 12px 15px; */
