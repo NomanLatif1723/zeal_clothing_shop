@@ -3130,6 +3130,23 @@
         },
         "show_breadcrumbs": {
           "label": "Show Breadcrumbs"
+        },
+        "show_back_to_top": {
+          "label": "Enable Back To Top"
+        },
+        "back_button_position": {
+          "label": "Position",
+          "options": {
+            "bottom_left": {
+              "label": "Bottom Left"
+            },
+            "bottom_center": {
+              "label": "Bottom Center"
+            },
+            "bottom_right": {
+              "label": "Bottom Right"
+            }
+          }
         }
       }
     },
