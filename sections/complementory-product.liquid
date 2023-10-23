@@ -1,12 +1,134 @@
+{%- liquid
+  assign products_per_row = section.settings.products_per_row
+  assign products_to_show = section.settings.products_to_show
+  assign product_limit = products_per_row | times: products_to_show        
+-%}
+{%- style -%}
+  .main__section-{{ section.id }} {
+    margin-top: {{ section.settings.margin_top | times: 0.5 | round: 0 }}px;
+    margin-bottom: {{ section.settings.margin_bottom | times: 0.5 | round: 0 }}px;
+  }
+  @media only screen and (min-width: 769px) {
+    .main__section-{{ section.id }}{
+      margin-top: {{ section.settings.margin_top }}px;
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<product-recommendations class="main__section-{{ section.id }}" data-intent="complementary" data-section-id="{{ section.id }}" data-product-id="{{ product.id }}" data-limit="{{ products_to_show }}">
+  <div class="page__width">
+    {%- if recommendations.performed? and recommendations.products_count > 0 -%}
+      <div class="collection__header text__align-{{ section.settings.text_alignment }}">
+        {%- if section.settings.heading != blank -%}
+          <div class="main__heading">
+            <h2>{{ section.settings.heading }}</h2>
+          </div>
+        {%- endif -%}
+      </div>
+      <div class="collection-grid">
+        {%- for product in recommendations.products limit: product_limit -%}
+          {%- render 'product-item',
+             product: product,
+             products_per_row: section.settings.products_per_row,
+             lazyloadImages: section.settings.lazyload_images,
+             textAlignment: section.settings.text_alignment
+          -%}
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</product-recommendations>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "t:sections.product-recommendation.name",
+    "class": "product__recommendation",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "t:sections.product-recommendation.settings.show_dynamic_recommendation.info"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "t:sections.product-recommendation.settings.heading.label",
+        "default": "You May Also Like"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.product-recommendation.settings.header_alignment.label"
+      },
+      {
+        "type": "select",
+        "id": "text_alignment",
+        "label": "t:sections.product-recommendation.settings.header_alignment.alignment.label",
+        "options": [
+          {
+            "value": "left",
+            "label": "t:sections.product-recommendation.settings.header_alignment.alignment.options.left.label"
+          }, {
+            "value": "center",
+            "label": "t:sections.product-recommendation.settings.header_alignment.alignment.options.center.label"
+          }, {
+            "value": "right",
+            "label": "t:sections.product-recommendation.settings.header_alignment.alignment.options.right.label"
+          }
+        ],
+        "default": "center"
+      },
+      {
+        "type": "range",
+        "id": "products_to_show",
+        "label": "t:sections.product-recommendation.settings.products_to_show.label",
+        "min": 2,
+        "max": 10,
+        "step": 1,
+        "default": 4
+      },
+      {
+        "type": "range",
+        "id": "products_per_row",
+        "label": "t:sections.product-recommendation.settings.products_per_row.label",
+        "min": 1,
+        "max": 5,
+        "step": 1,
+        "default": 4
+      },
+      {
+        "type": "checkbox",
+        "id": "lazyload_images",
+        "label": "t:sections.product-recommendation.settings.lazyload_images.label",
+        "default": false
+      },
+      {
+        "type": "header",
+        "content": "t:sections.product-recommendation.settings.header_spacing.label"
+      },
+      {
+        "type": "range",
+        "id": "margin_top",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "label": "t:sections.product-recommendation.settings.header_spacing.top_spacing.label",
+        "default": 16
+      },
+      {
+        "type": "range",
+        "id": "margin_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "label": "t:sections.product-recommendation.settings.header_spacing.bottom_spacing.label",
+        "default": 16
+      }
+    ],
+    "presets": [
+      {
+        "name": "t:sections.product-recommendation.presets.name"
+      }
+    ]
   }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
