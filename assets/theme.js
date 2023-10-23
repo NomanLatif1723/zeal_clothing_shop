@@ -52,31 +52,6 @@ function formatMoney$1(cents, format) {
 var formatMoney = (val => formatMoney$1(val, window.themeContent.routes.money_format || "${{amount}}"));
   
 // Announcement Bar Timer 
-function announcementTimer(hours, minutes, id, timerContainer) {
-  let startTime = localStorage.getItem(`announcementStartTime_${id}`);
-  if (!startTime) {
-      startTime = Date.now();
-      localStorage.setItem(`announcementStartTime_${id}`, startTime);
-  }
-  const totalMilliseconds = (hours * 3600000) + (minutes * 60000);
-  const currentTime = Date.now();
-  const timeDifference = currentTime - startTime;
-  let remainingMilliseconds = totalMilliseconds - timeDifference;
-  if (remainingMilliseconds <= 0) {
-      timerContainer.innerHTML = "00 : 00 : 00";
-      return;
-  }
-  const timerInterval = setInterval(function() {
-    const remainingHours = Math.floor(remainingMilliseconds / 3600000);
-    const remainingMinutes = Math.floor((remainingMilliseconds % 3600000) / 60000);
-    const remainingSeconds = Math.floor((remainingMilliseconds % 60000) / 1000);
-    timerContainer.innerHTML = `${remainingHours} : ${remainingMinutes} : ${remainingSeconds}`;
-    remainingMilliseconds -= 1000;
-  }, 1000);
-}
-document.addEventListener("DOMContentLoaded", function() {
-  initAnnouncementTimer();
-});
 function initAnnouncementTimer() {
   const announcementWrappers = document.querySelectorAll('.announcement__bar');
   announcementWrappers.forEach(wrapper => {
@@ -88,7 +63,32 @@ function initAnnouncementTimer() {
       announcementTimer(hours, minutes, id, timerContainer);
     }
   });
+  function announcementTimer(hours, minutes, id, timerContainer) {
+    let startTime = localStorage.getItem(`announcementStartTime_${id}`);
+    if (!startTime) {
+        startTime = Date.now();
+        localStorage.setItem(`announcementStartTime_${id}`, startTime);
+    }
+    const totalMilliseconds = (hours * 3600000) + (minutes * 60000);
+    const currentTime = Date.now();
+    const timeDifference = currentTime - startTime;
+    let remainingMilliseconds = totalMilliseconds - timeDifference;
+    if (remainingMilliseconds <= 0) {
+        timerContainer.innerHTML = "00 : 00 : 00";
+        return;
+    }
+    const timerInterval = setInterval(function() {
+      const remainingHours = Math.floor(remainingMilliseconds / 3600000);
+      const remainingMinutes = Math.floor((remainingMilliseconds % 3600000) / 60000);
+      const remainingSeconds = Math.floor((remainingMilliseconds % 60000) / 1000);
+      timerContainer.innerHTML = `${remainingHours} : ${remainingMinutes} : ${remainingSeconds}`;
+      remainingMilliseconds -= 1000;
+    }, 1000);
+  }
 }
+document.addEventListener("DOMContentLoaded", function() {
+  initAnnouncementTimer();
+});
 
 // Sticky Header 
 function initStickyHeader() {
