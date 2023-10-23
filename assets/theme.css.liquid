@@ -182,24 +182,17 @@ button {
     --borderColor: {{ settings.border_color }};
 
   }
-
   body {
     font-family: var(--bodyTextFont), sans-serif;
     background: var(--colorBody);
     color: var(--colorBodyText);
   }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  h1,h2,h3,h4,h5,h6 {
     font-family: var(--headingTextFont), sans-serif;
   }
   button {
     font-family: var(--bodyTextFont), sans-serif;
   }
-
   .page__width {
     max-width: 1480px;
     margin: 0 auto;
@@ -224,12 +217,10 @@ button {
     letter-spacing: 0.7px;
     text-transform: uppercase;
   }
-
   .btn__secondary {
     background: var(--colorButtonSecondary);
     color: var(--colorButtonTextSecondary);
   }
-
   .main__heading {
     padding-bottom: 6px;
   }
@@ -248,6 +239,7 @@ button {
 /* Back To Top Button */
 .back__to-top {
   position: fixed;
+  z-index: 9;
   bottom: 120px;
   
 }
