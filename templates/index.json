@@ -1045,7 +1045,7 @@
         "address": "<p>3876 Maple Avenue, Riverside, California<\/p><p>Mon - Fri, 8:30am - 10:30pm<\/p><p>Sat - Sun 8:30am - 10:30pm<\/p>",
         "button_text": "View On Map",
         "button_link": "https:\/\/www.google.com\/maps",
-        "content_position": "center-left",
+        "content_position": "top-left",
         "text_alignment": "left",
         "margin_top": 16,
         "margin_bottom": 16
