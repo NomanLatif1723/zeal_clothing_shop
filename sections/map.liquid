@@ -20,31 +20,31 @@
 </div>
 {% schema %}
   {
-    "name": "Map",
+    "name": "t:sections.map.name",
     "settings": [
       {
         "type": "select",
         "id": "section_height_desktop",
-        "label": "t:sections.slideshow.settings.section_height_desktop.label",
+        "label": "t:sections.map.settings.section_height_desktop.label",
         "options": [
           {
             "value": "natural",
-            "label": "t:sections.slideshow.settings.section_height_desktop.options.natural.label"
+            "label": "t:sections.map.settings.section_height_desktop.options.natural.label"
           },
           {
             "value": "compact",
-            "label": "t:sections.slideshow.settings.section_height_desktop.options.compact.label"
+            "label": "t:sections.map.settings.section_height_desktop.options.compact.label"
           },
           {
             "value": "standard",
-            "label": "t:sections.slideshow.settings.section_height_desktop.options.standard.label"
+            "label": "t:sections.map.settings.section_height_desktop.options.standard.label"
           },
           {
             "value": "extended",
-            "label": "t:sections.slideshow.settings.section_height_desktop.options.extended.label"
+            "label": "t:sections.map.settings.section_height_desktop.options.extended.label"
           }, {
             "value": "full",
-            "label": "t:sections.slideshow.settings.section_height_desktop.options.full.label"
+            "label": "t:sections.map.settings.section_height_desktop.options.full.label"
           }
         ],
         "default": "natural"
@@ -52,26 +52,26 @@
       {
         "type": "select",
         "id": "section_height_mobile",
-        "label": "t:sections.slideshow.settings.section_height_mobile.label",
+        "label": "t:sections.map.settings.section_height_mobile.label",
         "options": [
           {
             "value": "auto",
-            "label": "t:sections.slideshow.settings.section_height_mobile.options.auto.label"
+            "label": "t:sections.map.settings.section_height_mobile.options.auto.label"
           },
           {
             "value": "compact",
-            "label": "t:sections.slideshow.settings.section_height_mobile.options.compact.label"
+            "label": "t:sections.map.settings.section_height_mobile.options.compact.label"
           },
           {
             "value": "standard",
-            "label": "t:sections.slideshow.settings.section_height_mobile.options.standard.label"
+            "label": "t:sections.map.settings.section_height_mobile.options.standard.label"
           },
           {
             "value": "extended",
-            "label": "t:sections.slideshow.settings.section_height_mobile.options.extended.label"
+            "label": "t:sections.map.settings.section_height_mobile.options.extended.label"
           }, {
             "value": "full",
-            "label": "t:sections.slideshow.settings.section_height_mobile.options.full.label"
+            "label": "t:sections.map.settings.section_height_mobile.options.full.label"
           }
         ],
         "default": "auto"
@@ -79,70 +79,70 @@
       {
         "type": "html",
         "id": "map_embed_code",
-        "label": "Add Google iframe code"
+        "label": "t:sections.map.settings.map_embed_code.label"
       },
       {
         "type": "text",
         "id": "heading",
-        "label": "Heading",
+        "label": "t:sections.map.settings.heading.label",
         "default": "Store Location"
       },
       {
         "type": "richtext",
         "id": "address",
-        "label": "Address and Hours",
+        "label": "t:sections.map.settings.address.label",
         "default": "<p>301 Front St W<br>Toronto, Canada</p><p>Mon - Fri, 8:30am - 10:30pm<br>Saturday, 8:30am - 10:30pm<br>Sunday, 8:30am - 10:30pm</p>"
       },
       {
         "type": "text",
         "id": "button_text",
-        "label": "Button",
+        "label": "t:sections.map.settings.button_text.label",
         "default": "View Map"
       },
       {
         "type": "url",
         "id": "button_link",
-        "label": "Button link"
+        "label": "t:sections.map.settings.button_link.label"
       },
       {
         "type": "header",
-        "content": "t:sections.slideshow.blocks.slide.settings.header_alignment.label"
+        "content": "t:sections.map.settings.header_alignment.label"
       },
       {
         "type": "select",
         "id": "content_position",
-        "label": "t:sections.slideshow.blocks.slide.settings.content_position.label",
+        "label": "t:sections.map.settings.content_position.label",
         "options": [
           {
             "value": "top-left",
-            "label": "t:sections.slideshow.blocks.slide.settings.content_position.options.top_left.label"
+            "label": "t:sections.map.settings.content_position.options.top_left.label"
           },
           {
             "value": "top-center",
-            "label": "t:sections.slideshow.blocks.slide.settings.content_position.options.top_center.label"
+            "label": "t:sections.map.settings.content_position.options.top_center.label"
           },
           {
             "value": "top-right",
-            "label": "t:sections.slideshow.blocks.slide.settings.content_position.options.top_right.label"
+            "label": "t:sections.map.settings.content_position.options.top_right.label"
           },
           {
             "value": "center-left",
-            "label": "t:sections.slideshow.blocks.slide.settings.content_position.options.center_left.label"
+            "label": "t:sections.map.settings.content_position.options.center_left.label"
           }, {
             "value": "center",
-            "label": "t:sections.slideshow.blocks.slide.settings.content_position.options.center.label"
+            "label": "t:sections.map.settings.content_position.options.center.label"
           }, {
             "value": "center-right",
-            "label": "t:sections.slideshow.blocks.slide.settings.content_position.options.center_right.label"
+            "label": "t:sections.map.settings.content_position.options.center_right.label"
           }, {
             "value": "bottom-left",
-            "label": "t:sections.slideshow.blocks.slide.settings.content_position.options.bottom_left.label"
+            "label": "t:sections.map.settings.content_position.options.bottom_left.label"
           }, {
             "value": "bottom-center",
-            "label": "t:sections.slideshow.blocks.slide.settings.content_position.options.bottom_center.label"
+            "label": "t:sections.map.settings.content_position.options.bottom_center.label"
           }, {
             "value": "bottom-right",
-            "label": "t:sections.slideshow.blocks.slide.settings.content_position.options.bottom_right.label"
+            "label": "t:sections.map.settings.content_position.options.bottom_right.label"
           }
         ],
         "default": "center-left"
@@ -150,24 +150,24 @@
       {
         "type": "select",
         "id": "text_alignment",
-        "label": "t:sections.slideshow.blocks.slide.settings.alignment.label",
+        "label": "t:sections.map.blocks.slide.settings.alignment.label",
         "options": [
           {
             "value": "left",
-            "label": "t:sections.slideshow.blocks.slide.settings.alignment.options.left.label"
+            "label": "t:sections.map.settings.alignment.options.left.label"
           }, {
             "value": "center",
-            "label": "t:sections.slideshow.blocks.slide.settings.alignment.options.center.label"
+            "label": "t:sections.map.settings.alignment.options.center.label"
           }, {
             "value": "right",
-            "label": "t:sections.slideshow.blocks.slide.settings.alignment.options.right.label"
+            "label": "t:sections.map.settings.alignment.options.right.label"
           }
         ],
         "default": "left"
       },
       {
         "type": "header",
-        "content": "t:sections.featured-collection.settings.header_spacing.label"
+        "content": "t:sections.map.settings.header_spacing.label"
       },
       {
         "type": "range",
@@ -176,7 +176,7 @@
         "max": 100,
         "step": 2,
         "unit": "px",
-        "label": "t:sections.featured-collection.settings.header_spacing.top_spacing.label",
+        "label": "t:sections.map.settings.header_spacing.top_spacing.label",
         "default": 16
       },
       {
@@ -186,13 +186,13 @@
         "max": 100,
         "step": 2,
         "unit": "px",
-        "label": "t:sections.featured-collection.settings.header_spacing.bottom_spacing.label",
+        "label": "t:sections.map.settings.header_spacing.bottom_spacing.label",
         "default": 16
       }
     ],
     "presets": [
       {
-        "name": "Map"
+        "name": "t:sections.map.presets.name"
       }
     ]
   }
