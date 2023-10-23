@@ -29,6 +29,9 @@
             {%- if section.settings.address != blank -%}
               <div class="map__address">{{ section.settings.address }}</div>
             {%- endif -%}
+            {%- if section.settings.button_text != blank -%}
+              <a href="{{ section.settings.button_link }}" class="btn btn__link view__map-btn" title="{{ section.settings.button_text }}">{{ section.settings.button_text }}</a>
+            {%- endif -%}
           </div>
         </div>
       </div>
