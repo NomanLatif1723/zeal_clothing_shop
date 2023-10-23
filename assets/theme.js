@@ -2014,7 +2014,7 @@ function backToTopScrolling() {
   const backBtn = document.querySelector('.back-top__btn');
   if (backBtn) {
     console.log(window.scrollY);
-     if (window.scrollTop > 300) {
+     if (window.scrollY > 300) {
       backBtn.style.display = "block";
     } else {
       backBtn.style.display = "none";
