@@ -2013,10 +2013,10 @@ function backToTopScrolling() {
   const backBtn = document.querySelector('.back-top__btn');
   if (backBtn) {
     console.log(window.scrollY);
-    if (window.scrollY == 300) {
-      backBtn.style.display = 'block';
+     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      backBtn.style.display = "block";
     } else {
-      backBtn.style.display = 'none';
+      backBtn.style.display = "none";
     }
   }
 }
