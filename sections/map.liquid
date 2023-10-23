@@ -15,6 +15,11 @@
     "name": "Map",
     "settings": [
       {
+        "type": "html",
+        "id": "map_embed_code",
+        "label": "Add Google iframe code"
+      },
+      {
         "type": "text",
         "id": "heading",
         "label": "Heading",
@@ -27,11 +32,6 @@
         "default": "<p>301 Front St W<br>Toronto, Canada</p><p>Mon - Fri, 8:30am - 10:30pm<br>Saturday, 8:30am - 10:30pm<br>Sunday, 8:30am - 10:30pm</p>"
       },
       {
-        "type": "html",
-        "id": "map_embed_code",
-        "label": "Add Google iframe code"
-      },
-      {
         "type": "text",
         "id": "button_text",
         "label": "Button",
@@ -41,6 +41,67 @@
         "type": "url",
         "id": "button_link",
         "label": "Button link"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.slideshow.blocks.slide.settings.header_alignment.label"
+      },
+      {
+        "type": "select",
+        "id": "content_position",
+        "label": "t:sections.slideshow.blocks.slide.settings.content_position.label",
+        "options": [
+          {
+            "value": "top-left",
+            "label": "t:sections.slideshow.blocks.slide.settings.content_position.options.top_left.label"
+          },
+          {
+            "value": "top-center",
+            "label": "t:sections.slideshow.blocks.slide.settings.content_position.options.top_center.label"
+          },
+          {
+            "value": "top-right",
+            "label": "t:sections.slideshow.blocks.slide.settings.content_position.options.top_right.label"
+          },
+          {
+            "value": "center-left",
+            "label": "t:sections.slideshow.blocks.slide.settings.content_position.options.center_left.label"
+          }, {
+            "value": "center",
+            "label": "t:sections.slideshow.blocks.slide.settings.content_position.options.center.label"
+          }, {
+            "value": "center-right",
+            "label": "t:sections.slideshow.blocks.slide.settings.content_position.options.center_right.label"
+          }, {
+            "value": "bottom-left",
+            "label": "t:sections.slideshow.blocks.slide.settings.content_position.options.bottom_left.label"
+          }, {
+            "value": "bottom-center",
+            "label": "t:sections.slideshow.blocks.slide.settings.content_position.options.bottom_center.label"
+          }, {
+            "value": "bottom-right",
+            "label": "t:sections.slideshow.blocks.slide.settings.content_position.options.bottom_right.label"
+          }
+        ],
+        "default": "center-left"
+      },
+      {
+        "type": "select",
+        "id": "text_alignment",
+        "label": "t:sections.slideshow.blocks.slide.settings.alignment.label",
+        "options": [
+          {
+            "value": "left",
+            "label": "t:sections.slideshow.blocks.slide.settings.alignment.options.left.label"
+          }, {
+            "value": "center",
+            "label": "t:sections.slideshow.blocks.slide.settings.alignment.options.center.label"
+          }, {
+            "value": "right",
+            "label": "t:sections.slideshow.blocks.slide.settings.alignment.options.right.label"
+          }
+        ],
+        "default": "left"
       },
       {
         "type": "header",
