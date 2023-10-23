@@ -2019,9 +2019,9 @@ function backToTopScrolling() {
     };
     function scrollFunction() {
       if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-        backBtn.style.display = "block";
+        backBtn.classList.remove('hidden');
       } else {
-        backBtn.style.display = "none";
+        backBtn.classList.add('hidden');
       }
     }
   }
