@@ -20,7 +20,7 @@
                   {%- liquid
                     assign product_available = true
                     if product.options.size == 1
-                      assign product_available = product.variants[forloop.index0].available
+                      assign product_available = product.selected_or_first_available_variant.available
                     endif
                   -%}
                   {{ product_available }}
