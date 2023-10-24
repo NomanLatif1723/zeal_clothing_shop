@@ -68,7 +68,6 @@
       "password-header": {
         "type": "password-header",
         "settings": {
-          "header_layout": "left",
           "desktop_logo_width": 100,
           "mobile_logo_width": 100
         }
