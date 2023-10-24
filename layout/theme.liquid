@@ -16,7 +16,7 @@
       <link rel="favicon icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {% endif %}
     <title>
-      {{ page_title -}}
+      {{- page_title -}}
       {%- if current_tags %}
         &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
       {%- if current_page != 1 %}
