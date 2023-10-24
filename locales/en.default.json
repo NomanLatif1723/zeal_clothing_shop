@@ -317,6 +317,11 @@
       "pick_up_currently_unavailable": "Pickup Currently Un Available"
     }
   },
+  "password-page": {
+    "general": {
+      "powered_by_shopify_html": "This shop will be powered by {{ shopify }}"
+    }
+  },
   "sections": {
     "announcement-bar": {
       "header_announcement": "Announcement Bar"
