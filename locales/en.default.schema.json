@@ -1865,7 +1865,21 @@
       "name": "Password"
     },
     "password-header": {
-      "name": "Password Header"
+      "name": "Password Header",
+      "settings": {
+        "header_logo": {
+          "label": "Logo",
+          "logo": {
+            "label": "Logo Image"
+          },
+          "desktop_logo_width": {
+            "label": "Desktop Logo Width"
+          },
+          "mobile_logo_width": {
+            "label": "Mobile Logo Width"
+          }
+        }
+      }
     },
     "password-footer": {
       "name": "Password Footer"
