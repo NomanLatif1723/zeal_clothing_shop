@@ -2027,4 +2027,10 @@ function backToTopScrolling() {
   }
 }
 backToTopScrolling();
+
+// Passowrd page Modal Event Listeners
+function initPasswordModal() {
+  
+}
+initPasswordModal();
 })();
