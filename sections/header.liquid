@@ -48,19 +48,13 @@
         %}
         {% if block.type == 'logo' %}
           {% style %}
-          .header__logo{
-            width: {{ mobile_logo_width }}px;
-            flex: 0 0 {{ mobile_logo_width }}px;
-          }
           .site__logo-image {
+            max-width: {{ mobile_logo_width }}px;
             width: {{ mobile_logo_width }}px;
           }
           @media only screen and (min-width: 769px) {
-            .header__logo{
-              width: {{ desktop_logo_width }}px;
-              flex: 0 0 {{ desktop_logo_width }}px
-            }
             .site__logo-image {
+              max-width: {{ desktop_logo_width }}px;
               width: {{ desktop_logo_width }}px;
             }
           }
