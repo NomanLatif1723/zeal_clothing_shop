@@ -1862,7 +1862,40 @@
       }
     },
     "main-password": {
-      "name": "Password"
+      "name": "Password",
+      "settings": {
+        "background_image": {
+          "label": "Background Image"
+        }
+      },
+      "blocks": {
+        "title": {
+          "name": "Title",
+          "settings": {
+            "title": {
+              "label": "Heading"
+            }
+          }
+        },
+        "text": {
+          "name": "Text",
+          "settings": {
+            "text": {
+              "label": "Text"
+            }
+          }
+        },
+        "form": {
+          "name": "Form",
+          "settings": {
+          }
+        },
+        "socials": {
+          "name": "Socials",
+          "settings": {
+          }
+        }
+      }
     },
     "password-header": {
       "name": "Password Header",
