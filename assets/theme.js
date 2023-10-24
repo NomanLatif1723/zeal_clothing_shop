@@ -2032,6 +2032,7 @@ backToTopScrolling();
 function initPasswordModal() {
   const passwordButton = document.querySelector('.password__login');
   const popupModal = document.querySelector('.password__popup');
+  const popupModalBox = document.querySelector('.popup__modal');
   if (passwordButton) {
     passwordButton.addEventListener('click', () => {
       popupModal.classList.remove('popup__hidden');
@@ -2040,6 +2041,11 @@ function initPasswordModal() {
   if (popupModal) {
     popupModal.addEventListener('click', () => {
       popupModal.classList.add('popup__hidden');
+    });
+  }
+  if (popupModalBox) {
+    popupModalBox.addEventListener('click', (event) => {
+      event.stopPropagation();
     });
   }
 }
