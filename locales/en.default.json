@@ -320,10 +320,10 @@
   "password-page": {
     "general": {
       "password_link": "Enter Using Password",
-      "login_form_heading": "",
-      "login_form_password_label": "",
-      "login_form_password_placeholder": "",
-      "login_form_submit": "",
+      "login_form_heading": "Enter Password",
+      "login_form_password_label": "Password",
+      "login_form_password_placeholder": "Password",
+      "login_form_submit": "Submit",
       "powered_by_shopify_html": "This shop will be powered by {{ shopify }}",
       "admin_link_html": "Are You The Store owner? <a href=\"\/admin\" class=\"text-link\">Log in here<\/a>"
     }
