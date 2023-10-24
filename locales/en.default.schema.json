@@ -1868,7 +1868,6 @@
       "name": "Password Header",
       "settings": {
         "header_logo": {
-          "label": "Logo",
           "logo": {
             "label": "Logo Image"
           },
