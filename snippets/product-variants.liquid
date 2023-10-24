@@ -23,6 +23,7 @@
                       assign product_available = product.variants[forloop.index0].available
                     endif
                   -%}
+                  {{ product_available }}
                   <div class="product__swatches-options{% if isColorOption %} product__swatches-spacing{% endif %}{% if option.selected_value == value %} selected{% endif %}">
                     <input type="radio" data-selected-variant form="{{ product_form_id }}" name="{{ option.name }}" value="{{ value }}" {% if option.selected_value == value %}checked{% endif %} 
                       id="{{ option.name }}-{{ value }}-{{ section.id }}" {% unless product_available %} disabled{% endunless %}
