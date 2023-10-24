@@ -319,7 +319,8 @@
   },
   "password-page": {
     "general": {
-      "powered_by_shopify_html": "This shop will be powered by {{ shopify }}"
+      "powered_by_shopify_html": "This shop will be powered by {{ shopify }}",
+      "admin_link_html": "Are You The Store owner? <a href=\"\/admin\" class=\"text-link\">Log in here<\/a>"
     }
   },
   "sections": {
