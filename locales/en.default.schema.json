@@ -1861,6 +1861,9 @@
         }
       }
     },
+    "main-password": {
+      "name": "Password"
+    },
     "map": {
       "name": "Map",
       "settings": {
