@@ -2031,11 +2031,16 @@ backToTopScrolling();
 // Passowrd page Modal Event Listeners
 function initPasswordModal() {
   const passwordButton = document.querySelector('.password__login');
+  const popupModal = document.querySelector('.password__popup');
   if (passwordButton) {
-    const popupModal = document.querySelector('.password__popup')
     passwordButton.addEventListener('click', () => {
       popupModal.classList.remove('popup__hidden');
-    })
+    });
+  }
+  if (popupModal) {
+    popupModal.addEventListener('click', () => {
+      popupModal.classList.add('popup__hidden');
+    });
   }
 }
 initPasswordModal();
