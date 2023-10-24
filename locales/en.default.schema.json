@@ -1864,6 +1864,12 @@
     "main-password": {
       "name": "Password"
     },
+    "password-header": {
+      "name": "Password Header"
+    },
+    "password-footer": {
+      "name": "Password Footer"
+    },
     "map": {
       "name": "Map",
       "settings": {
