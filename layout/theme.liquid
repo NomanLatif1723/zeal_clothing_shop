@@ -30,7 +30,7 @@
     {% endif %}
     {{ content_for_header }}
 
-    {{ 'theme.css' | asset_url | stylesheet_tag: preload: true }}
+    {{ 'theme.css' | asset_url | stylesheet_tag }}
     {{ 'swiper.min.css' | asset_url | stylesheet_tag: preload: true }}
     <script>
       window.themeContent = {
