@@ -1591,15 +1591,14 @@ function initProductVariants() {
   }
 
   function updateProductUnitPrice(matchedvariant) {
-    if (!selectors.productUnitPrice) {
-      return;
-    }
-    if (matchedvariant.unit_price) {
-      selectors.productUnitPrice.classList.remove('hidden');
-      selectors.productUnitPrice.textContent = `${matchedvariant.unit_price}/${matchedvariant.unit_price_measurement.reference_value} ${matchedvariant.unit_price_measurement.reference_unit}`;
-    } else {
-      selectors.productUnitPrice.classList.add('hidden');
-    }
+    selectors.productUnitPrice.forEach(item => {
+      if (matchedvariant.unit_price) {
+        item.classList.remove('hidden');
+        item.textContent = `${matchedvariant.unit_price}/${matchedvariant.unit_price_measurement.reference_value} ${matchedvariant.unit_price_measurement.reference_unit}`;
+      } else {
+        item.classList.add('hidden');
+      }
+    });
   }
 
   function updateProductSku(matchedVariant) {
