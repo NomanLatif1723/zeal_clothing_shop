@@ -50,7 +50,7 @@
       </div>
       <div class="product__sticky-form--form">
         <div class="product__sticky-form--selectBox">
-          <select name="id" data-selected-variant class="selected-variant__id sticky__select-box">
+          <select data-selected-variant class="sticky__select-box">
             {%- for variant in product.variants -%}
               {%- if variant.available -%}
                 <option {% if variant == product.selected_or_first_available_variant %}
