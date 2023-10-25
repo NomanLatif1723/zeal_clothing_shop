@@ -50,7 +50,7 @@
       </div>
       <div class="product__sticky-form--form">
         <div class="product__sticky-form--selectBox">
-          <select name="id" data-selected-variant class="selected-variant__id sticky__select-box">
+          <select data-selected-variant class="sticky__select-box">
             {%- for variant in product.variants -%}
               {%- if variant.available -%}
                 <option {% if variant == product.selected_or_first_available_variant %}
@@ -89,13 +89,30 @@
                assign add_to_cart_text = 'products.add_to_cart' | t
              endif
           -%}
-          <button type="submit" form="{{ product_form_id }}" name="add" aria-label="Add to cart" data-inventory-count="{{ product.selected_or_first_available_variant.inventory_quantity }}" class="btn btn__link btn__primary"{% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>
-            {% if product.selected_or_first_available_variant.available %}
-              {{ add_to_cart_text }}
-            {% else %}
-              {{ 'products.sold_out' | t }}
-            {% endif %}
-          </button>
+          {%- form 'product', product, id: product_form_id, class: "product__form", novalidate: 'novalidate', data-section-id: section.id -%}
+            <button type="submit" form="{{ product_form_id }}" name="add" aria-label="Add to cart" data-inventory-count="{{ product.selected_or_first_available_variant.inventory_quantity }}" class="btn btn__link btn__primary"{% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>
+              {% if product.selected_or_first_available_variant.available %}
+                {{ add_to_cart_text }}
+              {% else %}
+                {{ 'products.sold_out' | t }}
+              {% endif %}
+            </button>
+            <select name="id" class="selected-variant__id hidden">
+              {%- for variant in product.variants -%}
+                {%- if variant.available -%}
+                  <option {% if variant == product.selected_or_first_available_variant %}
+                    selected="selected"{% endif %}
+                    value="{{ variant.id }}">
+                    {{ variant.title }} - {{ variant.price | money_with_currency }}
+                  </option>
+                {%- else -%}
+                  <option disabled="disabled">
+                    {{ variant.title }} - {{ 'products.badges.sold_out' | t }}
+                  </option>
+                {%- endif -%}
+              {%- endfor -%}
+            </select>
+          {%- endform -%}
         </div>
       </div>
     </div>
