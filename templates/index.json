@@ -1039,7 +1039,7 @@
       "type": "map",
       "settings": {
         "section_height_desktop": "compact",
-        "section_height_mobile": "auto",
+        "section_height_mobile": "standard",
         "map_embed_code": "<iframe src=\"https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d13944.487564233048!2d70.32189656719068!3d29.10208260541318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x393099396efb52d3%3A0x9693737a932430f4!2sRajanpur%20District%2C%20Rajanpur%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1698221326569!5m2!1sen!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"><\/iframe>",
         "heading": "Maple Avenue Store",
         "address": "<p>3876 Maple Avenue, Riverside, California<\/p><p>Mon - Fri, 8:30am - 10:30pm<\/p><p>Sat - Sun 8:30am - 10:30pm<\/p>",
