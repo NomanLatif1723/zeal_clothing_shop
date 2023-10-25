@@ -20,9 +20,13 @@
           {{ 'lifestyle-1' | placeholder_svg_tag: "placeholder__image" }}
         {%- endif -%}
       </div>
+      {% comment %}
+      text__position-{{ section.settings.content_position }}
+      text__align-{{ section.settings.text_alignment }}
+      {% endcomment %}
       <div class="map__section-text">
-        <div class="map__section-box text__position-{{ section.settings.content_position }}">
-          <div class="map__section-shadow text__align-{{ section.settings.text_alignment }}">
+        <div class="map__section-box">
+          <div class="map__section-shadow">
             {%- if section.settings.heading != blank -%}
               <h3 class="map__heading">
                 {{ section.settings.heading }}
