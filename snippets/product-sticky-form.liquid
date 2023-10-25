@@ -53,7 +53,7 @@
           <variant-selects data-section="{{ section.id }}" data-url="{{ product.url }}">
             <div class="product__options product-select__options">
               {%- for option in product.options_with_values -%}
-                <div class="product-form__select">
+                <div class="sticky-product-form__select">
                 <select form="{{ product_form_id }}" class="product__select" data-selected-variant id="product-select-{{ forloop.index }}">
                   {% for value in option.values %}
                     <option value="{{ value }}" {% if option.selected_value == value %}selected{% endif %}>
