@@ -502,5 +502,32 @@
         "default": false
       }
     ]
+  },
+  {
+    "name": "t:schema_settings.sticky_add_to_cart.name",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_sticky_add_to_cart",
+        "label": "t:schema_settings.sticky_add_to_cart.settings.enable_sticky_add_to_cart.label",
+        "default": false
+      },
+      {
+        "type": "select",
+        "id": "sticky_add_to_cart_position",
+        "label": "t:schema_settings.sticky_add_to_cart.settings.sticky_add_to_cart_position.label",
+        "default": "top",
+        "options": [
+          {
+            "value": "top",
+            "label": "t:schema_settings.sticky_add_to_cart.settings.sticky_add_to_cart_position.options.top.label"
+          },
+          {
+            "value": "bottom",
+            "label": "t:schema_settings.sticky_add_to_cart.settings.sticky_add_to_cart_position.options.bottom.label"
+          }
+        ]
+      }
+    ]
   }
 ]
