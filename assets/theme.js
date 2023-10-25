@@ -1680,7 +1680,7 @@ function initProductVariants() {
       productGrid.insertBefore(activeGridItem.closest('.product__image'), productGrid.firstChild);
     }
     if (stickyCartImage) {
-      stickyCartImage.setAttribute('src', matchedVariant.featured_media.src);
+      stickyCartImage.setAttribute('src', matchedVariant.featured_image.src);
     }
   }
 
