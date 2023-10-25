@@ -1577,9 +1577,6 @@ function initProductVariants() {
   }
 
   function updateProductPrice(matchedVariant) {
-    // if (!selectors.productSalePrice || !selectors.productRegularPrice) {
-    //   return;
-    // }
     selectors.productSalePrice.forEach(price => {
       if(!price) return;
       price.textContent = formatMoney(matchedVariant.price);
@@ -1591,12 +1588,6 @@ function initProductVariants() {
         price.classList.remove('hidden') :
         price.classList.add('hidden');
     });
-    // selectors.productSalePrice.textContent = formatMoney(matchedVariant.price);
-    // selectors.productRegularPrice.textContent = formatMoney(matchedVariant.compare_at_price);
-
-    // matchedVariant.compare_at_price > matchedVariant.price ?
-    //   selectors.productRegularPrice.classList.remove('hidden') :
-    //   selectors.productRegularPrice.classList.add('hidden');
   }
 
   function updateProductUnitPrice(matchedvariant) {
