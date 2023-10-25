@@ -6,7 +6,7 @@
           <img src="{{ product.selected_or_first_available_variant.image | product_img_url: "100x" }}" width="100" height="100" loading="lazy" />
         </div>
         <div class="product__sticky-form--price">
-          {{ product.selected_or_first_available_variant.price }}
+          {{ product.selected_or_first_available_variant.price | money }}
         </div>
       </div>
       <div class="product__sticky-form--form">
