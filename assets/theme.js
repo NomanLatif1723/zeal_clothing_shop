@@ -1442,8 +1442,8 @@ initProductQuantitySelector();
 function initProductVariants() {
   let selectors = {
     masterVariantSelector: document.querySelectorAll('.selected-variant__id'),
-    productSalePrice: document.querySelector('[data-sale-price]'),
-    productRegularPrice: document.querySelector('[data-regular-price]'),
+    productSalePrice: document.querySelectorAll('[data-sale-price]'),
+    productRegularPrice: document.querySelectorAll('[data-regular-price]'),
     productUnitPrice: document.querySelector('[data-unit-price]'),
     productSku: document.querySelector('[data-sku]'),
     productInStock: document.querySelector('[data-inventory]'),
@@ -1577,15 +1577,26 @@ function initProductVariants() {
   }
 
   function updateProductPrice(matchedVariant) {
-    if (!selectors.productSalePrice || !selectors.productRegularPrice) {
-      return;
-    }
-    selectors.productSalePrice.textContent = formatMoney(matchedVariant.price);
-    selectors.productRegularPrice.textContent = formatMoney(matchedVariant.compare_at_price);
+    // if (!selectors.productSalePrice || !selectors.productRegularPrice) {
+    //   return;
+    // }
+    selectors.productSalePrice.forEach(price => {
+      if(!price) return;
+      price.textContent = formatMoney(matchedVariant.price);
+    });
+    selectors.productRegularPrice.forEach(price => {
+      if(!price) return;
+      price.textContent = formatMoney(matchedVariant.price);
+      matchedVariant.compare_at_price > matchedVariant.price ?
+        price.classList.remove('hidden') :
+        price.classList.add('hidden');
+    });
+    // selectors.productSalePrice.textContent = formatMoney(matchedVariant.price);
+    // selectors.productRegularPrice.textContent = formatMoney(matchedVariant.compare_at_price);
 
-    matchedVariant.compare_at_price > matchedVariant.price ?
-      selectors.productRegularPrice.classList.remove('hidden') :
-      selectors.productRegularPrice.classList.add('hidden');
+    // matchedVariant.compare_at_price > matchedVariant.price ?
+    //   selectors.productRegularPrice.classList.remove('hidden') :
+    //   selectors.productRegularPrice.classList.add('hidden');
   }
 
   function updateProductUnitPrice(matchedvariant) {
