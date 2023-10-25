@@ -1,0 +1,52 @@
+<div class="product__sticky-wrapper">
+  <div class="page__width">
+    <div class="product__sticky-form">
+      <div class="product__sticky-form--content">
+        <div class="product__sticky-form--images">
+          <img src="{{ product.selected_or_first_available_variant.image | product_img_url: "100x" }}" width="100" height="100" loading="lazy" />
+        </div>
+        <div class="product__sticky-form--price">
+          {{ product.selected_or_first_available_variant.price }}
+        </div>
+      </div>
+      <div class="product__sticky-form--form">
+        <div class="product__sticky-form--selectBox">
+          <select name="id" class="selected-variant__id">
+            {%- for variant in product.variants -%}
+              {%- if variant.available -%}
+                <option {% if variant == product.selected_or_first_available_variant %}
+                  selected="selected"{% endif %}
+                  value="{{ variant.id }}">
+                  {{ variant.title }} - {{ variant.price | money_with_currency }}
+                </option>
+              {%- else -%}
+                <option disabled="disabled">
+                  {{ variant.title }} - {{ 'products.badges.sold_out' | t }}
+                </option>
+              {%- endif -%}
+            {%- endfor -%}
+          </select>
+        </div>
+        <div class="product__sticky-form--quantityWrapper">
+          
+        </div>
+        <div class="product__sticky-form--cartButton">
+          {%- liquid
+             if template contains 'preorder'
+               assign add_to_cart_text = 'products.preorder' | t
+             else
+               assign add_to_cart_text = 'products.add_to_cart' | t
+             endif
+          -%}
+          <button type="submit" name="add" aria-label="Add to cart" data-inventory-count="{{ product.selected_or_first_available_variant.inventory_quantity }}" class="btn btn__link btn__primary"{% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>
+            {% if product.selected_or_first_available_variant.available %}
+              {{ add_to_cart_text }}
+            {% else %}
+              {{ 'products.sold_out' | t }}
+            {% endif %}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
