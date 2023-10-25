@@ -1044,7 +1044,7 @@
         "heading": "Maple Avenue Store",
         "address": "<p>3876 Maple Avenue, Riverside, California<\/p><p>Mon - Fri, 8:30am - 10:30pm<\/p><p>Sat - Sun 8:30am - 10:30pm<\/p>",
         "button_text": "View On Map",
-        "button_link": "https:\/\/www.google.com\/maps",
+        "button_link": "https:\/\/www.google.com\/maps?ll=31.48294,74.334389&z=10&t=m&hl=en&gl=US&mapclient=embed&q=Lahore+Punjab",
         "content_position": "bottom-left",
         "text_alignment": "left",
         "margin_top": 60,
