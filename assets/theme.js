@@ -1451,7 +1451,8 @@ function initProductVariants() {
     productOptionLabel: document.querySelectorAll('[data-option-name]'),
     productOptions: document.querySelectorAll('.product-form__input'),
     formValidationErrorMessage: document.querySelector('.product-form__errors'),
-    productGrid: document.querySelectorAll('.product-grid')
+    productGrid: document.querySelectorAll('.product-grid'),
+    productStickySelect: document.querySelectorAll('.sticky__select-box')
   };
 
   selectors.productGrid.forEach(product => {
@@ -1463,42 +1464,6 @@ function initProductVariants() {
       });
     });
   });
-
-  // // Add an event listener to the product grid container
-  // const productGridContainer = document.querySelector('.main-product__wrapper');
-  // if(!productGridContainer) return;
-  // productGridContainer.addEventListener('change', (event) => {
-  //   const selector = event.target;
-  
-  //   if (selector.hasAttribute('data-selected-variant')) {
-  //     const product = selector.closest('.product-grid');
-  //     updateProductOptions(selector, product);
-  //   }
-  // });
-  
-  // // Add an event listener to the Quick View container
-  // const quickViewContainer = document.querySelector('.quick-view__container');
-  // if(!quickViewContainer) return;
-  // quickViewContainer.addEventListener('change', (event) => {
-  //   const selector = event.target;
-  
-  //   if (selector.hasAttribute('data-selected-variant')) {
-  //     const product = selector.closest('.product-grid');
-  //     updateProductOptions(selector, product);
-  //   }
-  // });
-  
-  // // Add an event listener to the Featured Collection container
-  // const featuredCollectionContainer = document.querySelector('.featured-product__wrapper');
-  // if(!featuredCollectionContainer) return;
-  // featuredCollectionContainer.addEventListener('change', (event) => {
-  //   const selector = event.target;
-  
-  //   if (selector.hasAttribute('data-selected-variant')) {
-  //     const product = selector.closest('.product-grid');
-  //     updateProductOptions(selector, product);
-  //   }
-  // });
 
   function updateProductOptions(variantSelectors, product) {
     let selectedOptions = [];
