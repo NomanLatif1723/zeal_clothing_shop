@@ -3,7 +3,7 @@
     <div class="product__sticky-form">
       <div class="product__sticky-form--content">
         <div class="product__sticky-form--images">
-          <img src="{{ product.selected_or_first_available_variant.image | product_img_url: "100x" }}" width="100" height="100" loading="lazy" />
+          <img src="{{ product.selected_or_first_available_variant.image | product_img_url: "60x" }}" width="60" height="60" loading="lazy" />
         </div>
         <div class="product__sticky-form--price">
           {{ product.selected_or_first_available_variant.price | money }}
