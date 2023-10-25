@@ -64,6 +64,9 @@
       </div>
     </div>
   </div>
+  {%- if settings.enable_sticky_add_to_cart -%}
+    {% render 'product-sticky-form', product: product %}
+  {%- endif -%}
 </div>
 <script type="custom">
   {{ product | json }}
