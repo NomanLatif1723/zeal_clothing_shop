@@ -50,13 +50,13 @@
       </div>
       <div class="product__sticky-form--form">
         <div class="product__sticky-form--selectBox">
-          <select name="id" class="selected-variant__id">
+          <select name="id" class="selected-variant__id sticky__select-box">
             {%- for variant in product.variants -%}
               {%- if variant.available -%}
                 <option {% if variant == product.selected_or_first_available_variant %}
                   selected="selected"{% endif %}
                   value="{{ variant.id }}">
-                  {{ variant.title }} - {{ variant.price | money_with_currency }}
+                  {{ variant.title }}
                 </option>
               {%- else -%}
                 <option disabled="disabled">
