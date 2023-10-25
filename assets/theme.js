@@ -1592,6 +1592,7 @@ function initProductVariants() {
 
   function updateProductUnitPrice(matchedvariant) {
     selectors.productUnitPrice.forEach(item => {
+      if(!item) return;
       if (matchedvariant.unit_price) {
         item.classList.remove('hidden');
         item.textContent = `${matchedvariant.unit_price}/${matchedvariant.unit_price_measurement.reference_value} ${matchedvariant.unit_price_measurement.reference_unit}`;
