@@ -1447,7 +1447,7 @@ function initProductVariants() {
     productUnitPrice: document.querySelectorAll('[data-unit-price]'),
     productSku: document.querySelector('[data-sku]'),
     productInStock: document.querySelector('[data-inventory]'),
-    productAddToCartBtn: document.querySelector('[name="add"]'),
+    productAddToCartBtn: document.querySelectorAll('[name="add"]'),
     productOptionLabel: document.querySelectorAll('[data-option-name]'),
     productOptions: document.querySelectorAll('.product-form__input'),
     formValidationErrorMessage: document.querySelector('.product-form__errors'),
@@ -1610,16 +1610,16 @@ function initProductVariants() {
   }
 
   function updateButtons(matchedVariant) {
-    if (!selectors.productAddToCartBtn) {
-      return;
-    }
-    if (matchedVariant.available) {
-      selectors.productAddToCartBtn.textContent = window.themeContent.strings.addToCart;
-      selectors.productAddToCartBtn.disabled = false;
-    } else {
-      selectors.productAddToCartBtn.textContent = window.themeContent.strings.soldOut;
-      selectors.productAddToCartBtn.disabled = true;
-    }
+    selectors.productAddToCartBtn.forEach(button => {
+      if(!button) return;
+      if (matchedVariant.available) {
+        button.textContent = window.themeContent.strings.addToCart;
+        button.disabled = false;
+      } else {
+        button.textContent = window.themeContent.strings.soldOut;
+        button.disabled = true;
+      }
+    });
   }
 
   function updateAvailability(matchedVariant) {
