@@ -3447,6 +3447,25 @@
         }
       }
     },
+    "sticky_add_to_cart": {
+      "name": "Sticky Add To Cart",
+      "settings": {
+        "enable_sticky_add_to_cart": {
+          "label": "Enable Sticky Cart"
+        },
+        "sticky_add_to_cart_position": {
+          "label": "Sticky Cart Position",
+          "options": {
+            "top": {
+              "label": "Top"
+            },
+            "bottom": {
+              "label": "Bottom"
+            }
+          }
+        }
+      }
+    },
     "typography": {
       "name": "Typography",
       "settings": {
