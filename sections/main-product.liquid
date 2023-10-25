@@ -28,6 +28,7 @@
   }
 {%- endstyle -%}
 <div class="main-product__wrapper main__section-{{ section.id }}">
+  {%- assign product_form_id = 'addToCartForm-' | append: section.id | append: '-' | append: product.id -%}
   <div class="page__width">
     {%- if section.settings.show_breadcrumbs -%}
       <nav role="navigation" aria-label="breadcrumb" class="product-breadcrumbs">
@@ -60,12 +61,13 @@
           block: block,
           section: section,
           show_vendor: settings.show_vendor,
+          product_form_id: product_form_id
         -%}
       </div>
     </div>
   </div>
   {%- if settings.enable_sticky_add_to_cart -%}
-    {% render 'product-sticky-form', product: product %}
+    {% render 'product-sticky-form', product: product, product_form_id: product_form_id %}
   {%- endif -%}
 </div>
 <script type="custom">
