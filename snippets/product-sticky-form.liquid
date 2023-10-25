@@ -29,21 +29,18 @@
         </div>
         <div class="product__sticky-form--quantityWrapper">
           <div class="product-quantity__wrapper">
-            <div>
-              <span class="quantity__label">{{ 'products.quantity_label' | t }}</span>
-              <div class="product__item-quantity">
-                <button type="button" aria-label="{{ 'products.minus' | t }}" class="icon__minus">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 2" fill="none">
-                    <path d="M9 1H1" stroke="currentcolor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
-                  </svg>
-                </button>
-                <input type="text" name="quantity" class="product-quantity__input" min="1"  value="1" form="{{ product_form_id }}" >
-                <button type="button" aria-label="{{ 'products.plus' | t }}" class="icon__plus">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
-                    <path d="M5 1V5M5 5V9M5 5H9M5 5L1 5" stroke="currentcolor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
-                  </svg>
-                </button>
-              </div>
+            <div class="product__item-quantity">
+              <button type="button" aria-label="{{ 'products.minus' | t }}" class="icon__minus">
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 2" fill="none">
+                  <path d="M9 1H1" stroke="currentcolor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+                </svg>
+              </button>
+              <input type="text" name="quantity" class="product-quantity__input" min="1"  value="1" form="{{ product_form_id }}" >
+              <button type="button" aria-label="{{ 'products.plus' | t }}" class="icon__plus">
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                  <path d="M5 1V5M5 5V9M5 5H9M5 5L1 5" stroke="currentcolor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+                </svg>
+              </button>
             </div>
           </div>
         </div>
