@@ -966,14 +966,14 @@ function initFilterFacetForm() {
     selectors.filterOptions.forEach(option => {
       if (option.checked) {
         baseUrl += `&${option.name}=${option.value}`;
-        queryString.append(baseUrl);
+        queryString.append(option.name, option.value);
       }
     });
     selectors.filterPriceOptions.forEach(option => {
       const priceValue = option.value.trim();
       if (priceValue !== '') {
         baseUrl += `&${option.name}=${priceValue}`;
-        queryString.append(baseUrl);
+        queryString.set(option.name, priceValue);
       }
     });
 
@@ -988,17 +988,17 @@ function initFilterFacetForm() {
         html.innerHTML = data;
         let productData = html.querySelector('.catalog__content').innerHTML;
         document.querySelector('.catalog__content').innerHTML = productData;
-        history.replaceState(null, null, `${queryString.toString()}`);
+        // history.replaceState(null, null, `${queryString.toString()}`);
         // Check if there are no products
         const noProductsMessage = html.querySelector('.empty-products__message');
         if (noProductsMessage) {
           document.querySelector('.empty-products__message').classList.remove('hidden');
         } else {
           // Preserve existing sorting parameters
-          // const existingSortParam = new URLSearchParams(window.location.search).get('sort_by');
-          // if (existingSortParam) {
-          //   queryString.set('sort_by', existingSortParam);
-          // }
+          const existingSortParam = new URLSearchParams(window.location.search).get('sort_by');
+          if (existingSortParam) {
+            queryString.set('sort_by', existingSortParam);
+          }
           
           // history.replaceState(null, null, '?' + queryString.toString());
           initCollectionEventListeners();
