@@ -1000,7 +1000,7 @@ function initFilterFacetForm() {
             queryString.set('sort_by', existingSortParam);
           }
           
-          // history.replaceState(null, null, '?' + queryString.toString());
+          history.replaceState(null, null, '?' + queryString.toString());
           initCollectionEventListeners();
           initCollectionSort();
         }
