@@ -50,6 +50,7 @@
       </div>
       <div class="product__sticky-form--form">
         <div class="product__sticky-form--selectBox">
+          {% comment %}
           <variant-selects data-section="{{ section.id }}" data-url="{{ product.url }}">
             <div class="product__options product-select__options">
               {%- for option in product.options_with_values -%}
@@ -65,7 +66,7 @@
               {%- endfor -%}
             </div>
           </variant-selects>
-          {% comment %}
+          {% endcomment %}
           <select data-selected-variant class="product__select sticky__select-box">
             {%- for variant in product.variants -%}
               {%- if variant.available -%}
@@ -81,7 +82,7 @@
               {%- endif -%}
             {%- endfor -%}
           </select>
-          {% endcomment %}
+          
         </div>
         {% comment %}
         <div class="product__sticky-form--quantityWrapper">
