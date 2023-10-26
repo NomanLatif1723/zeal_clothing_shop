@@ -959,6 +959,7 @@ function initFilterFacetForm() {
     if (queryString.has("search")) {
       const searchTerm = queryString.get("search");
       queryString.set("search", searchTerm);
+      
     } else {
       selectors.filterOptions.forEach(option => {
         if (option.checked) {
@@ -975,6 +976,7 @@ function initFilterFacetForm() {
     // Show Loader 
     if(!selectors.loader) return;
     selectors.loader.classList.remove('hidden');
+    console.log(queryString);
     fetch(`${window.themeContent.routes.collection}?${queryString}`)
       .then(responce => responce.text())
       .then(data => {
