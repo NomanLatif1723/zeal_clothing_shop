@@ -138,17 +138,15 @@
   </div>
 </div>
 <script>
-  const addToCartButton = document.getElementById("add-to-cart-button");
-    const stickyCart = document.getElementById("sticky-cart");
+  const addToCartButton = document.querySelector("[data-add-to-cart]");
+    const stickyCart = document.querySelector(".product__sticky-wrapper");
 
     window.addEventListener("scroll", function() {
         const buttonRect = addToCartButton.getBoundingClientRect();
         if (buttonRect.bottom < 0) {
-            // The "Add to Cart" button is out of view, show the sticky cart
-            stickyCart.style.display = "block";
+            stickyCart.classList.remove('hidden');
         } else {
-            // The button is in view, hide the sticky cart
-            stickyCart.style.display = "none";
+            stickyCart.classList.add('hidden');
         }
     });
 </script>
