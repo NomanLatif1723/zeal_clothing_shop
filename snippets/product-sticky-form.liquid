@@ -137,3 +137,18 @@
     </div>
   </div>
 </div>
+<script>
+  const addToCartButton = document.getElementById("add-to-cart-button");
+    const stickyCart = document.getElementById("sticky-cart");
+
+    window.addEventListener("scroll", function() {
+        const buttonRect = addToCartButton.getBoundingClientRect();
+        if (buttonRect.bottom < 0) {
+            // The "Add to Cart" button is out of view, show the sticky cart
+            stickyCart.style.display = "block";
+        } else {
+            // The button is in view, hide the sticky cart
+            stickyCart.style.display = "none";
+        }
+    });
+</script>
