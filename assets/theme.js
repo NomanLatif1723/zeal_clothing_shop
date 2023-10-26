@@ -967,6 +967,8 @@ function initFilterFacetForm() {
       if (option.checked) {
         baseUrl += `&${option.name}=${option.value}`;
         queryString.append(option.name, option.value);
+      } else {
+        queryString.delete(option.name);
       }
     });
     selectors.filterPriceOptions.forEach(option => {
@@ -974,6 +976,8 @@ function initFilterFacetForm() {
       if (priceValue !== '') {
         baseUrl += `&${option.name}=${priceValue}`;
         queryString.set(option.name, priceValue);
+      } else {
+        queryString.delete(option.name);
       }
     });
 
