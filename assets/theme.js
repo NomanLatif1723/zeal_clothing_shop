@@ -963,14 +963,14 @@ function initFilterFacetForm() {
     }
     selectors.filterOptions.forEach(option => {
       if (option.checked) {
-        baseUrl += `${window.themeContent.routes.collection}&${option.name}=${option.value}`;
+        baseUrl += `${window.themeContent.routes.collection}?${option.name}=${option.value}`;
       }
     });
     
     selectors.filterPriceOptions.forEach(option => {
       const priceValue = option.value.trim();
       if (priceValue !== '') {
-        baseUrl += `${window.themeContent.routes.collection}&${option.name}=${priceValue}`;
+        baseUrl += `${window.themeContent.routes.collection}?${option.name}=${priceValue}`;
       }
     });
     // Show Loader 
