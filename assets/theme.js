@@ -955,24 +955,26 @@ function initFilterFacetForm() {
     //   }
     // });
     
-    let baseUrl = ``;
+    let baseUrl = '';
     const queryString = new URLSearchParams(window.location.search);
     const searchTerm = queryString.get("q");
     if (searchTerm) {
-        baseUrl += `/search?q=${searchTerm}`;
+      baseUrl = `/search?q=${searchTerm}`;
+    } else {
+      baseUrl = window.themeContent.routes.collection;
     }
     selectors.filterOptions.forEach(option => {
       if (option.checked) {
-        baseUrl += `${window.themeContent.routes.collection}?${option.name}=${option.value}`;
+        baseUrl += `&${option.name}=${option.value}`;
       }
     });
-    
     selectors.filterPriceOptions.forEach(option => {
       const priceValue = option.value.trim();
       if (priceValue !== '') {
-        baseUrl += `${window.themeContent.routes.collection}?${option.name}=${priceValue}`;
+        baseUrl += `&${option.name}=${priceValue}`;
       }
     });
+
     // Show Loader 
     if(!selectors.loader) return;
     selectors.loader.classList.remove('hidden');
