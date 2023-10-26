@@ -83,6 +83,7 @@
           </select>
           {% endcomment %}
         </div>
+        {% comment %}
         <div class="product__sticky-form--quantityWrapper">
           <div class="product__item-quantity">
             <button type="button" aria-label="{{ 'products.minus' | t }}" class="icon__minus">
@@ -98,6 +99,7 @@
             </button>
           </div>
         </div>
+        {% endcomment %}
         <div class="product__sticky-form--cartButton">
           {%- liquid
              if template contains 'preorder'
