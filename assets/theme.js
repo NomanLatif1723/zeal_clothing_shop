@@ -1847,7 +1847,7 @@ function initStickyAddCart() {
   }
 }
 initStickyAddCart();
-  
+
 // Product Quick View 
 function initQuickShopCollection() {
   let selectors = {
