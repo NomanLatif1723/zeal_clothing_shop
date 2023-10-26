@@ -987,6 +987,7 @@ function initFilterFacetForm() {
         console.log(data);
         let productData = html.querySelector('.catalog__content').innerHTML;
         document.querySelector('.catalog__content').innerHTML = productData;
+        console.log(queryString)
         history.replaceState(null, null, `${queryString.toString()}`);
         // Check if there are no products
         const noProductsMessage = html.querySelector('.empty-products__message');
