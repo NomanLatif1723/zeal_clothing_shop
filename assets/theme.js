@@ -987,7 +987,7 @@ function initFilterFacetForm() {
         console.log(data);
         let productData = html.querySelector('.catalog__content').innerHTML;
         document.querySelector('.catalog__content').innerHTML = productData;
-
+        history.replaceState(null, null, `${queryString.toString()}`);
         // Check if there are no products
         const noProductsMessage = html.querySelector('.empty-products__message');
         if (noProductsMessage) {
@@ -998,7 +998,7 @@ function initFilterFacetForm() {
           // if (existingSortParam) {
           //   queryString.set('sort_by', existingSortParam);
           // }
-          history.replaceState(null, null, `${queryString.toString()}`);
+          
           // history.replaceState(null, null, '?' + queryString.toString());
           initCollectionEventListeners();
           initCollectionSort();
