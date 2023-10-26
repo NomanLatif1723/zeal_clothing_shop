@@ -961,7 +961,7 @@ function initFilterFacetForm() {
     if (searchTerm) {
       baseUrl = `/search?q=${searchTerm}`;
     } else {
-      baseUrl = `${window.themeContent.routes.collection}`;
+      baseUrl = `${window.themeContent.routes.collection}?`;
     }
     selectors.filterOptions.forEach(option => {
       if (option.checked) {
