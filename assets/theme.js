@@ -965,7 +965,7 @@ function initFilterFacetForm() {
         baseUrl = `/search?q=${searchTerm}`;
     } else {
         // For the collection page, use the collection handle
-        baseUrl = `${window.themeContent.routes.collection}`;
+        baseUrl = `${window.themeContent.routes.collection}?`;
     }
     
     // Append filter and sort parameters for both collection and search pages
