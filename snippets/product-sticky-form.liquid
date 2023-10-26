@@ -120,16 +120,3 @@
     </div>
   </div>
 </div>
-<script>
-  const addToCartButton = document.querySelector("[data-add-to-cart]");
-    const stickyCart = document.querySelector(".product__sticky-wrapper");
-
-    window.addEventListener("scroll", function() {
-        const buttonRect = addToCartButton.getBoundingClientRect();
-        if (buttonRect.bottom < 0) {
-            stickyCart.classList.remove('hidden');
-        } else {
-            stickyCart.classList.add('hidden');
-        }
-    });
-</script>
