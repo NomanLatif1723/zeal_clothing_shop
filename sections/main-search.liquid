@@ -183,6 +183,12 @@
                       </div>
                     {%- endif -%}
                   {%- endfor -%}
+                  {%- if collection.products_count == 0 -%}
+                    <div class="empty-products__message">
+                      <h2>{{ 'collections.general.empty_collection_message' | t }}</h2>
+                      <a class="btn btn__link btn__outline" href="{{ collection.url }}" title="{{ 'collections.general.remove_filters' | t }}">{{ 'collections.general.remove_filters' | t }}</a>
+                    </div>
+                  {%- endif -%}
                 </div>
                 {%- if paginate.pages > 1 -%}
                   {%- render 'pagination', paginate: paginate, collection: search -%}
