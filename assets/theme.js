@@ -954,30 +954,30 @@ function initFilterFacetForm() {
     //     queryString.set(option.name, priceValue);
     //   }
     // });
-
+    
+    const baseUrl = `${window.themeContent.routes.collection}`;
     const queryString = new URLSearchParams(window.location.search);
-    if (queryString.has("search")) {
-      const searchTerm = queryString.get("search");
-      queryString.set("search", searchTerm);
-      
-    } else {
-      selectors.filterOptions.forEach(option => {
-        if (option.checked) {
-          queryString.append(option.name, option.value);
-        }
-      });
-      selectors.filterPriceOptions.forEach(option => {
-        const priceValue = option.value.trim();
-        if (priceValue !== '') {
-          queryString.set(option.name, priceValue);
-        }
-      });
+    const searchTerm = queryString.get("q");
+    if (searchTerm) {
+        baseUrl += `/search?q=${searchTerm}`;
     }
+    selectors.filterOptions.forEach(option => {
+      if (option.checked) {
+        baseUrl += `&${option.name}=${option.value}`;
+      }
+    });
+    
+    selectors.filterPriceOptions.forEach(option => {
+      const priceValue = option.value.trim();
+      if (priceValue !== '') {
+        baseUrl += `&${option.name}=${priceValue}`;
+      }
+    });
     // Show Loader 
     if(!selectors.loader) return;
     selectors.loader.classList.remove('hidden');
     console.log(queryString);
-    fetch(`${window.themeContent.routes.collection}?${queryString}`)
+    fetch(baseUrl)
       .then(responce => responce.text())
       .then(data => {
         let html = document.createElement('div');
