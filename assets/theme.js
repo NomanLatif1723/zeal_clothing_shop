@@ -958,7 +958,7 @@ function initFilterFacetForm() {
     const queryString = new URLSearchParams(window.location.search);
     if (queryString.has("search")) {
       const searchTerm = queryString.get("search");
-      queryString.set(searchTerm);
+      queryString.set("search", searchTerm);
     } else {
       selectors.filterOptions.forEach(option => {
         if (option.checked) {
@@ -975,7 +975,7 @@ function initFilterFacetForm() {
     // Show Loader 
     if(!selectors.loader) return;
     selectors.loader.classList.remove('hidden');
-    fetch(`${window.themeContent.routes.collection}/search?${queryString}`)
+    fetch(`${window.themeContent.routes.collection}?${queryString}`)
       .then(responce => responce.text())
       .then(data => {
         let html = document.createElement('div');
