@@ -972,12 +972,10 @@ function initFilterFacetForm() {
         }
       });
     }
-
     // Show Loader 
     if(!selectors.loader) return;
-    console.log(queryString);
     selectors.loader.classList.remove('hidden');
-    fetch(`${window.themeContent.routes.collection}?${queryString}`)
+    fetch(`${window.themeContent.routes.collection}/search?${queryString}`)
       .then(responce => responce.text())
       .then(data => {
         let html = document.createElement('div');
