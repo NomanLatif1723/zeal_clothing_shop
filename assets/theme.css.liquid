@@ -4245,7 +4245,10 @@ iframe.product-media__video {
   display: flex;
   gap: 10px;
 }
-@media only screen and (min-width: 768px) {
+.sticky-product-form__select {
+  display: none;
+}
+@media only screen and (min-width: 769px) {
   .product-grid {
     display: flex;
     gap: 60px;
@@ -4273,6 +4276,9 @@ iframe.product-media__video {
   }
   .product-block__extra--small{
     width: 35%;
+  }
+  .sticky-product-form__select {
+    display: block;
   }
 }
 
