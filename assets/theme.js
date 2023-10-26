@@ -956,23 +956,30 @@ function initFilterFacetForm() {
     // });
     
     let baseUrl = '';
+
     const queryString = new URLSearchParams(window.location.search);
     const searchTerm = queryString.get("q");
+    
     if (searchTerm) {
-      baseUrl = `/search?q=${searchTerm}`;
+        // For the search page, use the search parameter
+        baseUrl = `/search?q=${searchTerm}`;
     } else {
-      baseUrl = window.themeContent.routes.collection;
+        // For the collection page, use the collection handle
+        baseUrl = `${window.themeContent.routes.collection}`;
     }
+    
+    // Append filter and sort parameters for both collection and search pages
     selectors.filterOptions.forEach(option => {
-      if (option.checked) {
-        baseUrl += `&${option.name}=${option.value}`;
-      }
+        if (option.checked) {
+            baseUrl += `&${option.name}=${option.value}`;
+        }
     });
+    
     selectors.filterPriceOptions.forEach(option => {
-      const priceValue = option.value.trim();
-      if (priceValue !== '') {
-        baseUrl += `&${option.name}=${priceValue}`;
-      }
+        const priceValue = option.value.trim();
+        if (priceValue !== '') {
+            baseUrl += `&${option.name}=${priceValue}`;
+        }
     });
 
     // Show Loader 
