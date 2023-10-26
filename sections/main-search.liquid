@@ -63,6 +63,7 @@
 {%- endstyle -%}
 <div class="main-section__wrapper main__section-{{ section.id }}">
   <div class="page__width">
+    {%- render 'loader' -%}
     {%- if show_breadcrumbs -%}
       {%- render 'breadcrumbs' -%}
     {%- endif -%}
