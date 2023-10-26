@@ -223,76 +223,6 @@ function initHeaderSearch() {
 }
 initHeaderSearch();
 
-// Predictive Search 
-class PredictiveSearch extends HTMLElement {
-  constructor() {
-    super();
-
-    this.input = this.querySelector('#predictive__input');
-    this.predictiveSearchResults = this.querySelector('#PredictiveResults');
-
-    if (!this.input) {
-      return;
-    }
-    this.input.addEventListener('input', this.debounce((event) => {
-      this.onChange(event);
-    }, 300).bind(this));
-  }
-
-  onChange() {
-    const searchTerm = this.input.value.trim();
-
-    if (!searchTerm.length) {
-      this.close();
-      return;
-    }
-
-    this.getSearchResults(searchTerm);
-  }
-
-  getSearchResults(searchTerm) {
-    fetch(`/search/suggest?q=${searchTerm}&section_id=predictive-search`)
-      .then((response) => {
-        if (!response.ok) {
-          var error = new Error(response.status);
-          this.close();
-          throw error;
-        }
-
-        return response.text();
-      })
-      .then((text) => {
-        const resultsMarkup = new DOMParser().parseFromString(text, 'text/html').querySelector('#shopify-section-predictive-search').innerHTML;
-        if (!this.predictiveSearchResults) {
-          return;
-        }
-        this.predictiveSearchResults.innerHTML = resultsMarkup;
-        this.open();
-      })
-      .catch((error) => {
-        this.close();
-        throw error;
-      });
-  }
-
-  open() {
-    this.predictiveSearchResults.classList.remove('hidden');
-  }
-
-  close() {
-    this.predictiveSearchResults.classList.add('hidden');
-  }
-
-  debounce(fn, wait) {
-    let t;
-    return (...args) => {
-      clearTimeout(t);
-      t = setTimeout(() => fn.apply(this, args), wait);
-    };
-  }
-}
-customElements.define('predictive-search', PredictiveSearch);
-
 // Slideshow
 function initSlideshowSwipers() {
   // find all the slideshow wrappers on the page
@@ -1054,6 +984,71 @@ function initFilterFacetForm() {
   }
 }
 initFilterFacetForm();
+
+// Predictive Search 
+class PredictiveSearch extends HTMLElement {
+  constructor() {
+    super();
+    this.input = this.querySelector('#predictive__input');
+    this.predictiveSearchResults = this.querySelector('#PredictiveResults');
+    if (!this.input) {
+      return;
+    }
+    this.input.addEventListener('input', this.debounce((event) => {
+      this.onChange(event);
+    }, 300).bind(this));
+  }
+  onChange() {
+    const searchTerm = this.input.value.trim();
+    if (!searchTerm.length) {
+      this.close();
+      return;
+    }
+    this.getSearchResults(searchTerm);
+    initCollectionSort();
+  }
+
+  getSearchResults(searchTerm) {
+    fetch(`/search/suggest?q=${searchTerm}&section_id=predictive-search`)
+      .then((response) => {
+        if (!response.ok) {
+          var error = new Error(response.status);
+          this.close();
+          throw error;
+        }
+        return response.text();
+      })
+      .then((text) => {
+        const resultsMarkup = new DOMParser().parseFromString(text, 'text/html').querySelector('#shopify-section-predictive-search').innerHTML;
+        if (!this.predictiveSearchResults) {
+          return;
+        }
+        this.predictiveSearchResults.innerHTML = resultsMarkup;
+        this.open();
+      })
+      .catch((error) => {
+        this.close();
+        throw error;
+      });
+  }
+
+  open() {
+    this.predictiveSearchResults.classList.remove('hidden');
+  }
+
+  close() {
+    this.predictiveSearchResults.classList.add('hidden');
+  }
+
+  debounce(fn, wait) {
+    let t;
+    return (...args) => {
+      clearTimeout(t);
+      t = setTimeout(() => fn.apply(this, args), wait);
+    };
+  }
+}
+customElements.define('predictive-search', PredictiveSearch);
   
 // FAQ'S Section 
 function initHandleQuestions() {
