@@ -966,14 +966,18 @@ function initFilterFacetForm() {
     selectors.filterOptions.forEach(option => {
       if (option.checked) {
         baseUrl += `&${option.name}=${option.value}`;
-        // queryString.append(option.name, option.value);
+         queryString.set(option.name, option.value);
+      } else {
+        queryString.delete(option.name);
       }
     });
     selectors.filterPriceOptions.forEach(option => {
       const priceValue = option.value.trim();
       if (priceValue !== '') {
         baseUrl += `&${option.name}=${priceValue}`;
-        // queryString.set(option.name, priceValue);
+        queryString.set(option.name, priceValue);
+      } else {
+        queryString.delete(option.name);
       }
     });
 
