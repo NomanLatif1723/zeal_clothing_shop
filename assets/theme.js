@@ -956,6 +956,7 @@ function initFilterFacetForm() {
     });
     // Show Loader 
     if(!selectors.loader) return;
+    console.log(queryString);
     selectors.loader.classList.remove('hidden');
     fetch(`${window.themeContent.routes.collection}?${queryString}`)
       .then(responce => responce.text())
