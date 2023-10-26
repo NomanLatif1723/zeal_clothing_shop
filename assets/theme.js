@@ -958,7 +958,7 @@ function initFilterFacetForm() {
     const queryString = new URLSearchParams(window.location.search);
     if (queryString.has("search")) {
       const searchTerm = queryString.get("search");
-      queryString.append(searchTerm);
+      queryString.set(searchTerm);
     } else {
       selectors.filterOptions.forEach(option => {
         if (option.checked) {
