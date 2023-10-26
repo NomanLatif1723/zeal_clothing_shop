@@ -52,7 +52,7 @@
     "enable_search": true,
     "enable_predictive_search": true,
     "enable_sticky_add_to_cart": true,
-    "sticky_add_to_cart_position": "bottom",
+    "sticky_add_to_cart_position": "top",
     "show_add_to_cart": false,
     "show_socials": false,
     "collection_layout": "slider",
