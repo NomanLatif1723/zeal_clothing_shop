@@ -994,10 +994,10 @@ function initFilterFacetForm() {
           document.querySelector('.empty-products__message').classList.remove('hidden');
         } else {
           // Preserve existing sorting parameters
-          const existingSortParam = new URLSearchParams(window.location.search).get('sort_by');
-          if (existingSortParam) {
-            queryString.set('sort_by', existingSortParam);
-          }
+          // const existingSortParam = new URLSearchParams(window.location.search).get('sort_by');
+          // if (existingSortParam) {
+          //   queryString.set('sort_by', existingSortParam);
+          // }
           history.replaceState(null, null, `?${queryString.toString()}`);
           initCollectionEventListeners();
           initCollectionSort();
