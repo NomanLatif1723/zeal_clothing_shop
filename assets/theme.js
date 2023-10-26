@@ -1005,7 +1005,6 @@ class PredictiveSearch extends HTMLElement {
       return;
     }
     this.getSearchResults(searchTerm);
-    initCollectionSort();
   }
 
   getSearchResults(searchTerm) {
