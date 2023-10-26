@@ -942,18 +942,36 @@ function initFilterFacetForm() {
     });
   });
   function filterSubmitForm() {
-    const queryString = new URLSearchParams();
-    selectors.filterOptions.forEach(option => {
-      if (option.checked) {
-        queryString.append(option.name, option.value);
-      }
-    });
-    selectors.filterPriceOptions.forEach(option => {
-      const priceValue = option.value.trim();
-      if (priceValue !== '') {
-        queryString.set(option.name, priceValue);
-      }
-    });
+    // const queryString = new URLSearchParams();
+    // selectors.filterOptions.forEach(option => {
+    //   if (option.checked) {
+    //     queryString.append(option.name, option.value);
+    //   }
+    // });
+    // selectors.filterPriceOptions.forEach(option => {
+    //   const priceValue = option.value.trim();
+    //   if (priceValue !== '') {
+    //     queryString.set(option.name, priceValue);
+    //   }
+    // });
+
+    const queryString = new URLSearchParams(window.location.search);
+    if (queryString.has("search")) {
+      const searchTerm = queryString.get("search");
+    } else {
+      selectors.filterOptions.forEach(option => {
+        if (option.checked) {
+          queryString.append(option.name, option.value);
+        }
+      });
+      selectors.filterPriceOptions.forEach(option => {
+        const priceValue = option.value.trim();
+        if (priceValue !== '') {
+          queryString.set(option.name, priceValue);
+        }
+      });
+    }
+
     // Show Loader 
     if(!selectors.loader) return;
     console.log(queryString);
