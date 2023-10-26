@@ -955,7 +955,7 @@ function initFilterFacetForm() {
     //   }
     // });
     
-    const baseUrl = ``;
+    let baseUrl = ``;
     const queryString = new URLSearchParams(window.location.search);
     const searchTerm = queryString.get("q");
     if (searchTerm) {
