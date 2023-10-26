@@ -1688,7 +1688,6 @@ function initProductVariants() {
 }
 initProductVariants();
 
-
 // Product Form Add To Cart Ajax
 function initProductForm() {
   let selectors = {
@@ -1831,6 +1830,22 @@ function initProductForm() {
   }
 }
 initProductForm();
+
+// Sticky Add To Cart Function 
+function initStickyAddCart() {
+  const stickyCart = document.querySelector(".product__sticky-wrapper");
+  if (stickyCart) {
+    const addToCartButton = document.querySelector("[data-add-to-cart]");
+    window.addEventListener("scroll", function() {
+      const buttonRect = addToCartButton.getBoundingClientRect();
+      if (buttonRect.bottom < 0) {
+          stickyCart.classList.remove('hidden');
+      } else {
+          stickyCart.classList.add('hidden');
+      }
+    });
+  }
+}
 
 // Product Quick View 
 function initQuickShopCollection() {
