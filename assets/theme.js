@@ -933,17 +933,17 @@ function initCollectionSort() {
     selectors.loader.classList.remove('hidden');
     const sortValue = event.target.value;
     const filterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
-    const queryString = new URLSearchParams(window.location.search);
-    const searchTerm = queryString.get("q");
+    
     console.log(window.themeContent.strings.templateName);
     let currentURL;
     if (window.themeContent.strings.templateName == 'collection') {
       currentURL = window.location.pathname;
     } else {
-      const searchTerm = getSearchTerm();
+      const queryString = new URLSearchParams(window.location.search);
+      const searchTerm = queryString.get("q");
       currentURL = window.location.search + searchTerm;
     }
-    
+    console.log(currentURL);
     // const currentURL = window.location.pathname;
     
     fetch(`${currentURL}?${filterParams}&sort_by=${sortValue}`)
