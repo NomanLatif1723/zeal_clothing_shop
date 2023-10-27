@@ -951,7 +951,7 @@ function initSorting() {
           let html = document.createElement('div');
           html.innerHTML = data;
           console.log(data);
-          let productData = html.querySelector('.collection-grid').innerHTML;
+          let productData = html.querySelector('.catalog__content').innerHTML;
           selectors.collectionContainer.innerHTML = productData;
           initCollectionEventListeners();
         })
