@@ -805,6 +805,7 @@ function initCollectionEventListeners() {
     filterDrawerBox: document.querySelector('.filter-drawer__box'),
     ShowMoreSwatches: document.querySelectorAll('.show-more__swatches'),
     removeActiveFilters: document.querySelectorAll('.active-filters__remove-filter'),
+    sortContainer: document.querySelectorAll('#sort-by')
   }
   selectors.ShowMoreSwatches.forEach(swatch => {
     if (!swatch) return;
@@ -846,6 +847,13 @@ function initCollectionEventListeners() {
   if (!selectors.filterDrawerBox) return;
   selectors.filterDrawerBox.addEventListener('click', (event) => {
      event.stopPropagation();
+  });
+  selectors.sortContainer.forEach(el => {
+    if(!el) return;
+    el.addEventListener('change', function(event) {
+      sortingSubmitForm(event);
+      updateUrl(event);
+    });
   });
   // Open Filter Drawer Function
   function openFilterDrawer() {
@@ -923,12 +931,7 @@ function initSorting() {
 
   if (!selectors.sortContainer || !selectors.loader) return;
 
-  selectors.sortContainer.forEach(el => {
-    el.addEventListener('change', function(event) {
-      sortingSubmitForm(event);
-      updateUrl(event);
-    });
-  });
+
   function sortingSubmitForm(event) {
     selectors.loader.classList.remove('hidden');
     const sortValue = event.target.value;
@@ -944,12 +947,6 @@ function initSorting() {
         let productData = html.querySelector('.catalog__content').innerHTML;
         selectors.collectionContainer.innerHTML = productData;
         initCollectionEventListeners();
-        selectors.sortContainer.forEach(el => {
-          el.addEventListener('change', function(event) {
-            sortingSubmitForm(event);
-            updateUrl(event);
-          });
-        });
       })
       .catch(error => console.log('Error', error))
       .finally(() => selectors.loader.classList.add('hidden'));
