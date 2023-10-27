@@ -944,6 +944,12 @@ function initSorting() {
         let productData = html.querySelector('.catalog__content').innerHTML;
         selectors.collectionContainer.innerHTML = productData;
         initCollectionEventListeners();
+        selectors.sortContainer.forEach(el => {
+          el.addEventListener('change', function(event) {
+            sortingSubmitForm(event);
+            updateUrl(event);
+          });
+        });
       })
       .catch(error => console.log('Error', error))
       .finally(() => selectors.loader.classList.add('hidden'));
