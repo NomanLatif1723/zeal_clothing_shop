@@ -141,7 +141,7 @@
                 </div>
               </div>
               {%- assign filters = search.filters -%}
-              {%- if show_filtering and filters.size > 0 -%}
+              {%- if show_filtering and filter_value != blank -%}
                 
                 <div class="active-filters">
                   {% comment %}
