@@ -932,15 +932,10 @@ function initCollectionSort() {
   function sortingSubmitForm(event) {
     selectors.loader.classList.remove('hidden');
     const sortValue = event.target.value;
-    // const filterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
-    const queryString = new URLSearchParams(window.location.search);
-    const searchTerm = queryString.get("q");
-    const baseUrl = window.location.pathname + `?${queryString.toString()}`;
-    if (searchTerm) {
-     queryString.set("q", searchTerm);
-    }
+    const filterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
+    const currentURL = window.location.pathname;
 
-    fetch(`${baseUrl}?sort_by=${sortValue}`)
+    fetch(`${currentURL}?sort_by=${sortValue}`)
       .then(response => response.text())
       .then(data => {
         let html = document.createElement('div');
