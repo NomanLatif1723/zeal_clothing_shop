@@ -879,47 +879,95 @@ function initCollectionEventListeners() {
 initCollectionEventListeners();
 
 // Collection Sorting Using Ajax
-function initCollectionSort() {
+// function initCollectionSort() {
+//   let selectors = {
+//     sortContainer: document.querySelectorAll('#sort-by'),
+//     loader: document.querySelector('.loader'),
+//     filterForm: document.querySelector('.filter-form'),
+//     collectionContainer: document.querySelector('.collection-grid')
+//   }
+//   Shopify.queryParams = {};
+//   if(!selectors.sortContainer || !selectors.loader) return;
+//   selectors.sortContainer.forEach(el => {
+//     el.addEventListener('change', function(event) {
+//       sortingSubmitForm(event);
+//       updateUrl(event);
+//     });
+//     function sortingSubmitForm(event) { 
+//       selectors.loader.classList.remove('hidden');
+//       const sortValue = event.target.value;
+//       const filterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
+//       let value = event.target.value;
+//       console.log("searchUrl", `${window.themeContent.routes.search}`);
+//       fetch(`${window.themeContent.routes.collection}?${filterParams}&sort_by=${sortValue}`)
+//       .then(responce => responce.text())
+//       .then(data => {
+//         let html = document.createElement('div');
+//         html.innerHTML = data;
+//         let productData = html.querySelector('.collection-grid').innerHTML;
+//         selectors.collectionContainer.innerHTML = productData;
+//         initCollectionEventListeners();
+//       })
+//       .catch(error => console.log('Error', error))
+//       .finally(() => selectors.loader.classList.add('hidden'));
+//     }
+//     function updateUrl(event) {
+//       const currentSortValue = event.target.value;
+//       const currentFilterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
+//       const newUrl = window.location.pathname + '?' + currentFilterParams + '&sort_by=' + currentSortValue;
+//       history.replaceState(null, null, newUrl);
+//     }
+//   })
+// }
+// initCollectionSort();
+
+function initSorting() {
   let selectors = {
     sortContainer: document.querySelectorAll('#sort-by'),
     loader: document.querySelector('.loader'),
     filterForm: document.querySelector('.filter-form'),
     collectionContainer: document.querySelector('.collection-grid')
-  }
+  };
+  
   Shopify.queryParams = {};
-  if(!selectors.sortContainer || !selectors.loader) return;
+
+  if (!selectors.sortContainer || !selectors.loader) return;
+
   selectors.sortContainer.forEach(el => {
     el.addEventListener('change', function(event) {
       sortingSubmitForm(event);
       updateUrl(event);
     });
-    function sortingSubmitForm(event) { 
+
+    function sortingSubmitForm(event) {
       selectors.loader.classList.remove('hidden');
       const sortValue = event.target.value;
       const filterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
-      let value = event.target.value;
-      console.log("searchUrl", `${window.themeContent.routes.search}`);
-      fetch(`${window.themeContent.routes.collection}?${filterParams}&sort_by=${sortValue}`)
-      .then(responce => responce.text())
-      .then(data => {
-        let html = document.createElement('div');
-        html.innerHTML = data;
-        let productData = html.querySelector('.collection-grid').innerHTML;
-        selectors.collectionContainer.innerHTML = productData;
-        initCollectionEventListeners();
-      })
-      .catch(error => console.log('Error', error))
-      .finally(() => selectors.loader.classList.add('hidden'));
+      const currentURL = window.location.pathname + window.location.search;
+
+      fetch(`${currentURL}&sort_by=${sortValue}`)
+        .then(response => response.text())
+        .then(data => {
+          let html = document.createElement('div');
+          html.innerHTML = data;
+          let productData = html.querySelector('.collection-grid').innerHTML;
+          selectors.collectionContainer.innerHTML = productData;
+          initCollectionEventListeners();
+        })
+        .catch(error => console.log('Error', error))
+        .finally(() => selectors.loader.classList.add('hidden'));
     }
+
     function updateUrl(event) {
       const currentSortValue = event.target.value;
       const currentFilterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
       const newUrl = window.location.pathname + '?' + currentFilterParams + '&sort_by=' + currentSortValue;
       history.replaceState(null, null, newUrl);
     }
-  })
+  });
 }
-initCollectionSort();
+initSorting();
+
 
 // Collection Facets Filters 
 // function initFilterFacetForm() {
