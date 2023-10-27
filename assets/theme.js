@@ -935,12 +935,12 @@ function initCollectionSort() {
     // const filterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
     const queryString = new URLSearchParams(window.location.search);
     const searchTerm = queryString.get("q");
-    let currentURL = ''
+    const baseUrl = window.location.pathname + `?${queryString.toString()}`;
     if (searchTerm) {
      queryString.set("q", searchTerm);
     }
 
-    fetch(`${currentURL}?sort_by=${sortValue}`)
+    fetch(`${baseUrl}?sort_by=${sortValue}`)
       .then(response => response.text())
       .then(data => {
         let html = document.createElement('div');
