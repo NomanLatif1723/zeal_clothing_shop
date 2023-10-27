@@ -804,7 +804,7 @@ function initCollectionEventListeners() {
     filterIconClose: document.querySelector('.filter-icon__close'),
     filterDrawerBox: document.querySelector('.filter-drawer__box'),
     ShowMoreSwatches: document.querySelectorAll('.show-more__swatches'),
-    removeActiveFilters: document.querySelectorAll('.active-filters__remove-filter'),
+    removeActiveFilters: document.querySelectorAll('.active-filters__remove-filter')
   }
   selectors.ShowMoreSwatches.forEach(swatch => {
     if (!swatch) return;
