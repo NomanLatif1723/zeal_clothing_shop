@@ -994,11 +994,15 @@ function initFilterFacetForm() {
           document.querySelector('.empty-products__message').classList.remove('hidden');
         } else {
           // Preserve existing sorting parameters
-          // const existingSortParam = new URLSearchParams(window.location.search).get('sort_by');
-          // if (existingSortParam) {
-          //   queryString.set('sort_by', existingSortParam);
-          // }
-          history.replaceState(null, null, `?${queryString.toString()}`);
+          const existingSortParam = new URLSearchParams(window.location.search).get('sort_by');
+          if (existingSortParam) {
+            queryString.set('sort_by', existingSortParam);
+          }
+          if (history.pushState) {
+            history.pushState(null, null, `?${queryString.toString()}`);
+          } else {
+            window.location.href = `?${queryString.toString()}`;
+          }
           initCollectionEventListeners();
           initCollectionSort();
         }
