@@ -949,7 +949,6 @@ function initFilterFacetForm() {
     // Show Loader 
     if(!selectors.loader) return;
     selectors.loader.classList.remove('hidden');
-    console.log(queryString);
     fetch(baseUrl)
       .then(responce => responce.text())
       .then(data => {
