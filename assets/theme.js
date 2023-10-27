@@ -941,7 +941,7 @@ function initCollectionSort() {
     } else {
       const queryString = new URLSearchParams(window.location.search);
       const searchTerm = queryString.get("q");
-      currentURL = window.location.search + searchTerm;
+      currentURL = window.location.search;
     }
     console.log(currentURL);
     // const currentURL = window.location.pathname;
