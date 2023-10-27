@@ -920,9 +920,7 @@ function initCollectionSort() {
   };
   let currentURL;
   Shopify.queryParams = {};
-
   if (!selectors.sortContainer || !selectors.loader) return;
-
   selectors.sortContainer.forEach(el => {
     el.addEventListener('change', function(event) {
       sortingSubmitForm(event);
@@ -941,26 +939,24 @@ function initCollectionSort() {
       currentURL = window.location.search;
       baseURL = `${currentURL}&${filterParams}&sort_by=${sortValue}`
     }
-    console.log(currentURL);
-    
     fetch(baseURL)
-      .then(response => response.text())
-      .then(data => {
-        let html = document.createElement('div');
-        html.innerHTML = data;
-        let productData = html.querySelector('.collection-grid').innerHTML;
-        selectors.collectionContainer.innerHTML = productData;
-        initCollectionEventListeners();
-      })
-      .catch(error => console.log('Error', error))
-      .finally(() => selectors.loader.classList.add('hidden'));
-    }
-    function updateUrl(event) {
-      const currentSortValue = event.target.value;
-      const currentFilterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
-      const newUrl = `${currentURL}&sort_by=${currentSortValue}&${currentFilterParams}`;
-      history.replaceState(null, null, newUrl);
-    }
+    .then(response => response.text())
+    .then(data => {
+      let html = document.createElement('div');
+      html.innerHTML = data;
+      let productData = html.querySelector('.collection-grid').innerHTML;
+      selectors.collectionContainer.innerHTML = productData;
+      initCollectionEventListeners();
+    })
+    .catch(error => console.log('Error', error))
+    .finally(() => selectors.loader.classList.add('hidden'));
+  }
+  function updateUrl(event) {
+    const currentSortValue = event.target.value;
+    const currentFilterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
+    const newUrl = `${currentURL}&sort_by=${currentSortValue}&${currentFilterParams}`;
+    history.replaceState(null, null, newUrl);
+  }
 }
 initCollectionSort();
 
