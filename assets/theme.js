@@ -918,19 +918,17 @@ initCollectionEventListeners();
 // }
 // initCollectionSort();
 
-function initSorting() {
+function initSorting(event) {
   let selectors = {
     sortContainer: document.querySelectorAll('#sort-by'),
     loader: document.querySelector('.loader'),
     filterForm: document.querySelector('.filter-form'),
     collectionContainer: document.querySelector('.catalog__content')
   };
+  sortingSubmitForm(event);
+  updateUrl(event);
   
   Shopify.queryParams = {};
-
-  if (!selectors.sortContainer || !selectors.loader) return;
-
-
   function sortingSubmitForm(event) {
     selectors.loader.classList.remove('hidden');
     const sortValue = event.target.value;
