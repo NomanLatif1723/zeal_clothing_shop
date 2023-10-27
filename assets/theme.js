@@ -1042,12 +1042,8 @@ function initFilterFacetForm() {
       queryString.set("q", searchTerm);
     }
 
-     const baseUrl = window.location.pathname + `?${queryString.toString()}`;
-    if (history.pushState) {
-      history.pushState(null, null, `?${queryString.toString()}`);
-    } else {
-      window.location.href = `?${queryString.toString()}`;
-    }
+    const baseUrl = window.location.pathname + `?${queryString.toString()}`;
+    
   
     // Show Loader 
     if(!selectors.loader) return;
@@ -1071,6 +1067,11 @@ function initFilterFacetForm() {
           //   queryString.set('sort_by', existingSortParam);
           //  }
           // history.replaceState(null, null, `?${queryString.toString()}`);
+          if (history.pushState) {
+            history.pushState(null, null, `?${queryString.toString()}`);
+          } else {
+            window.location.href = `?${queryString.toString()}`;
+          }
           initCollectionEventListeners();
           initCollectionSort();
         }
