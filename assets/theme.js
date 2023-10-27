@@ -933,6 +933,15 @@ function initCollectionSort() {
     selectors.loader.classList.remove('hidden');
     const sortValue = event.target.value;
     const filterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
+
+    let currentURL;
+    if (window.themeContent.routes.templateName == 'collection') {
+      currentURL = window.location.pathname;
+    } else {
+      const searchTerm = getSearchTerm();
+      currentURL = window.location.search + searchTerm;
+    }
+    
     const currentURL = window.location.pathname;
     console.log(window.themeContent.routes.templateName);
     fetch(`${currentURL}?${filterParams}&sort_by=${sortValue}`)
