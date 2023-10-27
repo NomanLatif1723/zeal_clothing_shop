@@ -952,7 +952,7 @@ function initSorting() {
           html.innerHTML = data;
           console.log(data);
           let productData = html.querySelector('.catalog__content').innerHTML;
-          selectors.collectionContainer.innerHTML = productData;
+          document.querySelector('.catalog__content').innerHTML = productData;
           initCollectionEventListeners();
         })
         .catch(error => console.log('Error', error))
