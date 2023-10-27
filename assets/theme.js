@@ -917,10 +917,15 @@ function initCollectionSort() {
       .finally(() => selectors.loader.classList.add('hidden'));
     }
     function updateUrl(event) {
-      const currentSortValue = event.target.value;
-      const currentFilterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
-      const newUrl = window.location.pathname + '?' + currentFilterParams + '&sort_by=' + currentSortValue;
-      history.replaceState(null, null, newUrl);
+      // const currentSortValue = event.target.value;
+      // const currentFilterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
+      // const newUrl = window.location.pathname + '?' + currentFilterParams + '&sort_by=' + currentSortValue;
+      // history.replaceState(null, null, newUrl);
+      if (history.pushState) {
+            history.pushState(null, null, `?${queryString.toString()}`);
+          } else {
+            window.location.href = `?${queryString.toString()}`;
+          }
     }
   })
 }
