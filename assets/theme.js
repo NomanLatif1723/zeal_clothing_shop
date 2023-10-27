@@ -890,7 +890,7 @@ function initRemoveFilter() {
     
     // Extract the filter to be removed
     const filterToRemove = event.target.dataset.filterName;
-    const currentURL = window.location.pathname + window.location.search;
+    const currentURL = window.location.pathname;
     const filterParams = new URLSearchParams(new FormData(selectors.filterForm));
     
     // Remove the filter parameter
