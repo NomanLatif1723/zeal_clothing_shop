@@ -964,6 +964,7 @@ function initCollectionSort() {
       // const newUrl = currentURL + '?' + currentFilterParams + '&sort_by=' + currentSortValue;
       // history.replaceState(null, null, newUrl);
       const newUrl = `${currentURL}?${currentFilterParams}&sort_by=${currentSortValue}`;
+      console.log(newUrl);
       history.replaceState(null, null, newUrl);
     }
 }
