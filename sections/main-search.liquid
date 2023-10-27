@@ -141,8 +141,7 @@
                 </div>
               </div>
               {%- assign filters = search.filters -%}
-              {%- if show_filtering and filter_value != blank -%}
-                
+              {%- if show_filtering -%}
                 <div class="active-filters">
                   {% comment %}
                   <a href="{{ collection.url }}?sort_by={{ collection.sort_by }}" class="active-filters__clear">Clear all</a>
