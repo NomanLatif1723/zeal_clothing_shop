@@ -908,6 +908,7 @@ function initCollectionSort() {
       .then(data => {
         let html = document.createElement('div');
         html.innerHTML = data;
+        console.log(html);
         let productData = html.querySelector('.collection-grid').innerHTML;
         selectors.collectionContainer.innerHTML = productData;
         initCollectionEventListeners();
