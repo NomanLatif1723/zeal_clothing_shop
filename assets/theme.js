@@ -911,7 +911,7 @@ initCollectionEventListeners();
 // }
 // initCollectionSort();
 
-function initSorting() {
+function initCollectionSort() {
   let selectors = {
     sortContainer: document.querySelectorAll('#sort-by'),
     loader: document.querySelector('.loader'),
@@ -954,7 +954,7 @@ function initSorting() {
       history.replaceState(null, null, newUrl);
     }
 }
-initSorting();
+initCollectionSort();
 
 
 // Collection Facets Filters 
