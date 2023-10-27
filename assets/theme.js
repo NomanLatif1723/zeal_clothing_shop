@@ -889,14 +889,15 @@ function initCollectionSort() {
   Shopify.queryParams = {};
   if(!selectors.sortContainer || !selectors.loader) return;
   selectors.sortContainer.forEach(el => {
+    const queryString = new URLSearchParams(window.location.search);
+    const searchTerm = queryString.get("q");
+    const baseUrl = window.location.pathname + `?${queryString.toString()}`;
     el.addEventListener('change', function(event) {
       sortingSubmitForm(event);
       updateUrl(event);
     });
     function sortingSubmitForm(event) {
-      const queryString = new URLSearchParams(window.location.search);
-      const searchTerm = queryString.get("q");
-      const baseUrl = window.location.pathname + `?${queryString.toString()}`;
+      
       
       selectors.loader.classList.remove('hidden');
       const sortValue = event.target.value;
@@ -922,12 +923,12 @@ function initCollectionSort() {
       // const newUrl = window.location.pathname + '?' + currentFilterParams + '&sort_by=' + currentSortValue;
       // history.replaceState(null, null, newUrl);
       if (history.pushState) {
-            history.pushState(null, null, `?${queryString.toString()}`);
-          } else {
-            window.location.href = `?${queryString.toString()}`;
-          }
+        history.pushState(null, null, `?${queryString.toString()}`);
+      } else {
+        window.location.href = `?${queryString.toString()}`;
+      }
     }
-  })
+  });
 }
 initCollectionSort();
 
