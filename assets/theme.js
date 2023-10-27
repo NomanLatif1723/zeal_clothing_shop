@@ -1682,7 +1682,7 @@ function initProductVariants() {
     if(!option3) return;
     option3.querySelector('[data-option-name]').textContent = matchedVariant.option3;
   }
-}
+}  
 initProductVariants();
 
 // Product Form Add To Cart Ajax
