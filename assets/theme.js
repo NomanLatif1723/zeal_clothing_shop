@@ -945,11 +945,12 @@ function initSorting() {
       const filterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
       const currentURL = window.location.pathname + window.location.search;
 
-      fetch(`${currentURL}?sort_by=${sortValue}`)
+      fetch(`${currentURL}&sort_by=${sortValue}`)
         .then(response => response.text())
         .then(data => {
           let html = document.createElement('div');
           html.innerHTML = data;
+          console.log(html);
           let productData = html.querySelector('.collection-grid').innerHTML;
           selectors.collectionContainer.innerHTML = productData;
           initCollectionEventListeners();
