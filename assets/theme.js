@@ -851,8 +851,7 @@ function initCollectionEventListeners() {
   selectors.sortContainer.forEach(el => {
     if(!el) return;
     el.addEventListener('change', function(event) {
-      sortingSubmitForm(event);
-      updateUrl(event);
+      initSorting(event);
     });
   });
   // Open Filter Drawer Function
