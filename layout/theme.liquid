@@ -42,8 +42,7 @@
           home: {{ routes.root_url | json }},
           productUrl: {{ product.url | json }},
           money_format: {{ shop.money_format | json }},
-          search: {{ routes.search_url | json }},
-          templateName: {{ template.name | json }}
+          search: {{ routes.search_url | json }}
         },
         strings: {
           addToCart: "{{ 'products.add_to_cart' | t }}",
@@ -56,7 +55,8 @@
           view_full_info: "{{ 'products.view_full_info' | t }}"
         },
         settings: {
-          quickView: {{ settings.show_quick_view }}
+          quickView: {{ settings.show_quick_view }},
+          templateName: {{ template.name }}
         }
       }
     </script>
