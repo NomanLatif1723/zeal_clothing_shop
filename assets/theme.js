@@ -934,7 +934,7 @@ function initCollectionSort() {
     const sortValue = event.target.value;
     const filterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
     const currentURL = window.location.pathname;
-
+    console.log(window.themeContent.routes.templateName);
     fetch(`${currentURL}?${filterParams}&sort_by=${sortValue}`)
       .then(response => response.text())
       .then(data => {
