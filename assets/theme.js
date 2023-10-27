@@ -918,8 +918,7 @@ function initCollectionSort() {
     filterForm: document.querySelector('.filter-form'),
     collectionContainer: document.querySelector('.collection-grid')
   };
-  let currentURL;
-  let baseURL;
+  let currentURL, baseURL;
   Shopify.queryParams = {};
   if (!selectors.sortContainer || !selectors.loader) return;
   selectors.sortContainer.forEach(el => {
@@ -952,9 +951,6 @@ function initCollectionSort() {
     .finally(() => selectors.loader.classList.add('hidden'));
   }
   function updateUrl(event) {
-    const currentSortValue = event.target.value;
-    const currentFilterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
-    const newUrl = `${currentURL}&sort_by=${currentSortValue}&${currentFilterParams}`;
     history.replaceState(null, null, baseURL);
   }
 }
