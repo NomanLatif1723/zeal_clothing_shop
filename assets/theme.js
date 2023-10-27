@@ -916,7 +916,7 @@ function initSorting() {
     sortContainer: document.querySelectorAll('#sort-by'),
     loader: document.querySelector('.loader'),
     filterForm: document.querySelector('.filter-form'),
-    collectionContainer: document.querySelector('.collection-grid')
+    collectionContainer: document.querySelector('.catalog__content')
   };
   
   Shopify.queryParams = {};
@@ -942,11 +942,7 @@ function initSorting() {
           html.innerHTML = data;
           console.log(data);
           let productData = html.querySelector('.catalog__content').innerHTML;
-          document.querySelector('.catalog__content').innerHTML = productData;
-          el.addEventListener('change', function(event) {
-            sortingSubmitForm(event);
-            updateUrl(event);
-          });
+          selectors.collectionContainer.innerHTML = productData;
           initCollectionEventListeners();
         })
         .catch(error => console.log('Error', error))
