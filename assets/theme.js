@@ -933,8 +933,6 @@ function initCollectionSort() {
     selectors.loader.classList.remove('hidden');
     const sortValue = event.target.value;
     const filterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
-    console.log(filterParams);
-    console.log(window.themeContent.strings.templateName);
     
     if (window.themeContent.strings.templateName == 'collection') {
       currentURL = window.location.pathname;
@@ -951,7 +949,6 @@ function initCollectionSort() {
       .then(data => {
         let html = document.createElement('div');
         html.innerHTML = data;
-        console.log(data);
         let productData = html.querySelector('.collection-grid').innerHTML;
         selectors.collectionContainer.innerHTML = productData;
         initCollectionEventListeners();
@@ -962,10 +959,7 @@ function initCollectionSort() {
     function updateUrl(event) {
       const currentSortValue = event.target.value;
       const currentFilterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
-      // const newUrl = currentURL + '?' + currentFilterParams + '&sort_by=' + currentSortValue;
-      // history.replaceState(null, null, newUrl);
       const newUrl = `${currentURL}&sort_by=${currentSortValue}&${currentFilterParams}`;
-      console.log(newUrl);
       history.replaceState(null, null, newUrl);
     }
 }
