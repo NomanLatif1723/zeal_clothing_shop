@@ -847,16 +847,6 @@ function initCollectionEventListeners() {
   selectors.filterDrawerBox.addEventListener('click', (event) => {
      event.stopPropagation();
   });
-
-  // selectors.removeActiveFilters.forEach(button => {
-  //   if (!button) return;
-  //   button.addEventListener('click', (event) => {
-  //     event.preventDefault();
-  //     const filterName = event.target.getAttribute('data-filter-name');
-  //     const filterValue = event.target.getAttribute('data-filter-value');
-  //     removeFilterAjax(filterName, filterValue);
-  //   });
-  // });
   // Open Filter Drawer Function
   function openFilterDrawer() {
     if (selectors.filterDrawer.classList.contains('filter-drawer__left')) {
@@ -953,6 +943,10 @@ function initSorting() {
           console.log(data);
           let productData = html.querySelector('.catalog__content').innerHTML;
           document.querySelector('.catalog__content').innerHTML = productData;
+          el.addEventListener('change', function(event) {
+            sortingSubmitForm(event);
+            updateUrl(event);
+          });
           initCollectionEventListeners();
         })
         .catch(error => console.log('Error', error))
