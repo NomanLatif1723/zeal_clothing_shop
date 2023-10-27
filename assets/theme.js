@@ -933,7 +933,7 @@ function initCollectionSort() {
     selectors.loader.classList.remove('hidden');
     const sortValue = event.target.value;
     const filterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
-    
+    console.log(filterParams);
     console.log(window.themeContent.strings.templateName);
     
     if (window.themeContent.strings.templateName == 'collection') {
