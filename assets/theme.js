@@ -1011,6 +1011,65 @@ function initFilterFacetForm() {
 }
 initFilterFacetForm();
 
+function initFilterFacetForm() {
+  let selectors = {
+    loader: document.querySelector('.loader'),
+    filterForm: document.querySelector('.filter-form'),
+    filterOptions: document.querySelectorAll('.filter-group input[type="checkbox"]'),
+    filterPriceOptions: document.querySelectorAll('.filter-group input[type="number"]')
+  }
+
+  // ...
+
+function filterSubmitForm() {
+  const queryString = new URLSearchParams(window.location.search);
+  const searchTerm = queryString.get("q");
+  selectors.filterOptions.forEach(option => {
+    queryString.delete(option.name);
+  });
+  selectors.filterPriceOptions.forEach(option => {
+    queryString.delete(option.name);
+  });
+  selectors.filterOptions.forEach(option => {
+    if (option.checked) {
+      queryString.append(option.name, option.value);
+    }
+  });
+  selectors.filterPriceOptions.forEach(option => {
+    const priceValue = option.value.trim();
+    if (priceValue !== '') {
+      queryString.append(option.name, priceValue);
+    }
+  });
+  if (searchTerm) {
+    queryString.set("q", searchTerm);
+  }
+  if (history.pushState) {
+    history.pushState(null, null, `?${queryString.toString()}`);
+  } else {
+    window.location.href = `?${queryString.toString()}`;
+  }
+
+  // ...
+}
+
+  // Attach event listeners for checkboxes and number inputs
+  selectors.filterOptions.forEach(option => {
+    option.addEventListener('change', () => {
+      filterSubmitForm();
+    });
+  });
+  
+  selectors.filterPriceOptions.forEach(option => {
+    option.addEventListener('input', () => {
+      filterSubmitForm();
+    });
+  });
+}
+
+initFilterFacetForm();
+
+
 // Predictive Search 
 class PredictiveSearch extends HTMLElement {
   constructor() {
