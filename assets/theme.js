@@ -932,8 +932,13 @@ function initCollectionSort() {
   function sortingSubmitForm(event) {
     selectors.loader.classList.remove('hidden');
     const sortValue = event.target.value;
-    const filterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
-    const currentURL = window.location.pathname;
+    // const filterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
+    const queryString = new URLSearchParams(window.location.search);
+    const searchTerm = queryString.get("q");
+    let currentURL = ''
+    if (searchTerm) {
+     queryString.set("q", searchTerm);
+    }
 
     fetch(`${currentURL}?sort_by=${sortValue}`)
       .then(response => response.text())
