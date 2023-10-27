@@ -893,11 +893,7 @@ function initCollectionSort() {
       sortingSubmitForm(event);
       updateUrl(event);
     });
-    function sortingSubmitForm(event) {
-      const queryString = new URLSearchParams(window.location.search);
-      const searchTerm = queryString.get("q");
-      const baseUrl = window.location.pathname + `?${queryString.toString()}`;
-      
+    function sortingSubmitForm(event) { 
       selectors.loader.classList.remove('hidden');
       const sortValue = event.target.value;
       const filterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
