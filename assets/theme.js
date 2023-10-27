@@ -894,12 +894,16 @@ function initCollectionSort() {
       updateUrl(event);
     });
     function sortingSubmitForm(event) {
+      const queryString = new URLSearchParams(window.location.search);
+      const searchTerm = queryString.get("q");
+      const baseUrl = window.location.pathname + `?${queryString.toString()}`;
+      
       selectors.loader.classList.remove('hidden');
       const sortValue = event.target.value;
       const filterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
       let value = event.target.value;
       
-      fetch(`${window.themeContent.routes.collection}?${filterParams}&sort_by=${sortValue}`)
+      fetch(baseUrl)
       .then(responce => responce.text())
       .then(data => {
         let html = document.createElement('div');
