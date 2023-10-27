@@ -1011,6 +1011,7 @@ initCollectionSort();
 // }
 // initFilterFacetForm();
 
+// Collection Facets Filters 
 function initFilterFacetForm() {
   let selectors = {
     loader: document.querySelector('.loader'),
@@ -1041,10 +1042,7 @@ function initFilterFacetForm() {
     if (searchTerm) {
       queryString.set("q", searchTerm);
     }
-
     const baseUrl = window.location.pathname + `?${queryString.toString()}`;
-    
-  
     // Show Loader 
     if(!selectors.loader) return;
     selectors.loader.classList.remove('hidden');
@@ -1061,12 +1059,6 @@ function initFilterFacetForm() {
         if (noProductsMessage) {
           document.querySelector('.empty-products__message').classList.remove('hidden');
         } else {
-          // Preserve existing sorting parameters
-          // const existingSortParam = new URLSearchParams(window.location.search).get('sort_by');
-          // if (existingSortParam) {
-          //   queryString.set('sort_by', existingSortParam);
-          //  }
-          // history.replaceState(null, null, `?${queryString.toString()}`);
           if (history.pushState) {
             history.pushState(null, null, `?${queryString.toString()}`);
           } else {
@@ -1079,8 +1071,6 @@ function initFilterFacetForm() {
       .catch(error => console.log('Error', error))
       .finally(() => selectors.loader.classList.add('hidden'));
   }
-
-  // Attach event listeners for checkboxes and number inputs
   selectors.filterOptions.forEach(option => {
     option.addEventListener('change', () => {
       filterSubmitForm();
@@ -1093,7 +1083,6 @@ function initFilterFacetForm() {
     });
   });
 }
-
 initFilterFacetForm();
 
 
