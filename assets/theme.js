@@ -950,7 +950,7 @@ function initSorting() {
         .then(data => {
           let html = document.createElement('div');
           html.innerHTML = data;
-          let productData = html.querySelector('.catalog__content').innerHTML;
+          let productData = html.querySelector('.collection-grid').innerHTML;
           selectors.collectionContainer.innerHTML = productData;
           initCollectionEventListeners();
         })
