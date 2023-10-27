@@ -928,34 +928,32 @@ function initSorting() {
       sortingSubmitForm(event);
       updateUrl(event);
     });
+  });
+  function sortingSubmitForm(event) {
+    selectors.loader.classList.remove('hidden');
+    const sortValue = event.target.value;
+    const filterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
+    const currentURL = window.location.pathname + window.location.search;
 
-    function sortingSubmitForm(event) {
-      selectors.loader.classList.remove('hidden');
-      const sortValue = event.target.value;
-      const filterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
-      const currentURL = window.location.pathname + window.location.search;
-
-      fetch(`${currentURL}?sort_by=${sortValue}`)
-        .then(response => response.text())
-        .then(data => {
-          let html = document.createElement('div');
-          html.innerHTML = data;
-          console.log(data);
-          let productData = html.querySelector('.catalog__content').innerHTML;
-          selectors.collectionContainer.innerHTML = productData;
-          initCollectionEventListeners();
-        })
-        .catch(error => console.log('Error', error))
-        .finally(() => selectors.loader.classList.add('hidden'));
+    fetch(`${currentURL}?sort_by=${sortValue}`)
+      .then(response => response.text())
+      .then(data => {
+        let html = document.createElement('div');
+        html.innerHTML = data;
+        console.log(data);
+        let productData = html.querySelector('.catalog__content').innerHTML;
+        selectors.collectionContainer.innerHTML = productData;
+        initCollectionEventListeners();
+      })
+      .catch(error => console.log('Error', error))
+      .finally(() => selectors.loader.classList.add('hidden'));
     }
-
     function updateUrl(event) {
       const currentSortValue = event.target.value;
       const currentFilterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
       const newUrl = window.location.pathname + '?' + currentFilterParams + '&sort_by=' + currentSortValue;
       history.replaceState(null, null, newUrl);
     }
-  });
 }
 initSorting();
 
