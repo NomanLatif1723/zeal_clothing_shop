@@ -918,7 +918,7 @@ function initCollectionSort() {
     filterForm: document.querySelector('.filter-form'),
     collectionContainer: document.querySelector('.collection-grid')
   };
-  
+  let currentURL;
   Shopify.queryParams = {};
 
   if (!selectors.sortContainer || !selectors.loader) return;
@@ -935,7 +935,7 @@ function initCollectionSort() {
     const filterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
     
     console.log(window.themeContent.strings.templateName);
-    let currentURL;
+    
     if (window.themeContent.strings.templateName == 'collection') {
       currentURL = window.location.pathname;
     } else {
@@ -961,7 +961,7 @@ function initCollectionSort() {
     function updateUrl(event) {
       const currentSortValue = event.target.value;
       const currentFilterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
-      const newUrl = window.location.pathname + '?' + currentFilterParams + '&sort_by=' + currentSortValue;
+      const newUrl = currentURL + '?' + currentFilterParams + '&sort_by=' + currentSortValue;
       history.replaceState(null, null, newUrl);
     }
 }
