@@ -868,62 +868,6 @@ function initCollectionEventListeners() {
 }
 initCollectionEventListeners();
 
-function initRemoveFilter() {
-  let selectors = {
-    removeFilterButtons: document.querySelectorAll('.active-filters__remove-filter'),
-    loader: document.querySelector('.loader'),
-    filterForm: document.querySelector('.filter-form'),
-    collectionContainer: document.querySelector('.collection-grid')
-  };
-
-  if (!selectors.removeFilterButtons || !selectors.loader) return;
-
-  selectors.removeFilterButtons.forEach(button => {
-    button.addEventListener('click', function(event) {
-      event.preventDefault();
-      removeFilter(event);
-    });
-  });
-
-  function removeFilter(event) {
-    selectors.loader.classList.remove('hidden');
-    
-    // Extract the filter to be removed
-    const filterToRemove = event.target.dataset.filterName;
-    const currentURL = window.location.pathname;
-    const filterParams = new URLSearchParams(new FormData(selectors.filterForm));
-    
-    // Remove the filter parameter
-    filterParams.delete(filterToRemove);
-    
-    // Construct the new URL without the removed filter
-    const newUrl = `${currentURL.split('?')[0]}?${filterParams.toString()}`;
-
-    fetch(newUrl)
-      .then(response => response.text())
-      .then(data => {
-        let html = document.createElement('div');
-        html.innerHTML = data;
-        let productData = html.querySelector('.collection-grid').innerHTML;
-        selectors.collectionContainer.innerHTML = productData;
-        initCollectionEventListeners();
-      })
-      .catch(error => console.log('Error', error))
-      .finally(() => {
-        selectors.loader.classList.add('hidden');
-        updateUrl(newUrl);
-      });
-  }
-
-  function updateUrl(newUrl) {
-    history.replaceState(null, null, newUrl);
-  }
-}
-
-// Call the function to initialize filter removal
-initRemoveFilter();
-
-
 // Collection Sorting Using Ajax
 function initCollectionSort() {
   let selectors = {
