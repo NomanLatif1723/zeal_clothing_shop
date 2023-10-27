@@ -964,7 +964,7 @@ function initCollectionSort() {
       const currentFilterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
       // const newUrl = currentURL + '?' + currentFilterParams + '&sort_by=' + currentSortValue;
       // history.replaceState(null, null, newUrl);
-      const newUrl = `${currentURL}?${currentFilterParams}&sort_by=${currentSortValue}`;
+      const newUrl = `?sort_by=${currentSortValue}&${currentURL}&${currentFilterParams}`;
       console.log(newUrl);
       history.replaceState(null, null, newUrl);
     }
