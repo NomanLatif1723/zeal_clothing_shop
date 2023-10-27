@@ -919,6 +919,7 @@ function initCollectionSort() {
     collectionContainer: document.querySelector('.collection-grid')
   };
   let currentURL;
+  let baseURL;
   Shopify.queryParams = {};
   if (!selectors.sortContainer || !selectors.loader) return;
   selectors.sortContainer.forEach(el => {
@@ -931,7 +932,6 @@ function initCollectionSort() {
     selectors.loader.classList.remove('hidden');
     const sortValue = event.target.value;
     const filterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
-    let baseURL;
     if (window.themeContent.strings.templateName == 'collection') {
       currentURL = window.location.pathname;
       baseURL = `${currentURL}?${filterParams}&sort_by=${sortValue}`;
@@ -955,7 +955,7 @@ function initCollectionSort() {
     const currentSortValue = event.target.value;
     const currentFilterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
     const newUrl = `${currentURL}&sort_by=${currentSortValue}&${currentFilterParams}`;
-    history.replaceState(null, null, newUrl);
+    history.replaceState(null, null, baseURL);
   }
 }
 initCollectionSort();
