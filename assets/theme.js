@@ -1041,6 +1041,8 @@ function initFilterFacetForm() {
     if (searchTerm) {
       queryString.set("q", searchTerm);
     }
+
+     const baseUrl = window.location.pathname + `?${queryString.toString()}`;
     if (history.pushState) {
       history.pushState(null, null, `?${queryString.toString()}`);
     } else {
