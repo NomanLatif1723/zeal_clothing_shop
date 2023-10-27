@@ -889,27 +889,25 @@ function initCollectionSort() {
   Shopify.queryParams = {};
   if(!selectors.sortContainer || !selectors.loader) return;
   selectors.sortContainer.forEach(el => {
-    const queryString = new URLSearchParams(window.location.search);
-    const searchTerm = queryString.get("q");
-    const baseUrl = window.location.pathname + `?${queryString.toString()}`;
     el.addEventListener('change', function(event) {
       sortingSubmitForm(event);
       updateUrl(event);
     });
     function sortingSubmitForm(event) {
-      
+      const queryString = new URLSearchParams(window.location.search);
+      const searchTerm = queryString.get("q");
+      const baseUrl = window.location.pathname + `?${queryString.toString()}`;
       
       selectors.loader.classList.remove('hidden');
       const sortValue = event.target.value;
       const filterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
       let value = event.target.value;
       
-      fetch(baseUrl)
+      fetch(`${window.themeContent.routes.collection}?${filterParams}&sort_by=${sortValue}`)
       .then(responce => responce.text())
       .then(data => {
         let html = document.createElement('div');
         html.innerHTML = data;
-        console.log(html);
         let productData = html.querySelector('.collection-grid').innerHTML;
         selectors.collectionContainer.innerHTML = productData;
         initCollectionEventListeners();
@@ -918,17 +916,12 @@ function initCollectionSort() {
       .finally(() => selectors.loader.classList.add('hidden'));
     }
     function updateUrl(event) {
-      // const currentSortValue = event.target.value;
-      // const currentFilterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
-      // const newUrl = window.location.pathname + '?' + currentFilterParams + '&sort_by=' + currentSortValue;
-      // history.replaceState(null, null, newUrl);
-      if (history.pushState) {
-        history.pushState(null, null, `?${queryString.toString()}`);
-      } else {
-        window.location.href = `?${queryString.toString()}`;
-      }
+      const currentSortValue = event.target.value;
+      const currentFilterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
+      const newUrl = window.location.pathname + '?' + currentFilterParams + '&sort_by=' + currentSortValue;
+      history.replaceState(null, null, newUrl);
     }
-  });
+  })
 }
 initCollectionSort();
 
