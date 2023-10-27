@@ -140,8 +140,8 @@
                   </button>
                 </div>
               </div>
-              {%- assign filters = search.filters -%}
               {%- if show_filtering -%}
+                {%- assign filters = search.filters -%}
                 <div class="active-filters">
                   {% comment %}
                   <a href="{{ collection.url }}?sort_by={{ collection.sort_by }}" class="active-filters__clear">Clear all</a>
