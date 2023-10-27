@@ -922,6 +922,95 @@ function initCollectionSort() {
 initCollectionSort();
 
 // Collection Facets Filters 
+// function initFilterFacetForm() {
+//   let selectors = {
+//     loader: document.querySelector('.loader'),
+//     filterForm: document.querySelector('.filter-form'),
+//     filterOptions: document.querySelectorAll('.filter-group input[type="checkbox"]'),
+//     filterPriceOptions: document.querySelectorAll('.filter-group input[type="number"]')
+//   }
+//   selectors.filterOptions.forEach(option => {
+//     if (!option) return;
+//     option.addEventListener('change', () => {
+//       filterSubmitForm();
+//     });
+//   });
+//   selectors.filterPriceOptions.forEach(option => {
+//     if (!option) return;
+//     option.addEventListener('input', () => {
+//       filterSubmitForm();
+//     });
+//   });
+//   function filterSubmitForm() {
+//     // const queryString = new URLSearchParams();
+//     // selectors.filterOptions.forEach(option => {
+//     //   if (option.checked) {
+//     //     queryString.append(option.name, option.value);
+//     //   }
+//     // });
+//     // selectors.filterPriceOptions.forEach(option => {
+//     //   const priceValue = option.value.trim();
+//     //   if (priceValue !== '') {
+//     //     queryString.set(option.name, priceValue);
+//     //   }
+//     // });
+    
+//     let baseUrl = '';
+//     const queryString = new URLSearchParams(window.location.search);
+//     const searchTerm = queryString.get("q");
+//     if (searchTerm) {
+//       baseUrl = `/search?q=${searchTerm}`;
+//     } else {
+//       baseUrl = `${window.themeContent.routes.collection}?`;
+//     }
+//     selectors.filterOptions.forEach(option => {
+//       if (option.checked) {
+//          queryString.append(option.name, option.value);
+//       }
+//     });
+//     selectors.filterPriceOptions.forEach(option => {
+//       const priceValue = option.value.trim();
+//       if (priceValue !== '') {
+//         queryString.append(option.name, priceValue);
+//       }
+//     });
+
+//     // Show Loader 
+//     if(!selectors.loader) return;
+//     selectors.loader.classList.remove('hidden');
+//     console.log(queryString);
+//     fetch(baseUrl)
+//       .then(responce => responce.text())
+//       .then(data => {
+//         let html = document.createElement('div');
+//         html.innerHTML = data;
+//         let productData = html.querySelector('.catalog__content').innerHTML;
+//         document.querySelector('.catalog__content').innerHTML = productData;
+//         // Check if there are no products
+//         const noProductsMessage = html.querySelector('.empty-products__message');
+//         if (noProductsMessage) {
+//           document.querySelector('.empty-products__message').classList.remove('hidden');
+//         } else {
+//           // Preserve existing sorting parameters
+//           // const existingSortParam = new URLSearchParams(window.location.search).get('sort_by');
+//           // if (existingSortParam) {
+//           //   queryString.set('sort_by', existingSortParam);
+//           // }
+//           if (history.pushState) {
+//             history.pushState(null, null, `?${queryString.toString()}`);
+//           } else {
+//             window.location.href = `?${queryString.toString()}`;
+//           }
+//           initCollectionEventListeners();
+//           initCollectionSort();
+//         }
+//       })
+//       .catch(error => console.log('Error', error))
+//       .finally(() => selectors.loader.classList.add('hidden'));
+//   }
+// }
+// initFilterFacetForm();
+
 function initFilterFacetForm() {
   let selectors = {
     loader: document.querySelector('.loader'),
@@ -929,43 +1018,18 @@ function initFilterFacetForm() {
     filterOptions: document.querySelectorAll('.filter-group input[type="checkbox"]'),
     filterPriceOptions: document.querySelectorAll('.filter-group input[type="number"]')
   }
-  selectors.filterOptions.forEach(option => {
-    if (!option) return;
-    option.addEventListener('change', () => {
-      filterSubmitForm();
-    });
-  });
-  selectors.filterPriceOptions.forEach(option => {
-    if (!option) return;
-    option.addEventListener('input', () => {
-      filterSubmitForm();
-    });
-  });
   function filterSubmitForm() {
-    // const queryString = new URLSearchParams();
-    // selectors.filterOptions.forEach(option => {
-    //   if (option.checked) {
-    //     queryString.append(option.name, option.value);
-    //   }
-    // });
-    // selectors.filterPriceOptions.forEach(option => {
-    //   const priceValue = option.value.trim();
-    //   if (priceValue !== '') {
-    //     queryString.set(option.name, priceValue);
-    //   }
-    // });
-    
-    let baseUrl = '';
     const queryString = new URLSearchParams(window.location.search);
     const searchTerm = queryString.get("q");
-    if (searchTerm) {
-      baseUrl = `/search?q=${searchTerm}`;
-    } else {
-      baseUrl = `${window.themeContent.routes.collection}?`;
-    }
+    selectors.filterOptions.forEach(option => {
+      queryString.delete(option.name);
+    });
+    selectors.filterPriceOptions.forEach(option => {
+      queryString.delete(option.name);
+    });
     selectors.filterOptions.forEach(option => {
       if (option.checked) {
-         queryString.append(option.name, option.value);
+        queryString.append(option.name, option.value);
       }
     });
     selectors.filterPriceOptions.forEach(option => {
@@ -974,84 +1038,17 @@ function initFilterFacetForm() {
         queryString.append(option.name, priceValue);
       }
     });
-
-    // Show Loader 
-    if(!selectors.loader) return;
-    selectors.loader.classList.remove('hidden');
-    console.log(queryString);
-    fetch(baseUrl)
-      .then(responce => responce.text())
-      .then(data => {
-        let html = document.createElement('div');
-        html.innerHTML = data;
-        let productData = html.querySelector('.catalog__content').innerHTML;
-        document.querySelector('.catalog__content').innerHTML = productData;
-        // Check if there are no products
-        const noProductsMessage = html.querySelector('.empty-products__message');
-        if (noProductsMessage) {
-          document.querySelector('.empty-products__message').classList.remove('hidden');
-        } else {
-          // Preserve existing sorting parameters
-          // const existingSortParam = new URLSearchParams(window.location.search).get('sort_by');
-          // if (existingSortParam) {
-          //   queryString.set('sort_by', existingSortParam);
-          // }
-          if (history.pushState) {
-            history.pushState(null, null, `?${queryString.toString()}`);
-          } else {
-            window.location.href = `?${queryString.toString()}`;
-          }
-          initCollectionEventListeners();
-          initCollectionSort();
-        }
-      })
-      .catch(error => console.log('Error', error))
-      .finally(() => selectors.loader.classList.add('hidden'));
-  }
-}
-initFilterFacetForm();
-
-function initFilterFacetForm() {
-  let selectors = {
-    loader: document.querySelector('.loader'),
-    filterForm: document.querySelector('.filter-form'),
-    filterOptions: document.querySelectorAll('.filter-group input[type="checkbox"]'),
-    filterPriceOptions: document.querySelectorAll('.filter-group input[type="number"]')
-  }
-
-  // ...
-
-function filterSubmitForm() {
-  const queryString = new URLSearchParams(window.location.search);
-  const searchTerm = queryString.get("q");
-  selectors.filterOptions.forEach(option => {
-    queryString.delete(option.name);
-  });
-  selectors.filterPriceOptions.forEach(option => {
-    queryString.delete(option.name);
-  });
-  selectors.filterOptions.forEach(option => {
-    if (option.checked) {
-      queryString.append(option.name, option.value);
+    if (searchTerm) {
+      queryString.set("q", searchTerm);
     }
-  });
-  selectors.filterPriceOptions.forEach(option => {
-    const priceValue = option.value.trim();
-    if (priceValue !== '') {
-      queryString.append(option.name, priceValue);
+    if (history.pushState) {
+      history.pushState(null, null, `?${queryString.toString()}`);
+    } else {
+      window.location.href = `?${queryString.toString()}`;
     }
-  });
-  if (searchTerm) {
-    queryString.set("q", searchTerm);
+  
+    // ...
   }
-  if (history.pushState) {
-    history.pushState(null, null, `?${queryString.toString()}`);
-  } else {
-    window.location.href = `?${queryString.toString()}`;
-  }
-
-  // ...
-}
 
   // Attach event listeners for checkboxes and number inputs
   selectors.filterOptions.forEach(option => {
