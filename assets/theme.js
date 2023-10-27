@@ -933,7 +933,7 @@ function initSorting() {
     selectors.loader.classList.remove('hidden');
     const sortValue = event.target.value;
     const filterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
-    const currentURL = window.location.pathname + window.location.search;
+    const currentURL = window.location.pathname;
 
     fetch(`${currentURL}?sort_by=${sortValue}`)
       .then(response => response.text())
