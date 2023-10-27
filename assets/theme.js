@@ -935,7 +935,7 @@ function initCollectionSort() {
     const filterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
 
     let currentURL;
-    if (window.themeContent.settings.templateName == 'collection') {
+    if (window.themeContent.strings.templateName == 'collection') {
       currentURL = window.location.pathname;
     } else {
       const searchTerm = getSearchTerm();
@@ -943,7 +943,7 @@ function initCollectionSort() {
     }
     
     const currentURL = window.location.pathname;
-    console.log(window.themeContent.settings.templateName);
+    console.log(window.themeContent.strings.templateName);
     fetch(`${currentURL}?${filterParams}&sort_by=${sortValue}`)
       .then(response => response.text())
       .then(data => {
