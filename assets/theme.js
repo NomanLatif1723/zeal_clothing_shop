@@ -822,10 +822,10 @@ function initCollectionEventListeners() {
     });
   });
   
-  // Change the feature collection images on swatches hover 
+  // Change the feature collection images on swatches On Change 
   selectors.collectionOptionSwatches.forEach(selector => {
     if(!selector) return;
-    selector.addEventListener('mouseover', async() => {
+    selector.addEventListener('change', async() => {
       let selectedOptions = [];
       if (selector.type == 'radio' || selector.type == 'checkbox') {
         if (selector.checked) {
