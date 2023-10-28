@@ -845,7 +845,7 @@ function initCollectionEventListeners() {
         if (matchedVariant) {
           // updateMedia(matchedVariant);
           if (matchedVariant.featured_image) {
-            const selectedImage = selector.closest('[data-product-handle]').querySelector('.product__image');
+            const selectedImage = document.querySelector('.product__image');
             selectedImage.setAttribute('src', matchedVariant.featured_image.src);
             console.log(matchedVariant.featured_image.src);
           }
