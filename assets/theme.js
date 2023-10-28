@@ -825,7 +825,7 @@ function initCollectionEventListeners() {
   // Change the feature collection images on swatches hover 
   selectors.collectionOptionSwatches.forEach(selector => {
     if(!selector) return;
-    selector.addEventListener('change', async() => {
+    selector.addEventListener('mouseover', async() => {
       let selectedOptions = [];
       if (selector.type == 'radio' || selector.type == 'checkbox') {
         if (selector.checked) {
