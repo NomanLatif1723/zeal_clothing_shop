@@ -820,10 +820,14 @@ function initCollectionEventListeners() {
     });
   });
 
-  selectors.collectionOptionSwatches.forEach(input => {
-    if(!input) return;
-    input.addEventListener('change', () => {
-      console.log("hy there ");
+  selectors.collectionOptionSwatches.forEach(selector => {
+    if(!selector) return;
+    selector.addEventListener('change', () => {
+      let selectedOptions = [];
+      if (selector.type == 'radio' || selector.type == 'checkbox') {
+        console.log("hy", selector.type);
+      }
+      
     });
   });
   
