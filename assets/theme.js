@@ -845,8 +845,7 @@ function initCollectionEventListeners() {
           // updateMedia(matchedVariant);
           if (matchedVariant.featured_image) {
             const selectedImage = selector.closest('[data-product-handle]').querySelector('.product__image');
-            console.log(selectedImage);
-            // selectedImage.setAttribute('src', matchedVariant.featured_image.src);
+            selectedImage.setAttribute('src', matchedVariant.featured_image.src);
             console.log(matchedVariant.featured_image.src);
           }
         }
