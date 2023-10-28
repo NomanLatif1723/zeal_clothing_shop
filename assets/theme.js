@@ -1947,13 +1947,13 @@ function initQuickShopCollection() {
     product.addEventListener('mouseover', productMouseover);
   });
 
-  function productMouseover(evt) {
-    let el = evt.currentTarget;
-    let productId = el.dataset.productId;
-    let handle = el.dataset.productHandle;
-    let btn = el.querySelector('.quick-shop__btn');
-    preloadProductModal(handle, productId, btn);
-  }
+  // function productMouseover(evt) {
+  //   let el = evt.currentTarget;
+  //   let productId = el.dataset.productId;
+  //   let handle = el.dataset.productHandle;
+  //   let btn = el.querySelector('.quick-shop__btn');
+  //   preloadProductModal(handle, productId, btn);
+  // }
   function preloadProductModal(handle, productId) {
     let url = `${window.themeContent.routes.home}products/${handle}?view=quick-view`;
     fetch(url)
