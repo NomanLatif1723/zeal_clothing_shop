@@ -1620,52 +1620,55 @@ button {
   background: var(--soldoutBadgeColor);
 }
 .badge-color__dark{
-   color: black;
+ color: black;
 }
 
 .badge-color__light{
-   color: white;
+ color: white;
 }
 
 .quick-shop__wrapper {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 6px;
-    visibility: hidden;
-    transition: visibility 0.1s ease;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 6px;
+  visibility: hidden;
+  transition: visibility 0.1s ease;
 }
 
 .quick-shop__btn {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 10px;
-    background: rgba(255,255,255,0.5);
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  background: rgba(255,255,255,0.5);
+  cursor: pointer;
 }
 
 .quick-shop__text {
-    font-size: 9px;
-    text-transform: uppercase;
-    line-height: 14px;
-    font-weight: 700;
-    letter-spacing: 0.7px;
+  font-size: 9px;
+  text-transform: uppercase;
+  line-height: 14px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
 }
 
 .featured-grid__image:hover .quick-shop__wrapper {
-    visibility: visible;
+  visibility: visible;
 }
-
+.color-swatch__item {
+  padding: 2px;
+  border: 1px solid;
+}
 .color-swatch__item input[type="radio"]+label {
-    width: 16px;
-    height: 16px;
-    display: block;
-    padding: 2px;
-    border: 1px solid rgba(1,1,1,0.3);
-    transition: all 0.3s ease;
-    cursor: pointer;
+  width: 16px;
+  height: 16px;
+  display: block;
+  /* padding: 2px;
+  border: 1px solid rgba(1,1,1,0.3); */
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .color-swatch__item input[type="radio"]:checked+label {
