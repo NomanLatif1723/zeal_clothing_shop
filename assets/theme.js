@@ -841,7 +841,6 @@ function initCollectionEventListeners() {
         let matchedVariant = products.variants.find(variant => {
           return selectedOptions.every(option => variant.options.includes(option));
         });
-        console.log(matchedVariant);
         if (matchedVariant) {
           // updateMedia(matchedVariant);
           if (matchedVariant.featured_image) {
