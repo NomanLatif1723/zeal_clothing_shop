@@ -822,7 +822,7 @@ function initCollectionEventListeners() {
 
   selectors.collectionOptionSwatches.forEach(input => {
     if(!input) return;
-    input.addEventListener('click', () => {
+    input.addEventListener('change', () => {
       console.log("hy there ");
     });
   });
