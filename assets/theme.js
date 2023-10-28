@@ -832,7 +832,7 @@ function initCollectionEventListeners() {
 
       // get the matched variant
       const prouductHandle = selector.closest('[data-product-handle]').dataset.productHandle;
-      let url = `/products/${handle}.js`;
+      let url = `/products/${prouductHandle}.js`;
       fetch(url)
       .then(function(responce) {
         return responce.json();
