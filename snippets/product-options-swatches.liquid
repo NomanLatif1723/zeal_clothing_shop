@@ -27,7 +27,8 @@
           <div class="hidden__swatches">
             {%- for value in option.values offset: 5 -%}
               <div class="color-swatch__item">
-                <input type="radio" id="{{ option.name }}-{{ value }}-{{ product.id }}" form="{{ product_form_id }}" value= "{{ value }}" name="{{ option.name }}"/>
+                <input type="radio" {% if option.selected_value == value %}checked{% endif %} id="{{ option.name }}-{{ value }}-{{ product.id }}" form="{{ product_form_id }}" 
+                  value= "{{ value }}" name="{{ option.name }}"/>
                   <label for="{{ option.name }}-{{ value }}-{{ product.id }}">
                     <span class="color-swatch__option" style="background:{{ value | downcase }}"></span>
                   </label>
