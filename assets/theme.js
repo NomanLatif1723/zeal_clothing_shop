@@ -1931,10 +1931,10 @@ function initQuickShopCollection() {
 
   function productMouseover(evt) {
     let el = evt.currentTarget;
-    console.log(el)
     let productId = el.dataset.productId;
     let handle = el.dataset.productHandle;
     let btn = el.querySelector('.quick-shop__btn');
+    console.log(el,productId,handle,btn);
     preloadProductModal(handle, productId, btn);
   }
   function preloadProductModal(handle, productId) {
