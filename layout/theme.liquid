@@ -32,6 +32,7 @@
 
     {{ 'theme.css' | asset_url | stylesheet_tag: preload: true }}
     {{ 'swiper.min.css' | asset_url | stylesheet_tag: preload: true }}
+    {{ 'site-animations.min.css' | asset_url | stylesheet_tag: preload: true }}
     <script>
       window.themeContent = {
         routes: {
@@ -62,6 +63,7 @@
     </script>
     <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'swiper.min.js' | asset_url }}"></script>
+    <script src="{{ 'site-animations.min.js' | asset_url }}" defer="defer"></script>
   </head>
   <body>
     <a class="skip__to-content visually__hidden" href="#MainContent">Skip to Content</a>
