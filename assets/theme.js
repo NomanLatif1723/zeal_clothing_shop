@@ -1937,15 +1937,15 @@ function initQuickShopCollection() {
     selectors.quickShopModal.classList.add('hidden');
   }
   
-  const products = document.querySelectorAll('.collection-grid__item');
+  const products = document.querySelectorAll('.collection-grid__image--wrapper');
 
   if (!products.length || !window.themeContent.settings.quickView) {
     return;
   }
 
-  // products.forEach(product => {
-  //   product.addEventListener('mouseover', productMouseover);
-  // });
+  products.forEach(product => {
+    product.addEventListener('mouseover', productMouseover);
+  });
 
   function productMouseover(evt) {
     let el = evt.currentTarget;
