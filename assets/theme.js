@@ -1530,7 +1530,6 @@ function initProductVariants() {
       let matchedVariant = products.variants.find(variant => {
         return selectedOptions.every(option => variant.options.includes(option));
       });
-      console.log(matchedVariant);
       if (matchedVariant) {
         updateMasterVariant(matchedVariant);
         updateOptionsNames(matchedVariant);
