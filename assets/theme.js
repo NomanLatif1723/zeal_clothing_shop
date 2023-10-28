@@ -1934,7 +1934,6 @@ function initQuickShopCollection() {
     let productId = el.dataset.productId;
     let handle = el.dataset.productHandle;
     let btn = el.querySelector('.quick-shop__btn');
-    console.log(el,productId,handle,btn);
     preloadProductModal(handle, productId, btn);
   }
   function preloadProductModal(handle, productId) {
