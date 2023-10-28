@@ -844,7 +844,9 @@ function initCollectionEventListeners() {
         console.log(matchedVariant);
         if (matchedVariant) {
           // updateMedia(matchedVariant);
-          console.log(matchedVariant.featured_image.src);
+          if (matchedVariant.featured_image) {
+            console.log(matchedVariant.featured_image.src);
+          }
         }
       })
       .catch(function(error) {
