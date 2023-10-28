@@ -825,8 +825,14 @@ function initCollectionEventListeners() {
     selector.addEventListener('change', () => {
       let selectedOptions = [];
       if (selector.type == 'radio' || selector.type == 'checkbox') {
-        console.log("hy", selector.type);
+        if (selector.checked) {
+          selectedOptions.push(selector.value);
+        }
       }
+
+      // get the matched variant
+      const prouductHandle = selector.closest('[data-produuct-handle]').dataset.productHandle;
+      console.log(prouductHandle);
       
     });
   });
