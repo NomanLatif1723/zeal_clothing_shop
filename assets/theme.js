@@ -828,7 +828,7 @@ function initCollectionEventListeners() {
     selector.addEventListener('change', async() => {
       let selectedOptions = [];
       if (selector.type == 'radio' || selector.type == 'checkbox') {
-        const swatchesOptions = selector.closest('.product__swatches-options');
+        const swatchesOptions = selector.closest('.color-swatch__item');
         if (swatchesOptions) {
           swatchesOptions.classList.remove('selected');
           if (selector.checked) {
