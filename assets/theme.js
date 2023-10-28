@@ -830,11 +830,11 @@ function initCollectionEventListeners() {
       selector.addEventListener('change', async() => {
         let selectedOptions = [];
         if (selector.type == 'radio' || selector.type == 'checkbox') {
-          const swatchesOptions = selector.closest('.color-swatch__item');
-          swatchesOptions.classList.remove('selected');
+          // const swatchesOptions = selector.closest('.color-swatch__item');
+          // swatchesOptions.classList.remove('selected');
           if (selector.checked) {
             selectedOptions.push(selector.value);
-            swatchesOptions.classList.add('selected');
+            // swatchesOptions.classList.add('selected');
           }
           await updateMedia(selectedOptions);
         }
