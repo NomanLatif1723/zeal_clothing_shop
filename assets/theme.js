@@ -832,8 +832,24 @@ function initCollectionEventListeners() {
 
       // get the matched variant
       const prouductHandle = selector.closest('[data-product-handle]').dataset.productHandle;
-      console.log(prouductHandle);
-      
+      let url = `/products/${handle}.js`;
+      fetch(url)
+      .then(function(responce) {
+        return responce.json();
+      })
+      .then(function(products) {
+        let matchedVariant = products.variants.find(variant => {
+          return selectedOptions.every(option => variant.options.includes(option));
+        });
+        console.log(matchedVariant);
+        if (matchedVariant) {
+          // updateMedia(matchedVariant);
+          console.log(matchedVariant.featured_image.src);
+        }
+      })
+      .catch(function(error) {
+        console.log('Error', error);
+      });
     });
   });
   
