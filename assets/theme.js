@@ -831,7 +831,7 @@ function initCollectionEventListeners() {
       }
 
       // get the matched variant
-      const prouductHandle = selector.closest('[data-produuct-handle]').dataset.productHandle;
+      const prouductHandle = selector.closest('[data-product-handle]').dataset.productHandle;
       console.log(prouductHandle);
       
     });
