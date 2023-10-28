@@ -1659,7 +1659,10 @@ button {
 }
 .color-swatch__item {
   padding: 2px;
-  border: 1px solid;
+  border: 1px solid rgba(1,1,1,0.3);
+}
+.color-swatch__item.selected {
+  border: 1px solid black;
 }
 .color-swatch__item input[type="radio"]+label {
   width: 16px;
