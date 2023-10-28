@@ -804,7 +804,7 @@ function initCollectionEventListeners() {
     filterIconClose: document.querySelector('.filter-icon__close'),
     filterDrawerBox: document.querySelector('.filter-drawer__box'),
     ShowMoreSwatches: document.querySelectorAll('.show-more__swatches'),
-    removeActiveFilters: document.querySelectorAll('.active-filters__remove-filter')
+    collectionOptionSwatches: document.querySelectorAll('.color-swatch__item input')
   }
   selectors.ShowMoreSwatches.forEach(swatch => {
     if (!swatch) return;
@@ -817,6 +817,13 @@ function initCollectionEventListeners() {
           hiddenSwatches.classList.add('show');
         }
       }
+    });
+  });
+
+  selectors.collectionOptionSwatches.forEach(input => {
+    if(!input) return;
+    input.addEventListener('click', () => {
+      console.log("hy there ")
     });
   });
   
