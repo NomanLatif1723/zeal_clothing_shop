@@ -823,7 +823,7 @@ function initCollectionEventListeners() {
   selectors.collectionOptionSwatches.forEach(input => {
     if(!input) return;
     input.addEventListener('click', () => {
-      console.log("hy there ")
+      console.log("hy there ");
     });
   });
   
