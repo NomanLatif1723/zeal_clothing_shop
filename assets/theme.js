@@ -829,10 +829,10 @@ function initCollectionEventListeners() {
       let selectedOptions = [];
       if (selector.type == 'radio' || selector.type == 'checkbox') {
         const swatchesOptions = selector.closest('.color-swatch__item');
-        swatchesOptions.classList.remove('selected');
+        selector.closest('.color-swatch__item').classList.remove('selected');
         if (selector.checked) {
           selectedOptions.push(selector.value);
-          swatchesOptions.classList.add('selected');
+          selector.closest('.color-swatch__item').classList.add('selected');
         }
         await updateMedia(selectedOptions);
       }
