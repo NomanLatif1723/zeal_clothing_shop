@@ -1657,20 +1657,26 @@ button {
 .featured-grid__image:hover .quick-shop__wrapper {
   visibility: visible;
 }
-.color-swatch__item {
+/* .color-swatch__item {
+  padding: 2px;
+  border: 1px solid rgba(1,1,1,0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+} */
+/* .color-swatch__item.selected {
+  border: 1px solid black;
+} */
+.color-swatch__item input[type="radio"]+label {
+  width: 16px;
+  height: 16px;
+  display: block;
   padding: 2px;
   border: 1px solid rgba(1,1,1,0.3);
   transition: all 0.3s ease;
   cursor: pointer;
 }
-.color-swatch__item.selected {
-  border: 1px solid black;
-}
-.color-swatch__item input[type="radio"]+label {
-  width: 16px;
-  height: 16px;
-  display: block;
-  cursor: pointer;
+.color-swatch__item input[type="radio"]:checked+label {
+  border: 1px solid #111111;
 }
 .color-swatch__option {
   display: block;
