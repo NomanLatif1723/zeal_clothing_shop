@@ -828,10 +828,10 @@ function initCollectionEventListeners() {
         if (selector.checked) {
           selectedOptions.push(selector.value);
         }
-        await updateMedia();
+        await updateMedia(selectedOptions);
       }
     });
-    async function updateMedia() {
+    async function updateMedia(selectedOptions) {
       // get the matched variant
       const prouductHandle = selector.closest('[data-product-handle]').dataset.productHandle;
       let url = `/products/${prouductHandle}.js`;
