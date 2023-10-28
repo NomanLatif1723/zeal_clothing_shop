@@ -834,7 +834,6 @@ function initCollectionEventListeners() {
           selectedOptions.push(selector.value);
           swatchesOptions.classList.add('selected');
         }
-        
         await updateMedia(selectedOptions);
       }
     });
