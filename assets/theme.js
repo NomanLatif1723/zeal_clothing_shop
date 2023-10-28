@@ -1507,7 +1507,7 @@ function initProductVariants() {
     const variantSelectors = product.querySelectorAll('[data-selected-variant]');
     variantSelectors.forEach(selector => {
       selector.addEventListener('change', () => {
-        updateProductOptions(variantSelectors, product);
+        // updateProductOptions(variantSelectors, product);
       });
     });
   });
