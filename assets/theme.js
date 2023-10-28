@@ -806,6 +806,8 @@ function initCollectionEventListeners() {
     ShowMoreSwatches: document.querySelectorAll('.show-more__swatches'),
     collectionOptionSwatches: document.querySelectorAll('.color-swatch__item input')
   }
+
+  // Show More Swatches on Plus Icon Click 
   selectors.ShowMoreSwatches.forEach(swatch => {
     if (!swatch) return;
     swatch.addEventListener('click', () => {
@@ -819,7 +821,8 @@ function initCollectionEventListeners() {
       }
     });
   });
-
+  
+  // Change the feature collection images on swatches hover 
   selectors.collectionOptionSwatches.forEach(selector => {
     if(!selector) return;
     selector.addEventListener('change', async() => {
@@ -857,7 +860,8 @@ function initCollectionEventListeners() {
       });
     }
   });
-  
+
+  // Fliter Dropdown Event for filters 
   selectors.filterItem.forEach(item => {
     if (!item) return;
     item.addEventListener('click', () => {
@@ -866,25 +870,30 @@ function initCollectionEventListeners() {
     });
   });
 
+  // Filter/Sort Button Click Event For Opening Filter Drawer
   if (!selectors.filterSortBtn) return;
   selectors.filterSortBtn.addEventListener('click', () => {
     openFilterDrawer();
   });
 
+  // Close Drawer Button Event For Filters Drawer
   if (!selectors.filterIconClose) return;
   selectors.filterIconClose.addEventListener('click', () => {
     closeFilterDrawer();
   });
 
+  // Click Event On The Background To Close Drawer
   if (!selectors.filterDrawer) return;
   selectors.filterDrawer.addEventListener('click', () => {
     closeFilterDrawer();
   });
 
+  // Stop The Propagtion Event
   if (!selectors.filterDrawerBox) return;
   selectors.filterDrawerBox.addEventListener('click', (event) => {
      event.stopPropagation();
   });
+  
   // Open Filter Drawer Function
   function openFilterDrawer() {
     if (selectors.filterDrawer.classList.contains('filter-drawer__left')) {
