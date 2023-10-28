@@ -822,14 +822,16 @@ function initCollectionEventListeners() {
 
   selectors.collectionOptionSwatches.forEach(selector => {
     if(!selector) return;
-    selector.addEventListener('change', () => {
+    selector.addEventListener('change', async() => {
       let selectedOptions = [];
       if (selector.type == 'radio' || selector.type == 'checkbox') {
         if (selector.checked) {
           selectedOptions.push(selector.value);
         }
+        updateMedia();
       }
-
+    });
+    await function updateMedia() {
       // get the matched variant
       const prouductHandle = selector.closest('[data-product-handle]').dataset.productHandle;
       let url = `/products/${prouductHandle}.js`;
@@ -853,7 +855,7 @@ function initCollectionEventListeners() {
       .catch(function(error) {
         console.log('Error', error);
       });
-    });
+    }
   });
   
   selectors.filterItem.forEach(item => {
