@@ -124,6 +124,13 @@ text-align: center;
   text-align: center;
   padding: 20px 0;
 }
+.cart-drawer .cart__empty-message{
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .cart__empty-message .rte {
   padding-bottom: 10px;
   font-size: 20px;
