@@ -846,7 +846,7 @@ function initCollectionEventListeners() {
           if (matchedVariant.featured_image) {
             const selectedImage = selector.closest('[data-product-handle]').querySelector('.product__image');
             selectedImage.setAttribute('src', matchedVariant.featured_image.src);
-            // selectedImage.setAttribute('srcset', matchedVariant.featured_image.src);
+            selectedImage.setAttribute('srcset', matchedVariant.featured_image.src);
           }
         }
       })
