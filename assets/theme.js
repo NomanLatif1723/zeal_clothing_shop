@@ -844,7 +844,7 @@ function initCollectionEventListeners() {
         if (matchedVariant) {
           // updateMedia(matchedVariant);
           if (matchedVariant.featured_image) {
-            selector.closest('.collection-grid__item').querySelector('.product__image').setAttribute('src', matchedVariant.featured_image.src);
+            selector.closest('[data-product-handle]').querySelector('.product__image').setAttribute('src', matchedVariant.featured_image.src);
             console.log(matchedVariant.featured_image.src);
           }
         }
