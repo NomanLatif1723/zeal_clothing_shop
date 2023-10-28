@@ -12,7 +12,7 @@
         {%- assign limit = 5 -%}
           {%- for value in option.values -%}
             {% if limit > 0 %}
-              <div class="color-swatch__item{% if option.selected_value == value %} selected{% endif %} " >      
+              <div class="color-swatch__item" >      
                 <input {% if option.selected_value == value %}checked{% endif %} type="radio" id="{{ option.name }}-{{ value }}-{{ product.id }}"
                   value= "{{ value }}" form="{{ product_form_id }}" name="{{ option.name }}"/>
                   <label for="{{ option.name }}-{{ value }}-{{ product.id }}">
