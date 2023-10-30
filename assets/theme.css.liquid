@@ -717,7 +717,6 @@ footer.site__footer {
   display: inline-block;
 }
 .site__footer-links li:hover >a {
-  /* border-bottom: 1px solid black; */
   color: #01010199;
 }
 .site__footer-links li {
@@ -2065,8 +2064,13 @@ input:focus {
   align-items: center;
   flex-wrap: wrap;
 }
-.menu__item {
+.menu__item, .mega-menu__item {
   position: relative;
+  transition: all 0.3s ease;
+}
+.menu__item:hover .menu-item__link,
+.mega-menu__item:hover .menu-item__link{
+  color: red;
 }
 .menu-item__link {
   padding: 25px 10px 25px;
