@@ -19,7 +19,7 @@
     <button
       type="submit"
       id="newsletter_form-submit-{{ section.id }}"
-      class="btn{% if newsletter_button_label or confirm_button_label %} btn__link btn__primary{% else %} btn__secondary{% endif %}">
+      class="btn btn__link{% if newsletter_button_label or confirm_button_label %} btn__link btn__primary{% else %} btn__secondary{% endif %}">
       {%- if section.settings.button_label != blank -%}
         {{ section.settings.button_label }}
       {%- elsif newsletter_button_label != blank -%}
