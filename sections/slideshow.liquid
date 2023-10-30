@@ -122,28 +122,6 @@
     <div class="swiper-button-prev swiper-button-{{ section.id }}"></div>
   </div>
 </div>
-{% comment %}
-<script>
-  // Slideshow
-     let swiper{{ section.id | remove: '-' }} = new Swiper('#slideshow-{{ section.id }}', {
-    slidesPerView: 1,
-    navigation: {
-      nextEl: ".swiper-button-{{ section.id }}.swiper-button-next",
-      prevEl: ".swiper-button-{{ section.id }}.swiper-button-prev"
-    },
-    {%- if slideAutomation -%}
-      autoplay : {
-        delay: {{ slideChangeDuration }},
-        disableOnInteraction: false
-      },
-      {%- endif -%}
-      pagination: {
-      el: ".swiper-pagination-{{ section.id }}.swiper-pagination",
-      clickable: true
-    }
-  });
-</script>
-{% endcomment %}
 {% schema %}
   {
     "name": "t:sections.slideshow.name",
