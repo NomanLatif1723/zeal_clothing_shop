@@ -1,7 +1,4 @@
 {%- liquid
-    assign desktop_height = section.settings.slide_height_desktop
-    assign mobile_height = section.settings.slide_height_mobile
-    assign navigation_style = section.settings.navigation_styles
     assign slideAutomation = section.settings.slide_automation
     assign slideChangeDuration = 0
     if slideAutomation
@@ -16,8 +13,8 @@
 <div class="slideshow" data-section-id="{{ section.id }}" data-auto-slide="{{ slideAutomation }}" data-slide-duration="{{ slideChangeDuration }}">
   <div id="slideshow-{{ section.id }}"   
     class="slideshow__slides swiper"   
-    data-desktop-height="{{ desktop_height }}"  
-    data-mobile-height="{{ mobile_height }}"
+    data-desktop-height="{{ section.settings.slide_height_desktop }}"  
+    data-mobile-height="{{ section.settings.slide_height_mobile }}"
     >    
     <div class="slideshow__wrapper swiper-wrapper">
       {%- for block in section.blocks -%}
@@ -33,9 +30,11 @@
         <div class="slideshow__slide swiper-slide slideshow__slide-{{ block.id }}" {{ block.shopify_attributes }}>
           {%- style -%}
             .slideshow__slide-{{ block.id }} .slide__text-heading{
+              color: #ffffff;
               color: {{ slideTextColor }};
             }
             .slideshow__slide-{{ block.id }} .slide__text-text{
+              color: #ffffff;
               color: {{ slideTextColor }};
             }
             .slideshow__slide-{{ block.id }} .slide__btn {
@@ -118,7 +117,7 @@
         </div>
       {%- endfor -%}
     </div>
-    <div class="swiper-pagination swiper-pagination-{{ section.id }} {% if navigation_style == 'bars' %}nav__bars{% endif %}"></div>
+    <div class="swiper-pagination swiper-pagination-{{ section.id }} {% if section.settings.navigation_styles == 'bars' %}nav__bars{% endif %}"></div>
     <div class="swiper-button-next swiper-button-{{ section.id }}"></div>
     <div class="swiper-button-prev swiper-button-{{ section.id }}"></div>
   </div>
