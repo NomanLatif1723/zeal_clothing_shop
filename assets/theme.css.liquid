@@ -438,12 +438,20 @@ button {
 .social__icons-list li {
   display: inline-block;
 }
+.social__icons-list a {
+  color: var(--colorAnnouncementText);
+  display: block;
+  padding: 5px;
+}
 .social__icons-list .icon {
   width: 18px;
   height: 18px;
   fill: var(--colorAnnouncementText);
   position: relative;
   transition: transform 0.3s ease;
+}
+.social__icons-list li:hover >a .icon {
+  transform: translateY(-6px);
 }
 .announcement__heading {
   font-size: 13px;
@@ -452,15 +460,10 @@ button {
 .social__fallback-text {
   display: none;
 }
-.social__icons-list a {
-  color: var(--colorAnnouncementText);
-  display: block;
-  padding: 5px;
-}
+
 .language__currency-container {
   display: none;
 }
-
 @media only screen and (min-width: 769px) {
   .main__announcement-banner {
     display: flex;
