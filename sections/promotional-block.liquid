@@ -105,7 +105,7 @@
                 {%- if block.settings.button_label != blank -%}
                   <div class="promo-button__container">
                     <a
-                      class="btn btn__link btn__promo{% if buttonBackground contains '#f' %} btn-color__dark{% elsif buttonBackground contains 'rgba(0,0,0,0)' %} btn-color__transparent{% else %} btn-color__light{% endif %}"
+                      class="btn btn__link btn__promo{% if buttonBackground contains '#f' %} btn-color__dark{% elsif buttonBackground contains 'rgba(0,0,0,0)' %}{% else %} btn-color__light{% endif %}"
                       href="{{ block.settings.button_link }}"
                       title="{{ block.settings.button_label }}">
                       {{ block.settings.button_label }}
