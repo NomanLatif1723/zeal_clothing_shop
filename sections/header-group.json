@@ -54,12 +54,12 @@
             "promo_image_1_subheading": "",
             "promo_image_1_heading": "NEW ARRIVAL",
             "promo_image_1_text": "2023 Collections",
-            "promo_image_1_link": "",
+            "promo_image_1_link": "shopify:\/\/products\/black-leather-bag",
             "promo_image_2": "shopify:\/\/shop_images\/samanta-sokolova-ttbn8qAGCas-unsplash_1.jpg",
             "promo_image_2_subheading": "",
             "promo_image_2_heading": "SPECIAL OFFER",
             "promo_image_2_text": "",
-            "promo_image_2_link": ""
+            "promo_image_2_link": "shopify:\/\/products\/boho-earrings"
           }
         },
         "ae4f98d2-7b52-4e7d-aebf-bd7536ab48ca": {
@@ -73,11 +73,11 @@
             "promo_image_1_subheading": "Subheading",
             "promo_image_1_heading": "Heading",
             "promo_image_1_text": "Text",
-            "promo_image_1_link": "",
+            "promo_image_1_link": "shopify:\/\/products\/choker-with-bead",
             "promo_image_2_subheading": "Subheading",
             "promo_image_2_heading": "Heading",
             "promo_image_2_text": "Text",
-            "promo_image_2_link": ""
+            "promo_image_2_link": "shopify:\/\/products\/chequered-red-shirt"
           }
         }
       },
