@@ -32,7 +32,9 @@
 
     {{ 'theme.css' | asset_url | stylesheet_tag: preload: true }}
     {{ 'swiper.min.css' | asset_url | stylesheet_tag: preload: true }}
+    {% comment %}
     {{ 'site-animations.min.css' | asset_url | stylesheet_tag: preload: true }}
+    {% endcomment %}
     <script>
       window.themeContent = {
         routes: {
