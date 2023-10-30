@@ -74,11 +74,11 @@
       {% endfor %}
       {%- if header_styles == 'center_left' -%}
         <div class="header__block navigation__hide">
-          <button class="menu-toggle__btn{% unless show_icons %} icon__hide-desktop{% endunless %}">
+          <button aria-label="Menu" class="menu-toggle__btn{% unless show_icons %} icon__hide-desktop{% endunless %}">
             {% render 'icon-hamburger' %}
           </button>
           {%- unless show_icons -%}
-            <button class="menu-toggle__btn icon__hide-mobile">{{ 'sections.header.general.navigation' | t }}</button>
+            <button aria-label="Menu" class="menu-toggle__btn icon__hide-mobile">{{ 'sections.header.general.navigation' | t }}</button>
           {%- endunless -%}
         </div>
         <div class="header__block header__navigation">
@@ -92,7 +92,7 @@
         </div>
       {%- elsif header_styles == 'drawer_center' -%}
         <div class="header__block header__hamburger">
-          <button class="menu-toggle__btn{% unless show_icons %} icon__hide-hamburger{% endunless %}">
+          <button aria-label="Menu" class="menu-toggle__btn{% unless show_icons %} icon__hide-hamburger{% endunless %}">
             {% render 'icon-hamburger' %}
           </button>
           {%- unless show_icons -%}
@@ -104,11 +104,11 @@
         </div>
       {%- elsif header_styles == 'center_below' -%}
         <div class="header__block navigation__hide">
-          <button class="menu-toggle__btn{% unless show_icons %} icon__hide-desktop{% endunless %}">
+          <button aria-label="Menu" class="menu-toggle__btn{% unless show_icons %} icon__hide-desktop{% endunless %}">
             {% render 'icon-hamburger' %}
           </button>
           {%- unless show_icons -%}
-            <button class="menu-toggle__btn icon__hide-mobile">{{ 'sections.header.general.navigation' | t }}</button>
+            <button aria-label="Menu" class="menu-toggle__btn icon__hide-mobile">{{ 'sections.header.general.navigation' | t }}</button>
           {%- endunless -%}
         </div>
         <div class="header__block header-center__below">
@@ -125,11 +125,11 @@
       
       {%- else -%}
         <div class="header__block navigation__hide">
-          <button class="menu-toggle__btn{% unless show_icons %} icon__hide-desktop{% endunless %}">
+          <button aria-label="Menu" class="menu-toggle__btn{% unless show_icons %} icon__hide-desktop{% endunless %}">
             {% render 'icon-hamburger' %}
           </button>
           {%- unless show_icons -%}
-            <button class="menu-toggle__btn icon__hide-mobile">{{ 'sections.header.general.navigation' | t }}</button>
+            <button aria-label="Menu" class="menu-toggle__btn icon__hide-mobile">{{ 'sections.header.general.navigation' | t }}</button>
           {%- endunless -%}
         </div>
         <div class="header__block header__logo">
