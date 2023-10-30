@@ -15,7 +15,7 @@
             "content_position": "center-left",
             "text_alignment": "left",
             "slide_text_color": "#ffffff",
-            "slide_button_color": "#ffffff"
+            "slide_button_color": "rgba(0,0,0,0)"
           }
         },
         "template--19980215124290__99f1f786-cfa8-4d76-bd14-7dcb32939b9f-slide-2": {
