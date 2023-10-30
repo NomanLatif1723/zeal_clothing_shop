@@ -1920,9 +1920,8 @@ input:focus {
   }
 }
 /* Video Section */
-    
 .video-section__main[data-mobile-height="auto"] {
-    height: auto;
+  height: auto;
 }
 .video-section__main[data-mobile-height="compact"] {
    height: 300px;
@@ -1937,45 +1936,50 @@ input:focus {
    height: 100vh;
 }
 .video-section__video--container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 .video-section__heading {
-    text-transform: capitalize;
-    padding-bottom: 15px;
+  text-transform: capitalize;
+  padding-bottom: 15px;
 }
 .video__poster {
-    height: 100%;
+  height: 100%;
 } 
 .video-section__main {
-    position: relative;
-    background: var(--colorBodyText);
+  position: relative;
+  background: var(--colorBodyText);
 }
-
 .video-section__content {
-    position: relative;
-    display: table;
-    height: 100%;
-    width: 100%;
+  position: relative;
+  display: table;
+  height: 100%;
+  width: 100%;
 }
-
 .video-section__content--box {
-    display: table-cell;
-    height: 100%;
-    padding: 30px;
+  display: table-cell;
+  height: 100%;
+  padding: 30px;
 }
 
 .video-section__box--element {
-    display: inline-block;
+  display: inline-block;
 }
 .video-section__playicon {
-    display: inline-block;
-    padding: 2px 6px;
-    border: 1px solid white;
-    cursor: pointer;
+  display: inline-block;
+  padding: 2px 6px;
+  border: 1px solid white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.video-section__playicon:hover {
+  background: #ffffff;
+}
+.video-section__playicon:hover svg {
+  fill: #111111;
 }
 .external-video__container {
     height: 100%;
@@ -1984,20 +1988,19 @@ input:focus {
   display: none;
 }
 .external-video__container iframe {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 .native-video__container {
-    height: 100%;
+  height: 100%;
 }
 .native-video__container video {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 .video-poster__image {
-    object-fit: cover;
+  object-fit: cover;
 }
-
 @media only screen and (min-width: 769px){
   .video-section__main[data-desktop-height="compact"] {
     height: 450px;
