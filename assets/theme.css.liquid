@@ -1491,6 +1491,7 @@ blockquote.testimonial__text {
 .featured-grid__image {
   margin-bottom: 15px;
   position: relative;
+  overflow: hidden;
 }
 
 .grid-product__title h4 {
@@ -1593,8 +1594,11 @@ blockquote.testimonial__text {
 .featured-grid__image:hover .quick-shop__wrapper {
   visibility: visible;
 }
-.featured-grid__content:hover .grid-product__title a {
+/* .featured-grid__content:hover .grid-product__title a {
   border-bottom: 1px solid #111111;
+} */
+.featured-grid__image:hover .product__image {
+  transform: scale(1.1);
 }
 .color-swatch__item input[type="radio"]+label {
   width: 20px;
