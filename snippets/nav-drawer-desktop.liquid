@@ -1,4 +1,4 @@
-<nav class="drawer-desktop__menu{% if mobile_menu != blank %} desktop-menu__hide{% endif %}">
+<nav role="navigation" class="drawer-desktop__menu{% if mobile_menu != blank %} desktop-menu__hide{% endif %}">
   <ul class="drawer__list main-drawer__list">
     {%- for link in main_menu.links -%}
       {%- liquid
