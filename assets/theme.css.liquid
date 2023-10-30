@@ -719,8 +719,13 @@ button {
   .site__footer-links a {
     font-size: 14px;
     line-height: 18px;
+    transition: all 0.3s ease;
+    display: inline-block;
   }
-
+  .site__footer-links li:hover >a {
+    border-bottom: 1px solid black;
+    color: #01010199;
+  }
   .site__footer-links li {
     padding-bottom: 8px;
   }
