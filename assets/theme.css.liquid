@@ -1832,19 +1832,20 @@ input:focus {
 .collection-grid.swiper-wrapper {
   flex-wrap: nowrap;
 }
-.collection__image {
-  object-fit: cover;
-  transition: all 0.3s ease;
-}
-.collection-grid__image:hover .collection__image {
-  transform: scale(1.2);
-}
 .collection-list__header {
   padding-bottom: 20px;
 }
 .collection-grid__image {
   position: relative;
   margin-bottom: 10px;
+  overflow: hidden;
+}
+.collection__image {
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+.collection-grid__image:hover .collection__image {
+  transform: scale(1.2);
 }
 .collection-grid__text {
   border: 1px solid #e2e2e2;
