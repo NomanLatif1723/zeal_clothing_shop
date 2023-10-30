@@ -215,11 +215,6 @@ button {
     border: 1px solid #111111;
     border: 1px solid var(--colorButtonPrimary);
   }
-  .btn__primary:hover {
-    background: #ffffff;
-    color: #111111;
-    border: 1px solid #111111;
-  }
   .btn__link {
     font-size: 13px;
     line-height: 16px;
@@ -228,8 +223,16 @@ button {
     transition: all 0.3s ease;
   }
   .btn__secondary {
+    background: #9d1339;
     background: var(--colorButtonSecondary);
+    color: #ffffff;
     color: var(--colorButtonTextSecondary);
+    border: 1px solid var(--colorButtonSecondary);
+  }
+  .btn__primary:hover, btn__secondary:hover {
+    background: #ffffff;
+    color: #111111;
+    border: 1px solid #111111;
   }
   .main__heading {
     padding-bottom: 6px;
