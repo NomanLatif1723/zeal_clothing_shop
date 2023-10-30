@@ -672,6 +672,7 @@ button {
 /* Footer Section */
 .footer__socials .icon {
   fill: var(--colorBodyText);
+  transition: transform 0.3s ease;
 }
 .site__footer-banner {
   padding: 30px 0 50px;
@@ -764,6 +765,9 @@ footer.site__footer {
 }
 .icon__payment-item {
   display: inline-flex;
+}
+.social__icons-list li:hover >a .icon {
+  transform: translate(-10px);
 }
 @media only screen and (min-width: 769px) and (max-width:959px) {
   .site__grid-item {
