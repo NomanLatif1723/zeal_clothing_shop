@@ -2092,21 +2092,15 @@ function initPasswordModal() {
 }
 initPasswordModal();
 
+// On scroll Animations to the whole site 
 document.addEventListener("scroll", () => {
   const elements = document.querySelectorAll(".scroll__animate");
   elements.forEach(element => {
     const elementTop = element.getBoundingClientRect().top;
     const windowHeight = window.innerHeight;
-
     if (elementTop < windowHeight -200) {
       element.classList.add("animate");
-    } else {
-      // element.classList.remove("animate");
     }
   });
 });
-// AOS.init({
-//   offset: 100,
-//   once: true
-// });
 })();
