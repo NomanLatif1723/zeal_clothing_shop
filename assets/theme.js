@@ -243,6 +243,7 @@ function initSlideshowSwipers() {
       let swiperOptions = {
         slidesPerView: 1,
         effect: "fade",
+        speed: 2000,
         navigation: {
           nextEl: ".swiper-button-next.swiper-button-" + id,
           prevEl: ".swiper-button-prev.swiper-button-" + id,
