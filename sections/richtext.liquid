@@ -12,7 +12,7 @@
 {%- endstyle -%}
 <div class="text__container main__section-{{ section.id }}">
   <div class="page__width">
-    <div class="text__wrapper text__align-{{ section.settings.text_alignment }}" data-aos="fade-up">
+    <div class="scroll__animate text__wrapper text__align-{{ section.settings.text_alignment }}">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'subheading' -%}
