@@ -1,7 +1,7 @@
 {% form 'customer' %}
   {% if form.posted_successfully? %}
     <div class="message success__message">
-      <span>Thanks For Subscribe</span>
+      <span>{{ 'newsletter.newsletter_form.success_message' | t }}</span>
     </div>
   {% endif %}
   {% if form.errors %}
