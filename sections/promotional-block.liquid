@@ -19,7 +19,7 @@
 {%- endstyle -%}
 <div class="promo-block__wrapper main__section-{{ section.id }}">
   <div class="page__width">
-    <div class="promo-block__grid">
+    <div class="scroll__animate promo-block__grid">
       {%- for block in section.blocks -%}
         {%- liquid
            assign textColor = block.settings.promo_text_color
