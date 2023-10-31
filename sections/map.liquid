@@ -12,7 +12,7 @@
 {%- endstyle -%}
 <div class="main__section-{{ section.id }} store__locator-section" data-desktop-height="{{ section.settings.section_height_desktop }}" data-mobile-height="{{ section.settings.section_height_mobile }}">
   <div class="page__width">
-    <div class="main__map-container">
+    <div class="main__map-container" data-aos="fade-up">
       <div class="map__section-banner">
         {%- if section.settings.map_embed_code != blank -%}
           {{ section.settings.map_embed_code }}
@@ -26,7 +26,7 @@
       {% endcomment %}
       <div class="map__section-text">
         <div class="map__section-box text__position-{{ section.settings.content_position }}">
-          <div class="map__section-shadow text__align-{{ section.settings.text_alignment }}">
+          <div class="map__section-shadow text__align-{{ section.settings.text_alignment }}" data-aos="fade-up">
             {%- if section.settings.heading != blank -%}
               <h3 class="map__heading">
                 {{ section.settings.heading }}
