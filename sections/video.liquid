@@ -34,8 +34,7 @@
   {%- if full_width == false -%}
     <div class="page__width">
     {%- endif -%}
-    <div
-      class="video-section__main" data-desktop-height="{{ desktop_height }}" data-mobile-height="{{ mobile_height }}">
+    <div class="video-section__main" data-desktop-height="{{ desktop_height }}" data-mobile-height="{{ mobile_height }}" data-aos="fade-up">
       <div class="video-section__video--container">
         {%- if external_video != blank and video != blank -%}
           {% render 'video-poster',
@@ -101,9 +100,8 @@
         </div>
       {%- endunless -%}
     </div>
-
-    {%- if full_width == false -%}
-    </div>
+  {%- if full_width == false -%}
+  </div>
   {%- endif -%}
 </div>
 {% schema %}
