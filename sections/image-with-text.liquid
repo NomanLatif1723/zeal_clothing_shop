@@ -25,7 +25,7 @@
 {%- endstyle -%}
 <section class="image-text__section main__section-{{ section.id }}">
   <div class="page__width">
-    <div class="image-text__wrapper{% if layout_reverse %} image-text__reverse{% endif %}" data-aos="fade-up">
+    <div class="scroll__animate image-text__wrapper{% if layout_reverse %} image-text__reverse{% endif %}">
       {%- for block in section.blocks -%}
         {%- liquid
             assign image = block.settings.image
