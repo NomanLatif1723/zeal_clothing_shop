@@ -241,7 +241,8 @@
   "newsletter": {
     "newsletter_form": {
       "email_placeholder": "Enter Your Email",
-      "submit_text": "Submit"
+      "submit_text": "Submit",
+      "success_message": "Thanks For Subscribe"
     }
   },
   "popups": {
