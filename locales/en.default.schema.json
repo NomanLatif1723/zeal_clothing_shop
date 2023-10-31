@@ -571,9 +571,6 @@
         "media_position": {
           "label": "Media on the Right"
         },
-        "enable_image_zoom": {
-          "label": "Enable Image Zoom"
-        },
         "media_width": {
           "label": "Desktop Width",
           "options": {
@@ -1637,9 +1634,6 @@
         },
         "media_position": {
           "label": "Media on the Right"
-        },
-        "enable_image_zoom": {
-          "label": "Enable Image Zoom"
         },
         "media_width": {
           "label": "Desktop Width",
