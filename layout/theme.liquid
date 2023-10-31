@@ -32,9 +32,7 @@
 
     {{ 'theme.css' | asset_url | stylesheet_tag: preload: true }}
     {{ 'swiper.min.css' | asset_url | stylesheet_tag: preload: true }}
-    {% comment %}
     {{ 'site-animations.min.css' | asset_url | stylesheet_tag: preload: true }}
-    {% endcomment %}
     <script>
       window.themeContent = {
         routes: {
@@ -97,7 +95,6 @@
         </a>
       </div>
     {%- endif -%}
-{% comment %}
     <script src="{{ 'site-animations.min.js' | asset_url }}"></script>
     <script>
       AOS.init({
@@ -105,6 +102,5 @@
         duration: 1000
       });
     </script>
-    {% endcomment %}
   </body>
 </html>
