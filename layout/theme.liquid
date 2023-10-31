@@ -97,7 +97,10 @@
     {%- endif -%}
     <script src="{{ 'site-animations.min.js' | asset_url }}"></script>
     <script>
-      AOS.init();
+      AOS.init({
+        offset: 400,
+        duration: 500
+      });
     </script>
   </body>
 </html>
