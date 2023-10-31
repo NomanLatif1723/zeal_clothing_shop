@@ -32,7 +32,7 @@
       </div>
       {%- if cart.item_count > 0 -%}
         {%- form 'cart', cart -%}
-          <div class="scroll__animate cart__main">
+          <div class="cart__main">
             <div class="cart__items">    
               {%- for item in cart.items -%}
                 {%- render 'cart-line-item', item: item -%}
