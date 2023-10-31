@@ -44,7 +44,7 @@
         </div>
       {%- endif -%}
     </div>
-    <div class="scroll__animate featured-collection__container">
+    <div class="featured-collection__container">
       <div class="collection-grid {% if stackProduct == false %}list-scroller{% endif %}">
         {%- if collection == blank or collection.empty? or collection.products_count == 0 -%}
           {%- for i in (1..product_limit) -%}
