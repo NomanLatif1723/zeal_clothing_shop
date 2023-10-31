@@ -13,6 +13,7 @@
       value="{% if customer %}{{ customer.email }}{% endif %}"
       name="contact[email]"
       id="Email-{{ section.id }}"
+      required
       placeholder="{{ 'newsletter.newsletter_form.email_placeholder' | t }}"
       autocapitalize="off"
       autocorrect="off">
