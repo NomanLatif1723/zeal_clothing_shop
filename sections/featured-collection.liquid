@@ -44,7 +44,7 @@
         </div>
       {%- endif -%}
     </div>
-    <div class="featured-collection__container">
+    <div class="featured-collection__container" data-aos="fade-up">
       <div class="collection-grid {% if stackProduct == false %}list-scroller{% endif %}">
         {%- if collection == blank or collection.empty? or collection.products_count == 0 -%}
           {%- for i in (1..product_limit) -%}
