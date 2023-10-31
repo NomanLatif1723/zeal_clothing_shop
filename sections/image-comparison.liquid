@@ -23,7 +23,7 @@
 {%- endstyle -%}
 <section class="image-comparison main__section-{{ settings.id }}">
   <div class="page__width">
-    <div class="image-comparison__wrapper">
+    <div class="image-comparison__wrapper" data-aos="fade-up">
       {%- for block in section.blocks -%}
         {%- liquid
           assign compare_heading = block.settings.compare_heading
