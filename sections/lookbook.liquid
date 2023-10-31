@@ -30,7 +30,7 @@
 {%- endstyle -%}
 <div class="lookbook-wrapper main__section-{{ section.id }}">
   <div class="page__width">
-    <div class="lookbook-grid">
+    <div class="lookbook-grid" data-aos="fade-up">
       {%- for block in section.blocks -%}
         {%- liquid
            assign lookbookImage = block.settings.lookbook_image
