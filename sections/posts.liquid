@@ -60,7 +60,7 @@
         {%- endif -%}
       </header>
       {%- unless blog.empty? or blog.articles.size == 0 -%}
-        <div class="blog__grid">
+        <div class="blog__grid" data-aos="fade-up">
           {%- for article in blog.articles limit: posts_to_show -%}
             {%- render 'article-item',
               article: article,
