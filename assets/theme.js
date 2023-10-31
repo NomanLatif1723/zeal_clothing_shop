@@ -2096,7 +2096,7 @@ document.addEventListener("scroll", () => {
     const elementTop = element.getBoundingClientRect().top;
     const windowHeight = window.innerHeight;
 
-    if (elementTop < windowHeight -300) {
+    if (elementTop < windowHeight -200) {
       element.classList.add("animate");
     } else {
       // element.classList.remove("animate");
