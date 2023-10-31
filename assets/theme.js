@@ -2097,7 +2097,7 @@ document.addEventListener("scroll", () => {
     if (elementTop < windowHeight -300) {
       element.classList.add("animate");
     } else {
-      element.classList.remove("animate");
+      // element.classList.remove("animate");
     }
   });
 });
