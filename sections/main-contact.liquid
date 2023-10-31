@@ -18,7 +18,7 @@
 {{ 'contact-form.css' | asset_url | stylesheet_tag }}
 <div class="contact__wrapper main__section-{{ section.id }}">
   <div class="page__width">
-    <div class="contact-form__container" data-aos="fade-up">
+    <div class="scroll__animate contact-form__container">
       <div class="contact-form__item contact-info__container">
         {%- if info_heading != blank -%}
           <div class="main__heading contact-info__heading"><h2>{{ info_heading }}</h2></div>
