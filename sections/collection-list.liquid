@@ -65,7 +65,7 @@
       {%- if collection_layout == 'slider' -%}
         <div id="collectionListSlider-{{ section.id }}" class="collection-list__slider swiper">
         {%- endif -%}
-        <collection-list data-aos="fade-up" class="collection-grid__list collection-grid{% if collection_layout == 'slider' %} swiper-wrapper{% endif %}{% if swipe_on_mobile and collection_layout == 'grid' %} collection-grid__scroll{% endif %}">
+        <collection-list class="scroll__animate collection-grid__list collection-grid{% if collection_layout == 'slider' %} swiper-wrapper{% endif %}{% if swipe_on_mobile and collection_layout == 'grid' %} collection-grid__scroll{% endif %}">
           {%- if show_all_collections -%}
             {% for collection in collections %}
               {% render 'collection-list-all', 
