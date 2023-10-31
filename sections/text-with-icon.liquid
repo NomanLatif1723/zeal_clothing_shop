@@ -22,7 +22,7 @@
     {%- for block in section.blocks -%}
       {%- assign brandLogo = block.settings.brand_logo -%}
       <div class="text__image-item" {{ block.shopify_attributes }}>
-        <div class="text__image-width text__align-{{ block.settings.text_alignment }}">
+        <div class="text__image-width text__align-{{ block.settings.text_alignment }}" data-aos="fade-up">
           <div class="image__banner">
             {%- if brandLogo != blank -%}
               {%- assign logo__classes = 'brand__logo-img' -%}
