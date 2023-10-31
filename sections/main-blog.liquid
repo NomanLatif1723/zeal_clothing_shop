@@ -41,7 +41,7 @@
 <div class="main__section-{{ section.id }}">
   <div class="page__width">
     {%- paginate blog.articles by posts_to_show -%}
-      <div class="blog__grid">
+      <div class="scroll__animate blog__grid">
         {% for article in blog.articles %}
           {%- render 'article-item',
             article: article,
