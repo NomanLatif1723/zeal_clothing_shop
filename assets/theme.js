@@ -2093,7 +2093,7 @@ function initPasswordModal() {
 initPasswordModal();
 
 document.addEventListener("scroll", () => {
-  const elements = document.querySelectorAll(".scroll-animate");
+  const elements = document.querySelectorAll(".scroll__animate");
   elements.forEach(element => {
     const elementTop = element.getBoundingClientRect().top;
     const windowHeight = window.innerHeight;
