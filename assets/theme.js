@@ -2087,8 +2087,22 @@ function initPasswordModal() {
   }
 }
 initPasswordModal();
-AOS.init({
-  offset: 100,
-  once: true
+
+document.addEventListener("scroll", () => {
+  const elements = document.querySelectorAll(".scroll-animate");
+  elements.forEach(element => {
+    const elementTop = element.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (elementTop < windowHeight) {
+      element.classList.add("animate");
+    } else {
+      element.classList.remove("animate");
+    }
+  });
 });
+// AOS.init({
+//   offset: 100,
+//   once: true
+// });
 })();
