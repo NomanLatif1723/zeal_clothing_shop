@@ -1598,7 +1598,7 @@ function initProductVariants() {
     productSalePrice.textContent = formatMoney(matchedVariant.price);
     
     if(!productRegularPrice) return;
-    productRegularPrice.textContent = formatMoney(matchedVariant.price);
+    productRegularPrice.textContent = formatMoney(matchedVariant.compare_at_price);
       matchedVariant.compare_at_price > matchedVariant.price ?
         productRegularPrice.classList.remove('hidden') :
         productRegularPrice.classList.add('hidden');
