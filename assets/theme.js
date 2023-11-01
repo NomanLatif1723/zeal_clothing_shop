@@ -1444,7 +1444,7 @@ function initProductmediaSlideShow() {
         }
       }
       
-      swiperThumbs[id] = new Swiper(ThumbnailSliderContainer, thumbsSwiperOptions);
+      swiperThumbs = new Swiper(ThumbnailSliderContainer, thumbsSwiperOptions);
     }
     if (MediaSliderContainer) {
       if (MediaSliderContainer.swiper) {
@@ -1458,7 +1458,7 @@ function initProductmediaSlideShow() {
           prevEl: '.swiper-button-prev.swiper-button-' + id
         },
         thumbs: {
-          swiper: swiperThumbs[id]
+          swiper: swiperThumbs
         },
       }
       mediaSwiper[id] = new Swiper(MediaSliderContainer, mediaSwiperOptions);
