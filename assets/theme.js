@@ -1,6 +1,6 @@
 (function(){
   let mediaSwiper = {};
-  let swiperThumbs = {};
+  let swiperThumbs;
 // shopify formate money function
 const moneyFormat = '${{amount}}';
 function formatMoney$1(cents, format) {
