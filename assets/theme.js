@@ -1430,6 +1430,7 @@ function initProductmediaSlideShow() {
         slidesPerView: 5,
         spaceBetween: 20,
         watchSlidesProgress: true,
+        speed: 1500,
         navigation: {
           nextEl: '.swiper-button-next.swiper-button-' + id,
           prevEl: '.swiper-button-prev.swiper-button-' + id
@@ -1452,6 +1453,7 @@ function initProductmediaSlideShow() {
       }
       let mediaSwiperOptions = {
         slidesPerView: 1,
+        speed: 1500,
         navigation: {
           nextEl: '.swiper-button-next.swiper-button-' + id,
           prevEl: '.swiper-button-prev.swiper-button-' + id
