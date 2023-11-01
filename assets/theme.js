@@ -1550,7 +1550,7 @@ function initProductVariants() {
       if (matchedVariant) {
         updateMasterVariant(matchedVariant, product);
         updateOptionsNames(matchedVariant,product);
-        if (historyEnabled) {
+        if (historyEnabled == 'true') {
           updateUrl(matchedVariant);
         }
         updateProductPrice(matchedVariant, product);
