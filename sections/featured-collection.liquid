@@ -48,7 +48,7 @@
       <div class="collection-grid {% if stackProduct == false %}list-scroller{% endif %}">
         {%- if collection == blank or collection.empty? or collection.products_count == 0 -%}
           {%- for i in (1..product_limit) -%}
-            <div class="collection-grid__item {{ itemWidth }} {% if stackProduct == false %}list-scroller__item{% endif %}">
+            <div class="scroll__animate collection-grid__item {{ itemWidth }} {% if stackProduct == false %}list-scroller__item{% endif %}">
               <div class="featured-grid__content">
                 <div class="featured-grid__image">
                   {%- capture count -%}
