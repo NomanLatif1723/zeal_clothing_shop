@@ -1061,7 +1061,7 @@
         "template--19980215124290__f6a0ab30-1339-4dd4-8eb5-070921979e00-price-1": {
           "type": "price",
           "settings": {
-            "show_sale_badges": false
+            "show_sale_badges": true
           }
         },
         "template--19980215124290__f6a0ab30-1339-4dd4-8eb5-070921979e00-description-1": {
