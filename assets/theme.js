@@ -1621,15 +1621,23 @@ function initProductVariants() {
   }
 
   function updateProductUnitPrice(matchedvariant, product) {
-    selectors.productUnitPrice.forEach(item => {
-      if(!item) return;
-      if (matchedvariant.unit_price) {
-        item.classList.remove('hidden');
-        item.textContent = `${matchedvariant.unit_price}/${matchedvariant.unit_price_measurement.reference_value} ${matchedvariant.unit_price_measurement.reference_unit}`;
-      } else {
-        item.classList.add('hidden');
-      }
-    });
+    const productUnitPrice = product.querySelector('[data-unit-price]');
+    if(!productUnitPrice) return;
+    if (matchedvariant.unit_price) {
+      productUnitPrice.classList.remove('hidden');
+      productUnitPrice.textContent = `${matchedvariant.unit_price}/${matchedvariant.unit_price_measurement.reference_value} ${matchedvariant.unit_price_measurement.reference_unit}`;
+    } else {
+      productUnitPrice.classList.add('hidden');
+    }
+    // selectors.productUnitPrice.forEach(item => {
+    //   if(!item) return;
+    //   if (matchedvariant.unit_price) {
+    //     item.classList.remove('hidden');
+    //     item.textContent = `${matchedvariant.unit_price}/${matchedvariant.unit_price_measurement.reference_value} ${matchedvariant.unit_price_measurement.reference_unit}`;
+    //   } else {
+    //     item.classList.add('hidden');
+    //   }
+    // });
   }
 
   function updateProductSku(matchedVariant, product) {
