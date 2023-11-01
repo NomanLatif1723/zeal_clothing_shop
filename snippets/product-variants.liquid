@@ -22,7 +22,7 @@
                       id="{{ option.name }}-{{ value }}-{{ section.id }}">
                     {%- if isColorOption -%}
                       {%- liquid
-                        assign color_swatch_name = value | handle | append: '.' | append: 'png'
+                        assign color_swatch_name = value | handle | append: '.png'
                         assign swatch_image = color_swatch_name | file_img_url: '35x35' | prepend: 'https:' | split: '?' | first
                         assign swatch_fallback = value | split: ' ' | last | handle
                       -%}
