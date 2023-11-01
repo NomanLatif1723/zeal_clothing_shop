@@ -1651,16 +1651,25 @@ function initProductVariants() {
   }
 
   function updateButtons(matchedVariant, product) {
-    selectors.productAddToCartBtn.forEach(button => {
-      if(!button) return;
-      if (matchedVariant.available) {
-        button.textContent = window.themeContent.strings.addToCart;
-        button.disabled = false;
-      } else {
-        button.textContent = window.themeContent.strings.soldOut;
-        button.disabled = true;
-      }
-    });
+    const productAddToCartBtn = document.querySelector('[name="add"]');
+    if(!productAddToCartBtn) return;
+    if (matchedVariant.available) {
+      productAddToCartBtn.textContent = window.themeContent.strings.addToCart;
+      productAddToCartBtn.disabled = false;
+    } else {
+      productAddToCartBtn.textContent = window.themeContent.strings.soldOut;
+      productAddToCartBtn.disabled = true;
+    }
+    // selectors.productAddToCartBtn.forEach(button => {
+    //   if(!button) return;
+    //   if (matchedVariant.available) {
+    //     button.textContent = window.themeContent.strings.addToCart;
+    //     button.disabled = false;
+    //   } else {
+    //     button.textContent = window.themeContent.strings.soldOut;
+    //     button.disabled = true;
+    //   }
+    // });
   }
 
   function updateAvailability(matchedVariant, product) {
