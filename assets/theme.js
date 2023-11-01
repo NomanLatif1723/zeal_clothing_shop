@@ -1498,11 +1498,6 @@ initProductQuantitySelector();
 function initProductVariants() {
   let selectors = {
     masterVariantSelector: document.querySelectorAll('.selected-variant__id'),
-    productSalePrice: document.querySelectorAll('[data-sale-price]'),
-    productRegularPrice: document.querySelectorAll('[data-regular-price]'),
-    productUnitPrice: document.querySelectorAll('[data-unit-price]'),
-    productSku: document.querySelector('[data-sku]'),
-    productAddToCartBtn: document.querySelectorAll('[name="add"]'),
     formValidationErrorMessage: document.querySelector('.product-form__errors'),
     productGrid: document.querySelectorAll('.product-grid')
   };
