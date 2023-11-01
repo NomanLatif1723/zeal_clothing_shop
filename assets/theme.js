@@ -1444,7 +1444,7 @@ function initProductmediaSlideShow() {
         }
       }
       
-      swiperThumbs = new Swiper(ThumbnailSliderContainer, thumbsSwiperOptions);
+      swiperThumbs[id] = new Swiper(ThumbnailSliderContainer, thumbsSwiperOptions);
     }
     if (MediaSliderContainer) {
       if (MediaSliderContainer.swiper) {
