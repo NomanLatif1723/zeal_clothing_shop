@@ -1711,6 +1711,8 @@ function initProductVariants() {
     var selectedVariantId = matchedVariant.featured_media.id;
     const slide = product.querySelector(`.product__thumbs [data-media-id="${selectedVariantId}"]`);
     const productGrid = product.querySelector('.product-media__gallery--grid');
+    console.log(slide);
+    console.log(productGrid);
     if (slide) {
       const index = slide.dataset.index;
       mediaSwiper.slideTo(index - 1);
@@ -1727,6 +1729,8 @@ function initProductVariants() {
       const index = activeGridItem.dataset.index;
       productGrid.insertBefore(activeGridItem.closest('.product__image'), productGrid.firstChild);
     }
+    
+    // Sticky Cart image Change
     const stickyCartImage = document.querySelector('.product__sticky-image');
     if (stickyCartImage) {
       stickyCartImage.setAttribute('src', matchedVariant.featured_image.src);
