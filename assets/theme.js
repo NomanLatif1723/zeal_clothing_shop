@@ -1591,6 +1591,7 @@ function initProductVariants() {
   }
 
   function updateProductPrice(matchedVariant, product) {
+    console.log(matchedVariant);
     const productSalePrice = product.querySelector('[data-sale-price]');
     const productRegularPrice = product.querySelector('[data-regular-price]');
     if(!productSalePrice) return;
