@@ -1073,7 +1073,7 @@
           "type": "variants_picker",
           "settings": {
             "variant_type": "button",
-            "enable_color_swatches": true
+            "enable_color_swatches": false
           }
         },
         "template--19980215124290__f6a0ab30-1339-4dd4-8eb5-070921979e00-buy_buttons-1": {
