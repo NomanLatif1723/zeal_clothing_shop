@@ -60,7 +60,7 @@
         {%- endif -%}
       </header>
       {%- unless blog.empty? or blog.articles.size == 0 -%}
-        <div class="scroll__animate blog__grid">
+        <div class="blog__grid">
           {%- for article in blog.articles limit: posts_to_show -%}
             {%- render 'article-item',
               article: article,
@@ -77,7 +77,7 @@
       {%- else -%}
         <div class="blog__grid">
           {%- for i in (1..posts_to_show) -%}
-            <div class="grid__item">
+            <div class="scroll__animate grid__item">
               <div class="article__grid ">
                 <div class="article-grid__item">
                   <div class="grid__item-image">
