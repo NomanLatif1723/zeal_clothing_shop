@@ -1760,9 +1760,9 @@ function initProductVariants() {
   }
 
   function updateOptionsNames(matchedVariant, product) {
-    let option1 = document.querySelector('[data-selected-option="selectedOption1"]');
-    let option2 = document.querySelector('[data-selected-option="selectedOption2"]');
-    let option3 = document.querySelector('[data-selected-option="selectedOption3"]');
+    let option1 = product.querySelector('[data-selected-option="selectedOption1"]');
+    let option2 = product.querySelector('[data-selected-option="selectedOption2"]');
+    let option3 = product.querySelector('[data-selected-option="selectedOption3"]');
     if(!option1) return;
     option1.querySelector('[data-option-name]').textContent = matchedVariant.option1;
     if(!option2) return;
