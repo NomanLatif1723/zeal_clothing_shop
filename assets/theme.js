@@ -2098,7 +2098,7 @@ document.addEventListener("scroll", () => {
   elements.forEach(element => {
     const elementTop = element.getBoundingClientRect().top;
     const windowHeight = window.innerHeight;
-    if (elementTop < windowHeight) {
+    if (elementTop < windowHeight -100) {
       element.classList.add("animate");
     }
   });
