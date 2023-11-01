@@ -1,5 +1,5 @@
 (function(){
-  let mediaSwiper;
+  let mediaSwiper = {};
 // shopify formate money function
 const moneyFormat = '${{amount}}';
 function formatMoney$1(cents, format) {
@@ -1461,7 +1461,7 @@ function initProductmediaSlideShow() {
           swiper: swiperThumbs
         },
       }
-      mediaSwiper = new Swiper(MediaSliderContainer, mediaSwiperOptions);
+      mediaSwiper[id] = new Swiper(MediaSliderContainer, mediaSwiperOptions);
     }
   })
 }
