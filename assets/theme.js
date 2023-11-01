@@ -1596,17 +1596,28 @@ function initProductVariants() {
   }
 
   function updateProductPrice(matchedVariant, product) {
-    selectors.productSalePrice.forEach(price => {
-      if(!price) return;
-      price.textContent = formatMoney(matchedVariant.price);
-    });
-    selectors.productRegularPrice.forEach(price => {
-      if(!price) return;
-      price.textContent = formatMoney(matchedVariant.price);
+    const productSalePrice = product.querySelector('[data-sale-price]');
+    const productRegularPrice = product.querySelector('[data-regular-price]');
+    if(!productSalePrice) return;
+    productSalePrice.textContent = formatMoney(matchedVariant.price);
+    
+    if(!productRegularPrice) return;
+    productRegularPrice.textContent = formatMoney(matchedVariant.price);
       matchedVariant.compare_at_price > matchedVariant.price ?
-        price.classList.remove('hidden') :
-        price.classList.add('hidden');
-    });
+        productRegularPrice.classList.remove('hidden') :
+        productRegularPrice.classList.add('hidden');
+    
+    // selectors.productSalePrice.forEach(price => {
+    //   if(!price) return;
+    //   price.textContent = formatMoney(matchedVariant.price);
+    // });
+    // selectors.productRegularPrice.forEach(price => {
+    //   if(!price) return;
+    //   price.textContent = formatMoney(matchedVariant.price);
+    //   matchedVariant.compare_at_price > matchedVariant.price ?
+    //     price.classList.remove('hidden') :
+    //     price.classList.add('hidden');
+    // });
   }
 
   function updateProductUnitPrice(matchedvariant, product) {
