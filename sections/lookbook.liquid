@@ -30,7 +30,7 @@
 {%- endstyle -%}
 <div class="lookbook-wrapper main__section-{{ section.id }}">
   <div class="page__width">
-    <div class="scroll__animate lookbook-grid">
+    <div class="lookbook-grid">
       {%- for block in section.blocks -%}
         {%- liquid
            assign lookbookImage = block.settings.lookbook_image
@@ -38,7 +38,7 @@
            assign default = 'grande'
            assign sizes = '(min-width: 1200px) 650px, 45vw'
         -%}
-        <div class="lookbook-grid__item lookbook-item-{{ block.id }}">
+        <div class="scroll__animate lookbook-grid__item lookbook-item-{{ block.id }}">
           <div class="lookbook-image__container">
             {%- if lookbookImage != blank -%}
               <img
