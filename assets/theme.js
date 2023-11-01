@@ -1513,7 +1513,6 @@ function initProductVariants() {
   selectors.productGrid.forEach(product => {
     if(!product) return;
     const variantSelectors = product.querySelectorAll('[data-selected-variant]');
-    const productSalePrice = product.querySelector('[data-sale-price]');
     variantSelectors.forEach(selector => {
       selector.addEventListener('change', () => {
         updateProductOptions(variantSelectors, product);
@@ -1557,16 +1556,16 @@ function initProductVariants() {
       });
       if (matchedVariant) {
         updateMasterVariant(matchedVariant);
-        updateOptionsNames(matchedVariant);
+        updateOptionsNames(matchedVariant,product);
         updateUrl(matchedVariant);
-        updateProductPrice(matchedVariant);
-        updateProductUnitPrice(matchedVariant);
-        updateProductSku(matchedVariant);
-        updateAvailability(matchedVariant);
-        updateInventory(matchedVariant);
-        updateButtons(matchedVariant);
-        updateProductInfo(matchedVariant);
-        updateMedia(matchedVariant);
+        updateProductPrice(matchedVariant, product);
+        updateProductUnitPrice(matchedVariant, product);
+        updateProductSku(matchedVariant, product);
+        updateAvailability(matchedVariant, product);
+        updateInventory(matchedVariant, product);
+        updateButtons(matchedVariant, product);
+        updateProductInfo(matchedVariant, product);
+        updateMedia(matchedVariant, product);
       }
     })
     .catch(function(error) {
@@ -1596,7 +1595,7 @@ function initProductVariants() {
     window.history.replaceState({path: newurl}, '', newurl);
   }
 
-  function updateProductPrice(matchedVariant) {
+  function updateProductPrice(matchedVariant, product) {
     selectors.productSalePrice.forEach(price => {
       if(!price) return;
       price.textContent = formatMoney(matchedVariant.price);
@@ -1610,7 +1609,7 @@ function initProductVariants() {
     });
   }
 
-  function updateProductUnitPrice(matchedvariant) {
+  function updateProductUnitPrice(matchedvariant, product) {
     selectors.productUnitPrice.forEach(item => {
       if(!item) return;
       if (matchedvariant.unit_price) {
@@ -1622,14 +1621,14 @@ function initProductVariants() {
     });
   }
 
-  function updateProductSku(matchedVariant) {
+  function updateProductSku(matchedVariant, product) {
     if (!selectors.productSku) {
       return;
     }
     selectors.productSku.textContent = matchedVariant.sku;
   }
 
-  function updateButtons(matchedVariant) {
+  function updateButtons(matchedVariant, product) {
     selectors.productAddToCartBtn.forEach(button => {
       if(!button) return;
       if (matchedVariant.available) {
@@ -1642,7 +1641,7 @@ function initProductVariants() {
     });
   }
 
-  function updateAvailability(matchedVariant) {
+  function updateAvailability(matchedVariant, product) {
     let saleBadge = document.querySelector('.sale__badge');
     let soldOutBadge = document.querySelector('.soldout__badge');
     if (!saleBadge || !soldOutBadge) {
@@ -1657,7 +1656,7 @@ function initProductVariants() {
     }
   }
 
-  function updateInventory(matchedVariant) {
+  function updateInventory(matchedVariant, product) {
     const requestedVariantId = matchedVariant.id;
     fetch(
       `${window.location.protocol}//${window.location.host}${window.location.pathname}?variant=${matchedVariant.id}`)
@@ -1680,7 +1679,7 @@ function initProductVariants() {
       });
   }
 
-  function updateMedia(matchedVariant) {
+  function updateMedia(matchedVariant, product) {
     var selectedVariantId = matchedVariant.featured_media.id;
     const stickyCartImage = document.querySelector('.product__sticky-image');
     const slide = document.querySelector(`.product__thumbs [data-media-id="${selectedVariantId}"]`);
@@ -1706,7 +1705,7 @@ function initProductVariants() {
     }
   }
 
-  function updateProductInfo(matchedVariant) {
+  function updateProductInfo(matchedVariant, product) {
     const requestedVariantId = matchedVariant.id;
     fetch(
       `${window.location.protocol}//${window.location.host}${window.location.pathname}?variant=${matchedVariant.id}`)
@@ -1729,7 +1728,7 @@ function initProductVariants() {
       selectors.formValidationErrorMessage.classList.add('hidden');
   }
 
-  function updateOptionsNames(matchedVariant) {
+  function updateOptionsNames(matchedVariant, product) {
     let option1 = document.querySelector('[data-selected-option="selectedOption1"]');
     let option2 = document.querySelector('[data-selected-option="selectedOption2"]');
     let option3 = document.querySelector('[data-selected-option="selectedOption3"]');
