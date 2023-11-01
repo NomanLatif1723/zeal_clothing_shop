@@ -34,8 +34,8 @@
           {%- endfor -%}
         </div>
         <script type="application/json">
-        {{ product.variants | json }}
-      </script>
+          {{ product.variants | json }}
+        </script>
       </variant-radios>
     {%- endif -%}
   {%- elsif block.settings.variant_type == 'dropdown' -%}
