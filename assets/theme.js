@@ -1621,7 +1621,7 @@ function initProductVariants() {
   }
 
   function updateButtons(matchedVariant, product) {
-    const productAddToCartBtn = document.querySelector('[name="add"]');
+    const productAddToCartBtn = product.querySelector('[name="add"]');
     if(!productAddToCartBtn) return;
     if (matchedVariant.available) {
       productAddToCartBtn.textContent = window.themeContent.strings.addToCart;
