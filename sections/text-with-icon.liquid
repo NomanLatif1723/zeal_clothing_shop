@@ -18,7 +18,7 @@
   }
 {%- endstyle -%}
 <div class="text__image-container main__section-{{ section.id }} text__container-desktop">
-  <div class="scroll-animate text__image-wrapper">
+  <div class="scroll__animate text__image-wrapper">
     {%- for block in section.blocks -%}
       {%- assign brandLogo = block.settings.brand_logo -%}
       <div class="text__image-item" {{ block.shopify_attributes }}>
@@ -51,7 +51,7 @@
   <div class="text__image-wrapper swiper-wrapper">
     {%- for block in section.blocks -%}
       <div class="text__image-item swiper-slide" {{ block.shopify_attributes }}>
-        <div class="text__image-width text__align-{{ block.settings.text_alignment }}">
+        <div class="scroll__animate text__image-width text__align-{{ block.settings.text_alignment }}">
           <div class="image__banner">
             {%- if brandLogo != blank -%}
               {%- assign logo__classes = 'brand__logo-img' -%}
