@@ -1542,6 +1542,7 @@ function initProductVariants() {
 
   function getVariant(selectedOptions, product) {
     const handle = product.dataset.productHandle;
+    const historyEnabled = product.dataset.historyUrl;
     let url = `/products/${handle}.js`;
     fetch(url)
     .then(function(responce) {
@@ -1554,7 +1555,9 @@ function initProductVariants() {
       if (matchedVariant) {
         updateMasterVariant(matchedVariant);
         updateOptionsNames(matchedVariant,product);
-        updateUrl(matchedVariant);
+        if (historyEnabled) {
+          updateUrl(matchedVariant);
+        }
         updateProductPrice(matchedVariant, product);
         updateProductUnitPrice(matchedVariant, product);
         updateProductSku(matchedVariant, product);
