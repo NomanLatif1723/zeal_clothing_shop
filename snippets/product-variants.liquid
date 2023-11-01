@@ -26,7 +26,9 @@
                         assign swatch_image = color_swatch_name | file_img_url: '35x35' | prepend: 'https:' | split: '?' | first
                         assign swatch_fallback = value | split: ' ' | last | handle
                       -%}
-                      <label class="product__swatches-label" for="{{ option.name }}-{{ value }}-{{ section.id }}" style="background-color:{{ value | downcase }}"></label>
+                      <label class="product__swatches-label" for="{{ option.name }}-{{ value }}-{{ section.id }}" 
+                        style="background-color:{{ swatch_fallback | downcase }};{% if images[color_swatch_name] != blank %}  background-image: url({{ swatch_image }});{% endif %}">
+                      </label>
                     {%- else -%}
                       <label for="{{ option.name }}-{{ value }}-{{ section.id }}">
                         {{ value }}
