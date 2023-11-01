@@ -1090,6 +1090,7 @@
         "template--19980215124290__f6a0ab30-1339-4dd4-8eb5-070921979e00-variants_picker-1",
         "template--19980215124290__f6a0ab30-1339-4dd4-8eb5-070921979e00-buy_buttons-1"
       ],
+      "disabled": true,
       "settings": {
         "featured_product": "team-training-jersey",
         "heading": "Featured Product",
