@@ -1417,7 +1417,6 @@ initProductCollapsibles();
 // function for product Media Sliders
 function initProductmediaSlideShow() {
   let productmediaWrapper = document.querySelectorAll('.product-grid');
-  let swiperThumbs;
   productmediaWrapper.forEach(wrapper => {
     let id = wrapper.dataset.sectionId;
     let MediaSliderContainer = wrapper.querySelector('#product__media-' + id);
@@ -1445,7 +1444,7 @@ function initProductmediaSlideShow() {
         }
       }
       
-      swiperThumbs = new Swiper(ThumbnailSliderContainer, thumbsSwiperOptions);
+      swiperThumbs[id] = new Swiper(ThumbnailSliderContainer, thumbsSwiperOptions);
     }
     if (MediaSliderContainer) {
       if (MediaSliderContainer.swiper) {
@@ -1459,7 +1458,7 @@ function initProductmediaSlideShow() {
           prevEl: '.swiper-button-prev.swiper-button-' + id
         },
         thumbs: {
-          swiper: swiperThumbs
+          swiper: swiperThumbs[id]
         },
       }
       mediaSwiper[id] = new Swiper(MediaSliderContainer, mediaSwiperOptions);
