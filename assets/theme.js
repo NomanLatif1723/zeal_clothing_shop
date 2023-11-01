@@ -1710,13 +1710,15 @@ function initProductVariants() {
   function updateMedia(matchedVariant, product) {
     var selectedVariantId = matchedVariant.featured_media.id;
     const slide = product.querySelector(`.product__thumbs [data-media-id="${selectedVariantId}"]`);
-    const productGrid = product.querySelector('.product-media__gallery--grid');
-    console.log(slide);
-    console.log(productGrid);
+
+    // When Thumbs Enable 
     if (slide) {
       const index = slide.dataset.index;
       mediaSwiper.slideTo(index - 1);
     }
+
+    // When Media In the Form of Grid
+    const productGrid = product.querySelector('.product-media__gallery--grid');
     if (productGrid) {
       const gridItems = productGrid.querySelectorAll('.product__image');
       const activeGridItem = productGrid.querySelector(`[data-media-id="${selectedVariantId}"]`);
