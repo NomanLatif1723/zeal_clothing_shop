@@ -2106,16 +2106,5 @@ function animateOnScroll() {
 }
 document.addEventListener("DOMContentLoaded", animateOnScroll);
 window.addEventListener("scroll", animateOnScroll);
-
-// document.addEventListener("scroll", () => {
-//   const elements = document.querySelectorAll(".scroll__animate");
-//   elements.forEach(element => {
-//     const elementTop = element.getBoundingClientRect().top;
-//     const windowHeight = window.innerHeight;
-//     if (elementTop < windowHeight -100) {
-//       element.classList.add("animate");
-//     }
-//   });
-// });
   
 })();
