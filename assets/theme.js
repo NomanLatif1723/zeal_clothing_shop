@@ -1548,7 +1548,7 @@ function initProductVariants() {
         return selectedOptions.every(option => variant.options.includes(option));
       });
       if (matchedVariant) {
-        updateMasterVariant(matchedVariant);
+        updateMasterVariant(matchedVariant, product);
         updateOptionsNames(matchedVariant,product);
         if (historyEnabled) {
           updateUrl(matchedVariant);
@@ -1568,17 +1568,17 @@ function initProductVariants() {
     });
   }
   
-  function updateMasterVariant(matchedVariant) {
-    // if (!selectors.masterVariantSelector) {
-    //   return;
-    // }
-    selectors.masterVariantSelector.forEach(masterSelect => {
-      if (!masterSelect) {
-        return;
-      }
-      masterSelect.value = matchedVariant.id;
-    })
-    // selectors.masterVariantSelector.value = matchedVariant.id;
+  function updateMasterVariant(matchedVariant, product) {
+    const masterVariantSelector = product.querySelector('.selected-variant__id');
+    if(!masterVariantSelector) return;
+    masterVariantSelector.value = matchedVariant.id
+    // selectors.masterVariantSelector.forEach(masterSelect => {
+    //   if (!masterSelect) {
+    //     return;
+    //   }
+    //   masterSelect.value = matchedVariant.id;
+    // })
+
   }
 
   function updateUrl(matchedVariant) {
