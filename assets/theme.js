@@ -1606,18 +1606,6 @@ function initProductVariants() {
       matchedVariant.compare_at_price > matchedVariant.price ?
         productRegularPrice.classList.remove('hidden') :
         productRegularPrice.classList.add('hidden');
-    
-    // selectors.productSalePrice.forEach(price => {
-    //   if(!price) return;
-    //   price.textContent = formatMoney(matchedVariant.price);
-    // });
-    // selectors.productRegularPrice.forEach(price => {
-    //   if(!price) return;
-    //   price.textContent = formatMoney(matchedVariant.price);
-    //   matchedVariant.compare_at_price > matchedVariant.price ?
-    //     price.classList.remove('hidden') :
-    //     price.classList.add('hidden');
-    // });
   }
 
   function updateProductUnitPrice(matchedvariant, product) {
@@ -1629,25 +1617,12 @@ function initProductVariants() {
     } else {
       productUnitPrice.classList.add('hidden');
     }
-    // selectors.productUnitPrice.forEach(item => {
-    //   if(!item) return;
-    //   if (matchedvariant.unit_price) {
-    //     item.classList.remove('hidden');
-    //     item.textContent = `${matchedvariant.unit_price}/${matchedvariant.unit_price_measurement.reference_value} ${matchedvariant.unit_price_measurement.reference_unit}`;
-    //   } else {
-    //     item.classList.add('hidden');
-    //   }
-    // });
   }
 
   function updateProductSku(matchedVariant, product) {
     const productSku = document.querySelector('[data-sku]');
     if(!productSku) return;
     productSku.textContent = matchedVariant.sku;
-    // if (!selectors.productSku) {
-    //   return;
-    // }
-    // selectors.productSku.textContent = matchedVariant.sku;
   }
 
   function updateButtons(matchedVariant, product) {
@@ -1660,16 +1635,6 @@ function initProductVariants() {
       productAddToCartBtn.textContent = window.themeContent.strings.soldOut;
       productAddToCartBtn.disabled = true;
     }
-    // selectors.productAddToCartBtn.forEach(button => {
-    //   if(!button) return;
-    //   if (matchedVariant.available) {
-    //     button.textContent = window.themeContent.strings.addToCart;
-    //     button.disabled = false;
-    //   } else {
-    //     button.textContent = window.themeContent.strings.soldOut;
-    //     button.disabled = true;
-    //   }
-    // });
   }
 
   function updateAvailability(matchedVariant, product) {
