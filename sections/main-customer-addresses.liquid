@@ -20,7 +20,7 @@
         <h2>{{ 'customers.addresses.title' | t }}</h2>
         <button type="button" class="btn btn__link btn__primary address-btn__add" aria-label="{{ 'customers.addresses.add' | t }}">{{ 'customers.addresses.add' | t }}</button>
       </div>
-      <div id="addNewAddressForm" class="hidden" data-form>
+      <div id="addNewAddressForm" class="scroll__animate hidden" data-form>
         {%- form 'customer_address', customer.new_address -%}
           <div class="form__header">
             <h3>{{ 'customers.addresses.add_address' | t }}</h3>
