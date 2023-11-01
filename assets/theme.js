@@ -1458,7 +1458,7 @@ function initProductmediaSlideShow() {
           prevEl: '.swiper-button-prev.swiper-button-' + id
         },
         thumbs: {
-          swiper: swiperThumbs
+          swiper: swiperThumbs[id]
         },
       }
       mediaSwiper[id] = new Swiper(MediaSliderContainer, mediaSwiperOptions);
