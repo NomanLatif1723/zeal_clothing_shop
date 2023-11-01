@@ -1696,9 +1696,9 @@ function initProductVariants() {
         if (matchedVariant.id !== requestedVariantId) return;
         const html = new DOMParser().parseFromString(responseText, 'text/html');
         const inventorySource = html.querySelector('[data-inventory]');
-        const inventoryDestination = document.querySelector('[data-inventory]');
+        const inventoryDestination = product.querySelector('[data-inventory]');
         const inventorySource2 = html.querySelector('[data-inventory-count]').dataset.inventoryCount;
-        const inventoryDestination2 = document.querySelector('[data-inventory-count]');
+        const inventoryDestination2 = product.querySelector('[data-inventory-count]');
         if (!inventorySource || !inventoryDestination) {
           return;
         }
