@@ -2000,6 +2000,7 @@ function initQuickShopCollection() {
         selectors.quickViewContainer.innerHTML = '';
         selectors.quickViewContainer.appendChild(newData);
         document.querySelector('.quick-view__container .product-full__info--btn').classList.remove('hidden');
+        document.querySelector('.product-grid').setAttribute('data-history-url', 'false');
         initProductmediaSlideShow();
         initProductVariants();
         initProductForm();
