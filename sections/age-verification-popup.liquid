@@ -8,7 +8,7 @@
   assign declined_button_label = section.settings.declined_button_label
 -%}
 <age-verifier class="age-verifier popup__hidden" data-popup-modal>
-  <div class="age-verifier__modal">
+  <div class="scroll__animate age-verifier__modal">
     <div class="age-verifier__content">
       {%- if age_verifier_heading != blank -%}
         <div class="main__heading age-verifier__heading">
@@ -46,7 +46,7 @@
         {%- endif -%}
       </div>
     </div>
-    <button class="close__modal close-modal__age--verifier" title="{{ 'general.accessibility.close-modal' | t }}">
+    <button type="button" class="close__modal close-modal__age--verifier" title="{{ 'general.accessibility.close-modal' | t }}">
       {%- render 'icon-close' -%}
     </button>
   </div>
