@@ -1522,14 +1522,14 @@ function initProductVariants() {
     variantSelectors.forEach(selector => {
       if (selector) {
         if (selector.type === 'radio' || selector.type === 'checkbox') {
-          const swatchesOptions = selector.closest('.product__swatches-options');
-          if (swatchesOptions) {
-            swatchesOptions.classList.remove('selected');
-            if (selector.checked) {
-              selectedOptions.push(selector.value);
-              swatchesOptions.classList.add('selected');
-            }
-          }
+          // const swatchesOptions = selector.closest('.product__swatches-options');
+          // if (swatchesOptions) {
+          //   swatchesOptions.classList.remove('selected');
+          //   if (selector.checked) {
+          //     selectedOptions.push(selector.value);
+          //     swatchesOptions.classList.add('selected');
+          //   }
+          // }
         } else {
           selectedOptions.push(selector.value);
         }
