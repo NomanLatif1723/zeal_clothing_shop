@@ -1501,13 +1501,9 @@ function initProductVariants() {
     productRegularPrice: document.querySelectorAll('[data-regular-price]'),
     productUnitPrice: document.querySelectorAll('[data-unit-price]'),
     productSku: document.querySelector('[data-sku]'),
-    productInStock: document.querySelector('[data-inventory]'),
     productAddToCartBtn: document.querySelectorAll('[name="add"]'),
-    productOptionLabel: document.querySelectorAll('[data-option-name]'),
-    productOptions: document.querySelectorAll('.product-form__input'),
     formValidationErrorMessage: document.querySelector('.product-form__errors'),
-    productGrid: document.querySelectorAll('.product-grid'),
-    productStickySelect: document.querySelectorAll('.sticky__select-box')
+    productGrid: document.querySelectorAll('.product-grid')
   };
 
   selectors.productGrid.forEach(product => {
