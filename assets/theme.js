@@ -1641,10 +1641,13 @@ function initProductVariants() {
   }
 
   function updateProductSku(matchedVariant, product) {
-    if (!selectors.productSku) {
-      return;
-    }
-    selectors.productSku.textContent = matchedVariant.sku;
+    const productSku = document.querySelector('[data-sku]');
+    if(!productSku) return;
+    productSku.textContent = matchedVariant.sku;
+    // if (!selectors.productSku) {
+    //   return;
+    // }
+    // selectors.productSku.textContent = matchedVariant.sku;
   }
 
   function updateButtons(matchedVariant, product) {
