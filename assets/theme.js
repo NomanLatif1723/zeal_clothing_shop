@@ -1513,6 +1513,7 @@ function initProductVariants() {
   selectors.productGrid.forEach(product => {
     if(!product) return;
     const variantSelectors = product.querySelectorAll('[data-selected-variant]');
+    const productSalePrice = product.querySelector('[data-sale-price]');
     variantSelectors.forEach(selector => {
       selector.addEventListener('change', () => {
         updateProductOptions(variantSelectors, product);
