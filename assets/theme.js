@@ -1673,8 +1673,8 @@ function initProductVariants() {
   }
 
   function updateAvailability(matchedVariant, product) {
-    let saleBadge = document.querySelector('.sale__badge');
-    let soldOutBadge = document.querySelector('.soldout__badge');
+    let saleBadge = product.querySelector('.sale__badge');
+    let soldOutBadge = product.querySelector('.soldout__badge');
     if (!saleBadge || !soldOutBadge) {
       return;
     }
