@@ -84,12 +84,12 @@
       {%- if block.settings.description_as_tab -%}
         <div class="product__tabs" {{ block.shopify_attributes }}>
           <div class="product-tab__container">
-            <div class="product-tab__header">
+            <button type="button" class="product-tab__header">
               {%- if block.settings.description_tab_heading != blank -%}
                 <h4>{{ block.settings.description_tab_heading }}</h4> 
               {%- endif -%}
               {%- render 'icon-arrow-down' -%}
-            </div>
+            </button>
             <div class="product-tab__content rte hidden">
               {{ product.description }}
             </div>
