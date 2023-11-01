@@ -214,7 +214,8 @@
   "general": {
     "accessibility": {
       "close-modal": "Close Modal",
-      "back-to-top": "Back To Top"
+      "back-to-top": "Back To Top",
+      "skip-to-content": "Skip To Content"
     },
     "404": {
       "text": "404 Error",
