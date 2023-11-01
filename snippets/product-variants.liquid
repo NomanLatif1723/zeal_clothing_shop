@@ -19,12 +19,12 @@
                 {% for value in option.values %}
                   <div class="product__swatches-options{% if isColorOption %} product__swatches-spacing{% endif %}{% if option.selected_value == value %} selected{% endif %}">
                     <input type="radio" data-selected-variant form="{{ product_form_id }}" name="{{ option.name }}" value="{{ value }}" {% if option.selected_value == value %}checked="checked"{% endif %} 
-                      id="{{ option.name }}-{{ value }}-{{ section.id }}"
+                      id="{{ option.name }}-{{ value }}-{{ section.id }}-{{ product.id }}"
                     >
                     {%- if isColorOption -%}
-                      <label class="product__swatches-label" for="{{ option.name }}-{{ value }}-{{ section.id }}" style="background:{{ value | downcase }}"></label>
+                      <label class="product__swatches-label" for="{{ option.name }}-{{ value }}-{{ section.id }}-{{ product.id }}" style="background:{{ value | downcase }}"></label>
                     {%- else -%}
-                      <label for="{{ option.name }}-{{ value }}-{{ section.id }}">
+                      <label for="{{ option.name }}-{{ value }}-{{ section.id }}-{{ product.id }}">
                         {{ value }}
                       </label>
                     {%- endif -%}
