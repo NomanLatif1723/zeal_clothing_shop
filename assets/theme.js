@@ -1713,11 +1713,13 @@ function initProductVariants() {
   function updateMedia(matchedVariant, product) {
     var selectedVariantId = matchedVariant.featured_media.id;
     const slide = product.querySelector(`.product__thumbs [data-media-id="${selectedVariantId}"]`);
+    const sectionId = product.dataset.sectionId;
+    const mediaSwiperSlider = mediaSwiper[sectionId];
 
     // When Thumbs Enable 
     if (slide) {
       const index = slide.dataset.index;
-      mediaSwiper.slideTo(index - 1);
+      mediaSwiperSlider.slideTo(index - 1);
     }
 
     // When Media In the Form of Grid
