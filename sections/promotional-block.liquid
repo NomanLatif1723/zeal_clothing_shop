@@ -19,7 +19,7 @@
 {%- endstyle -%}
 <div class="promo-block__wrapper main__section-{{ section.id }}">
   <div class="page__width">
-    <div class="scroll__animate promo-block__grid">
+    <div class="promo-block__grid">
       {%- for block in section.blocks -%}
         {%- liquid
            assign textColor = block.settings.promo_text_color
@@ -45,7 +45,7 @@
             color: #ffffff;
           }
         {%- endstyle -%}
-        <div class="promo-block__item promo-block-{{ block.id }}" {{ block.shopify_attributes }}>
+        <div class="scroll__animate promo-block__item promo-block-{{ block.id }}" {{ block.shopify_attributes }}>
           <div class="scroll__animate promo-block__container">
             <div class="promo-block__image">
               {%- if imageDesktop != blank or imageMobile != blank -%}
