@@ -42,7 +42,7 @@
         </div>
       {%- endif -%}
     </div>
-    <div class="scroll__animate product-grid{% if section.settings.media_position %} product-grid__reverse{% endif %}" data-section-id="{{ section.id }}" data-product-handle="{{ product.handle }}">
+    <div class="scroll__animate product-grid{% if section.settings.media_position %} product-grid__reverse{% endif %}" data-section-id="{{ section.id }}" data-product-handle="{{ product.handle }}" data-history-url="false">
       <div class="product-grid__item {{ product_media_width }} product__image-container">
         {%- render 'product-media', 
           product: product,
