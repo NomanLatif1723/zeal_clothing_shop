@@ -105,20 +105,22 @@
           <span class="visually__hidden">{{ 'products.price.regular_price' | t }}</span>
           <span class="product__compare-price">{{ product.compare_at_price | money_without_trailing_zeros }}</span>
         {%- endif -%}
-        <span data-unit-price class="product__unit-price">
-          {%- if product.selected_or_first_available_variant.price > 0 -%}
-            {%- if product.selected_or_first_available_variant.unit_price_measurement -%}
-              <span>{{ product.selected_or_first_available_variant.unit_price }}/
-                {%- if product.selected_or_first_available_variant.unit_price_measurement.reference_value != 1 -%}
-                  {{ product.selected_or_first_available_variant.unit_price_measurement.reference_value }}
-                {%- endif -%}
-                  {{ product.selected_or_first_available_variant.unit_price_measurement.reference_unit }}
-              </span>
+        {%- if product.selected_or_first_available_variant.unit_price_measurement -%}
+          <span data-unit-price class="product__unit-price">
+            {%- if product.selected_or_first_available_variant.price > 0 -%}
+              {%- if product.selected_or_first_available_variant.unit_price_measurement -%}
+                <span>{{ product.selected_or_first_available_variant.unit_price }}/
+                  {%- if product.selected_or_first_available_variant.unit_price_measurement.reference_value != 1 -%}
+                    {{ product.selected_or_first_available_variant.unit_price_measurement.reference_value }}
+                  {%- endif -%}
+                    {{ product.selected_or_first_available_variant.unit_price_measurement.reference_unit }}
+                </span>
+              {%- endif -%}
+              {%- else -%}
+                {{ 'products.free_unit_price' | t }}
             {%- endif -%}
-            {%- else -%}
-              {{ 'products.free_unit_price' | t }}
-          {%- endif -%}
-        </span>
+          </span>
+        {%- endif -%}
       </div>
 
       {%- if settings.show_color_swatches and product.variants.size > 1 -%}
