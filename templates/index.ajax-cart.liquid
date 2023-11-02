@@ -38,7 +38,7 @@
                 {%- endif -%}
                 <div class="cart__item-title">
                   <h3>{{ item.product.title }}</h3>
-                  <a href="{{ item.url_to_remove }}" class="cart__item-remove" title="{{ 'cart.general.remove' | t }}">
+                  <a href="{{ item.url_to_remove }}" class="links cart__item-remove" title="{{ 'cart.general.remove' | t }}">
                     {%- render 'icon-close' -%}
                   </a>
                 </div>
@@ -117,7 +117,7 @@
         </div>
         <div class="cart-drawer__footer">
           {% if cart.discount_applications != blank %}
-            <div class="cart__total-price">
+            <div class="cart__discount-price">
               <div>{{ 'cart.general.total_discounts' | t }}</div>
               <div data-discount>{{ cart.total_discount | money }}</div>
             </div>
@@ -126,6 +126,7 @@
             <div>{{ 'cart.general.total_price' | t }}</div>
             <div data-subtotal>{{ cart.total_price | money }}</div>
           </div>
+          <div class="shopify__payment-terms">{{ form | payment_terms }}</div>
           <div class="drawer__shipping-text">
             <div class="rte">{{ 'cart.general.shipping_text' | t }}</div>
           </div>
