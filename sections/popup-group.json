@@ -17,6 +17,7 @@
     },
     "newsletter-popup": {
       "type": "newsletter-popup",
+      "disabled": true,
       "settings": {
         "newsletter_image": "shopify:\/\/shop_images\/jeffery-erhunse-dBwrTc-2AD8-unsplash_3.jpg",
         "newsletter_subheading": "gET upto 15% off",
@@ -29,6 +30,7 @@
     },
     "event-popup": {
       "type": "events-popup",
+      "disabled": true,
       "settings": {
         "heading": "announce your event",
         "first_subheading": "get Upto",
