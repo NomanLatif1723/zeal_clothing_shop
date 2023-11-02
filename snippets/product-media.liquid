@@ -43,7 +43,7 @@
             {%- elsif media.media_type == 'external_video' -%}
               {{ media | external_video_url: autoplay: true, loop: loop | external_video_tag: class: video_class, loading: "lazy", class: "product-media__video" }}
             {%- elsif media.media_type == 'model' -%}
-              <div class="product__image" style="padding-top: 100%" data-media-id="{{ media.id }}">
+              <div class="product__image model" style="padding-top: 100%" data-media-id="{{ media.id }}">
                 {{ media | model_viewer_tag }}
               </div>
             {%- else -%}
