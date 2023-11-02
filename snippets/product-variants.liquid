@@ -23,7 +23,7 @@
                     {%- if isColorOption -%}
                       {%- liquid
                         assign color_swatch_name = value | handle | append: '.png'
-                        assign swatch_image = color_swatch_name | file_img_url: '35x35' | prepend: 'https:' | split: '?' | first
+                        assign swatch_image = color_swatch_name | file_img_url: '35x35' | prepend: 'https:' | split: '?'
                         assign swatch_value = value | downcase
                       -%}
                       <label class="product__swatches-label" for="{{ option.name }}-{{ value }}-{{ section.id }}" 
