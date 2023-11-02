@@ -42,7 +42,7 @@
             <span class="sale__price product__sale-price">{{ 'products.onboarding.product_price' | t }}</span>
           </div>
         {%- endunless -%}
-        <div data-unit-price class="product__unit-price hidden">
+        <div data-unit-price class="product__unit-price">
           {%- if product.selected_or_first_available_variant.price > 0 -%}
             {%- if product.selected_or_first_available_variant.unit_price_measurement -%}
               <div>{{ product.selected_or_first_available_variant.unit_price | money }}/
