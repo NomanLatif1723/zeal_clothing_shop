@@ -2591,7 +2591,10 @@ predictive-search .btn{
   stroke: rgba(1,1,1,0.3);
 }
 .content__hidden {
-  display: none;
+  /* display: none; */
+  opacity: 0;
+  height: 0;
+  transition: opacity 1s ease;
 }
 .age-verifier__content {
   text-align: center;
