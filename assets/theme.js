@@ -713,6 +713,7 @@ function initCustomerForms() {
   const recoverPasswordForm = document.querySelector('#recoverPasswordForm');
   const formContainer = document.querySelectorAll('[data-form]');
   const passwordGroup = document.querySelectorAll('.password__group');
+  const customerAnimateElement = document.querySelectorAll('.customer-form__container .scroll__animate');
   
   formContainer.forEach(form => {
     if (form) {
