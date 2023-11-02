@@ -109,7 +109,7 @@
           <span data-unit-price class="product__unit-price">
             {%- if product.selected_or_first_available_variant.price > 0 -%}
               {%- if product.selected_or_first_available_variant.unit_price_measurement -%}
-                <span>{{ product.selected_or_first_available_variant.unit_price }}/
+                <span>{{ product.selected_or_first_available_variant.unit_price | money }}/
                   {%- if product.selected_or_first_available_variant.unit_price_measurement.reference_value != 1 -%}
                     {{ product.selected_or_first_available_variant.unit_price_measurement.reference_value }}
                   {%- endif -%}
