@@ -1376,7 +1376,7 @@ function initCartForm() {
       emptyCart.className = 'cart__empty-message';
       emptyCart.innerHTML = `
         <div class="rte">${window.themeContent.strings.cartEmptyMessage}</div>
-        <a href="${window.themeContent.routes.all_collections}" title="${window.themeContent.strings.continue_shopping}" class="form__links">${window.themeContent.strings.continue_shopping}</a>
+        <a href="${window.themeContent.routes.all_collections}" title="${window.themeContent.strings.continue_shopping}" class="links form__links">${window.themeContent.strings.continue_shopping}</a>
       `;
       if (items.length === 0) {
         if(!freeShippingBar || !cartForm){
