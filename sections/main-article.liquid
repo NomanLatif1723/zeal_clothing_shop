@@ -52,7 +52,7 @@
           </ul>
         {%- endif -%}
         {%- if article.image -%}
-          <div class="scroll__animate grid__item-image">
+          <div class="scroll__animate grid__item-image">                  
             <a href="{{ article.url }}" title="{{ article.title }}" aria-label="{{ article.title | escape }}" class="article__image">
               <div class="article_image-wrapper">
                 <img style="aspect-ratio: {{ imageAspectRatio }};"src="{{ articleImage | img_url: default }}"srcset="
@@ -62,9 +62,9 @@
                   {{ articleImage | img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
                   {{ articleImage | img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
                   "width="{{ articleImage.width }}"height="{{ articleImage.height }}"loading="{{ lazyloading }}"sizes="{{ sizes }}"alt="{{ articleImage.alt }}">
-              </div>
-            </a>
-          </div>
+              </div>     
+            </a>    
+          </div>  
         {%- endif -%}
         <div class="article__content rte">
           {{ article.content | strip_html }}
