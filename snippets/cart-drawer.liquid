@@ -149,7 +149,7 @@
                 <div class="rte">{{ 'cart.general.shipping_text' | t }}</div>
               </div>
               {%- if settings.show_note -%}
-                <button type="button" id="cartNoteBtn" class="btn__link form__links" class="btn__cart-note" aria-label="{{ 'cart.general.add_note' | t }}">{{ 'cart.general.add_note' | t }}</button>
+                <button type="button" id="cartNoteBtn" class="btn__link links form__links" class="btn__cart-note" aria-label="{{ 'cart.general.add_note' | t }}">{{ 'cart.general.add_note' | t }}</button>
                 <div class="cart__note hidden">
                   <label class="form__label" for="CartNote">{{ 'cart.general.note' | t }}</label>
                   <textarea name="note" rows="10" class="form__input" id="CartNote" placeholder="{{ 'cart.general.note_placeholder' | t }}">{{ cart.note }}</textarea>
@@ -183,7 +183,7 @@
         {%- else -%}
           <div class="cart__empty-message">
             <div class="rte">{{ 'cart.general.empty_cart' | t }}</div>
-            <a href="{{ routes.all_products_collection_url }}" title="{{ 'cart.general.continue_shopping' | t }}" class="form__links">{{ 'cart.general.continue_shopping' | t }}</a>
+            <a href="{{ routes.all_products_collection_url }}" title="{{ 'cart.general.continue_shopping' | t }}" class="links form__links">{{ 'cart.general.continue_shopping' | t }}</a>
           </div>
         {%- endif -%}
       {%- endform -%}
