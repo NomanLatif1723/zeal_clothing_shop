@@ -737,6 +737,7 @@ function initCustomerForms() {
           event.preventDefault();
           backBtn.closest('[data-form]').classList.add('hidden');
           backBtn.closest('[data-form]').classList.remove('animate');
+          loginForm.classList.add('animate');
           if (loginForm) {
             loginForm.classList.remove('hidden');
           }
@@ -748,6 +749,7 @@ function initCustomerForms() {
     forgetPasswordBtn.addEventListener('click', (event) => {
       event.preventDefault();
       loginForm.classList.add('hidden');
+      loginForm.classList.remove('animate');
       recoverPasswordForm.classList.remove('hidden');
       recoverPasswordForm.classList.add('animate');
     });
