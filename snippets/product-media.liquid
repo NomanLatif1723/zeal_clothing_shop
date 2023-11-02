@@ -46,6 +46,10 @@
               <div class="product__image" style="padding-top: 100%" data-media-id="{{ media.id }}">
                 {{ media | model_viewer_tag }}
               </div>
+            {%- else -%}
+              <div class="product__image" style="padding-top: 100%" data-media-id="{{ media.id }}">
+                {{ media | media_tag }}
+              </div>
             {%- endif -%}
           {%- endif -%}
         </div>
