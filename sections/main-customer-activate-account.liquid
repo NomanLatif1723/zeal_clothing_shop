@@ -20,14 +20,14 @@
             <div class="form__group password__group">
               <label for="confirm_password" class="form__label">{{ 'customers.activate_account.confirm_password' | t }}</label>
               <input type="password" id="confirm_password" name="customer[password_confirmation]" class="form__input" required>
-              <span class="password__toggle-btn password__show-btn">{{ 'customers.activate_account.show_password' | t }}</span>
-              <span class="password__toggle-btn password__hide-btn hidden">{{ 'customers.activate_account.hide_password' | t }}</span>
+              <span class="password__toggle-btn links password__show-btn">{{ 'customers.activate_account.show_password' | t }}</span>
+              <span class="password__toggle-btn links password__hide-btn hidden">{{ 'customers.activate_account.hide_password' | t }}</span>
             </div>
             <div class="form__submit">
               <button type="submit" class="btn btn__link btn__primary" aria-label="{{ 'customers.activate_account.submit' | t }}">{{ 'customers.activate_account.submit' | t }}</button>
             </div>
             <div class="text__center">
-              <a class="form__links" href="{{ routes.account_login_url }}" title="{{ 'customers.activate_account.cancel' | t }}">{{ 'customers.activate_account.cancel' | t }}</a>
+              <a class="links form__links" href="{{ routes.account_login_url }}" title="{{ 'customers.activate_account.cancel' | t }}">{{ 'customers.activate_account.cancel' | t }}</a>
             </div>
           {% endform %}
         </div>
