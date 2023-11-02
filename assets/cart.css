@@ -214,6 +214,9 @@ display: inline-block;
 .price__strike {
   text-decoration: line-through;
 }
+#cartNoteBtn{
+  color: #111111;
+}
 @media only screen and (min-width: 769px) {
   .main__cart {
     margin: 60px 0;
