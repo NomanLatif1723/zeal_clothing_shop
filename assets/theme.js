@@ -748,6 +748,7 @@ function initCustomerForms() {
       event.preventDefault();
       loginForm.classList.add('hidden');
       recoverPasswordForm.classList.remove('hidden');
+      recoverPasswordForm.classList.add('animate');
     });
   }
 
