@@ -36,7 +36,7 @@
                 <tbody>
                   {% for order in customer.orders %}
                     <tr>
-                      <td><label class="label__hidden">{{ 'customers.orders.order_number' | t }}</label><a href="{{ order.customer_url  }}">{{ order.name }}</a></td>
+                      <td><label class="label__hidden">{{ 'customers.orders.order_number' | t }}</label><a class="links" href="{{ order.customer_url  }}">{{ order.name }}</a></td>
                       <td><label class="label__hidden">{{ 'customers.orders.date' | t }}</label><span>{{ order.created_at | date: '%d %b %Y' }}</span></td>
                       <td><label class="label__hidden">{{ 'customers.orders.payment_status' | t }}</label><span>{{ order.financial_status_label }}</span></td>
                       <td><label class="label__hidden">{{ 'customers.orders.fulfilment_status' | t }}</label><span>{{ order.fulfillment_status_label }}</span></td>
