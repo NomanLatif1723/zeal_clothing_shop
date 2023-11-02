@@ -1,7 +1,7 @@
 <div class="login__wrapper">
   <div class="page__width">
-    <div class="scroll__animate customer-form__container">
-      <div id="loginForm">
+    <div class="customer-form__container">
+      <div id="loginForm" class="scroll__animate">
         <div class="form__header">
           <h4>{{ 'customers.login.title' | t }}</h4>
         </div>
@@ -28,7 +28,7 @@
           {%- endform -%}
         </div>
       </div>
-      <div id="recoverPasswordForm" class="hidden" data-form>
+      <div id="recoverPasswordForm" class="scroll__animate hidden" data-form>
         <div class="form__header">
           <h4>{{ 'customers.recover_password.title' | t }}</h4>
         </div>
