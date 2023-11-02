@@ -736,6 +736,7 @@ function initCustomerForms() {
         backBtn.addEventListener('click', (event) => {
           event.preventDefault();
           backBtn.closest('[data-form]').classList.add('hidden');
+          backBtn.closest('[data-form]').classList.remove('animate');
           if (loginForm) {
             loginForm.classList.remove('hidden');
           }
