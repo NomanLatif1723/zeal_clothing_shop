@@ -165,8 +165,8 @@ text-align: center;
   align-items: center;
   gap: 4px;
 }
-.drawer__item-remove .icon__close{
-  stroke: #111111 !important;
+.drawer__item-remove{
+  color: #111111;
 }
 .cart__note {
   padding-top: 20px;
