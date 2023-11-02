@@ -206,7 +206,7 @@
                 {{ form | payment_button }}
               {% endif %}
 
-            <div class="shopify-payment-terms product__policies">{{ form | payment_terms }}</div>
+            <div class="shopify__payment-terms">{{ form | payment_terms }}</div>
             
             <select name="id" class="selected-variant__id hidden">
               {%- for variant in product.variants -%}
