@@ -62,7 +62,7 @@
             <div class="cart__summary">
               <h3>{{ 'cart.general.summary' | t }}</h3>
               {% if cart.discount_applications != blank %}
-                <div class="cart__total-price">
+                <div class="cart__discount-price">
                   <div>{{ 'cart.general.total_discounts' | t }}</div>
                   <div data-discount>{{ cart.total_discount | money }}</div>
                 </div>
