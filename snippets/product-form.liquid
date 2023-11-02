@@ -43,20 +43,20 @@
           </div>
         {%- endunless -%}
         {%- if product.selected_or_first_available_variant.unit_price_measurement -%}
-        <span data-unit-price class="product__unit-price">
+        <div data-unit-price class="product__unit-price">
           {%- if product.selected_or_first_available_variant.price > 0 -%}
             {%- if product.selected_or_first_available_variant.unit_price_measurement -%}
-              <span>{{ product.selected_or_first_available_variant.unit_price | money }}/
+              <div>{{ product.selected_or_first_available_variant.unit_price | money }}/
                 {%- if product.selected_or_first_available_variant.unit_price_measurement.reference_value != 1 -%}
                   {{ product.selected_or_first_available_variant.unit_price_measurement.reference_value }}
                 {%- endif -%}
                   {{ product.selected_or_first_available_variant.unit_price_measurement.reference_unit }}
-              </span>
+              </div>
             {%- endif -%}
             {%- else -%}
               {{ 'products.free_unit_price' | t }}
           {%- endif -%}
-        </span>
+        </div>
         {%- endif -%}
         <div class="product__tax-policies rte{% unless shop.taxes_included or shop.shipping_policy.body != blank %} hidden{% endunless %}">
           {%- if shop.taxes_included -%}
