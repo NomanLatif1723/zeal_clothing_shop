@@ -14,7 +14,7 @@
             title="{{ article.title }}"
             aria-label="{{ article.title | escape }}"
             class="article__image">
-            <div class="article_image-wrapper">
+            <div class="scroll__animate article_image-wrapper">
               <img style="aspect-ratio: {{ imageAspectRatio }};"src="{{ articleImage | img_url: default }}"srcset="
                   {{ articleImage | img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
                   {{ articleImage | img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
