@@ -4,6 +4,7 @@
   "sections": {
     "age-verification": {
       "type": "age-verification-popup",
+      "disabled": true,
       "settings": {
         "age_verifier_heading": "ARE YOU IN THE RIGHT PLACE ?",
         "age_verifier_text": "<p>please verify that you are over 18 years old to access the website.<\/p>",
