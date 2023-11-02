@@ -115,6 +115,16 @@ button {
   z-index: 10000;
   transition: none;
 }
+
+/* Animations */
+.scroll__animate, .animate__animated {
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.scroll__animate.animate {
+  opacity: 1;
+}
+
 .customer__forms{
   margin: 30px 0;
 }
@@ -4398,11 +4408,4 @@ iframe.product-media__video {
     background: white;
     padding: 40px;
   }
-}
-.scroll__animate {
-  opacity: 0;
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-.scroll__animate.animate {
-  opacity: 1;
 }
