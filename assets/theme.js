@@ -752,6 +752,7 @@ function initCustomerForms() {
       // loginForm.classList.add('hidden');
       loginForm.classList.remove('animate');
       // recoverPasswordForm.classList.remove('hidden');
+      recoverPasswordForm.style.opacity = 1;
       recoverPasswordForm.classList.add('animate');
     });
   }
