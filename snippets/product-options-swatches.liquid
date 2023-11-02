@@ -21,7 +21,7 @@
               <input {% if option.selected_value == value %}checked{% endif %} type="radio" id="{{ option.name }}-{{ value }}-{{ product.id }}"
                 value= "{{ value }}" form="{{ product_form_id }}" name="{{ option.name }}-{{ product.id }}"/>
                 <label for="{{ option.name }}-{{ value }}-{{ product.id }}">
-                  <span class="color-swatch__option" style="background:{{ swatch_value | downcase }};{% if images[color_swatch_name] != blank %} background-image: url({{ swatch_image }});{% endif %}"></span>
+                  <span class="color-swatch__option" style="background:{{ swatch_value | downcase }};{% if images[color_swatch_name] != blank %} background-image: url({{  }});{% endif %}"></span>
                 </label>
             </div>
             {%- assign limit = limit | minus: 1 -%}
