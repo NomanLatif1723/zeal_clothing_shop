@@ -25,14 +25,14 @@
             <div class="form__group password__group">
               <label for="password" class="form__label">{{ 'customers.register.password' | t }}</label>
               <input type="password" id="password" name="customer[password]" class="form__input" required>
-              <span class="password__toggle-btn password__show-btn">{{ 'customers.register.show_password' | t }}</span>
-              <span class="password__toggle-btn password__hide-btn hidden">{{ 'customers.register.hide_password' | t }}</span>
+              <span class="password__toggle-btn links password__show-btn">{{ 'customers.register.show_password' | t }}</span>
+              <span class="password__toggle-btn links password__hide-btn hidden">{{ 'customers.register.hide_password' | t }}</span>
             </div>
             <div class="form__submit">
               <button type="submit" class="btn btn__link btn__primary" aria-label="{{ 'customers.register.submit' | t }}">{{ 'customers.register.submit' | t }}</button>
             </div>
             <div class="text__center">
-              <a class="form__links" href="{{ routes.account_login_url }}" title="{{ 'customers.register.login_user' | t }}">{{ 'customers.register.login_user' | t }}</a>
+              <a class="links form__links" href="{{ routes.account_login_url }}" title="{{ 'customers.register.login_user' | t }}">{{ 'customers.register.login_user' | t }}</a>
             </div>
             {%- assign additional_text = section.settings.additional_text -%}
             {%- if additional_text != blank -%}
