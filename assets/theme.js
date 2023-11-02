@@ -51,7 +51,22 @@ function formatMoney$1(cents, format) {
   return formatString.replace(placeholderRegex, value);
 }
 var formatMoney = (val => formatMoney$1(val, window.themeContent.routes.money_format || "${{amount}}"));
-  
+
+// On scroll Animations to the whole site 
+function animateOnScroll() {
+  const elements = document.querySelectorAll(".scroll__animate");
+  elements.forEach((element) => {
+    const elementTop = element.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (elementTop < windowHeight -100) {
+      element.classList.add("animate");
+    }
+  });
+}
+document.addEventListener("DOMContentLoaded", animateOnScroll);
+window.addEventListener("scroll", animateOnScroll);
+
 // Announcement Bar Timer 
 function initAnnouncementTimer() {
   const announcementWrappers = document.querySelectorAll('.announcement__bar');
@@ -2098,19 +2113,4 @@ function initPasswordModal() {
 }
 initPasswordModal();
 
-// On scroll Animations to the whole site 
-function animateOnScroll() {
-  const elements = document.querySelectorAll(".scroll__animate");
-  elements.forEach((element) => {
-    const elementTop = element.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
-
-    if (elementTop < windowHeight -100) {
-      element.classList.add("animate");
-    }
-  });
-}
-document.addEventListener("DOMContentLoaded", animateOnScroll);
-window.addEventListener("scroll", animateOnScroll);
-  
 })();
