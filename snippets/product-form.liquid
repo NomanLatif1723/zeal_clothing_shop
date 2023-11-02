@@ -45,7 +45,7 @@
         <div data-unit-price class="product__unit-price hidden">
           {%- if product.selected_or_first_available_variant.price > 0 -%}
             {%- if product.selected_or_first_available_variant.unit_price_measurement -%}
-              <div>{{ product.selected_or_first_available_variant.unit_price }}/
+              <div>{{ product.selected_or_first_available_variant.unit_price | money }}/
                 {%- if product.selected_or_first_available_variant.unit_price_measurement.reference_value != 1 -%}
                   {{ product.selected_or_first_available_variant.unit_price_measurement.reference_value }}
                 {%- endif -%}
