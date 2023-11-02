@@ -274,35 +274,6 @@
         "name": "Custom Liquid"
       }
     },
-    "contact-header": {
-      "name": "Contact Header",
-      "settings": {
-        "contact_header_text": {
-          "label": "Heading"
-        },
-        "contact_header_image": {
-          "label": "Background Image"
-        },
-        "text_color": {
-          "label": "Text"
-        },
-        "show_breadcrumbs": {
-          "label": "Show Breadcrumbs"
-        },
-        "lazyload_images": {
-          "label": "Enable LazyLoad Images"
-        },
-        "header_spacing": {
-          "label": "Section Spacing",
-          "top_spacing": {
-            "label": "Spacing Top"
-          },
-          "bottom_spacing": {
-            "label": "Spacing Bottom"
-          }
-        }
-      }
-    },
     "customer-activate-account": {
       "name": "Activate Account"
     },
