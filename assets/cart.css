@@ -115,7 +115,11 @@ text-align: center;
   height: 100%;
 }
 .cart__terms-checkbox input {
+  cursor: pointer;
+}
+.cart__terms-checkbox label {
   width: auto;
+  cursor: pointer;
 }
 .cart__checkout-wrapper .btn__link {
   width: 100%;
