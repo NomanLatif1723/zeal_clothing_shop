@@ -5,7 +5,7 @@
   endif
   assign ratio = 0.75
   assign default = 'grande'
-  assign sizes = '(min-width: 1200px) 650px, 45vw
+  assign sizes = '(min-width: 1200px) 650px, 45vw'
   assign first_3d_model = product.media | where: 'media_type', 'model' | first
 -%}
 {%- unless product.empty? -%}
