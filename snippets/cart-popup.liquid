@@ -5,19 +5,7 @@
   if textDirection == 'rtl'
     assign cart_popup_position = 'top-left'
   endif
-
-  assign free_shipping = false
-   if settings.is_free_shipping_bar and settings.free_shipping_threshold != ''
-     assign free_shipping = true
-     assign threshold_total = settings.free_shipping_threshold | times: 100
-     assign threshold = threshold_total | money
-   endif
 -%}
-{% style %}
-  :root  {
-    --progress: 1;
-  }
-{% endstyle %}
 <div class="cart-popup cart-popup__{{ cart_popup_position }}" data-cart-modal>
   <div class="cart-drawer__box">
     <div class="drawer__header cart__modal-header">
@@ -28,20 +16,6 @@
     </div>
     <div data-cart>
       {% form 'cart', cart %}
-        {% comment %}
-          {%- if free_shipping -%}
-            <div class="free-shipping free-shipping__modal" data-free-shipping-threshold="{{ threshold_total }}">
-              <div class="rte" data-free-shipping-bar>
-                {%- if cart.total_price < threshold_total -%}
-                  <p>{{ 'cart.general.free_shipping_eligible'| t }}{{ shop.currency_symbol }}{{ threshold_total | minus: cart.total_price | money }}</p>
-                {%- else -%}
-                 <p>{{ 'cart.general.free_shipping_success_html' | t: amount: threshold }}</p>
-                {%- endif -%}
-              </div>
-              <div class="progress__bar" style="--progress: {{ cart.total_price | times: 1.0 | divided_by: threshold_total | at_most: 1 }}"></div>
-            </div>
-          {%- endif -%}
-        {% endcomment %}
         <div class="cart-popup__content"></div>
         <div class="cart-popup__footer">
           <div class="cart__checkout-wrapper">
