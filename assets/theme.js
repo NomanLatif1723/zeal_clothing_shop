@@ -2127,7 +2127,9 @@ window.Shopify.loadFeatures([
     onLoad: setupShopifyXr
   }
 ]);
-
-
+window.ShopifyXR.launchXR({
+  model3dId: [media-id],
+  title: "{{ product.title | escape }}",
+});
 
 })();
