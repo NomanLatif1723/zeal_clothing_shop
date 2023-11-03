@@ -632,6 +632,9 @@
             },
             "enable_color_swatches": {
               "label": "Enable Color Swatches"
+            },
+            "enable_image_swatches": {
+              "label": "Variant Images As Swatches"
             }
           }
         },
