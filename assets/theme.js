@@ -2111,7 +2111,7 @@ initPasswordModal();
 // Shopify 3d Modal 
 function setupShopifyXr(){
   if (!window.ShopifyXR) {
-    document.addEventListener('shopify_xr_initialized', function() {
+    document.addEventListener('shopify_xr_launch', function() {
       setupShopifyXr();
     });
   }else{
