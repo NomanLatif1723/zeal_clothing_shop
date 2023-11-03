@@ -8,6 +8,7 @@
   assign sizes = '(min-width: 1200px) 650px, 45vw'
   assign first_3d_model = product.media | where: 'media_type', 'model' | first
 -%}
+{{ product.media }}
 {%- unless product.empty? -%}
 {%- if section.settings.thumbnail_position == 'left' -%}
   <div class="product-media__grid" data-thumbnail="{{ section.settings.thumbnail_position }}">
