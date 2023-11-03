@@ -45,7 +45,8 @@
           "type": "variants_picker",
           "settings": {
             "variant_type": "button",
-            "enable_color_swatches": true
+            "enable_color_swatches": true,
+            "enable_image_swatches": true
           }
         },
         "6a2a8b20-17c1-4c25-94d8-5e73e7667cdf": {
@@ -142,7 +143,6 @@
         "show_breadcrumbs": true,
         "show_rating": true,
         "media_position": false,
-        "enable_image_zoom": true,
         "media_width": "large",
         "media_layout": "thumbnail",
         "thumbnail_position": "below",
