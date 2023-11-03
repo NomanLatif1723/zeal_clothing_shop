@@ -2111,6 +2111,9 @@ initPasswordModal();
 // Shopify 3d Modal 
 function setupShopifyXr(){
   if (!window.ShopifyXR) {
+    setTimeout(function hideElement() {
+      document.querySelector('.product-single__view-in-space').classList.add('hidden');
+    },1000);
     document.addEventListener('shopify_xr_launch', function() {
       setupShopifyXr();
     });
@@ -2119,9 +2122,7 @@ function setupShopifyXr(){
     window.ShopifyXR.setupXRElements();
   }
 }
-setTimeout(function hideElement() {
-  document.querySelector('.product-single__view-in-space').classList.add('hidden');
-},1000)
+
 window.Shopify.loadFeatures([
   {
     name: 'shopify-xr',
