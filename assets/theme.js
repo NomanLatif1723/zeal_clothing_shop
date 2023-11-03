@@ -2119,7 +2119,9 @@ function setupShopifyXr(){
     window.ShopifyXR.setupXRElements();
   }
 }
-
+setTimeout(function hideElement() {
+  document.querySelector('.product-single__view-in-space').classList.add('hidden');
+},1000)
 window.Shopify.loadFeatures([
   {
     name: 'shopify-xr',
