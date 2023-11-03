@@ -1430,7 +1430,7 @@ function initProductCollapsibles() {
 initProductCollapsibles();
 
 // function for product Media Sliders
-function initProductmediaSlideShow() {
+function initMediaGallery() {
   let productmediaWrapper = document.querySelectorAll('.product-grid');
   productmediaWrapper.forEach(wrapper => {
     let id = wrapper.dataset.sectionId;
@@ -1480,7 +1480,7 @@ function initProductmediaSlideShow() {
     }
   })
 }
-initProductmediaSlideShow();
+initMediaGallery();
 
 // Product Quantity Selectors Event
 function initProductQuantitySelector() {
@@ -2016,7 +2016,7 @@ function initQuickShopCollection() {
         selectors.quickViewContainer.appendChild(newData);
         document.querySelector('.quick-view__container .product-full__info--btn').classList.remove('hidden');
         document.querySelector('.product-grid').setAttribute('data-history-url', 'false');
-        initProductmediaSlideShow();
+        initMediaGallery();
         initProductVariants();
         initProductForm();
         initCountdown();
