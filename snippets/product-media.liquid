@@ -91,16 +91,16 @@
               {%- endif -%}
               <img class="product__image" src="{{ media | img_url: '360x' }}"
                 srcset="
-                  {{ media | img_url: '120x' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}120{% endif %}w,
-                  {{ media | img_url: '360x' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}360{% endif %}w,
-                  {{ media | img_url: '540x' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}540{% endif %}w,
-                  {{ media | img_url: '720x' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}720{% endif %}w"
+                  {{ media.preview_image | img_url: '120x' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}120{% endif %}w,
+                  {{ media.preview_image | img_url: '360x' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}360{% endif %}w,
+                  {{ media.preview_image | img_url: '540x' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}540{% endif %}w,
+                  {{ media.preview_image | img_url: '720x' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}720{% endif %}w"
                 width="{{ media.width }}"
                 height="{{ media.height }}"
                 loading="lazy"
                 sizes="{{ sizes }}"
-                alt="{{ media.alt }}"
-                data-media-id="{{ media.id }}"
+                alt="{{ media.preview_image.alt }}"
+                data-media-id="{{ media.preview_image.id }}"
                 data-index="{{ forloop.index }}"
                 />
             </a>
