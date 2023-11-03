@@ -60,7 +60,7 @@
               </button>
             {%- endif -%}
             <div class="product__media-model">
-              {{ media | model_viewer_tag: image_size: "2048", toggleable: true, data-media-id: media.id }}
+              {{ media | media_tag: image_size: "2048", toggleable: true, data-media-id: media.id }}
             </div>
           {%- else -%}
             <div class="product__image" data-media-id="{{ media.id }}">
