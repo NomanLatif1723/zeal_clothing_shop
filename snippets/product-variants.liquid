@@ -28,7 +28,7 @@
                       -%}
                       {%- if product.variants[forloop.index].image != blank -%}
                         <label class="product__swatches-label" for="{{ option.name }}-{{ value }}-{{ section.id }}" 
-                          style="background-image: url({{  }});">
+                          style="background-image: url({{ product.variants[forloop.index].image | img_url: "35x" }});">
                         </label>
                       {%- else -%}
                         <label class="product__swatches-label" for="{{ option.name }}-{{ value }}-{{ section.id }}" 
