@@ -31,7 +31,7 @@
                       </label>
                     {%- elsif isColorOption and block.settings.enable_image_swatches -%}
                       <label class="product__swatches-label" for="{{ option.name }}-{{ value }}-{{ section.id }}" 
-                        style="background-image: url({{ variant.image | product_img_url: '30x' }});">
+                        style="background-image: url({{ product.selected_or_first_available_variant.featured_image| img_url: '30x' }});">
                       </label>
                     {%- else -%}
                       <label for="{{ option.name }}-{{ value }}-{{ section.id }}">
