@@ -41,7 +41,7 @@
               {{ media | external_video_url: autoplay: true, loop: loop, playlist: media.external_id | external_video_tag: class: video_class, loading: "lazy", class: "product-media__video" }}
               {% endcomment %}
             {%- elsif media.host == 'vimeo' -%}
-              {{ media | external_video_url: autoplay: true, loop: loop | external_video_tag: class: video_class, loading: "lazy", class: "product-media__video" }}
+              <iframe class="product-media__video" title="{{ media.alt }}" src="https://www.vimeo.com/embed/{{ media.external_id }}?playsinline=1&mute=1&loop=1" allow="" allowfullscreen></iframe>
             {%- else -%}
               {{ media | external_video_url: autoplay: true, loop: loop | external_video_tag: class: video_class, loading: "lazy", class: "product-media__video" }}
             {%- endif -%}
