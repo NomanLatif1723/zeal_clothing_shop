@@ -20,7 +20,7 @@
                   <div class="product__swatches-options{% if isColorOption %} product__swatches-spacing{% endif %}{% if option.selected_value == value %} selected{% endif %}">
                     <input type="radio" data-selected-variant form="{{ product_form_id }}" name="{{ option.name }}-{{ section.id }}" value="{{ value }}" {% if option.selected_value == value %}checked="checked"{% endif %} 
                       id="{{ option.name }}-{{ value }}-{{ section.id }}">
-                    {%- if isColorOption -%}
+                    {%- if isColorOption and block.settings.enable_image_swatches == 'false' -%}
                       {%- liquid
                         assign color_swatch_name = value | handle | append: '.png'
                         assign swatch_image = color_swatch_name | file_img_url: '35x35' | prepend: 'https:' | split: '?' | first
@@ -28,6 +28,10 @@
                       -%}
                       <label class="product__swatches-label" for="{{ option.name }}-{{ value }}-{{ section.id }}" 
                         style="background-color:{{ swatch_value }};{% if images[color_swatch_name] != blank %}  background-image: url({{ swatch_image }});{% endif %}">
+                      </label>
+                    {%- elsif isColorOption and block.settings.enable_image_swatches -%}
+                      <label class="product__swatches-label" for="{{ option.name }}-{{ value }}-{{ section.id }}" 
+                        style="background-image: url({{ variant.image | product_img_url: '30x' }});">
                       </label>
                     {%- else -%}
                       <label for="{{ option.name }}-{{ value }}-{{ section.id }}">
