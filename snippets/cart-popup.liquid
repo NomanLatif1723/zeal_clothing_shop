@@ -42,8 +42,7 @@
             </div>
           {%- endif -%}
         {% endcomment %}
-        <div class="cart-popup__content">
-        </div>
+        <div class="cart-popup__content"></div>
         <div class="cart-popup__footer">
           <div class="cart__checkout-wrapper">
             <a href="{{ routes.cart_url }}"class="btn btn__link btn__outline"title="{{ 'cart.general.view_cart' | t }}">{{ 'cart.general.view_cart' | t }}(<span data-cart-count>{{ cart.item_count }}</span>)</a>
