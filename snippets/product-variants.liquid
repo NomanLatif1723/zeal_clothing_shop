@@ -26,7 +26,7 @@
                         assign swatch_image = color_swatch_name | file_img_url: '35x35' | prepend: 'https:' | split: '?' | first
                         assign swatch_value = value | downcase
                       -%}
-                      {%- if product.variants[forloop.index].image != blank -%}
+                      {%- if isColorOption and product.variants[forloop.index].image != blank -%}
                         <label class="product__swatches-label" for="{{ option.name }}-{{ value }}-{{ section.id }}" 
                           style="background-image: url({{ product.variants[forloop.index].image | img_url: "35x" }});">
                         </label>
