@@ -2111,33 +2111,6 @@ initPasswordModal();
 // The element to observe
 const productModel = document.querySelectorAll('product-model');
 productModel.forEach(model => {
-  if (model) {
-    // Shopify 3d Modal 
-    function setupShopifyXr(){
-      if (!window.ShopifyXR) {
-        document.addEventListener('shopify_xr_launch', function() {
-          setTimeout(function hideElement() {
-            document.querySelector('.product-single__view-in-space').classList.add('hidden');
-          },1000);
-          setupShopifyXr();
-        });
-      }else{
-        window.ShopifyXR.addModels();
-        window.ShopifyXR.setupXRElements();
-      }
-    }
-    window.Shopify.loadFeatures([
-      {
-        name: 'shopify-xr',
-        version: '1.0',
-        onLoad: setupShopifyXr
-      }
-    ]);
-    window.ShopifyXR.launchXR({
-      model3dId: [media-id],
-      title: "{{ product.title | escape }}",
-    });
-  }
   const options = {
     root: null,
     rootMargin: '0px',
@@ -2148,6 +2121,31 @@ productModel.forEach(model => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         model.classList.add('visible');
+        // Shopify 3d Modal 
+        function setupShopifyXr(){
+          if (!window.ShopifyXR) {
+            document.addEventListener('shopify_xr_launch', function() {
+              setTimeout(function hideElement() {
+                document.querySelector('.product-single__view-in-space').classList.add('hidden');
+              },1000);
+              setupShopifyXr();
+            });
+          }else{
+            window.ShopifyXR.addModels();
+            window.ShopifyXR.setupXRElements();
+          }
+        }
+        window.Shopify.loadFeatures([
+          {
+            name: 'shopify-xr',
+            version: '1.0',
+            onLoad: setupShopifyXr
+          }
+        ]);
+        window.ShopifyXR.launchXR({
+          model3dId: [media-id],
+          title: "{{ product.title | escape }}",
+        });
         observer.unobserve(model);
       }
     });
