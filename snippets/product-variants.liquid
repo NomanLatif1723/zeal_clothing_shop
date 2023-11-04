@@ -28,7 +28,7 @@
                       -%}
                       {%- if block.settings.enable_image_swatches -%}
                         <label class="product__swatches-label" for="{{ option.name }}-{{ value }}-{{ section.id }}" 
-                          style="background-image: url({{ product.variants[forloop.index0].featured_image | img_url: "35x" }});">
+                          style="background-image: url({{ variant.image | img_url: "35x" }});">
                         </label>
                       {%- else -%}
                         <label class="product__swatches-label" for="{{ option.name }}-{{ value }}-{{ section.id }}" 
