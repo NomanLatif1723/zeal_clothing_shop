@@ -32,7 +32,7 @@
                         assign swatch_image = color_swatch_name | file_img_url: '35x35' | prepend: 'https:' | split: '?' | first
                         assign swatch_value = value | downcase
                       -%}
-                      {%- if isImageSwatch -%}
+                      {%- if isImageSwatch and variant.featured_media -%}
                         {%- assign option_position = option.position | minus: 1 -%}
                         {%- for variant in product.variants -%}
                           {{ variant.options[option_position].featured_media }}
