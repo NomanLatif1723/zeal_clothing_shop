@@ -2112,6 +2112,8 @@ initPasswordModal();
 const productModel = document.querySelectorAll('product-model');
 productModel.forEach(model => {
   const viewInModelBtn = model.querySelector('.product-single__view-in-space');
+  const id = model.closest('.product-grid').dataset.sectionId;
+  console.log(id);
   const options = {
     root: null,
     rootMargin: '0px',
@@ -2126,7 +2128,7 @@ productModel.forEach(model => {
           viewInModelBtn.classList.add('hidden');
         },3000);
         console.log('Hy There');
-        mediaSwiper.allowTouchMove = false;
+        mediaSwiper[id].allowTouchMove = false;
         // Shopify 3d Modal 
         // function setupShopifyXr(){
         //   if (!window.ShopifyXR) {
