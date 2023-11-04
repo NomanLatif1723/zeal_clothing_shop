@@ -59,9 +59,9 @@
               <svg aria-hidden="true" focusable="false" role="presentation" width="30" height="30" class="icon icon-3d" viewBox="18.24 17.35 24.52 28.3"><path fill="#3A3A3A" d="M30.5 17.35l-12.26 7.07v14.16l12.26 7.07 12.26-7.08V24.42L30.5 17.35zM20.24 37.42V25.58l10.26-5.93 10.13 5.85-10.13 5.88v12l-10.26-5.96z"/></svg>
               </button>
             {%- endif -%}
-            <div class="product__media-model">
+            <product-model class="product__media-model">
               {{ media | media_tag: image_size: "2048", toggleable: true, data-media-id: media.id }}
-            </div>
+            </product-model>
           {%- else -%}
             <div class="product__image" data-media-id="{{ media.id }}">
               {{ media | media_tag }}
