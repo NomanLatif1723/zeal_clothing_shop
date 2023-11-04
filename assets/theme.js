@@ -2150,6 +2150,6 @@ function pickupAvailabilty() {
     console.error(e);
   }); 
 }
-pickupAvailabilty();
+// pickupAvailabilty();
 
 })();
