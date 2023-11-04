@@ -2134,6 +2134,28 @@ window.ShopifyXR.launchXR({
   model3dId: [media-id],
   title: "{{ product.title | escape }}",
 });
+// The element to observe
+const productModel = document.querySelectorAll('product-model');
+productModel.forEach(model => {
+  const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5,
+  };
+  // Create an Intersection Observer
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        model.classList.add('visible');
+        observer.unobserve(model);
+      }
+    });
+  }, options);
+  observer.observe(model);
+});
+
+
+
 
 // document.querySelectorAll('product-model').forEach((model) => {
 //   if (model.modelViewerUI) model.modelViewerUI.play();
