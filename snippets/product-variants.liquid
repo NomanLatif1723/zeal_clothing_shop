@@ -15,7 +15,7 @@
                endif
                if block.settings.enable_image_swatches
                  for variant in product.variants
-                   if variant.featured_media and optionName == 'color'
+                   if variant.featured_media and optionName == 'color' or optionName == 'colour'
                      assign isImageSwatch = true
                    endif
                  endfor
