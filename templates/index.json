@@ -1084,6 +1084,22 @@
             "enable_image_swatches": false
           }
         },
+        "9e2ddc19-db7f-4e45-b8a1-052f1327234f": {
+          "type": "sale_timer",
+          "settings": {
+            "years": 2024,
+            "months": "08",
+            "days": 31,
+            "hours": 12,
+            "minutes": 12,
+            "timer_completion_message": ""
+          }
+        },
+        "963af115-2eac-4411-b934-790a156459af": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
         "template--19980215124290__f6a0ab30-1339-4dd4-8eb5-070921979e00-buy_buttons-1": {
           "type": "buy_buttons",
           "settings": {
@@ -1096,6 +1112,8 @@
         "template--19980215124290__f6a0ab30-1339-4dd4-8eb5-070921979e00-price-1",
         "template--19980215124290__f6a0ab30-1339-4dd4-8eb5-070921979e00-description-1",
         "template--19980215124290__f6a0ab30-1339-4dd4-8eb5-070921979e00-variants_picker-1",
+        "9e2ddc19-db7f-4e45-b8a1-052f1327234f",
+        "963af115-2eac-4411-b934-790a156459af",
         "template--19980215124290__f6a0ab30-1339-4dd4-8eb5-070921979e00-buy_buttons-1"
       ],
       "settings": {
