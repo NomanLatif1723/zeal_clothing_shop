@@ -35,7 +35,8 @@
                       {%- if isImageSwatch -%}
                         {%- assign option_position = option.position | minus: 1 -%}
                         {%- for variant in product.variants -%}
-                          {%- if variant.options[option_position] == value -%}
+                          {{ variant.options[option_position].featured_media }}
+                          {%- if variant.options[option_position] == value and variant.options[option_position].featured_media != blank -%}
                             <label class="product__swatches-label product__swatches-image" for="{{ option.name }}-{{ value }}-{{ section.id }}" 
                               style="background-image: url({{ variant.featured_media | img_url: "70x" }});">
                             </label>
