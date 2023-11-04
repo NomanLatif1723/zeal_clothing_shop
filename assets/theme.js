@@ -1468,7 +1468,6 @@ function initMediaGallery() {
       let mediaSwiperOptions = {
         slidesPerView: 1,
         speed: 1000,
-        draggable: false,
         navigation: {
           nextEl: '.swiper-button-next.swiper-button-' + id,
           prevEl: '.swiper-button-prev.swiper-button-' + id
