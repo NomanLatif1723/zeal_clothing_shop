@@ -2126,7 +2126,7 @@ productModel.forEach(model => {
           viewInModelBtn.classList.add('hidden');
         },3000);
         console.log('Hy There');
-        mediaSwiper.slideTo(0);
+        mediaSwiper.allowTouchMove = false;
         // Shopify 3d Modal 
         // function setupShopifyXr(){
         //   if (!window.ShopifyXR) {
