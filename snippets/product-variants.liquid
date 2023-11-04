@@ -28,13 +28,13 @@
                       -%}
                       {%- if block.settings.enable_image_swatches -%}
                         {%- assign option_position = option.position | minus: 1 -%}
-                        {% for variant in product.variants %}
+                        {%- for variant in product.variants -%}
                           {%- if variant.options[option_position] == value -%}
                             <label class="product__swatches-label" for="{{ option.name }}-{{ value }}-{{ section.id }}" 
                               style="background-image: url({{ variant.featured_media | img_url: "35x" }});">
                             </label>
-                          {% endif %}
-                        {% endfor %}
+                          {%- endif -%}
+                        {%- endfor -%}
                       {%- else -%}
                         <label class="product__swatches-label" for="{{ option.name }}-{{ value }}-{{ section.id }}" 
                           style="background-color:{{ swatch_value }};{% if images[color_swatch_name] != blank %}  background-image: url({{ swatch_image }});{% endif %}">
