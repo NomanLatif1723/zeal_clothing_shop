@@ -2111,6 +2111,7 @@ initPasswordModal();
 // The element to observe
 const productModel = document.querySelectorAll('product-model');
 productModel.forEach(model => {
+  const viewInModelBtn = model.querySelector('.product-single__view-in-space');
   const options = {
     root: null,
     rootMargin: '0px',
@@ -2121,6 +2122,9 @@ productModel.forEach(model => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         model.classList.add('visible');
+        setTimeout(function hideButton() {
+          viewInModelBtn.classList.add('hidden');
+        },1000)
         // Shopify 3d Modal 
         // function setupShopifyXr(){
         //   if (!window.ShopifyXR) {
@@ -2147,6 +2151,7 @@ productModel.forEach(model => {
         //   title: "{{ product.title | escape }}",
         // });
         observer.unobserve(model);
+        viewInModelBtn.classList.remove('hidden');
       }
     });
   }, options);
