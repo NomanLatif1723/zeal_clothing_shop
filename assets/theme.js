@@ -2155,9 +2155,6 @@ productModel.forEach(model => {
   observer.observe(model);
 });
 
-
-
-
 // document.querySelectorAll('product-model').forEach((model) => {
 //   if (model.modelViewerUI) model.modelViewerUI.play();
 // });
