@@ -230,6 +230,24 @@
         </div>
         <!-- <div class="product-single__store-availability-container" data-store-availability-container data-product-title="" data-has-only-default-variant="" data-base-url=""></div> -->
 
+
+    {% if product.available %}
+
+      {% if product.variants.size == 1 %}
+        <p>Pickup available at {{ product.variants.first.available_location.name }}.</p>
+      {% else %}
+        <p>Available for pickup at the following locations:</p>
+        <ul>
+          {% for variant in product.variants %}
+            <li>{{ variant.available_location.name }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    
+    {% else %}
+      <p>Pickup is not available for this product.</p>
+    {% endif %}
+
         {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities
           | where: 'pick_up_enabled', true
         -%}
