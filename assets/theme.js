@@ -2125,6 +2125,7 @@ productModel.forEach(model => {
         setTimeout(function hideButton() {
           viewInModelBtn.classList.add('hidden');
         },3000);
+        console.log('Hy There');
         mediaSwiper.slideTo(0);
         // Shopify 3d Modal 
         // function setupShopifyXr(){
