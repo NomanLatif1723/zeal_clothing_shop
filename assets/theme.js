@@ -2136,7 +2136,7 @@ window.ShopifyXR.launchXR({
 });
 
 document.querySelectorAll('product-model').forEach((model) => {
-  if (model.modelViewerUI) model.modelViewerUI.pause();
+  if (model.modelViewerUI) model.modelViewerUI.play();
 });
 
 })();
