@@ -2135,9 +2135,4 @@ window.ShopifyXR.launchXR({
   title: "{{ product.title | escape }}",
 });
 
-function pickupAvailabilty() {
-
-}
-// pickupAvailabilty();
-
 })();
