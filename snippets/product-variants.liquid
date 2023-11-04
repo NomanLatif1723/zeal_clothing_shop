@@ -40,10 +40,6 @@
                             <label class="product__swatches-label product__swatches-image" for="{{ option.name }}-{{ value }}-{{ section.id }}" 
                               style="background-image: url({{ variant.featured_media | img_url: "70x" }});">
                             </label>
-                          {% else %}
-                            <label class="product__swatches-label" for="{{ option.name }}-{{ value }}-{{ section.id }}" 
-                              style="background-color:{{ swatch_value }};{% if images[color_swatch_name] != blank %}  background-image: url({{ swatch_image }});{% endif %}">
-                            </label>
                           {%- endif -%}
                         {%- endfor -%}
                       {%- else -%}
