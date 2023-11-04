@@ -14,9 +14,11 @@
                   endif
                endif
                if block.settings.enable_image_swatches
-                 if optionName == 'color' or optionName == 'colour'
-                   assign isImageSwatch = true
-                 endif
+                 for variant in product.variants
+                   if variant.featured_media and optionName == 'color' or optionName == 'colour'
+                     assign isImageSwatch = true
+                   endif
+                 endfor
                endif
             -%}
             <fieldset class="product-form__input" data-selected-option="selectedOption{{ forloop.index }}">
@@ -32,7 +34,7 @@
                         assign swatch_image = color_swatch_name | file_img_url: '35x35' | prepend: 'https:' | split: '?' | first
                         assign swatch_value = value | downcase
                       -%}
-                      {%- if isImageSwatch and variant.featured_media -%}
+                      {%- if isImageSwatch -%}
                         {%- assign option_position = option.position | minus: 1 -%}
                         {%- for variant in product.variants -%}
                           {{ variant.options[option_position].featured_media }}
