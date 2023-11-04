@@ -2127,10 +2127,11 @@ productModel.forEach(model => {
         },3000);
         mediaSwiper[id].allowTouchMove = false;
         observer.unobserve(model);
-        viewInModelBtn.classList.remove('hidden');
       }
     });
   }, options);
+  viewInModelBtn.classList.remove('hidden');
+  mediaSwiper[id].allowTouchMove = true;
   observer.observe(model);
 });
 
