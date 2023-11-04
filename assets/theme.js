@@ -2129,31 +2129,6 @@ productModel.forEach(model => {
         },3000);
         console.log('Hy There');
         mediaSwiper[id].allowTouchMove = false;
-        // Shopify 3d Modal 
-        // function setupShopifyXr(){
-        //   if (!window.ShopifyXR) {
-        //     document.addEventListener('shopify_xr_launch', function() {
-        //       setTimeout(function hideElement() {
-        //         document.querySelector('.product-single__view-in-space').classList.add('hidden');
-        //       },1000);
-        //       setupShopifyXr();
-        //     });
-        //   }else{
-        //     window.ShopifyXR.addModels();
-        //     window.ShopifyXR.setupXRElements();
-        //   }
-        // }
-        // window.Shopify.loadFeatures([
-        //   {
-        //     name: 'shopify-xr',
-        //     version: '1.0',
-        //     onLoad: setupShopifyXr
-        //   }
-        // ]);
-        // window.ShopifyXR.launchXR({
-        //   model3dId: [media-id],
-        //   title: "{{ product.title | escape }}",
-        // });
         observer.unobserve(model);
         viewInModelBtn.classList.remove('hidden');
       }
@@ -2162,6 +2137,33 @@ productModel.forEach(model => {
   observer.observe(model);
 });
 
+// Shopify 3d Modal 
+// function setupShopifyXr(){
+//   if (!window.ShopifyXR) {
+//     document.addEventListener('shopify_xr_launch', function() {
+//       setTimeout(function hideElement() {
+//         document.querySelector('.product-single__view-in-space').classList.add('hidden');
+//       },1000);
+//       setupShopifyXr();
+//     });
+//   }else{
+//     window.ShopifyXR.addModels();
+//     window.ShopifyXR.setupXRElements();
+//   }
+// }
+// window.Shopify.loadFeatures([
+//   {
+//     name: 'shopify-xr',
+//     version: '1.0',
+//     onLoad: setupShopifyXr
+//   }
+// ]);
+// window.ShopifyXR.launchXR({
+//   model3dId: [media-id],
+//   title: "{{ product.title | escape }}",
+// });
+
+  
 // document.querySelectorAll('product-model').forEach((model) => {
 //   if (model.modelViewerUI) model.modelViewerUI.play();
 // });
