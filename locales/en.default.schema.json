@@ -1705,10 +1705,12 @@
               }
             },
             "enable_color_swatches": {
-              "label": "Enable Color Swatches"
+              "label": "Enable Color Swatches",
+              "info": "Enables color swatches for button variants only."
             },
             "enable_image_swatches": {
-              "label": "Variant Images As Swatches"
+              "label": "Variant Images As Swatches",
+              "info": "Enables color swatches for button variants only."
             }
           }
         },
