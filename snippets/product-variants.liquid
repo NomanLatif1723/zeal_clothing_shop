@@ -27,9 +27,14 @@
                         assign swatch_value = value | downcase
                       -%}
                       {%- if block.settings.enable_image_swatches -%}
-                        <label class="product__swatches-label" for="{{ option.name }}-{{ value }}-{{ section.id }}" 
-                          style="background-image: url({{ variant.image | img_url: "35x" }});">
-                        </label>
+                        {%- assign option_position0 = option.position | minus: 1 -%}
+                        {% for variant in product.variants %}
+                          {%- if variant.options[option_position0] == value -%}
+                            <label class="product__swatches-label" for="{{ option.name }}-{{ value }}-{{ section.id }}" 
+                              style="background-image: url({{ variant.featured_media | img_url: "35x" }});">
+                            </label>
+                          {% endif %}
+                        {% endfor %}
                       {%- else -%}
                         <label class="product__swatches-label" for="{{ option.name }}-{{ value }}-{{ section.id }}" 
                           style="background-color:{{ swatch_value }};{% if images[color_swatch_name] != blank %}  background-image: url({{ swatch_image }});{% endif %}">
