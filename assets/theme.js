@@ -2113,13 +2113,11 @@ const productModel = document.querySelectorAll('product-model');
 productModel.forEach(model => {
   const viewInModelBtn = model.querySelector('.product-single__view-in-space');
   const id = model.closest('.product-grid').dataset.sectionId;
-  console.log(id);
   const options = {
     root: null,
     rootMargin: '0px',
     threshold: 0.5,
   };
-  // Create an Intersection Observer
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -2127,7 +2125,6 @@ productModel.forEach(model => {
         setTimeout(function hideButton() {
           viewInModelBtn.classList.add('hidden');
         },3000);
-        console.log('Hy There');
         mediaSwiper[id].allowTouchMove = false;
         observer.unobserve(model);
         viewInModelBtn.classList.remove('hidden');
