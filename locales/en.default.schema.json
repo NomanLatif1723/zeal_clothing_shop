@@ -1710,7 +1710,7 @@
             },
             "enable_image_swatches": {
               "label": "Variant Images As Swatches",
-              "info": "Enables color swatches for button variants only."
+              "info": "Enables color swatches for button variants only if variants images Added"
             }
           }
         },
