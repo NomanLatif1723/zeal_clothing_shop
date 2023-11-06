@@ -18,18 +18,6 @@
       "comment_published": "Your Comment has been Published",
       "comment_sent": "Your Comment has been sent. It will be visible when owner accepted it.",
       "empty": "You don't have any comments yet"
-    },
-    "socials": {
-      "facebook": "Facebook",
-      "instagram": "Instagram",
-      "twitter": "Twitter",
-      "pinterest": "Pinterest",
-      "snapchat": "SnapChat",
-      "youtube": "Youtube",
-      "vimeo": "Vimeo",
-      "tiktok": "Tiktok",
-      "tumblr": "Tumblr",
-      "linkedin": "LinkedIn"
     }
   },
   "blogs": {
@@ -365,6 +353,12 @@
   "social-media": {
     "general": {
       "social_label": "Join Us On {{ social }}"
+    },
+    "socials_share": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "twitter": "Twitter",
+      "pinterest": "Pinterest"
     }
   },
   "search": {
