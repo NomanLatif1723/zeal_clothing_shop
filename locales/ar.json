@@ -294,34 +294,34 @@
       "inventory_in_stock": "في الأوراق المالية",
       "inventory_in_stock_count": "{{ quantity }} في الأوراق المالية",
       "inventory_low_stock": "الأسهم منخفضة",
-      "inventory_low_stock_count": "الأسهم منخفضة: {{ items }} Left",
+      "inventory_low_stock_count": "الأسهم منخفضة: {{ items }} غادر",
       "inventory_out_of_stock_contine_selling": "في الأوراق المالية",
       "inventory_out_of_stock": "إنتهى من المخزن"
     },
     "accessibility": {
-      "star_reviews_info": "{{ rating_value }} out of {{ rating_max }} stars",
-      "total_reviews": "Total Reviews {{ count }}"
+      "star_reviews_info": "{{ rating_value }} بعيدا عن المكان {{ rating_max }} النجوم",
+      "total_reviews": "إجمالي المراجعات {{ count }}"
     }
   },
   "pickup_availability": {
     "general": {
-      "pick_up_available_at_html": "Pickup Available at {{ location_name }}",
-      "view_store_info": "View Store Info",
-      "check_other_stores": "Check Other Stores",
-      "pick_up_unavailable_at_html": "Pickup UnAvailable at {{ location_name }}",
-      "pick_up_available": "Pickup Available",
-      "pick_up_currently_unavailable": "Pickup Currently Un Available"
+      "pick_up_available_at_html": "الاستلام متاح في {{ location_name }}",
+      "view_store_info": "عرض معلومات المتجر",
+      "check_other_stores": "تحقق من المتاجر الأخرى",
+      "pick_up_unavailable_at_html": "الاستلام غير متاح في {{ location_name }}",
+      "pick_up_available": "بيك اب متاح",
+      "pick_up_currently_unavailable": "الالتقاط غير متاح حاليًا"
     }
   },
   "password-page": {
     "general": {
-      "password_link": "Enter Using Password",
-      "login_form_heading": "Enter Password",
+      "password_link": "أدخل باستخدام كلمة المرور",
+      "login_form_heading": "أدخل كلمة المرور",
       "login_form_password_label": "كلمة المرور",
       "login_form_password_placeholder": "كلمة المرور",
       "login_form_submit": "يُقدِّم",
-      "powered_by_shopify_html": "This shop will be powered by {{ shopify }}",
-      "admin_link_html": "Are You The Store owner? <a href=\"\/admin\" class=\"text-link\">Log in here<\/a>"
+      "powered_by_shopify_html": "سيتم تشغيل هذا المتجر بواسطة {{ shopify }}",
+      "admin_link_html": "هل أنت مالك المتجر؟ <a class='links' href=\"\/admin\" class=\"text-link\">تسجيل الدخول هنا<\/a>"
     }
   },
   "sections": {
