@@ -376,7 +376,19 @@
     "checkout": {
       "shipping": {
         "split_cart_shipping_label": "Méthode"
+      },
+      "shop_pay_external": {
+        "errors": {
+          "problem_loading": "Il y a un problème lors du chargement de Shop Pay",
+          "try_again_later": "Vérifiez votre connexion ou fermez cette fenêtre et réessayez dans quelques instants."
+        },
+        "return_to_store": "Revenir à {{shopName}}"
       }
+    }
+  },
+  "customer_accounts": {
+    "profile_preview_bar": {
+      "close_preview": "Fermer l'aperçu"
     }
   }
 }
