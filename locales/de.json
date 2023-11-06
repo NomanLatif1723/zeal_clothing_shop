@@ -285,6 +285,87 @@
     "promotional_message": "Beeil dich! Der Verkauf endet in",
     "quantity_label": "Menge",
     "sizeguide_text": "Größentabelle",
-    "sizechart": "Größentabelle"
+    "sizechart": "Größentabelle",
+    "add_to_cart": "In den Warenkorb legen",
+    "preorder": "Vorbestellen",
+    "sold_out": "Ausverkauft",
+    "free_unit_price": "Frei",
+    "taxes_included": "Steuern inklusive.",
+    "shipping_policy_html": "<a href=\"&lt;span%20class=\" notranslate>{{ link }} '&gt;Versand<\/a> wird an der Kasse berechnet.",
+    "share_social": "Aktie:",
+    "item_added_success_message": "Artikel wurde erfolgreich zu Ihrem Warenkorb hinzugefügt",
+    "view_full_info": "Vollständige Informationen anzeigen",
+    "price": {
+      "regular_price": "Regulärer Preis",
+      "sale_price": "Verkaufspreis"
+    },
+    "form": {
+      "variants": "Varianten"
+    },
+    "badges": {
+      "on_sale": "Verkauf",
+      "sold_out": "Ausverkauft"
+    },
+    "onboarding": {
+      "product_title": "Beispielprodukt",
+      "product_price": "30 $",
+      "product_description": "In diesem Bereich werden die Details Ihres Produkts beschrieben. Informieren Sie Ihre Kunden über das Aussehen, die Haptik und den Stil Ihres Produkts. Fügen Sie Details zu Farbe, verwendeten Materialien, Größe und Herstellungsort hinzu.",
+      "product_vendor": "Verkäufer"
+    },
+    "tags": {
+      "title": "Stichworte",
+      "empty": "Bitte fügen Sie dem Produkt einige Tags hinzu"
+    },
+    "category": {
+      "title": "Kategorie",
+      "empty": "Produkte sollten in einer oder mehreren Sammlungen enthalten sein, um hier als Kategorie angezeigt zu werden"
+    },
+    "stock": {
+      "title": "Verfügbar",
+      "inventory_in_stock": "Auf Lager",
+      "inventory_in_stock_count": "{{ quantity }} Auf Lager",
+      "inventory_low_stock": "Geringer Bestand",
+      "inventory_low_stock_count": "Geringer Lagerbestand: {{ items }} übrig",
+      "inventory_out_of_stock_contine_selling": "Auf Lager",
+      "inventory_out_of_stock": "Ausverkauft"
+    },
+    "accessibility": {
+      "star_reviews_info": "{{ rating_value }} von {{ rating_max }} Sternen",
+      "total_reviews": "Gesamtbewertungen {{ count }}"
+    }
+  },
+  "pickup_availability": {
+    "general": {
+      "pick_up_available_at_html": "Abholung möglich bei {{ location_name }}",
+      "view_store_info": "Shop-Informationen anzeigen",
+      "check_other_stores": "Überprüfen Sie andere Geschäfte",
+      "pick_up_unavailable_at_html": "Abholung am {{ location_name }} nicht möglich",
+      "pick_up_available": "Abholung möglich",
+      "pick_up_currently_unavailable": "Abholung derzeit nicht möglich"
+    }
+  },
+  "password-page": {
+    "general": {
+      "password_link": "Geben Sie mit Passwort ein",
+      "login_form_heading": "Passwort eingeben",
+      "login_form_password_label": "Passwort",
+      "login_form_password_placeholder": "Passwort",
+      "login_form_submit": "Einreichen",
+      "powered_by_shopify_html": "Dieser Shop wird betrieben von {{ shopify }}",
+      "admin_link_html": "Sind Sie der Ladenbesitzer? <a href=\"\/admin\" class=\"text-link\">Hier anmelden<\/a>"
+    }
+  },
+  "social-media": {
+    "general": {
+      "social_label": "Treten Sie uns bei {{ social }} bei"
+    }
+  },
+  "search": {
+    "general": {
+      "no_results": "Es konnten keine Ergebnisse für „ {{ search_term }} “ gefunden werden.",
+      "search_results": "{{ count }} Ergebnisse für '' {{ search_term }} ''",
+      "cancel": "Stornieren",
+      "search_for": "Suchen nach '' {{ terms }} ''"
+    }
   }
 }
