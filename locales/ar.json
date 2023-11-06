@@ -217,21 +217,21 @@
       "shop_collection": "العودة إلى المنزل"
     },
     "breadcrumbs": {
-      "home": "Home",
-      "collection": "Collection"
+      "home": "بيت",
+      "collection": "مجموعة"
     },
     "pagination": {
-      "previous": "Previous",
-      "next": "Next"
+      "previous": "سابق",
+      "next": "التالي"
     }
   },
   "gift_card": {
-    "illustration": "Gift Card Illustration",
-    "title": "Here's Your Gift Card",
-    "apple_wallet_pass": "Add To Apple Wallet",
-    "message": "Use this code at checkout to redeem your gift card",
-    "go_to_shop": "Start Shopping",
-    "print": "Print"
+    "illustration": "رسم توضيحي لبطاقة الهدايا",
+    "title": "إليك بطاقة الهدايا الخاصة بك",
+    "apple_wallet_pass": "أضف إلى محفظة أبل",
+    "message": "استخدم هذا الرمز عند الخروج لاسترداد بطاقة الهدايا الخاصة بك",
+    "go_to_shop": "ابدأ التسوق",
+    "print": "مطبعة"
   },
   "newsletter": {
     "newsletter_form": {
