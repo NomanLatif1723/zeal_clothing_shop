@@ -213,14 +213,14 @@
   },
   "general": {
     "accessibility": {
-      "close-modal": "Close Modal",
-      "back-to-top": "Back To Top",
-      "skip-to-content": "Skip To Content"
+      "close-modal": "Modal schließen",
+      "back-to-top": "Zurück nach oben",
+      "skip-to-content": "Zum Inhalt springen"
     },
     "404": {
-      "text": "404 Error",
-      "sub_text_html": "<p>Oops! It looks like the page you were trying to reach doesn't exist. We're sorry for the inconvenience. Please use the navigation menu or search bar to find what you're looking for. Or, if you're feeling adventurous, why not explore our latest collections and discover something new?<\/p><p> Thank you for visiting our website!<\/p>",
-      "shop_collection": "BACK TO HOME"
+      "text": "404 Fehler",
+      "sub_text_html": "<p>Hoppla! Es sieht so aus, als ob die Seite, die Sie erreichen wollten, nicht existiert. Wir entschuldigen uns für die Unannehmlichkeiten. Bitte verwenden Sie das Navigationsmenü oder die Suchleiste, um zu finden, wonach Sie suchen. Oder, wenn Sie abenteuerlustig sind, warum erkunden Sie nicht unsere neuesten Kollektionen und entdecken etwas Neues?<\/p><p> Vielen Dank für Ihren Besuch auf unserer Website!<\/p>",
+      "shop_collection": "ZURÜCK NACH HAUSE"
     },
     "breadcrumbs": {
       "home": "Home",
