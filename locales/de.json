@@ -1,0 +1,156 @@
+{
+  "shopify": {
+    "checkout": {
+      "shipping": {
+        "split_cart_shipping_label": "Methode"
+      },
+      "shop_pay_external": {
+        "errors": {
+          "problem_loading": "Beim Laden von Shop Pay ist ein Problem aufgetreten",
+          "try_again_later": "Überprüfen Sie Ihre Verbindung oder schließen Sie dieses Fenster und versuchen Sie es in einigen Augenblicken erneut."
+        },
+        "return_to_store": "Zurück zu {{shopName}}"
+      }
+    }
+  },
+  "customer_accounts": {
+    "profile_preview_bar": {
+      "close_preview": "Vorschau schließen",
+      "actions_button": "Aktionen"
+    }
+  },
+  "sections": {
+    "announcement-bar": {
+      "header_announcement": "Ankündigungsleiste"
+    },
+    "header": {
+      "general": {
+        "navigation": "Speisekarte",
+        "account": "Konto",
+        "login": "Anmeldung",
+        "cart": "Wagen"
+      }
+    },
+    "footer": {
+      "copyright": {
+        "text": "Urheberrecht 2023",
+        "powered_by_text": "Unterstützt von Shopify"
+      }
+    },
+    "image-comparison": {
+      "label_before": "Vor",
+      "label_after": "Nach"
+    }
+  },
+  "article": {
+    "general": {
+      "author": "Von {{ author }}",
+      "sharing_socials_label": "Tipps"
+    },
+    "comments": {
+      "name_placeholder": "Gib deinen Namen ein",
+      "email_placeholder": "Beispiel@gmail.com",
+      "message": "Nachricht",
+      "message_placeholder": "Schreibe deine Nachricht",
+      "comments_count": "Kommentare( {{ count }} )",
+      "leave_comments": "Hinterlasse einen Kommentar",
+      "submit": "Einreichen",
+      "back": "Zurück",
+      "comment_published": "Ihr Kommentar wurde veröffentlicht",
+      "comment_sent": "Ihr Kommentar wurde gesendet. Es wird sichtbar sein, wenn der Eigentümer es akzeptiert hat.",
+      "empty": "Sie haben noch keine Kommentare"
+    }
+  },
+  "blogs": {
+    "article": {
+      "title": "Beispielartikeltitel",
+      "content": "Beispielinhalt eines Artikels",
+      "date": "25. April 2023",
+      "tag": "Mode",
+      "view_all_text": "Alle ansehen",
+      "read_more_text": "Mehr lesen.."
+    }
+  },
+  "cart": {
+    "general": {
+      "title": "Ihr Warenkorb",
+      "empty_cart": "Ihr Warenkorb ist derzeit leer",
+      "continue_shopping": "Mit dem Einkaufen fortfahren",
+      "add_note": "Notiz hinzufügen",
+      "remove": "Entfernen",
+      "final_line_price": "Zwischensumme:",
+      "note": "Warenkorbhinweis",
+      "summary": "Bestellübersicht",
+      "total_price": "Zwischensumme",
+      "total_discounts": "Rabatte",
+      "shipping": "Versand",
+      "shipping_text": "Versand und Steuern werden an der Kasse berechnet.",
+      "checkout": "Kasse",
+      "terms_at_checkout": "Ich akzeptiere die Nutzungsbedingungen",
+      "terms_message_at_checkout": "Um zur Kasse gehen zu können, müssen Sie den Allgemeinen Geschäftsbedingungen zustimmen",
+      "discount": "Rabatte",
+      "note_placeholder": "Gibt es spezielle Anweisungen für Ihre Bestellung?",
+      "free_shipping_eligible": "Sie sind vom kostenlosen Versand ausgeschlossen ",
+      "free_shipping_success_html": "Glückwunsch! Sie haben Anspruch auf kostenlosen Versand bei Bestellungen über {{ amount }}",
+      "view_cart": "Warenkorb ansehen",
+      "drawer_close": "Schließen",
+      "drawer_title": "Einkaufswagen",
+      "popup_title": "Gerade in Ihren Warenkorb gelegt"
+    },
+    "items": {
+      "item_added": "Artikel wurde Ihrem Warenkorb hinzugefügt",
+      "quantity_error_message": "Alle {{ quantity }} Artikel werden dem Warenkorb hinzugefügt"
+    }
+  },
+  "collections": {
+    "general": {
+      "all_collection": "Alle ansehen",
+      "products_count": "{{ products_count }} Ergebnisse",
+      "fiter_collection": "Filtern\/Sortieren",
+      "filter_drawer": "Filtern nach",
+      "sort_drawer": "Sortiere nach",
+      "remove_filters": "Filter entfernen",
+      "empty_collection_message": "Keine Produkte gefunden"
+    }
+  },
+  "collection-list": {
+    "general": {
+      "title": "Beispielsammlung"
+    }
+  },
+  "contact": {
+    "form": {
+      "success_mesage": "Ihr Formular wurde erfolgreich veröffentlicht. Wir werden uns so schnell wie möglich bei Ihnen melden.",
+      "phone": "Telefonnummer",
+      "comment": "Kommentar",
+      "submit": "Schicken"
+    }
+  },
+  "customers": {
+    "account": {
+      "title": "Konten",
+      "details": "Kontodetails",
+      "view_addresses": "Adressen anzeigen"
+    },
+    "activate_account": {
+      "title": "Aktiviere deinen Account",
+      "sub_text": "Erstellen Sie Ihr Passwort, um Ihr Konto zu aktivieren",
+      "submit": "Konto aktivieren",
+      "password": "Passwort",
+      "confirm_password": "Bestätige das Passwort",
+      "cancel": "Zurück",
+      "show_password": "Zeigen",
+      "hide_password": "Verstecken"
+    },
+    "addresses": {
+      "title": "Adressen",
+      "add_address": "Adresse hinzufügen",
+      "edit_address": "Bearbeiten",
+      "none": "Keine Adressen gefunden",
+      "first_name": "Vorname",
+      "last_name": "Familienname, Nachname",
+      "phone": "Telefonnummer",
+      "company": "Unternehmen"
+    }
+  }
+}
