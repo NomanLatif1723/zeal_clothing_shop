@@ -371,5 +371,12 @@
       "cancel": "Cancel",
       "search_for": "Search For ''{{ terms }}''"
     }
+  },
+  "shopify": {
+    "checkout": {
+      "shipping": {
+        "split_cart_shipping_label": "Méthode"
+      }
+    }
   }
 }
