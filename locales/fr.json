@@ -213,7 +213,7 @@
     },
     "404": {
       "text": "404 Error",
-      "sub_text_html": "<p>Oops! Il semble que la page que vous tentiez d'accéder n'existe pas. Nous sommes désolés pour la gêne occasionnée. Veuillez utiliser le menu de navigation ou la barre de recherche pour trouver ce que vous recherchez. Ou, si vous vous sentez aventureux, pourquoi ne pas explorer nos dernières collections et découvrir quelque chose de nouveau ?<\/p><p> Thank you for visiting our website!<\/p>",
+      "sub_text_html": "<p>Oops! Il semble que la page que vous tentiez d'accéder n'existe pas. Nous sommes désolés pour la gêne occasionnée. Veuillez utiliser le menu de navigation ou la barre de recherche pour trouver ce que vous recherchez. Ou, si vous vous sentez aventureux, pourquoi ne pas explorer nos dernières collections et découvrir quelque chose de nouveau ?<\/p><p> Merci de visiter notre site!<\/p>",
       "shop_collection": "BACK TO HOME"
     },
     "breadcrumbs": {
