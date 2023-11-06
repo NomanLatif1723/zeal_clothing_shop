@@ -81,26 +81,26 @@
   },
   "contact": {
     "form": {
-      "success_mesage": "Your Form Has Been Posted SuccessFully. We'll Get Back To You Asap.",
-      "name": "Name",
-      "email": "Email",
-      "phone": "Phone Number",
-      "comment": "Comment",
-      "submit": "Send"
+      "success_mesage": "Votre formulaire a été publié avec succès. Nous vous répondrons dès que possible.",
+      "name": "Nom",
+      "email": "E-mail",
+      "phone": "Numéro de téléphone",
+      "comment": "Commentaire",
+      "submit": "Envoyer"
     }
   },
   "customers": {
     "account": {
-      "title": "Accounts",
-      "details": "Account Details",
-      "view_addresses": "View Addresses"
+      "title": "Comptes",
+      "details": "Détails du compte",
+      "view_addresses": "Afficher les adresses"
     },
     "activate_account": {
-      "title": "Activate Your Account",
-      "sub_text": "Create Your Password to Activate Your Account",
-      "submit": "Activate Account",
-      "password": "Password",
-      "confirm_password": "Confirm Password",
+      "title": "Activez votre compte",
+      "sub_text": "Créez votre mot de passe pour activer votre compte",
+      "submit": "Activer le compte",
+      "password": "Mot de passe",
+      "confirm_password": "Confirmez le mot de passe",
       "cancel": "Dos",
       "show_password": "Show",
       "hide_password": "Hide"
@@ -112,7 +112,7 @@
       "none": "No Addresses Found",
       "first_name": "First Name",
       "last_name": "Last Name",
-      "phone": "Phone Number",
+      "phone": "Numéro de téléphone",
       "company": "Company",
       "address1": "Address1",
       "address2": "Address2",
@@ -133,7 +133,7 @@
     "login": {
       "title": "Login",
       "email": "Email Address",
-      "password": "Password",
+      "password": "Mot de passe",
       "submit": "Continue",
       "forget_password": "Forget Your Password",
       "create_account": "Create an Account",
@@ -199,7 +199,7 @@
       "sub_text": "Enter a new Password for Your Account",
       "submit": "Reset Password",
       "password": "Password",
-      "confirm_password": "Confirm Password",
+      "confirm_password": "Confirmez le mot de passe",
       "cancel": "Dos",
       "show_password": "Show",
       "hide_password": "Hide"
