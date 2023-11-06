@@ -39,119 +39,119 @@
       }
     },
     "age-verification-popup": {
-      "name": "Age verification",
+      "name": "Verification de l'AGE",
       "settings": {
         "age_verifier_heading": {
-          "label": "Age Verifier Heading"
+          "label": "Titre du vérificateur d'âge"
         },
         "age_verifier_text": {
-          "label": "Age Verifier Text"
+          "label": "Texte du vérificateur d'âge"
         },
         "header_confirmation": {
-          "label": "Age Confirmation Buttons",
+          "label": "Boutons de confirmation d'âge",
           "cancel_button_label": {
-            "label": "Cancel Button Label"
+            "label": "Étiquette du bouton Annuler"
           },
           "confirm_button_label": {
-            "label": "Confirm Button Label"
+            "label": "Confirmer l'étiquette du bouton"
           }
         },
         "header_declined": {
-          "label": "Declined Content",
+          "label": "Contenu refusé",
           "declined_heading": {
-            "label": "Heading"
+            "label": "Titre"
           },
           "declined_text": {
-            "label": "Text"
+            "label": "Texte"
           },
           "declined_button_label": {
-            "label": "Return Button Label"
+            "label": "Étiquette du bouton de retour"
           }
         }
       }
     },
     "blog-posts": {
-      "name": "Blog Posts",
+      "name": "Articles de blog",
       "settings": {
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Alignement",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Alignement du texte",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Gauche"
               },
               "center": {
                 "label": "Center"
               },
               "right": {
-                "label": "Right"
+                "label": "Droit"
               }
             }
           }
         },
         "posts_heading": {
-          "label": "Heading"
+          "label": "Titre"
         },
         "posts_text": {
-          "label": "Text"
+          "label": "Texte"
         },
         "blog": {
           "label": "Blog"
         },
         "show_date": {
-          "label": "Show Date"
+          "label": "Afficher la date"
         },
         "show_category": {
-          "label": "Show Category",
-          "info": "First Article tag will be shown as its category"
+          "label": "Afficher la catégorie",
+          "info": "La balise du premier article sera affichée comme sa catégorie"
         },
         "show_tags": {
-          "label": "Show Tags"
+          "label": "Voir les étiquettes"
         },
         "posts_to_show": {
-          "label": "Posts To Show"
+          "label": "Messages à afficher"
         },
         "show_view_all_btn": {
-          "label": "Enable 'View All' Button",
-          "info": "Enable 'View All' if blogs have more posts than Shown"
+          "label": "Activer le bouton « Afficher tout »",
+          "info": "Activez « Afficher tout » si les blogs contiennent plus de publications que celles affichées."
         },
         "post_image_size": {
-          "label": "Image Size",
+          "label": "Taille de l'image",
           "options": {
             "natural": {
-              "label": "Natural"
+              "label": "Naturel"
             },
             "square": {
-              "label": "Square(1:1)"
+              "label": "Carré(1:1)"
             },
             "portrait": {
               "label": "Portrait(2:3)"
             },
             "landscape": {
-              "label": "Landscape(4:3)"
+              "label": "Paysage(4:3)"
             },
             "wide": {
-              "label": "Wide(16:9)"
+              "label": "Large(16:9)"
             }
           }
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Activer les images LazyLoad",
+          "info": "Activer Lazyload si les images sont hors écran pour améliorer les performances"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Espacement des sections",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Espacement supérieur"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Espacement inférieur"
           }
         }
       },
       "presets": {
-        "name": "Blog Posts"
+        "name": "Articles de blog"
       }
     },
     "collection-list": {
