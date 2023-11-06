@@ -213,7 +213,7 @@
     },
     "404": {
       "text": "404 Error",
-      "sub_text_html": "<p>Oho! Näyttää siltä, ​​että sivua, jota yritit avata, ei ole olemassa. Pahoittelemme häiriötä. Käytä navigointivalikkoa tai hakupalkkia löytääksesi etsimäsi. Tai jos olet seikkailunhaluinen, miksi et tutustu uusimpiin kokoelmiimme ja löydä jotain uutta?<\/p><p> Thank you for visiting our website!<\/p>",
+      "sub_text_html": "<p>Oho! Näyttää siltä, ​​että sivua, jota yritit avata, ei ole olemassa. Pahoittelemme häiriötä. Käytä navigointivalikkoa tai hakupalkkia löytääksesi etsimäsi. Tai jos olet seikkailunhaluinen, miksi et tutustu uusimpiin kokoelmiimme ja löydä jotain uutta?<\/p><p> Kiitos vierailustasi verkkosivuillamme!<\/p>",
       "shop_collection": "BACK TO HOME"
     },
     "breadcrumbs": {
