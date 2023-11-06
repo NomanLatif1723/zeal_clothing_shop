@@ -163,7 +163,7 @@
       "payment_status_html": "<strong>حالة السداد:<\/strong> {{ status }}",
       "fulfillment_status_html": "<strong>حالة الاكتمال:<\/strong> {{ status }}",
       "product": "منتج",
-      "sku": "رمز التخزين التعريفي",
+      "sku": "SKU",
       "price": "سعر",
       "quantity": "كمية",
       "total": "المجموع",
@@ -235,48 +235,48 @@
   },
   "newsletter": {
     "newsletter_form": {
-      "email_placeholder": "Enter Your Email",
+      "email_placeholder": "أدخل بريدك الإلكتروني",
       "submit_text": "يُقدِّم",
-      "success_message": "Thanks For Subscribe"
+      "success_message": "شكرا للاشتراك"
     }
   },
   "popups": {
     "newsletter-popup": {
-      "show_popup": "Do not show this popup again."
+      "show_popup": "لا تظهر هذه النافذة المنبثقة مرة أخرى."
     }
   },
   "products": {
-    "promotional_message": "Hurry up! sale ends in",
+    "promotional_message": "أسرع - بسرعة! ينتهي البيع في",
     "minus": "ناقص",
     "plus": "زائد",
-    "quantity_label": "Qty",
-    "sizeguide_text": "Size Guide",
-    "sizechart": "Size Chart",
-    "add_to_cart": "Add To Cart",
-    "preorder": "Preorder",
-    "sold_out": "Sold Out",
-    "free_unit_price": "Free",
-    "taxes_included": "Tax Included.",
-    "shipping_policy_html": "<a href='{{ link }}'>شحن<\/a> calculated at checkout.",
-    "share_social": "Share:",
-    "item_added_success_message": "Item Added To Your Cart Successfully",
-    "view_full_info": "View Full Info",
+    "quantity_label": "الكمية",
+    "sizeguide_text": "دليل المقاسات",
+    "sizechart": "حجم الرسم البياني",
+    "add_to_cart": "أضف إلى السلة",
+    "preorder": "النظام السابق",
+    "sold_out": "نفذ",
+    "free_unit_price": "حر",
+    "taxes_included": "شامل الضريبة.",
+    "shipping_policy_html": "<a href='{{ link }}'>شحن<\/a> تحسب عند الخروج.",
+    "share_social": "يشارك:",
+    "item_added_success_message": "تمت إضافة العنصر إلى سلة التسوق الخاصة بك بنجاح",
+    "view_full_info": "عرض المعلومات الكاملة",
     "price": {
-      "regular_price": "Regular Price",
-      "sale_price": "Sale Price"
+      "regular_price": "سعر عادي",
+      "sale_price": "سعر البيع"
     },
     "form": {
-      "variants": "Variants"
+      "variants": "المتغيرات"
     },
     "badges": {
-      "on_sale": "Sale",
-      "sold_out": "Sold Out"
+      "on_sale": "أُوكَازيُون",
+      "sold_out": "نفذ"
     },
     "onboarding": {
-      "product_title": "Example Product",
+      "product_title": "منتج مثال",
       "product_price": "$30",
-      "product_description": "This area is used to describe your product’s details. Tell customers about the look, feel, and style of your product. Add details on color, materials used, sizing, and where it was made.",
-      "product_vendor": "Vendor"
+      "product_description": "تُستخدم هذه المنطقة لوصف تفاصيل منتجك. أخبر العملاء عن شكل منتجك ومظهره وأسلوبه. أضف تفاصيل عن اللون والمواد المستخدمة والحجم ومكان صنعها.",
+      "product_vendor": "بائع"
     },
     "sku": {
       "title": "Sku"
