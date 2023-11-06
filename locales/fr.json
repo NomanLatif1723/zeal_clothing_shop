@@ -1,8 +1,8 @@
 {
   "article": {
     "general": {
-      "author": "Par {{ author }}",
-      "sharing_socials_label": "Conseils & Astuces"
+      "author": "By {{ author }}",
+      "sharing_socials_label": "Tips & tricks"
     },
     "comments": {
       "name": "Name",
@@ -18,18 +18,6 @@
       "comment_published": "Your Comment has been Published",
       "comment_sent": "Your Comment has been sent. It will be visible when owner accepted it.",
       "empty": "You don't have any comments yet"
-    },
-    "socials": {
-      "facebook": "Facebook",
-      "instagram": "Instagram",
-      "twitter": "Twitter",
-      "pinterest": "Pinterest",
-      "snapchat": "SnapChat",
-      "youtube": "Youtube",
-      "vimeo": "Vimeo",
-      "tiktok": "Tiktok",
-      "tumblr": "Tumblr",
-      "linkedin": "LinkedIn"
     }
   },
   "blogs": {
@@ -365,6 +353,12 @@
   "social-media": {
     "general": {
       "social_label": "Join Us On {{ social }}"
+    },
+    "socials_share": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "twitter": "Twitter",
+      "pinterest": "Pinterest"
     }
   },
   "search": {
@@ -376,25 +370,6 @@
       "search_results": "{{ count }} Results for ''{{ search_term }}''",
       "cancel": "Cancel",
       "search_for": "Search For ''{{ terms }}''"
-    }
-  },
-  "shopify": {
-    "checkout": {
-      "shipping": {
-        "split_cart_shipping_label": "Méthode"
-      },
-      "shop_pay_external": {
-        "errors": {
-          "problem_loading": "Il y a un problème lors du chargement de Shop Pay",
-          "try_again_later": "Vérifiez votre connexion ou fermez cette fenêtre et réessayez dans quelques instants."
-        },
-        "return_to_store": "Revenir à {{shopName}}"
-      }
-    }
-  },
-  "customer_accounts": {
-    "profile_preview_bar": {
-      "close_preview": "Fermer l'aperçu"
     }
   }
 }
