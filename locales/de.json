@@ -150,7 +150,141 @@
       "first_name": "Vorname",
       "last_name": "Familienname, Nachname",
       "phone": "Telefonnummer",
-      "company": "Unternehmen"
+      "company": "Unternehmen",
+      "address1": "Adresse 1",
+      "address2": "Adresse 2",
+      "province": "Provinz",
+      "country": "Land",
+      "city": "Stadt",
+      "postal_code": "Postleitzahl",
+      "add_new": "Adresse hinzufügen",
+      "cancel": "Zurück",
+      "update": "Adresse aktualisieren",
+      "confirm_delete": "Sind Sie sicher, dass Sie diese Adresse löschen möchten?",
+      "set_default": "Als Standardadresse festlegen",
+      "default": "Standard",
+      "edit": "Bearbeiten",
+      "add": "Adresse hinzufügen",
+      "delete": "Löschen"
+    },
+    "login": {
+      "title": "Anmeldung",
+      "email": "E-Mail-Adresse",
+      "password": "Passwort",
+      "submit": "Weitermachen",
+      "forget_password": "Passwort vergessen",
+      "create_account": "Ein Konto erstellen",
+      "show_password": "Zeigen",
+      "hide_password": "Verstecken",
+      "guest_title": "Gast-Login",
+      "guest_submit": "Als Gast fortfahren"
+    },
+    "logout": {
+      "title": "Ausloggen"
+    },
+    "orders": {
+      "title": "Deine Bestellungen",
+      "order_number": "Befehl",
+      "date": "Datum",
+      "payment_status": "Zahlungsstatus",
+      "fulfilment_status": "Erfüllungsstatus",
+      "total": "Gesamt",
+      "no_orders_yet": "Sie haben noch keine Bestellungen aufgegeben."
+    },
+    "order": {
+      "title": "Bestellen Sie {{ name }}",
+      "return_url": "Zurück zu Konten",
+      "date_html": "Gepostet am {{ date }}",
+      "billing_address": "Rechnungsadresse",
+      "shipping_address": "Lieferanschrift",
+      "payment_status_html": "<strong>Zahlungsstatus:<\/strong> {{ status }}",
+      "fulfillment_status_html": "<strong>Erfüllungsstatus:<\/strong> {{ status }}",
+      "product": "Produkt",
+      "sku": "Artikelnummer",
+      "price": "Preis",
+      "quantity": "Menge",
+      "total": "Gesamt",
+      "subtotal": "Zwischensumme",
+      "shipping": "Versand",
+      "tax": "Steuer",
+      "cancelled_html": "Bestellung storniert am {{ date }}",
+      "cancelled_reason": "Grund: {{ reason }}",
+      "fulfilled_html": "Erfüllt am {{ date }}",
+      "discount": "Rabatt"
+    },
+    "recover_password": {
+      "title": "Haben Sie Ihr Passwort vergessen",
+      "sub_text": "Geben Sie Ihre E-Mail-Adresse ein und wir senden Ihnen einen Link zum Zurücksetzen Ihres Passworts.",
+      "submit": "Passwort zurücksetzen",
+      "email": "E-Mail-Adresse",
+      "cancel": "Zurück",
+      "success_mesage": "Wir haben Ihnen eine E-Mail mit einem Link zur Aktualisierung Ihres Passworts gesendet."
+    },
+    "register": {
+      "title": "Ein Konto erstellen",
+      "first_name": "Vorname",
+      "last_name": "Familienname, Nachname",
+      "email": "E-Mail-Adresse",
+      "password": "Passwort",
+      "show_password": "Zeigen",
+      "hide_password": "Verstecken",
+      "submit": "Benutzerkonto erstellen",
+      "login_user": "Hast du bereits einen Account? Logge dich ein"
+    },
+    "reset_password": {
+      "title": "Setze dein Passwort zurück",
+      "sub_text": "Geben Sie ein neues Passwort für Ihr Konto ein",
+      "submit": "Passwort zurücksetzen",
+      "password": "Passwort",
+      "confirm_password": "Bestätige das Passwort",
+      "cancel": "Zurück",
+      "show_password": "Zeigen",
+      "hide_password": "Verstecken"
     }
+  },
+  "general": {
+    "accessibility": {
+      "close-modal": "Modal schließen",
+      "back-to-top": "Zurück nach oben",
+      "skip-to-content": "Zum Inhalt springen"
+    },
+    "404": {
+      "text": "404 Fehler",
+      "sub_text_html": "<p>Hoppla! Es sieht so aus, als ob die Seite, die Sie erreichen wollten, nicht existiert. Wir entschuldigen uns für die Unannehmlichkeiten. Bitte verwenden Sie das Navigationsmenü oder die Suchleiste, um zu finden, wonach Sie suchen. Oder, wenn Sie abenteuerlustig sind, warum erkunden Sie nicht unsere neuesten Kollektionen und entdecken etwas Neues?<\/p><p> Vielen Dank für Ihren Besuch auf unserer Website!<\/p>",
+      "shop_collection": "ZURÜCK NACH HAUSE"
+    },
+    "breadcrumbs": {
+      "collection": "Sammlung"
+    },
+    "pagination": {
+      "previous": "Vorherige",
+      "next": "Nächste"
+    }
+  },
+  "gift_card": {
+    "illustration": "Illustration einer Geschenkkarte",
+    "title": "Hier ist Ihre Geschenkkarte",
+    "apple_wallet_pass": "Zur Apple Wallet hinzufügen",
+    "message": "Verwenden Sie diesen Code an der Kasse, um Ihre Geschenkkarte einzulösen",
+    "go_to_shop": "Beginn mit dem Einkauf",
+    "print": "Drucken"
+  },
+  "newsletter": {
+    "newsletter_form": {
+      "email_placeholder": "Geben sie ihre E-Mail Adresse ein",
+      "submit_text": "Einreichen",
+      "success_message": "Vielen Dank für Ihr Abonnement"
+    }
+  },
+  "popups": {
+    "newsletter-popup": {
+      "show_popup": "Dieses Popup nicht mehr anzeigen."
+    }
+  },
+  "products": {
+    "promotional_message": "Beeil dich! Der Verkauf endet in",
+    "quantity_label": "Menge",
+    "sizeguide_text": "Größentabelle",
+    "sizechart": "Größentabelle"
   }
 }
