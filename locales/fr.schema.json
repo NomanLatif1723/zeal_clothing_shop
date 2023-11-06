@@ -10,32 +10,32 @@
       "name": "Fenêtres contextuelles"
     },
     "announcement-bar": {
-      "name": "Announcement Bar",
+      "name": "Barre d'annonce",
       "settings": {
         "announcement_heading": {
-          "label": "Heading"
+          "label": "Titre"
         },
         "announcement_text": {
-          "label": "Text"
+          "label": "Texte"
         },
         "header_timer_details": {
-          "label": "Timer Details",
+          "label": "Détails de la minuterie",
           "announcement_show_timer": {
-            "label": "Show Timer"
+            "label": "Afficher la minuterie"
           },
           "timer_hour_label": {
-            "label": "Hours"
+            "label": "Heures"
           },
           "timer_minutes_label": {
             "label": "Minutes"
           },
           "show_socials": {
-            "label": "Show Socials"
+            "label": "Afficher les réseaux sociaux"
           }
         }
       },
       "presets": {
-        "name": "Announcement Bar"
+        "name": "Barre d'annonce"
       }
     },
     "age-verification-popup": {
