@@ -1,7 +1,7 @@
 {
   "article": {
     "general": {
-      "author": "By {{ author }}",
+      "author": "Por {{ author }}",
       "sharing_socials_label": "Tips & tricks"
     },
     "comments": {
