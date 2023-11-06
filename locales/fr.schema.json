@@ -173,18 +173,18 @@
           "label": "Products In A Collection"
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Alignement",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Alignement du texte",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Gauche"
               },
               "center": {
                 "label": "Center"
               },
               "right": {
-                "label": "Right"
+                "label": "Droit"
               }
             }
           }
@@ -244,18 +244,18 @@
           "label": "Liquid"
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Alignement",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Alignement du texte",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Gauche"
               },
               "center": {
                 "label": "Center"
               },
               "right": {
-                "label": "Right"
+                "label": "Droit"
               }
             }
           }
@@ -321,18 +321,18 @@
           "label": "Products Per Row"
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Alignement",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Alignement du texte",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Gauche"
               },
               "center": {
                 "label": "Center"
               },
               "right": {
-                "label": "Right"
+                "label": "Droit"
               }
             }
           }
@@ -472,18 +472,18 @@
           "info": "Enable View All Only If your collection has more products than shown"
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Alignement",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Alignement du texte",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Gauche"
               },
               "center": {
                 "label": "Center"
               },
               "right": {
-                "label": "Right"
+                "label": "Droit"
               }
             }
           }
@@ -519,18 +519,18 @@
           "label": "Text"
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Alignement",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Alignement du texte",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Gauche"
               },
               "center": {
                 "label": "Center"
               },
               "right": {
-                "label": "Right"
+                "label": "Droit"
               }
             }
           }
@@ -780,18 +780,18 @@
           "label": "Text"
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Alignement",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Alignement du texte",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Gauche"
               },
               "center": {
                 "label": "Center"
               },
               "right": {
-                "label": "Right"
+                "label": "Droit"
               }
             }
           }
@@ -1022,16 +1022,16 @@
               }
             },
             "alignment": {
-              "label": "Text alignment",
+              "label": "Alignement du texte",
               "options": {
                 "left": {
-                  "label": "Left"
+                  "label": "Gauche"
                 },
                 "center": {
                   "label": "Center"
                 },
                 "right": {
-                  "label": "Right"
+                  "label": "Droit"
                 }
               }
             },
@@ -1245,18 +1245,18 @@
           }
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Alignement",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Alignement du texte",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Gauche"
               },
               "center": {
                 "label": "Center"
               },
               "right": {
-                "label": "Right"
+                "label": "Droit"
               }
             }
           }
@@ -1317,18 +1317,18 @@
           }
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Alignement",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Alignement du texte",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Gauche"
               },
               "center": {
                 "label": "Center"
               },
               "right": {
-                "label": "Right"
+                "label": "Droit"
               }
             }
           }
@@ -1469,18 +1469,18 @@
       "name": "Page",
       "settings": {
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Alignement",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Alignement du texte",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Gauche"
               },
               "center": {
                 "label": "Center"
               },
               "right": {
-                "label": "Right"
+                "label": "Droit"
               }
             }
           }
@@ -1503,18 +1503,18 @@
           "label": "Show Vendor"
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Alignement",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Alignement du texte",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Gauche"
               },
               "center": {
                 "label": "Center"
               },
               "right": {
-                "label": "Right"
+                "label": "Droit"
               }
             }
           }
@@ -1885,16 +1885,16 @@
           }
         },
         "alignment": {
-          "label": "Text alignment",
+          "label": "Alignement du texte",
           "options": {
             "left": {
-              "label": "Left"
+              "label": "Gauche"
             },
             "center": {
               "label": "Center"
             },
             "right": {
-              "label": "Right"
+              "label": "Droit"
             }
           }
         }
@@ -2042,16 +2042,16 @@
           }
         },
         "alignment": {
-          "label": "Text alignment",
+          "label": "Alignement du texte",
           "options": {
             "left": {
-              "label": "Left"
+              "label": "Gauche"
             },
             "center": {
               "label": "Center"
             },
             "right": {
-              "label": "Right"
+              "label": "Droit"
             }
           }
         },
@@ -2079,18 +2079,18 @@
           "label": "Button Label"
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Alignement",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Alignement du texte",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Gauche"
               },
               "center": {
                 "label": "Center"
               },
               "right": {
-                "label": "Right"
+                "label": "Droit"
               }
             }
           }
@@ -2197,18 +2197,18 @@
           "label": "Enable LazyLoad Images"
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Alignement",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Alignement du texte",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Gauche"
               },
               "center": {
                 "label": "Center"
               },
               "right": {
-                "label": "Right"
+                "label": "Droit"
               }
             }
           }
@@ -2527,16 +2527,16 @@
               }
             },
             "alignment": {
-              "label": "Text alignment",
+              "label": "Alignement du texte",
               "options": {
                 "left": {
-                  "label": "Left"
+                  "label": "Gauche"
                 },
                 "center": {
                   "label": "Center"
                 },
                 "right": {
-                  "label": "Right"
+                  "label": "Droit"
                 }
               }
             },
@@ -2572,18 +2572,18 @@
           "label": "Products Per Row"
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Alignement",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Alignement du texte",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Gauche"
               },
               "center": {
                 "label": "Center"
               },
               "right": {
-                "label": "Right"
+                "label": "Droit"
               }
             }
           }
@@ -2610,18 +2610,18 @@
       "name": "Rich Text",
       "settings": {
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Alignement",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Alignement du texte",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Gauche"
               },
               "center": {
                 "label": "Center"
               },
               "right": {
-                "label": "Right"
+                "label": "Droit"
               }
             }
           }
@@ -2782,16 +2782,16 @@
               }
             },
             "alignment": {
-              "label": "Text alignment",
+              "label": "Alignement du texte",
               "options": {
                 "left": {
-                  "label": "Left"
+                  "label": "Gauche"
                 },
                 "center": {
                   "label": "Center"
                 },
                 "right": {
-                  "label": "Right"
+                  "label": "Droit"
                 }
               }
             },
@@ -2860,18 +2860,18 @@
               "label": "Text"
             },
             "header_alignment": {
-              "label": "Alignment",
+              "label": "Alignement",
               "alignment": {
-                "label": "Text alignment",
+                "label": "Alignement du texte",
                 "options": {
                   "left": {
-                    "label": "Left"
+                    "label": "Gauche"
                   },
                   "center": {
                     "label": "Center"
                   },
                   "right": {
-                    "label": "Right"
+                    "label": "Droit"
                   }
                 }
               }
@@ -2899,18 +2899,18 @@
           "label": "Link"
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Alignement",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Alignement du texte",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Gauche"
               },
               "center": {
                 "label": "Center"
               },
               "right": {
-                "label": "Right"
+                "label": "Droit"
               }
             }
           }
@@ -2967,18 +2967,18 @@
           "label": "Text"
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Alignement",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Alignement du texte",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Gauche"
               },
               "center": {
                 "label": "Center"
               },
               "right": {
-                "label": "Right"
+                "label": "Droit"
               }
             }
           }
@@ -3145,16 +3145,16 @@
             }
           },
           "alignment": {
-            "label": "Text alignment",
+            "label": "Alignement du texte",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Gauche"
               },
               "center": {
                 "label": "Center"
               },
               "right": {
-                "label": "Right"
+                "label": "Droit"
               }
             }
           }
