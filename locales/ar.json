@@ -5,25 +5,25 @@
       "sharing_socials_label": "نصائح وخدع"
     },
     "comments": {
-      "name": "Name",
-      "name_placeholder": "Enter Your Name",
-      "email": "Email",
-      "email_placeholder": "Example@gmail.com",
-      "message": "Message",
-      "message_placeholder": "Write Your Message",
-      "comments_count": "Comments({{ count }})",
-      "leave_comments": "leave a Comment",
-      "submit": "Submit",
-      "back": "Back",
-      "comment_published": "Your Comment has been Published",
-      "comment_sent": "Your Comment has been sent. It will be visible when owner accepted it.",
-      "empty": "You don't have any comments yet"
+      "name": "اسم",
+      "name_placeholder": "أدخل أسمك",
+      "email": "بريد إلكتروني",
+      "email_placeholder": "example@gmail.com",
+      "message": "رسالة",
+      "message_placeholder": "اكتب رسالتك",
+      "comments_count": "تعليقات ({{ count }})",
+      "leave_comments": "اترك تعليقا",
+      "submit": "يُقدِّم",
+      "back": "خلف",
+      "comment_published": "وقد تم نشر تعليقك",
+      "comment_sent": "لقد تم ارسال تعليقك. سيكون مرئيًا عندما يقبله المالك.",
+      "empty": "ليس لديك أي تعليقات حتى الآن"
     },
     "socials": {
-      "facebook": "Facebook",
-      "instagram": "Instagram",
-      "twitter": "Twitter",
-      "pinterest": "Pinterest"
+      "facebook": "فيسبوك",
+      "instagram": "انستغرام",
+      "twitter": "تويتر",
+      "pinterest": "بينتريست"
     }
   },
   "blogs": {
@@ -107,7 +107,7 @@
       "submit": "Activate Account",
       "password": "Password",
       "confirm_password": "Confirm Password",
-      "cancel": "Back",
+      "cancel": "خلف",
       "show_password": "Show",
       "hide_password": "Hide"
     },
@@ -127,7 +127,7 @@
       "city": "City",
       "postal_code": "Postal\/Zip Code",
       "add_new": "Add Address",
-      "cancel": "Back",
+      "cancel": "خلف",
       "update": "Update Address",
       "confirm_delete": "Are you sure you want to delete this address?",
       "set_default": "Set as Default Address",
@@ -186,7 +186,7 @@
       "sub_text": "Enter your email address, and we'll send you a link to reset your password.",
       "submit": "Reset Password",
       "email": "Email Address",
-      "cancel": "Back",
+      "cancel": "خلف",
       "success_mesage": "We've sent you an email with a link to update your password."
     },
     "register": {
@@ -206,7 +206,7 @@
       "submit": "Reset Password",
       "password": "Password",
       "confirm_password": "Confirm Password",
-      "cancel": "Back",
+      "cancel": "خلف",
       "show_password": "Show",
       "hide_password": "Hide"
     }
@@ -242,7 +242,7 @@
   "newsletter": {
     "newsletter_form": {
       "email_placeholder": "Enter Your Email",
-      "submit_text": "Submit",
+      "submit_text": "يُقدِّم",
       "success_message": "Thanks For Subscribe"
     }
   },
@@ -325,7 +325,7 @@
       "login_form_heading": "Enter Password",
       "login_form_password_label": "Password",
       "login_form_password_placeholder": "Password",
-      "login_form_submit": "Submit",
+      "login_form_submit": "يُقدِّم",
       "powered_by_shopify_html": "This shop will be powered by {{ shopify }}",
       "admin_link_html": "Are You The Store owner? <a href=\"\/admin\" class=\"text-link\">Log in here<\/a>"
     }
