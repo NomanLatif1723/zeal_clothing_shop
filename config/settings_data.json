@@ -64,7 +64,8 @@
         "settings": {
           "logo": "shopify:\/\/shop_images\/Group_172.png",
           "desktop_logo_width": 110,
-          "mobile_logo_width": 110
+          "mobile_logo_width": 110,
+          "gift_card_image": "shopify:\/\/shop_images\/image19.jpg"
         }
       },
       "password-header": {
