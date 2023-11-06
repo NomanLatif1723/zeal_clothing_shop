@@ -288,25 +288,25 @@
       "title": "Sku"
     },
     "tags": {
-      "title": "Tags",
-      "empty": "Please Add Some tags to the Product"
+      "title": "Stichworte",
+      "empty": "Bitte fügen Sie dem Produkt einige Tags hinzu"
     },
     "category": {
-      "title": "Category",
-      "empty": "Products Should be in one or more Collections to be appear here as Category"
+      "title": "Kategorie",
+      "empty": "Produkte sollten in einer oder mehreren Sammlungen enthalten sein, um hier als Kategorie angezeigt zu werden"
     },
     "stock": {
-      "title": "Available",
-      "inventory_in_stock": "In Stock",
-      "inventory_in_stock_count": "{{ quantity }} In Stock",
-      "inventory_low_stock": "Low Stock",
-      "inventory_low_stock_count": "Low Stock: {{ items }} Left",
-      "inventory_out_of_stock_contine_selling": "In Stock",
-      "inventory_out_of_stock": "Out of Stock"
+      "title": "Verfügbar",
+      "inventory_in_stock": "Auf Lager",
+      "inventory_in_stock_count": "{{ quantity }} Auf Lager",
+      "inventory_low_stock": "Geringer Bestand",
+      "inventory_low_stock_count": "Geringer Bestand: {{ items }} Links",
+      "inventory_out_of_stock_contine_selling": "Auf Lager",
+      "inventory_out_of_stock": "Ausverkauft"
     },
     "accessibility": {
-      "star_reviews_info": "{{ rating_value }} out of {{ rating_max }} stars",
-      "total_reviews": "Total Reviews {{ count }}"
+      "star_reviews_info": "{{ rating_value }} aus {{ rating_max }} Sterne",
+      "total_reviews": "Gesamtbewertungen {{ count }}"
     }
   },
   "pickup_availability": {
