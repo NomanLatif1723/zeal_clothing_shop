@@ -1,13 +1,13 @@
 {
   "sections": {
     "header-group": {
-      "name": "Header"
+      "name": "رأس"
     },
     "footer-group": {
-      "name": "Footer"
+      "name": "تذييل"
     },
     "popup-group": {
-      "name": "Popups"
+      "name": "تظهر ظهور مفاجئ"
     },
     "announcement-bar": {
       "name": "Announcement Bar",

@@ -1,13 +1,13 @@
 {
   "sections": {
     "header-group": {
-      "name": "Header"
+      "name": "Entête"
     },
     "footer-group": {
-      "name": "Footer"
+      "name": "Bas de page"
     },
     "popup-group": {
-      "name": "Popups"
+      "name": "Fenêtres contextuelles"
     },
     "announcement-bar": {
       "name": "Announcement Bar",
