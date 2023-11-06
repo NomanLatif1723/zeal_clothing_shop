@@ -326,50 +326,50 @@
   },
   "sections": {
     "announcement-bar": {
-      "header_announcement": "Announcement Bar"
+      "header_announcement": "شريط الإعلان"
     },
     "header": {
       "general": {
-        "navigation": "Menu",
-        "account": "Account",
-        "login": "Log In",
-        "cart": "Cart"
+        "navigation": "قائمة طعام",
+        "account": "حساب",
+        "login": "تسجيل الدخول",
+        "cart": "عربة التسوق"
       }
     },
     "footer": {
       "copyright": {
-        "text": "Copyright 2023",
-        "powered_by_text": "Powered By Shopify"
+        "text": "حقوق الطبع والنشر 2023",
+        "powered_by_text": "مدعوم من شوبيفاي"
       }
     },
     "search": {
-      "title": "Search"
+      "title": "يبحث"
     },
     "image-comparison": {
-      "label_before": "Before",
-      "label_after": "After"
+      "label_before": "قبل",
+      "label_after": "بعد"
     }
   },
   "social-media": {
     "general": {
-      "social_label": "Join Us On {{ social }}"
+      "social_label": "انضم إلينا على {{ social }}"
     },
     "socials_share": {
-      "facebook": "Facebook",
-      "instagram": "Instagram",
-      "twitter": "Twitter",
-      "pinterest": "Pinterest"
+      "facebook": "فيسبوك",
+      "instagram": "انستغرام",
+      "twitter": "تويتر",
+      "pinterest": "بينتريست"
     }
   },
   "search": {
     "general": {
-      "title": "Search",
-      "submit": "Search",
-      "search_placeholder": "Search",
-      "no_results": "No Results Could be Found For ''{{ search_term }}''",
-      "search_results": "{{ count }} Results for ''{{ search_term }}''",
-      "cancel": "Cancel",
-      "search_for": "Search For ''{{ terms }}''"
+      "title": "يبحث",
+      "submit": "يبحث",
+      "search_placeholder": "يبحث",
+      "no_results": "لا يمكن العثور على نتائج ل ''{{ search_term }}''",
+      "search_results": "{{ count }} نتائج ل ''{{ search_term }}''",
+      "cancel": "يلغي",
+      "search_for": "بحث عن ''{{ terms }}''"
     }
   }
 }
