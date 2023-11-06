@@ -182,23 +182,23 @@
       "discount": "Rabatt"
     },
     "recover_password": {
-      "title": "Forgot Your Password",
-      "sub_text": "Enter your email address, and we'll send you a link to reset your password.",
-      "submit": "Reset Password",
-      "email": "Email Address",
+      "title": "Haben Sie Ihr Passwort vergessen",
+      "sub_text": "Geben Sie Ihre E-Mail-Adresse ein und wir senden Ihnen einen Link zum Zurücksetzen Ihres Passworts.",
+      "submit": "Passwort zurücksetzen",
+      "email": "E-Mail-Adresse",
       "cancel": "Zurück",
-      "success_mesage": "We've sent you an email with a link to update your password."
+      "success_mesage": "Wir haben Ihnen eine E-Mail mit einem Link zur Aktualisierung Ihres Passworts gesendet."
     },
     "register": {
-      "title": "Create An Account",
-      "first_name": "First Name",
-      "last_name": "Last Name",
-      "email": "Email Address",
-      "password": "Password",
+      "title": "Ein Konto erstellen",
+      "first_name": "Vorname",
+      "last_name": "Familienname, Nachname",
+      "email": "E-Mail-Adresse",
+      "password": "Passwort",
       "show_password": "Zeigen",
       "hide_password": "Verstecken",
-      "submit": "Create Account",
-      "login_user": "Already Have an Account\/Login"
+      "submit": "Benutzerkonto erstellen",
+      "login_user": "Hast du bereits einen Account? Logge dich ein"
     },
     "reset_password": {
       "title": "Reset Your Password",
