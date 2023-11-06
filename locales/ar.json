@@ -18,18 +18,6 @@
       "comment_published": "وقد تم نشر تعليقك",
       "comment_sent": "لقد تم ارسال تعليقك. سيكون مرئيًا عندما يقبله المالك.",
       "empty": "ليس لديك أي تعليقات حتى الآن"
-    },
-    "socials": {
-      "facebook": "فيسبوك",
-      "instagram": "انستغرام",
-      "twitter": "تويتر",
-      "pinterest": "بينتريست",
-      "snapchat": "SnapChat",
-      "youtube": "Youtube",
-      "vimeo": "Vimeo",
-      "tiktok": "Tiktok",
-      "tumblr": "Tumblr",
-      "linkedin": "LinkedIn"
     }
   },
   "blogs": {
@@ -365,6 +353,12 @@
   "social-media": {
     "general": {
       "social_label": "Join Us On {{ social }}"
+    },
+    "socials_share": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "twitter": "Twitter",
+      "pinterest": "Pinterest"
     }
   },
   "search": {
