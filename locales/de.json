@@ -311,65 +311,65 @@
   },
   "pickup_availability": {
     "general": {
-      "pick_up_available_at_html": "Pickup Available at {{ location_name }}",
-      "view_store_info": "View Store Info",
-      "check_other_stores": "Check Other Stores",
-      "pick_up_unavailable_at_html": "Pickup UnAvailable at {{ location_name }}",
-      "pick_up_available": "Pickup Available",
-      "pick_up_currently_unavailable": "Pickup Currently Un Available"
+      "pick_up_available_at_html": "Abholung möglich unter {{ location_name }}",
+      "view_store_info": "Shop-Informationen anzeigen",
+      "check_other_stores": "Überprüfen Sie andere Geschäfte",
+      "pick_up_unavailable_at_html": "Abholung möglich unter {{ location_name }}",
+      "pick_up_available": "Abholung möglich",
+      "pick_up_currently_unavailable": "Abholung derzeit nicht möglich"
     }
   },
   "password-page": {
     "general": {
-      "password_link": "Enter Using Password",
-      "login_form_heading": "Enter Password",
-      "login_form_password_label": "Password",
-      "login_form_password_placeholder": "Password",
+      "password_link": "Geben Sie mit Passwort ein",
+      "login_form_heading": "Passwort eingeben",
+      "login_form_password_label": "Passwort",
+      "login_form_password_placeholder": "Passwort",
       "login_form_submit": "Einreichen",
-      "powered_by_shopify_html": "This shop will be powered by {{ shopify }}",
-      "admin_link_html": "Are You The Store owner? <a href=\"\/admin\" class=\"text-link\">Log in here<\/a>"
+      "powered_by_shopify_html": "Dieser Shop wird betrieben von {{ shopify }}",
+      "admin_link_html": "Sind Sie der Ladenbesitzer? <a href=\"\/admin\" class=\"text-link\">Hier anmelden<\/a>"
     }
   },
   "sections": {
     "announcement-bar": {
-      "header_announcement": "Announcement Bar"
+      "header_announcement": "Ankündigungsleiste"
     },
     "header": {
       "general": {
-        "navigation": "Menu",
-        "account": "Account",
-        "login": "Log In",
-        "cart": "Cart"
+        "navigation": "Speisekarte",
+        "account": "Konto",
+        "login": "Anmeldung",
+        "cart": "Wagen"
       }
     },
     "footer": {
       "copyright": {
-        "text": "Copyright 2023",
-        "powered_by_text": "Powered By Shopify"
+        "text": "Urheberrechte © 2023",
+        "powered_by_text": "Unterstützt von Shopify"
       }
     },
     "search": {
-      "title": "Search"
+      "title": "Suchen"
     },
     "image-comparison": {
-      "label_before": "Before",
-      "label_after": "After"
+      "label_before": "Vor",
+      "label_after": "Nach"
     }
   },
   "social-media": {
     "general": {
-      "social_label": "Join Us On {{ social }}"
+      "social_label": "Machen Sie mit {{ social }}"
     }
   },
   "search": {
     "general": {
-      "title": "Search",
-      "submit": "Search",
-      "search_placeholder": "Search",
-      "no_results": "No Results Could be Found For ''{{ search_term }}''",
-      "search_results": "{{ count }} Results for ''{{ search_term }}''",
-      "cancel": "Cancel",
-      "search_for": "Search For ''{{ terms }}''"
+      "title": "Suchen",
+      "submit": "Suchen",
+      "search_placeholder": "Suchen",
+      "no_results": "Es konnten keine Ergebnisse gefunden werden ''{{ search_term }}''",
+      "search_results": "{{ count }} Ergebnisse für ''{{ search_term }}''",
+      "cancel": "Stornieren",
+      "search_for": "Suchen nach ''{{ terms }}''"
     }
   }
 }
