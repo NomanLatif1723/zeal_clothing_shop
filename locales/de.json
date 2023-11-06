@@ -33,153 +33,153 @@
       "date": "25. April 2023",
       "tag": "Mode",
       "view_all_text": "Alle ansehen",
-      "read_more_text": "Read More.."
+      "read_more_text": "Mehr lesen.."
     }
   },
   "cart": {
     "general": {
-      "title": "Your Cart",
-      "empty_cart": "Your Cart is currently Empty",
-      "continue_shopping": "Continue Shopping",
-      "add_note": "Add Note",
-      "remove": "Remove",
-      "final_line_price": "Subtotal:",
-      "note": "Cart Note",
-      "summary": "Order Summary",
-      "total_price": "Subtotal",
-      "total_discounts": "Discounts",
-      "shipping": "Shipping",
-      "shipping_text": "Shipping and tax calculated at checkout.",
-      "checkout": "Checkout",
-      "terms_at_checkout": "I agree with Terms and Conditions",
-      "terms_message_at_checkout": "You must agree with the terms and conditions to check out",
-      "discount": "Discounts",
-      "note_placeholder": "Any special instructions for your order?",
-      "free_shipping_eligible": "You are away from free shipping by ",
-      "free_shipping_success_html": "Congratulations! You qualify for free shipping on orders over {{ amount }}",
-      "view_cart": "View Cart",
-      "drawer_close": "Close",
-      "drawer_title": "Shopping Cart",
-      "popup_title": "Just Added To Your Cart",
+      "title": "Ihr Warenkorb",
+      "empty_cart": "Ihr Warenkorb ist derzeit leer",
+      "continue_shopping": "Mit dem Einkaufen fortfahren",
+      "add_note": "Notiz hinzufügen",
+      "remove": "Entfernen",
+      "final_line_price": "Zwischensumme:",
+      "note": "Warenkorbhinweis",
+      "summary": "Bestellübersicht",
+      "total_price": "Zwischensumme",
+      "total_discounts": "Rabatte",
+      "shipping": "Versand",
+      "shipping_text": "Versand und Steuern werden an der Kasse berechnet.",
+      "checkout": "Kasse",
+      "terms_at_checkout": "Ich akzeptiere die Nutzungsbedingungen",
+      "terms_message_at_checkout": "Um zur Kasse gehen zu können, müssen Sie den Allgemeinen Geschäftsbedingungen zustimmen",
+      "discount": "Rabatte",
+      "note_placeholder": "Gibt es spezielle Anweisungen für Ihre Bestellung?",
+      "free_shipping_eligible": "Sie sind vom kostenlosen Versand ausgeschlossen ",
+      "free_shipping_success_html": "Glückwunsch! Sie haben Anspruch auf kostenlosen Versand ab Bestellungen {{ amount }}",
+      "view_cart": "Warenkorb ansehen",
+      "drawer_close": "Schließen",
+      "drawer_title": "Einkaufswagen",
+      "popup_title": "Gerade in Ihren Warenkorb gelegt",
       "plus": "Plus",
       "minus": "Minus"
     },
     "items": {
-      "item_added": "Item Added To your Cart",
-      "quantity_error_message": "All {{ quantity }} Items are Added to Cart"
+      "item_added": "Artikel wurde Ihrem Warenkorb hinzugefügt",
+      "quantity_error_message": "Alle {{ quantity }} Artikel werden zum Warenkorb hinzugefügt"
     }
   },
   "collections": {
     "general": {
-      "all_collection": "View All",
-      "products_count": "{{ products_count }} Results",
-      "fiter_collection": "Filter\/Sort",
-      "filter_drawer": "Filter By",
-      "sort_drawer": "Sort By",
-      "remove_filters": "Remove Filters",
-      "empty_collection_message": "No Products Found"
+      "all_collection": "Alle ansehen",
+      "products_count": "{{ products_count }} Ergebnisse",
+      "fiter_collection": "Filter\/Sortieren",
+      "filter_drawer": "Filtern nach",
+      "sort_drawer": "Sortiere nach",
+      "remove_filters": "Filter entfernen",
+      "empty_collection_message": "Keine Produkte gefunden"
     }
   },
   "collection-list": {
     "general": {
-      "title": "Example Collection"
+      "title": "Beispielsammlung"
     }
   },
   "contact": {
     "form": {
-      "success_mesage": "Your Form Has Been Posted SuccessFully. We'll Get Back To You Asap.",
+      "success_mesage": "Ihr Formular wurde erfolgreich veröffentlicht. Wir werden uns so schnell wie möglich bei Ihnen melden.",
       "name": "Name",
       "email": "Email",
-      "phone": "Phone Number",
-      "comment": "Comment",
-      "submit": "Send"
+      "phone": "Telefonnummer",
+      "comment": "Kommentar",
+      "submit": "Schicken"
     }
   },
   "customers": {
     "account": {
-      "title": "Accounts",
-      "details": "Account Details",
-      "view_addresses": "View Addresses"
+      "title": "Konten",
+      "details": "Kontodetails",
+      "view_addresses": "Adressen anzeigen"
     },
     "activate_account": {
-      "title": "Activate Your Account",
-      "sub_text": "Create Your Password to Activate Your Account",
-      "submit": "Activate Account",
-      "password": "Password",
-      "confirm_password": "Confirm Password",
+      "title": "Aktiviere deinen Account",
+      "sub_text": "Erstellen Sie Ihr Passwort, um Ihr Konto zu aktivieren",
+      "submit": "Konto aktivieren",
+      "password": "Passwort",
+      "confirm_password": "Bestätige das Passwort",
       "cancel": "Zurück",
-      "show_password": "Show",
-      "hide_password": "Hide"
+      "show_password": "Zeigen",
+      "hide_password": "Verstecken"
     },
     "addresses": {
-      "title": "Addresses",
-      "add_address": "Add Address",
-      "edit_address": "Edit",
-      "none": "No Addresses Found",
-      "first_name": "First Name",
-      "last_name": "Last Name",
-      "phone": "Phone Number",
-      "company": "Company",
-      "address1": "Address1",
-      "address2": "Address2",
-      "province": "Province",
-      "country": "Country",
-      "city": "City",
-      "postal_code": "Postal\/Zip Code",
-      "add_new": "Add Address",
+      "title": "Adressen",
+      "add_address": "Adresse hinzufügen",
+      "edit_address": "Bearbeiten",
+      "none": "Keine Adressen gefunden",
+      "first_name": "Vorname",
+      "last_name": "Familienname, Nachname",
+      "phone": "Telefonnummer",
+      "company": "Unternehmen",
+      "address1": "Adresse 1",
+      "address2": "Adresse 2",
+      "province": "Provinz",
+      "country": "Land",
+      "city": "Stadt",
+      "postal_code": "Postleitzahl",
+      "add_new": "Adresse hinzufügen",
       "cancel": "Zurück",
-      "update": "Update Address",
-      "confirm_delete": "Are you sure you want to delete this address?",
-      "set_default": "Set as Default Address",
-      "default": "Default",
-      "edit": "Edit",
-      "add": "Add Address",
-      "delete": "Delete"
+      "update": "Adresse aktualisieren",
+      "confirm_delete": "Sind Sie sicher, dass Sie diese Adresse löschen möchten?",
+      "set_default": "Als Standardadresse festlegen",
+      "default": "Standard",
+      "edit": "Bearbeiten",
+      "add": "Adresse hinzufügen",
+      "delete": "Löschen"
     },
     "login": {
-      "title": "Login",
-      "email": "Email Address",
-      "password": "Password",
-      "submit": "Continue",
-      "forget_password": "Forget Your Password",
-      "create_account": "Create an Account",
-      "show_password": "Show",
-      "hide_password": "Hide",
-      "guest_title": "Guest Login",
-      "guest_submit": "Continue as Guest"
+      "title": "Anmeldung",
+      "email": "E-Mail-Adresse",
+      "password": "Passwort",
+      "submit": "Weitermachen",
+      "forget_password": "Passwort vergessen",
+      "create_account": "Ein Konto erstellen",
+      "show_password": "Zeigen",
+      "hide_password": "Verstecken",
+      "guest_title": "Gast-Login",
+      "guest_submit": "Als Gast fortfahren"
     },
     "logout": {
-      "title": "Logout"
+      "title": "Ausloggen"
     },
     "orders": {
-      "title": "Your Orders",
-      "order_number": "Order",
-      "date": "Date",
-      "payment_status": "Payment Status",
-      "fulfilment_status": "Fulfilment Status",
-      "total": "Total",
-      "no_orders_yet": "You haven't placed any Orders yet."
+      "title": "Deine Bestellungen",
+      "order_number": "Befehl",
+      "date": "Datum",
+      "payment_status": "Zahlungsstatus",
+      "fulfilment_status": "Erfüllungsstatus",
+      "total": "Gesamt",
+      "no_orders_yet": "Sie haben noch keine Bestellungen aufgegeben."
     },
     "order": {
-      "title": "Order {{ name }}",
-      "return_url": "Back To Accounts",
-      "date_html": "Placed on {{ date }}",
-      "billing_address": "Billing Address",
-      "shipping_address": "Shipping Address",
-      "payment_status_html": "<strong>Payment Status:<\/strong> {{ status }}",
-      "fulfillment_status_html": "<strong>Fulfillment Status:<\/strong> {{ status }}",
-      "product": "Product",
-      "sku": "SKU",
-      "price": "Price",
-      "quantity": "Quantity",
-      "total": "Total",
-      "subtotal": "Subtotal",
-      "shipping": "Shipping",
-      "tax": "Tax",
-      "cancelled_html": "Order Canceled On {{ date }}",
-      "cancelled_reason": "Reason: {{ reason }}",
-      "fulfilled_html": "Fulfilled {{ date }}",
-      "discount": "Discount"
+      "title": "Befehl {{ name }}",
+      "return_url": "Zurück zu Konten",
+      "date_html": "Platziert auf {{ date }}",
+      "billing_address": "Rechnungsadresse",
+      "shipping_address": "Lieferanschrift",
+      "payment_status_html": "<strong>Zahlungsstatus:<\/strong> {{ status }}",
+      "fulfillment_status_html": "<strong>Erfüllungsstatus:<\/strong> {{ status }}",
+      "product": "Produkt",
+      "sku": "Artikelnummer",
+      "price": "Preis",
+      "quantity": "Menge",
+      "total": "Gesamt",
+      "subtotal": "Zwischensumme",
+      "shipping": "Versand",
+      "tax": "Steuer",
+      "cancelled_html": "Bestellung storniert am {{ date }}",
+      "cancelled_reason": "Grund: {{ reason }}",
+      "fulfilled_html": "Erfüllt {{ date }}",
+      "discount": "Rabatt"
     },
     "recover_password": {
       "title": "Forgot Your Password",
@@ -195,8 +195,8 @@
       "last_name": "Last Name",
       "email": "Email Address",
       "password": "Password",
-      "show_password": "Show",
-      "hide_password": "Hide",
+      "show_password": "Zeigen",
+      "hide_password": "Verstecken",
       "submit": "Create Account",
       "login_user": "Already Have an Account\/Login"
     },
@@ -207,8 +207,8 @@
       "password": "Password",
       "confirm_password": "Confirm Password",
       "cancel": "Zurück",
-      "show_password": "Show",
-      "hide_password": "Hide"
+      "show_password": "Zeigen",
+      "hide_password": "Verstecken"
     }
   },
   "general": {
