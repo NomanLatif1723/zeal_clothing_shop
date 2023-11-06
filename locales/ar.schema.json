@@ -10,32 +10,32 @@
       "name": "تظهر ظهور مفاجئ"
     },
     "announcement-bar": {
-      "name": "Announcement Bar",
+      "name": "شريط الإعلان",
       "settings": {
         "announcement_heading": {
-          "label": "Heading"
+          "label": "عنوان"
         },
         "announcement_text": {
-          "label": "Text"
+          "label": "نص"
         },
         "header_timer_details": {
-          "label": "Timer Details",
+          "label": "تفاصيل الموقت",
           "announcement_show_timer": {
-            "label": "Show Timer"
+            "label": "عرض الموقت"
           },
           "timer_hour_label": {
-            "label": "Hours"
+            "label": "ساعات"
           },
           "timer_minutes_label": {
-            "label": "Minutes"
+            "label": "دقائق"
           },
           "show_socials": {
-            "label": "Show Socials"
+            "label": "عرض الاجتماعيات"
           }
         }
       },
       "presets": {
-        "name": "Announcement Bar"
+        "name": "شريط الإعلان"
       }
     },
     "age-verification-popup": {
