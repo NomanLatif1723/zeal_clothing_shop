@@ -169,7 +169,7 @@
       "payment_status_html": "<strong>Zahlungsstatus:<\/strong> {{ status }}",
       "fulfillment_status_html": "<strong>Erfüllungsstatus:<\/strong> {{ status }}",
       "product": "Produkt",
-      "sku": "Artikelnummer",
+      "sku": "SKU",
       "price": "Preis",
       "quantity": "Menge",
       "total": "Gesamt",
@@ -223,66 +223,66 @@
       "shop_collection": "ZURÜCK NACH HAUSE"
     },
     "breadcrumbs": {
-      "home": "Home",
-      "collection": "Collection"
+      "home": "Heim",
+      "collection": "Sammlung"
     },
     "pagination": {
-      "previous": "Previous",
-      "next": "Next"
+      "previous": "Vorherige",
+      "next": "Nächste"
     }
   },
   "gift_card": {
-    "illustration": "Gift Card Illustration",
-    "title": "Here's Your Gift Card",
-    "apple_wallet_pass": "Add To Apple Wallet",
-    "message": "Use this code at checkout to redeem your gift card",
-    "go_to_shop": "Start Shopping",
-    "print": "Print"
+    "illustration": "Illustration einer Geschenkkarte",
+    "title": "Hier ist Ihre Geschenkkarte",
+    "apple_wallet_pass": "Zur Apple Wallet hinzufügen",
+    "message": "Verwenden Sie diesen Code an der Kasse, um Ihre Geschenkkarte einzulösen",
+    "go_to_shop": "Beginn mit dem Einkauf",
+    "print": "Drucken"
   },
   "newsletter": {
     "newsletter_form": {
-      "email_placeholder": "Enter Your Email",
+      "email_placeholder": "Geben sie ihre E-Mail Adresse ein",
       "submit_text": "Einreichen",
-      "success_message": "Thanks For Subscribe"
+      "success_message": "Vielen Dank für Ihr Abonnement"
     }
   },
   "popups": {
     "newsletter-popup": {
-      "show_popup": "Do not show this popup again."
+      "show_popup": "Dieses Popup nicht mehr anzeigen."
     }
   },
   "products": {
-    "promotional_message": "Hurry up! sale ends in",
+    "promotional_message": "Beeil dich! Der Verkauf endet in",
     "minus": "Minus",
     "plus": "Plus",
-    "quantity_label": "Qty",
-    "sizeguide_text": "Size Guide",
-    "sizechart": "Size Chart",
-    "add_to_cart": "Add To Cart",
-    "preorder": "Preorder",
-    "sold_out": "Sold Out",
-    "free_unit_price": "Free",
-    "taxes_included": "Tax Included.",
-    "shipping_policy_html": "<a href='{{ link }}'>Shipping<\/a> calculated at checkout.",
-    "share_social": "Share:",
-    "item_added_success_message": "Item Added To Your Cart Successfully",
-    "view_full_info": "View Full Info",
+    "quantity_label": "Menge",
+    "sizeguide_text": "Größentabelle",
+    "sizechart": "Größentabelle",
+    "add_to_cart": "In den Warenkorb legen",
+    "preorder": "Vorbestellen",
+    "sold_out": "Ausverkauft",
+    "free_unit_price": "Frei",
+    "taxes_included": "Steuern inklusive.",
+    "shipping_policy_html": "<a href='{{ link }}'>Versand<\/a> An der Kasse berechnet.",
+    "share_social": "Aktie:",
+    "item_added_success_message": "Artikel wurde erfolgreich zu Ihrem Warenkorb hinzugefügt",
+    "view_full_info": "Vollständige Informationen anzeigen",
     "price": {
-      "regular_price": "Regular Price",
-      "sale_price": "Sale Price"
+      "regular_price": "Regulärer Preis",
+      "sale_price": "Verkaufspreis"
     },
     "form": {
-      "variants": "Variants"
+      "variants": "Varianten"
     },
     "badges": {
-      "on_sale": "Sale",
-      "sold_out": "Sold Out"
+      "on_sale": "Verkauf",
+      "sold_out": "Ausverkauft"
     },
     "onboarding": {
-      "product_title": "Example Product",
+      "product_title": "Beispielprodukt",
       "product_price": "$30",
-      "product_description": "This area is used to describe your product’s details. Tell customers about the look, feel, and style of your product. Add details on color, materials used, sizing, and where it was made.",
-      "product_vendor": "Vendor"
+      "product_description": "In diesem Bereich werden die Details Ihres Produkts beschrieben. Informieren Sie Ihre Kunden über das Aussehen, die Haptik und den Stil Ihres Produkts. Fügen Sie Details zu Farbe, verwendeten Materialien, Größe und Herstellungsort hinzu.",
+      "product_vendor": "Verkäufer"
     },
     "sku": {
       "title": "Sku"
