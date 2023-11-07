@@ -156,7 +156,7 @@ function initHeaderNavigation() {
     });
   }
   if (menuDrawerBox) {
-    menuDrawer.addEventListener('click', (event) => {
+    menuDrawerBox.addEventListener('click', (event) => {
       event.stopPropagation();
     });
   }
