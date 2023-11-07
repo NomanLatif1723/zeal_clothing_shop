@@ -1975,7 +1975,11 @@ function initQuickShopCollection() {
   }
   function preloadProductModal(handle, productId) {
     let url = `${window.themeContent.routes.home}/products/${handle}?view=quick-view`;
-    console.log(window.themeContent.routes.home);
+    function normalizeURL(url) {
+      return url.replace(/\/+/g, '/').replace(/(\/|^)(\/products)/, '$1products');
+    }
+    var normalizedURL = normalizeURL(url);
+    console.log(normalizedURL);
     fetch(url)
     .then(function(responce) {
       return responce.text();
