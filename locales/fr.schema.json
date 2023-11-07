@@ -3200,15 +3200,15 @@
       }
     },
     "404": {
-      "name": "404 Page"
+      "name": "404 pages"
     }
   },
   "schema_settings": {
     "colors": {
-      "name": "Colors",
+      "name": "Couleurs",
       "settings": {
         "header_general": {
-          "label": "General",
+          "label": "Général",
           "color_body_background": {
             "label": "Arrière-plan"
           },
@@ -3216,11 +3216,11 @@
             "label": "Texte"
           },
           "border_color": {
-            "label": "Border"
+            "label": "Frontière"
           }
         },
         "header_primary_buttons": {
-          "label": "Primary Buttons",
+          "label": "Boutons principaux",
           "primary_button_background": {
             "label": "Arrière-plan"
           },
@@ -3228,11 +3228,11 @@
             "label": "Texte"
           },
           "color_button_outline": {
-            "label": "Outline Buttons"
+            "label": "Boutons de contour"
           }
         },
         "header_secondary_buttons": {
-          "label": "Secondary Buttons",
+          "label": "Boutons secondaires",
           "secondary_button_background": {
             "label": "Arrière-plan"
           },
@@ -3241,12 +3241,12 @@
           }
         },
         "header_header": {
-          "label": "Header",
+          "label": "Entête",
           "color_announcement_background": {
-            "label": "Announcement Background"
+            "label": "Contexte de l'annonce"
           },
           "color_announcement_text": {
-            "label": "Announcement Text"
+            "label": "Texte d'annonce"
           },
           "header_background_color": {
             "label": "Arrière-plan"
@@ -3256,7 +3256,7 @@
           }
         },
         "header_footer": {
-          "label": "Footer",
+          "label": "Bas de page",
           "color_footer_background": {
             "label": "Arrière-plan"
           },
@@ -3270,117 +3270,117 @@
       "name": "Collections",
       "settings": {
         "overlay_style": {
-          "label": "Overlay Below The Image"
+          "label": "Superposition sous l'image"
         },
         "show_first_product": {
-          "label": "Show First Product Image"
+          "label": "Afficher la première image du produit"
         },
         "header_image_size": {
-          "label": "Image Size",
+          "label": "Taille de l'image",
           "options": {
             "square": {
-              "label": "Square(1:1)"
+              "label": "Carré(1:1)"
             },
             "portrait": {
               "label": "Portrait(2:3)"
             },
             "landscape": {
-              "label": "Landscape(4:3)"
+              "label": "Paysage(4:3)"
             }
           }
         }
       }
     },
     "cart": {
-      "name": "Cart",
+      "name": "Chariot",
       "settings": {
         "header_cart_type": {
-          "label": "Cart Type",
+          "label": "Type de panier",
           "options": {
             "page": {
               "label": "Page"
             },
             "drawer": {
-              "label": "Drawer"
+              "label": "Tiroir"
             },
             "popup": {
-              "label": "popup"
+              "label": "surgir"
             }
           }
         },
         "header_cart_icon": {
-          "label": "Cart Icon",
+          "label": "Icône du panier",
           "options": {
             "cart": {
-              "label": "Cart"
+              "label": "Chariot"
             },
             "bag": {
-              "label": "Bag"
+              "label": "Sac"
             },
             "minimal_bag": {
-              "label": "Minimal Bag"
+              "label": "Sac minimal"
             }
           }
         },
         "free_shipping_bar": {
-          "label": " Enable Free Shipping Bar"
+          "label": "Activer la barre de livraison gratuite"
         },
         "free_shipping_amount": {
-          "label": "Free Shipping Amount"
+          "label": "Montant de la livraison gratuite"
         },
         "additional_checkout_buttons": {
-          "label": "Enable Additional Checkout Buttons"
+          "label": "Activer des boutons de paiement supplémentaires"
         },
         "show_terms": {
-          "label": "Enable Terms and Conditions"
+          "label": "Activer les termes et conditions"
         },
         "show_note": {
-          "label": "Show Order Note"
+          "label": "Afficher la note de commande"
         }
       }
     },
     "extras": {
-      "name": "Extras",
+      "name": "Suppléments",
       "settings": {
         "show_currency": {
-          "label": "Show Currency Selector"
+          "label": "Afficher le sélecteur de devises"
         },
         "show_language": {
-          "label": "Show Language Selector"
+          "label": "Afficher le sélecteur de langue"
         },
         "show_flags": {
-          "label": "Show Flags"
+          "label": "Afficher les drapeaux"
         },
         "text_direction": {
-          "label": "Text Direction",
+          "label": "Direction du texte",
           "options": {
             "ltr": {
-              "label": "Left To Right"
+              "label": "De gauche à droite"
             },
             "rtl": {
-              "label": "Right To Left"
+              "label": "De droite à gauche"
             }
           }
         },
         "show_breadcrumbs": {
-          "label": "Show Breadcrumbs"
+          "label": "Afficher le fil d'Ariane"
         },
         "header_back_top_top": {
-          "label": "Back To Top",
+          "label": "Retour au sommet",
           "show_back_to_top": {
-            "label": "Enable Back To Top"
+            "label": "Activer Retour en haut"
           },
           "back_button_position": {
             "label": "Position",
             "options": {
               "bottom_left": {
-                "label": "Bottom Left"
+                "label": "En bas à gauche"
               },
               "bottom_center": {
-                "label": "Bottom Center"
+                "label": "En bas au centre"
               },
               "bottom_right": {
-                "label": "Bottom Right"
+                "label": "En bas à droite"
               }
             }
           }
@@ -3388,68 +3388,68 @@
       }
     },
     "favicon": {
-      "name": "favicon",
+      "name": "icône de favori",
       "settings": {
         "favicon": {
-          "label": "Favicon Image",
-          "info": "Will be Scaled Down to 32 x 32px"
+          "label": "Image de l'icône de favori",
+          "info": "Sera réduit à 32 x 32 pixels"
         }
       }
     },
     "products": {
-      "name": "Products",
+      "name": "Des produits",
       "settings": {
         "header_image_size": {
-          "label": "Image Size",
+          "label": "Taille de l'image",
           "options": {
             "natural": {
-              "label": "Natural"
+              "label": "Naturel"
             },
             "square": {
-              "label": "Square(1:1)"
+              "label": "Carré(1:1)"
             },
             "portrait": {
               "label": "Portrait(2:3)"
             },
             "landscape": {
-              "label": "Landscape(4:3)"
+              "label": "Paysage(4:3)"
             },
             "wide": {
-              "label": "Wide(16:9)"
+              "label": "Large(16:9)"
             }
           }
         },
         "show_quick_view": {
-          "label": "Show Quick View On Hover"
+          "label": "Afficher un aperçu rapide au survol"
         },
         "quick_shop_text": {
-          "label": "Quick Shop text"
+          "label": "Texte de la boutique rapide"
         },
         "show_color_swatches": {
-          "label": "Enable color Swatches"
+          "label": "Activer les échantillons de couleurs"
         },
         "show_vendor": {
-          "label": "Show Vendor"
+          "label": "Afficher le fournisseur"
         },
         "show_second_image": {
-          "label": "Hover to Reveal Second Image"
+          "label": "Passez la souris pour révéler la deuxième image"
         },
         "header_colors": {
-          "label": "Colors",
+          "label": "Couleurs",
           "sale_badge_color": {
-            "label": "Sale Badge Color"
+            "label": "Couleur du badge de vente"
           },
           "soldout_badge_color": {
-            "label": "Soldout Badge Color"
+            "label": "Couleur du badge en rupture de stock"
           }
         }
       }
     },
     "social_media": {
-      "name": "Social Media",
+      "name": "Réseaux sociaux",
       "settings": {
         "header_social_accounts": {
-          "label": "Accounts",
+          "label": "Comptes",
           "social_facebook_link": {
             "label": "Facebook",
             "info": "https:\/\/www.facebook.com\/shopify"
@@ -3475,7 +3475,7 @@
             "info": "http:\/\/shopify.tumblr.com"
           },
           "social_tiktok_link": {
-            "label": "TikTok",
+            "label": "TIC Tac",
             "info": "https:\/\/www.tiktok.com\/@shopify"
           },
           "social_linkedin_link": {
@@ -3487,20 +3487,20 @@
             "info": "https:\/\/www.youtube.com\/user\/shopify"
           },
           "social_vimeo_link": {
-            "label": "Vimeo",
+            "label": "viméo",
             "info": "https:\/\/vimeo.com\/shopify"
           }
         }
       }
     },
     "search": {
-      "name": "Search",
+      "name": "Recherche",
       "settings": {
         "enable_search": {
-          "label": "Enable Search"
+          "label": "Activer la recherche"
         },
         "enable_predictive_search": {
-          "label": "Enable Predictive Search"
+          "label": "Activer la recherche prédictive"
         }
       }
     },
