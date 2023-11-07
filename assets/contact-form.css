@@ -38,9 +38,8 @@
     flex-wrap: wrap;
     row-gap: 25px;
   }
-  
   .contact-block__info-flex {
-      width: 50%;
+    width: 50%;
   }
   .contact-block__info-flex {
     padding-bottom: 0;
@@ -65,5 +64,4 @@
   .contact-form__grid .form__group {
     width: 50%;
   }
-  
 }
