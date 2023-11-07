@@ -1606,7 +1606,7 @@
       }
     },
     "main-product": {
-      "name": "Product Grid",
+      "name": "Grille de produits",
       "settings": {
         "Produit": {
           "label": "Produit"
