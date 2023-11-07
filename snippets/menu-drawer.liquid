@@ -9,35 +9,33 @@
 
 <div class="nav-drawer menu-drawer__{{ menu_drawer_position }}">
   <!-- <div class="drawer__overlay-container"></div> -->
-  <div class="nav-drawer__box">
-    <div class="nav-content__wrapper">
-      <div class="drawer__header">
-        <div class="drawer__title">{{ 'sections.header.general.navigation' | t }}</div>
-        <button class="drawer-icon__close nav-icon__close" aria-label="{{ 'general.accessibility.close-modal' | t }}">
-          {%- render 'icon-close' -%}
-        </button>
+  <div class="nav-content__wrapper">
+    <div class="drawer__header">
+      <div class="drawer__title">{{ 'sections.header.general.navigation' | t }}</div>
+      <button class="drawer-icon__close nav-icon__close" aria-label="{{ 'general.accessibility.close-modal' | t }}">
+        {%- render 'icon-close' -%}
+      </button>
+    </div>
+    <div class="nav-main__contents">
+      {%- render 'nav-drawer-desktop',
+         main_menu: main_menu,
+         mobile_menu: mobile_menu
+      -%}
+      {%- render 'header-nav-mobile'
+         mobile_menu: mobile_menu
+      -%}
+      <div class="drawer-menu__item">
+        <a class="menu-item__link" href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" title="Accounts">
+          Accounts
+        </a>
       </div>
-      <div class="nav-main__contents">
-        {%- render 'nav-drawer-desktop',
-           main_menu: main_menu,
-           mobile_menu: mobile_menu
-        -%}
-        {%- render 'header-nav-mobile'
-           mobile_menu: mobile_menu
-        -%}
-        <div class="drawer-menu__item">
-          <a class="menu-item__link" href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" title="Accounts">
-            Accounts
-          </a>
-        </div>
+    </div>
+    <div class="nav-drawer__footer">
+      <div class="nav-drawer-socials">
+        {%- render 'social-icons' -%}
       </div>
-      <div class="nav-drawer__footer">
-        <div class="nav-drawer-socials">
-          {%- render 'social-icons' -%}
-        </div>
-        <div class="nav-drawer-locales">
-          {%- render 'localization' -%}
-        </div>
+      <div class="nav-drawer-locales">
+        {%- render 'localization' -%}
       </div>
     </div>
   </div>
