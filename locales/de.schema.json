@@ -39,59 +39,59 @@
       }
     },
     "age-verification-popup": {
-      "name": "Age verification",
+      "name": "Altersüberprüfung",
       "settings": {
         "age_verifier_heading": {
-          "label": "Age Verifier Heading"
+          "label": "Überschrift „Altersprüfer“."
         },
         "age_verifier_text": {
-          "label": "Age Verifier Text"
+          "label": "Text zur Altersüberprüfung"
         },
         "header_confirmation": {
-          "label": "Age Confirmation Buttons",
+          "label": "Schaltflächen zur Altersbestätigung",
           "cancel_button_label": {
-            "label": "Cancel Button Label"
+            "label": "Beschriftung der Schaltfläche „Abbrechen“."
           },
           "confirm_button_label": {
-            "label": "Confirm Button Label"
+            "label": "Schaltflächenbezeichnung bestätigen"
           }
         },
         "header_declined": {
-          "label": "Declined Content",
+          "label": "Abgelehnter Inhalt",
           "declined_heading": {
-            "label": "Heading"
+            "label": "Überschrift"
           },
           "declined_text": {
             "label": "Text"
           },
           "declined_button_label": {
-            "label": "Return Button Label"
+            "label": "Beschriftung der Return-Taste"
           }
         }
       }
     },
     "blog-posts": {
-      "name": "Blog Posts",
+      "name": "Blogeinträge",
       "settings": {
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Ausrichtung",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Textausrichtung",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Links"
               },
               "center": {
                 "label": "Center"
               },
               "right": {
-                "label": "Right"
+                "label": "Rechts"
               }
             }
           }
         },
         "posts_heading": {
-          "label": "Heading"
+          "label": "Überschrift"
         },
         "posts_text": {
           "label": "Text"
@@ -158,7 +158,7 @@
       "name": "Collection List",
       "settings": {
         "heading": {
-          "label": "Heading"
+          "label": "Überschrift"
         },
         "collection_per_row": {
           "label": "Collections Per Row"
@@ -222,7 +222,7 @@
               "label": "Collection"
             },
             "collection_heading": {
-              "label": "Heading"
+              "label": "Überschrift"
             }
           }
         }
@@ -238,7 +238,7 @@
           "label": "Subheading"
         },
         "heading": {
-          "label": "Heading"
+          "label": "Überschrift"
         },
         "custom_content": {
           "label": "Liquid"
@@ -312,7 +312,7 @@
           "info": "Dynamic recommendations use order and product information to change and improve over time. [Learn more](https:\/\/help.shopify.com\/en\/themes\/development\/recommended-products)"
         },
         "heading": {
-          "label": "Heading"
+          "label": "Überschrift"
         },
         "products_to_show": {
           "label": "Products To Show"
@@ -359,7 +359,7 @@
       "name": "Events Popup",
       "settings": {
         "heading": {
-          "label": "Heading"
+          "label": "Überschrift"
         },
         "first_subheading": {
           "label": "Top Subheading"
@@ -453,7 +453,7 @@
           "label": "Collection"
         },
         "heading": {
-          "label": "Heading"
+          "label": "Überschrift"
         },
         "text": {
           "label": "Text"
@@ -513,7 +513,7 @@
           "label": "Product"
         },
         "heading": {
-          "label": "Heading"
+          "label": "Überschrift"
         },
         "text": {
           "label": "Text"
@@ -612,7 +612,7 @@
               "label": "Description as a tab"
             },
             "heading": {
-              "label": "Heading"
+              "label": "Überschrift"
             }
           }
         },
@@ -644,7 +644,7 @@
           "name": "Collapsables",
           "settings": {
             "heading": {
-              "label": "Heading"
+              "label": "Überschrift"
             },
             "text": {
               "label": "Text"
@@ -774,7 +774,7 @@
       "name": "FAQ",
       "settings": {
         "faq_heading": {
-          "label": "Heading"
+          "label": "Überschrift"
         },
         "faq_text": {
           "label": "Text"
@@ -852,7 +852,7 @@
           "name": "Menu",
           "settings": {
             "menu_heading": {
-              "label": "Heading"
+              "label": "Überschrift"
             },
             "show_footer_heading": {
               "label": "Show Heading"
@@ -872,7 +872,7 @@
               "label": "Show Heading"
             },
             "newsletter_heading": {
-              "label": "Heading"
+              "label": "Überschrift"
             },
             "newsletter_text": {
               "label": "Text"
@@ -1044,7 +1044,7 @@
                 "label": "Subheading"
               },
               "heading": {
-                "label": "Heading"
+                "label": "Überschrift"
               },
               "text": {
                 "label": "Text"
@@ -1062,7 +1062,7 @@
                 "label": "Subheading"
               },
               "heading": {
-                "label": "Heading"
+                "label": "Überschrift"
               },
               "text": {
                 "label": "Text"
@@ -1108,7 +1108,7 @@
           "name": "Text",
           "settings": {
             "heading": {
-              "label": "Heading"
+              "label": "Überschrift"
             },
             "text": {
               "label": "Text"
@@ -1148,7 +1148,7 @@
           "name": "Text",
           "settings": {
             "compare_heading": {
-              "label": "Heading"
+              "label": "Überschrift"
             },
             "compare_text": {
               "label": "Text"
@@ -1282,7 +1282,7 @@
               "label": "Image"
             },
             "banner_heading": {
-              "label": "Heading"
+              "label": "Überschrift"
             },
             "banner_button": {
               "label": "Button"
@@ -1394,12 +1394,12 @@
       "name": "Contact Form",
       "settings": {
         "main_heading": {
-          "label": "Heading"
+          "label": "Überschrift"
         },
         "header_personal_info": {
           "label": "Personal Information",
           "info_heading": {
-            "label": "Heading"
+            "label": "Überschrift"
           },
           "info_text": {
             "label": "Text"
@@ -1420,7 +1420,7 @@
           "name": "Address",
           "settings": {
             "heading": {
-              "label": "Heading"
+              "label": "Überschrift"
             },
             "text": {
               "label": "Text"
@@ -1431,7 +1431,7 @@
           "name": "Phone Number",
           "settings": {
             "heading": {
-              "label": "Heading"
+              "label": "Überschrift"
             },
             "text": {
               "label": "Text"
@@ -1442,7 +1442,7 @@
           "name": "Email",
           "settings": {
             "heading": {
-              "label": "Heading"
+              "label": "Überschrift"
             },
             "text": {
               "label": "Text"
@@ -1453,7 +1453,7 @@
           "name": "Schedule",
           "settings": {
             "heading": {
-              "label": "Heading"
+              "label": "Überschrift"
             },
             "text": {
               "label": "Text"
@@ -1688,7 +1688,7 @@
               "label": "Description as a tab"
             },
             "heading": {
-              "label": "Heading"
+              "label": "Überschrift"
             }
           }
         },
@@ -1720,7 +1720,7 @@
           "name": "Collapsables",
           "settings": {
             "heading": {
-              "label": "Heading"
+              "label": "Überschrift"
             },
             "text": {
               "label": "Text"
@@ -1904,7 +1904,7 @@
           "name": "Title",
           "settings": {
             "title": {
-              "label": "Heading"
+              "label": "Überschrift"
             }
           }
         },
@@ -1995,7 +1995,7 @@
           "label": "Add Google Iframe code"
         },
         "heading": {
-          "label": "Heading"
+          "label": "Überschrift"
         },
         "address": {
           "label": "Address and Hours"
@@ -2073,7 +2073,7 @@
       "name": "Newsletter",
       "settings": {
         "newsletter_heading": {
-          "label": "Heading"
+          "label": "Überschrift"
         },
         "newsletter_button_label": {
           "label": "Button Label"
@@ -2125,7 +2125,7 @@
           "label": "Subheading"
         },
         "newsletter_heading": {
-          "label": "Heading"
+          "label": "Überschrift"
         },
         "newsletter_text": {
           "label": "Text"
@@ -2182,7 +2182,7 @@
           "label": "Full Width"
         },
         "page_heading": {
-          "label": "Heading"
+          "label": "Überschrift"
         },
         "page_image": {
           "label": "Background Image"
@@ -2246,7 +2246,7 @@
           "name": "Banner",
           "settings": {
             "banner_heading": {
-              "label": "Heading"
+              "label": "Überschrift"
             },
             "banner_text": {
               "label": "Text"
@@ -2281,7 +2281,7 @@
               "label": "Product"
             },
             "promo_product_heading": {
-              "label": "Heading"
+              "label": "Überschrift"
             },
             "promo_product_text": {
               "label": "Text"
@@ -2369,7 +2369,7 @@
               "label": "Collection"
             },
             "promo_collection_heading": {
-              "label": "Heading"
+              "label": "Überschrift"
             },
             "promo_collection_text": {
               "label": "Text"
@@ -2483,7 +2483,7 @@
               "label": "Subheading"
             },
             "heading": {
-              "label": "Heading"
+              "label": "Überschrift"
             },
             "button_label": {
               "label": "Button"
@@ -2563,7 +2563,7 @@
           "info": "Dynamic recommendations use order and product information to change and improve over time. [Learn more](https:\/\/help.shopify.com\/en\/themes\/development\/recommended-products)"
         },
         "heading": {
-          "label": "Heading"
+          "label": "Überschrift"
         },
         "products_to_show": {
           "label": "Products To Show"
@@ -2646,10 +2646,10 @@
           }
         },
         "heading": {
-          "name": "Heading",
+          "name": "Überschrift",
           "settings": {
             "richtext_main_heading": {
-              "label": "Heading"
+              "label": "Überschrift"
             }
           }
         },
@@ -2796,7 +2796,7 @@
               }
             },
             "slide_heading": {
-              "label": "Heading"
+              "label": "Überschrift"
             },
             "slide_text": {
               "label": "Text"
@@ -2854,7 +2854,7 @@
               "label": "Logo"
             },
             "slide_heading": {
-              "label": "Heading"
+              "label": "Überschrift"
             },
             "slide_text": {
               "label": "Text"
@@ -2887,7 +2887,7 @@
       "name": "Text Image Center",
       "settings": {
         "main_heading": {
-          "label": "Heading"
+          "label": "Überschrift"
         },
         "image": {
           "label": "Image"
@@ -2934,7 +2934,7 @@
           "name": "Left Text",
           "settings": {
             "left_heading": {
-              "label": "Heading"
+              "label": "Überschrift"
             },
             "left_text": {
               "label": "Text"
@@ -2945,7 +2945,7 @@
           "name": "Right Text",
           "settings": {
             "right_heading": {
-              "label": "Heading"
+              "label": "Überschrift"
             },
             "right_text": {
               "label": "Text"
@@ -2961,7 +2961,7 @@
       "name": "Testimonials",
       "settings": {
         "testimonial_heading": {
-          "label": "Heading"
+          "label": "Überschrift"
         },
         "testimonial_text": {
           "label": "Text"
@@ -3026,7 +3026,7 @@
               }
             },
             "testimonial_slide_heading": {
-              "label": "Heading"
+              "label": "Überschrift"
             },
             "testimonial_slide_text": {
               "label": "Text"
@@ -3091,7 +3091,7 @@
           "label": "Subheading"
         },
         "heading": {
-          "label": "Heading"
+          "label": "Überschrift"
         },
         "cover_image": {
           "label": "Cover Image",
