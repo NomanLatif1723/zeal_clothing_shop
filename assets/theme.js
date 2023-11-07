@@ -1976,7 +1976,6 @@ function initQuickShopCollection() {
   function preloadProductModal(handle, productId) {
     let url = `${window.themeContent.routes.home}/products/${handle}?view=quick-view`;
     url = url.replace('//', '/');
-    console.log(url);
     fetch(url)
     .then(function(responce) {
       return responce.text();
