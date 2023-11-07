@@ -456,7 +456,7 @@
           "label": "Titre"
         },
         "text": {
-          "label": "Text"
+          "label": "Texte"
         },
         "products_per_row": {
           "label": "Products Per Row"
@@ -516,7 +516,7 @@
           "label": "Titre"
         },
         "text": {
-          "label": "Text"
+          "label": "Texte"
         },
         "header_alignment": {
           "label": "Alignement",
@@ -647,7 +647,7 @@
               "label": "Titre"
             },
             "text": {
-              "label": "Text"
+              "label": "Texte"
             }
           }
         },
@@ -777,7 +777,7 @@
           "label": "Titre"
         },
         "faq_text": {
-          "label": "Text"
+          "label": "Texte"
         },
         "header_alignment": {
           "label": "Alignement",
@@ -814,7 +814,7 @@
               "label": "Question"
             },
             "answer": {
-              "label": "Text"
+              "label": "Texte"
             }
           }
         }
@@ -875,7 +875,7 @@
               "label": "Titre"
             },
             "newsletter_text": {
-              "label": "Text"
+              "label": "Texte"
             },
             "newsletter_submit_button": {
               "label": "Button"
@@ -889,13 +889,13 @@
           }
         },
         "text": {
-          "name": "Text",
+          "name": "Texte",
           "settings": {
             "footer_logo": {
               "label": "Logo"
             },
             "footer_text": {
-              "label": "Text"
+              "label": "Texte"
             },
             "footer_column_width": {
               "label": "Column Width"
@@ -1047,7 +1047,7 @@
                 "label": "Titre"
               },
               "text": {
-                "label": "Text"
+                "label": "Texte"
               },
               "link": {
                 "label": "Link"
@@ -1065,7 +1065,7 @@
                 "label": "Titre"
               },
               "text": {
-                "label": "Text"
+                "label": "Texte"
               },
               "link": {
                 "label": "Link"
@@ -1105,13 +1105,13 @@
           }
         },
         "text": {
-          "name": "Text",
+          "name": "Texte",
           "settings": {
             "heading": {
               "label": "Titre"
             },
             "text": {
-              "label": "Text"
+              "label": "Texte"
             },
             "button_label": {
               "label": "Button"
@@ -1145,13 +1145,13 @@
       },
       "blocks": {
         "text": {
-          "name": "Text",
+          "name": "Texte",
           "settings": {
             "compare_heading": {
               "label": "Titre"
             },
             "compare_text": {
-              "label": "Text"
+              "label": "Texte"
             },
             "button_heading": {
               "label": "Button"
@@ -1351,7 +1351,7 @@
       "name": "Marquee Text",
       "settings": {
         "marquee_text": {
-          "label": "Text"
+          "label": "Texte"
         },
         "marquee_text_link": {
           "label": "Link"
@@ -1360,7 +1360,7 @@
           "label": "Text Size"
         },
         "marquee_text_direction": {
-          "label": "Text",
+          "label": "Texte",
           "options": {
             "left": {
               "label": "Left"
@@ -1402,7 +1402,7 @@
             "label": "Titre"
           },
           "info_text": {
-            "label": "Text"
+            "label": "Texte"
           }
         },
         "header_spacing": {
@@ -1423,7 +1423,7 @@
               "label": "Titre"
             },
             "text": {
-              "label": "Text"
+              "label": "Texte"
             }
           }
         },
@@ -1434,7 +1434,7 @@
               "label": "Titre"
             },
             "text": {
-              "label": "Text"
+              "label": "Texte"
             }
           }
         },
@@ -1445,7 +1445,7 @@
               "label": "Titre"
             },
             "text": {
-              "label": "Text"
+              "label": "Texte"
             }
           }
         },
@@ -1456,7 +1456,7 @@
               "label": "Titre"
             },
             "text": {
-              "label": "Text"
+              "label": "Texte"
             }
           }
         }
@@ -1723,7 +1723,7 @@
               "label": "Titre"
             },
             "text": {
-              "label": "Text"
+              "label": "Texte"
             }
           }
         },
@@ -1909,10 +1909,10 @@
           }
         },
         "text": {
-          "name": "Text",
+          "name": "Texte",
           "settings": {
             "text": {
-              "label": "Text"
+              "label": "Texte"
             }
           }
         },
@@ -2099,7 +2099,7 @@
           "label": "Background"
         },
         "newsletter_text_color": {
-          "label": "Text"
+          "label": "Texte"
         },
         "header_spacing": {
           "label": "Espacement des sections",
@@ -2128,7 +2128,7 @@
           "label": "Titre"
         },
         "newsletter_text": {
-          "label": "Text"
+          "label": "Texte"
         },
         "newsletter_button_label": {
           "label": "Button Label"
@@ -2191,7 +2191,7 @@
           "label": "Show Breadcrumbs"
         },
         "text_color": {
-          "label": "Text"
+          "label": "Texte"
         },
         "lazyload_images": {
           "label": "Activer les images LazyLoad"
@@ -2249,7 +2249,7 @@
               "label": "Titre"
             },
             "banner_text": {
-              "label": "Text"
+              "label": "Texte"
             },
             "header_first_button": {
               "label": "First Button",
@@ -2284,7 +2284,7 @@
               "label": "Titre"
             },
             "promo_product_text": {
-              "label": "Text"
+              "label": "Texte"
             },
             "show_price": {
               "label": "Show Price"
@@ -2372,7 +2372,7 @@
               "label": "Titre"
             },
             "promo_collection_text": {
-              "label": "Text"
+              "label": "Texte"
             },
             "header_timer": {
               "label": "Timer",
@@ -2543,7 +2543,7 @@
             "header_colors": {
               "label": "Colors",
               "text": {
-                "label": "Text"
+                "label": "Texte"
               },
               "button": {
                 "label": "Button"
@@ -2654,10 +2654,10 @@
           }
         },
         "text": {
-          "name": "Text",
+          "name": "Texte",
           "settings": {
             "richtext_text_description": {
-              "label": "Text"
+              "label": "Texte"
             }
           }
         },
@@ -2799,7 +2799,7 @@
               "label": "Titre"
             },
             "slide_text": {
-              "label": "Text"
+              "label": "Texte"
             },
             "slide_button": {
               "label": "Button"
@@ -2816,7 +2816,7 @@
             "header_colors": {
               "label": "Colors",
               "text": {
-                "label": "Text"
+                "label": "Texte"
               },
               "button": {
                 "label": "Button"
@@ -2857,7 +2857,7 @@
               "label": "Titre"
             },
             "slide_text": {
-              "label": "Text"
+              "label": "Texte"
             },
             "header_alignment": {
               "label": "Alignement",
@@ -2937,7 +2937,7 @@
               "label": "Titre"
             },
             "left_text": {
-              "label": "Text"
+              "label": "Texte"
             }
           }
         },
@@ -2948,7 +2948,7 @@
               "label": "Titre"
             },
             "right_text": {
-              "label": "Text"
+              "label": "Texte"
             }
           }
         }
@@ -2964,7 +2964,7 @@
           "label": "Titre"
         },
         "testimonial_text": {
-          "label": "Text"
+          "label": "Texte"
         },
         "header_alignment": {
           "label": "Alignement",
@@ -2991,7 +2991,7 @@
           "label": "Background"
         },
         "testimonial_text_color": {
-          "label": "Text"
+          "label": "Texte"
         },
         "lazyload_images": {
           "label": "Activer les images LazyLoad",
@@ -3029,7 +3029,7 @@
               "label": "Titre"
             },
             "testimonial_slide_text": {
-              "label": "Text"
+              "label": "Texte"
             },
             "author_image": {
               "label": "Author Image"
@@ -3108,7 +3108,7 @@
           "label": "Autoplay Video"
         },
         "color_text": {
-          "label": "Text"
+          "label": "Texte"
         },
         "header_alignment": {
           "label": "Position and Alignment",
@@ -3187,7 +3187,7 @@
             "label": "Background"
           },
           "color_body_text": {
-            "label": "Text"
+            "label": "Texte"
           },
           "border_color": {
             "label": "Border"
@@ -3199,7 +3199,7 @@
             "label": "Background"
           },
           "primary_button_text": {
-            "label": "Text"
+            "label": "Texte"
           },
           "color_button_outline": {
             "label": "Outline Buttons"
@@ -3211,7 +3211,7 @@
             "label": "Background"
           },
           "secondary_button_text": {
-            "label": "Text"
+            "label": "Texte"
           }
         },
         "header_header": {
@@ -3226,7 +3226,7 @@
             "label": "Background"
           },
           "header_text_color": {
-            "label": "Text"
+            "label": "Texte"
           }
         },
         "header_footer": {
@@ -3235,7 +3235,7 @@
             "label": "Background"
           },
           "color_footer_text": {
-            "label": "Text"
+            "label": "Texte"
           }
         }
       }
@@ -3507,7 +3507,7 @@
           }
         },
         "header_body_text": {
-          "label": "Text",
+          "label": "Texte",
           "body_text_font_family": {
             "label": "Font"
           }
