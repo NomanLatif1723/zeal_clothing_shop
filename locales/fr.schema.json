@@ -1076,10 +1076,10 @@
       }
     },
     "image-with-text": {
-      "name": "Image With Text",
+      "name": "Image avec texte",
       "settings": {
         "layout_reverse": {
-          "label": "Image Right"
+          "label": "Image à droite"
         },
         "lazyload_images": {
           "label": "Activer les images LazyLoad",
@@ -1123,11 +1123,11 @@
         }
       },
       "presets": {
-        "name": "Image With Text"
+        "name": "Image avec texte"
       }
     },
     "image-comparison": {
-      "name": "Image Comparison",
+      "name": "Comparaison d'images",
       "settings": {
         "lazyload_images": {
           "label": "Activer les images LazyLoad",
@@ -1162,19 +1162,19 @@
           }
         },
         "compare-image": {
-          "name": "Comapre Image",
+          "name": "Comparer l'image",
           "settings": {
             "before_image": {
-              "label": "Before Image"
+              "label": "Avant l'image"
             },
             "after_image": {
-              "label": "After Image"
+              "label": "Après l'image"
             }
           }
         }
       },
       "presets": {
-        "name": "Image Comaprison"
+        "name": "Comparaison d'images"
       }
     },
     "lookbook": {
@@ -1223,7 +1223,7 @@
       }
     },
     "main-collection": {
-      "name": "Collection Grid",
+      "name": "Grille de collecte",
       "settings": {
         "products_to_show": {
           "label": "Produits à afficher"
@@ -1232,16 +1232,16 @@
           "label": "Produits par rangée"
         },
         "header_sorting": {
-          "label": "Sorting and Filtering",
+          "label": "Tri et filtrage",
           "show_sorting": {
-            "label": "Show Sorting"
+            "label": "Afficher le tri"
           },
           "show_filtering": {
-            "label": "Show Filters",
+            "label": "Afficher les filtres",
             "info": "[Customize filters](\/admin\/menus)"
           },
           "show_collection_count": {
-            "label": "Show Collection Count"
+            "label": "Afficher le nombre de collections"
           }
         },
         "header_alignment": {
@@ -1276,7 +1276,7 @@
       },
       "blocks": {
         "banner": {
-          "name": "Banner",
+          "name": "Bannière",
           "settings": {
             "banner_image": {
               "label": "Image"
@@ -1295,25 +1295,25 @@
       }
     },
     "main-search": {
-      "name": "Search",
+      "name": "Recherche",
       "settings": {
         "results_to_show": {
-          "label": "Items To Show"
+          "label": "Éléments à afficher"
         },
         "results_per_row": {
-          "label": "Items Per Row"
+          "label": "Articles par ligne"
         },
         "header_sorting": {
-          "label": "Sorting and Filtering",
+          "label": "Tri et filtrage",
           "show_sorting": {
-            "label": "Show Sorting"
+            "label": "Afficher le tri"
           },
           "show_filtering": {
-            "label": "Show Filters",
+            "label": "Afficher les filtres",
             "info": "[Customize filters](\/admin\/menus)"
           },
           "show_collection_count": {
-            "label": "Show Collection Count"
+            "label": "Afficher le nombre de collections"
           }
         },
         "header_alignment": {
@@ -1348,7 +1348,7 @@
       }
     },
     "marquee-text": {
-      "name": "Marquee Text",
+      "name": "Texte de sélection",
       "settings": {
         "marquee_text": {
           "label": "Texte"
@@ -1357,7 +1357,7 @@
           "label": "Lien"
         },
         "marquee_text_size": {
-          "label": "Text Size"
+          "label": "Taille du texte"
         },
         "marquee_text_direction": {
           "label": "Texte",
@@ -1366,15 +1366,15 @@
               "label": "Gauche"
             },
             "right": {
-              "label": "Right"
+              "label": "Droit"
             }
           }
         },
         "marquee_text_speed": {
-          "label": "Speed"
+          "label": "Vitesse"
         },
         "marquee_background_color": {
-          "label": "Background"
+          "label": "Arrière-plan"
         },
         "header_spacing": {
           "label": "Espacement des sections",
@@ -1387,17 +1387,17 @@
         }
       },
       "presets": {
-        "name": "Marquee Text"
+        "name": "Texte de sélection"
       }
     },
     "main-contact": {
-      "name": "Contact Form",
+      "name": "Formulaire de contact",
       "settings": {
         "main_heading": {
           "label": "Titre"
         },
         "header_personal_info": {
-          "label": "Personal Information",
+          "label": "Informations personnelles",
           "info_heading": {
             "label": "Titre"
           },
@@ -1417,7 +1417,7 @@
       },
       "blocks": {
         "address_block": {
-          "name": "Address",
+          "name": "Adresse",
           "settings": {
             "heading": {
               "label": "Titre"
@@ -1428,7 +1428,7 @@
           }
         },
         "number_block": {
-          "name": "Phone Number",
+          "name": "Numéro de téléphone",
           "settings": {
             "heading": {
               "label": "Titre"
@@ -1439,7 +1439,7 @@
           }
         },
         "email_block": {
-          "name": "Email",
+          "name": "E-mail",
           "settings": {
             "heading": {
               "label": "Titre"
@@ -1450,7 +1450,7 @@
           }
         },
         "schedule_block": {
-          "name": "Schedule",
+          "name": "Calendrier",
           "settings": {
             "heading": {
               "label": "Titre"
@@ -1462,7 +1462,7 @@
         }
       },
       "presets": {
-        "name": "Contact Form"
+        "name": "Formulaire de contact"
       }
     },
     "main-page": {
@@ -1497,10 +1497,10 @@
       }
     },
     "main-cart": {
-      "name": "Cart",
+      "name": "Chariot",
       "settings": {
         "show_vendor": {
-          "label": "Show Vendor"
+          "label": "Afficher le fournisseur"
         },
         "header_alignment": {
           "label": "Alignement",
@@ -1522,20 +1522,20 @@
       }
     },
     "main-blog": {
-      "name": "Blogs",
+      "name": "Blogues",
       "settings": {
         "posts_to_show": {
-          "label": "Posts To Show"
+          "label": "Messages à afficher"
         },
         "show_date": {
-          "label": "Show Date"
+          "label": "Afficher la date"
         },
         "show_tags": {
-          "label": "Show Tags"
+          "label": "Voir les étiquettes"
         },
         "show_category": {
-          "label": "Show Category",
-          "info": "First Article tag will be shown as its category"
+          "label": "Afficher la catégorie",
+          "info": "La balise du premier article sera affichée comme sa catégorie"
         },
         "post_image_size": {
           "label": "Taille de l'image",
@@ -1576,23 +1576,23 @@
       "name": "Main Article",
       "settings": {
         "show_date": {
-          "label": "Show Date"
-        },
-        "show_category": {
-          "label": "Show Category",
-          "info": "First Article tag will be shown as its category"
+          "label": "Afficher la date"
         },
         "show_tags": {
-          "label": "Show Tags"
+          "label": "Voir les étiquettes"
+        },
+        "show_category": {
+          "label": "Afficher la catégorie",
+          "info": "La balise du premier article sera affichée comme sa catégorie"
         },
         "show_author": {
-          "label": "Show Author"
+          "label": "Afficher l'auteur"
         },
         "show_social_sharing": {
-          "label": "Show Social Sharing"
+          "label": "Afficher le partage social"
         },
         "show_comments": {
-          "label": "Show Comments"
+          "label": "Afficher les commentaires"
         },
         "header_spacing": {
           "label": "Espacement des sections",
@@ -1867,43 +1867,43 @@
       }
     },
     "main-password": {
-      "name": "Password",
+      "name": "Mot de passe",
       "settings": {
         "background_image": {
-          "label": "Background Image"
+          "label": "Image de fond"
         },
         "header_alignment": {
-          "label": "Position and Alignment"
+          "label": "Position et alignement"
         },
         "content_position": {
-          "label": "Content Position",
+          "label": "Position du contenu",
           "options": {
             "top_left": {
-              "label": "Top Left"
+              "label": "En haut à gauche"
             },
             "top_center": {
-              "label": "Top Center"
+              "label": "Centre supérieur"
             },
             "top_right": {
-              "label": "Top Right"
+              "label": "En haut à droite"
             },
             "center_left": {
-              "label": "Center Left"
+              "label": "Centre gauche"
             },
             "center": {
               "label": "Center"
             },
             "center_right": {
-              "label": "Center Right"
+              "label": "Centre droit"
             },
             "bottom_left": {
-              "label": "Bottom Left"
+              "label": "En bas à gauche"
             },
             "bottom_center": {
-              "label": "Bottom Center"
+              "label": "En bas au centre"
             },
             "bottom_right": {
-              "label": "Bottom Right"
+              "label": "En bas à droite"
             }
           }
         },
