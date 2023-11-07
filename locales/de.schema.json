@@ -275,84 +275,84 @@
       }
     },
     "customer-activate-account": {
-      "name": "Activate Account"
+      "name": "Konto aktivieren"
     },
     "customer-account": {
-      "name": "Customer Account"
+      "name": "Kundenkonto"
     },
     "customer-addresses": {
-      "name": "Customer Addresses",
+      "name": "Kundenadressen",
       "settings": {
         "addresses_per_row": {
-          "label": "Address Per Row"
+          "label": "Adresse pro Zeile"
         }
       }
     },
     "customer-login": {
-      "name": "Customer Login"
+      "name": "Kundenlogin"
     },
     "customer-registration": {
-      "name": "Register",
+      "name": "Registrieren",
       "settings": {
         "additional_text": {
-          "label": "Additional Text"
+          "label": "Zusätzlicher Text"
         }
       }
     },
     "customer-reset_password": {
-      "name": "Reset Password"
+      "name": "Passwort zurücksetzen"
     },
     "customer-order": {
-      "name": "Customer Order"
+      "name": "Kundenbestellung"
     },
     "complementary-product": {
-      "name": "Complementary Products",
+      "name": "Ergänzende Produkte",
       "settings": {
         "show_dynamic_recommendation": {
-          "info": "Dynamic recommendations use order and product information to change and improve over time. [Learn more](https:\/\/help.shopify.com\/en\/themes\/development\/recommended-products)"
+          "info": "Dynamische Empfehlungen nutzen Bestell- und Produktinformationen, um sie im Laufe der Zeit zu ändern und zu verbessern. [Learn more](https:\/\/help.shopify.com\/en\/themes\/development\/recommended-products)"
         },
         "heading": {
           "label": "Überschrift"
         },
         "products_to_show": {
-          "label": "Products To Show"
+          "label": "Zu zeigende Produkte"
         },
         "products_per_row": {
-          "label": "Products Per Row"
+          "label": "Produkte pro Zeile"
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Ausrichtung",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Textausrichtung",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Links"
               },
               "center": {
                 "label": "Center"
               },
               "right": {
-                "label": "Right"
+                "label": "Rechts"
               }
             }
           }
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Aktivieren Sie LazyLoad-Bilder",
+          "info": "Aktivieren Sie Lazyload, wenn sich Bilder außerhalb des Bildschirms befinden, um die Leistung zu verbessern"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Abschnittsabstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Abstand oben"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Abstand unten"
           }
         }
       },
       "presets": {
-        "name": "Complementary Products"
+        "name": "Ergänzende Produkte"
       }
     },
     "events-popup": {
