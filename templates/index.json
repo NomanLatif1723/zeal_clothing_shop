@@ -481,7 +481,7 @@
         "heading": "Featured Collection",
         "text": "Discover our carefully curated collection of loose-fitting clothing that combines comfort and style in perfect harmony.",
         "product_per_row": 4,
-        "product_rows": 1,
+        "product_rows": 2,
         "stack_product": true,
         "show_view_all": true,
         "text_alignment": "center",
