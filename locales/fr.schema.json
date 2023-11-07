@@ -201,16 +201,16 @@
           }
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Activer les images LazyLoad",
+          "info": "Activer Lazyload si les images sont hors écran pour améliorer les performances"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Espacement des sections",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Espacement supérieur"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Espacement inférieur"
           }
         }
       },
@@ -261,12 +261,12 @@
           }
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Espacement des sections",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Espacement supérieur"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Espacement inférieur"
           }
         }
       },
@@ -338,16 +338,16 @@
           }
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Activer les images LazyLoad",
+          "info": "Activer Lazyload si les images sont hors écran pour améliorer les performances"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Espacement des sections",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Espacement supérieur"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Espacement inférieur"
           }
         }
       },
@@ -489,16 +489,16 @@
           }
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Activer les images LazyLoad",
+          "info": "Activer Lazyload si les images sont hors écran pour améliorer les performances"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Espacement des sections",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Espacement supérieur"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Espacement inférieur"
           }
         }
       },
@@ -589,12 +589,12 @@
           }
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Espacement des sections",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Espacement supérieur"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Espacement inférieur"
           }
         }
       },
@@ -797,12 +797,12 @@
           }
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Espacement des sections",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Espacement supérieur"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Espacement inférieur"
           }
         }
       },
@@ -843,8 +843,8 @@
           }
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Activer les images LazyLoad",
+          "info": "Activer Lazyload si les images sont hors écran pour améliorer les performances"
         }
       },
       "blocks": {
@@ -1082,16 +1082,16 @@
           "label": "Image Right"
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Activer les images LazyLoad",
+          "info": "Activer Lazyload si les images sont hors écran pour améliorer les performances"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Espacement des sections",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Espacement supérieur"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Espacement inférieur"
           }
         }
       },
@@ -1130,16 +1130,16 @@
       "name": "Image Comparison",
       "settings": {
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Activer les images LazyLoad",
+          "info": "Activer Lazyload si les images sont hors écran pour améliorer les performances"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Espacement des sections",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Espacement supérieur"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Espacement inférieur"
           }
         }
       },
@@ -1195,16 +1195,16 @@
           }
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Activer les images LazyLoad",
+          "info": "Activer Lazyload si les images sont hors écran pour améliorer les performances"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Espacement des sections",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Espacement supérieur"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Espacement inférieur"
           }
         }
       },
@@ -1262,15 +1262,15 @@
           }
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images"
+          "label": "Activer les images LazyLoad"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Espacement des sections",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Espacement supérieur"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Espacement inférieur"
           }
         }
       },
@@ -1334,15 +1334,15 @@
           }
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images"
+          "label": "Activer les images LazyLoad"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Espacement des sections",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Espacement supérieur"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Espacement inférieur"
           }
         }
       }
@@ -1377,12 +1377,12 @@
           "label": "Background"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Espacement des sections",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Espacement supérieur"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Espacement inférieur"
           }
         }
       },
@@ -1406,12 +1406,12 @@
           }
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Espacement des sections",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Espacement supérieur"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Espacement inférieur"
           }
         }
       },
@@ -1486,12 +1486,12 @@
           }
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Espacement des sections",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Espacement supérieur"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Espacement inférieur"
           }
         }
       }
@@ -1558,16 +1558,16 @@
           }
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Activer les images LazyLoad",
+          "info": "Activer Lazyload si les images sont hors écran pour améliorer les performances"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Espacement des sections",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Espacement supérieur"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Espacement inférieur"
           }
         }
       }
@@ -1595,12 +1595,12 @@
           "label": "Show Comments"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Espacement des sections",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Espacement supérieur"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Espacement inférieur"
           }
         }
       }
@@ -1665,12 +1665,12 @@
           }
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Espacement des sections",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Espacement supérieur"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Espacement inférieur"
           }
         }
       },
@@ -2056,12 +2056,12 @@
           }
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Espacement des sections",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Espacement supérieur"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Espacement inférieur"
           }
         }
       },
@@ -2102,12 +2102,12 @@
           "label": "Text"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Espacement des sections",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Espacement supérieur"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Espacement inférieur"
           }
         }
       },
@@ -2137,7 +2137,7 @@
           "label": "Enable Show Popup"
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images"
+          "label": "Activer les images LazyLoad"
         }
       }
     },
@@ -2194,7 +2194,7 @@
           "label": "Text"
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images"
+          "label": "Activer les images LazyLoad"
         },
         "header_alignment": {
           "label": "Alignement",
@@ -2214,12 +2214,12 @@
           }
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Espacement des sections",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Espacement supérieur"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Espacement inférieur"
           }
         }
       }
@@ -2228,16 +2228,16 @@
       "name": "Promotional Grid",
       "settings": {
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Activer les images LazyLoad",
+          "info": "Activer Lazyload si les images sont hors écran pour améliorer les performances"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Espacement des sections",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Espacement supérieur"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Espacement inférieur"
           }
         }
       },
@@ -2456,16 +2456,16 @@
       "name": "Promotional Block",
       "settings": {
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Activer les images LazyLoad",
+          "info": "Activer Lazyload si les images sont hors écran pour améliorer les performances"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Espacement des sections",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Espacement supérieur"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Espacement inférieur"
           }
         }
       },
@@ -2589,16 +2589,16 @@
           }
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Activer les images LazyLoad",
+          "info": "Activer Lazyload si les images sont hors écran pour améliorer les performances"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Espacement des sections",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Espacement supérieur"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Espacement inférieur"
           }
         }
       },
@@ -2627,12 +2627,12 @@
           }
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Espacement des sections",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Espacement supérieur"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Espacement inférieur"
           }
         }
       },
@@ -2738,8 +2738,8 @@
           }
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Activer les images LazyLoad",
+          "info": "Activer Lazyload si les images sont hors écran pour améliorer les performances"
         }
       },
       "blocks": {
@@ -2833,16 +2833,16 @@
       "name": "Text With Icon",
       "settings": {
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Activer les images LazyLoad",
+          "info": "Activer Lazyload si les images sont hors écran pour améliorer les performances"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Espacement des sections",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Espacement supérieur"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Espacement inférieur"
           }
         }
       },
@@ -2916,16 +2916,16 @@
           }
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Activer les images LazyLoad",
+          "info": "Activer Lazyload si les images sont hors écran pour améliorer les performances"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Espacement des sections",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Espacement supérieur"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Espacement inférieur"
           }
         }
       },
@@ -2994,8 +2994,8 @@
           "label": "Text"
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Activer les images LazyLoad",
+          "info": "Activer Lazyload si les images sont hors écran pour améliorer les performances"
         }
       },
       "blocks": {
@@ -3160,12 +3160,12 @@
           }
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Espacement des sections",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Espacement supérieur"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Espacement inférieur"
           }
         }
       },
