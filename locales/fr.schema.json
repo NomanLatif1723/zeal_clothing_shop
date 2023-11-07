@@ -232,16 +232,16 @@
       }
     },
     "custom-content": {
-      "name": "Custom Liquid",
+      "name": "Liquide personnalisé",
       "settings": {
         "subheading": {
-          "label": "Subheading"
+          "label": "Sous-titre"
         },
         "heading": {
           "label": "Titre"
         },
         "custom_content": {
-          "label": "Liquid"
+          "label": "Liquide"
         },
         "header_alignment": {
           "label": "Alignement",
@@ -271,54 +271,54 @@
         }
       },
       "presets": {
-        "name": "Custom Liquid"
+        "name": "Liquide personnalisé"
       }
     },
     "customer-activate-account": {
-      "name": "Activate Account"
+      "name": "Activer le compte"
     },
     "customer-account": {
-      "name": "Customer Account"
+      "name": "Compte client"
     },
     "customer-addresses": {
-      "name": "Customer Addresses",
+      "name": "Adresses des clients",
       "settings": {
         "addresses_per_row": {
-          "label": "Address Per Row"
+          "label": "Adresse par ligne"
         }
       }
     },
     "customer-login": {
-      "name": "Customer Login"
+      "name": "Connexion client"
     },
     "customer-registration": {
-      "name": "Register",
+      "name": "Registre",
       "settings": {
         "additional_text": {
-          "label": "Additional Text"
+          "label": "Texte supplémentaire"
         }
       }
     },
     "customer-reset_password": {
-      "name": "Reset Password"
+      "name": "réinitialiser le mot de passe"
     },
     "customer-order": {
-      "name": "Customer Order"
+      "name": "Commande du client"
     },
     "complementary-product": {
-      "name": "Complementary Products",
+      "name": "Produits complémentaires",
       "settings": {
         "show_dynamic_recommendation": {
-          "info": "Dynamic recommendations use order and product information to change and improve over time. [Learn more](https:\/\/help.shopify.com\/en\/themes\/development\/recommended-products)"
+          "info": "Les recommandations dynamiques utilisent les informations sur les commandes et les produits pour changer et s'améliorer au fil du temps. [Learn more](https:\/\/help.shopify.com\/en\/themes\/development\/recommended-products)"
         },
         "heading": {
           "label": "Titre"
         },
         "products_to_show": {
-          "label": "Products To Show"
+          "label": "Produits à afficher"
         },
         "products_per_row": {
-          "label": "Products Per Row"
+          "label": "Produits par rangée"
         },
         "header_alignment": {
           "label": "Alignement",
@@ -356,92 +356,92 @@
       }
     },
     "events-popup": {
-      "name": "Events Popup",
+      "name": "Fenêtre contextuelle des événements",
       "settings": {
         "heading": {
           "label": "Titre"
         },
         "first_subheading": {
-          "label": "Top Subheading"
+          "label": "Sous-titre supérieur"
         },
         "announcement_text": {
-          "label": "Announcement Text"
+          "label": "Texte d'annonce"
         },
         "second_subheading": {
-          "label": "Subheading Bottom"
+          "label": "Sous-titre en bas"
         },
         "confirm_button_label": {
-          "label": "Confirm Button Label"
+          "label": "Confirmer l'étiquette du bouton"
         },
         "cancel_button_label": {
-          "label": "Cancel Button Label"
+          "label": "Étiquette du bouton Annuler"
         },
         "additional_text": {
-          "label": "Additional Text"
+          "label": "Texte supplémentaire"
         },
         "show_socials": {
-          "label": "Show Socials"
+          "label": "Afficher les réseaux sociaux"
         },
         "header_timer": {
-          "label": "Timer",
+          "label": "Minuteur",
           "show_timer": {
-            "label": "Show Timer"
+            "label": "Afficher la minuterie"
           },
           "year": {
-            "label": "Year"
+            "label": "Année"
           },
           "month": {
-            "label": "Month",
+            "label": "Mois",
             "options": {
               "01": {
-                "label": "January"
+                "label": "Janvier"
               },
               "02": {
-                "label": "Febrary"
+                "label": "Février"
               },
               "03": {
-                "label": "March"
+                "label": "Mars"
               },
               "04": {
-                "label": "April"
+                "label": "Avril"
               },
               "05": {
-                "label": "May"
+                "label": "Peut"
               },
               "06": {
-                "label": "June"
+                "label": "Juin"
               },
               "07": {
-                "label": "July"
+                "label": "Juillet"
               },
               "08": {
-                "label": "August"
+                "label": "Août"
               },
               "09": {
-                "label": "September"
+                "label": "Septembre"
               },
               "10": {
-                "label": "October"
+                "label": "Octobre"
               },
               "11": {
-                "label": "November"
+                "label": "Novembre"
               },
               "12": {
-                "label": "December"
+                "label": "Décembre"
               }
             }
           },
           "day": {
-            "label": "Day"
+            "label": "Jour"
           },
           "hour": {
-            "label": "Hour"
+            "label": "Heure"
           },
           "minutes": {
             "label": "Minute"
           },
           "timer_completion_message": {
-            "label": "Completion Message"
+            "label": "Message d'achèvement"
           }
         }
       }
@@ -459,7 +459,7 @@
           "label": "Texte"
         },
         "products_per_row": {
-          "label": "Products Per Row"
+          "label": "Produits par rangée"
         },
         "product_rows": {
           "label": "Rows of Products"
@@ -881,7 +881,7 @@
               "label": "Button"
             },
             "show_socials": {
-              "label": "Show Socials"
+              "label": "Afficher les réseaux sociaux"
             },
             "footer_column_width": {
               "label": "Column Width"
@@ -1041,7 +1041,7 @@
                 "label": "Image"
               },
               "subheading": {
-                "label": "Subheading"
+                "label": "Sous-titre"
               },
               "heading": {
                 "label": "Titre"
@@ -1059,7 +1059,7 @@
                 "label": "Image"
               },
               "subheading": {
-                "label": "Subheading"
+                "label": "Sous-titre"
               },
               "heading": {
                 "label": "Titre"
@@ -1226,10 +1226,10 @@
       "name": "Collection Grid",
       "settings": {
         "products_to_show": {
-          "label": "Products To Show"
+          "label": "Produits à afficher"
         },
         "products_per_row": {
-          "label": "Products Per Row"
+          "label": "Produits par rangée"
         },
         "header_sorting": {
           "label": "Sorting and Filtering",
@@ -2122,7 +2122,7 @@
           "label": "Image"
         },
         "newsletter_subheading": {
-          "label": "Subheading"
+          "label": "Sous-titre"
         },
         "newsletter_heading": {
           "label": "Titre"
@@ -2480,7 +2480,7 @@
               "label": "Mobile Image"
             },
             "subheading": {
-              "label": "Subheading"
+              "label": "Sous-titre"
             },
             "heading": {
               "label": "Titre"
@@ -2566,10 +2566,10 @@
           "label": "Titre"
         },
         "products_to_show": {
-          "label": "Products To Show"
+          "label": "Produits à afficher"
         },
         "products_per_row": {
-          "label": "Products Per Row"
+          "label": "Produits par rangée"
         },
         "header_alignment": {
           "label": "Alignement",
@@ -2638,10 +2638,10 @@
       },
       "blocks": {
         "subheading": {
-          "name": "Subheading",
+          "name": "Sous-titre",
           "settings": {
             "richtext_subheading": {
-              "label": "Subheading"
+              "label": "Sous-titre"
             }
           }
         },
@@ -3088,7 +3088,7 @@
           }
         },
         "sub_heading": {
-          "label": "Subheading"
+          "label": "Sous-titre"
         },
         "heading": {
           "label": "Titre"
