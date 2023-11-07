@@ -1924,7 +1924,7 @@
       },
       "blocks": {
         "title": {
-          "name": "Title",
+          "name": "Titre",
           "settings": {
             "title": {
               "label": "Titre"
@@ -1940,45 +1940,45 @@
           }
         },
         "form": {
-          "name": "Form",
+          "name": "Formulaire",
           "settings": {
           }
         },
         "socials": {
-          "name": "Socials",
+          "name": "Réseaux sociaux",
           "settings": {
           }
         }
       }
     },
     "password-header": {
-      "name": "Password Header",
+      "name": "En-tête du mot de passe",
       "settings": {
         "header_logo": {
           "label": "Logo",
           "logo": {
-            "label": "Logo Image"
+            "label": "Image logo"
           },
           "desktop_logo_width": {
-            "label": "Desktop Logo Width"
+            "label": "Largeur du logo du bureau"
           },
           "mobile_logo_width": {
-            "label": "Mobile Logo Width"
+            "label": "Largeur du logo mobile"
           }
         }
       }
     },
     "password-footer": {
-      "name": "Password Footer"
+      "name": "Pied de page du mot de passe"
     },
     "map": {
-      "name": "Map",
+      "name": "Carte",
       "settings": {
         "section_height_desktop": {
-          "label": "Desktop Height",
+          "label": "Hauteur du bureau",
           "options": {
             "natural": {
-              "label": "Natural"
+              "label": "Naturel"
             },
             "compact": {
               "label": "Compact (450px)"
@@ -1987,15 +1987,15 @@
               "label": "Standard (650px)"
             },
             "extended": {
-              "label": "Extended (750px)"
+              "label": "Étendu (750px)"
             },
             "full": {
-              "label": "Full Screen"
+              "label": "Plein écran"
             }
           }
         },
         "section_height_mobile": {
-          "label": "Mobile Height",
+          "label": "Hauteur mobile",
           "options": {
             "auto": {
               "label": "Auto"
@@ -2007,21 +2007,21 @@
               "label": "Standard (400px)"
             },
             "extended": {
-              "label": "Extended (500px)"
+              "label": "Étendu (500px)"
             },
             "full": {
-              "label": "Full Screen"
+              "label": "Plein écran"
             }
           }
         },
         "map_embed_code": {
-          "label": "Add Google Iframe code"
+          "label": "Ajouter le code Iframe Google"
         },
         "heading": {
           "label": "Titre"
         },
         "address": {
-          "label": "Address and Hours"
+          "label": "Adresse et horaires"
         },
         "button_text": {
           "label": "Bouton"
@@ -2030,37 +2030,37 @@
           "label": "Lien"
         },
         "header_alignment": {
-          "label": "Position and Alignment"
+          "label": "Position et alignement"
         },
         "content_position": {
-          "label": "Content Position",
+          "label": "Position du contenu",
           "options": {
             "top_left": {
-              "label": "Top Left"
+              "label": "En haut à gauche"
             },
             "top_center": {
-              "label": "Top Center"
+              "label": "Centre supérieur"
             },
             "top_right": {
-              "label": "Top Right"
+              "label": "En haut à droite"
             },
             "center_left": {
-              "label": "Center Left"
+              "label": "Centre gauche"
             },
             "center": {
               "label": "Center"
             },
             "center_right": {
-              "label": "Center Right"
+              "label": "Centre droit"
             },
             "bottom_left": {
-              "label": "Bottom Left"
+              "label": "En bas à gauche"
             },
             "bottom_center": {
-              "label": "Bottom Center"
+              "label": "En bas au centre"
             },
             "bottom_right": {
-              "label": "Bottom Right"
+              "label": "En bas à droite"
             }
           }
         },
@@ -2089,17 +2089,17 @@
         }
       },
       "presets": {
-        "name": "Map"
+        "name": "Carte"
       }
     },
     "newsletter": {
-      "name": "Newsletter",
+      "name": "Bulletin",
       "settings": {
         "newsletter_heading": {
           "label": "Titre"
         },
         "newsletter_button_label": {
-          "label": "Button Label"
+          "label": "Étiquette du bouton"
         },
         "header_alignment": {
           "label": "Alignement",
@@ -2119,7 +2119,7 @@
           }
         },
         "newsletter_background_color": {
-          "label": "Background"
+          "label": "Arrière-plan"
         },
         "newsletter_text_color": {
           "label": "Texte"
@@ -2135,11 +2135,11 @@
         }
       },
       "presets": {
-        "name": "Newsletter"
+        "name": "Bulletin"
       }
     },
     "newsletter-popup": {
-      "name": "Newsletter Popup",
+      "name": "Popup de la newsletter",
       "settings": {
         "newsletter_image": {
           "label": "Image"
@@ -2154,10 +2154,10 @@
           "label": "Texte"
         },
         "newsletter_button_label": {
-          "label": "Button Label"
+          "label": "Étiquette du bouton"
         },
         "show_popup": {
-          "label": "Enable Show Popup"
+          "label": "Activer l'affichage du popup"
         },
         "lazyload_images": {
           "label": "Activer les images LazyLoad"
@@ -2165,13 +2165,13 @@
       }
     },
     "page-header": {
-      "name": "Page header",
+      "name": "En-tête de page",
       "settings": {
         "section_height_desktop": {
-          "label": "Desktop Height",
+          "label": "Hauteur du bureau",
           "options": {
             "natural": {
-              "label": "Natural"
+              "label": "Naturel"
             },
             "compact": {
               "label": "Compact (200px)"
@@ -2180,12 +2180,12 @@
               "label": "Standard (300px)"
             },
             "extended": {
-              "label": "Extended (400px)"
+              "label": "Étendu (400px)"
             }
           }
         },
         "section_height_mobile": {
-          "label": "Mobile Height",
+          "label": "Hauteur mobile",
           "options": {
             "auto": {
               "label": "Auto"
@@ -2197,21 +2197,21 @@
               "label": "Standard (200px)"
             },
             "extended": {
-              "label": "Extended (250px)"
+              "label": "Étendu (250px)"
             }
           }
         },
         "full_width": {
-          "label": "Full Width"
+          "label": "Pleine largeur"
         },
         "page_heading": {
           "label": "Titre"
         },
         "page_image": {
-          "label": "Background Image"
+          "label": "Image de fond"
         },
         "show_breadcrumbs": {
-          "label": "Show Breadcrumbs"
+          "label": "Afficher le fil d'Ariane"
         },
         "text_color": {
           "label": "Texte"
@@ -2293,7 +2293,7 @@
               }
             },
             "banner_background": {
-              "label": "Background"
+              "label": "Arrière-plan"
             }
           }
         },
@@ -2381,7 +2381,7 @@
               "label": "Lien"
             },
             "promo_background_color": {
-              "label": "Background"
+              "label": "Arrière-plan"
             }
           }
         },
@@ -2466,7 +2466,7 @@
               "label": "Lien"
             },
             "collection_background_color": {
-              "label": "Background"
+              "label": "Arrière-plan"
             }
           }
         }
@@ -3011,7 +3011,7 @@
           "info": "Require Square Images"
         },
         "testimonial_background_color": {
-          "label": "Background"
+          "label": "Arrière-plan"
         },
         "testimonial_text_color": {
           "label": "Texte"
@@ -3207,7 +3207,7 @@
         "header_general": {
           "label": "General",
           "color_body_background": {
-            "label": "Background"
+            "label": "Arrière-plan"
           },
           "color_body_text": {
             "label": "Texte"
@@ -3219,7 +3219,7 @@
         "header_primary_buttons": {
           "label": "Primary Buttons",
           "primary_button_background": {
-            "label": "Background"
+            "label": "Arrière-plan"
           },
           "primary_button_text": {
             "label": "Texte"
@@ -3231,7 +3231,7 @@
         "header_secondary_buttons": {
           "label": "Secondary Buttons",
           "secondary_button_background": {
-            "label": "Background"
+            "label": "Arrière-plan"
           },
           "secondary_button_text": {
             "label": "Texte"
@@ -3246,7 +3246,7 @@
             "label": "Announcement Text"
           },
           "header_background_color": {
-            "label": "Background"
+            "label": "Arrière-plan"
           },
           "header_text_color": {
             "label": "Texte"
@@ -3255,7 +3255,7 @@
         "header_footer": {
           "label": "Footer",
           "color_footer_background": {
-            "label": "Background"
+            "label": "Arrière-plan"
           },
           "color_footer_text": {
             "label": "Texte"
