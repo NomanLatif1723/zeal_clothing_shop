@@ -2248,7 +2248,7 @@
       }
     },
     "promotional-grid": {
-      "name": "Promotional Grid",
+      "name": "Grille promotionnelle",
       "settings": {
         "lazyload_images": {
           "label": "Activer les images LazyLoad",
@@ -2266,7 +2266,7 @@
       },
       "blocks": {
         "banner": {
-          "name": "Banner",
+          "name": "Bannière",
           "settings": {
             "banner_heading": {
               "label": "Titre"
@@ -2275,7 +2275,7 @@
               "label": "Texte"
             },
             "header_first_button": {
-              "label": "First Button",
+              "label": "Premier bouton",
               "button_label": {
                 "label": "Bouton"
               },
@@ -2284,7 +2284,7 @@
               }
             },
             "header_second_button": {
-              "label": "Second Button",
+              "label": "Deuxième bouton",
               "button_label": {
                 "label": "Bouton"
               },
@@ -2310,7 +2310,7 @@
               "label": "Texte"
             },
             "show_price": {
-              "label": "Show Price"
+              "label": "Afficher le prix"
             },
             "header_timer": {
               "label": "Minuteur",
@@ -2472,11 +2472,11 @@
         }
       },
       "presets": {
-        "name": "Promotional Grid"
+        "name": "Grille promotionnelle"
       }
     },
     "promotional-block": {
-      "name": "Promotional Block",
+      "name": "Bloc promotionnel",
       "settings": {
         "lazyload_images": {
           "label": "Activer les images LazyLoad",
@@ -2494,13 +2494,13 @@
       },
       "blocks": {
         "image-with-text": {
-          "name": "Image With Text",
+          "name": "Image avec texte",
           "settings": {
             "image_desktop": {
-              "label": "Desktop Image"
+              "label": "Image de bureau"
             },
             "image_mobile": {
-              "label": "Mobile Image"
+              "label": "Images mobiles"
             },
             "subheading": {
               "label": "Sous-titre"
@@ -2515,37 +2515,37 @@
               "label": "Lien"
             },
             "header_alignment": {
-              "label": "Position and Alignment"
+              "label": "Position et alignement"
             },
             "content_position": {
-              "label": "Content Position",
+              "label": "Position du contenu",
               "options": {
                 "top_left": {
-                  "label": "Top Left"
+                  "label": "En haut à gauche"
                 },
                 "top_center": {
-                  "label": "Top Center"
+                  "label": "Centre supérieur"
                 },
                 "top_right": {
-                  "label": "Top Right"
+                  "label": "En haut à droite"
                 },
                 "center_left": {
-                  "label": "Center Left"
+                  "label": "Centre gauche"
                 },
                 "center": {
                   "label": "Center"
                 },
                 "center_right": {
-                  "label": "Center Right"
+                  "label": "Centre droit"
                 },
                 "bottom_left": {
-                  "label": "Bottom Left"
+                  "label": "En bas à gauche"
                 },
                 "bottom_center": {
-                  "label": "Bottom Center"
+                  "label": "En bas au centre"
                 },
                 "bottom_right": {
-                  "label": "Bottom Right"
+                  "label": "En bas à droite"
                 }
               }
             },
@@ -2564,7 +2564,7 @@
               }
             },
             "header_colors": {
-              "label": "Colors",
+              "label": "Couleurs",
               "text": {
                 "label": "Texte"
               },
@@ -2576,14 +2576,14 @@
         }
       },
       "presets": {
-        "name": "Promotional Block"
+        "name": "Bloc promotionnel"
       }
     },
     "product-recommendation": {
-      "name": "Product Recommendations",
+      "name": "Recommandations de produits",
       "settings": {
         "show_dynamic_recommendation": {
-          "info": "Dynamic recommendations use order and product information to change and improve over time. [Learn more](https:\/\/help.shopify.com\/en\/themes\/development\/recommended-products)"
+          "info": "Les recommandations dynamiques utilisent les informations sur les commandes et les produits pour changer et s'améliorer au fil du temps. [Learn more](https:\/\/help.shopify.com\/en\/themes\/development\/recommended-products)"
         },
         "heading": {
           "label": "Titre"
@@ -2626,11 +2626,11 @@
         }
       },
       "presets": {
-        "name": "Product Recommendations"
+        "name": "Recommandations de produits"
       }
     },
     "richtext": {
-      "name": "Rich Text",
+      "name": "Texte riche",
       "settings": {
         "header_alignment": {
           "label": "Alignement",
@@ -2691,23 +2691,23 @@
               "label": "Bouton"
             },
             "button_link": {
-              "label": "Button Link"
+              "label": "Lien du bouton"
             }
           }
         }
       },
       "presets": {
-        "name": "Rich Text"
+        "name": "Texte riche"
       }
     },
     "slideshow": {
-      "name": "Slideshow",
+      "name": "Diaporama",
       "settings": {
         "section_height_desktop": {
-          "label": "Desktop Height",
+          "label": "Hauteur du bureau",
           "options": {
             "natural": {
-              "label": "Natural"
+              "label": "Naturel"
             },
             "compact": {
               "label": "Compact (450px)"
@@ -2716,15 +2716,15 @@
               "label": "Standard (650px)"
             },
             "extended": {
-              "label": "Extended (750px)"
+              "label": "Étendu (750px)"
             },
             "full": {
-              "label": "Full Screen"
+              "label": "Plein écran"
             }
           }
         },
         "section_height_mobile": {
-          "label": "Mobile Height",
+          "label": "Hauteur mobile",
           "options": {
             "auto": {
               "label": "Auto"
@@ -2736,27 +2736,27 @@
               "label": "Standard (400px)"
             },
             "extended": {
-              "label": "Extended (500px)"
+              "label": "Étendu (500px)"
             },
             "full": {
-              "label": "Full Screen"
+              "label": "Plein écran"
             }
           }
         },
         "show_auto_slides": {
-          "label": "Auto Change Slides"
+          "label": "Diapositives de changement automatique"
         },
         "change_duration": {
-          "label": "Change Duration"
+          "label": "Modifier la durée"
         },
         "navigation_styles": {
-          "label": "Navigation Styles",
+          "label": "Styles de navigation",
           "options": {
             "dots": {
-              "label": "Dots"
+              "label": "Points"
             },
             "bars": {
-              "label": "Bars"
+              "label": "Barres"
             }
           }
         },
@@ -2767,40 +2767,40 @@
       },
       "blocks": {
         "slide": {
-          "name": "Slide",
+          "name": "Glisser",
           "settings": {
             "header_alignment": {
-              "label": "Position and Alignment"
+              "label": "Position et alignement"
             },
             "content_position": {
-              "label": "Content Position",
+              "label": "Position du contenu",
               "options": {
                 "top_left": {
-                  "label": "Top Left"
+                  "label": "En haut à gauche"
                 },
                 "top_center": {
-                  "label": "Top Center"
+                  "label": "Centre supérieur"
                 },
                 "top_right": {
-                  "label": "Top Right"
+                  "label": "En haut à droite"
                 },
                 "center_left": {
-                  "label": "Center Left"
+                  "label": "Centre gauche"
                 },
                 "center": {
                   "label": "Center"
                 },
                 "center_right": {
-                  "label": "Center Right"
+                  "label": "Centre droit"
                 },
                 "bottom_left": {
-                  "label": "Bottom Left"
+                  "label": "En bas à gauche"
                 },
                 "bottom_center": {
-                  "label": "Bottom Center"
+                  "label": "En bas au centre"
                 },
                 "bottom_right": {
-                  "label": "Bottom Right"
+                  "label": "En bas à droite"
                 }
               }
             },
@@ -2828,16 +2828,16 @@
               "label": "Bouton"
             },
             "slide_button_link": {
-              "label": "Button Link"
+              "label": "Lien du bouton"
             },
             "slide_image_desktop": {
               "label": "Image"
             },
             "slide_image_mobile": {
-              "label": "Mobile Image"
+              "label": "Images mobiles"
             },
             "header_colors": {
-              "label": "Colors",
+              "label": "Couleurs",
               "text": {
                 "label": "Texte"
               },
@@ -2849,11 +2849,11 @@
         }
       },
       "presets": {
-        "name": "Slideshow"
+        "name": "Diaporama"
       }
     },
     "text-with-icon": {
-      "name": "Text With Icon",
+      "name": "Texte avec icône",
       "settings": {
         "lazyload_images": {
           "label": "Activer les images LazyLoad",
@@ -2871,7 +2871,7 @@
       },
       "blocks": {
         "slide": {
-          "name": "Slide",
+          "name": "Glisser",
           "settings": {
             "slide_logo_label": {
               "label": "Logo"
@@ -2903,11 +2903,11 @@
         }
       },
       "presets": {
-        "name": "Text With Icon"
+        "name": "Texte avec icône"
       }
     },
     "text-image-center": {
-      "name": "Text Image Center",
+      "name": "Centre d'images de texte",
       "settings": {
         "main_heading": {
           "label": "Titre"
@@ -2954,7 +2954,7 @@
       },
       "blocks": {
         "left-text": {
-          "name": "Left Text",
+          "name": "Texte de gauche",
           "settings": {
             "left_heading": {
               "label": "Titre"
@@ -2965,7 +2965,7 @@
           }
         },
         "right-text": {
-          "name": "Right Text",
+          "name": "Texte correct",
           "settings": {
             "right_heading": {
               "label": "Titre"
@@ -2977,11 +2977,11 @@
         }
       },
       "presets": {
-        "name": "Text Image Center"
+        "name": "Centre d'images de texte"
       }
     },
     "testimonials": {
-      "name": "Testimonials",
+      "name": "Témoignages",
       "settings": {
         "testimonial_heading": {
           "label": "Titre"
@@ -3007,8 +3007,8 @@
           }
         },
         "show_circular_images": {
-          "label": "Circular Images",
-          "info": "Require Square Images"
+          "label": "Images circulaires",
+          "info": "Exiger des images carrées"
         },
         "testimonial_background_color": {
           "label": "Arrière-plan"
@@ -3023,28 +3023,28 @@
       },
       "blocks": {
         "testimonial": {
-          "name": "Testimonial",
+          "name": "Témoignage",
           "settings": {
             "testimonial_star": {
-              "label": "Icon",
+              "label": "Icône",
               "options": {
                 "5-stars": {
-                  "label": "5 Stars"
+                  "label": "5 étoiles"
                 },
                 "4-stars": {
-                  "label": "4 Stars"
+                  "label": "4 étoiles"
                 },
                 "3-stars": {
-                  "label": "3 Stars"
+                  "label": "3 étoiles"
                 },
                 "2-stars": {
-                  "label": "2 Stars"
+                  "label": "2 étoiles"
                 },
                 "1-stars": {
-                  "label": "1 Stars"
+                  "label": "1 étoiles"
                 },
                 "none": {
-                  "label": "None"
+                  "label": "Aucun"
                 }
               }
             },
@@ -3055,27 +3055,30 @@
               "label": "Texte"
             },
             "author_image": {
-              "label": "Author Image"
+              "label": "Image de l'auteur"
             },
             "author_text": {
-              "label": "Author"
+              "label": "Auteur"
             }
           }
         }
       },
       "presets": {
-        "name": "Testimonials"
+        "name": "Témoignages"
       }
     },
     "video": {
-      "name": "Video",
+      "name": "Vidéo",
       "settings": {
         "section_width": {
-          "label": "Full Width"
+          "label": "Pleine largeur"
         },
         "section_height_desktop": {
-          "label": "Desktop Height",
+          "label": "Hauteur du bureau",
           "options": {
+            "natural": {
+              "label": "Naturel"
+            },
             "compact": {
               "label": "Compact (450px)"
             },
@@ -3083,15 +3086,15 @@
               "label": "Standard (650px)"
             },
             "extended": {
-              "label": "Extended (750px)"
+              "label": "Étendu (750px)"
             },
             "full": {
-              "label": "Full Screen"
+              "label": "Plein écran"
             }
           }
         },
         "section_height_mobile": {
-          "label": "Mobile Height",
+          "label": "Hauteur mobile",
           "options": {
             "auto": {
               "label": "Auto"
@@ -3103,10 +3106,10 @@
               "label": "Standard (400px)"
             },
             "extended": {
-              "label": "Extended (500px)"
+              "label": "Étendu (500px)"
             },
             "full": {
-              "label": "Full Screen"
+              "label": "Plein écran"
             }
           }
         },
@@ -3117,53 +3120,53 @@
           "label": "Titre"
         },
         "cover_image": {
-          "label": "Cover Image",
-          "info": "Applied Only If Autoplay Turned Off"
+          "label": "Image de couverture",
+          "info": "Appliqué uniquement si la lecture automatique est désactivée"
         },
         "external_video": {
-          "label": "External Video"
+          "label": "Vidéo externe"
         },
         "video": {
-          "label": "Video",
-          "info": "Replaces The External Video If both are set"
+          "label": "Vidéo",
+          "info": "Remplace la vidéo externe si les deux sont définis"
         },
         "autoplay_video": {
-          "label": "Autoplay Video"
+          "label": "Vidéo en lecture automatique"
         },
         "color_text": {
           "label": "Texte"
         },
         "header_alignment": {
-          "label": "Position and Alignment",
+          "label": "Position et alignement",
           "content_position": {
-            "label": "Content Position",
+            "label": "Position du contenu",
             "options": {
               "top_left": {
-                "label": "Top Left"
+                "label": "En haut à gauche"
               },
               "top_center": {
-                "label": "Top Center"
+                "label": "Centre supérieur"
               },
               "top_right": {
-                "label": "Top Right"
+                "label": "En haut à droite"
               },
               "center_left": {
-                "label": "Center Left"
+                "label": "Centre gauche"
               },
               "center": {
                 "label": "Center"
               },
               "center_right": {
-                "label": "Center Right"
+                "label": "Centre droit"
               },
               "bottom_left": {
-                "label": "Bottom Left"
+                "label": "En bas à gauche"
               },
               "bottom_center": {
-                "label": "Bottom Center"
+                "label": "En bas au centre"
               },
               "bottom_right": {
-                "label": "Bottom Right"
+                "label": "En bas à droite"
               }
             }
           },
@@ -3193,7 +3196,7 @@
         }
       },
       "presets": {
-        "name": "Video"
+        "name": "Vidéo"
       }
     },
     "404": {
