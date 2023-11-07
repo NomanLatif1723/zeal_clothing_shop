@@ -919,42 +919,42 @@
       }
     },
     "header": {
-      "name": "Header",
+      "name": "Entête",
       "settings": {
         "header_navigation": {
-          "label": "Navigation Menus",
+          "label": "Menus de navigation",
           "desktop_menu": {
-            "label": "Desktop Menu"
+            "label": "Menu du bureau"
           },
           "mobile_menu": {
-            "label": "Mobile Menu"
+            "label": "Menu mobile"
           }
         },
         "header_styles": {
-          "label": "Header Styles",
+          "label": "Styles d'en-tête",
           "options": {
             "center_left": {
-              "label": "Logo center Menu Left"
+              "label": "Logo centre Menu gauche"
             },
             "left_center": {
-              "label": "Logo Left Menu center"
+              "label": "Logo Centre du menu gauche"
             },
             "left": {
-              "label": "Logo left Menu Left"
+              "label": "Logo gauche Menu gauche"
             },
             "drawer_center": {
-              "label": "Menu Drawer Logo center"
+              "label": "Centre du logo du tiroir de menu"
             },
             "center_below": {
-              "label": "Logo center Menu Below"
+              "label": "Logo central Menu ci-dessous"
             }
           }
         },
         "sticky_header": {
-          "label": "Sticky Header"
+          "label": "En-tête collant"
         },
         "show_icons": {
-          "label": "Show Icons"
+          "label": "Afficher les icônes"
         }
       },
       "blocks": {
@@ -964,60 +964,60 @@
             "header_logo": {
               "label": "Logo",
               "logo": {
-                "label": "Logo Image"
+                "label": "Image logo"
               },
               "desktop_logo_width": {
-                "label": "Desktop Logo Width"
+                "label": "Largeur du logo du bureau"
               },
               "mobile_logo_width": {
-                "label": "Mobile Logo Width"
+                "label": "Largeur du logo mobile"
               }
             }
           }
         },
         "mega-menu": {
-          "name": "Mega Menu",
+          "name": "Méga menu",
           "settings": {
             "menu_item_label": {
-              "label": "Menu Item",
-              "info": "Enter Menu Title to Apply Mega Menu"
+              "label": "Élément du menu",
+              "info": "Entrez le titre du menu pour appliquer le méga menu"
             },
             "mega_menu": {
-              "label": "Mega Menu",
-              "info": "Should be Two Level Menu"
+              "label": "Méga menu",
+              "info": "Devrait être un menu à deux niveaux"
             },
             "header_alignment": {
-              "label": "Position and Alignment"
+              "label": "Position et alignement"
             },
             "content_position": {
-              "label": "Content Position",
+              "label": "Position du contenu",
               "options": {
                 "top_left": {
-                  "label": "Top Left"
+                  "label": "En haut à gauche"
                 },
                 "top_center": {
-                  "label": "Top Center"
+                  "label": "Centre supérieur"
                 },
                 "top_right": {
-                  "label": "Top Right"
+                  "label": "En haut à droite"
                 },
                 "center_left": {
-                  "label": "Center Left"
+                  "label": "Centre gauche"
                 },
                 "center": {
                   "label": "Center"
                 },
                 "center_right": {
-                  "label": "Center Right"
+                  "label": "Centre droit"
                 },
                 "bottom_left": {
-                  "label": "Bottom Left"
+                  "label": "En bas à gauche"
                 },
                 "bottom_center": {
-                  "label": "Bottom Center"
+                  "label": "En bas au centre"
                 },
                 "bottom_right": {
-                  "label": "Bottom Right"
+                  "label": "En bas à droite"
                 }
               }
             },
@@ -1050,7 +1050,7 @@
                 "label": "Texte"
               },
               "link": {
-                "label": "Link"
+                "label": "Lien"
               }
             },
             "header_image_2": {
@@ -1068,7 +1068,7 @@
                 "label": "Texte"
               },
               "link": {
-                "label": "Link"
+                "label": "Lien"
               }
             }
           }
