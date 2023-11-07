@@ -238,7 +238,7 @@
           "label": "Subheading"
         },
         "heading": {
-          "label": "Heading"
+          "label": "Titre"
         },
         "custom_content": {
           "label": "Liquid"
@@ -312,7 +312,7 @@
           "info": "Dynamic recommendations use order and product information to change and improve over time. [Learn more](https:\/\/help.shopify.com\/en\/themes\/development\/recommended-products)"
         },
         "heading": {
-          "label": "Heading"
+          "label": "Titre"
         },
         "products_to_show": {
           "label": "Products To Show"
@@ -359,7 +359,7 @@
       "name": "Events Popup",
       "settings": {
         "heading": {
-          "label": "Heading"
+          "label": "Titre"
         },
         "first_subheading": {
           "label": "Top Subheading"
@@ -453,7 +453,7 @@
           "label": "Collection"
         },
         "heading": {
-          "label": "Heading"
+          "label": "Titre"
         },
         "text": {
           "label": "Text"
@@ -513,7 +513,7 @@
           "label": "Product"
         },
         "heading": {
-          "label": "Heading"
+          "label": "Titre"
         },
         "text": {
           "label": "Text"
@@ -612,7 +612,7 @@
               "label": "Description as a tab"
             },
             "heading": {
-              "label": "Heading"
+              "label": "Titre"
             }
           }
         },
@@ -644,7 +644,7 @@
           "name": "Collapsables",
           "settings": {
             "heading": {
-              "label": "Heading"
+              "label": "Titre"
             },
             "text": {
               "label": "Text"
@@ -774,7 +774,7 @@
       "name": "FAQ",
       "settings": {
         "faq_heading": {
-          "label": "Heading"
+          "label": "Titre"
         },
         "faq_text": {
           "label": "Text"
@@ -852,7 +852,7 @@
           "name": "Menu",
           "settings": {
             "menu_heading": {
-              "label": "Heading"
+              "label": "Titre"
             },
             "show_footer_heading": {
               "label": "Show Heading"
@@ -872,7 +872,7 @@
               "label": "Show Heading"
             },
             "newsletter_heading": {
-              "label": "Heading"
+              "label": "Titre"
             },
             "newsletter_text": {
               "label": "Text"
@@ -1044,7 +1044,7 @@
                 "label": "Subheading"
               },
               "heading": {
-                "label": "Heading"
+                "label": "Titre"
               },
               "text": {
                 "label": "Text"
@@ -1062,7 +1062,7 @@
                 "label": "Subheading"
               },
               "heading": {
-                "label": "Heading"
+                "label": "Titre"
               },
               "text": {
                 "label": "Text"
@@ -1108,7 +1108,7 @@
           "name": "Text",
           "settings": {
             "heading": {
-              "label": "Heading"
+              "label": "Titre"
             },
             "text": {
               "label": "Text"
@@ -1148,7 +1148,7 @@
           "name": "Text",
           "settings": {
             "compare_heading": {
-              "label": "Heading"
+              "label": "Titre"
             },
             "compare_text": {
               "label": "Text"
@@ -1282,7 +1282,7 @@
               "label": "Image"
             },
             "banner_heading": {
-              "label": "Heading"
+              "label": "Titre"
             },
             "banner_button": {
               "label": "Button"
@@ -1394,12 +1394,12 @@
       "name": "Contact Form",
       "settings": {
         "main_heading": {
-          "label": "Heading"
+          "label": "Titre"
         },
         "header_personal_info": {
           "label": "Personal Information",
           "info_heading": {
-            "label": "Heading"
+            "label": "Titre"
           },
           "info_text": {
             "label": "Text"
@@ -1420,7 +1420,7 @@
           "name": "Address",
           "settings": {
             "heading": {
-              "label": "Heading"
+              "label": "Titre"
             },
             "text": {
               "label": "Text"
@@ -1431,7 +1431,7 @@
           "name": "Phone Number",
           "settings": {
             "heading": {
-              "label": "Heading"
+              "label": "Titre"
             },
             "text": {
               "label": "Text"
@@ -1442,7 +1442,7 @@
           "name": "Email",
           "settings": {
             "heading": {
-              "label": "Heading"
+              "label": "Titre"
             },
             "text": {
               "label": "Text"
@@ -1453,7 +1453,7 @@
           "name": "Schedule",
           "settings": {
             "heading": {
-              "label": "Heading"
+              "label": "Titre"
             },
             "text": {
               "label": "Text"
@@ -1688,7 +1688,7 @@
               "label": "Description as a tab"
             },
             "heading": {
-              "label": "Heading"
+              "label": "Titre"
             }
           }
         },
@@ -1720,7 +1720,7 @@
           "name": "Collapsables",
           "settings": {
             "heading": {
-              "label": "Heading"
+              "label": "Titre"
             },
             "text": {
               "label": "Text"
@@ -1904,7 +1904,7 @@
           "name": "Title",
           "settings": {
             "title": {
-              "label": "Heading"
+              "label": "Titre"
             }
           }
         },
@@ -1995,7 +1995,7 @@
           "label": "Add Google Iframe code"
         },
         "heading": {
-          "label": "Heading"
+          "label": "Titre"
         },
         "address": {
           "label": "Address and Hours"
@@ -2073,7 +2073,7 @@
       "name": "Newsletter",
       "settings": {
         "newsletter_heading": {
-          "label": "Heading"
+          "label": "Titre"
         },
         "newsletter_button_label": {
           "label": "Button Label"
@@ -2125,7 +2125,7 @@
           "label": "Subheading"
         },
         "newsletter_heading": {
-          "label": "Heading"
+          "label": "Titre"
         },
         "newsletter_text": {
           "label": "Text"
@@ -2182,7 +2182,7 @@
           "label": "Full Width"
         },
         "page_heading": {
-          "label": "Heading"
+          "label": "Titre"
         },
         "page_image": {
           "label": "Background Image"
@@ -2246,7 +2246,7 @@
           "name": "Banner",
           "settings": {
             "banner_heading": {
-              "label": "Heading"
+              "label": "Titre"
             },
             "banner_text": {
               "label": "Text"
@@ -2281,7 +2281,7 @@
               "label": "Product"
             },
             "promo_product_heading": {
-              "label": "Heading"
+              "label": "Titre"
             },
             "promo_product_text": {
               "label": "Text"
@@ -2369,7 +2369,7 @@
               "label": "Collection"
             },
             "promo_collection_heading": {
-              "label": "Heading"
+              "label": "Titre"
             },
             "promo_collection_text": {
               "label": "Text"
@@ -2483,7 +2483,7 @@
               "label": "Subheading"
             },
             "heading": {
-              "label": "Heading"
+              "label": "Titre"
             },
             "button_label": {
               "label": "Button"
@@ -2563,7 +2563,7 @@
           "info": "Dynamic recommendations use order and product information to change and improve over time. [Learn more](https:\/\/help.shopify.com\/en\/themes\/development\/recommended-products)"
         },
         "heading": {
-          "label": "Heading"
+          "label": "Titre"
         },
         "products_to_show": {
           "label": "Products To Show"
@@ -2646,10 +2646,10 @@
           }
         },
         "heading": {
-          "name": "Heading",
+          "name": "Titre",
           "settings": {
             "richtext_main_heading": {
-              "label": "Heading"
+              "label": "Titre"
             }
           }
         },
@@ -2796,7 +2796,7 @@
               }
             },
             "slide_heading": {
-              "label": "Heading"
+              "label": "Titre"
             },
             "slide_text": {
               "label": "Text"
@@ -2854,7 +2854,7 @@
               "label": "Logo"
             },
             "slide_heading": {
-              "label": "Heading"
+              "label": "Titre"
             },
             "slide_text": {
               "label": "Text"
@@ -2887,7 +2887,7 @@
       "name": "Text Image Center",
       "settings": {
         "main_heading": {
-          "label": "Heading"
+          "label": "Titre"
         },
         "image": {
           "label": "Image"
@@ -2934,7 +2934,7 @@
           "name": "Left Text",
           "settings": {
             "left_heading": {
-              "label": "Heading"
+              "label": "Titre"
             },
             "left_text": {
               "label": "Text"
@@ -2945,7 +2945,7 @@
           "name": "Right Text",
           "settings": {
             "right_heading": {
-              "label": "Heading"
+              "label": "Titre"
             },
             "right_text": {
               "label": "Text"
@@ -2961,7 +2961,7 @@
       "name": "Testimonials",
       "settings": {
         "testimonial_heading": {
-          "label": "Heading"
+          "label": "Titre"
         },
         "testimonial_text": {
           "label": "Text"
@@ -3026,7 +3026,7 @@
               }
             },
             "testimonial_slide_heading": {
-              "label": "Heading"
+              "label": "Titre"
             },
             "testimonial_slide_text": {
               "label": "Text"
@@ -3091,7 +3091,7 @@
           "label": "Subheading"
         },
         "heading": {
-          "label": "Heading"
+          "label": "Titre"
         },
         "cover_image": {
           "label": "Cover Image",
