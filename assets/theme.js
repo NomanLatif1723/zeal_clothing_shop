@@ -139,7 +139,7 @@ initStickyHeader();
 function initHeaderNavigation() {
   let openMenuDrawerBtn = document.querySelector('.menu-toggle__btn');
   let menuDrawer = document.querySelector('.nav-drawer');
-  // let overlayShadow = document.querySelector('.drawer__overlay-container');
+  let menuDrawerBox = document.querySelector('.nav-drawer__box');
   let closeMenuDrawerBtn = document.querySelector('.nav-icon__close');
   let bodyContainer = document.querySelector('body');
 
@@ -148,31 +148,38 @@ function initHeaderNavigation() {
   if (openMenuDrawerBtn) {
     openMenuDrawerBtn.addEventListener('click', () => {
       openMenuDrawer();
-    })
-    // overlayShadow.addEventListener('click', () => {
-    //   closeMenuDrawer();
-    // })
+    });
+  }
+  if (menuDrawer) {
+    menuDrawer.addEventListener('click', () => {
+      closeMenuDrawer();
+    });
+  }
+  if (menuDrawerBox) {
+    menuDrawer.addEventListener('click', (event) => {
+      event.preventDefault();
+    });
+  }
+  if (closeMenuDrawer) {
     closeMenuDrawerBtn.addEventListener('click', () => {
       closeMenuDrawer();
-    })
-    function openMenuDrawer() {
-      if (menuDrawer.classList.contains('menu-drawer__left')) {
-        menuDrawer.classList.add('drawer-open__left');
-      } else {
-        menuDrawer.classList.add('drawer-open__right');
-      }
-      // overlayShadow.classList.add('overlay__visible');
-      bodyContainer.classList.add('drawer__opening');
+    });
+  }
+  function openMenuDrawer() {
+    if (menuDrawer.classList.contains('menu-drawer__left')) {
+      menuDrawer.classList.add('drawer-open__left');
+    } else {
+      menuDrawer.classList.add('drawer-open__right');
     }
-    function closeMenuDrawer() {
-      if (menuDrawer.classList.contains('menu-drawer__left')) {
-        menuDrawer.classList.remove('drawer-open__left');
-      } else {
-        menuDrawer.classList.remove('drawer-open__right');
-      }
-      // overlayShadow.classList.remove('overlay__visible');
-      bodyContainer.classList.remove('drawer__opening');
+    bodyContainer.classList.add('drawer__opening');
+  }
+  function closeMenuDrawer() {
+    if (menuDrawer.classList.contains('menu-drawer__left')) {
+      menuDrawer.classList.remove('drawer-open__left');
+    } else {
+      menuDrawer.classList.remove('drawer-open__right');
     }
+    bodyContainer.classList.remove('drawer__opening');
   }
 
   // Drawer Item Click Function
