@@ -1114,10 +1114,10 @@
               "label": "Texte"
             },
             "button_label": {
-              "label": "Button"
+              "label": "Bouton"
             },
             "button_link": {
-              "label": "Link"
+              "label": "Lien"
             }
           }
         }
@@ -1154,10 +1154,10 @@
               "label": "Texte"
             },
             "button_heading": {
-              "label": "Button"
+              "label": "Bouton"
             },
             "button_link": {
-              "label": "Link"
+              "label": "Lien"
             }
           }
         },
@@ -1285,10 +1285,10 @@
               "label": "Titre"
             },
             "banner_button": {
-              "label": "Button"
+              "label": "Bouton"
             },
             "banner_link": {
-              "label": "Link"
+              "label": "Lien"
             }
           }
         }
@@ -1354,7 +1354,7 @@
           "label": "Texte"
         },
         "marquee_text_link": {
-          "label": "Link"
+          "label": "Lien"
         },
         "marquee_text_size": {
           "label": "Text Size"
@@ -2024,10 +2024,10 @@
           "label": "Address and Hours"
         },
         "button_text": {
-          "label": "Button"
+          "label": "Bouton"
         },
         "button_link": {
-          "label": "Link"
+          "label": "Lien"
         },
         "header_alignment": {
           "label": "Position and Alignment"
@@ -2277,19 +2277,19 @@
             "header_first_button": {
               "label": "First Button",
               "button_label": {
-                "label": "Button"
+                "label": "Bouton"
               },
               "button_link": {
-                "label": "Link"
+                "label": "Lien"
               }
             },
             "header_second_button": {
               "label": "Second Button",
               "button_label": {
-                "label": "Button"
+                "label": "Bouton"
               },
               "button_link": {
-                "label": "Link"
+                "label": "Lien"
               }
             },
             "banner_background": {
@@ -2375,10 +2375,10 @@
               }
             },
             "button_label": {
-              "label": "Button"
+              "label": "Bouton"
             },
             "button_link": {
-              "label": "Link"
+              "label": "Lien"
             },
             "promo_background_color": {
               "label": "Background"
@@ -2460,10 +2460,10 @@
               }
             },
             "button_label": {
-              "label": "Button"
+              "label": "Bouton"
             },
             "button_link": {
-              "label": "Link"
+              "label": "Lien"
             },
             "collection_background_color": {
               "label": "Background"
@@ -2509,10 +2509,10 @@
               "label": "Titre"
             },
             "button_label": {
-              "label": "Button"
+              "label": "Bouton"
             },
             "button_link": {
-              "label": "Link"
+              "label": "Lien"
             },
             "header_alignment": {
               "label": "Position and Alignment"
@@ -2569,7 +2569,7 @@
                 "label": "Texte"
               },
               "button": {
-                "label": "Button"
+                "label": "Bouton"
               }
             }
           }
@@ -2685,10 +2685,10 @@
           }
         },
         "button": {
-          "name": "Button",
+          "name": "Bouton",
           "settings": {
             "button_label": {
-              "label": "Button"
+              "label": "Bouton"
             },
             "button_link": {
               "label": "Button Link"
@@ -2825,7 +2825,7 @@
               "label": "Texte"
             },
             "slide_button": {
-              "label": "Button"
+              "label": "Bouton"
             },
             "slide_button_link": {
               "label": "Button Link"
@@ -2842,7 +2842,7 @@
                 "label": "Texte"
               },
               "button": {
-                "label": "Button"
+                "label": "Bouton"
               }
             }
           }
@@ -2916,10 +2916,10 @@
           "label": "Image"
         },
         "button_label": {
-          "label": "Button"
+          "label": "Bouton"
         },
         "button_link": {
-          "label": "Link"
+          "label": "Lien"
         },
         "header_alignment": {
           "label": "Alignement",
