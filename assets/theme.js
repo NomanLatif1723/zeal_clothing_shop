@@ -1974,7 +1974,7 @@ function initQuickShopCollection() {
     preloadProductModal(handle, productId, btn);
   }
   function preloadProductModal(handle, productId) {
-    let url = `${window.themeContent.routes.home}products/${handle}?view=quick-view`;
+    let url = `${window.themeContent.routes.home}/products/${handle}?view=quick-view`;
     console.log(url);
     fetch(url)
     .then(function(responce) {
