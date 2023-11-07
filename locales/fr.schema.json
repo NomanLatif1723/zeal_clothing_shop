@@ -3505,37 +3505,37 @@
       }
     },
     "sticky_add_to_cart": {
-      "name": "Sticky Add To Cart",
+      "name": "Collant Ajouter au panier",
       "settings": {
         "enable_sticky_add_to_cart": {
-          "label": "Enable Sticky Cart"
+          "label": "Activer le panier collant"
         },
         "sticky_add_to_cart_position": {
-          "label": "Sticky Cart Position",
+          "label": "Position du chariot collant",
           "options": {
             "top": {
-              "label": "Top"
+              "label": "Haut"
             },
             "bottom": {
-              "label": "Bottom"
+              "label": "Bas"
             }
           }
         }
       }
     },
     "typography": {
-      "name": "Typography",
+      "name": "Typographie",
       "settings": {
         "header_headings": {
-          "label": "Headings",
+          "label": "Rubriques",
           "heading_font_family": {
-            "label": "Font"
+            "label": "Police de caractère"
           }
         },
         "header_body_text": {
           "label": "Texte",
           "body_text_font_family": {
-            "label": "Font"
+            "label": "Police de caractère"
           }
         }
       }
