@@ -447,7 +447,7 @@
       }
     },
     "featured-collection": {
-      "name": "Featured Collection",
+      "name": "Collection en vedette",
       "settings": {
         "collection": {
           "label": "Collection"
@@ -462,14 +462,14 @@
           "label": "Produits par rangée"
         },
         "product_rows": {
-          "label": "Rows of Products"
+          "label": "Rangées de produits"
         },
         "stack_product": {
-          "label": "Stack On Mobile"
+          "label": "Empiler sur mobile"
         },
         "show_view_all": {
-          "label": "Show View All",
-          "info": "Enable View All Only If your collection has more products than shown"
+          "label": "Afficher Afficher tout",
+          "info": "Activer Afficher tout uniquement si votre collection contient plus de produits que ceux affichés"
         },
         "header_alignment": {
           "label": "Alignement",
@@ -503,14 +503,14 @@
         }
       },
       "presets": {
-        "name": "Featured Collection"
+        "name": "Collection en vedette"
       }
     },
     "featured-product": {
-      "name": "Featured Product",
+      "name": "Produit en vedette",
       "settings": {
-        "product": {
-          "label": "Product"
+        "Produit": {
+          "label": "Produit"
         },
         "heading": {
           "label": "Titre"
@@ -536,56 +536,56 @@
           }
         },
         "show_rating": {
-          "label": "Add Product Rating",
-          "info": "To display a rating, add a product rating app. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/theme-structure\/theme-features#featured-product-rating)"
+          "label": "Ajouter une évaluation du produit",
+          "info": "Pour afficher une note, ajoutez une application de notation de produits. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/theme-structure\/theme-features#featured-product-rating)"
         },
         "media_position": {
-          "label": "Media on the Right"
+          "label": "Médias de droite"
         },
         "media_width": {
-          "label": "Desktop Width",
+          "label": "Largeur du bureau",
           "options": {
             "compact": {
               "label": "Compact"
             },
             "large": {
-              "label": "Large"
+              "label": "Grand"
             },
             "extended": {
-              "label": "Extended"
+              "label": "Étendu"
             }
           }
         },
         "media_layout": {
-          "label": "Desktop Layout",
+          "label": "Disposition du bureau",
           "options": {
             "grid": {
               "label": "Grid"
             },
             "thumbnail": {
-              "label": "Thumbnail"
+              "label": "Vignette"
             }
           }
         },
         "thumbnail_position": {
-          "label": "Thumbnail Positions",
+          "label": "Positions des vignettes",
           "options": {
             "left": {
-              "label": "Left"
+              "label": "Gauche"
             },
             "below": {
-              "label": "Below"
+              "label": "Ci-dessous"
             }
           }
         },
         "show_thumbnail_arrows": {
-          "label": "Show Arrows"
+          "label": "Afficher les flèches"
         },
         "header_size_chart": {
-          "label": "Size Chart",
+          "label": "Tableau des tailles",
           "size_chart_page": {
-            "label": "Size Chart Page",
-            "info": "Select a Page for Size Chart"
+            "label": "Page du tableau des tailles",
+            "info": "Sélectionnez une page pour le tableau des tailles"
           }
         },
         "header_spacing": {
@@ -600,16 +600,16 @@
       },
       "blocks": {
         "title": {
-          "name": "Title"
+          "name": "Titre"
         },
         "description": {
-          "name": "Short Description"
+          "name": "brève description"
         },
         "full_description": {
-          "name": "Full Description",
+          "name": "Description complète",
           "settings": {
             "description_as_tab": {
-              "label": "Description as a tab"
+              "label": "Description sous forme d'onglet"
             },
             "heading": {
               "label": "Titre"
@@ -617,31 +617,31 @@
           }
         },
         "variants_picker": {
-          "name": "variants Picker",
+          "name": "Sélecteur de variantes",
           "settings": {
             "variant_type": {
-              "label": "Variants Type",
+              "label": "Type de variantes",
               "options": {
                 "dropdown": {
-                  "label": "Dropdown"
+                  "label": "Dérouler"
                 },
                 "button": {
-                  "label": "Buttons"
+                  "label": "Boutons"
                 }
               }
             },
             "enable_color_swatches": {
-              "label": "Enable Color Swatches",
-              "info": "Enables color swatches for button variants only."
+              "label": "Activer les échantillons de couleurs",
+              "info": "Active les échantillons de couleurs pour les variantes de boutons uniquement."
             },
             "enable_image_swatches": {
-              "label": "Variant Images As Swatches",
-              "info": "Enables color swatches for button variants only if variants images Added"
+              "label": "Images de variantes sous forme d'échantillons",
+              "info": "Active les échantillons de couleurs pour les variantes de boutons uniquement si les images de variantes sont ajoutées"
             }
           }
         },
         "collapsables": {
-          "name": "Collapsables",
+          "name": "Pliables",
           "settings": {
             "heading": {
               "label": "Titre"
@@ -652,36 +652,36 @@
           }
         },
         "price": {
-          "name": "Price",
+          "name": "Prix",
           "settings": {
             "show_sale_badges": {
-              "label": "Show Sale Badges"
+              "label": "Afficher les badges de vente"
             }
           }
         },
         "quantity_selector": {
-          "name": "Quantity Selector"
+          "name": "Sélecteur de quantité"
         },
         "buy_buttons": {
-          "name": "Buy Buttons",
+          "name": "Acheter des boutons",
           "settings": {
             "enable_dynamic_checkout": {
-              "label": "Enable Dynamic Checkout Buttons",
-              "info": "Using the payment methods available on your store, customers see their preferred option, like PayPal or Apple Pay. [Learn more](https:\/\/help.shopify.com\/manual\/using-themes\/change-the-layout\/dynamic-checkout)"
+              "label": "Activer les boutons de paiement dynamique",
+              "info": "En utilisant les méthodes de paiement disponibles sur votre boutique, les clients voient leur option préférée, comme PayPal ou Apple Pay. [Learn more](https:\/\/help.shopify.com\/manual\/using-themes\/change-the-layout\/dynamic-checkout)"
             }
           }
         },
         "custom_liquid": {
-          "name": "Custom Liquid",
+          "name": "Liquide personnalisé",
           "settings": {
             "custom_content": {
-              "label": "Liquid",
-              "info": "Add app snippets or other Liquid code to create advanced customizations."
+              "label": "Liquide",
+              "info": "Ajoutez des extraits d'application ou d'autres codes Liquid pour créer des personnalisations avancées."
             }
           }
         },
         "sale_timer": {
-          "name": "Sale Timer",
+          "name": "Minuterie de vente",
           "settings": {
             "year": {
               "label": "Year"
@@ -1363,7 +1363,7 @@
           "label": "Texte",
           "options": {
             "left": {
-              "label": "Left"
+              "label": "Gauche"
             },
             "right": {
               "label": "Right"
@@ -1612,45 +1612,45 @@
           "label": "Show Breadcrumbs"
         },
         "show_rating": {
-          "label": "Add Product Rating",
-          "info": "To display a rating, add a product rating app. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/theme-structure\/theme-features#featured-product-rating)"
+          "label": "Ajouter une évaluation du produit",
+          "info": "Pour afficher une note, ajoutez une application de notation de produits. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/theme-structure\/theme-features#featured-product-rating)"
         },
         "media_position": {
-          "label": "Media on the Right"
+          "label": "Médias de droite"
         },
         "media_width": {
-          "label": "Desktop Width",
+          "label": "Largeur du bureau",
           "options": {
             "compact": {
               "label": "Compact"
             },
             "large": {
-              "label": "Large"
+              "label": "Grand"
             },
             "extended": {
-              "label": "Extended"
+              "label": "Étendu"
             }
           }
         },
         "media_layout": {
-          "label": "Desktop Layout",
+          "label": "Disposition du bureau",
           "options": {
             "grid": {
               "label": "Grille"
             },
             "thumbnail": {
-              "label": "Thumbnail"
+              "label": "Vignette"
             }
           }
         },
         "thumbnail_position": {
-          "label": "Thumbnail Positions",
+          "label": "Positions des vignettes",
           "options": {
             "left": {
-              "label": "Left"
+              "label": "Gauche"
             },
             "below": {
-              "label": "Below"
+              "label": "Ci-dessous"
             }
           }
         },
@@ -2274,11 +2274,11 @@
             }
           }
         },
-        "product": {
-          "name": "Product",
+        "Produit": {
+          "name": "Produit",
           "settings": {
             "promo_product": {
-              "label": "Product"
+              "label": "Produit"
             },
             "promo_product_heading": {
               "label": "Titre"
