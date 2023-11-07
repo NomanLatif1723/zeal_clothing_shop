@@ -2290,65 +2290,65 @@
               "label": "Show Price"
             },
             "header_timer": {
-              "label": "Timer",
+              "label": "Minuteur",
               "show_timer": {
-                "label": "Show Timer"
+                "label": "Afficher la minuterie"
               },
               "year": {
-                "label": "Year"
+                "label": "Année"
               },
               "month": {
-                "label": "Month",
+                "label": "Mois",
                 "options": {
                   "01": {
-                    "label": "January"
+                    "label": "Janvier"
                   },
                   "02": {
-                    "label": "Febrary"
+                    "label": "Février"
                   },
                   "03": {
-                    "label": "March"
+                    "label": "Mars"
                   },
                   "04": {
-                    "label": "April"
+                    "label": "Avril"
                   },
                   "05": {
-                    "label": "May"
+                    "label": "Peut"
                   },
                   "06": {
-                    "label": "June"
+                    "label": "Juin"
                   },
                   "07": {
-                    "label": "July"
+                    "label": "Juillet"
                   },
                   "08": {
-                    "label": "August"
+                    "label": "Août"
                   },
                   "09": {
-                    "label": "September"
+                    "label": "Septembre"
                   },
                   "10": {
-                    "label": "October"
+                    "label": "Octobre"
                   },
                   "11": {
-                    "label": "November"
+                    "label": "Novembre"
                   },
                   "12": {
-                    "label": "December"
+                    "label": "Décembre"
                   }
                 }
               },
               "day": {
-                "label": "Day"
+                "label": "Jour"
               },
               "hour": {
-                "label": "Hour"
+                "label": "Heure"
               },
               "minutes": {
                 "label": "Minute"
               },
               "timer_completion_message": {
-                "label": "Completion Message"
+                "label": "Message d'achèvement"
               }
             },
             "button_label": {
@@ -2375,65 +2375,65 @@
               "label": "Texte"
             },
             "header_timer": {
-              "label": "Timer",
+              "label": "Minuteur",
               "show_timer": {
-                "label": "Show Timer"
+                "label": "Afficher la minuterie"
               },
               "year": {
-                "label": "Year"
+                "label": "Année"
               },
               "month": {
-                "label": "Month",
+                "label": "Mois",
                 "options": {
                   "01": {
-                    "label": "January"
+                    "label": "Janvier"
                   },
                   "02": {
-                    "label": "Febrary"
+                    "label": "Février"
                   },
                   "03": {
-                    "label": "March"
+                    "label": "Mars"
                   },
                   "04": {
-                    "label": "April"
+                    "label": "Avril"
                   },
                   "05": {
-                    "label": "May"
+                    "label": "Peut"
                   },
                   "06": {
-                    "label": "June"
+                    "label": "Juin"
                   },
                   "07": {
-                    "label": "July"
+                    "label": "Juillet"
                   },
                   "08": {
-                    "label": "August"
+                    "label": "Août"
                   },
                   "09": {
-                    "label": "September"
+                    "label": "Septembre"
                   },
                   "10": {
-                    "label": "October"
+                    "label": "Octobre"
                   },
                   "11": {
-                    "label": "November"
+                    "label": "Novembre"
                   },
                   "12": {
-                    "label": "December"
+                    "label": "Décembre"
                   }
                 }
               },
               "day": {
-                "label": "Day"
+                "label": "Jour"
               },
               "hour": {
-                "label": "Hour"
+                "label": "Heure"
               },
               "minutes": {
                 "label": "Minute"
               },
               "timer_completion_message": {
-                "label": "Completion Message"
+                "label": "Message d'achèvement"
               }
             },
             "button_label": {
