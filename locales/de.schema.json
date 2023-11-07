@@ -173,18 +173,18 @@
           "label": "Produkte in einer Sammlung"
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Ausrichtung",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Textausrichtung",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Links"
               },
               "center": {
                 "label": "Center"
               },
               "right": {
-                "label": "Right"
+                "label": "Rechts"
               }
             }
           }
