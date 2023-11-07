@@ -385,28 +385,28 @@
         "header_timer": {
           "label": "Timer",
           "show_timer": {
-            "label": "Show Timer"
+            "label": "Timer anzeigen"
           },
           "year": {
-            "label": "Year"
+            "label": "Jahr"
           },
           "month": {
-            "label": "Month",
+            "label": "Monat",
             "options": {
               "01": {
-                "label": "January"
+                "label": "Januar"
               },
               "02": {
-                "label": "Febrary"
+                "label": "Februar"
               },
               "03": {
-                "label": "March"
+                "label": "Marsch"
               },
               "04": {
                 "label": "April"
               },
               "05": {
-                "label": "May"
+                "label": "Mai"
               },
               "06": {
                 "label": "June"
