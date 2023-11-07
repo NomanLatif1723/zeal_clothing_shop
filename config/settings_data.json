@@ -33,7 +33,7 @@
     "back_button_position": "bottom_right",
     "favicon": "shopify:\/\/shop_images\/Vector.svg",
     "image_size": "square",
-    "show_quick_view": false,
+    "show_quick_view": true,
     "show_color_swatches": true,
     "show_vendor": true,
     "show_second_image": true,
