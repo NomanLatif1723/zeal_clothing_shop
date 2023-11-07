@@ -139,7 +139,7 @@ initStickyHeader();
 function initHeaderNavigation() {
   let openMenuDrawerBtn = document.querySelector('.menu-toggle__btn');
   let menuDrawer = document.querySelector('.nav-drawer');
-  let menuDrawerBox = document.querySelector('.nav-drawer__box');
+  let menuDrawerBox = document.querySelector('.nav-content__wrapper');
   let closeMenuDrawerBtn = document.querySelector('.nav-icon__close');
   let bodyContainer = document.querySelector('body');
 
