@@ -18,7 +18,7 @@
             {%- for language in localization.available_languages -%}
               <li class="disclosure__item" tabindex="-1">
                 {%- if show_flags -%}
-                  <span class="disclosure__item-flags">{{ localization.country | image_url: width: 20 | image_tag }}</span>
+                  <span class="disclosure__item-flags">{{ language.country | image_url: width: 20 | image_tag }}</span>
                 {%- endif -%}
                 <a href="#"{% if language.iso_code == localization.language.iso_code %} aria-current="true"{% endif %} hreflang="{{ language.iso_code }}" lang="{{ language.iso_code }}" data-value="{{ language.iso_code }}">
                   {{ language.endonym_name | capitalize }}
