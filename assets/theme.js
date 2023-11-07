@@ -139,7 +139,7 @@ initStickyHeader();
 function initHeaderNavigation() {
   let openMenuDrawerBtn = document.querySelector('.menu-toggle__btn');
   let menuDrawer = document.querySelector('.nav-drawer');
-  let overlayShadow = document.querySelector('.drawer__overlay-container');
+  // let overlayShadow = document.querySelector('.drawer__overlay-container');
   let closeMenuDrawerBtn = document.querySelector('.nav-icon__close');
   let bodyContainer = document.querySelector('body');
 
@@ -149,9 +149,9 @@ function initHeaderNavigation() {
     openMenuDrawerBtn.addEventListener('click', () => {
       openMenuDrawer();
     })
-    overlayShadow.addEventListener('click', () => {
-      closeMenuDrawer();
-    })
+    // overlayShadow.addEventListener('click', () => {
+    //   closeMenuDrawer();
+    // })
     closeMenuDrawerBtn.addEventListener('click', () => {
       closeMenuDrawer();
     })
@@ -161,7 +161,7 @@ function initHeaderNavigation() {
       } else {
         menuDrawer.classList.add('drawer-open__right');
       }
-      overlayShadow.classList.add('overlay__visible');
+      // overlayShadow.classList.add('overlay__visible');
       bodyContainer.classList.add('drawer__opening');
     }
     function closeMenuDrawer() {
@@ -170,7 +170,7 @@ function initHeaderNavigation() {
       } else {
         menuDrawer.classList.remove('drawer-open__right');
       }
-      overlayShadow.classList.remove('overlay__visible');
+      // overlayShadow.classList.remove('overlay__visible');
       bodyContainer.classList.remove('drawer__opening');
     }
   }
