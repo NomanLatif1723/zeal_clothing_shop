@@ -1,14 +1,20 @@
 .nav-drawer {
-  position: relative;
+  /* position: relative;
+  z-index: 999; */
+  position: fixed;
+  top: 0;
+  height: 100vh;
   z-index: 999;
+  background: rgba(1,1,1,0.6);
+  width: 100%;
 }
 .overlay__visible{
   visibility: visible;
 }
 .nav-content__wrapper {
-  position: fixed;
+  /* position: fixed;
   z-index: 99;
-  top: 0;
+  top: 0; */
   background: #ffffff;
   background: var(--colorBody);
   height: 100vh;
