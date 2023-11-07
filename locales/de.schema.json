@@ -261,12 +261,12 @@
           }
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Abschnittsabstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Abstand oben"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Abstand unten"
           }
         }
       },
