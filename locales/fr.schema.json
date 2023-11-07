@@ -742,32 +742,32 @@
           }
         },
         "social_share": {
-          "name": "Social Sharing"
+          "name": "Partage social"
         },
         "stock": {
-          "name": "Stock Counter",
+          "name": "Compteur de stocks",
           "settings": {
             "stock_threshold": {
-              "label": "Stock Threshold",
-              "info": "Choose 0 to always show in stock if available."
+              "label": "Seuil de stock",
+              "info": "Choisissez 0 pour toujours afficher en stock si disponible."
             },
             "stock_count": {
-              "label": "Show Stock Count"
+              "label": "Afficher l'inventaire"
             }
           }
         },
         "tags": {
-          "name": "Tags"
+          "name": "Mots clés"
         },
         "category": {
-          "name": "Category"
+          "name": "Catégorie"
         },
         "sku": {
           "name": "Sku"
         }
       },
       "presets": {
-        "name": "Featured Product"
+        "name": "Produit en vedette"
       }
     },
     "faq": {
