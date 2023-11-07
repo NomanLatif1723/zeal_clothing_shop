@@ -151,26 +151,26 @@
         }
       },
       "presets": {
-        "name": "Blog Posts"
+        "name": "Blogeinträge"
       }
     },
     "collection-list": {
-      "name": "Collection List",
+      "name": "Sammlungsliste",
       "settings": {
         "heading": {
           "label": "Überschrift"
         },
         "collection_per_row": {
-          "label": "Collections Per Row"
+          "label": "Sammlungen pro Zeile"
         },
         "all_collections": {
-          "label": "Show All Collections"
+          "label": "Alle Kollektionen anzeigen"
         },
         "swipe_on_mobile": {
-          "label": "Swipe On Mobile"
+          "label": "Wischen Sie auf dem Handy"
         },
         "products_count": {
-          "label": "Products In A Collection"
+          "label": "Produkte in einer Sammlung"
         },
         "header_alignment": {
           "label": "Alignment",
