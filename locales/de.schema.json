@@ -216,10 +216,10 @@
       },
       "blocks": {
         "collection": {
-          "name": "Collection",
+          "name": "Sammlung",
           "settings": {
             "collection": {
-              "label": "Collection"
+              "label": "Sammlung"
             },
             "collection_heading": {
               "label": "Überschrift"
@@ -228,34 +228,34 @@
         }
       },
       "presets": {
-        "name": "Collection List"
+        "name": "Sammlungsliste"
       }
     },
     "custom-content": {
-      "name": "Custom Liquid",
+      "name": "Kundenspezifische Flüssigkeit",
       "settings": {
         "subheading": {
-          "label": "Subheading"
+          "label": "Unterüberschrift"
         },
         "heading": {
           "label": "Überschrift"
         },
         "custom_content": {
-          "label": "Liquid"
+          "label": "Flüssig"
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Ausrichtung",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Textausrichtung",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Links"
               },
               "center": {
                 "label": "Center"
               },
               "right": {
-                "label": "Right"
+                "label": "Rechts"
               }
             }
           }
@@ -271,7 +271,7 @@
         }
       },
       "presets": {
-        "name": "Custom Liquid"
+        "name": "Kundenspezifische Flüssigkeit"
       }
     },
     "customer-activate-account": {
