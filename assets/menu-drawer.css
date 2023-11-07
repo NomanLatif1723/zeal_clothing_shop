@@ -26,17 +26,6 @@
   right: -200%;
   transition: all 0.5s ease;
 }
-/* .nav-drawer__header {
-    display: flex;
-    justify-content: space-between;
-    padding: 30px 25px;
-    border-bottom: 1px solid rgba(1,1,1,0.1);
-}
-
-.nav-icon__close {
-  display: inline-flex;
-  cursor: pointer;
-} */
 .icon__rotate{
   transform:rotate(180deg);
 }
