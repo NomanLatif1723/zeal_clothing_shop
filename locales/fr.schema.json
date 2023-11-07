@@ -824,22 +824,22 @@
       }
     },
     "footer": {
-      "name": "Footer",
+      "name": "Bas de page",
       "settings": {
         "show_copyright": {
-          "label": "Show copyright"
+          "label": "Afficher les droits d'auteur"
         },
         "fooetr_copyright_text": {
-          "label": "Additional Copyright Text"
+          "label": "Texte de droit d'auteur supplémentaire"
         },
         "show_payment_icons": {
-          "label": "Show Payment Icons"
+          "label": "Afficher les icônes de paiement"
         },
         "header_follow_shop": {
-          "content": "Follow On Shop",
-          "info": "To allow customers to follow your store on the Shop app from your storefront, Shop Pay must be enabled. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/customizing-themes\/follow-on-shop)",
+          "content": "Suivez la boutique",
+          "info": "Pour permettre aux clients de suivre votre boutique sur l'application Shop depuis votre vitrine, Shop Pay doit être activé. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/customizing-themes\/follow-on-shop)",
           "enable_follow_on_shop": {
-            "label": "Enable Follow on Shop"
+            "label": "Activer le suivi de la boutique"
           }
         },
         "lazyload_images": {
@@ -855,21 +855,21 @@
               "label": "Titre"
             },
             "show_footer_heading": {
-              "label": "Show Heading"
+              "label": "Afficher le titre"
             },
             "footer_menu_label": {
               "label": "Menu"
             },
             "footer_column_width": {
-              "label": "Column Width"
+              "label": "Largeur de colonne"
             }
           }
         },
         "newsletter": {
-          "name": "Newsletter",
+          "name": "Bulletin",
           "settings": {
             "show_newsletter_heading": {
-              "label": "Show Heading"
+              "label": "Afficher le titre"
             },
             "newsletter_heading": {
               "label": "Titre"
@@ -878,13 +878,13 @@
               "label": "Texte"
             },
             "newsletter_submit_button": {
-              "label": "Button"
+              "label": "Bouton"
             },
             "show_socials": {
               "label": "Afficher les réseaux sociaux"
             },
             "footer_column_width": {
-              "label": "Column Width"
+              "label": "Largeur de colonne"
             }
           }
         },
@@ -898,21 +898,21 @@
               "label": "Texte"
             },
             "footer_column_width": {
-              "label": "Column Width"
+              "label": "Largeur de colonne"
             }
           }
         },
         "address_bar": {
-          "name": "AddressBar",
+          "name": "Barre d'adresse",
           "settings": {
             "footer_address": {
-              "label": "Address"
+              "label": "Adresse"
             },
             "footer_phone_no": {
-              "label": "Phone No"
+              "label": "Pas de téléphone"
             },
             "footer_schedule": {
-              "label": "Schedule"
+              "label": "Calendrier"
             }
           }
         }
