@@ -60,7 +60,6 @@
             <div class="compare__image before__Image">
               {%- if before_image != blank -%}
                   <img
-                    class="image-compare__image"
                     src="{{ before_image | img_url: default }}"
                     srcset="
                         {{ before_image | img_url: 'medium' }} {%- if ratio < 1 -%}{{ 240 | times: ratio | round }}{%- else -%}240{%- endif -%}w,
@@ -83,7 +82,6 @@
             <div class="compare__image after__Image">
               {%- if after_image != blank -%}
                 <img
-                  class="image-compare__image"
                   src="{{ after_image | img_url: default }}"
                   srcset="
                       {{ after_image | img_url: 'medium' }} {%- if ratio < 1 -%}{{ 240 | times: ratio | round }}{%- else -%}240{%- endif -%}w,
