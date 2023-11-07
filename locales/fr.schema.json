@@ -1538,22 +1538,22 @@
           "info": "First Article tag will be shown as its category"
         },
         "post_image_size": {
-          "label": "Image Size",
+          "label": "Taille de l'image",
           "options": {
             "natural": {
-              "label": "Natural"
+              "label": "Naturel"
             },
             "square": {
-              "label": "Square(1:1)"
+              "label": "Carré(1:1)"
             },
             "portrait": {
               "label": "Portrait(2:3)"
             },
             "landscape": {
-              "label": "Landscape(4:3)"
+              "label": "Paysage(4:3)"
             },
             "wide": {
-              "label": "Wide(16:9)"
+              "label": "Large(16:9)"
             }
           }
         },
