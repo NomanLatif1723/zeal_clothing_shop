@@ -356,31 +356,31 @@
       }
     },
     "events-popup": {
-      "name": "Events Popup",
+      "name": "Popup „Ereignisse“.",
       "settings": {
         "heading": {
           "label": "Überschrift"
         },
         "first_subheading": {
-          "label": "Top Subheading"
+          "label": "Obere Unterüberschrift"
         },
         "announcement_text": {
-          "label": "Announcement Text"
+          "label": "Ankündigungstext"
         },
         "second_subheading": {
-          "label": "Subheading Bottom"
+          "label": "Unterüberschrift unten"
         },
         "confirm_button_label": {
-          "label": "Confirm Button Label"
+          "label": "Schaltflächenbezeichnung bestätigen"
         },
         "cancel_button_label": {
-          "label": "Cancel Button Label"
+          "label": "Beschriftung der Schaltfläche „Abbrechen“."
         },
         "additional_text": {
-          "label": "Additional Text"
+          "label": "Zusätzlicher Text"
         },
         "show_socials": {
-          "label": "Show Socials"
+          "label": "Soziale Netzwerke anzeigen"
         },
         "header_timer": {
           "label": "Timer",
