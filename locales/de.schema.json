@@ -190,27 +190,27 @@
           }
         },
         "collection_layout": {
-          "label": "layout",
+          "label": "Layout",
           "options": {
             "grid": {
-              "label": "Grid"
+              "label": "Netz"
             },
             "slider": {
-              "label": "Slider"
+              "label": "Schieberegler"
             }
           }
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Aktivieren Sie LazyLoad-Bilder",
+          "info": "Aktivieren Sie Lazyload, wenn sich Bilder außerhalb des Bildschirms befinden, um die Leistung zu verbessern"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Abschnittsabstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Abstand oben"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Abstand unten"
           }
         }
       },
