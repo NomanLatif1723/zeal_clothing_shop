@@ -42,7 +42,6 @@
               {{ image | image_url: width: image.width, height: image.height | image_tag: loading: lazyloading, class: 'image-text__image', widths: '240,480,600,1024,2048', sizes: '(min-width: 1200px) 650px, 45vw' }}
               {% endcomment %}
               <img    
-                class="image-text__image"
                 src="{{ image | img_url: default }}"
                 srcset="
                     {{ image | img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
