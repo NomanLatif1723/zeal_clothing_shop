@@ -155,22 +155,22 @@
       }
     },
     "collection-list": {
-      "name": "Collection List",
+      "name": "Liste des collections",
       "settings": {
         "heading": {
-          "label": "Heading"
+          "label": "Titre"
         },
         "collection_per_row": {
-          "label": "Collections Per Row"
+          "label": "Collections par ligne"
         },
         "all_collections": {
-          "label": "Show All Collections"
+          "label": "Afficher toutes les collections"
         },
         "swipe_on_mobile": {
-          "label": "Swipe On Mobile"
+          "label": "Glisser sur mobile"
         },
         "products_count": {
-          "label": "Products In A Collection"
+          "label": "Produits dans une collection"
         },
         "header_alignment": {
           "label": "Alignement",
@@ -190,13 +190,13 @@
           }
         },
         "collection_layout": {
-          "label": "layout",
+          "label": "mise en page",
           "options": {
             "grid": {
-              "label": "Grid"
+              "label": "Grille"
             },
             "slider": {
-              "label": "Slider"
+              "label": "Glissière"
             }
           }
         },
@@ -222,13 +222,13 @@
               "label": "Collection"
             },
             "collection_heading": {
-              "label": "Heading"
+              "label": "Titre"
             }
           }
         }
       },
       "presets": {
-        "name": "Collection List"
+        "name": "Liste des collections"
       }
     },
     "custom-content": {
@@ -1636,7 +1636,7 @@
           "label": "Desktop Layout",
           "options": {
             "grid": {
-              "label": "Grid"
+              "label": "Grille"
             },
             "thumbnail": {
               "label": "Thumbnail"
