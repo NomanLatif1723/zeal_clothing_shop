@@ -292,8 +292,7 @@ button {
 .back__to-top {
   position: fixed;
   z-index: 9;
-  bottom: 120px;
-  
+  bottom: 70px;
 }
 .back__arrow-right{
   right: 30px;
@@ -316,6 +315,11 @@ button {
 .back__to-top:hover svg {
   fill: #111111;
   fill: var(--colorBodyText);
+}
+@media only screen and (min-width: 769px) {
+  .back__to-top{
+    bottom: 120px;
+  }
 }
 /* loader */
 @-webkit-keyframes spin {
