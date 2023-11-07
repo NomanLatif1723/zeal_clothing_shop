@@ -83,6 +83,7 @@ button {
 }
 .icon__close{
   stroke: #111111;
+  stroke: var(--colorBodyText);
 }
 .placeholder__image {
   width: 100%;
@@ -109,7 +110,9 @@ button {
   height: auto;
   margin: 0;
   background: #111111;
+  background: var(--colorBodyText);
   color: #ffffff;
+  color: var(--colorBody);
   padding: 10px;
   opacity: 1;
   z-index: 10000;
@@ -256,12 +259,16 @@ button {
 }
 .btn__primary:hover, .btn__secondary:hover {
   background: #ffffff;
+  background: var(--colorBody);
   color: #111111;
+  color: var(--colorBodyText);
   border: 1px solid #111111;
 }
 .btn__outline:hover {
   background: #111111;
+  background: var(--colorBodyText);
   color: #ffffff;
+  color: var(--colorBody);
 }
 .main__heading {
   padding-bottom: 6px;
@@ -304,6 +311,7 @@ button {
 }
 .back__to-top:hover svg {
   fill: #111111;
+  fill: var(--colorBodyText);
 }
 /* loader */
 @-webkit-keyframes spin {
