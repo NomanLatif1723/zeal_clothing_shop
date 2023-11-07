@@ -157,7 +157,7 @@ function initHeaderNavigation() {
   }
   if (menuDrawerBox) {
     menuDrawer.addEventListener('click', (event) => {
-      event.preventDefault();
+      event.stopPropagation();
     });
   }
   if (closeMenuDrawer) {
