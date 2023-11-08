@@ -2,7 +2,7 @@
   "article": {
     "general": {
       "author": "Podle {{ author }}",
-      "sharing_socials_label": "Tipy"
+      "sharing_socials_label": "Tipy a triky"
     },
     "comments": {
       "name": "název",
