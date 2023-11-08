@@ -1608,31 +1608,8 @@
     "main-product": {
       "name": "Grille de produits",
       "settings": {
-        "product": {
-          "label": "Produit"
-        },
-        "heading": {
-          "label": "Titre"
-        },
-        "text": {
-          "label": "Texte"
-        },
-        "header_alignment": {
-          "label": "Alignement",
-          "alignment": {
-            "label": "Alignement du texte",
-            "options": {
-              "left": {
-                "label": "Gauche"
-              },
-              "center": {
-                "label": "Center"
-              },
-              "right": {
-                "label": "Droit"
-              }
-            }
-          }
+        "show_breadcrumbs": {
+          "label": "Show Breadcrumbs"
         },
         "show_rating": {
           "label": "Ajouter une évaluation du produit",
