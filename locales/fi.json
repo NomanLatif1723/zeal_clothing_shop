@@ -60,7 +60,7 @@
     },
     "items": {
       "item_added": "Tuote lisätty ostoskoriin",
-      "quantity_error_message": "Kaikki {{ määrä }} tuotteet on lisätty ostoskoriin"
+      "quantity_error_message": "Kaikki {{ quantity }} tuotteet on lisätty ostoskoriin"
     }
   },
   "collections": {
@@ -155,9 +155,9 @@
       "no_orders_yet": "Et ole vielä tehnyt tilauksia."
     },
     "order": {
-      "title": "Tilaa {{ nimi }}",
+      "title": "Tilaa {{ name }}",
       "return_url": "Takaisin tileihin",
-      "date_html": "Sijoitettu {{ päivämäärä }}",
+      "date_html": "Sijoitettu {{ date }}",
       "billing_address": "Laskutusosoite",
       "shipping_address": "Toimitusosoite",
       "payment_status_html": "<strong>Maksun tila:<\/strong> {{ status }}",
@@ -170,9 +170,9 @@
       "subtotal": "Välisumma",
       "shipping": "laivaus",
       "tax": "Verottaa",
-      "cancelled_html": "Tilaus peruutettu {{ päivämäärä }}",
-      "cancelled_reason": "Syy: {{ syy }}",
-      "fulfilled_html": "täytetty {{ päivämäärä }}",
+      "cancelled_html": "Tilaus peruutettu {{ date }}",
+      "cancelled_reason": "Syy: {{ reason }}",
+      "fulfilled_html": "täytetty {{ date }}",
       "discount": "Alennus"
     },
     "recover_password": {
