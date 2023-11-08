@@ -50,7 +50,7 @@
       "discount": "Alennukset",
       "note_placeholder": "Onko tilaukseesi erityisiä ohjeita?",
       "free_shipping_eligible": "Olet poissa ilmaisesta toimituksesta ",
-      "free_shipping_success_html": "Onnittelut! Olet oikeutettu ilmaiseen toimitukseen yli {{ summa }} tilauksille",
+      "free_shipping_success_html": "Onnittelut! Olet oikeutettu ilmaiseen toimitukseen yli {{ amount }} tilauksille",
       "view_cart": "Katso ostoskoria",
       "drawer_close": "kiinni",
       "drawer_title": "Ostoskärry",
