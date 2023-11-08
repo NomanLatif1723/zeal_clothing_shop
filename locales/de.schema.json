@@ -1525,17 +1525,17 @@
       "name": "Blogs",
       "settings": {
         "posts_to_show": {
-          "label": "Posts To Show"
+          "label": "Beiträge zum Anzeigen"
         },
         "show_date": {
-          "label": "Show Date"
+          "label": "Datum anzeigen"
         },
         "show_tags": {
-          "label": "Show Tags"
+          "label": "Tags anzeigen"
         },
         "show_category": {
-          "label": "Show Category",
-          "info": "First Article tag will be shown as its category"
+          "label": "Kategorie anzeigen",
+          "info": "Das erste Artikel-Tag wird als Kategorie angezeigt"
         },
         "post_image_size": {
           "label": "Bildgröße",
@@ -1576,23 +1576,23 @@
       "name": "Main Article",
       "settings": {
         "show_date": {
-          "label": "Show Date"
+          "label": "Datum anzeigen"
         },
         "show_category": {
-          "label": "Show Category",
-          "info": "First Article tag will be shown as its category"
+          "label": "Kategorie anzeigen",
+          "info": "Das erste Artikel-Tag wird als Kategorie angezeigt"
         },
         "show_tags": {
-          "label": "Show Tags"
+          "label": "Tags anzeigen"
         },
         "show_author": {
-          "label": "Show Author"
+          "label": "Autor anzeigen"
         },
         "show_social_sharing": {
-          "label": "Show Social Sharing"
+          "label": "Social Sharing anzeigen"
         },
         "show_comments": {
-          "label": "Show Comments"
+          "label": "Anmerkungen anzeigen"
         },
         "header_spacing": {
           "label": "Abschnittsabstand",
@@ -1844,48 +1844,48 @@
       }
     },
     "main-password": {
-      "name": "Password",
+      "name": "Passwort",
       "settings": {
         "background_image": {
-          "label": "Background Image"
+          "label": "Hintergrundbild"
         },
         "header_alignment": {
-          "label": "Position and Alignment"
+          "label": "Position und Ausrichtung"
         },
         "content_position": {
-          "label": "Content Position",
+          "label": "Inhaltsposition",
           "options": {
             "top_left": {
-              "label": "Top Left"
+              "label": "Oben links"
             },
             "top_center": {
-              "label": "Top Center"
+              "label": "Oben in der Mitte"
             },
             "top_right": {
-              "label": "Top Right"
+              "label": "Oben rechts"
             },
             "center_left": {
-              "label": "Center Left"
+              "label": "Mitte links"
             },
             "center": {
               "label": "Center"
             },
             "center_right": {
-              "label": "Center Right"
+              "label": "Mitte rechts"
             },
             "bottom_left": {
-              "label": "Bottom Left"
+              "label": "Unten links"
             },
             "bottom_center": {
-              "label": "Bottom Center"
+              "label": "Unten in der Mitte"
             },
             "bottom_right": {
-              "label": "Bottom Right"
+              "label": "Unten rechts"
             }
           }
         },
         "alignment": {
-          "label": "Text alignment",
+          "label": "Textausrichtung",
           "options": {
             "left": {
               "label": "Links"
@@ -1901,7 +1901,7 @@
       },
       "blocks": {
         "title": {
-          "name": "Title",
+          "name": "Titel",
           "settings": {
             "title": {
               "label": "Überschrift"
@@ -1917,39 +1917,39 @@
           }
         },
         "form": {
-          "name": "Form",
+          "name": "Bilden",
           "settings": {
           }
         },
         "socials": {
-          "name": "Socials",
+          "name": "Soziale Netzwerke",
           "settings": {
           }
         }
       }
     },
     "password-header": {
-      "name": "Password Header",
+      "name": "Passwort-Header",
       "settings": {
         "header_logo": {
           "label": "Logo",
           "logo": {
-            "label": "Logo Image"
+            "label": "Logobild"
           },
           "desktop_logo_width": {
-            "label": "Desktop Logo Width"
+            "label": "Breite des Desktop-Logos"
           },
           "mobile_logo_width": {
-            "label": "Mobile Logo Width"
+            "label": "Breite des mobilen Logos"
           }
         }
       }
     },
     "password-footer": {
-      "name": "Password Footer"
+      "name": "Passwort-Fußzeile"
     },
     "map": {
-      "name": "Map",
+      "name": "Karte",
       "settings": {
         "section_height_desktop": {
           "label": "Desktop Height",
