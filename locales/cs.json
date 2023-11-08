@@ -208,7 +208,7 @@
   "general": {
     "404": {
       "text": "Chyba 404",
-      "sub_text_html": "<p>Jejda! <\/p><p> Děkujeme, že jste navštívili naše webové stránky!<\/p>",
+      "sub_text_html": "<p>Jejda! Zdá se, že stránka, na kterou se chcete dostat, neexistuje. Omlouváme se za nepříjemnosti. K nalezení toho, co hledáte, použijte prosím navigační nabídku nebo vyhledávací lištu. Nebo, pokud se cítíte dobrodružně, proč neprozkoumat naše nejnovější kolekce a neobjevit něco nového? <\/p><p> Děkujeme, že jste navštívili naše webové stránky!<\/p>",
       "shop_collection": "ZPÁTKY DOMŮ"
     },
     "accessibility": {
