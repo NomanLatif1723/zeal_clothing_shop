@@ -208,7 +208,7 @@
   "general": {
     "404": {
       "text": "Błąd 404",
-      "sub_text_html": "<p>Ups! <\/p><p> Dziękujemy za odwiedzenie naszej strony internetowej!<\/p>",
+      "sub_text_html": "<p>Ups! Wygląda na to, że strona, do której chciałeś dotrzeć, nie istnieje. Przepraszamy za niedogodności. Skorzystaj z menu nawigacyjnego lub paska wyszukiwania, aby znaleźć to, czego szukasz. A jeśli masz ochotę na przygodę, może odkryjesz nasze najnowsze kolekcje i odkryjesz coś nowego?<\/p><p> Dziękujemy za odwiedzenie naszej strony internetowej!<\/p>",
       "shop_collection": "WRÓCIĆ DO DOMU"
     },
     "accessibility": {
