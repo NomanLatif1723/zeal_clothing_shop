@@ -1952,53 +1952,53 @@
       "name": "Karte",
       "settings": {
         "section_height_desktop": {
-          "label": "Desktop Height",
+          "label": "Tischhöhe",
           "options": {
             "natural": {
-              "label": "Natural"
+              "label": "Natürlich"
             },
             "compact": {
-              "label": "Compact (450px)"
+              "label": "Kompakt (450px)"
             },
             "standard": {
               "label": "Standard (650px)"
             },
             "extended": {
-              "label": "Extended (750px)"
+              "label": "Erweitert (750px)"
             },
             "full": {
-              "label": "Full Screen"
+              "label": "Ganzer Bildschirm"
             }
           }
         },
         "section_height_mobile": {
-          "label": "Mobile Height",
+          "label": "Mobile Höhe",
           "options": {
             "auto": {
               "label": "Auto"
             },
             "compact": {
-              "label": "Compact (300px)"
+              "label": "Kompakt (300px)"
             },
             "standard": {
               "label": "Standard (400px)"
             },
             "extended": {
-              "label": "Extended (500px)"
+              "label": "Erweitert (500px)"
             },
             "full": {
-              "label": "Full Screen"
+              "label": "Ganzer Bildschirm"
             }
           }
         },
         "map_embed_code": {
-          "label": "Add Google Iframe code"
+          "label": "Fügen Sie den Google Iframe-Code hinzu"
         },
         "heading": {
           "label": "Überschrift"
         },
         "address": {
-          "label": "Address and Hours"
+          "label": "Adresse und Öffnungszeiten"
         },
         "button_text": {
           "label": "Taste"
@@ -2007,42 +2007,42 @@
           "label": "Verknüpfung"
         },
         "header_alignment": {
-          "label": "Position and Alignment"
+          "label": "Position und Ausrichtung"
         },
         "content_position": {
-          "label": "Content Position",
+          "label": "Inhaltsposition",
           "options": {
             "top_left": {
-              "label": "Top Left"
+              "label": "Oben links"
             },
             "top_center": {
-              "label": "Top Center"
+              "label": "Oben in der Mitte"
             },
             "top_right": {
-              "label": "Top Right"
+              "label": "Oben rechts"
             },
             "center_left": {
-              "label": "Center Left"
+              "label": "Mitte links"
             },
             "center": {
               "label": "Center"
             },
             "center_right": {
-              "label": "Center Right"
+              "label": "Mitte rechts"
             },
             "bottom_left": {
-              "label": "Bottom Left"
+              "label": "Unten links"
             },
             "bottom_center": {
-              "label": "Bottom Center"
+              "label": "Unten in der Mitte"
             },
             "bottom_right": {
-              "label": "Bottom Right"
+              "label": "Unten rechts"
             }
           }
         },
         "alignment": {
-          "label": "Text alignment",
+          "label": "Textausrichtung",
           "options": {
             "left": {
               "label": "Links"
@@ -2066,7 +2066,7 @@
         }
       },
       "presets": {
-        "name": "Map"
+        "name": "Karte"
       }
     },
     "newsletter": {
@@ -2076,7 +2076,7 @@
           "label": "Überschrift"
         },
         "newsletter_button_label": {
-          "label": "Button Label"
+          "label": "Schaltflächenbeschriftung"
         },
         "header_alignment": {
           "label": "Ausrichtung",
@@ -2116,13 +2116,13 @@
       }
     },
     "newsletter-popup": {
-      "name": "Newsletter Popup",
+      "name": "Newsletter-Popup",
       "settings": {
         "newsletter_image": {
-          "label": "Image"
+          "label": "Bild"
         },
         "newsletter_subheading": {
-          "label": "Subheading"
+          "label": "Unterüberschrift"
         },
         "newsletter_heading": {
           "label": "Überschrift"
@@ -2131,10 +2131,10 @@
           "label": "Text"
         },
         "newsletter_button_label": {
-          "label": "Button Label"
+          "label": "Schaltflächenbeschriftung"
         },
         "show_popup": {
-          "label": "Enable Show Popup"
+          "label": "Aktivieren Sie Popup anzeigen"
         },
         "lazyload_images": {
           "label": "Aktivieren Sie LazyLoad-Bilder"
@@ -2142,53 +2142,53 @@
       }
     },
     "page-header": {
-      "name": "Page header",
+      "name": "Kopfzeile",
       "settings": {
         "section_height_desktop": {
-          "label": "Desktop Height",
+          "label": "Tischhöhe",
           "options": {
             "natural": {
-              "label": "Natural"
+              "label": "Natürlich"
             },
             "compact": {
-              "label": "Compact (200px)"
+              "label": "Kompakt (200px)"
             },
             "standard": {
               "label": "Standard (300px)"
             },
             "extended": {
-              "label": "Extended (400px)"
+              "label": "Erweitert (400px)"
             }
           }
         },
         "section_height_mobile": {
-          "label": "Mobile Height",
+          "label": "Mobile Höhe",
           "options": {
             "auto": {
               "label": "Auto"
             },
             "compact": {
-              "label": "Compact (150px)"
+              "label": "Kompakt (150px)"
             },
             "standard": {
               "label": "Standard (200px)"
             },
             "extended": {
-              "label": "Extended (250px)"
+              "label": "Erweitert (250px)"
             }
           }
         },
         "full_width": {
-          "label": "Full Width"
+          "label": "Gesamtbreite"
         },
         "page_heading": {
           "label": "Überschrift"
         },
         "page_image": {
-          "label": "Background Image"
+          "label": "Hintergrundbild"
         },
         "show_breadcrumbs": {
-          "label": "Show Breadcrumbs"
+          "label": "Brotkrümel anzeigen"
         },
         "text_color": {
           "label": "Text"
@@ -2222,6 +2222,9 @@
             "label": "Abstand unten"
           }
         }
+      },
+      "presets": {
+        "name": "Kopfzeile"
       }
     },
     "promotional-grid": {
