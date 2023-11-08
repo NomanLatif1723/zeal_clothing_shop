@@ -1,358 +1,358 @@
 {
   "article": {
     "general": {
-      "author": "By {{ author }}",
-      "sharing_socials_label": "Tips & tricks"
+      "author": "Por {{ author }}",
+      "sharing_socials_label": "Pontas"
     },
     "comments": {
-      "name": "Name",
-      "name_placeholder": "Enter Your Name",
-      "email": "Email",
-      "email_placeholder": "Example@gmail.com",
-      "message": "Message",
-      "message_placeholder": "Write Your Message",
-      "comments_count": "Comments({{ count }})",
-      "leave_comments": "leave a Comment",
-      "submit": "Submit",
-      "back": "Back",
-      "comment_published": "Your Comment has been Published",
-      "comment_sent": "Your Comment has been sent. It will be visible when owner accepted it.",
-      "empty": "You don't have any comments yet"
+      "name": "Nome",
+      "name_placeholder": "Digite seu nome",
+      "email": "E-mail",
+      "email_placeholder": "Exemplo@gmail.com",
+      "message": "Mensagem",
+      "message_placeholder": "Escreva sua mensagem",
+      "comments_count": "Comentários({{ count }})",
+      "leave_comments": "Deixe um comentário",
+      "submit": "Enviar",
+      "back": "Voltar",
+      "comment_published": "O seu comentário foi publicado",
+      "comment_sent": "O seu comentário foi enviado. ",
+      "empty": "Você ainda não tem comentários"
     }
   },
   "blogs": {
     "article": {
-      "title": "Example Article Title",
-      "content": "Example Article Content",
-      "date": "25 Apr 2023",
-      "tag": "Fashion",
-      "view_all_text": "View All",
-      "read_more_text": "Read More.."
+      "title": "Exemplo de título de artigo",
+      "content": "Exemplo de conteúdo de artigo",
+      "date": "25 de abril de 2023",
+      "tag": "Moda",
+      "view_all_text": "Ver tudo",
+      "read_more_text": "Consulte Mais informação.."
     }
   },
   "cart": {
     "general": {
-      "title": "Your Cart",
-      "empty_cart": "Your Cart is currently Empty",
-      "continue_shopping": "Continue Shopping",
-      "add_note": "Add Note",
-      "remove": "Remove",
+      "title": "Seu carrinho",
+      "empty_cart": "Seu carrinho está vazio no momento",
+      "continue_shopping": "Continue comprando",
+      "add_note": "Adicionar nota",
+      "remove": "Remover",
       "final_line_price": "Subtotal:",
-      "note": "Cart Note",
-      "summary": "Order Summary",
+      "note": "Nota do carrinho",
+      "summary": "resumo do pedido",
       "total_price": "Subtotal",
-      "total_discounts": "Discounts",
-      "shipping": "Shipping",
-      "shipping_text": "Shipping and tax calculated at checkout.",
-      "checkout": "Checkout",
-      "terms_at_checkout": "I agree with Terms and Conditions",
-      "terms_message_at_checkout": "You must agree with the terms and conditions to check out",
-      "discount": "Discounts",
-      "note_placeholder": "Any special instructions for your order?",
-      "free_shipping_eligible": "You are away from free shipping by ",
-      "free_shipping_success_html": "Congratulations! You qualify for free shipping on orders over {{ amount }}",
-      "view_cart": "View Cart",
-      "drawer_close": "Close",
-      "drawer_title": "Shopping Cart",
-      "popup_title": "Just Added To Your Cart",
-      "plus": "Plus",
-      "minus": "Minus"
+      "total_discounts": "Descontos",
+      "shipping": "Envio",
+      "shipping_text": "Frete e impostos calculados na finalização da compra.",
+      "checkout": "Confira",
+      "terms_at_checkout": "Eu concordo com os termos e condições",
+      "terms_message_at_checkout": "Você deve concordar com os termos e condições para finalizar a compra",
+      "discount": "Descontos",
+      "note_placeholder": "Alguma instrução especial para o seu pedido?",
+      "free_shipping_eligible": "Você está longe do frete grátis por ",
+      "free_shipping_success_html": "Parabéns!  {{ amount }}",
+      "view_cart": "Ver carrinho",
+      "drawer_close": "Fechar",
+      "drawer_title": "Carrinho de compras",
+      "popup_title": "Acabei de adicionar ao seu carrinho",
+      "plus": "Mais",
+      "minus": "Menos"
     },
     "items": {
-      "item_added": "Item Added To your Cart",
-      "quantity_error_message": "All {{ quantity }} Items are Added to Cart"
+      "item_added": "Item adicionado ao seu carrinho",
+      "quantity_error_message": "Todos {{ quantity }} Os itens são adicionados ao carrinho"
     }
   },
   "collections": {
     "general": {
-      "all_collection": "View All",
-      "products_count": "{{ products_count }} Results",
-      "fiter_collection": "Filter\/Sort",
-      "filter_drawer": "Filter By",
-      "sort_drawer": "Sort By",
-      "remove_filters": "Remove Filters",
-      "empty_collection_message": "No Products Found"
+      "all_collection": "Ver tudo",
+      "products_count": "{{ products_count }} Resultados",
+      "fiter_collection": "Filtrar\/Classificar",
+      "filter_drawer": "Filtrar por",
+      "sort_drawer": "Ordenar por",
+      "remove_filters": "Remover filtros",
+      "empty_collection_message": "Nenhum produto encontrado"
     }
   },
   "collection-list": {
     "general": {
-      "title": "Example Collection"
+      "title": "Coleção de exemplos"
     }
   },
   "contact": {
     "form": {
-      "success_mesage": "Your Form Has Been Posted SuccessFully. We'll Get Back To You Asap.",
-      "name": "Name",
-      "email": "Email",
-      "phone": "Phone Number",
-      "comment": "Comment",
-      "submit": "Send"
+      "success_mesage": "Seu formulário foi postado com sucesso. ",
+      "name": "Nome",
+      "email": "E-mail",
+      "phone": "Número de telefone",
+      "comment": "Comente",
+      "submit": "Enviar"
     }
   },
   "customers": {
     "account": {
-      "title": "Accounts",
-      "details": "Account Details",
-      "view_addresses": "View Addresses"
+      "title": "Contas",
+      "details": "Detalhes da conta",
+      "view_addresses": "Ver endereços"
     },
     "activate_account": {
-      "title": "Activate Your Account",
-      "sub_text": "Create Your Password to Activate Your Account",
-      "submit": "Activate Account",
-      "password": "Password",
-      "confirm_password": "Confirm Password",
-      "cancel": "Back",
-      "show_password": "Show",
-      "hide_password": "Hide"
+      "title": "Ative sua conta",
+      "sub_text": "Crie sua senha para ativar sua conta",
+      "submit": "Ativar conta",
+      "password": "Senha",
+      "confirm_password": "Confirme sua senha",
+      "cancel": "Voltar",
+      "show_password": "Mostrar",
+      "hide_password": "Esconder"
     },
     "addresses": {
-      "title": "Addresses",
-      "add_address": "Add Address",
-      "edit_address": "Edit",
-      "none": "No Addresses Found",
-      "first_name": "First Name",
-      "last_name": "Last Name",
-      "phone": "Phone Number",
-      "company": "Company",
-      "address1": "Address1",
-      "address2": "Address2",
-      "province": "Province",
-      "country": "Country",
-      "city": "City",
-      "postal_code": "Postal\/Zip Code",
-      "add_new": "Add Address",
-      "cancel": "Back",
-      "update": "Update Address",
-      "confirm_delete": "Are you sure you want to delete this address?",
-      "set_default": "Set as Default Address",
-      "default": "Default",
-      "edit": "Edit",
-      "add": "Add Address",
-      "delete": "Delete"
+      "title": "Endereços",
+      "add_address": "Adicionar endereço",
+      "edit_address": "Editar",
+      "none": "Nenhum endereço encontrado",
+      "first_name": "Primeiro nome",
+      "last_name": "Sobrenome",
+      "phone": "Número de telefone",
+      "company": "Empresa",
+      "address1": "Endereço 1",
+      "address2": "Endereço 2",
+      "province": "Província",
+      "country": "País",
+      "city": "Cidade",
+      "postal_code": "Código postal",
+      "add_new": "Adicionar endereço",
+      "cancel": "Voltar",
+      "update": "Atualizar endereço",
+      "confirm_delete": "Tem certeza de que deseja excluir este endereço?",
+      "set_default": "Definir como endereço padrão",
+      "default": "Padrão",
+      "edit": "Editar",
+      "add": "Adicionar endereço",
+      "delete": "Excluir"
     },
     "login": {
-      "title": "Login",
-      "email": "Email Address",
-      "password": "Password",
-      "submit": "Continue",
-      "forget_password": "Forget Your Password",
-      "create_account": "Create an Account",
-      "show_password": "Show",
-      "hide_password": "Hide",
-      "guest_title": "Guest Login",
-      "guest_submit": "Continue as Guest"
+      "title": "Conecte-se",
+      "email": "Endereço de email",
+      "password": "Senha",
+      "submit": "Continuar",
+      "forget_password": "Esqueça sua senha",
+      "create_account": "Crie a sua conta aqui",
+      "show_password": "Mostrar",
+      "hide_password": "Esconder",
+      "guest_title": "Login como convidado",
+      "guest_submit": "Continuar como convidado"
     },
     "logout": {
-      "title": "Logout"
+      "title": "Sair"
     },
     "orders": {
-      "title": "Your Orders",
-      "order_number": "Order",
-      "date": "Date",
-      "payment_status": "Payment Status",
-      "fulfilment_status": "Fulfilment Status",
+      "title": "Seus pedidos",
+      "order_number": "Ordem",
+      "date": "Data",
+      "payment_status": "Status do pagamento",
+      "fulfilment_status": "Status de cumprimento",
       "total": "Total",
-      "no_orders_yet": "You haven't placed any Orders yet."
+      "no_orders_yet": "Você ainda não fez nenhum pedido."
     },
     "order": {
-      "title": "Order {{ name }}",
-      "return_url": "Back To Accounts",
-      "date_html": "Placed on {{ date }}",
-      "billing_address": "Billing Address",
-      "shipping_address": "Shipping Address",
-      "payment_status_html": "<strong>Payment Status:<\/strong> {{ status }}",
-      "fulfillment_status_html": "<strong>Fulfillment Status:<\/strong> {{ status }}",
-      "product": "Product",
+      "title": "Ordem {{ name }}",
+      "return_url": "Voltar para contas",
+      "date_html": "Colocado sobre {{ date }}",
+      "billing_address": "Endereço de Cobrança",
+      "shipping_address": "Endereço para envio",
+      "payment_status_html": "<strong>Status do pagamento:<\/strong> {{ status }}",
+      "fulfillment_status_html": "<strong>Status de preenchimento:<\/strong> {{ status }}",
+      "product": "produtos",
       "sku": "SKU",
-      "price": "Price",
-      "quantity": "Quantity",
+      "price": "Preço",
+      "quantity": "Quantidade",
       "total": "Total",
       "subtotal": "Subtotal",
-      "shipping": "Shipping",
-      "tax": "Tax",
-      "cancelled_html": "Order Canceled On {{ date }}",
-      "cancelled_reason": "Reason: {{ reason }}",
-      "fulfilled_html": "Fulfilled {{ date }}",
-      "discount": "Discount"
+      "shipping": "Envio",
+      "tax": "Imposto",
+      "cancelled_html": "Pedido cancelado em {{ date }}",
+      "cancelled_reason": "Razão: {{ reason }}",
+      "fulfilled_html": "Realizada {{ date }}",
+      "discount": "Desconto"
     },
     "recover_password": {
-      "title": "Forgot Your Password",
-      "sub_text": "Enter your email address, and we'll send you a link to reset your password.",
-      "submit": "Reset Password",
-      "email": "Email Address",
-      "cancel": "Back",
-      "success_mesage": "We've sent you an email with a link to update your password."
+      "title": "Esqueceu sua senha",
+      "sub_text": "Digite seu endereço de e-mail e enviaremos um link para redefinir sua senha.",
+      "submit": "Redefinir senha",
+      "email": "Endereço de email",
+      "cancel": "Voltar",
+      "success_mesage": "Enviamos um e-mail para você com um link para atualizar sua senha."
     },
     "register": {
-      "title": "Create An Account",
-      "first_name": "First Name",
-      "last_name": "Last Name",
-      "email": "Email Address",
-      "password": "Password",
-      "show_password": "Show",
-      "hide_password": "Hide",
-      "submit": "Create Account",
-      "login_user": "Already Have an Account\/Login"
+      "title": "Crie a sua conta aqui",
+      "first_name": "Primeiro nome",
+      "last_name": "Sobrenome",
+      "email": "Endereço de email",
+      "password": "Senha",
+      "show_password": "Mostrar",
+      "hide_password": "Esconder",
+      "submit": "Criar uma conta",
+      "login_user": "Já possui uma conta\/login"
     },
     "reset_password": {
-      "title": "Reset Your Password",
-      "sub_text": "Enter a new Password for Your Account",
-      "submit": "Reset Password",
-      "password": "Password",
-      "confirm_password": "Confirm Password",
-      "cancel": "Back",
-      "show_password": "Show",
-      "hide_password": "Hide"
+      "title": "Redefinir sua senha",
+      "sub_text": "Digite uma nova senha para sua conta",
+      "submit": "Redefinir senha",
+      "password": "Senha",
+      "confirm_password": "Confirme sua senha",
+      "cancel": "Voltar",
+      "show_password": "Mostrar",
+      "hide_password": "Esconder"
     }
   },
   "general": {
-    "accessibility": {
-      "close-modal": "Close Modal",
-      "back-to-top": "Back To Top",
-      "skip-to-content": "Skip To Content"
-    },
     "404": {
-      "text": "404 Error",
-      "sub_text_html": "<p>Oops! It looks like the page you were trying to reach doesn't exist. We're sorry for the inconvenience. Please use the navigation menu or search bar to find what you're looking for. Or, if you're feeling adventurous, why not explore our latest collections and discover something new?<\/p><p> Thank you for visiting our website!<\/p>",
-      "shop_collection": "BACK TO HOME"
+      "text": "Erro 404",
+      "sub_text_html": "<p>Ops! <\/p><p> Obrigado por visitar o nosso site!<\/p>",
+      "shop_collection": "DE VOLTA PARA CASA"
+    },
+    "accessibility": {
+      "close-modal": "Fechar Modal",
+      "back-to-top": "De volta ao topo",
+      "skip-to-content": "Ir para o conteúdo"
     },
     "breadcrumbs": {
-      "home": "Home",
-      "collection": "Collection"
+      "home": "Lar",
+      "collection": "Coleção"
     },
     "pagination": {
-      "previous": "Previous",
-      "next": "Next"
+      "previous": "Anterior",
+      "next": "Próximo"
     }
   },
   "gift_card": {
-    "illustration": "Gift Card Illustration",
-    "title": "Here's Your Gift Card",
-    "apple_wallet_pass": "Add To Apple Wallet",
-    "message": "Use this code at checkout to redeem your gift card",
-    "go_to_shop": "Start Shopping",
-    "print": "Print"
+    "illustration": "Ilustração de cartão-presente",
+    "title": "Aqui está o seu vale-presente",
+    "apple_wallet_pass": "Adicionar à carteira da Apple",
+    "message": "Use este código na finalização da compra para resgatar seu vale-presente",
+    "go_to_shop": "Comece a comprar",
+    "print": "Imprimir"
   },
   "newsletter": {
     "newsletter_form": {
-      "email_placeholder": "Enter Your Email",
-      "submit_text": "Submit",
-      "success_message": "Thanks For Subscribe"
+      "email_placeholder": "Digite seu e-mail",
+      "submit_text": "Enviar",
+      "success_message": "Obrigado por se inscrever"
     }
   },
   "popups": {
     "newsletter-popup": {
-      "show_popup": "Do not show this popup again."
+      "show_popup": "Não mostre este pop-up novamente."
     }
   },
   "products": {
-    "promotional_message": "Hurry up! sale ends in",
-    "minus": "Minus",
-    "plus": "Plus",
-    "quantity_label": "Qty",
-    "sizeguide_text": "Size Guide",
-    "sizechart": "Size Chart",
-    "add_to_cart": "Add To Cart",
-    "preorder": "Preorder",
-    "sold_out": "Sold Out",
-    "free_unit_price": "Free",
-    "taxes_included": "Tax Included.",
-    "shipping_policy_html": "<a href='{{ link }}'>Shipping<\/a> calculated at checkout.",
-    "share_social": "Share:",
-    "item_added_success_message": "Item Added To Your Cart Successfully",
-    "view_full_info": "View Full Info",
+    "promotional_message": "Se apresse! ",
+    "minus": "Menos",
+    "plus": "Mais",
+    "quantity_label": "Quantidade",
+    "sizeguide_text": "Guia de tamanho",
+    "sizechart": "Tabela de tamanhos",
+    "add_to_cart": "Adicionar ao carrinho",
+    "preorder": "Pedido antecipado",
+    "sold_out": "Vendido",
+    "free_unit_price": "Livre",
+    "taxes_included": "Taxas incluídas.",
+    "shipping_policy_html": "<a href='{{ link }}'>Envio<\/a> Calcular ao finalizar.",
+    "share_social": "Compartilhar:",
+    "item_added_success_message": "Item adicionado ao seu carrinho com sucesso",
+    "view_full_info": "Ver informações completas",
     "price": {
-      "regular_price": "Regular Price",
-      "sale_price": "Sale Price"
+      "regular_price": "Preço regular",
+      "sale_price": "Preço de venda"
     },
     "form": {
-      "variants": "Variants"
+      "variants": "Variantes"
     },
     "badges": {
-      "on_sale": "Sale",
-      "sold_out": "Sold Out"
+      "on_sale": "Oferta",
+      "sold_out": "Vendido"
     },
     "onboarding": {
-      "product_title": "Example Product",
-      "product_price": "$30",
-      "product_description": "This area is used to describe your product’s details. Tell customers about the look, feel, and style of your product. Add details on color, materials used, sizing, and where it was made.",
-      "product_vendor": "Vendor"
+      "product_title": "Produto de exemplo",
+      "product_price": "US$ 30",
+      "product_description": "Esta área é usada para descrever os detalhes do seu produto. ",
+      "product_vendor": "Fornecedor"
     },
     "sku": {
       "title": "Sku"
     },
     "tags": {
-      "title": "Tags",
-      "empty": "Please Add Some tags to the Product"
+      "title": "Tag",
+      "empty": "Adicione algumas tags ao produto"
     },
     "category": {
-      "title": "Category",
-      "empty": "Products Should be in one or more Collections to be appear here as Category"
+      "title": "Categoria",
+      "empty": "Os produtos devem estar em uma ou mais coleções para aparecerem aqui como categoria"
     },
     "stock": {
-      "title": "Available",
-      "inventory_in_stock": "In Stock",
-      "inventory_in_stock_count": "{{ quantity }} In Stock",
-      "inventory_low_stock": "Low Stock",
-      "inventory_low_stock_count": "Low Stock: {{ items }} Left",
-      "inventory_out_of_stock_contine_selling": "In Stock",
-      "inventory_out_of_stock": "Out of Stock"
+      "title": "Disponível",
+      "inventory_in_stock": "Em estoque",
+      "inventory_in_stock_count": "{{ quantity }} Em estoque",
+      "inventory_low_stock": "Baixo estoque",
+      "inventory_low_stock_count": "Baixo estoque: {{ items }} Esquerda",
+      "inventory_out_of_stock_contine_selling": "Em estoque",
+      "inventory_out_of_stock": "Fora de estoque"
     },
     "accessibility": {
-      "star_reviews_info": "{{ rating_value }} out of {{ rating_max }} stars",
-      "total_reviews": "Total Reviews {{ count }}"
+      "star_reviews_info": "{{ rating_value }} fora de {{ rating_max }} estrelas",
+      "total_reviews": "Total de avaliações {{ count }}"
     }
   },
   "pickup_availability": {
     "general": {
-      "pick_up_available_at_html": "Pickup Available at {{ location_name }}",
-      "view_store_info": "View Store Info",
-      "check_other_stores": "Check Other Stores",
-      "pick_up_unavailable_at_html": "Pickup UnAvailable at {{ location_name }}",
-      "pick_up_available": "Pickup Available",
-      "pick_up_currently_unavailable": "Pickup Currently Un Available"
+      "pick_up_available_at_html": "Retirada disponível em {{ location_name }}",
+      "view_store_info": "Ver informações da loja",
+      "check_other_stores": "Verifique outras lojas",
+      "pick_up_unavailable_at_html": "Retirada indisponível em {{ location_name }}",
+      "pick_up_available": "Retirada disponível",
+      "pick_up_currently_unavailable": "Coleta atualmente indisponível"
     }
   },
   "password-page": {
     "general": {
-      "password_link": "Enter Using Password",
-      "login_form_heading": "Enter Password",
-      "login_form_password_label": "Password",
-      "login_form_password_placeholder": "Password",
-      "login_form_submit": "Submit",
-      "powered_by_shopify_html": "This shop will be powered by {{ shopify }}",
-      "admin_link_html": "Are You The Store owner? <a href=\"\/admin\" class=\"text-link\">Log in here<\/a>"
+      "password_link": "Entre usando senha",
+      "login_form_heading": "Digite a senha",
+      "login_form_password_label": "Senha",
+      "login_form_password_placeholder": "Senha",
+      "login_form_submit": "Enviar",
+      "powered_by_shopify_html": "Esta loja será alimentada por {{ shopify }}",
+      "admin_link_html": "Você é o dono da loja? <a class='links' href=\"\/admin\" class=\"text-link\">Entre aqui<\/a>"
     }
   },
   "sections": {
     "announcement-bar": {
-      "header_announcement": "Announcement Bar"
+      "header_announcement": "Barra de anúncios"
     },
     "header": {
       "general": {
-        "navigation": "Menu",
-        "account": "Account",
-        "login": "Log In",
-        "cart": "Cart"
+        "navigation": "Cardápio",
+        "account": "Conta",
+        "login": "Conecte-se",
+        "cart": "Carrinho"
       }
     },
     "footer": {
       "copyright": {
-        "text": "Copyright 2023",
-        "powered_by_text": "Powered By Shopify"
+        "text": "Direitos autorais 2023",
+        "powered_by_text": "Desenvolvido por Shopify"
       }
     },
     "search": {
-      "title": "Search"
+      "title": "Procurar"
     },
     "image-comparison": {
-      "label_before": "Before",
-      "label_after": "After"
+      "label_before": "Antes",
+      "label_after": "Depois"
     }
   },
   "social-media": {
     "general": {
-      "social_label": "Join Us On {{ social }}"
+      "social_label": "Junte-se a nós em {{ social }}"
     },
     "socials_share": {
       "facebook": "Facebook",
@@ -363,13 +363,13 @@
   },
   "search": {
     "general": {
-      "title": "Search",
-      "submit": "Search",
-      "search_placeholder": "Search",
-      "no_results": "No Results Could be Found For ''{{ search_term }}''",
-      "search_results": "{{ count }} Results for ''{{ search_term }}''",
-      "cancel": "Cancel",
-      "search_for": "Search For ''{{ terms }}''"
+      "title": "Procurar",
+      "submit": "Procurar",
+      "search_placeholder": "Procurar",
+      "no_results": "Nenhum resultado encontrado para ''{{ search_term }}''",
+      "search_results": "{{ count }} Resultados para ''{{ search_term }}''",
+      "cancel": "Cancelar",
+      "search_for": "Procurar ''{{ terms }}''"
     }
   }
 }
