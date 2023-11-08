@@ -208,7 +208,7 @@
   "general": {
     "404": {
       "text": "404 fel",
-      "sub_text_html": "<p>hoppsan! <\/p><p> Tack för att du besöker vår hemsida!<\/p>",
+      "sub_text_html": "<p>hoppsan! Det verkar som om sidan du försökte nå inte existerar. Vi ber om ursäkt för besväret. Använd navigeringsmenyn eller sökfältet för att hitta det du letar efter. Eller, om du känner dig äventyrlig, varför inte utforska våra senaste kollektioner och upptäcka något nytt?<\/p><p> Tack för att du besöker vår hemsida!<\/p>",
       "shop_collection": "TILLBAKA TILL HEMMET"
     },
     "accessibility": {
