@@ -208,7 +208,7 @@
   "general": {
     "404": {
       "text": "404 fejl",
-      "sub_text_html": "<p>Ups! <\/p><p> Tak fordi du besøger vores hjemmeside!<\/p>",
+      "sub_text_html": "<p>Ups! Det ser ud til, at den side, du forsøgte at nå, ikke eksisterer. Vi beklager ulejligheden. Brug venligst navigationsmenuen eller søgelinjen til at finde det, du leder efter. Eller, hvis du føler dig eventyrlysten, hvorfor så ikke udforske vores seneste kollektioner og opdage noget nyt? <\/p><p> Tak fordi du besøger vores hjemmeside!<\/p>",
       "shop_collection": "TILBAGE TIL HJEMMET"
     },
     "accessibility": {
