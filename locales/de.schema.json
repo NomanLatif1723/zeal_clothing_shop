@@ -571,10 +571,10 @@
           "label": "Miniaturbildpositionen",
           "options": {
             "left": {
-              "label": "Left"
+              "label": "Links"
             },
             "below": {
-              "label": "Below"
+              "label": "Unten"
             }
           }
         },
@@ -785,7 +785,7 @@
             "label": "Text alignment",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Links"
               },
               "center": {
                 "label": "Center"
@@ -1025,7 +1025,7 @@
               "label": "Text alignment",
               "options": {
                 "left": {
-                  "label": "Left"
+                  "label": "Links"
                 },
                 "center": {
                   "label": "Center"
@@ -1250,7 +1250,7 @@
             "label": "Text alignment",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Links"
               },
               "center": {
                 "label": "Center"
@@ -1322,7 +1322,7 @@
             "label": "Text alignment",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Links"
               },
               "center": {
                 "label": "Center"
@@ -1363,7 +1363,7 @@
           "label": "Text",
           "options": {
             "left": {
-              "label": "Left"
+              "label": "Links"
             },
             "right": {
               "label": "Right"
@@ -1474,7 +1474,7 @@
             "label": "Text alignment",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Links"
               },
               "center": {
                 "label": "Center"
@@ -1508,7 +1508,7 @@
             "label": "Text alignment",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Links"
               },
               "center": {
                 "label": "Center"
@@ -1647,10 +1647,10 @@
           "label": "Thumbnail Positions",
           "options": {
             "left": {
-              "label": "Left"
+              "label": "Links"
             },
             "below": {
-              "label": "Below"
+              "label": "Unten"
             }
           }
         },
@@ -1888,7 +1888,7 @@
           "label": "Text alignment",
           "options": {
             "left": {
-              "label": "Left"
+              "label": "Links"
             },
             "center": {
               "label": "Center"
@@ -2045,7 +2045,7 @@
           "label": "Text alignment",
           "options": {
             "left": {
-              "label": "Left"
+              "label": "Links"
             },
             "center": {
               "label": "Center"
@@ -2084,7 +2084,7 @@
             "label": "Text alignment",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Links"
               },
               "center": {
                 "label": "Center"
@@ -2202,7 +2202,7 @@
             "label": "Text alignment",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Links"
               },
               "center": {
                 "label": "Center"
@@ -2530,7 +2530,7 @@
               "label": "Text alignment",
               "options": {
                 "left": {
-                  "label": "Left"
+                  "label": "Links"
                 },
                 "center": {
                   "label": "Center"
@@ -2577,7 +2577,7 @@
             "label": "Text alignment",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Links"
               },
               "center": {
                 "label": "Center"
@@ -2615,7 +2615,7 @@
             "label": "Text alignment",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Links"
               },
               "center": {
                 "label": "Center"
@@ -2785,7 +2785,7 @@
               "label": "Text alignment",
               "options": {
                 "left": {
-                  "label": "Left"
+                  "label": "Links"
                 },
                 "center": {
                   "label": "Center"
@@ -2865,7 +2865,7 @@
                 "label": "Text alignment",
                 "options": {
                   "left": {
-                    "label": "Left"
+                    "label": "Links"
                   },
                   "center": {
                     "label": "Center"
@@ -2904,7 +2904,7 @@
             "label": "Text alignment",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Links"
               },
               "center": {
                 "label": "Center"
@@ -2972,7 +2972,7 @@
             "label": "Text alignment",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Links"
               },
               "center": {
                 "label": "Center"
@@ -3148,7 +3148,7 @@
             "label": "Text alignment",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Links"
               },
               "center": {
                 "label": "Center"
