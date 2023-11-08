@@ -536,39 +536,39 @@
           }
         },
         "show_rating": {
-          "label": "Add Product Rating",
-          "info": "To display a rating, add a product rating app. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/theme-structure\/theme-features#featured-product-rating)"
+          "label": "Produktbewertung hinzufügen",
+          "info": "Um eine Bewertung anzuzeigen, fügen Sie eine Produktbewertungs-App hinzu. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/theme-structure\/theme-features#featured-product-rating)"
         },
         "media_position": {
-          "label": "Media on the Right"
+          "label": "Medien auf der rechten Seite"
         },
         "media_width": {
-          "label": "Desktop Width",
+          "label": "Desktop-Breite",
           "options": {
             "compact": {
-              "label": "Compact"
+              "label": "Kompakt"
             },
             "large": {
-              "label": "Large"
+              "label": "Groß"
             },
             "extended": {
-              "label": "Extended"
+              "label": "Erweitert"
             }
           }
         },
         "media_layout": {
-          "label": "Desktop Layout",
+          "label": "Desktop-Layout",
           "options": {
             "grid": {
-              "label": "Grid"
+              "label": "Netz"
             },
             "thumbnail": {
-              "label": "Thumbnail"
+              "label": "Miniaturansicht"
             }
           }
         },
         "thumbnail_position": {
-          "label": "Thumbnail Positions",
+          "label": "Miniaturbildpositionen",
           "options": {
             "left": {
               "label": "Left"
