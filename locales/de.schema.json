@@ -1676,16 +1676,16 @@
       },
       "blocks": {
         "title": {
-          "name": "Title"
+          "name": "Titel"
         },
         "description": {
-          "name": "Short Description"
+          "name": "kurze Beschreibung"
         },
         "full_description": {
-          "name": "Full Description",
+          "name": "Gesamte Beschreibung",
           "settings": {
             "description_as_tab": {
-              "label": "Description as a tab"
+              "label": "Beschreibung als Tab"
             },
             "heading": {
               "label": "Überschrift"
@@ -1693,31 +1693,31 @@
           }
         },
         "variants_picker": {
-          "name": "variants Picker",
+          "name": "Varianten Picker",
           "settings": {
             "variant_type": {
-              "label": "Variants Type",
+              "label": "Variantentyp",
               "options": {
                 "dropdown": {
-                  "label": "Dropdown"
+                  "label": "Runterfallen"
                 },
                 "button": {
-                  "label": "Buttons"
+                  "label": "Tasten"
                 }
               }
             },
             "enable_color_swatches": {
-              "label": "Enable Color Swatches",
-              "info": "Enables color swatches for button variants only."
+              "label": "Aktivieren Sie Farbfelder",
+              "info": "Aktiviert Farbfelder nur für Schaltflächenvarianten."
             },
             "enable_image_swatches": {
-              "label": "Variant Images As Swatches",
-              "info": "Enables color swatches for button variants only if variants images Added"
+              "label": "Variantenbilder als Farbfelder",
+              "info": "Aktiviert Farbfelder für Schaltflächenvarianten nur, wenn Variantenbilder hinzugefügt wurden"
             }
           }
         },
         "collapsables": {
-          "name": "Collapsables",
+          "name": "Zusammenklappbar",
           "settings": {
             "heading": {
               "label": "Überschrift"
@@ -1728,63 +1728,63 @@
           }
         },
         "price": {
-          "name": "Price",
+          "name": "Preis",
           "settings": {
             "show_sale_badges": {
-              "label": "Show Sale Badges"
+              "label": "Verkaufsabzeichen anzeigen"
             }
           }
         },
         "quantity_selector": {
-          "name": "Quantity Selector"
+          "name": "Mengenauswahl"
         },
         "buy_buttons": {
-          "name": "Buy Buttons",
+          "name": "Knöpfe kaufen",
           "settings": {
             "enable_dynamic_checkout": {
-              "label": "Enable Dynamic Checkout Buttons",
-              "info": "Using the payment methods available on your store, customers see their preferred option, like PayPal or Apple Pay. [Learn more](https:\/\/help.shopify.com\/manual\/using-themes\/change-the-layout\/dynamic-checkout)"
+              "label": "Aktivieren Sie dynamische Checkout-Buttons",
+              "info": "Mithilfe der in Ihrem Shop verfügbaren Zahlungsmethoden sehen Kunden ihre bevorzugte Option, beispielsweise PayPal oder Apple Pay. [Learn more](https:\/\/help.shopify.com\/manual\/using-themes\/change-the-layout\/dynamic-checkout)"
             }
           }
         },
         "custom_liquid": {
-          "name": "Custom Liquid",
+          "name": "Kundenspezifische Flüssigkeit",
           "settings": {
             "custom_content": {
-              "label": "Liquid",
-              "info": "Add app snippets or other Liquid code to create advanced customizations."
+              "label": "Flüssig",
+              "info": "Fügen Sie App-Snippets oder anderen Liquid-Code hinzu, um erweiterte Anpassungen zu erstellen."
             }
           }
         },
         "sale_timer": {
-          "name": "Sale Timer",
+          "name": "Verkaufstimer",
           "settings": {
             "year": {
-              "label": "Year"
+              "label": "Jahr"
             },
             "month": {
-              "label": "Month",
+              "label": "Monat",
               "options": {
                 "01": {
-                  "label": "January"
+                  "label": "Januar"
                 },
                 "02": {
-                  "label": "Febrary"
+                  "label": "Februar"
                 },
                 "03": {
-                  "label": "March"
+                  "label": "Marsch"
                 },
                 "04": {
                   "label": "April"
                 },
                 "05": {
-                  "label": "May"
+                  "label": "Mai"
                 },
                 "06": {
-                  "label": "June"
+                  "label": "Juni"
                 },
                 "07": {
-                  "label": "July"
+                  "label": "Juli"
                 },
                 "08": {
                   "label": "August"
@@ -1793,27 +1793,27 @@
                   "label": "September"
                 },
                 "10": {
-                  "label": "October"
+                  "label": "Oktober"
                 },
                 "11": {
                   "label": "November"
                 },
                 "12": {
-                  "label": "December"
+                  "label": "Dezember"
                 }
               }
             },
             "day": {
-              "label": "Day"
+              "label": "Tag"
             },
             "hour": {
-              "label": "Hour"
+              "label": "Stunde"
             },
             "minutes": {
               "label": "Minute"
             },
             "timer_completion_message": {
-              "label": "Completion Message"
+              "label": "Abschlussmeldung"
             }
           }
         },
@@ -1821,22 +1821,22 @@
           "name": "Soziales Teilen"
         },
         "stock": {
-          "name": "Stock Counter",
+          "name": "Lagerzähler",
           "settings": {
             "stock_threshold": {
-              "label": "Stock Threshold",
-              "info": "Choose 0 to always show in stock if available."
+              "label": "Lagerschwelle",
+              "info": "Wählen Sie 0, um immer „Auf Lager“ anzuzeigen, sofern verfügbar."
             },
             "stock_count": {
-              "label": "Show Stock Count"
+              "label": "Bestandsanzahl anzeigen"
             }
           }
         },
         "tags": {
-          "name": "Tags"
+          "name": "Stichworte"
         },
         "category": {
-          "name": "Category"
+          "name": "Kategorie"
         },
         "sku": {
           "name": "Sku"
