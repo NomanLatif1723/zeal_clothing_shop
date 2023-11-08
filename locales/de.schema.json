@@ -3188,7 +3188,7 @@
       "name": "Farben",
       "settings": {
         "header_general": {
-          "label": "General",
+          "label": "Allgemein",
           "color_body_background": {
             "label": "Hintergrund"
           },
@@ -3196,11 +3196,11 @@
             "label": "Text"
           },
           "border_color": {
-            "label": "Border"
+            "label": "Grenze"
           }
         },
         "header_primary_buttons": {
-          "label": "Primary Buttons",
+          "label": "Primäre Tasten",
           "primary_button_background": {
             "label": "Hintergrund"
           },
@@ -3208,11 +3208,11 @@
             "label": "Text"
           },
           "color_button_outline": {
-            "label": "Outline Buttons"
+            "label": "Gliederungsschaltflächen"
           }
         },
         "header_secondary_buttons": {
-          "label": "Secondary Buttons",
+          "label": "Sekundäre Tasten",
           "secondary_button_background": {
             "label": "Hintergrund"
           },
@@ -3223,10 +3223,10 @@
         "header_header": {
           "label": "Header",
           "color_announcement_background": {
-            "label": "Announcement Background"
+            "label": "Ankündigungshintergrund"
           },
           "color_announcement_text": {
-            "label": "Announcement Text"
+            "label": "Ankündigungstext"
           },
           "header_background_color": {
             "label": "Hintergrund"
@@ -3236,7 +3236,7 @@
           }
         },
         "header_footer": {
-          "label": "Footer",
+          "label": "Fusszeile",
           "color_footer_background": {
             "label": "Hintergrund"
           },
@@ -3247,25 +3247,25 @@
       }
     },
     "collections": {
-      "name": "Collections",
+      "name": "Sammlungen",
       "settings": {
         "overlay_style": {
-          "label": "Overlay Below The Image"
+          "label": "Überlagerung unter dem Bild"
         },
         "show_first_product": {
-          "label": "Show First Product Image"
+          "label": "Erstes Produktbild anzeigen"
         },
         "header_image_size": {
-          "label": "Image Size",
+          "label": "Bildgröße",
           "options": {
             "square": {
-              "label": "Square(1:1)"
+              "label": "Quadrat(1:1)"
             },
             "portrait": {
-              "label": "Portrait(2:3)"
+              "label": "Porträt(2:3)"
             },
             "landscape": {
-              "label": "Landscape(4:3)"
+              "label": "Landschaft(4:3)"
             }
           }
         }
@@ -3275,47 +3275,47 @@
       "name": "Wagen",
       "settings": {
         "header_cart_type": {
-          "label": "Cart Type",
+          "label": "Warenkorbtyp",
           "options": {
             "page": {
-              "label": "Page"
+              "label": "Seite"
             },
             "drawer": {
-              "label": "Drawer"
+              "label": "Schublade"
             },
             "popup": {
-              "label": "popup"
+              "label": "Pop-up"
             }
           }
         },
         "header_cart_icon": {
-          "label": "Cart Icon",
+          "label": "Warenkorb-Symbol",
           "options": {
             "cart": {
               "label": "Wagen"
             },
             "bag": {
-              "label": "Bag"
+              "label": "Tasche"
             },
             "minimal_bag": {
-              "label": "Minimal Bag"
+              "label": "Minimale Tasche"
             }
           }
         },
         "free_shipping_bar": {
-          "label": " Enable Free Shipping Bar"
+          "label": "Aktivieren Sie die Leiste „Kostenloser Versand“."
         },
         "free_shipping_amount": {
-          "label": "Free Shipping Amount"
+          "label": "Kostenloser Versandbetrag"
         },
         "additional_checkout_buttons": {
-          "label": "Enable Additional Checkout Buttons"
+          "label": "Aktivieren Sie zusätzliche Checkout-Buttons"
         },
         "show_terms": {
-          "label": "Enable Terms and Conditions"
+          "label": "Allgemeine Geschäftsbedingungen aktivieren"
         },
         "show_note": {
-          "label": "Show Order Note"
+          "label": "Bestellhinweis anzeigen"
         }
       }
     },
@@ -3323,44 +3323,44 @@
       "name": "Extras",
       "settings": {
         "show_currency": {
-          "label": "Show Currency Selector"
+          "label": "Währungsauswahl anzeigen"
         },
         "show_language": {
-          "label": "Show Language Selector"
+          "label": "Sprachauswahl anzeigen"
         },
         "show_flags": {
-          "label": "Show Flags"
+          "label": "Flaggen anzeigen"
         },
         "text_direction": {
-          "label": "Text Direction",
+          "label": "Textrichtung",
           "options": {
             "ltr": {
-              "label": "Left To Right"
+              "label": "Links nach rechts"
             },
             "rtl": {
-              "label": "Right To Left"
+              "label": "Rechts nach links"
             }
           }
         },
         "show_breadcrumbs": {
-          "label": "Show Breadcrumbs"
+          "label": "Brotkrümel anzeigen"
         },
         "header_back_top_top": {
-          "label": "Back To Top",
+          "label": "Zurück nach oben",
           "show_back_to_top": {
-            "label": "Enable Back To Top"
+            "label": "Aktivieren Sie „Zurück zum Anfang“."
           },
           "back_button_position": {
             "label": "Position",
             "options": {
               "bottom_left": {
-                "label": "Bottom Left"
+                "label": "Unten links"
               },
               "bottom_center": {
-                "label": "Bottom Center"
+                "label": "Unten in der Mitte"
               },
               "bottom_right": {
-                "label": "Bottom Right"
+                "label": "Unten rechts"
               }
             }
           }
@@ -3368,68 +3368,68 @@
       }
     },
     "favicon": {
-      "name": "favicon",
+      "name": "Favicon",
       "settings": {
         "favicon": {
-          "label": "Favicon Image",
-          "info": "Will be Scaled Down to 32 x 32px"
+          "label": "Favicon-Bild",
+          "info": "Wird auf 32 x 32 Pixel verkleinert"
         }
       }
     },
     "products": {
-      "name": "Products",
+      "name": "Produkte",
       "settings": {
         "header_image_size": {
-          "label": "Image Size",
+          "label": "Bildgröße",
           "options": {
             "natural": {
-              "label": "Natural"
+              "label": "Natürlich"
             },
             "square": {
-              "label": "Square(1:1)"
+              "label": "Quadrat(1:1)"
             },
             "portrait": {
-              "label": "Portrait(2:3)"
+              "label": "Porträt(2:3)"
             },
             "landscape": {
-              "label": "Landscape(4:3)"
+              "label": "Landschaft(4:3)"
             },
             "wide": {
-              "label": "Wide(16:9)"
+              "label": "Breit(16:9)"
             }
           }
         },
         "show_quick_view": {
-          "label": "Show Quick View On Hover"
+          "label": "Schnellansicht beim Hover anzeigen"
         },
         "quick_shop_text": {
-          "label": "Quick Shop text"
+          "label": "Quick-Shop-Text"
         },
         "show_color_swatches": {
-          "label": "Enable color Swatches"
+          "label": "Aktivieren Sie Farbfelder"
         },
         "show_vendor": {
           "label": "Anbieter anzeigen"
         },
         "show_second_image": {
-          "label": "Hover to Reveal Second Image"
+          "label": "Bewegen Sie den Mauszeiger, um das zweite Bild anzuzeigen"
         },
         "header_colors": {
           "label": "Farben",
           "sale_badge_color": {
-            "label": "Sale Badge Color"
+            "label": "Farbe des Verkaufsabzeichens"
           },
           "soldout_badge_color": {
-            "label": "Soldout Badge Color"
+            "label": "Ausverkaufte Abzeichenfarbe"
           }
         }
       }
     },
     "social_media": {
-      "name": "Social Media",
+      "name": "Sozialen Medien",
       "settings": {
         "header_social_accounts": {
-          "label": "Accounts",
+          "label": "Konten",
           "social_facebook_link": {
             "label": "Facebook",
             "info": "https:\/\/www.facebook.com\/shopify"
@@ -3455,7 +3455,7 @@
             "info": "http:\/\/shopify.tumblr.com"
           },
           "social_tiktok_link": {
-            "label": "TikTok",
+            "label": "Tick Tack",
             "info": "https:\/\/www.tiktok.com\/@shopify"
           },
           "social_linkedin_link": {
@@ -3474,48 +3474,48 @@
       }
     },
     "search": {
-      "name": "Search",
+      "name": "Suchen",
       "settings": {
         "enable_search": {
-          "label": "Enable Search"
+          "label": "Aktivieren Sie die Suche"
         },
         "enable_predictive_search": {
-          "label": "Enable Predictive Search"
+          "label": "Aktivieren Sie die prädiktive Suche"
         }
       }
     },
     "sticky_add_to_cart": {
-      "name": "Sticky Add To Cart",
+      "name": "Klebrig In den Warenkorb legen",
       "settings": {
         "enable_sticky_add_to_cart": {
-          "label": "Enable Sticky Cart"
+          "label": "Aktivieren Sie Sticky Cart"
         },
         "sticky_add_to_cart_position": {
-          "label": "Sticky Cart Position",
+          "label": "Sticky Cart-Position",
           "options": {
             "top": {
-              "label": "Top"
+              "label": "Spitze"
             },
             "bottom": {
-              "label": "Bottom"
+              "label": "Unten"
             }
           }
         }
       }
     },
     "typography": {
-      "name": "Typography",
+      "name": "Typografie",
       "settings": {
         "header_headings": {
-          "label": "Headings",
+          "label": "Überschriften",
           "heading_font_family": {
-            "label": "Font"
+            "label": "Schriftart"
           }
         },
         "header_body_text": {
           "label": "Text",
           "body_text_font_family": {
-            "label": "Font"
+            "label": "Schriftart"
           }
         }
       }
