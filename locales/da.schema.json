@@ -1,190 +1,193 @@
 {
   "sections": {
+    "404": {
+      "name": "404 side"
+    },
     "header-group": {
       "name": "Header"
     },
     "footer-group": {
-      "name": "Footer"
+      "name": "Sidefod"
     },
     "popup-group": {
-      "name": "Popups"
+      "name": "Pop ups"
     },
     "announcement-bar": {
-      "name": "Announcement Bar",
+      "name": "Meddelelsesbjælke",
       "settings": {
         "announcement_heading": {
-          "label": "Heading"
+          "label": "Overskrift"
         },
         "announcement_text": {
-          "label": "Text"
+          "label": "Tekst"
         },
         "header_timer_details": {
-          "label": "Timer Details",
+          "label": "Timer detaljer",
           "announcement_show_timer": {
-            "label": "Show Timer"
+            "label": "Vis timer"
           },
           "timer_hour_label": {
-            "label": "Hours"
+            "label": "Timer"
           },
           "timer_minutes_label": {
-            "label": "Minutes"
+            "label": "Referater"
           },
           "show_socials": {
-            "label": "Show Socials"
+            "label": "Vis Socials"
           }
         }
       },
       "presets": {
-        "name": "Announcement Bar"
+        "name": "Meddelelsesbjælke"
       }
     },
     "age-verification-popup": {
-      "name": "Age verification",
+      "name": "Aldersbekræftelse",
       "settings": {
         "age_verifier_heading": {
-          "label": "Age Verifier Heading"
+          "label": "Overskrift for aldersbekræftelse"
         },
         "age_verifier_text": {
-          "label": "Age Verifier Text"
+          "label": "Aldersbekræftelsestekst"
         },
         "header_confirmation": {
-          "label": "Age Confirmation Buttons",
+          "label": "Aldersbekræftelsesknapper",
           "cancel_button_label": {
-            "label": "Cancel Button Label"
+            "label": "Annuller knaplabel"
           },
           "confirm_button_label": {
-            "label": "Confirm Button Label"
+            "label": "Bekræft knaplabel"
           }
         },
         "header_declined": {
-          "label": "Declined Content",
+          "label": "Afvist indhold",
           "declined_heading": {
-            "label": "Heading"
+            "label": "Overskrift"
           },
           "declined_text": {
-            "label": "Text"
+            "label": "Tekst"
           },
           "declined_button_label": {
-            "label": "Return Button Label"
+            "label": "Etiket med returknap"
           }
         }
       }
     },
     "blog-posts": {
-      "name": "Blog Posts",
+      "name": "Blogindlæg",
       "settings": {
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Justering",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Tekstjustering",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Venstre"
               },
               "center": {
-                "label": "Center"
+                "label": "Centrum"
               },
               "right": {
-                "label": "Right"
+                "label": "Højre"
               }
             }
           }
         },
         "posts_heading": {
-          "label": "Heading"
+          "label": "Overskrift"
         },
         "posts_text": {
-          "label": "Text"
+          "label": "Tekst"
         },
         "blog": {
           "label": "Blog"
         },
         "show_date": {
-          "label": "Show Date"
+          "label": "Vis dato"
         },
         "show_category": {
-          "label": "Show Category",
-          "info": "First Article tag will be shown as its category"
+          "label": "Vis kategori",
+          "info": "First Article tag vil blive vist som sin kategori"
         },
         "show_tags": {
-          "label": "Show Tags"
+          "label": "Vis tags"
         },
         "posts_to_show": {
-          "label": "Posts To Show"
+          "label": "Indlæg at vise"
         },
         "show_view_all_btn": {
-          "label": "Enable 'View All' Button",
-          "info": "Enable 'View All' if blogs have more posts than Shown"
+          "label": "Aktiver knappen 'Vis alle'",
+          "info": "Aktiver 'Se alle', hvis blogs har flere indlæg end vist"
         },
         "post_image_size": {
-          "label": "Image Size",
+          "label": "Billedestørrelse",
           "options": {
             "natural": {
-              "label": "Natural"
+              "label": "Naturlig"
             },
             "square": {
-              "label": "Square(1:1)"
+              "label": "Firkantet (1:1)"
             },
             "portrait": {
-              "label": "Portrait(2:3)"
+              "label": "Portræt (2:3)"
             },
             "landscape": {
-              "label": "Landscape(4:3)"
+              "label": "Landskab (4:3)"
             },
             "wide": {
-              "label": "Wide(16:9)"
+              "label": "Bred (16:9)"
             }
           }
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Aktiver LazyLoad Images",
+          "info": "Aktiver Lazyload, hvis billeder er offscreen for at forbedre ydeevnen"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Sektionsafstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Afstand Top"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Mellemrum bund"
           }
         }
       },
       "presets": {
-        "name": "Blog Posts"
+        "name": "Blogindlæg"
       }
     },
     "collection-list": {
-      "name": "Collection List",
+      "name": "Samlingsliste",
       "settings": {
         "heading": {
-          "label": "Heading"
+          "label": "Overskrift"
         },
         "collection_per_row": {
-          "label": "Collections Per Row"
+          "label": "Samlinger pr. række"
         },
         "all_collections": {
-          "label": "Show All Collections"
+          "label": "Vis alle samlinger"
         },
         "swipe_on_mobile": {
-          "label": "Swipe On Mobile"
+          "label": "Swipe på mobilen"
         },
         "products_count": {
-          "label": "Products In A Collection"
+          "label": "Produkter i en samling"
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Justering",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Tekstjustering",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Venstre"
               },
               "center": {
-                "label": "Center"
+                "label": "Centrum"
               },
               "right": {
-                "label": "Right"
+                "label": "Højre"
               }
             }
           }
@@ -193,566 +196,566 @@
           "label": "layout",
           "options": {
             "grid": {
-              "label": "Grid"
+              "label": "Gitter"
             },
             "slider": {
-              "label": "Slider"
+              "label": "Skyder"
             }
           }
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Aktiver LazyLoad Images",
+          "info": "Aktiver Lazyload, hvis billeder er offscreen for at forbedre ydeevnen"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Sektionsafstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Afstand Top"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Mellemrum bund"
           }
         }
       },
       "blocks": {
         "collection": {
-          "name": "Collection",
+          "name": "Kollektion",
           "settings": {
             "collection": {
-              "label": "Collection"
+              "label": "Kollektion"
             },
             "collection_heading": {
-              "label": "Heading"
+              "label": "Overskrift"
             }
           }
         }
       },
       "presets": {
-        "name": "Collection List"
+        "name": "Samlingsliste"
       }
     },
     "custom-content": {
-      "name": "Custom Liquid",
+      "name": "Brugerdefineret væske",
       "settings": {
         "subheading": {
-          "label": "Subheading"
+          "label": "Underoverskrift"
         },
         "heading": {
-          "label": "Heading"
+          "label": "Overskrift"
         },
         "custom_content": {
-          "label": "Liquid"
+          "label": "Væske"
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Justering",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Tekstjustering",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Venstre"
               },
               "center": {
-                "label": "Center"
+                "label": "Centrum"
               },
               "right": {
-                "label": "Right"
+                "label": "Højre"
               }
             }
           }
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Sektionsafstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Afstand Top"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Mellemrum bund"
           }
         }
       },
       "presets": {
-        "name": "Custom Liquid"
+        "name": "Brugerdefineret væske"
       }
     },
     "customer-activate-account": {
-      "name": "Activate Account"
+      "name": "Aktiver konto"
     },
     "customer-account": {
-      "name": "Customer Account"
+      "name": "Kundekonto"
     },
     "customer-addresses": {
-      "name": "Customer Addresses",
+      "name": "Kundeadresser",
       "settings": {
         "addresses_per_row": {
-          "label": "Address Per Row"
+          "label": "Adresse pr. række"
         }
       }
     },
     "customer-login": {
-      "name": "Customer Login"
+      "name": "Kundelogin"
     },
     "customer-registration": {
-      "name": "Register",
+      "name": "Tilmeld",
       "settings": {
         "additional_text": {
-          "label": "Additional Text"
+          "label": "Yderligere tekst"
         }
       }
     },
     "customer-reset_password": {
-      "name": "Reset Password"
+      "name": "Nulstille kodeord"
     },
     "customer-order": {
-      "name": "Customer Order"
+      "name": "Kundeordre"
     },
     "complementary-product": {
-      "name": "Complementary Products",
+      "name": "Supplerende produkter",
       "settings": {
         "show_dynamic_recommendation": {
-          "info": "Dynamic recommendations use order and product information to change and improve over time. [Learn more](https:\/\/help.shopify.com\/en\/themes\/development\/recommended-products)"
+          "info": "Dynamiske anbefalinger bruger ordre- og produktinformation til at ændre og forbedre over tid. "
         },
         "heading": {
-          "label": "Heading"
+          "label": "Overskrift"
         },
         "products_to_show": {
-          "label": "Products To Show"
+          "label": "Produkter at vise"
         },
         "products_per_row": {
-          "label": "Products Per Row"
+          "label": "Produkter pr. række"
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Justering",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Tekstjustering",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Venstre"
               },
               "center": {
-                "label": "Center"
+                "label": "Centrum"
               },
               "right": {
-                "label": "Right"
+                "label": "Højre"
               }
             }
           }
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Aktiver LazyLoad Images",
+          "info": "Aktiver Lazyload, hvis billeder er offscreen for at forbedre ydeevnen"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Sektionsafstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Afstand Top"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Mellemrum bund"
           }
         }
       },
       "presets": {
-        "name": "Complementary Products"
+        "name": "Supplerende produkter"
       }
     },
     "events-popup": {
-      "name": "Events Popup",
+      "name": "Popup-begivenheder",
       "settings": {
         "heading": {
-          "label": "Heading"
+          "label": "Overskrift"
         },
         "first_subheading": {
-          "label": "Top Subheading"
+          "label": "Øverste underoverskrift"
         },
         "announcement_text": {
-          "label": "Announcement Text"
+          "label": "Meddelelsestekst"
         },
         "second_subheading": {
-          "label": "Subheading Bottom"
+          "label": "Underoverskrift Nederst"
         },
         "confirm_button_label": {
-          "label": "Confirm Button Label"
+          "label": "Bekræft knaplabel"
         },
         "cancel_button_label": {
-          "label": "Cancel Button Label"
+          "label": "Annuller knaplabel"
         },
         "additional_text": {
-          "label": "Additional Text"
+          "label": "Yderligere tekst"
         },
         "show_socials": {
-          "label": "Show Socials"
+          "label": "Vis Socials"
         },
         "header_timer": {
           "label": "Timer",
           "show_timer": {
-            "label": "Show Timer"
+            "label": "Vis timer"
           },
           "year": {
-            "label": "Year"
+            "label": "År"
           },
           "month": {
-            "label": "Month",
+            "label": "Måned",
             "options": {
+              "10": {
+                "label": "oktober"
+              },
+              "11": {
+                "label": "november"
+              },
+              "12": {
+                "label": "december"
+              },
               "01": {
-                "label": "January"
+                "label": "januar"
               },
               "02": {
-                "label": "Febrary"
+                "label": "februar"
               },
               "03": {
-                "label": "March"
+                "label": "marts"
               },
               "04": {
                 "label": "April"
               },
               "05": {
-                "label": "May"
+                "label": "Kan"
               },
               "06": {
-                "label": "June"
+                "label": "juni"
               },
               "07": {
-                "label": "July"
+                "label": "juli"
               },
               "08": {
-                "label": "August"
+                "label": "august"
               },
               "09": {
-                "label": "September"
-              },
-              "10": {
-                "label": "October"
-              },
-              "11": {
-                "label": "November"
-              },
-              "12": {
-                "label": "December"
+                "label": "september"
               }
             }
           },
           "day": {
-            "label": "Day"
+            "label": "Dag"
           },
           "hour": {
-            "label": "Hour"
+            "label": "Time"
           },
           "minutes": {
-            "label": "Minute"
+            "label": "Minut"
           },
           "timer_completion_message": {
-            "label": "Completion Message"
+            "label": "Afslutningsmeddelelse"
           }
         }
       }
     },
     "featured-collection": {
-      "name": "Featured Collection",
+      "name": "Udvalgt samling",
       "settings": {
         "collection": {
-          "label": "Collection"
+          "label": "Kollektion"
         },
         "heading": {
-          "label": "Heading"
+          "label": "Overskrift"
         },
         "text": {
-          "label": "Text"
+          "label": "Tekst"
         },
         "products_per_row": {
-          "label": "Products Per Row"
+          "label": "Produkter pr. række"
         },
         "product_rows": {
-          "label": "Rows of Products"
+          "label": "Rækker af produkter"
         },
         "stack_product": {
-          "label": "Stack On Mobile"
+          "label": "Stak på mobil"
         },
         "show_view_all": {
-          "label": "Show View All",
-          "info": "Enable View All Only If your collection has more products than shown"
+          "label": "Vis Vis alle",
+          "info": "Aktiver kun Vis alle, hvis din samling har flere produkter end vist"
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Justering",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Tekstjustering",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Venstre"
               },
               "center": {
-                "label": "Center"
+                "label": "Centrum"
               },
               "right": {
-                "label": "Right"
+                "label": "Højre"
               }
             }
           }
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Aktiver LazyLoad Images",
+          "info": "Aktiver Lazyload, hvis billeder er offscreen for at forbedre ydeevnen"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Sektionsafstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Afstand Top"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Mellemrum bund"
           }
         }
       },
       "presets": {
-        "name": "Featured Collection"
+        "name": "Udvalgt samling"
       }
     },
     "featured-product": {
-      "name": "Featured Product",
+      "name": "Udvalgt produkt",
       "settings": {
         "product": {
-          "label": "Product"
+          "label": "Produkt"
         },
         "heading": {
-          "label": "Heading"
+          "label": "Overskrift"
         },
         "text": {
-          "label": "Text"
+          "label": "Tekst"
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Justering",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Tekstjustering",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Venstre"
               },
               "center": {
-                "label": "Center"
+                "label": "Centrum"
               },
               "right": {
-                "label": "Right"
+                "label": "Højre"
               }
             }
           }
         },
         "show_rating": {
-          "label": "Add Product Rating",
-          "info": "To display a rating, add a product rating app. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/theme-structure\/theme-features#featured-product-rating)"
+          "label": "Tilføj produktbedømmelse",
+          "info": "Tilføj en produktbedømmelsesapp for at få vist en bedømmelse. "
         },
         "media_position": {
-          "label": "Media on the Right"
+          "label": "Medier til højre"
         },
         "media_width": {
-          "label": "Desktop Width",
+          "label": "Skrivebordsbredde",
           "options": {
             "compact": {
-              "label": "Compact"
+              "label": "Kompakt"
             },
             "large": {
-              "label": "Large"
+              "label": "Stor"
             },
             "extended": {
-              "label": "Extended"
+              "label": "Udvidet"
             }
           }
         },
         "media_layout": {
-          "label": "Desktop Layout",
+          "label": "Skrivebordslayout",
           "options": {
             "grid": {
-              "label": "Grid"
+              "label": "Gitter"
             },
             "thumbnail": {
-              "label": "Thumbnail"
+              "label": "Miniaturebillede"
             }
           }
         },
         "thumbnail_position": {
-          "label": "Thumbnail Positions",
+          "label": "Thumbnail positioner",
           "options": {
             "left": {
-              "label": "Left"
+              "label": "Venstre"
             },
             "below": {
-              "label": "Below"
+              "label": "Under"
             }
           }
         },
         "show_thumbnail_arrows": {
-          "label": "Show Arrows"
+          "label": "Vis pile"
         },
         "header_size_chart": {
-          "label": "Size Chart",
+          "label": "Størrelses skema",
           "size_chart_page": {
-            "label": "Size Chart Page",
-            "info": "Select a Page for Size Chart"
+            "label": "Størrelsesskemaside",
+            "info": "Vælg en side til størrelsesdiagram"
           }
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Sektionsafstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Afstand Top"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Mellemrum bund"
           }
         }
       },
       "blocks": {
         "title": {
-          "name": "Title"
+          "name": "Titel"
         },
         "description": {
-          "name": "Short Description"
+          "name": "Kort beskrivelse"
         },
         "full_description": {
-          "name": "Full Description",
+          "name": "Fuld beskrivelse",
           "settings": {
             "description_as_tab": {
-              "label": "Description as a tab"
+              "label": "Beskrivelse som faneblad"
             },
             "heading": {
-              "label": "Heading"
+              "label": "Overskrift"
             }
           }
         },
         "variants_picker": {
-          "name": "variants Picker",
+          "name": "varianter Picker",
           "settings": {
             "variant_type": {
-              "label": "Variants Type",
+              "label": "Varianter Type",
               "options": {
                 "dropdown": {
                   "label": "Dropdown"
                 },
                 "button": {
-                  "label": "Buttons"
+                  "label": "Knapper"
                 }
               }
             },
             "enable_color_swatches": {
-              "label": "Enable Color Swatches",
-              "info": "Enables color swatches for button variants only."
+              "label": "Aktiver farveprøver",
+              "info": "Aktiverer kun farveprøver for knapvarianter."
             },
             "enable_image_swatches": {
-              "label": "Variant Images As Swatches",
-              "info": "Enables color swatches for button variants only if variants images Added"
+              "label": "Variantbilleder som farveprøver",
+              "info": "Aktiverer kun farveprøver for knapvarianter, hvis variantbilleder er tilføjet"
             }
           }
         },
         "collapsables": {
-          "name": "Collapsables",
+          "name": "Sammenklappelige",
           "settings": {
             "heading": {
-              "label": "Heading"
+              "label": "Overskrift"
             },
             "text": {
-              "label": "Text"
+              "label": "Tekst"
             }
           }
         },
         "price": {
-          "name": "Price",
+          "name": "Pris",
           "settings": {
             "show_sale_badges": {
-              "label": "Show Sale Badges"
+              "label": "Vis udsalgsmærker"
             }
           }
         },
         "quantity_selector": {
-          "name": "Quantity Selector"
+          "name": "Mængdevælger"
         },
         "buy_buttons": {
-          "name": "Buy Buttons",
+          "name": "Køb knapper",
           "settings": {
             "enable_dynamic_checkout": {
-              "label": "Enable Dynamic Checkout Buttons",
-              "info": "Using the payment methods available on your store, customers see their preferred option, like PayPal or Apple Pay. [Learn more](https:\/\/help.shopify.com\/manual\/using-themes\/change-the-layout\/dynamic-checkout)"
+              "label": "Aktiver Dynamic Checkout-knapper",
+              "info": "Ved at bruge de tilgængelige betalingsmetoder i din butik kan kunderne se deres foretrukne mulighed, som PayPal eller Apple Pay. "
             }
           }
         },
         "custom_liquid": {
-          "name": "Custom Liquid",
+          "name": "Brugerdefineret væske",
           "settings": {
             "custom_content": {
-              "label": "Liquid",
-              "info": "Add app snippets or other Liquid code to create advanced customizations."
+              "label": "Væske",
+              "info": "Tilføj app-uddrag eller anden flydende kode for at oprette avancerede tilpasninger."
             }
           }
         },
         "sale_timer": {
-          "name": "Sale Timer",
+          "name": "Salg Timer",
           "settings": {
             "year": {
-              "label": "Year"
+              "label": "År"
             },
             "month": {
-              "label": "Month",
+              "label": "Måned",
               "options": {
+                "10": {
+                  "label": "oktober"
+                },
+                "11": {
+                  "label": "november"
+                },
+                "12": {
+                  "label": "december"
+                },
                 "01": {
-                  "label": "January"
+                  "label": "januar"
                 },
                 "02": {
-                  "label": "Febrary"
+                  "label": "februar"
                 },
                 "03": {
-                  "label": "March"
+                  "label": "marts"
                 },
                 "04": {
                   "label": "April"
                 },
                 "05": {
-                  "label": "May"
+                  "label": "Kan"
                 },
                 "06": {
-                  "label": "June"
+                  "label": "juni"
                 },
                 "07": {
-                  "label": "July"
+                  "label": "juli"
                 },
                 "08": {
-                  "label": "August"
+                  "label": "august"
                 },
                 "09": {
-                  "label": "September"
-                },
-                "10": {
-                  "label": "October"
-                },
-                "11": {
-                  "label": "November"
-                },
-                "12": {
-                  "label": "December"
+                  "label": "september"
                 }
               }
             },
             "day": {
-              "label": "Day"
+              "label": "Dag"
             },
             "hour": {
-              "label": "Hour"
+              "label": "Time"
             },
             "minutes": {
-              "label": "Minute"
+              "label": "Minut"
             },
             "timer_completion_message": {
-              "label": "Completion Message"
+              "label": "Afslutningsmeddelelse"
             }
           }
         },
         "social_share": {
-          "name": "Social Sharing"
+          "name": "Social deling"
         },
         "stock": {
-          "name": "Stock Counter",
+          "name": "Lagertæller",
           "settings": {
             "stock_threshold": {
-              "label": "Stock Threshold",
-              "info": "Choose 0 to always show in stock if available."
+              "label": "Lagertærskel",
+              "info": "Vælg 0 for altid at være på lager, hvis tilgængelig."
             },
             "stock_count": {
-              "label": "Show Stock Count"
+              "label": "Vis lageroptælling"
             }
           }
         },
@@ -760,61 +763,61 @@
           "name": "Tags"
         },
         "category": {
-          "name": "Category"
+          "name": "Kategori"
         },
         "sku": {
           "name": "Sku"
         }
       },
       "presets": {
-        "name": "Featured Product"
+        "name": "Udvalgt produkt"
       }
     },
     "faq": {
       "name": "FAQ",
       "settings": {
         "faq_heading": {
-          "label": "Heading"
+          "label": "Overskrift"
         },
         "faq_text": {
-          "label": "Text"
+          "label": "Tekst"
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Justering",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Tekstjustering",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Venstre"
               },
               "center": {
-                "label": "Center"
+                "label": "Centrum"
               },
               "right": {
-                "label": "Right"
+                "label": "Højre"
               }
             }
           }
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Sektionsafstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Afstand Top"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Mellemrum bund"
           }
         }
       },
       "blocks": {
         "question": {
-          "name": "Question",
+          "name": "Spørgsmål",
           "settings": {
             "question": {
-              "label": "Question"
+              "label": "Spørgsmål"
             },
             "answer": {
-              "label": "Text"
+              "label": "Tekst"
             }
           }
         }
@@ -824,27 +827,27 @@
       }
     },
     "footer": {
-      "name": "Footer",
+      "name": "Sidefod",
       "settings": {
         "show_copyright": {
-          "label": "Show copyright"
+          "label": "Vis ophavsret"
         },
         "fooetr_copyright_text": {
-          "label": "Additional Copyright Text"
+          "label": "Yderligere copyright-tekst"
         },
         "show_payment_icons": {
-          "label": "Show Payment Icons"
+          "label": "Vis betalingsikoner"
         },
         "header_follow_shop": {
-          "content": "Follow On Shop",
-          "info": "To allow customers to follow your store on the Shop app from your storefront, Shop Pay must be enabled. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/customizing-themes\/follow-on-shop)",
+          "content": "Følg i butikken",
+          "info": "For at give kunderne mulighed for at følge din butik på Shop-appen fra din butiksfacade, skal Shop Pay være aktiveret. ",
           "enable_follow_on_shop": {
-            "label": "Enable Follow on Shop"
+            "label": "Aktiver Følg i butik"
           }
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Aktiver LazyLoad Images",
+          "info": "Aktiver Lazyload, hvis billeder er offscreen for at forbedre ydeevnen"
         }
       },
       "blocks": {
@@ -852,67 +855,67 @@
           "name": "Menu",
           "settings": {
             "menu_heading": {
-              "label": "Heading"
+              "label": "Overskrift"
             },
             "show_footer_heading": {
-              "label": "Show Heading"
+              "label": "Vis overskrift"
             },
             "footer_menu_label": {
               "label": "Menu"
             },
             "footer_column_width": {
-              "label": "Column Width"
+              "label": "Søjlebredde"
             }
           }
         },
         "newsletter": {
-          "name": "Newsletter",
+          "name": "Nyhedsbrev",
           "settings": {
             "show_newsletter_heading": {
-              "label": "Show Heading"
+              "label": "Vis overskrift"
             },
             "newsletter_heading": {
-              "label": "Heading"
+              "label": "Overskrift"
             },
             "newsletter_text": {
-              "label": "Text"
+              "label": "Tekst"
             },
             "newsletter_submit_button": {
-              "label": "Button"
+              "label": "Knap"
             },
             "show_socials": {
-              "label": "Show Socials"
+              "label": "Vis Socials"
             },
             "footer_column_width": {
-              "label": "Column Width"
+              "label": "Søjlebredde"
             }
           }
         },
         "text": {
-          "name": "Text",
+          "name": "Tekst",
           "settings": {
             "footer_logo": {
               "label": "Logo"
             },
             "footer_text": {
-              "label": "Text"
+              "label": "Tekst"
             },
             "footer_column_width": {
-              "label": "Column Width"
+              "label": "Søjlebredde"
             }
           }
         },
         "address_bar": {
-          "name": "AddressBar",
+          "name": "Adresse bar",
           "settings": {
             "footer_address": {
-              "label": "Address"
+              "label": "Adresse"
             },
             "footer_phone_no": {
-              "label": "Phone No"
+              "label": "Telefon Nej"
             },
             "footer_schedule": {
-              "label": "Schedule"
+              "label": "Tidsplan"
             }
           }
         }
@@ -922,31 +925,31 @@
       "name": "Header",
       "settings": {
         "header_navigation": {
-          "label": "Navigation Menus",
+          "label": "Navigationsmenuer",
           "desktop_menu": {
             "label": "Desktop Menu"
           },
           "mobile_menu": {
-            "label": "Mobile Menu"
+            "label": "Mobil menu"
           }
         },
         "header_styles": {
-          "label": "Header Styles",
+          "label": "Overskriftsstile",
           "options": {
             "center_left": {
-              "label": "Logo center Menu Left"
+              "label": "Logo center Menu Venstre"
             },
             "left_center": {
-              "label": "Logo Left Menu center"
+              "label": "Logo venstre menu center"
             },
             "left": {
-              "label": "Logo left Menu Left"
+              "label": "Logo venstre Menu Venstre"
             },
             "drawer_center": {
-              "label": "Menu Drawer Logo center"
+              "label": "Menu Skuffe Logo center"
             },
             "center_below": {
-              "label": "Logo center Menu Below"
+              "label": "Logo center Menu Nedenfor"
             }
           }
         },
@@ -954,7 +957,7 @@
           "label": "Sticky Header"
         },
         "show_icons": {
-          "label": "Show Icons"
+          "label": "Vis ikoner"
         }
       },
       "blocks": {
@@ -964,108 +967,108 @@
             "header_logo": {
               "label": "Logo",
               "logo": {
-                "label": "Logo Image"
+                "label": "Logo billede"
               },
               "desktop_logo_width": {
-                "label": "Desktop Logo Width"
+                "label": "Skrivebordslogobredde"
               },
               "mobile_logo_width": {
-                "label": "Mobile Logo Width"
+                "label": "Mobillogobredde"
               }
             }
           }
         },
         "mega-menu": {
-          "name": "Mega Menu",
+          "name": "Mega menu",
           "settings": {
             "menu_item_label": {
-              "label": "Menu Item",
-              "info": "Enter Menu Title to Apply Mega Menu"
+              "label": "Menupunkt",
+              "info": "Indtast menuens titel for at anvende Mega Menu"
             },
             "mega_menu": {
-              "label": "Mega Menu",
-              "info": "Should be Two Level Menu"
+              "label": "Mega menu",
+              "info": "Bør være to niveauer menu"
             },
             "header_alignment": {
-              "label": "Position and Alignment"
+              "label": "Position og justering"
             },
             "content_position": {
-              "label": "Content Position",
+              "label": "Indholdsposition",
               "options": {
                 "top_left": {
-                  "label": "Top Left"
+                  "label": "Øverst til venstre"
                 },
                 "top_center": {
                   "label": "Top Center"
                 },
                 "top_right": {
-                  "label": "Top Right"
+                  "label": "Øverst til højre"
                 },
                 "center_left": {
-                  "label": "Center Left"
+                  "label": "Midt til venstre"
                 },
                 "center": {
-                  "label": "Center"
+                  "label": "Centrum"
                 },
                 "center_right": {
-                  "label": "Center Right"
+                  "label": "Center højre"
                 },
                 "bottom_left": {
-                  "label": "Bottom Left"
+                  "label": "Nederst til venstre"
                 },
                 "bottom_center": {
-                  "label": "Bottom Center"
+                  "label": "Nederst i midten"
                 },
                 "bottom_right": {
-                  "label": "Bottom Right"
+                  "label": "Nederst til højre"
                 }
               }
             },
             "alignment": {
-              "label": "Text alignment",
+              "label": "Tekstjustering",
               "options": {
                 "left": {
-                  "label": "Left"
+                  "label": "Venstre"
                 },
                 "center": {
-                  "label": "Center"
+                  "label": "Centrum"
                 },
                 "right": {
-                  "label": "Right"
+                  "label": "Højre"
                 }
               }
             },
             "header_image_1": {
-              "label": "Image 1",
+              "label": "Billede 1",
               "promo_image": {
-                "label": "Image"
+                "label": "Billede"
               },
               "subheading": {
-                "label": "Subheading"
+                "label": "Underoverskrift"
               },
               "heading": {
-                "label": "Heading"
+                "label": "Overskrift"
               },
               "text": {
-                "label": "Text"
+                "label": "Tekst"
               },
               "link": {
                 "label": "Link"
               }
             },
             "header_image_2": {
-              "label": "Image 2",
+              "label": "Billede 2",
               "promo_image": {
-                "label": "Image"
+                "label": "Billede"
               },
               "subheading": {
-                "label": "Subheading"
+                "label": "Underoverskrift"
               },
               "heading": {
-                "label": "Heading"
+                "label": "Overskrift"
               },
               "text": {
-                "label": "Text"
+                "label": "Tekst"
               },
               "link": {
                 "label": "Link"
@@ -1076,45 +1079,45 @@
       }
     },
     "image-with-text": {
-      "name": "Image With Text",
+      "name": "Billede med tekst",
       "settings": {
         "layout_reverse": {
-          "label": "Image Right"
+          "label": "Billede til højre"
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Aktiver LazyLoad Images",
+          "info": "Aktiver Lazyload, hvis billeder er offscreen for at forbedre ydeevnen"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Sektionsafstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Afstand Top"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Mellemrum bund"
           }
         }
       },
       "blocks": {
         "image": {
-          "name": "Image",
+          "name": "Billede",
           "settings": {
             "image": {
-              "label": "Image"
+              "label": "Billede"
             }
           }
         },
         "text": {
-          "name": "Text",
+          "name": "Tekst",
           "settings": {
             "heading": {
-              "label": "Heading"
+              "label": "Overskrift"
             },
             "text": {
-              "label": "Text"
+              "label": "Tekst"
             },
             "button_label": {
-              "label": "Button"
+              "label": "Knap"
             },
             "button_link": {
               "label": "Link"
@@ -1123,38 +1126,38 @@
         }
       },
       "presets": {
-        "name": "Image With Text"
+        "name": "Billede med tekst"
       }
     },
     "image-comparison": {
-      "name": "Image Comparison",
+      "name": "Billedsammenligning",
       "settings": {
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Aktiver LazyLoad Images",
+          "info": "Aktiver Lazyload, hvis billeder er offscreen for at forbedre ydeevnen"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Sektionsafstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Afstand Top"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Mellemrum bund"
           }
         }
       },
       "blocks": {
         "text": {
-          "name": "Text",
+          "name": "Tekst",
           "settings": {
             "compare_heading": {
-              "label": "Heading"
+              "label": "Overskrift"
             },
             "compare_text": {
-              "label": "Text"
+              "label": "Tekst"
             },
             "button_heading": {
-              "label": "Button"
+              "label": "Knap"
             },
             "button_link": {
               "label": "Link"
@@ -1162,49 +1165,49 @@
           }
         },
         "compare-image": {
-          "name": "Comapre Image",
+          "name": "Sammenlign billede",
           "settings": {
             "before_image": {
-              "label": "Before Image"
+              "label": "Før billede"
             },
             "after_image": {
-              "label": "After Image"
+              "label": "Efter billede"
             }
           }
         }
       },
       "presets": {
-        "name": "Image Comaprison"
+        "name": "Billedsammenligning"
       }
     },
     "lookbook": {
       "name": "Lookbook",
       "settings": {
         "image_size": {
-          "label": "Image Size",
+          "label": "Billedestørrelse",
           "options": {
             "square": {
-              "label": "Square(1:1)"
+              "label": "Firkantet (1:1)"
             },
             "portrait": {
-              "label": "Portrait(2:3)"
+              "label": "Portræt (2:3)"
             },
             "landscape": {
-              "label": "Landscape(4:3)"
+              "label": "Landskab (4:3)"
             }
           }
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Aktiver LazyLoad Images",
+          "info": "Aktiver Lazyload, hvis billeder er offscreen for at forbedre ydeevnen"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Sektionsafstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Afstand Top"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Mellemrum bund"
           }
         }
       },
@@ -1213,7 +1216,7 @@
           "name": "lookbook",
           "settings": {
             "image": {
-              "label": "Image"
+              "label": "Billede"
             }
           }
         }
@@ -1223,54 +1226,54 @@
       }
     },
     "main-collection": {
-      "name": "Collection Grid",
+      "name": "Indsamlingsgitter",
       "settings": {
         "products_to_show": {
-          "label": "Products To Show"
+          "label": "Produkter at vise"
         },
         "products_per_row": {
-          "label": "Products Per Row"
+          "label": "Produkter pr. række"
         },
         "header_sorting": {
-          "label": "Sorting and Filtering",
+          "label": "Sortering og filtrering",
           "show_sorting": {
-            "label": "Show Sorting"
+            "label": "Vis sortering"
           },
           "show_filtering": {
-            "label": "Show Filters",
-            "info": "[Customize filters](\/admin\/menus)"
+            "label": "Vis filtre",
+            "info": "[Tilpas filtre](\/admin\/menuer)"
           },
           "show_collection_count": {
-            "label": "Show Collection Count"
+            "label": "Vis samlingstal"
           }
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Justering",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Tekstjustering",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Venstre"
               },
               "center": {
-                "label": "Center"
+                "label": "Centrum"
               },
               "right": {
-                "label": "Right"
+                "label": "Højre"
               }
             }
           }
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images"
+          "label": "Aktiver LazyLoad Images"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Sektionsafstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Afstand Top"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Mellemrum bund"
           }
         }
       },
@@ -1279,13 +1282,13 @@
           "name": "Banner",
           "settings": {
             "banner_image": {
-              "label": "Image"
+              "label": "Billede"
             },
             "banner_heading": {
-              "label": "Heading"
+              "label": "Overskrift"
             },
             "banner_button": {
-              "label": "Button"
+              "label": "Knap"
             },
             "banner_link": {
               "label": "Link"
@@ -1295,226 +1298,226 @@
       }
     },
     "main-search": {
-      "name": "Search",
+      "name": "Søg",
       "settings": {
         "results_to_show": {
-          "label": "Items To Show"
+          "label": "Elementer at vise"
         },
         "results_per_row": {
-          "label": "Items Per Row"
+          "label": "Varer pr. række"
         },
         "header_sorting": {
-          "label": "Sorting and Filtering",
+          "label": "Sortering og filtrering",
           "show_sorting": {
-            "label": "Show Sorting"
+            "label": "Vis sortering"
           },
           "show_filtering": {
-            "label": "Show Filters",
-            "info": "[Customize filters](\/admin\/menus)"
+            "label": "Vis filtre",
+            "info": "[Tilpas filtre](\/admin\/menuer)"
           },
           "show_collection_count": {
-            "label": "Show Collection Count"
+            "label": "Vis samlingstal"
           }
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Justering",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Tekstjustering",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Venstre"
               },
               "center": {
-                "label": "Center"
+                "label": "Centrum"
               },
               "right": {
-                "label": "Right"
+                "label": "Højre"
               }
             }
           }
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images"
+          "label": "Aktiver LazyLoad Images"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Sektionsafstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Afstand Top"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Mellemrum bund"
           }
         }
       }
     },
     "marquee-text": {
-      "name": "Marquee Text",
+      "name": "Markeringstekst",
       "settings": {
         "marquee_text": {
-          "label": "Text"
+          "label": "Tekst"
         },
         "marquee_text_link": {
           "label": "Link"
         },
         "marquee_text_size": {
-          "label": "Text Size"
+          "label": "Tekststørrelse"
         },
         "marquee_text_direction": {
-          "label": "Text",
+          "label": "Tekst",
           "options": {
             "left": {
-              "label": "Left"
+              "label": "Venstre"
             },
             "right": {
-              "label": "Right"
+              "label": "Højre"
             }
           }
         },
         "marquee_text_speed": {
-          "label": "Speed"
+          "label": "Fart"
         },
         "marquee_background_color": {
-          "label": "Background"
+          "label": "Baggrund"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Sektionsafstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Afstand Top"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Mellemrum bund"
           }
         }
       },
       "presets": {
-        "name": "Marquee Text"
+        "name": "Markeringstekst"
       }
     },
     "main-contact": {
-      "name": "Contact Form",
+      "name": "Kontaktformular",
       "settings": {
         "main_heading": {
-          "label": "Heading"
+          "label": "Overskrift"
         },
         "header_personal_info": {
-          "label": "Personal Information",
+          "label": "Personlig information",
           "info_heading": {
-            "label": "Heading"
+            "label": "Overskrift"
           },
           "info_text": {
-            "label": "Text"
+            "label": "Tekst"
           }
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Sektionsafstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Afstand Top"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Mellemrum bund"
           }
         }
       },
       "blocks": {
         "address_block": {
-          "name": "Address",
+          "name": "Adresse",
           "settings": {
             "heading": {
-              "label": "Heading"
+              "label": "Overskrift"
             },
             "text": {
-              "label": "Text"
+              "label": "Tekst"
             }
           }
         },
         "number_block": {
-          "name": "Phone Number",
+          "name": "Telefonnummer",
           "settings": {
             "heading": {
-              "label": "Heading"
+              "label": "Overskrift"
             },
             "text": {
-              "label": "Text"
+              "label": "Tekst"
             }
           }
         },
         "email_block": {
-          "name": "Email",
+          "name": "E-mail",
           "settings": {
             "heading": {
-              "label": "Heading"
+              "label": "Overskrift"
             },
             "text": {
-              "label": "Text"
+              "label": "Tekst"
             }
           }
         },
         "schedule_block": {
-          "name": "Schedule",
+          "name": "Tidsplan",
           "settings": {
             "heading": {
-              "label": "Heading"
+              "label": "Overskrift"
             },
             "text": {
-              "label": "Text"
+              "label": "Tekst"
             }
           }
         }
       },
       "presets": {
-        "name": "Contact Form"
+        "name": "Kontaktformular"
       }
     },
     "main-page": {
-      "name": "Page",
+      "name": "Side",
       "settings": {
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Justering",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Tekstjustering",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Venstre"
               },
               "center": {
-                "label": "Center"
+                "label": "Centrum"
               },
               "right": {
-                "label": "Right"
+                "label": "Højre"
               }
             }
           }
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Sektionsafstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Afstand Top"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Mellemrum bund"
           }
         }
       }
     },
     "main-cart": {
-      "name": "Cart",
+      "name": "Vogn",
       "settings": {
         "show_vendor": {
-          "label": "Show Vendor"
+          "label": "Vis leverandør"
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Justering",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Tekstjustering",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Venstre"
               },
               "center": {
-                "label": "Center"
+                "label": "Centrum"
               },
               "right": {
-                "label": "Right"
+                "label": "Højre"
               }
             }
           }
@@ -1525,310 +1528,310 @@
       "name": "Blogs",
       "settings": {
         "posts_to_show": {
-          "label": "Posts To Show"
+          "label": "Indlæg at vise"
         },
         "show_date": {
-          "label": "Show Date"
+          "label": "Vis dato"
         },
         "show_tags": {
-          "label": "Show Tags"
+          "label": "Vis tags"
         },
         "show_category": {
-          "label": "Show Category",
-          "info": "First Article tag will be shown as its category"
+          "label": "Vis kategori",
+          "info": "First Article tag vil blive vist som sin kategori"
         },
         "post_image_size": {
-          "label": "Image Size",
+          "label": "Billedestørrelse",
           "options": {
             "natural": {
-              "label": "Natural"
+              "label": "Naturlig"
             },
             "square": {
-              "label": "Square(1:1)"
+              "label": "Firkantet (1:1)"
             },
             "portrait": {
-              "label": "Portrait(2:3)"
+              "label": "Portræt (2:3)"
             },
             "landscape": {
-              "label": "Landscape(4:3)"
+              "label": "Landskab (4:3)"
             },
             "wide": {
-              "label": "Wide(16:9)"
+              "label": "Bred (16:9)"
             }
           }
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Aktiver LazyLoad Images",
+          "info": "Aktiver Lazyload, hvis billeder er offscreen for at forbedre ydeevnen"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Sektionsafstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Afstand Top"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Mellemrum bund"
           }
         }
       }
     },
     "main-article": {
-      "name": "Main Article",
+      "name": "Hovedartikel",
       "settings": {
         "show_date": {
-          "label": "Show Date"
+          "label": "Vis dato"
         },
         "show_category": {
-          "label": "Show Category",
-          "info": "First Article tag will be shown as its category"
+          "label": "Vis kategori",
+          "info": "First Article tag vil blive vist som sin kategori"
         },
         "show_tags": {
-          "label": "Show Tags"
+          "label": "Vis tags"
         },
         "show_author": {
-          "label": "Show Author"
+          "label": "Vis forfatter"
         },
         "show_social_sharing": {
-          "label": "Show Social Sharing"
+          "label": "Vis social deling"
         },
         "show_comments": {
-          "label": "Show Comments"
+          "label": "Vis kommentarer"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Sektionsafstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Afstand Top"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Mellemrum bund"
           }
         }
       }
     },
     "main-product": {
-      "name": "Product Grid",
+      "name": "Produktgitter",
       "settings": {
         "show_breadcrumbs": {
-          "label": "Show Breadcrumbs"
+          "label": "Vis brødkrummer"
         },
         "show_rating": {
-          "label": "Add Product Rating",
-          "info": "To display a rating, add a product rating app. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/theme-structure\/theme-features#featured-product-rating)"
+          "label": "Tilføj produktbedømmelse",
+          "info": "Tilføj en produktbedømmelsesapp for at få vist en bedømmelse. "
         },
         "media_position": {
-          "label": "Media on the Right"
+          "label": "Medier til højre"
         },
         "media_width": {
-          "label": "Desktop Width",
+          "label": "Skrivebordsbredde",
           "options": {
             "compact": {
-              "label": "Compact"
+              "label": "Kompakt"
             },
             "large": {
-              "label": "Large"
+              "label": "Stor"
             },
             "extended": {
-              "label": "Extended"
+              "label": "Udvidet"
             }
           }
         },
         "media_layout": {
-          "label": "Desktop Layout",
+          "label": "Skrivebordslayout",
           "options": {
             "grid": {
-              "label": "Grid"
+              "label": "Gitter"
             },
             "thumbnail": {
-              "label": "Thumbnail"
+              "label": "Miniaturebillede"
             }
           }
         },
         "thumbnail_position": {
-          "label": "Thumbnail Positions",
+          "label": "Thumbnail positioner",
           "options": {
             "left": {
-              "label": "Left"
+              "label": "Venstre"
             },
             "below": {
-              "label": "Below"
+              "label": "Under"
             }
           }
         },
         "show_thumbnail_arrows": {
-          "label": "Show Arrows"
+          "label": "Vis pile"
         },
         "header_size_chart": {
-          "label": "Size Chart",
+          "label": "Størrelses skema",
           "size_chart_page": {
-            "label": "Size Chart Page",
-            "info": "Select a Page for Size Chart"
+            "label": "Størrelsesskemaside",
+            "info": "Vælg en side til størrelsesdiagram"
           }
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Sektionsafstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Afstand Top"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Mellemrum bund"
           }
         }
       },
       "blocks": {
         "title": {
-          "name": "Title"
+          "name": "Titel"
         },
         "description": {
-          "name": "Short Description"
+          "name": "Kort beskrivelse"
         },
         "full_description": {
-          "name": "Full Description",
+          "name": "Fuld beskrivelse",
           "settings": {
             "description_as_tab": {
-              "label": "Description as a tab"
+              "label": "Beskrivelse som faneblad"
             },
             "heading": {
-              "label": "Heading"
+              "label": "Overskrift"
             }
           }
         },
         "variants_picker": {
-          "name": "variants Picker",
+          "name": "varianter Picker",
           "settings": {
             "variant_type": {
-              "label": "Variants Type",
+              "label": "Varianter Type",
               "options": {
                 "dropdown": {
                   "label": "Dropdown"
                 },
                 "button": {
-                  "label": "Buttons"
+                  "label": "Knapper"
                 }
               }
             },
             "enable_color_swatches": {
-              "label": "Enable Color Swatches",
-              "info": "Enables color swatches for button variants only."
+              "label": "Aktiver farveprøver",
+              "info": "Aktiverer kun farveprøver for knapvarianter."
             },
             "enable_image_swatches": {
-              "label": "Variant Images As Swatches",
-              "info": "Enables color swatches for button variants only if variants images Added"
+              "label": "Variantbilleder som farveprøver",
+              "info": "Aktiverer kun farveprøver for knapvarianter, hvis variantbilleder er tilføjet"
             }
           }
         },
         "collapsables": {
-          "name": "Collapsables",
+          "name": "Sammenklappelige",
           "settings": {
             "heading": {
-              "label": "Heading"
+              "label": "Overskrift"
             },
             "text": {
-              "label": "Text"
+              "label": "Tekst"
             }
           }
         },
         "price": {
-          "name": "Price",
+          "name": "Pris",
           "settings": {
             "show_sale_badges": {
-              "label": "Show Sale Badges"
+              "label": "Vis udsalgsmærker"
             }
           }
         },
         "quantity_selector": {
-          "name": "Quantity Selector"
+          "name": "Mængdevælger"
         },
         "buy_buttons": {
-          "name": "Buy Buttons",
+          "name": "Køb knapper",
           "settings": {
             "enable_dynamic_checkout": {
-              "label": "Enable Dynamic Checkout Buttons",
-              "info": "Using the payment methods available on your store, customers see their preferred option, like PayPal or Apple Pay. [Learn more](https:\/\/help.shopify.com\/manual\/using-themes\/change-the-layout\/dynamic-checkout)"
+              "label": "Aktiver Dynamic Checkout-knapper",
+              "info": "Ved at bruge de tilgængelige betalingsmetoder i din butik kan kunderne se deres foretrukne mulighed, som PayPal eller Apple Pay. "
             }
           }
         },
         "custom_liquid": {
-          "name": "Custom Liquid",
+          "name": "Brugerdefineret væske",
           "settings": {
             "custom_content": {
-              "label": "Liquid",
-              "info": "Add app snippets or other Liquid code to create advanced customizations."
+              "label": "Væske",
+              "info": "Tilføj app-uddrag eller anden flydende kode for at oprette avancerede tilpasninger."
             }
           }
         },
         "sale_timer": {
-          "name": "Sale Timer",
+          "name": "Salg Timer",
           "settings": {
             "year": {
-              "label": "Year"
+              "label": "År"
             },
             "month": {
-              "label": "Month",
+              "label": "Måned",
               "options": {
+                "10": {
+                  "label": "oktober"
+                },
+                "11": {
+                  "label": "november"
+                },
+                "12": {
+                  "label": "december"
+                },
                 "01": {
-                  "label": "January"
+                  "label": "januar"
                 },
                 "02": {
-                  "label": "Febrary"
+                  "label": "februar"
                 },
                 "03": {
-                  "label": "March"
+                  "label": "marts"
                 },
                 "04": {
                   "label": "April"
                 },
                 "05": {
-                  "label": "May"
+                  "label": "Kan"
                 },
                 "06": {
-                  "label": "June"
+                  "label": "juni"
                 },
                 "07": {
-                  "label": "July"
+                  "label": "juli"
                 },
                 "08": {
-                  "label": "August"
+                  "label": "august"
                 },
                 "09": {
-                  "label": "September"
-                },
-                "10": {
-                  "label": "October"
-                },
-                "11": {
-                  "label": "November"
-                },
-                "12": {
-                  "label": "December"
+                  "label": "september"
                 }
               }
             },
             "day": {
-              "label": "Day"
+              "label": "Dag"
             },
             "hour": {
-              "label": "Hour"
+              "label": "Time"
             },
             "minutes": {
-              "label": "Minute"
+              "label": "Minut"
             },
             "timer_completion_message": {
-              "label": "Completion Message"
+              "label": "Afslutningsmeddelelse"
             }
           }
         },
         "social_share": {
-          "name": "Social Sharing"
+          "name": "Social deling"
         },
         "stock": {
-          "name": "Stock Counter",
+          "name": "Lagertæller",
           "settings": {
             "stock_threshold": {
-              "label": "Stock Threshold",
-              "info": "Choose 0 to always show in stock if available."
+              "label": "Lagertærskel",
+              "info": "Vælg 0 for altid at være på lager, hvis tilgængelig."
             },
             "stock_count": {
-              "label": "Show Stock Count"
+              "label": "Vis lageroptælling"
             }
           }
         },
@@ -1836,7 +1839,7 @@
           "name": "Tags"
         },
         "category": {
-          "name": "Category"
+          "name": "Kategori"
         },
         "sku": {
           "name": "Sku"
@@ -1844,75 +1847,75 @@
       }
     },
     "main-password": {
-      "name": "Password",
+      "name": "Adgangskode",
       "settings": {
         "background_image": {
-          "label": "Background Image"
+          "label": "Baggrundsbillede"
         },
         "header_alignment": {
-          "label": "Position and Alignment"
+          "label": "Position og justering"
         },
         "content_position": {
-          "label": "Content Position",
+          "label": "Indholdsposition",
           "options": {
             "top_left": {
-              "label": "Top Left"
+              "label": "Øverst til venstre"
             },
             "top_center": {
               "label": "Top Center"
             },
             "top_right": {
-              "label": "Top Right"
+              "label": "Øverst til højre"
             },
             "center_left": {
-              "label": "Center Left"
+              "label": "Midt til venstre"
             },
             "center": {
-              "label": "Center"
+              "label": "Centrum"
             },
             "center_right": {
-              "label": "Center Right"
+              "label": "Center højre"
             },
             "bottom_left": {
-              "label": "Bottom Left"
+              "label": "Nederst til venstre"
             },
             "bottom_center": {
-              "label": "Bottom Center"
+              "label": "Nederst i midten"
             },
             "bottom_right": {
-              "label": "Bottom Right"
+              "label": "Nederst til højre"
             }
           }
         },
         "alignment": {
-          "label": "Text alignment",
+          "label": "Tekstjustering",
           "options": {
             "left": {
-              "label": "Left"
+              "label": "Venstre"
             },
             "center": {
-              "label": "Center"
+              "label": "Centrum"
             },
             "right": {
-              "label": "Right"
+              "label": "Højre"
             }
           }
         }
       },
       "blocks": {
         "title": {
-          "name": "Title",
+          "name": "Titel",
           "settings": {
             "title": {
-              "label": "Heading"
+              "label": "Overskrift"
             }
           }
         },
         "text": {
-          "name": "Text",
+          "name": "Tekst",
           "settings": {
             "text": {
-              "label": "Text"
+              "label": "Tekst"
             }
           }
         },
@@ -1929,315 +1932,318 @@
       }
     },
     "password-header": {
-      "name": "Password Header",
+      "name": "Adgangskodehoved",
       "settings": {
         "header_logo": {
           "label": "Logo",
           "logo": {
-            "label": "Logo Image"
+            "label": "Logo billede"
           },
           "desktop_logo_width": {
-            "label": "Desktop Logo Width"
+            "label": "Skrivebordslogobredde"
           },
           "mobile_logo_width": {
-            "label": "Mobile Logo Width"
+            "label": "Mobillogobredde"
           }
         }
       }
     },
     "password-footer": {
-      "name": "Password Footer"
+      "name": "Adgangskodefod"
     },
     "map": {
-      "name": "Map",
+      "name": "Kort",
       "settings": {
         "section_height_desktop": {
-          "label": "Desktop Height",
+          "label": "Højde på skrivebordet",
           "options": {
             "natural": {
-              "label": "Natural"
+              "label": "Naturlig"
             },
             "compact": {
-              "label": "Compact (450px)"
+              "label": "Kompakt (450px)"
             },
             "standard": {
               "label": "Standard (650px)"
             },
             "extended": {
-              "label": "Extended (750px)"
+              "label": "Udvidet (750px)"
             },
             "full": {
-              "label": "Full Screen"
+              "label": "Fuld skærm"
             }
           }
         },
         "section_height_mobile": {
-          "label": "Mobile Height",
+          "label": "Mobil højde",
           "options": {
             "auto": {
               "label": "Auto"
             },
             "compact": {
-              "label": "Compact (300px)"
+              "label": "Kompakt (300px)"
             },
             "standard": {
               "label": "Standard (400px)"
             },
             "extended": {
-              "label": "Extended (500px)"
+              "label": "Udvidet (500px)"
             },
             "full": {
-              "label": "Full Screen"
+              "label": "Fuld skærm"
             }
           }
         },
         "map_embed_code": {
-          "label": "Add Google Iframe code"
+          "label": "Tilføj Google Iframe-kode"
         },
         "heading": {
-          "label": "Heading"
+          "label": "Overskrift"
         },
         "address": {
-          "label": "Address and Hours"
+          "label": "Adresse og åbningstider"
         },
         "button_text": {
-          "label": "Button"
+          "label": "Knap"
         },
         "button_link": {
           "label": "Link"
         },
         "header_alignment": {
-          "label": "Position and Alignment"
+          "label": "Position og justering"
         },
         "content_position": {
-          "label": "Content Position",
+          "label": "Indholdsposition",
           "options": {
             "top_left": {
-              "label": "Top Left"
+              "label": "Øverst til venstre"
             },
             "top_center": {
               "label": "Top Center"
             },
             "top_right": {
-              "label": "Top Right"
+              "label": "Øverst til højre"
             },
             "center_left": {
-              "label": "Center Left"
+              "label": "Midt til venstre"
             },
             "center": {
-              "label": "Center"
+              "label": "Centrum"
             },
             "center_right": {
-              "label": "Center Right"
+              "label": "Center højre"
             },
             "bottom_left": {
-              "label": "Bottom Left"
+              "label": "Nederst til venstre"
             },
             "bottom_center": {
-              "label": "Bottom Center"
+              "label": "Nederst i midten"
             },
             "bottom_right": {
-              "label": "Bottom Right"
+              "label": "Nederst til højre"
             }
           }
         },
         "alignment": {
-          "label": "Text alignment",
+          "label": "Tekstjustering",
           "options": {
             "left": {
-              "label": "Left"
+              "label": "Venstre"
             },
             "center": {
-              "label": "Center"
+              "label": "Centrum"
             },
             "right": {
-              "label": "Right"
+              "label": "Højre"
             }
           }
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Sektionsafstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Afstand Top"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Mellemrum bund"
           }
         }
       },
       "presets": {
-        "name": "Map"
+        "name": "Kort"
       }
     },
     "newsletter": {
-      "name": "Newsletter",
+      "name": "Nyhedsbrev",
       "settings": {
         "newsletter_heading": {
-          "label": "Heading"
+          "label": "Overskrift"
         },
         "newsletter_button_label": {
-          "label": "Button Label"
+          "label": "Knap etiket"
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Justering",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Tekstjustering",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Venstre"
               },
               "center": {
-                "label": "Center"
+                "label": "Centrum"
               },
               "right": {
-                "label": "Right"
+                "label": "Højre"
               }
             }
           }
         },
         "newsletter_background_color": {
-          "label": "Background"
+          "label": "Baggrund"
         },
         "newsletter_text_color": {
-          "label": "Text"
+          "label": "Tekst"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Sektionsafstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Afstand Top"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Mellemrum bund"
           }
         }
       },
       "presets": {
-        "name": "Newsletter"
+        "name": "Nyhedsbrev"
       }
     },
     "newsletter-popup": {
-      "name": "Newsletter Popup",
+      "name": "Nyhedsbrev popup",
       "settings": {
         "newsletter_image": {
-          "label": "Image"
+          "label": "Billede"
         },
         "newsletter_subheading": {
-          "label": "Subheading"
+          "label": "Underoverskrift"
         },
         "newsletter_heading": {
-          "label": "Heading"
+          "label": "Overskrift"
         },
         "newsletter_text": {
-          "label": "Text"
+          "label": "Tekst"
         },
         "newsletter_button_label": {
-          "label": "Button Label"
+          "label": "Knap etiket"
         },
         "show_popup": {
-          "label": "Enable Show Popup"
+          "label": "Aktiver Vis popup"
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images"
+          "label": "Aktiver LazyLoad Images"
         }
       }
     },
     "page-header": {
-      "name": "Page header",
+      "name": "Sidehoved",
       "settings": {
         "section_height_desktop": {
-          "label": "Desktop Height",
+          "label": "Højde på skrivebordet",
           "options": {
             "natural": {
-              "label": "Natural"
+              "label": "Naturlig"
             },
             "compact": {
-              "label": "Compact (200px)"
+              "label": "Kompakt (200px)"
             },
             "standard": {
               "label": "Standard (300px)"
             },
             "extended": {
-              "label": "Extended (400px)"
+              "label": "Udvidet (400px)"
             }
           }
         },
         "section_height_mobile": {
-          "label": "Mobile Height",
+          "label": "Mobil højde",
           "options": {
             "auto": {
               "label": "Auto"
             },
             "compact": {
-              "label": "Compact (150px)"
+              "label": "Kompakt (150px)"
             },
             "standard": {
               "label": "Standard (200px)"
             },
             "extended": {
-              "label": "Extended (250px)"
+              "label": "Udvidet (250px)"
             }
           }
         },
         "full_width": {
-          "label": "Full Width"
+          "label": "Fuld bredde"
         },
         "page_heading": {
-          "label": "Heading"
+          "label": "Overskrift"
         },
         "page_image": {
-          "label": "Background Image"
+          "label": "Baggrundsbillede"
         },
         "show_breadcrumbs": {
-          "label": "Show Breadcrumbs"
+          "label": "Vis brødkrummer"
         },
         "text_color": {
-          "label": "Text"
+          "label": "Tekst"
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images"
+          "label": "Aktiver LazyLoad Images"
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Justering",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Tekstjustering",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Venstre"
               },
               "center": {
-                "label": "Center"
+                "label": "Centrum"
               },
               "right": {
-                "label": "Right"
+                "label": "Højre"
               }
             }
           }
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Sektionsafstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Afstand Top"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Mellemrum bund"
           }
         }
+      },
+      "presets": {
+        "name": "Sidehoved"
       }
     },
     "promotional-grid": {
-      "name": "Promotional Grid",
+      "name": "Salgsfremmende gitter",
       "settings": {
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Aktiver LazyLoad Images",
+          "info": "Aktiver Lazyload, hvis billeder er offscreen for at forbedre ydeevnen"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Sektionsafstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Afstand Top"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Mellemrum bund"
           }
         }
       },
@@ -2246,580 +2252,580 @@
           "name": "Banner",
           "settings": {
             "banner_heading": {
-              "label": "Heading"
+              "label": "Overskrift"
             },
             "banner_text": {
-              "label": "Text"
+              "label": "Tekst"
             },
             "header_first_button": {
-              "label": "First Button",
+              "label": "Første knap",
               "button_label": {
-                "label": "Button"
+                "label": "Knap"
               },
               "button_link": {
                 "label": "Link"
               }
             },
             "header_second_button": {
-              "label": "Second Button",
+              "label": "Anden knap",
               "button_label": {
-                "label": "Button"
+                "label": "Knap"
               },
               "button_link": {
                 "label": "Link"
               }
             },
             "banner_background": {
-              "label": "Background"
+              "label": "Baggrund"
             }
           }
         },
         "product": {
-          "name": "Product",
+          "name": "Produkt",
           "settings": {
             "promo_product": {
-              "label": "Product"
+              "label": "Produkt"
             },
             "promo_product_heading": {
-              "label": "Heading"
+              "label": "Overskrift"
             },
             "promo_product_text": {
-              "label": "Text"
+              "label": "Tekst"
             },
             "show_price": {
-              "label": "Show Price"
+              "label": "Vis pris"
             },
             "header_timer": {
               "label": "Timer",
               "show_timer": {
-                "label": "Show Timer"
+                "label": "Vis timer"
               },
               "year": {
-                "label": "Year"
+                "label": "År"
               },
               "month": {
-                "label": "Month",
+                "label": "Måned",
                 "options": {
+                  "10": {
+                    "label": "oktober"
+                  },
+                  "11": {
+                    "label": "november"
+                  },
+                  "12": {
+                    "label": "december"
+                  },
                   "01": {
-                    "label": "January"
+                    "label": "januar"
                   },
                   "02": {
-                    "label": "Febrary"
+                    "label": "februar"
                   },
                   "03": {
-                    "label": "March"
+                    "label": "marts"
                   },
                   "04": {
                     "label": "April"
                   },
                   "05": {
-                    "label": "May"
+                    "label": "Kan"
                   },
                   "06": {
-                    "label": "June"
+                    "label": "juni"
                   },
                   "07": {
-                    "label": "July"
+                    "label": "juli"
                   },
                   "08": {
-                    "label": "August"
+                    "label": "august"
                   },
                   "09": {
-                    "label": "September"
-                  },
-                  "10": {
-                    "label": "October"
-                  },
-                  "11": {
-                    "label": "November"
-                  },
-                  "12": {
-                    "label": "December"
+                    "label": "september"
                   }
                 }
               },
               "day": {
-                "label": "Day"
+                "label": "Dag"
               },
               "hour": {
-                "label": "Hour"
+                "label": "Time"
               },
               "minutes": {
-                "label": "Minute"
+                "label": "Minut"
               },
               "timer_completion_message": {
-                "label": "Completion Message"
+                "label": "Afslutningsmeddelelse"
               }
             },
             "button_label": {
-              "label": "Button"
+              "label": "Knap"
             },
             "button_link": {
               "label": "Link"
             },
             "promo_background_color": {
-              "label": "Background"
+              "label": "Baggrund"
             }
           }
         },
         "collection": {
-          "name": "Collection",
+          "name": "Kollektion",
           "settings": {
             "promo_collection": {
-              "label": "Collection"
+              "label": "Kollektion"
             },
             "promo_collection_heading": {
-              "label": "Heading"
+              "label": "Overskrift"
             },
             "promo_collection_text": {
-              "label": "Text"
+              "label": "Tekst"
             },
             "header_timer": {
               "label": "Timer",
               "show_timer": {
-                "label": "Show Timer"
+                "label": "Vis timer"
               },
               "year": {
-                "label": "Year"
+                "label": "År"
               },
               "month": {
-                "label": "Month",
+                "label": "Måned",
                 "options": {
+                  "10": {
+                    "label": "oktober"
+                  },
+                  "11": {
+                    "label": "november"
+                  },
+                  "12": {
+                    "label": "december"
+                  },
                   "01": {
-                    "label": "January"
+                    "label": "januar"
                   },
                   "02": {
-                    "label": "Febrary"
+                    "label": "februar"
                   },
                   "03": {
-                    "label": "March"
+                    "label": "marts"
                   },
                   "04": {
                     "label": "April"
                   },
                   "05": {
-                    "label": "May"
+                    "label": "Kan"
                   },
                   "06": {
-                    "label": "June"
+                    "label": "juni"
                   },
                   "07": {
-                    "label": "July"
+                    "label": "juli"
                   },
                   "08": {
-                    "label": "August"
+                    "label": "august"
                   },
                   "09": {
-                    "label": "September"
-                  },
-                  "10": {
-                    "label": "October"
-                  },
-                  "11": {
-                    "label": "November"
-                  },
-                  "12": {
-                    "label": "December"
+                    "label": "september"
                   }
                 }
               },
               "day": {
-                "label": "Day"
+                "label": "Dag"
               },
               "hour": {
-                "label": "Hour"
+                "label": "Time"
               },
               "minutes": {
-                "label": "Minute"
+                "label": "Minut"
               },
               "timer_completion_message": {
-                "label": "Completion Message"
+                "label": "Afslutningsmeddelelse"
               }
             },
             "button_label": {
-              "label": "Button"
+              "label": "Knap"
             },
             "button_link": {
               "label": "Link"
             },
             "collection_background_color": {
-              "label": "Background"
+              "label": "Baggrund"
             }
           }
         }
       },
       "presets": {
-        "name": "Promotional Grid"
+        "name": "Salgsfremmende gitter"
       }
     },
     "promotional-block": {
-      "name": "Promotional Block",
+      "name": "Salgsfremmende blok",
       "settings": {
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Aktiver LazyLoad Images",
+          "info": "Aktiver Lazyload, hvis billeder er offscreen for at forbedre ydeevnen"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Sektionsafstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Afstand Top"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Mellemrum bund"
           }
         }
       },
       "blocks": {
         "image-with-text": {
-          "name": "Image With Text",
+          "name": "Billede med tekst",
           "settings": {
             "image_desktop": {
-              "label": "Desktop Image"
+              "label": "Desktop billede"
             },
             "image_mobile": {
-              "label": "Mobile Image"
+              "label": "Mobil billede"
             },
             "subheading": {
-              "label": "Subheading"
+              "label": "Underoverskrift"
             },
             "heading": {
-              "label": "Heading"
+              "label": "Overskrift"
             },
             "button_label": {
-              "label": "Button"
+              "label": "Knap"
             },
             "button_link": {
               "label": "Link"
             },
             "header_alignment": {
-              "label": "Position and Alignment"
+              "label": "Position og justering"
             },
             "content_position": {
-              "label": "Content Position",
+              "label": "Indholdsposition",
               "options": {
                 "top_left": {
-                  "label": "Top Left"
+                  "label": "Øverst til venstre"
                 },
                 "top_center": {
                   "label": "Top Center"
                 },
                 "top_right": {
-                  "label": "Top Right"
+                  "label": "Øverst til højre"
                 },
                 "center_left": {
-                  "label": "Center Left"
+                  "label": "Midt til venstre"
                 },
                 "center": {
-                  "label": "Center"
+                  "label": "Centrum"
                 },
                 "center_right": {
-                  "label": "Center Right"
+                  "label": "Center højre"
                 },
                 "bottom_left": {
-                  "label": "Bottom Left"
+                  "label": "Nederst til venstre"
                 },
                 "bottom_center": {
-                  "label": "Bottom Center"
+                  "label": "Nederst i midten"
                 },
                 "bottom_right": {
-                  "label": "Bottom Right"
+                  "label": "Nederst til højre"
                 }
               }
             },
             "alignment": {
-              "label": "Text alignment",
+              "label": "Tekstjustering",
               "options": {
                 "left": {
-                  "label": "Left"
+                  "label": "Venstre"
                 },
                 "center": {
-                  "label": "Center"
+                  "label": "Centrum"
                 },
                 "right": {
-                  "label": "Right"
+                  "label": "Højre"
                 }
               }
             },
             "header_colors": {
-              "label": "Colors",
+              "label": "Farver",
               "text": {
-                "label": "Text"
+                "label": "Tekst"
               },
               "button": {
-                "label": "Button"
+                "label": "Knap"
               }
             }
           }
         }
       },
       "presets": {
-        "name": "Promotional Block"
+        "name": "Salgsfremmende blok"
       }
     },
     "product-recommendation": {
-      "name": "Product Recommendations",
+      "name": "Produktanbefalinger",
       "settings": {
         "show_dynamic_recommendation": {
-          "info": "Dynamic recommendations use order and product information to change and improve over time. [Learn more](https:\/\/help.shopify.com\/en\/themes\/development\/recommended-products)"
+          "info": "Dynamiske anbefalinger bruger ordre- og produktinformation til at ændre og forbedre over tid. "
         },
         "heading": {
-          "label": "Heading"
+          "label": "Overskrift"
         },
         "products_to_show": {
-          "label": "Products To Show"
+          "label": "Produkter at vise"
         },
         "products_per_row": {
-          "label": "Products Per Row"
+          "label": "Produkter pr. række"
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Justering",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Tekstjustering",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Venstre"
               },
               "center": {
-                "label": "Center"
+                "label": "Centrum"
               },
               "right": {
-                "label": "Right"
+                "label": "Højre"
               }
             }
           }
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Aktiver LazyLoad Images",
+          "info": "Aktiver Lazyload, hvis billeder er offscreen for at forbedre ydeevnen"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Sektionsafstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Afstand Top"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Mellemrum bund"
           }
         }
       },
       "presets": {
-        "name": "Product Recommendations"
+        "name": "Produktanbefalinger"
       }
     },
     "richtext": {
-      "name": "Rich Text",
+      "name": "Rig tekst",
       "settings": {
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Justering",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Tekstjustering",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Venstre"
               },
               "center": {
-                "label": "Center"
+                "label": "Centrum"
               },
               "right": {
-                "label": "Right"
+                "label": "Højre"
               }
             }
           }
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Sektionsafstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Afstand Top"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Mellemrum bund"
           }
         }
       },
       "blocks": {
         "subheading": {
-          "name": "Subheading",
+          "name": "Underoverskrift",
           "settings": {
             "richtext_subheading": {
-              "label": "Subheading"
+              "label": "Underoverskrift"
             }
           }
         },
         "heading": {
-          "name": "Heading",
+          "name": "Overskrift",
           "settings": {
             "richtext_main_heading": {
-              "label": "Heading"
+              "label": "Overskrift"
             }
           }
         },
         "text": {
-          "name": "Text",
+          "name": "Tekst",
           "settings": {
             "richtext_text_description": {
-              "label": "Text"
+              "label": "Tekst"
             }
           }
         },
         "button": {
-          "name": "Button",
+          "name": "Knap",
           "settings": {
             "button_label": {
-              "label": "Button"
+              "label": "Knap"
             },
             "button_link": {
-              "label": "Button Link"
+              "label": "Knap link"
             }
           }
         }
       },
       "presets": {
-        "name": "Rich Text"
+        "name": "Rig tekst"
       }
     },
     "slideshow": {
       "name": "Slideshow",
       "settings": {
         "section_height_desktop": {
-          "label": "Desktop Height",
+          "label": "Højde på skrivebordet",
           "options": {
             "natural": {
-              "label": "Natural"
+              "label": "Naturlig"
             },
             "compact": {
-              "label": "Compact (450px)"
+              "label": "Kompakt (450px)"
             },
             "standard": {
               "label": "Standard (650px)"
             },
             "extended": {
-              "label": "Extended (750px)"
+              "label": "Udvidet (750px)"
             },
             "full": {
-              "label": "Full Screen"
+              "label": "Fuld skærm"
             }
           }
         },
         "section_height_mobile": {
-          "label": "Mobile Height",
+          "label": "Mobil højde",
           "options": {
             "auto": {
               "label": "Auto"
             },
             "compact": {
-              "label": "Compact (300px)"
+              "label": "Kompakt (300px)"
             },
             "standard": {
               "label": "Standard (400px)"
             },
             "extended": {
-              "label": "Extended (500px)"
+              "label": "Udvidet (500px)"
             },
             "full": {
-              "label": "Full Screen"
+              "label": "Fuld skærm"
             }
           }
         },
         "show_auto_slides": {
-          "label": "Auto Change Slides"
+          "label": "Skift automatisk slides"
         },
         "change_duration": {
-          "label": "Change Duration"
+          "label": "Skift varighed"
         },
         "navigation_styles": {
-          "label": "Navigation Styles",
+          "label": "Navigationsstile",
           "options": {
             "dots": {
-              "label": "Dots"
+              "label": "Prikker"
             },
             "bars": {
-              "label": "Bars"
+              "label": "Barer"
             }
           }
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Aktiver LazyLoad Images",
+          "info": "Aktiver Lazyload, hvis billeder er offscreen for at forbedre ydeevnen"
         }
       },
       "blocks": {
         "slide": {
-          "name": "Slide",
+          "name": "Glide",
           "settings": {
             "header_alignment": {
-              "label": "Position and Alignment"
+              "label": "Position og justering"
             },
             "content_position": {
-              "label": "Content Position",
+              "label": "Indholdsposition",
               "options": {
                 "top_left": {
-                  "label": "Top Left"
+                  "label": "Øverst til venstre"
                 },
                 "top_center": {
                   "label": "Top Center"
                 },
                 "top_right": {
-                  "label": "Top Right"
+                  "label": "Øverst til højre"
                 },
                 "center_left": {
-                  "label": "Center Left"
+                  "label": "Midt til venstre"
                 },
                 "center": {
-                  "label": "Center"
+                  "label": "Centrum"
                 },
                 "center_right": {
-                  "label": "Center Right"
+                  "label": "Center højre"
                 },
                 "bottom_left": {
-                  "label": "Bottom Left"
+                  "label": "Nederst til venstre"
                 },
                 "bottom_center": {
-                  "label": "Bottom Center"
+                  "label": "Nederst i midten"
                 },
                 "bottom_right": {
-                  "label": "Bottom Right"
+                  "label": "Nederst til højre"
                 }
               }
             },
             "alignment": {
-              "label": "Text alignment",
+              "label": "Tekstjustering",
               "options": {
                 "left": {
-                  "label": "Left"
+                  "label": "Venstre"
                 },
                 "center": {
-                  "label": "Center"
+                  "label": "Centrum"
                 },
                 "right": {
-                  "label": "Right"
+                  "label": "Højre"
                 }
               }
             },
             "slide_heading": {
-              "label": "Heading"
+              "label": "Overskrift"
             },
             "slide_text": {
-              "label": "Text"
+              "label": "Tekst"
             },
             "slide_button": {
-              "label": "Button"
+              "label": "Knap"
             },
             "slide_button_link": {
-              "label": "Button Link"
+              "label": "Knap link"
             },
             "slide_image_desktop": {
-              "label": "Image"
+              "label": "Billede"
             },
             "slide_image_mobile": {
-              "label": "Mobile Image"
+              "label": "Mobil billede"
             },
             "header_colors": {
-              "label": "Colors",
+              "label": "Farver",
               "text": {
-                "label": "Text"
+                "label": "Tekst"
               },
               "button": {
-                "label": "Button"
+                "label": "Knap"
               }
             }
           }
@@ -2830,48 +2836,48 @@
       }
     },
     "text-with-icon": {
-      "name": "Text With Icon",
+      "name": "Tekst med ikon",
       "settings": {
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Aktiver LazyLoad Images",
+          "info": "Aktiver Lazyload, hvis billeder er offscreen for at forbedre ydeevnen"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Sektionsafstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Afstand Top"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Mellemrum bund"
           }
         }
       },
       "blocks": {
         "slide": {
-          "name": "Slide",
+          "name": "Glide",
           "settings": {
             "slide_logo_label": {
               "label": "Logo"
             },
             "slide_heading": {
-              "label": "Heading"
+              "label": "Overskrift"
             },
             "slide_text": {
-              "label": "Text"
+              "label": "Tekst"
             },
             "header_alignment": {
-              "label": "Alignment",
+              "label": "Justering",
               "alignment": {
-                "label": "Text alignment",
+                "label": "Tekstjustering",
                 "options": {
                   "left": {
-                    "label": "Left"
+                    "label": "Venstre"
                   },
                   "center": {
-                    "label": "Center"
+                    "label": "Centrum"
                   },
                   "right": {
-                    "label": "Right"
+                    "label": "Højre"
                   }
                 }
               }
@@ -2880,481 +2886,478 @@
         }
       },
       "presets": {
-        "name": "Text With Icon"
+        "name": "Tekst med ikon"
       }
     },
     "text-image-center": {
-      "name": "Text Image Center",
+      "name": "Tekst Billedcenter",
       "settings": {
         "main_heading": {
-          "label": "Heading"
+          "label": "Overskrift"
         },
         "image": {
-          "label": "Image"
+          "label": "Billede"
         },
         "button_label": {
-          "label": "Button"
+          "label": "Knap"
         },
         "button_link": {
           "label": "Link"
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Justering",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Tekstjustering",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Venstre"
               },
               "center": {
-                "label": "Center"
+                "label": "Centrum"
               },
               "right": {
-                "label": "Right"
+                "label": "Højre"
               }
             }
           }
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Aktiver LazyLoad Images",
+          "info": "Aktiver Lazyload, hvis billeder er offscreen for at forbedre ydeevnen"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Sektionsafstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Afstand Top"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Mellemrum bund"
           }
         }
       },
       "blocks": {
         "left-text": {
-          "name": "Left Text",
+          "name": "Venstre tekst",
           "settings": {
             "left_heading": {
-              "label": "Heading"
+              "label": "Overskrift"
             },
             "left_text": {
-              "label": "Text"
+              "label": "Tekst"
             }
           }
         },
         "right-text": {
-          "name": "Right Text",
+          "name": "Højre tekst",
           "settings": {
             "right_heading": {
-              "label": "Heading"
+              "label": "Overskrift"
             },
             "right_text": {
-              "label": "Text"
+              "label": "Tekst"
             }
           }
         }
       },
       "presets": {
-        "name": "Text Image Center"
+        "name": "Tekst Billedcenter"
       }
     },
     "testimonials": {
-      "name": "Testimonials",
+      "name": "Udtalelser",
       "settings": {
         "testimonial_heading": {
-          "label": "Heading"
+          "label": "Overskrift"
         },
         "testimonial_text": {
-          "label": "Text"
+          "label": "Tekst"
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Justering",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Tekstjustering",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Venstre"
               },
               "center": {
-                "label": "Center"
+                "label": "Centrum"
               },
               "right": {
-                "label": "Right"
+                "label": "Højre"
               }
             }
           }
         },
         "show_circular_images": {
-          "label": "Circular Images",
-          "info": "Require Square Images"
+          "label": "Cirkulære billeder",
+          "info": "Kræv kvadratiske billeder"
         },
         "testimonial_background_color": {
-          "label": "Background"
+          "label": "Baggrund"
         },
         "testimonial_text_color": {
-          "label": "Text"
+          "label": "Tekst"
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Aktiver LazyLoad Images",
+          "info": "Aktiver Lazyload, hvis billeder er offscreen for at forbedre ydeevnen"
         }
       },
       "blocks": {
         "testimonial": {
-          "name": "Testimonial",
+          "name": "Udtalelse",
           "settings": {
             "testimonial_star": {
-              "label": "Icon",
+              "label": "Ikon",
               "options": {
                 "5-stars": {
-                  "label": "5 Stars"
+                  "label": "5 stjerner"
                 },
                 "4-stars": {
-                  "label": "4 Stars"
+                  "label": "4 stjerner"
                 },
                 "3-stars": {
-                  "label": "3 Stars"
+                  "label": "3 stjerner"
                 },
                 "2-stars": {
-                  "label": "2 Stars"
+                  "label": "2 stjerner"
                 },
                 "1-stars": {
-                  "label": "1 Stars"
+                  "label": "1 stjerner"
                 },
                 "none": {
-                  "label": "None"
+                  "label": "Ingen"
                 }
               }
             },
             "testimonial_slide_heading": {
-              "label": "Heading"
+              "label": "Overskrift"
             },
             "testimonial_slide_text": {
-              "label": "Text"
+              "label": "Tekst"
             },
             "author_image": {
-              "label": "Author Image"
+              "label": "Forfatterbillede"
             },
             "author_text": {
-              "label": "Author"
+              "label": "Forfatter"
             }
           }
         }
       },
       "presets": {
-        "name": "Testimonials"
+        "name": "Udtalelser"
       }
     },
     "video": {
       "name": "Video",
       "settings": {
         "section_width": {
-          "label": "Full Width"
+          "label": "Fuld bredde"
         },
         "section_height_desktop": {
-          "label": "Desktop Height",
+          "label": "Højde på skrivebordet",
           "options": {
             "compact": {
-              "label": "Compact (450px)"
+              "label": "Kompakt (450px)"
             },
             "standard": {
               "label": "Standard (650px)"
             },
             "extended": {
-              "label": "Extended (750px)"
+              "label": "Udvidet (750px)"
             },
             "full": {
-              "label": "Full Screen"
+              "label": "Fuld skærm"
             }
           }
         },
         "section_height_mobile": {
-          "label": "Mobile Height",
+          "label": "Mobil højde",
           "options": {
             "auto": {
               "label": "Auto"
             },
             "compact": {
-              "label": "Compact (300px)"
+              "label": "Kompakt (300px)"
             },
             "standard": {
               "label": "Standard (400px)"
             },
             "extended": {
-              "label": "Extended (500px)"
+              "label": "Udvidet (500px)"
             },
             "full": {
-              "label": "Full Screen"
+              "label": "Fuld skærm"
             }
           }
         },
         "sub_heading": {
-          "label": "Subheading"
+          "label": "Underoverskrift"
         },
         "heading": {
-          "label": "Heading"
+          "label": "Overskrift"
         },
         "cover_image": {
-          "label": "Cover Image",
-          "info": "Applied Only If Autoplay Turned Off"
+          "label": "Forsidebillede",
+          "info": "Anvendes kun, hvis Autoplay er slået fra"
         },
         "external_video": {
-          "label": "External Video"
+          "label": "Ekstern video"
         },
         "video": {
           "label": "Video",
-          "info": "Replaces The External Video If both are set"
+          "info": "Erstatter den eksterne video, hvis begge er indstillet"
         },
         "autoplay_video": {
-          "label": "Autoplay Video"
+          "label": "Autoafspil video"
         },
         "color_text": {
-          "label": "Text"
+          "label": "Tekst"
         },
         "header_alignment": {
-          "label": "Position and Alignment",
+          "label": "Position og justering",
           "content_position": {
-            "label": "Content Position",
+            "label": "Indholdsposition",
             "options": {
               "top_left": {
-                "label": "Top Left"
+                "label": "Øverst til venstre"
               },
               "top_center": {
                 "label": "Top Center"
               },
               "top_right": {
-                "label": "Top Right"
+                "label": "Øverst til højre"
               },
               "center_left": {
-                "label": "Center Left"
+                "label": "Midt til venstre"
               },
               "center": {
-                "label": "Center"
+                "label": "Centrum"
               },
               "center_right": {
-                "label": "Center Right"
+                "label": "Center højre"
               },
               "bottom_left": {
-                "label": "Bottom Left"
+                "label": "Nederst til venstre"
               },
               "bottom_center": {
-                "label": "Bottom Center"
+                "label": "Nederst i midten"
               },
               "bottom_right": {
-                "label": "Bottom Right"
+                "label": "Nederst til højre"
               }
             }
           },
           "alignment": {
-            "label": "Text alignment",
+            "label": "Tekstjustering",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Venstre"
               },
               "center": {
-                "label": "Center"
+                "label": "Centrum"
               },
               "right": {
-                "label": "Right"
+                "label": "Højre"
               }
             }
           }
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Sektionsafstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Afstand Top"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Mellemrum bund"
           }
         }
       },
       "presets": {
         "name": "Video"
       }
-    },
-    "404": {
-      "name": "404 Page"
     }
   },
   "schema_settings": {
     "colors": {
-      "name": "Colors",
+      "name": "Farver",
       "settings": {
         "header_general": {
-          "label": "General",
+          "label": "Generel",
           "color_body_background": {
-            "label": "Background"
+            "label": "Baggrund"
           },
           "color_body_text": {
-            "label": "Text"
+            "label": "Tekst"
           },
           "border_color": {
-            "label": "Border"
+            "label": "Grænse"
           }
         },
         "header_primary_buttons": {
-          "label": "Primary Buttons",
+          "label": "Primære knapper",
           "primary_button_background": {
-            "label": "Background"
+            "label": "Baggrund"
           },
           "primary_button_text": {
-            "label": "Text"
+            "label": "Tekst"
           },
           "color_button_outline": {
-            "label": "Outline Buttons"
+            "label": "Konturknapper"
           }
         },
         "header_secondary_buttons": {
-          "label": "Secondary Buttons",
+          "label": "Sekundære knapper",
           "secondary_button_background": {
-            "label": "Background"
+            "label": "Baggrund"
           },
           "secondary_button_text": {
-            "label": "Text"
+            "label": "Tekst"
           }
         },
         "header_header": {
           "label": "Header",
           "color_announcement_background": {
-            "label": "Announcement Background"
+            "label": "Meddelelsesbaggrund"
           },
           "color_announcement_text": {
-            "label": "Announcement Text"
+            "label": "Meddelelsestekst"
           },
           "header_background_color": {
-            "label": "Background"
+            "label": "Baggrund"
           },
           "header_text_color": {
-            "label": "Text"
+            "label": "Tekst"
           }
         },
         "header_footer": {
-          "label": "Footer",
+          "label": "Sidefod",
           "color_footer_background": {
-            "label": "Background"
+            "label": "Baggrund"
           },
           "color_footer_text": {
-            "label": "Text"
+            "label": "Tekst"
           }
         }
       }
     },
     "collections": {
-      "name": "Collections",
+      "name": "Samlinger",
       "settings": {
         "overlay_style": {
-          "label": "Overlay Below The Image"
+          "label": "Overlejring under billedet"
         },
         "show_first_product": {
-          "label": "Show First Product Image"
+          "label": "Vis første produktbillede"
         },
         "header_image_size": {
-          "label": "Image Size",
+          "label": "Billedestørrelse",
           "options": {
             "square": {
-              "label": "Square(1:1)"
+              "label": "Firkantet (1:1)"
             },
             "portrait": {
-              "label": "Portrait(2:3)"
+              "label": "Portræt (2:3)"
             },
             "landscape": {
-              "label": "Landscape(4:3)"
+              "label": "Landskab (4:3)"
             }
           }
         }
       }
     },
     "cart": {
-      "name": "Cart",
+      "name": "Vogn",
       "settings": {
         "header_cart_type": {
-          "label": "Cart Type",
+          "label": "Vogntype",
           "options": {
             "page": {
-              "label": "Page"
+              "label": "Side"
             },
             "drawer": {
-              "label": "Drawer"
+              "label": "Skuffe"
             },
             "popup": {
-              "label": "popup"
+              "label": "pop op"
             }
           }
         },
         "header_cart_icon": {
-          "label": "Cart Icon",
+          "label": "kurv ikon",
           "options": {
             "cart": {
-              "label": "Cart"
+              "label": "Vogn"
             },
             "bag": {
-              "label": "Bag"
+              "label": "Taske"
             },
             "minimal_bag": {
-              "label": "Minimal Bag"
+              "label": "Minimal taske"
             }
           }
         },
         "free_shipping_bar": {
-          "label": " Enable Free Shipping Bar"
+          "label": " Aktiver gratis forsendelseslinje"
         },
         "free_shipping_amount": {
-          "label": "Free Shipping Amount"
+          "label": "Gratis forsendelsesbeløb"
         },
         "additional_checkout_buttons": {
-          "label": "Enable Additional Checkout Buttons"
+          "label": "Aktiver yderligere checkout-knapper"
         },
         "show_terms": {
-          "label": "Enable Terms and Conditions"
+          "label": "Aktiver vilkår og betingelser"
         },
         "show_note": {
-          "label": "Show Order Note"
+          "label": "Vis ordrebemærkning"
         }
       }
     },
     "extras": {
-      "name": "Extras",
+      "name": "Ekstra",
       "settings": {
         "show_currency": {
-          "label": "Show Currency Selector"
+          "label": "Vis Valutavælger"
         },
         "show_language": {
-          "label": "Show Language Selector"
+          "label": "Vis sprogvælger"
         },
         "show_flags": {
-          "label": "Show Flags"
+          "label": "Vis flag"
         },
         "text_direction": {
-          "label": "Text Direction",
+          "label": "Tekstretning",
           "options": {
             "ltr": {
-              "label": "Left To Right"
+              "label": "Venstre til højre"
             },
             "rtl": {
-              "label": "Right To Left"
+              "label": "Højre Til Venstre"
             }
           }
         },
         "show_breadcrumbs": {
-          "label": "Show Breadcrumbs"
+          "label": "Vis brødkrummer"
         },
         "header_back_top_top": {
-          "label": "Back To Top",
+          "label": "Tilbage til toppen",
           "show_back_to_top": {
-            "label": "Enable Back To Top"
+            "label": "Aktiver Tilbage til toppen"
           },
           "back_button_position": {
             "label": "Position",
             "options": {
               "bottom_left": {
-                "label": "Bottom Left"
+                "label": "Nederst til venstre"
               },
               "bottom_center": {
-                "label": "Bottom Center"
+                "label": "Nederst i midten"
               },
               "bottom_right": {
-                "label": "Bottom Right"
+                "label": "Nederst til højre"
               }
             }
           }
@@ -3365,65 +3368,65 @@
       "name": "favicon",
       "settings": {
         "favicon": {
-          "label": "Favicon Image",
-          "info": "Will be Scaled Down to 32 x 32px"
+          "label": "Favicon billede",
+          "info": "Skaleres ned til 32 x 32px"
         }
       }
     },
     "products": {
-      "name": "Products",
+      "name": "Produkter",
       "settings": {
         "header_image_size": {
-          "label": "Image Size",
+          "label": "Billedestørrelse",
           "options": {
             "natural": {
-              "label": "Natural"
+              "label": "Naturlig"
             },
             "square": {
-              "label": "Square(1:1)"
+              "label": "Firkantet (1:1)"
             },
             "portrait": {
-              "label": "Portrait(2:3)"
+              "label": "Portræt (2:3)"
             },
             "landscape": {
-              "label": "Landscape(4:3)"
+              "label": "Landskab (4:3)"
             },
             "wide": {
-              "label": "Wide(16:9)"
+              "label": "Bred (16:9)"
             }
           }
         },
         "show_quick_view": {
-          "label": "Show Quick View On Hover"
+          "label": "Vis hurtig visning ved svæv"
         },
         "quick_shop_text": {
-          "label": "Quick Shop text"
+          "label": "Hurtig butik tekst"
         },
         "show_color_swatches": {
-          "label": "Enable color Swatches"
+          "label": "Aktiver farveprøver"
         },
         "show_vendor": {
-          "label": "Show Vendor"
+          "label": "Vis leverandør"
         },
         "show_second_image": {
-          "label": "Hover to Reveal Second Image"
+          "label": "Hold musen over for at afsløre andet billede"
         },
         "header_colors": {
-          "label": "Colors",
+          "label": "Farver",
           "sale_badge_color": {
-            "label": "Sale Badge Color"
+            "label": "Salg Badge Farve"
           },
           "soldout_badge_color": {
-            "label": "Soldout Badge Color"
+            "label": "Udsolgt badge farve"
           }
         }
       }
     },
     "social_media": {
-      "name": "Social Media",
+      "name": "Sociale medier",
       "settings": {
         "header_social_accounts": {
-          "label": "Accounts",
+          "label": "Regnskaber",
           "social_facebook_link": {
             "label": "Facebook",
             "info": "https:\/\/www.facebook.com\/shopify"
@@ -3468,21 +3471,21 @@
       }
     },
     "search": {
-      "name": "Search",
+      "name": "Søg",
       "settings": {
         "enable_search": {
-          "label": "Enable Search"
+          "label": "Aktiver søgning"
         },
         "enable_predictive_search": {
-          "label": "Enable Predictive Search"
+          "label": "Aktiver forudsigelig søgning"
         }
       }
     },
     "sticky_add_to_cart": {
-      "name": "Sticky Add To Cart",
+      "name": "Sticky Læg i kurv",
       "settings": {
         "enable_sticky_add_to_cart": {
-          "label": "Enable Sticky Cart"
+          "label": "Aktiver Sticky Cart"
         },
         "sticky_add_to_cart_position": {
           "label": "Sticky Cart Position",
@@ -3491,25 +3494,25 @@
               "label": "Top"
             },
             "bottom": {
-              "label": "Bottom"
+              "label": "Bund"
             }
           }
         }
       }
     },
     "typography": {
-      "name": "Typography",
+      "name": "Typografi",
       "settings": {
         "header_headings": {
-          "label": "Headings",
+          "label": "Overskrifter",
           "heading_font_family": {
-            "label": "Font"
+            "label": "Skrifttype"
           }
         },
         "header_body_text": {
-          "label": "Text",
+          "label": "Tekst",
           "body_text_font_family": {
-            "label": "Font"
+            "label": "Skrifttype"
           }
         }
       }
