@@ -195,7 +195,7 @@
             <div class="product-form__errors rte hidden">{{ 'cart.items.quantity_error_message' | t: quantity: product.selected_or_first_available_variant.inventory_quantity }}</div>
             {%- if block.settings.enable_gift_card_reciptient and product.gift_card? -%}
               <div class="gift-card__product">
-                {%- render 'gift-card-recipient-form', product: product -%}
+                {%- render 'gift-card-recipient-form', product: product, form: form, section: section -%}
               </div>
             {%- endif -%}
             <button data-add-to-cart type="submit" name="add" aria-label="Add to cart" 
