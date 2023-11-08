@@ -2883,17 +2883,17 @@
         }
       },
       "presets": {
-        "name": "Text With Icon"
+        "name": "Text mit Symbol"
       }
     },
     "text-image-center": {
-      "name": "Text Image Center",
+      "name": "Text-Bild-Center",
       "settings": {
         "main_heading": {
           "label": "Überschrift"
         },
         "image": {
-          "label": "Image"
+          "label": "Bild"
         },
         "button_label": {
           "label": "Taste"
@@ -2934,7 +2934,7 @@
       },
       "blocks": {
         "left-text": {
-          "name": "Left Text",
+          "name": "Linker Text",
           "settings": {
             "left_heading": {
               "label": "Überschrift"
@@ -2945,7 +2945,7 @@
           }
         },
         "right-text": {
-          "name": "Right Text",
+          "name": "Richtiger Text",
           "settings": {
             "right_heading": {
               "label": "Überschrift"
@@ -2957,11 +2957,11 @@
         }
       },
       "presets": {
-        "name": "Text Image Center"
+        "name": "Text-Bild-Center"
       }
     },
     "testimonials": {
-      "name": "Testimonials",
+      "name": "Referenzen",
       "settings": {
         "testimonial_heading": {
           "label": "Überschrift"
@@ -2987,8 +2987,8 @@
           }
         },
         "show_circular_images": {
-          "label": "Circular Images",
-          "info": "Require Square Images"
+          "label": "Kreisförmige Bilder",
+          "info": "Erfordern Sie quadratische Bilder"
         },
         "testimonial_background_color": {
           "label": "Hintergrund"
@@ -3003,28 +3003,28 @@
       },
       "blocks": {
         "testimonial": {
-          "name": "Testimonial",
+          "name": "Zeugnis",
           "settings": {
             "testimonial_star": {
-              "label": "Icon",
+              "label": "Symbol",
               "options": {
                 "5-stars": {
-                  "label": "5 Stars"
+                  "label": "5 Sterne"
                 },
                 "4-stars": {
-                  "label": "4 Stars"
+                  "label": "4 Sterne"
                 },
                 "3-stars": {
-                  "label": "3 Stars"
+                  "label": "3 Sterne"
                 },
                 "2-stars": {
-                  "label": "2 Stars"
+                  "label": "2 Sterne"
                 },
                 "1-stars": {
-                  "label": "1 Stars"
+                  "label": "1 Sterne"
                 },
                 "none": {
-                  "label": "None"
+                  "label": "Keiner"
                 }
               }
             },
@@ -3035,58 +3035,61 @@
               "label": "Text"
             },
             "author_image": {
-              "label": "Author Image"
+              "label": "Autorenbild"
             },
             "author_text": {
-              "label": "Author"
+              "label": "Autor"
             }
           }
         }
       },
       "presets": {
-        "name": "Testimonials"
+        "name": "Referenzen"
       }
     },
     "video": {
       "name": "Video",
       "settings": {
         "section_width": {
-          "label": "Full Width"
+          "label": "Gesamtbreite"
         },
         "section_height_desktop": {
-          "label": "Desktop Height",
+          "label": "Tischhöhe",
           "options": {
+            "natural": {
+              "label": "Natürlich"
+            },
             "compact": {
-              "label": "Compact (450px)"
+              "label": "Kompakt (450px)"
             },
             "standard": {
               "label": "Standard (650px)"
             },
             "extended": {
-              "label": "Extended (750px)"
+              "label": "Erweitert (750px)"
             },
             "full": {
-              "label": "Full Screen"
+              "label": "Ganzer Bildschirm"
             }
           }
         },
         "section_height_mobile": {
-          "label": "Mobile Height",
+          "label": "Mobile Höhe",
           "options": {
             "auto": {
               "label": "Auto"
             },
             "compact": {
-              "label": "Compact (300px)"
+              "label": "Kompakt (300px)"
             },
             "standard": {
               "label": "Standard (400px)"
             },
             "extended": {
-              "label": "Extended (500px)"
+              "label": "Erweitert (500px)"
             },
             "full": {
-              "label": "Full Screen"
+              "label": "Ganzer Bildschirm"
             }
           }
         },
@@ -3097,58 +3100,58 @@
           "label": "Überschrift"
         },
         "cover_image": {
-          "label": "Cover Image",
-          "info": "Applied Only If Autoplay Turned Off"
+          "label": "Titelbild",
+          "info": "Wird nur angewendet, wenn die automatische Wiedergabe deaktiviert ist"
         },
         "external_video": {
-          "label": "External Video"
+          "label": "Externes Video"
         },
         "video": {
           "label": "Video",
-          "info": "Replaces The External Video If both are set"
+          "info": "Ersetzt das externe Video, wenn beides eingestellt ist"
         },
         "autoplay_video": {
-          "label": "Autoplay Video"
+          "label": "Autoplay-Video"
         },
         "color_text": {
           "label": "Text"
         },
         "header_alignment": {
-          "label": "Position and Alignment",
+          "label": "Position und Ausrichtung",
           "content_position": {
-            "label": "Content Position",
+            "label": "Inhaltsposition",
             "options": {
               "top_left": {
-                "label": "Top Left"
+                "label": "Oben links"
               },
               "top_center": {
-                "label": "Top Center"
+                "label": "Oben in der Mitte"
               },
               "top_right": {
-                "label": "Top Right"
+                "label": "Oben rechts"
               },
               "center_left": {
-                "label": "Center Left"
+                "label": "Mitte links"
               },
               "center": {
                 "label": "Center"
               },
               "center_right": {
-                "label": "Center Right"
+                "label": "Mitte rechts"
               },
               "bottom_left": {
-                "label": "Bottom Left"
+                "label": "Unten links"
               },
               "bottom_center": {
-                "label": "Bottom Center"
+                "label": "Unten in der Mitte"
               },
               "bottom_right": {
-                "label": "Bottom Right"
+                "label": "Unten rechts"
               }
             }
           },
           "alignment": {
-            "label": "Text alignment",
+            "label": "Textausrichtung",
             "options": {
               "left": {
                 "label": "Links"
@@ -3177,7 +3180,7 @@
       }
     },
     "404": {
-      "name": "404 Page"
+      "name": "404 Seite"
     }
   },
   "schema_settings": {
