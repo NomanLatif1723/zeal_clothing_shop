@@ -2228,7 +2228,7 @@
       }
     },
     "promotional-grid": {
-      "name": "Promotional Grid",
+      "name": "Werberaster",
       "settings": {
         "lazyload_images": {
           "label": "Aktivieren Sie LazyLoad-Bilder",
@@ -2255,7 +2255,7 @@
               "label": "Text"
             },
             "header_first_button": {
-              "label": "First Button",
+              "label": "Erster Knopf",
               "button_label": {
                 "label": "Taste"
               },
@@ -2264,7 +2264,7 @@
               }
             },
             "header_second_button": {
-              "label": "Second Button",
+              "label": "Zweiter Knopf",
               "button_label": {
                 "label": "Taste"
               },
@@ -2278,10 +2278,10 @@
           }
         },
         "product": {
-          "name": "Product",
+          "name": "Produkt",
           "settings": {
             "promo_product": {
-              "label": "Product"
+              "label": "Produkt"
             },
             "promo_product_heading": {
               "label": "Überschrift"
@@ -2290,39 +2290,39 @@
               "label": "Text"
             },
             "show_price": {
-              "label": "Show Price"
+              "label": "Preis anzeigen"
             },
             "header_timer": {
               "label": "Timer",
               "show_timer": {
-                "label": "Show Timer"
+                "label": "Timer anzeigen"
               },
               "year": {
-                "label": "Year"
+                "label": "Jahr"
               },
               "month": {
-                "label": "Month",
+                "label": "Monat",
                 "options": {
                   "01": {
-                    "label": "January"
+                    "label": "Januar"
                   },
                   "02": {
-                    "label": "Febrary"
+                    "label": "Februar"
                   },
                   "03": {
-                    "label": "March"
+                    "label": "Marsch"
                   },
                   "04": {
                     "label": "April"
                   },
                   "05": {
-                    "label": "May"
+                    "label": "Mai"
                   },
                   "06": {
-                    "label": "June"
+                    "label": "Juni"
                   },
                   "07": {
-                    "label": "July"
+                    "label": "Juli"
                   },
                   "08": {
                     "label": "August"
@@ -2331,27 +2331,27 @@
                     "label": "September"
                   },
                   "10": {
-                    "label": "October"
+                    "label": "Oktober"
                   },
                   "11": {
                     "label": "November"
                   },
                   "12": {
-                    "label": "December"
+                    "label": "Dezember"
                   }
                 }
               },
               "day": {
-                "label": "Day"
+                "label": "Tag"
               },
               "hour": {
-                "label": "Hour"
+                "label": "Stunde"
               },
               "minutes": {
                 "label": "Minute"
               },
               "timer_completion_message": {
-                "label": "Completion Message"
+                "label": "Abschlussmeldung"
               }
             },
             "button_label": {
@@ -2380,34 +2380,34 @@
             "header_timer": {
               "label": "Timer",
               "show_timer": {
-                "label": "Show Timer"
+                "label": "Timer anzeigen"
               },
               "year": {
-                "label": "Year"
+                "label": "Jahr"
               },
               "month": {
-                "label": "Month",
+                "label": "Monat",
                 "options": {
                   "01": {
-                    "label": "January"
+                    "label": "Januar"
                   },
                   "02": {
-                    "label": "Febrary"
+                    "label": "Februar"
                   },
                   "03": {
-                    "label": "March"
+                    "label": "Marsch"
                   },
                   "04": {
                     "label": "April"
                   },
                   "05": {
-                    "label": "May"
+                    "label": "Mai"
                   },
                   "06": {
-                    "label": "June"
+                    "label": "Juni"
                   },
                   "07": {
-                    "label": "July"
+                    "label": "Juli"
                   },
                   "08": {
                     "label": "August"
@@ -2416,27 +2416,27 @@
                     "label": "September"
                   },
                   "10": {
-                    "label": "October"
+                    "label": "Oktober"
                   },
                   "11": {
                     "label": "November"
                   },
                   "12": {
-                    "label": "December"
+                    "label": "Dezember"
                   }
                 }
               },
               "day": {
-                "label": "Day"
+                "label": "Tag"
               },
               "hour": {
-                "label": "Hour"
+                "label": "Stunde"
               },
               "minutes": {
                 "label": "Minute"
               },
               "timer_completion_message": {
-                "label": "Completion Message"
+                "label": "Abschlussmeldung"
               }
             },
             "button_label": {
@@ -2452,11 +2452,11 @@
         }
       },
       "presets": {
-        "name": "Promotional Grid"
+        "name": "Werberaster"
       }
     },
     "promotional-block": {
-      "name": "Promotional Block",
+      "name": "Werbeblock",
       "settings": {
         "lazyload_images": {
           "label": "Aktivieren Sie LazyLoad-Bilder",
@@ -2474,16 +2474,16 @@
       },
       "blocks": {
         "image-with-text": {
-          "name": "Image With Text",
+          "name": "Bild mit Text",
           "settings": {
             "image_desktop": {
-              "label": "Desktop Image"
+              "label": "Desktop-Bild"
             },
             "image_mobile": {
-              "label": "Mobile Image"
+              "label": "Mobiles Bild"
             },
             "subheading": {
-              "label": "Subheading"
+              "label": "Unterüberschrift"
             },
             "heading": {
               "label": "Überschrift"
@@ -2495,42 +2495,42 @@
               "label": "Verknüpfung"
             },
             "header_alignment": {
-              "label": "Position and Alignment"
+              "label": "Position und Ausrichtung"
             },
             "content_position": {
-              "label": "Content Position",
+              "label": "Inhaltsposition",
               "options": {
                 "top_left": {
-                  "label": "Top Left"
+                  "label": "Oben links"
                 },
                 "top_center": {
-                  "label": "Top Center"
+                  "label": "Oben in der Mitte"
                 },
                 "top_right": {
-                  "label": "Top Right"
+                  "label": "Oben rechts"
                 },
                 "center_left": {
-                  "label": "Center Left"
+                  "label": "Mitte links"
                 },
                 "center": {
                   "label": "Center"
                 },
                 "center_right": {
-                  "label": "Center Right"
+                  "label": "Mitte rechts"
                 },
                 "bottom_left": {
-                  "label": "Bottom Left"
+                  "label": "Unten links"
                 },
                 "bottom_center": {
-                  "label": "Bottom Center"
+                  "label": "Unten in der Mitte"
                 },
                 "bottom_right": {
-                  "label": "Bottom Right"
+                  "label": "Unten rechts"
                 }
               }
             },
             "alignment": {
-              "label": "Text alignment",
+              "label": "Textausrichtung",
               "options": {
                 "left": {
                   "label": "Links"
@@ -2544,7 +2544,7 @@
               }
             },
             "header_colors": {
-              "label": "Colors",
+              "label": "Farben",
               "text": {
                 "label": "Text"
               },
@@ -2556,20 +2556,20 @@
         }
       },
       "presets": {
-        "name": "Promotional Block"
+        "name": "Werbeblock"
       }
     },
     "product-recommendation": {
-      "name": "Product Recommendations",
+      "name": "Produktempfehlungen",
       "settings": {
         "show_dynamic_recommendation": {
-          "info": "Dynamic recommendations use order and product information to change and improve over time. [Learn more](https:\/\/help.shopify.com\/en\/themes\/development\/recommended-products)"
+          "info": "Dynamische Empfehlungen nutzen Bestell- und Produktinformationen, um sie im Laufe der Zeit zu ändern und zu verbessern. [Learn more](https:\/\/help.shopify.com\/en\/themes\/development\/recommended-products)"
         },
         "heading": {
           "label": "Überschrift"
         },
         "products_to_show": {
-          "label": "Products To Show"
+          "label": "Zu zeigende Produkte"
         },
         "products_per_row": {
           "label": "Produkte pro Zeile"
@@ -2606,11 +2606,11 @@
         }
       },
       "presets": {
-        "name": "Product Recommendations"
+        "name": "Produktempfehlungen"
       }
     },
     "richtext": {
-      "name": "Rich Text",
+      "name": "Rich-Text",
       "settings": {
         "header_alignment": {
           "label": "Ausrichtung",
@@ -2641,10 +2641,10 @@
       },
       "blocks": {
         "subheading": {
-          "name": "Subheading",
+          "name": "Unterüberschrift",
           "settings": {
             "richtext_subheading": {
-              "label": "Subheading"
+              "label": "Unterüberschrift"
             }
           }
         },
@@ -2671,72 +2671,72 @@
               "label": "Taste"
             },
             "button_link": {
-              "label": "Button Link"
+              "label": "Schaltflächenlink"
             }
           }
         }
       },
       "presets": {
-        "name": "Rich Text"
+        "name": "Rich-Text"
       }
     },
     "slideshow": {
-      "name": "Slideshow",
+      "name": "Diashow",
       "settings": {
         "section_height_desktop": {
-          "label": "Desktop Height",
+          "label": "Tischhöhe",
           "options": {
             "natural": {
-              "label": "Natural"
+              "label": "Natürlich"
             },
             "compact": {
-              "label": "Compact (450px)"
+              "label": "Kompakt (450px)"
             },
             "standard": {
               "label": "Standard (650px)"
             },
             "extended": {
-              "label": "Extended (750px)"
+              "label": "Erweitert (750px)"
             },
             "full": {
-              "label": "Full Screen"
+              "label": "Ganzer Bildschirm"
             }
           }
         },
         "section_height_mobile": {
-          "label": "Mobile Height",
+          "label": "Mobile Höhe",
           "options": {
             "auto": {
               "label": "Auto"
             },
             "compact": {
-              "label": "Compact (300px)"
+              "label": "Kompakt (300px)"
             },
             "standard": {
               "label": "Standard (400px)"
             },
             "extended": {
-              "label": "Extended (500px)"
+              "label": "Erweitert (500px)"
             },
             "full": {
-              "label": "Full Screen"
+              "label": "Ganzer Bildschirm"
             }
           }
         },
         "show_auto_slides": {
-          "label": "Auto Change Slides"
+          "label": "Folien automatisch wechseln"
         },
         "change_duration": {
-          "label": "Change Duration"
+          "label": "Dauer ändern"
         },
         "navigation_styles": {
-          "label": "Navigation Styles",
+          "label": "Navigationsstile",
           "options": {
             "dots": {
-              "label": "Dots"
+              "label": "Punkte"
             },
             "bars": {
-              "label": "Bars"
+              "label": "Riegel"
             }
           }
         },
@@ -2747,45 +2747,45 @@
       },
       "blocks": {
         "slide": {
-          "name": "Slide",
+          "name": "Gleiten",
           "settings": {
             "header_alignment": {
-              "label": "Position and Alignment"
+              "label": "Position und Ausrichtung"
             },
             "content_position": {
-              "label": "Content Position",
+              "label": "Inhaltsposition",
               "options": {
                 "top_left": {
-                  "label": "Top Left"
+                  "label": "Oben links"
                 },
                 "top_center": {
-                  "label": "Top Center"
+                  "label": "Oben in der Mitte"
                 },
                 "top_right": {
-                  "label": "Top Right"
+                  "label": "Oben rechts"
                 },
                 "center_left": {
-                  "label": "Center Left"
+                  "label": "Mitte links"
                 },
                 "center": {
                   "label": "Center"
                 },
                 "center_right": {
-                  "label": "Center Right"
+                  "label": "Mitte rechts"
                 },
                 "bottom_left": {
-                  "label": "Bottom Left"
+                  "label": "Unten links"
                 },
                 "bottom_center": {
-                  "label": "Bottom Center"
+                  "label": "Unten in der Mitte"
                 },
                 "bottom_right": {
-                  "label": "Bottom Right"
+                  "label": "Unten rechts"
                 }
               }
             },
             "alignment": {
-              "label": "Text alignment",
+              "label": "Textausrichtung",
               "options": {
                 "left": {
                   "label": "Links"
@@ -2808,16 +2808,16 @@
               "label": "Taste"
             },
             "slide_button_link": {
-              "label": "Button Link"
+              "label": "Schaltflächenlink"
             },
             "slide_image_desktop": {
-              "label": "Image"
+              "label": "Bild"
             },
             "slide_image_mobile": {
-              "label": "Mobile Image"
+              "label": "Mobiles Bild"
             },
             "header_colors": {
-              "label": "Colors",
+              "label": "Farben",
               "text": {
                 "label": "Text"
               },
@@ -2829,11 +2829,11 @@
         }
       },
       "presets": {
-        "name": "Slideshow"
+        "name": "Diashow"
       }
     },
     "text-with-icon": {
-      "name": "Text With Icon",
+      "name": "Text mit Symbol",
       "settings": {
         "lazyload_images": {
           "label": "Aktivieren Sie LazyLoad-Bilder",
@@ -2851,7 +2851,7 @@
       },
       "blocks": {
         "slide": {
-          "name": "Slide",
+          "name": "Gleiten",
           "settings": {
             "slide_logo_label": {
               "label": "Logo"
@@ -2863,9 +2863,9 @@
               "label": "Text"
             },
             "header_alignment": {
-              "label": "Alignment",
+              "label": "Ausrichtung",
               "alignment": {
-                "label": "Text alignment",
+                "label": "Textausrichtung",
                 "options": {
                   "left": {
                     "label": "Links"
@@ -3091,7 +3091,7 @@
           }
         },
         "sub_heading": {
-          "label": "Subheading"
+          "label": "Unterüberschrift"
         },
         "heading": {
           "label": "Überschrift"
@@ -3182,7 +3182,7 @@
   },
   "schema_settings": {
     "colors": {
-      "name": "Colors",
+      "name": "Farben",
       "settings": {
         "header_general": {
           "label": "General",
@@ -3412,7 +3412,7 @@
           "label": "Hover to Reveal Second Image"
         },
         "header_colors": {
-          "label": "Colors",
+          "label": "Farben",
           "sale_badge_color": {
             "label": "Sale Badge Color"
           },
