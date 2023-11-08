@@ -447,10 +447,10 @@
       }
     },
     "featured-collection": {
-      "name": "Featured Collection",
+      "name": "Ausgewählte Sammlung",
       "settings": {
         "collection": {
-          "label": "Collection"
+          "label": "Sammlung"
         },
         "heading": {
           "label": "Überschrift"
@@ -459,51 +459,51 @@
           "label": "Text"
         },
         "products_per_row": {
-          "label": "Products Per Row"
+          "label": "Produkte pro Zeile"
         },
         "product_rows": {
-          "label": "Rows of Products"
+          "label": "Produktreihen"
         },
         "stack_product": {
-          "label": "Stack On Mobile"
+          "label": "Auf Mobilgeräten stapeln"
         },
         "show_view_all": {
-          "label": "Show View All",
-          "info": "Enable View All Only If your collection has more products than shown"
+          "label": "Alle anzeigen anzeigen",
+          "info": "Aktivieren Sie „Alle anzeigen“ nur, wenn Ihre Sammlung mehr Produkte enthält als angezeigt"
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Ausrichtung",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Textausrichtung",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Links"
               },
               "center": {
                 "label": "Center"
               },
               "right": {
-                "label": "Right"
+                "label": "Rechts"
               }
             }
           }
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Aktivieren Sie LazyLoad-Bilder",
+          "info": "Aktivieren Sie Lazyload, wenn sich Bilder außerhalb des Bildschirms befinden, um die Leistung zu verbessern"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Abschnittsabstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Abstand oben"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Abstand unten"
           }
         }
       },
       "presets": {
-        "name": "Featured Collection"
+        "name": "Ausgewählte Sammlung"
       }
     },
     "featured-product": {
@@ -1229,7 +1229,7 @@
           "label": "Products To Show"
         },
         "products_per_row": {
-          "label": "Products Per Row"
+          "label": "Produkte pro Zeile"
         },
         "header_sorting": {
           "label": "Sorting and Filtering",
@@ -2363,10 +2363,10 @@
           }
         },
         "collection": {
-          "name": "Collection",
+          "name": "Sammlung",
           "settings": {
             "promo_collection": {
-              "label": "Collection"
+              "label": "Sammlung"
             },
             "promo_collection_heading": {
               "label": "Überschrift"
@@ -2569,7 +2569,7 @@
           "label": "Products To Show"
         },
         "products_per_row": {
-          "label": "Products Per Row"
+          "label": "Produkte pro Zeile"
         },
         "header_alignment": {
           "label": "Alignment",
