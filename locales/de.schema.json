@@ -409,10 +409,10 @@
                 "label": "Mai"
               },
               "06": {
-                "label": "June"
+                "label": "Juni"
               },
               "07": {
-                "label": "July"
+                "label": "Juli"
               },
               "08": {
                 "label": "August"
@@ -421,27 +421,27 @@
                 "label": "September"
               },
               "10": {
-                "label": "October"
+                "label": "Oktober"
               },
               "11": {
                 "label": "November"
               },
               "12": {
-                "label": "December"
+                "label": "Dezember"
               }
             }
           },
           "day": {
-            "label": "Day"
+            "label": "Tag"
           },
           "hour": {
-            "label": "Hour"
+            "label": "Stunde"
           },
           "minutes": {
             "label": "Minute"
           },
           "timer_completion_message": {
-            "label": "Completion Message"
+            "label": "Abschlussmeldung"
           }
         }
       }
