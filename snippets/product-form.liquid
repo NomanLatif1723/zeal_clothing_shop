@@ -188,12 +188,17 @@
          else
            assign add_to_cart_text = 'products.add_to_cart' | t
          endif
+         assign enable_gift_card_reciptient = false
+         assign enable_dynamic_checkout = false
+         if block.settings.enable_gift_card_reciptient and product.gift_card?
+           assign enable_gift_card_reciptient = true
+         endif
       -%}
       <div class="product__block product__buy-buttons" {{ block.shopify_attributes }}>
         {%- unless product.empty? -%}
           {%- form 'product', product, id: product_form_id, class: "product__form", novalidate: 'novalidate', data-section-id: section.id -%}
             <div class="product-form__errors rte hidden">{{ 'cart.items.quantity_error_message' | t: quantity: product.selected_or_first_available_variant.inventory_quantity }}</div>
-            {%- if block.settings.enable_gift_card_reciptient and product.gift_card? -%}
+            {%- if enable_gift_card_reciptient -%}
               <div class="gift-card__product">
                 {%- render 'gift-card-recipient-form', product: product, form: form, section: section -%}
               </div>
