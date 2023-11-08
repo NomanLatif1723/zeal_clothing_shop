@@ -1,7 +1,7 @@
 {
   "article": {
     "general": {
-      "author": "Por {{ autor }}",
+      "author": "Por {{ author }}",
       "sharing_socials_label": "Consejos y trucos"
     },
     "comments": {
@@ -50,7 +50,7 @@
       "discount": "Descuentos",
       "note_placeholder": "¿Alguna instrucción especial para su pedido?",
       "free_shipping_eligible": "Estás lejos del envío gratuito por ",
-      "free_shipping_success_html": "¡Felicidades! Calificas para envío gratis en pedidos superiores a {{ cantidad }}",
+      "free_shipping_success_html": "¡Felicidades! Calificas para envío gratis en pedidos superiores a {{ amount }}",
       "view_cart": "Ver carrito",
       "drawer_close": "Cerca",
       "drawer_title": "Carro de la compra",
@@ -60,13 +60,13 @@
     },
     "items": {
       "item_added": "Artículo añadido a tu carrito",
-      "quantity_error_message": "Todos los {{ cantidad }} artículos se agregan al carrito"
+      "quantity_error_message": "Todos los {{ quantity }} artículos se agregan al carrito"
     }
   },
   "collections": {
     "general": {
       "all_collection": "Ver todo",
-      "products_count": "{{ productos_count }} Resultados",
+      "products_count": "{{ products_count }} Resultados",
       "fiter_collection": "Filtrar\/Ordenar",
       "filter_drawer": "Filtrado por",
       "sort_drawer": "Ordenar por",
@@ -155,12 +155,12 @@
       "no_orders_yet": "Aún no has realizado ningún pedido."
     },
     "order": {
-      "title": "Orden {{ nombre }}",
+      "title": "Orden {{ name }}",
       "return_url": "Volver a cuentas",
-      "date_html": "Colocado el {{ fecha }}",
+      "date_html": "Colocado el {{ date }}",
       "billing_address": "Dirección de Envio",
       "shipping_address": "Dirección de envío",
-      "payment_status_html": "<strong>Estado de pago:<\/strong> {{ estado }}",
+      "payment_status_html": "<strong>Estado de pago:<\/strong> {{ status }}",
       "fulfillment_status_html": "<strong>Estado de cumplimiento:<\/strong> {{ status }}",
       "product": "Producto",
       "sku": "SKU",
@@ -170,9 +170,9 @@
       "subtotal": "Total parcial",
       "shipping": "Envío",
       "tax": "Impuesto",
-      "cancelled_html": "Pedido cancelado el {{ fecha }}",
-      "cancelled_reason": "Razón: {{ razón }}",
-      "fulfilled_html": "Cumplido {{ fecha }}",
+      "cancelled_html": "Pedido cancelado el {{ date }}",
+      "cancelled_reason": "Razón: {{ reason }}",
+      "fulfilled_html": "Cumplido {{ date }}",
       "discount": "Descuento"
     },
     "recover_password": {
@@ -292,9 +292,9 @@
     "stock": {
       "title": "Disponible",
       "inventory_in_stock": "En stock",
-      "inventory_in_stock_count": "{{ Cantidad en inventario",
+      "inventory_in_stock_count": "{{ quantity }} en inventario",
       "inventory_low_stock": "Existencias bajas",
-      "inventory_low_stock_count": "Stock bajo: quedan {{ artículos }}",
+      "inventory_low_stock_count": "Stock bajo: quedan {{ items }}",
       "inventory_out_of_stock_contine_selling": "En stock",
       "inventory_out_of_stock": "Agotado"
     },
@@ -369,7 +369,7 @@
       "no_results": "No se pudieron encontrar resultados para ''{{ search_term }}''",
       "search_results": "{{ count }} Resultados para ''{{ search_term }}''",
       "cancel": "Cancelar",
-      "search_for": "Buscar ''{{ términos }}''"
+      "search_for": "Buscar ''{{ terms }}''"
     }
   }
 }
