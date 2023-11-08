@@ -797,12 +797,12 @@
           }
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Abschnittsabstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Abstand oben"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Abstand unten"
           }
         }
       },
@@ -843,8 +843,8 @@
           }
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Aktivieren Sie LazyLoad-Bilder",
+          "info": "Aktivieren Sie Lazyload, wenn sich Bilder außerhalb des Bildschirms befinden, um die Leistung zu verbessern"
         }
       },
       "blocks": {
@@ -1082,16 +1082,16 @@
           "label": "Image Right"
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Aktivieren Sie LazyLoad-Bilder",
+          "info": "Aktivieren Sie Lazyload, wenn sich Bilder außerhalb des Bildschirms befinden, um die Leistung zu verbessern"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Abschnittsabstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Abstand oben"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Abstand unten"
           }
         }
       },
@@ -1130,16 +1130,16 @@
       "name": "Image Comparison",
       "settings": {
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Aktivieren Sie LazyLoad-Bilder",
+          "info": "Aktivieren Sie Lazyload, wenn sich Bilder außerhalb des Bildschirms befinden, um die Leistung zu verbessern"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Abschnittsabstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Abstand oben"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Abstand unten"
           }
         }
       },
@@ -1195,16 +1195,16 @@
           }
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Aktivieren Sie LazyLoad-Bilder",
+          "info": "Aktivieren Sie Lazyload, wenn sich Bilder außerhalb des Bildschirms befinden, um die Leistung zu verbessern"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Abschnittsabstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Abstand oben"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Abstand unten"
           }
         }
       },
@@ -1245,9 +1245,9 @@
           }
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Ausrichtung",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Textausrichtung",
             "options": {
               "left": {
                 "label": "Links"
@@ -1256,21 +1256,21 @@
                 "label": "Center"
               },
               "right": {
-                "label": "Right"
+                "label": "Rechts"
               }
             }
           }
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images"
+          "label": "Aktivieren Sie LazyLoad-Bilder"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Abschnittsabstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Abstand oben"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Abstand unten"
           }
         }
       },
@@ -1317,9 +1317,9 @@
           }
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Ausrichtung",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Textausrichtung",
             "options": {
               "left": {
                 "label": "Links"
@@ -1328,21 +1328,21 @@
                 "label": "Center"
               },
               "right": {
-                "label": "Right"
+                "label": "Rechts"
               }
             }
           }
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images"
+          "label": "Aktivieren Sie LazyLoad-Bilder"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Abschnittsabstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Abstand oben"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Abstand unten"
           }
         }
       }
@@ -1377,12 +1377,12 @@
           "label": "Background"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Abschnittsabstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Abstand oben"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Abstand unten"
           }
         }
       },
@@ -1406,12 +1406,12 @@
           }
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Abschnittsabstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Abstand oben"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Abstand unten"
           }
         }
       },
@@ -1469,9 +1469,9 @@
       "name": "Page",
       "settings": {
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Ausrichtung",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Textausrichtung",
             "options": {
               "left": {
                 "label": "Links"
@@ -1480,18 +1480,18 @@
                 "label": "Center"
               },
               "right": {
-                "label": "Right"
+                "label": "Rechts"
               }
             }
           }
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Abschnittsabstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Abstand oben"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Abstand unten"
           }
         }
       }
@@ -1538,36 +1538,36 @@
           "info": "First Article tag will be shown as its category"
         },
         "post_image_size": {
-          "label": "Image Size",
+          "label": "Bildgröße",
           "options": {
             "natural": {
-              "label": "Natural"
+              "label": "Natürlich"
             },
             "square": {
-              "label": "Square(1:1)"
+              "label": "Quadrat(1:1)"
             },
             "portrait": {
-              "label": "Portrait(2:3)"
+              "label": "Porträt(2:3)"
             },
             "landscape": {
-              "label": "Landscape(4:3)"
+              "label": "Landschaft(4:3)"
             },
             "wide": {
-              "label": "Wide(16:9)"
+              "label": "Breit(16:9)"
             }
           }
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Aktivieren Sie LazyLoad-Bilder",
+          "info": "Aktivieren Sie Lazyload, wenn sich Bilder außerhalb des Bildschirms befinden, um die Leistung zu verbessern"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Abschnittsabstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Abstand oben"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Abstand unten"
           }
         }
       }
@@ -1595,12 +1595,12 @@
           "label": "Show Comments"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Abschnittsabstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Abstand oben"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Abstand unten"
           }
         }
       }
@@ -2056,12 +2056,12 @@
           }
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Abschnittsabstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Abstand oben"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Abstand unten"
           }
         }
       },
@@ -2079,9 +2079,9 @@
           "label": "Button Label"
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Ausrichtung",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Textausrichtung",
             "options": {
               "left": {
                 "label": "Links"
@@ -2090,7 +2090,7 @@
                 "label": "Center"
               },
               "right": {
-                "label": "Right"
+                "label": "Rechts"
               }
             }
           }
@@ -2102,12 +2102,12 @@
           "label": "Text"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Abschnittsabstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Abstand oben"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Abstand unten"
           }
         }
       },
@@ -2137,7 +2137,7 @@
           "label": "Enable Show Popup"
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images"
+          "label": "Aktivieren Sie LazyLoad-Bilder"
         }
       }
     },
@@ -2194,12 +2194,12 @@
           "label": "Text"
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images"
+          "label": "Aktivieren Sie LazyLoad-Bilder"
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Ausrichtung",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Textausrichtung",
             "options": {
               "left": {
                 "label": "Links"
@@ -2208,18 +2208,18 @@
                 "label": "Center"
               },
               "right": {
-                "label": "Right"
+                "label": "Rechts"
               }
             }
           }
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Abschnittsabstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Abstand oben"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Abstand unten"
           }
         }
       }
@@ -2228,16 +2228,16 @@
       "name": "Promotional Grid",
       "settings": {
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Aktivieren Sie LazyLoad-Bilder",
+          "info": "Aktivieren Sie Lazyload, wenn sich Bilder außerhalb des Bildschirms befinden, um die Leistung zu verbessern"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Abschnittsabstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Abstand oben"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Abstand unten"
           }
         }
       },
@@ -2456,16 +2456,16 @@
       "name": "Promotional Block",
       "settings": {
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Aktivieren Sie LazyLoad-Bilder",
+          "info": "Aktivieren Sie Lazyload, wenn sich Bilder außerhalb des Bildschirms befinden, um die Leistung zu verbessern"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Abschnittsabstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Abstand oben"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Abstand unten"
           }
         }
       },
@@ -2572,9 +2572,9 @@
           "label": "Produkte pro Zeile"
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Ausrichtung",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Textausrichtung",
             "options": {
               "left": {
                 "label": "Links"
@@ -2583,22 +2583,22 @@
                 "label": "Center"
               },
               "right": {
-                "label": "Right"
+                "label": "Rechts"
               }
             }
           }
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Aktivieren Sie LazyLoad-Bilder",
+          "info": "Aktivieren Sie Lazyload, wenn sich Bilder außerhalb des Bildschirms befinden, um die Leistung zu verbessern"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Abschnittsabstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Abstand oben"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Abstand unten"
           }
         }
       },
@@ -2610,9 +2610,9 @@
       "name": "Rich Text",
       "settings": {
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Ausrichtung",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Textausrichtung",
             "options": {
               "left": {
                 "label": "Links"
@@ -2621,18 +2621,18 @@
                 "label": "Center"
               },
               "right": {
-                "label": "Right"
+                "label": "Rechts"
               }
             }
           }
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Abschnittsabstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Abstand oben"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Abstand unten"
           }
         }
       },
@@ -2738,8 +2738,8 @@
           }
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Aktivieren Sie LazyLoad-Bilder",
+          "info": "Aktivieren Sie Lazyload, wenn sich Bilder außerhalb des Bildschirms befinden, um die Leistung zu verbessern"
         }
       },
       "blocks": {
@@ -2833,16 +2833,16 @@
       "name": "Text With Icon",
       "settings": {
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Aktivieren Sie LazyLoad-Bilder",
+          "info": "Aktivieren Sie Lazyload, wenn sich Bilder außerhalb des Bildschirms befinden, um die Leistung zu verbessern"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Abschnittsabstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Abstand oben"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Abstand unten"
           }
         }
       },
@@ -2899,9 +2899,9 @@
           "label": "Link"
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Ausrichtung",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Textausrichtung",
             "options": {
               "left": {
                 "label": "Links"
@@ -2910,22 +2910,22 @@
                 "label": "Center"
               },
               "right": {
-                "label": "Right"
+                "label": "Rechts"
               }
             }
           }
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Aktivieren Sie LazyLoad-Bilder",
+          "info": "Aktivieren Sie Lazyload, wenn sich Bilder außerhalb des Bildschirms befinden, um die Leistung zu verbessern"
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Abschnittsabstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Abstand oben"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Abstand unten"
           }
         }
       },
@@ -2967,9 +2967,9 @@
           "label": "Text"
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Ausrichtung",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Textausrichtung",
             "options": {
               "left": {
                 "label": "Links"
@@ -2978,7 +2978,7 @@
                 "label": "Center"
               },
               "right": {
-                "label": "Right"
+                "label": "Rechts"
               }
             }
           }
@@ -2994,8 +2994,8 @@
           "label": "Text"
         },
         "lazyload_images": {
-          "label": "Enable LazyLoad Images",
-          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+          "label": "Aktivieren Sie LazyLoad-Bilder",
+          "info": "Aktivieren Sie Lazyload, wenn sich Bilder außerhalb des Bildschirms befinden, um die Leistung zu verbessern"
         }
       },
       "blocks": {
@@ -3160,12 +3160,12 @@
           }
         },
         "header_spacing": {
-          "label": "Section Spacing",
+          "label": "Abschnittsabstand",
           "top_spacing": {
-            "label": "Spacing Top"
+            "label": "Abstand oben"
           },
           "bottom_spacing": {
-            "label": "Spacing Bottom"
+            "label": "Abstand unten"
           }
         }
       },
