@@ -1,5 +1,8 @@
 {
   "sections": {
+    "404": {
+      "name": "404 pages"
+    },
     "header-group": {
       "name": "Entête"
     },
@@ -3178,9 +3181,6 @@
       "presets": {
         "name": "Vidéo"
       }
-    },
-    "404": {
-      "name": "404 pages"
     }
   },
   "schema_settings": {
