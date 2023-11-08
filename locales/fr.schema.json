@@ -509,7 +509,7 @@
     "featured-product": {
       "name": "Produit en vedette",
       "settings": {
-        "Produit": {
+        "product": {
           "label": "Produit"
         },
         "heading": {
@@ -1608,7 +1608,7 @@
     "main-product": {
       "name": "Grille de produits",
       "settings": {
-        "Produit": {
+        "product": {
           "label": "Produit"
         },
         "heading": {
@@ -2297,7 +2297,7 @@
             }
           }
         },
-        "Produit": {
+        "product": {
           "name": "Produit",
           "settings": {
             "promo_product": {
