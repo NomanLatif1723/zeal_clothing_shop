@@ -208,7 +208,7 @@
   "general": {
     "404": {
       "text": "Errore 404",
-      "sub_text_html": "<p>Ops! <\/p><p> Grazie per aver visitato il nostro sito!<\/p>",
+      "sub_text_html": "<p>Ops! Sembra che la pagina a cui stavi cercando di accedere non esista. Siamo spiacenti per l'inconveniente. Utilizza il menu di navigazione o la barra di ricerca per trovare quello che stai cercando. Oppure, se ti senti avventuroso, perché non esplorare le nostre ultime collezioni e scoprire qualcosa di nuovo? <\/p><p> Grazie per aver visitato il nostro sito!<\/p>",
       "shop_collection": "TORNARE A CASA"
     },
     "accessibility": {
