@@ -507,10 +507,10 @@
       }
     },
     "featured-product": {
-      "name": "Featured Product",
+      "name": "Vorgestelltes Produkt",
       "settings": {
         "product": {
-          "label": "Product"
+          "label": "Produkt"
         },
         "heading": {
           "label": "Überschrift"
@@ -519,18 +519,18 @@
           "label": "Text"
         },
         "header_alignment": {
-          "label": "Alignment",
+          "label": "Ausrichtung",
           "alignment": {
-            "label": "Text alignment",
+            "label": "Textausrichtung",
             "options": {
               "left": {
-                "label": "Left"
+                "label": "Links"
               },
               "center": {
                 "label": "Center"
               },
               "right": {
-                "label": "Right"
+                "label": "Rechts"
               }
             }
           }
@@ -767,7 +767,7 @@
         }
       },
       "presets": {
-        "name": "Featured Product"
+        "name": "Vorgestelltes Produkt"
       }
     },
     "faq": {
