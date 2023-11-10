@@ -5,8 +5,8 @@
   </div>
   <div class="recipient-form__container">
     <div class="form__group">
-      <label for="email" class="form__label visually__hidden">{{ 'contact.form.email' | t }}</label>
-      <input type="email" id="email" name="contact[email]" placeholder="{{ 'contact.form.email' | t }}" value="{%- if customer -%}{{ customer.email }}{%- endif -%}" class="form__input" required aria-label="{{ 'contact.form.email' | t }}">
+      <label for="recipient-email-{{ section.id }}" class="form__label visually__hidden">{{ 'contact.form.email' | t }}</label>
+      <input type="email" id="recipient-email-{{ section.id }}" name="properties[Recipient Email]" placeholder="{{ 'contact.form.email' | t }}" value="{{ form.email }}" class="form__input" required aria-label="{{ 'contact.form.email' | t }}">
     </div>
   </div>
 </recipient-form>
