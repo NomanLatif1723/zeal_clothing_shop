@@ -20,9 +20,9 @@
         maxlength="200" id="recipient-message-{{ section.id }}" aria-label="{{ 'products.recipient.message' | t }}" disabled></textarea>
     </div>
     <div class="form__group">
-      <label for="recipient-message-{{ section.id }}" class="form__label visually__hidden">{{ 'products.recipient.date' | t }}</label>
-      <input type="date" id="recipient-date-{{ section.id }}" name="properties[Recipient Date]" placeholder="{{ 'products.recipient.date' | t }}"
-        value="{{ form.name }}" class="form__input" aria-label="{{ 'products.recipient.date' | t }}" disabled>
+      <label for="recipient-message-{{ section.id }}" class="form__label visually__hidden">{{ 'products.recipient.send_on' | t }}</label>
+      <input type="date" id="recipient-date-{{ section.id }}" name="properties[Recipient Date]" placeholder="{{ 'products.recipient.send_on' | t }}"
+        value="{{ form.name }}" class="form__input" aria-label="{{ 'products.recipient.send_on' | t }}" disabled>
     </div>
   </div>
 </recipient-form>
