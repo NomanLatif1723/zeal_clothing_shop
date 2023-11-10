@@ -301,6 +301,13 @@
     "accessibility": {
       "star_reviews_info": "{{ rating_value }} ut ur {{ rating_max }} stjärnor",
       "total_reviews": "Totalt recensioner {{ count }}"
+    },
+    "recipient": {
+      "email": "Email",
+      "name": "Name (Optional)",
+      "message": "Message (Optional)",
+      "send_on": "Send on (Optional)",
+      "checkbox_label": "I Want to send this as a Gift"
     }
   },
   "pickup_availability": {
