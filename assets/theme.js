@@ -1779,6 +1779,10 @@ function initProductForm() {
     formValidationErrorMessage: document.querySelector('.product-form__errors'),
     giftCardRecipientButton: document.querySelector('.recipient__button button')
   };
+
+  selectors.giftCardRecipientButton.addEventListener('click', () => {
+    document.querySelector('.recipient-form__container').classList.toggle('hidden');
+  });
   
   // Fetch The Cart Type Rather Page, Drawer or Popup
   if (!selectors.cartHeaderButton) {
