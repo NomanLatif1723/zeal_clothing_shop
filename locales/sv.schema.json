@@ -671,6 +671,10 @@
             "enable_dynamic_checkout": {
               "label": "Aktivera Dynamic Checkout-knappar",
               "info": "Genom att använda de betalningsmetoder som finns tillgängliga i din butik ser kunderna deras föredragna alternativ, som PayPal eller Apple Pay. "
+            },
+            "enable_gift_card_recipient": {
+              "label": "Show recipient information form for gift cards",
+              "info": "Allows buyers to send gift cards on a scheduled date along with a personal message. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/customizing-themes\/add-gift-card-recipient-fields)"
             }
           }
         },
@@ -1747,6 +1751,10 @@
             "enable_dynamic_checkout": {
               "label": "Aktivera Dynamic Checkout-knappar",
               "info": "Genom att använda de betalningsmetoder som finns tillgängliga i din butik ser kunderna deras föredragna alternativ, som PayPal eller Apple Pay. "
+            },
+            "enable_gift_card_recipient": {
+              "label": "Show recipient information form for gift cards",
+              "info": "Allows buyers to send gift cards on a scheduled date along with a personal message. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/customizing-themes\/add-gift-card-recipient-fields)"
             }
           }
         },
