@@ -301,6 +301,11 @@
     "accessibility": {
       "star_reviews_info": "{{ rating_value }} out of {{ rating_max }} stars",
       "total_reviews": "Total Reviews {{ count }}"
+    },
+    "recipient": {
+      "email": "Email",
+      "name": "Name",
+      "message": "Message"
     }
   },
   "pickup_availability": {
