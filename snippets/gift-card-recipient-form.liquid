@@ -6,15 +6,21 @@
   <div class="recipient-form__container">
     <div class="form__group">
       <label for="recipient-email-{{ section.id }}" class="form__label visually__hidden">{{ 'contact.form.email' | t }}</label>
-      <input type="email" id="recipient-email-{{ section.id }}" name="properties[Recipient Email]" placeholder="{{ 'contact.form.email' | t }}" value="{{ form.email }}" class="form__input" required aria-label="{{ 'contact.form.email' | t }}">
+      <input type="email" id="recipient-email-{{ section.id }}" name="properties[Recipient Email]" placeholder="{{ 'contact.form.email' | t }}"
+        value="{{ form.email }}" class="form__input" required aria-label="{{ 'contact.form.email' | t }}"
+      >
     </div>
     <div class="form__group">
       <label for="recipient-name-{{ section.id }}" class="form__label visually__hidden">{{ 'contact.form.name' | t }}</label>
-      <input type="text" id="recipient-name-{{ section.id }}" name="properties[Recipient Name]" placeholder="{{ 'contact.form.name' | t }}" value="{{ form.name }}" class="form__input" aria-label="{{ 'contact.form.name' | t }}">
+      <input type="text" id="recipient-name-{{ section.id }}" name="properties[Recipient Name]" placeholder="{{ 'contact.form.name' | t }}"
+        value="{{ form.name }}" class="form__input" aria-label="{{ 'contact.form.name' | t }}"
+      >
     </div>
     <div class="form__group">
       <label for="recipient-message-{{ section.id }}" class="form__label visually__hidden">{{ 'contact.form.comment' | t }}</label>
-      <textarea class="form__input" rows="3" name="properties[Recipient Message]" placeholder="{{ 'contact.form.comment' | t }}" id="recipient-message-{{ section.id }}" aria-label="{{ 'contact.form.comment' | t }}"></textarea>
+      <textarea class="form__input" rows="3" name="properties[Recipient Message]" placeholder="{{ 'contact.form.comment' | t }}" 
+        id="recipient-message-{{ section.id }}" aria-label="{{ 'contact.form.comment' | t }}">
+      </textarea>
     </div>
   </div>
 </recipient-form>
