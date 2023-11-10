@@ -78,15 +78,6 @@
           </div>
         </div>
       {%- endif -%}
-      {% comment %}
-      <div class="article-pagination">
-      {%- paginate blog.articles by 1 -%}
-      {%- if paginate.pages > 1 -%}
-      {%- render 'article-pagination', paginate: paginate -%}
-      {%- endif -%}
-      {%- endpaginate -%}
-      </div>
-      {% endcomment %}
       <div class="scroll__animate article__form">
         {%- if show_comments -%}
           <div class="comments__wrapper">
