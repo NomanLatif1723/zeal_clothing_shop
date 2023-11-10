@@ -673,8 +673,8 @@
               "info": "En utilisant les méthodes de paiement disponibles sur votre boutique, les clients voient leur option préférée, comme PayPal ou Apple Pay. [Learn more](https:\/\/help.shopify.com\/manual\/using-themes\/change-the-layout\/dynamic-checkout)"
             },
             "enable_gift_card_recipient": {
-              "label": "Show recipient information form for gift cards",
-              "info": "Allows buyers to send gift cards on a scheduled date along with a personal message. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/customizing-themes\/add-gift-card-recipient-fields)"
+              "label": "Afficher le formulaire d'informations sur le destinataire pour les cartes-cadeaux",
+              "info": "Permet aux acheteurs d'envoyer des cartes-cadeaux à une date programmée accompagnées d'un message personnel. [Apprendre encore plus](https:\/\/help.shopify.com\/manual\/online-store\/themes\/customizing-themes\/add-gift-card-recipient-fields)"
             }
           }
         },
@@ -1753,8 +1753,8 @@
               "info": "En utilisant les méthodes de paiement disponibles sur votre boutique, les clients voient leur option préférée, comme PayPal ou Apple Pay. [Learn more](https:\/\/help.shopify.com\/manual\/using-themes\/change-the-layout\/dynamic-checkout)"
             },
             "enable_gift_card_recipient": {
-              "label": "Show recipient information form for gift cards",
-              "info": "Allows buyers to send gift cards on a scheduled date along with a personal message. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/customizing-themes\/add-gift-card-recipient-fields)"
+              "label": "Afficher le formulaire d'informations sur le destinataire pour les cartes-cadeaux",
+              "info": "Permet aux acheteurs d'envoyer des cartes-cadeaux à une date programmée accompagnées d'un message personnel. [Apprendre encore plus](https:\/\/help.shopify.com\/manual\/online-store\/themes\/customizing-themes\/add-gift-card-recipient-fields)"
             }
           }
         },
