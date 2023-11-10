@@ -303,11 +303,11 @@
       "total_reviews": "Total des avis {{ count }}"
     },
     "recipient": {
-      "email": "Email",
-      "name": "Name (Optional)",
-      "message": "Message (Optional)",
-      "send_on": "Send on (Optional)",
-      "checkbox_label": "I Want to send this as a Gift"
+      "email": "E-mail",
+      "name": "Nom: (optionnel)",
+      "message": "Message (optionnel)",
+      "send_on": "Envoyer (optionnel)",
+      "checkbox_label": "Je veux l'envoyer en cadeau"
     }
   },
   "pickup_availability": {
