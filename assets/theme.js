@@ -1800,7 +1800,7 @@ function initProductForm() {
   }
   selectors.cartDrawer.addEventListener('click', () => {
     closeCartDrawer();
-  })
+  });
 
   // Prevent The Cart Box To Click On the Background
   if (!selectors.cartBox) {
@@ -1808,12 +1808,12 @@ function initProductForm() {
   }
   selectors.cartBox.addEventListener('click', (event) => {
     event.stopPropagation();
-  })
+  });
 
   // Event for Close Cart Drawer
   selectors.closeDrawerBtn.addEventListener('click', () => {
     closeCartDrawer();
-  })
+  });
 
   // Event For product Form Submit Using Ajax If Cart Type set to Drawer or Popup
   selectors.productForm.forEach(form => {
@@ -1830,7 +1830,7 @@ function initProductForm() {
     });
   });
 
-  async function submitProductForm(form) {
+  async function submitProductForm(form) {   
     await fetch('/cart/add', {
       method: "POST",
       body: new FormData(form),
@@ -1848,7 +1848,7 @@ function initProductForm() {
     
     // Update The Counter
     cartItemCount(cartData);
-  }
+  }   
   async function updateCartDrawer() {
     if (selectors.cartType === 'drawer') {
       const res = await fetch("/?view=ajax-cart");
