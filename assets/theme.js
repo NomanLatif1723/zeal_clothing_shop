@@ -1784,11 +1784,11 @@ function initProductForm() {
     selectors.giftCardRecipientButton.addEventListener('change', () => {
       document.querySelector('.recipient-form__container').classList.toggle('hidden');
       document.querySelectorAll('.recipient-form__container input').forEach(field => {
-        field.disabled = false;
-      })
+        field.toggleAttribute('disabled');
+      });
       document.querySelectorAll('.recipient-form__container textarea').forEach(field => {
-        field.disabled = false;
-      })
+        field.toggleAttribute('disabled');
+      });
     });
   }
   
