@@ -303,11 +303,11 @@
       "total_reviews": "Samlet anmeldelser {{ count }}"
     },
     "recipient": {
-      "email": "Email",
-      "name": "Name (Optional)",
-      "message": "Message (Optional)",
-      "send_on": "Send on (Optional)",
-      "checkbox_label": "I Want to send this as a Gift"
+      "email": "E-mail",
+      "name": "Navn (valgfrit)",
+      "message": "Besked (valgfrit)",
+      "send_on": "Send videre (valgfrit)",
+      "checkbox_label": "Jeg vil gerne sende dette som gave"
     }
   },
   "pickup_availability": {
