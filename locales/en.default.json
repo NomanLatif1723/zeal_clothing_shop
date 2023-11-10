@@ -306,7 +306,7 @@
       "email": "Email",
       "name": "Name (Optional)",
       "message": "Message (Optional)",
-      "date": "Send on (Optional)",
+      "send_on": "Send on (Optional)",
       "button_label": "I Want to send this as a Gift"
     }
   },
