@@ -301,6 +301,13 @@
     "accessibility": {
       "star_reviews_info": "{{ rating_value }} fora de {{ rating_max }} estrelas",
       "total_reviews": "Total de avaliações {{ count }}"
+    },
+    "recipient": {
+      "email": "Email",
+      "name": "Name (Optional)",
+      "message": "Message (Optional)",
+      "send_on": "Send on (Optional)",
+      "checkbox_label": "I Want to send this as a Gift"
     }
   },
   "pickup_availability": {
