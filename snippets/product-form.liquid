@@ -189,10 +189,13 @@
            assign add_to_cart_text = 'products.add_to_cart' | t
          endif
          assign enable_gift_card_reciptient = false
-         assign enable_dynamic_checkout = true
+         assign enable_dynamic_checkout = false
          if block.settings.enable_gift_card_reciptient and product.gift_card?
            assign enable_gift_card_reciptient = true
            assign enable_dynamic_checkout = false
+         endif
+         if block.settings.enable_dynamic_checkout
+           assign enable_dynamic_checkout = true
          endif
       -%}
       <div class="product__block product__buy-buttons" {{ block.shopify_attributes }}>
