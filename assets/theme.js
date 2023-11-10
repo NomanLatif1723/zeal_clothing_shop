@@ -1786,6 +1786,9 @@ function initProductForm() {
       document.querySelectorAll('.recipient-form__container input').forEach(field => {
         field.disabled = false;
       })
+      document.querySelectorAll('.recipient-form__container textarea').forEach(field => {
+        field.disabled = false;
+      })
     });
   }
   
