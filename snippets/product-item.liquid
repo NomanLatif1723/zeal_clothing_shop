@@ -56,7 +56,7 @@
           </button>
         </div>
       {%- endif -%}
-      <div class="collection-grid__image--wrapper" data-product-id="{{ product.id }}" data-product-handle="{{ product.handle }}">
+      <div class="collection-grid__image--wrapper{% if product.gift_card? %} gift_card-product--image{% endif %}" data-product-id="{{ product.id }}" data-product-handle="{{ product.handle }}">
         <a href="{{ product.url }}" title="{{ image.alt }}">
           <img class="product__image" style="aspect-ratio: {{ imageAspectRatio }};" src="{{ image | product_img_url: default }}"
             srcset="
