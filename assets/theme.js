@@ -1783,6 +1783,9 @@ function initProductForm() {
   if(selectors.giftCardRecipientButton){
     selectors.giftCardRecipientButton.addEventListener('change', () => {
       document.querySelector('.recipient-form__container').classList.toggle('hidden');
+      document.querySelectorAll('.recipient-form__container input', '.recipient-form__container textarea').forEach(field => {
+        field.disabled = false;
+      })
     });
   }
   
