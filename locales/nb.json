@@ -306,8 +306,8 @@
       "email": "E-post",
       "name": "Navn (valgfritt)",
       "message": "Melding (valgfritt)",
-      "send_on": "Send on (valgfritt)",
-      "checkbox_label": "I Want to send this as a Gift"
+      "send_on": "Send videre (valgfritt)",
+      "checkbox_label": "Jeg ønsker å sende dette som gave"
     }
   },
   "pickup_availability": {
