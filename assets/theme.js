@@ -1780,6 +1780,7 @@ function initProductForm() {
     giftCardRecipientButton: document.querySelector('.recipient__button button')
   };
 
+  if(!selectors.giftCardRecipientButton) return;
   selectors.giftCardRecipientButton.addEventListener('click', () => {
     document.querySelector('.recipient-form__container').classList.toggle('hidden');
   });
