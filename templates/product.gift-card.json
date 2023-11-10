@@ -1,0 +1,229 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "2bebcb3d-bfb7-4a54-b0fd-7594f60db804": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "c48c8421-10a9-4423-9659-6762eab443c1": {
+          "type": "price",
+          "settings": {
+            "show_sale_badges": true
+          }
+        },
+        "cd2107fa-b62c-4b09-ab0d-477efa3eb924": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "444874e2-bc96-40b0-b414-aac057b2deb9": {
+          "type": "tags",
+          "settings": {
+          }
+        },
+        "1142a56f-1555-4016-8057-f20c8948fa7c": {
+          "type": "category",
+          "settings": {
+          }
+        },
+        "061aee36-58ac-488a-95f9-bc48abbaf17a": {
+          "type": "sku",
+          "settings": {
+          }
+        },
+        "8c5f37a6-8693-4180-a51a-16a798da00ce": {
+          "type": "stock",
+          "settings": {
+            "stock_threshold": 0,
+            "stock_count": true
+          }
+        },
+        "ad72a519-7d2d-4c55-b8bc-7f201ed71233": {
+          "type": "variants_picker",
+          "settings": {
+            "variant_type": "button",
+            "enable_color_swatches": true,
+            "enable_image_swatches": true
+          }
+        },
+        "6a2a8b20-17c1-4c25-94d8-5e73e7667cdf": {
+          "type": "sale_timer",
+          "settings": {
+            "years": 2024,
+            "months": "08",
+            "days": 31,
+            "hours": 12,
+            "minutes": 12,
+            "timer_completion_message": ""
+          }
+        },
+        "8c0ed8c2-91f4-4ae1-9ac8-2b8733c8dfc3": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "f4ade60f-6d15-4321-bd20-a58d8b261a56": {
+          "type": "buy_buttons",
+          "settings": {
+            "enable_dynamic_checkout": false,
+            "enable_gift_card_recipient": true
+          }
+        },
+        "a0670cbe-0d41-4504-905b-1a080352120e": {
+          "type": "full_description",
+          "settings": {
+            "description_as_tab": true,
+            "description_tab_heading": "Description"
+          }
+        },
+        "d606abb9-e7cf-4681-8980-06f5b855efb5": {
+          "type": "collapsables",
+          "settings": {
+            "heading": "shipping & Returns",
+            "text": "<p><strong>Shipping:<\/strong><\/p><p>We offer fast and reliable shipping services to deliver your desired products right to your doorstep. Once you've placed your order, our dedicated team works diligently to ensure it is processed and dispatched in a timely manner. You can track your order every step of the way and rest assured that it will be handled with the utmost care.<\/p><p><strong>Returns:<\/strong><\/p><p>We understand that sometimes you may need to make a return or exchange. That's why we have a straightforward and customer-friendly returns policy. If you're not completely satisfied with your purchase, you can initiate a return within [number of days] of receiving your order.<\/p>"
+          }
+        },
+        "e12da961-abfc-41b6-b750-d67682386124": {
+          "type": "collapsables",
+          "settings": {
+            "heading": "materials",
+            "text": "<p>We offer fast and reliable shipping services to deliver your desired products right to your doorstep. Once you've placed your order, our dedicated team works diligently to ensure it is processed and dispatched in a timely manner. You can track your order every step of the way and rest assured that it will be handled with the utmost care.<\/p>"
+          }
+        },
+        "28c271d4-b1fd-4938-9e50-3c7fda5b0348": {
+          "type": "collapsables",
+          "settings": {
+            "heading": "dimensions",
+            "text": "<p>We offer fast and reliable shipping services to deliver your desired products right to your doorstep. Once you've placed your order, our dedicated team works diligently to ensure it is processed and dispatched in a timely manner. You can track your order every step of the way and rest assured that it will be handled with the utmost care.<\/p>"
+          }
+        },
+        "b2df1210-2cdb-49b0-98cb-d84599d5a302": {
+          "type": "collapsables",
+          "settings": {
+            "heading": "care instructions",
+            "text": "<p>We offer fast and reliable shipping services to deliver your desired products right to your doorstep. Once you've placed your order, our dedicated team works diligently to ensure it is processed and dispatched in a timely manner. You can track your order every step of the way and rest assured that it will be handled with the utmost care.<\/p>"
+          }
+        },
+        "5f8969bd-d623-44ae-afaa-81360b9a68da": {
+          "type": "social_share",
+          "settings": {
+          }
+        },
+        "cadb32f9-5740-408f-8a98-fb552196cf0d": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_content": ""
+          }
+        }
+      },
+      "block_order": [
+        "2bebcb3d-bfb7-4a54-b0fd-7594f60db804",
+        "c48c8421-10a9-4423-9659-6762eab443c1",
+        "cd2107fa-b62c-4b09-ab0d-477efa3eb924",
+        "444874e2-bc96-40b0-b414-aac057b2deb9",
+        "1142a56f-1555-4016-8057-f20c8948fa7c",
+        "061aee36-58ac-488a-95f9-bc48abbaf17a",
+        "8c5f37a6-8693-4180-a51a-16a798da00ce",
+        "ad72a519-7d2d-4c55-b8bc-7f201ed71233",
+        "6a2a8b20-17c1-4c25-94d8-5e73e7667cdf",
+        "8c0ed8c2-91f4-4ae1-9ac8-2b8733c8dfc3",
+        "f4ade60f-6d15-4321-bd20-a58d8b261a56",
+        "a0670cbe-0d41-4504-905b-1a080352120e",
+        "d606abb9-e7cf-4681-8980-06f5b855efb5",
+        "e12da961-abfc-41b6-b750-d67682386124",
+        "28c271d4-b1fd-4938-9e50-3c7fda5b0348",
+        "b2df1210-2cdb-49b0-98cb-d84599d5a302",
+        "5f8969bd-d623-44ae-afaa-81360b9a68da",
+        "cadb32f9-5740-408f-8a98-fb552196cf0d"
+      ],
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_rating": true,
+        "media_position": false,
+        "media_width": "large",
+        "media_layout": "thumbnail",
+        "thumbnail_position": "below",
+        "show_thumbnail_arrows": true,
+        "size_chart_page": "size-chart",
+        "margin_top": 40,
+        "margin_bottom": 60
+      }
+    },
+    "01f8fcff-e28d-485b-8b95-b9fa72c6042b": {
+      "type": "promotional-grid",
+      "blocks": {
+        "template--20758404006210__01f8fcff-e28d-485b-8b95-b9fa72c6042b-banner-1": {
+          "type": "banner",
+          "settings": {
+            "banner_heading": "Get -15% on your first purchase!",
+            "banner_text": "Valid for new users only.",
+            "banner_button_1": "Shop Men",
+            "banner_button_link_1": "shopify:\/\/collections\/mens-wear",
+            "banner_button_2": "Shop Women",
+            "banner_button_link_2": "shopify:\/\/collections\/womens-wear",
+            "banner_background_color": "#9d1339"
+          }
+        }
+      },
+      "block_order": [
+        "template--20758404006210__01f8fcff-e28d-485b-8b95-b9fa72c6042b-banner-1"
+      ],
+      "settings": {
+        "lazyload_images": false,
+        "margin_top": 60,
+        "margin_bottom": 60
+      }
+    },
+    "related-products": {
+      "type": "related-product",
+      "settings": {
+        "heading": "You May Also Like",
+        "text_alignment": "center",
+        "products_to_show": 4,
+        "products_per_row": 4,
+        "lazyload_images": true,
+        "margin_top": 60,
+        "margin_bottom": 60
+      }
+    },
+    "b23656f0-bf8f-45ab-8d52-88216dc9f000": {
+      "type": "complementary-product",
+      "disabled": true,
+      "settings": {
+        "heading": "Pairs Well With",
+        "text_alignment": "center",
+        "products_to_show": 4,
+        "products_per_row": 4,
+        "lazyload_images": false,
+        "margin_top": 60,
+        "margin_bottom": 60
+      }
+    },
+    "1696488101f5e649f3": {
+      "type": "apps",
+      "blocks": {
+        "d79f15f8-1aca-4f2b-9dde-54e7b1ff7a07": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "d79f15f8-1aca-4f2b-9dde-54e7b1ff7a07"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "01f8fcff-e28d-485b-8b95-b9fa72c6042b",
+    "related-products",
+    "b23656f0-bf8f-45ab-8d52-88216dc9f000",
+    "1696488101f5e649f3"
+  ]
+}
