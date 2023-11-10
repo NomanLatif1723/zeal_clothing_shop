@@ -49,7 +49,7 @@
             {%- for tag in article.tags limit: 3 -%}
               <li>{{ tag }}</li>
             {%- endfor -%}
-          </ul>
+          </ul> 
         {%- endif -%}
         {%- if article.image -%}
           <div class="scroll__animate grid__item-image">                  
@@ -64,12 +64,12 @@
                   "width="{{ articleImage.width }}"height="{{ articleImage.height }}"loading="{{ lazyloading }}"sizes="{{ sizes }}"alt="{{ articleImage.alt }}">
               </div>     
             </a>    
-          </div>  
+          </div>     
         {%- endif -%}
         <div class="article__content rte">
           {{ article.content | strip_html }}
         </div>
-      </div>
+      </div>    
       {%- if show_social_sharing -%}
         <div class="article-social__sharing rte">
           <div>{{ 'article.general.sharing_socials_label' | t }}</div>
