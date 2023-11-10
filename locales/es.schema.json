@@ -671,6 +671,10 @@
             "enable_dynamic_checkout": {
               "label": "Habilitar botones de pago dinámico",
               "info": "Al utilizar los métodos de pago disponibles en su tienda, los clientes ven su opción preferida, como PayPal o Apple Pay. "
+            },
+            "enable_gift_card_recipient": {
+              "label": "Mostrar formulario de información del destinatario para tarjetas de regalo",
+              "info": "Permite a los compradores enviar tarjetas de regalo en una fecha programada junto con un mensaje personal. [Aprende más](https:\/\/help.shopify.com\/manual\/online-store\/themes\/customizing-themes\/add-gift-card-recipient-fields)"
             }
           }
         },
@@ -1747,6 +1751,10 @@
             "enable_dynamic_checkout": {
               "label": "Habilitar botones de pago dinámico",
               "info": "Al utilizar los métodos de pago disponibles en su tienda, los clientes ven su opción preferida, como PayPal o Apple Pay. "
+            },
+            "enable_gift_card_recipient": {
+              "label": "Mostrar formulario de información del destinatario para tarjetas de regalo",
+              "info": "Permite a los compradores enviar tarjetas de regalo en una fecha programada junto con un mensaje personal. [Aprende más](https:\/\/help.shopify.com\/manual\/online-store\/themes\/customizing-themes\/add-gift-card-recipient-fields)"
             }
           }
         },
