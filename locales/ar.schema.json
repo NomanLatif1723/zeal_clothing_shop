@@ -671,6 +671,10 @@
             "enable_dynamic_checkout": {
               "label": "تمكين أزرار الخروج الديناميكية",
               "info": "باستخدام طرق الدفع المتاحة في متجرك، يرى العملاء خيارهم المفضل، مثل PayPal أو Apple Pay. "
+            },
+            "enable_gift_card_recipient": {
+              "label": "إظهار نموذج معلومات المستلم لبطاقات الهدايا",
+              "info": "يسمح للمشترين بإرسال بطاقات الهدايا في تاريخ محدد مع رسالة شخصية. [يتعلم أكثر](https:\/\/help.shopify.com\/manual\/online-store\/themes\/customizing-themes\/add-gift-card-recipient-fields)"
             }
           }
         },
@@ -1747,6 +1751,10 @@
             "enable_dynamic_checkout": {
               "label": "تمكين أزرار الخروج الديناميكية",
               "info": "باستخدام طرق الدفع المتاحة في متجرك، يرى العملاء خيارهم المفضل، مثل PayPal أو Apple Pay. "
+            },
+            "enable_gift_card_recipient": {
+              "label": "إظهار نموذج معلومات المستلم لبطاقات الهدايا",
+              "info": "يسمح للمشترين بإرسال بطاقات الهدايا في تاريخ محدد مع رسالة شخصية. [يتعلم أكثر](https:\/\/help.shopify.com\/manual\/online-store\/themes\/customizing-themes\/add-gift-card-recipient-fields)"
             }
           }
         },
