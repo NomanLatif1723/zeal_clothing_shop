@@ -68,7 +68,8 @@
         "f4ade60f-6d15-4321-bd20-a58d8b261a56": {
           "type": "buy_buttons",
           "settings": {
-            "enable_dynamic_checkout": false
+            "enable_dynamic_checkout": false,
+            "enable_gift_card_recipient": true
           }
         },
         "a0670cbe-0d41-4504-905b-1a080352120e": {
