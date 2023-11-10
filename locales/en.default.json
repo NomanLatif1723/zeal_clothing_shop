@@ -305,7 +305,8 @@
     "recipient": {
       "email": "Email",
       "name": "Name",
-      "message": "Message"
+      "message": "Message",
+      "date": "Date"
     }
   },
   "pickup_availability": {
