@@ -1,8 +1,5 @@
 <recipient-form data-section-id="{{ section.id }}">
   <div class="recipient__button">
-    {% comment %}
-    <button type="button" class="form__links links">{{ 'products.recipient.button_label' | t }}</button>
-    {% endcomment %}
     <input type="checkbox" id="recipient_gift_card-{{ section.id }}" />
     <label for="recipient_gift_card-{{ section.id }}">I Want to send this as a Gift</label>
   </div>
@@ -31,8 +28,4 @@
       >
     </div>
   </div>
-  {% comment %}
-  <input type="hidden" name="properties[__shopify_send_gift_card_to_recipient]" id="Recipient-control-{{ section.id }}">
-  <input type="hidden" name="properties[__shopify_offset]" value="" id="Recipient-timezone-offset-{{ section.id }}" disabled>
-  {% endcomment %}
 </recipient-form>
