@@ -9,13 +9,13 @@
   <div class="recipient-form__container hidden">
     <div class="form__group">
       <label for="recipient-email-{{ section.id }}" class="form__label visually__hidden">{{ 'products.recipient.email' | t }}</label>
-      <input type="email" id="recipient-email-{{ section.id }}" {% if form.email %}name="properties[Recipient Email]"{% endif %} placeholder="{{ 'products.recipient.email' | t }}"
+      <input type="email" id="recipient-email-{{ section.id }}" name="properties[Recipient Email]" placeholder="{{ 'products.recipient.email' | t }}"
         value="{{ form.email }}" class="form__input" required aria-label="{{ 'products.recipient.email' | t }}"
       >
     </div>
     <div class="form__group">
       <label for="recipient-name-{{ section.id }}" class="form__label visually__hidden">{{ 'products.recipient.name' | t }}</label>
-      <input type="text" id="recipient-name-{{ section.id }}" {% if form.name %}name="properties[Recipient Name]"{% endif %} placeholder="{{ 'products.recipient.name' | t }}"
+      <input type="text" id="recipient-name-{{ section.id }}" name="properties[Recipient Name]" placeholder="{{ 'products.recipient.name' | t }}"
         value="{{ form.name }}" class="form__input" aria-label="{{ 'products.recipient.name' | t }}"
       >
     </div>
@@ -26,7 +26,7 @@
     </div>
     <div class="form__group">
       <label for="recipient-message-{{ section.id }}" class="form__label visually__hidden">{{ 'products.recipient.date' | t }}</label>
-      <input type="date" id="recipient-date-{{ section.id }}" {% if form.name %}name="properties[Recipient Date]"{% endif %} placeholder="{{ 'products.recipient.date' | t }}"
+      <input type="date" id="recipient-date-{{ section.id }}" name="properties[Recipient Date]" placeholder="{{ 'products.recipient.date' | t }}"
         value="{{ form.name }}" class="form__input" aria-label="{{ 'products.recipient.date' | t }}"
       >
     </div>
