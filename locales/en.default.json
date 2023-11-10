@@ -306,7 +306,8 @@
       "email": "Email",
       "name": "Name",
       "message": "Message",
-      "date": "Date"
+      "date": "Date",
+      "button_label": "I Want to send this as a Gift"
     }
   },
   "pickup_availability": {
