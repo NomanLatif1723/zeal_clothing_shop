@@ -1777,11 +1777,11 @@ function initProductForm() {
     cartPopupContent: document.querySelector('.cart-popup__content'),
     cartDrawerContent: document.querySelector("[data-cart]"),
     formValidationErrorMessage: document.querySelector('.product-form__errors'),
-    giftCardRecipientButton: document.querySelector('.recipient__button button')
+    giftCardRecipientButton: document.querySelector('.recipient__button input')
   };
 
   if(selectors.giftCardRecipientButton){
-    selectors.giftCardRecipientButton.addEventListener('click', () => {
+    selectors.giftCardRecipientButton.addEventListener('change', () => {
       document.querySelector('.recipient-form__container').classList.toggle('hidden');
     });
   }
