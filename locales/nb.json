@@ -303,10 +303,10 @@
       "total_reviews": "Totalt antall anmeldelser {{ count }}"
     },
     "recipient": {
-      "email": "Email",
-      "name": "Name (Optional)",
-      "message": "Message (Optional)",
-      "send_on": "Send on (Optional)",
+      "email": "E-post",
+      "name": "Navn (valgfritt)",
+      "message": "Melding (valgfritt)",
+      "send_on": "Send on (valgfritt)",
       "checkbox_label": "I Want to send this as a Gift"
     }
   },
