@@ -303,11 +303,11 @@
       "total_reviews": "Total Reviews {{ count }}"
     },
     "recipient": {
-      "email": "Email",
-      "name": "Name (Optional)",
-      "message": "Message (Optional)",
-      "send_on": "Send on (Optional)",
-      "checkbox_label": "I Want to send this as a Gift"
+      "email": "E-mailem",
+      "name": "Jméno (volitelné)",
+      "message": "Zpráva (volitelné)",
+      "send_on": "Odeslat (volitelné)",
+      "checkbox_label": "Chci to poslat jako dárek"
     }
   },
   "pickup_availability": {
