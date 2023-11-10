@@ -29,7 +29,7 @@
             <div class="cart__item-block" data-key="{{ item.key }}" data-stock-count="{{ item.variant.inventory_quantity }}">
               <div class="cart__item-image">
                 <a href="{{ item.url }}">
-                  <img src="{{ item.image | image_url: width: 70, height: 70 }}" alt="{{ item.image.alt }}" width="70" height="70" loading="lazy" />
+                  <img class="{% if product.gift_card? %}gift_card-product--image{% endif %}" src="{{ item.image | image_url: width: 70, height: 70 }}" alt="{{ item.image.alt }}" width="70" height="70" loading="lazy" />
                 </a>
               </div>
               <div class="cart__item-content">
