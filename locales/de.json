@@ -305,9 +305,9 @@
     "recipient": {
       "email": "Email",
       "name": "Name (Optional)",
-      "message": "Message (Optional)",
-      "send_on": "Send on (Optional)",
-      "checkbox_label": "I Want to send this as a Gift"
+      "message": "Nachricht (optional)",
+      "send_on": "Senden am (Optional)",
+      "checkbox_label": "Ich möchte dies als Geschenk verschicken"
     }
   },
   "pickup_availability": {
