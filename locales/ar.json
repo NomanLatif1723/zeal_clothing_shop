@@ -303,11 +303,11 @@
       "total_reviews": "إجمالي المراجعات {{ count }}"
     },
     "recipient": {
-      "email": "Email",
-      "name": "Name (Optional)",
-      "message": "Message (Optional)",
-      "send_on": "Send on (Optional)",
-      "checkbox_label": "I Want to send this as a Gift"
+      "email": "بريد إلكتروني",
+      "name": "الاسم: (اختياري)",
+      "message": "الرسالة (اختياري)",
+      "send_on": "أرسل (اختياري)",
+      "checkbox_label": "أريد أن أرسل هذا كهدية"
     }
   },
   "pickup_availability": {
