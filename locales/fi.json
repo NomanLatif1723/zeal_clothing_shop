@@ -303,11 +303,11 @@
       "total_reviews": "Arvostelut yhteensä {{ count }}"
     },
     "recipient": {
-      "email": "Email",
-      "name": "Name (Optional)",
-      "message": "Message (Optional)",
-      "send_on": "Send on (Optional)",
-      "checkbox_label": "I Want to send this as a Gift"
+      "email": "Sähköposti",
+      "name": "Nimi (valinnainen)",
+      "message": "Viesti (valinnainen)",
+      "send_on": "Lähetä (valinnainen)",
+      "checkbox_label": "Haluan lähettää tämän lahjaksi"
     }
   },
   "pickup_availability": {
