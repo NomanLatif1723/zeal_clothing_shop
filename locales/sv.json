@@ -303,11 +303,11 @@
       "total_reviews": "Totalt recensioner {{ count }}"
     },
     "recipient": {
-      "email": "Email",
-      "name": "Name (Optional)",
-      "message": "Message (Optional)",
-      "send_on": "Send on (Optional)",
-      "checkbox_label": "I Want to send this as a Gift"
+      "email": "E-post",
+      "name": "Namn (valfritt)",
+      "message": "Meddelande (valfritt)",
+      "send_on": "Skicka vidare (valfritt)",
+      "checkbox_label": "Jag vill skicka detta som en gåva"
     }
   },
   "pickup_availability": {
