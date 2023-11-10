@@ -6,7 +6,7 @@
     <label for="recipient_gift_card-{{ section.id }}">I Want to send this as a Gift</label>
     {% endcomment %}
   </div>
-  <div class="recipient-form__container">
+  <div class="recipient-form__container hidden">
     <div class="form__group">
       <label for="recipient-email-{{ section.id }}" class="form__label visually__hidden">{{ 'products.recipient.email' | t }}</label>
       <input type="email" id="recipient-email-{{ section.id }}" name="properties[Recipient Email]" placeholder="{{ 'products.recipient.email' | t }}"
