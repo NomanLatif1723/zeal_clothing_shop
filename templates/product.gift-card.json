@@ -21,21 +21,25 @@
         },
         "444874e2-bc96-40b0-b414-aac057b2deb9": {
           "type": "tags",
+          "disabled": true,
           "settings": {
           }
         },
         "1142a56f-1555-4016-8057-f20c8948fa7c": {
           "type": "category",
+          "disabled": true,
           "settings": {
           }
         },
         "061aee36-58ac-488a-95f9-bc48abbaf17a": {
           "type": "sku",
+          "disabled": true,
           "settings": {
           }
         },
         "8c5f37a6-8693-4180-a51a-16a798da00ce": {
           "type": "stock",
+          "disabled": true,
           "settings": {
             "stock_threshold": 0,
             "stock_count": true
@@ -51,6 +55,7 @@
         },
         "6a2a8b20-17c1-4c25-94d8-5e73e7667cdf": {
           "type": "sale_timer",
+          "disabled": true,
           "settings": {
             "years": 2024,
             "months": "08",
