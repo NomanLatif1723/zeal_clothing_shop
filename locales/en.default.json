@@ -304,9 +304,9 @@
     },
     "recipient": {
       "email": "Email",
-      "name": "Name",
-      "message": "Message",
-      "date": "Date",
+      "name": "Name (Optional)",
+      "message": "Message (Optional)",
+      "date": "Send on (Optional)",
       "button_label": "I Want to send this as a Gift"
     }
   },
