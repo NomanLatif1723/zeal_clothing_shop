@@ -307,7 +307,7 @@
       "name": "Name (Optional)",
       "message": "Message (Optional)",
       "send_on": "Send on (Optional)",
-      "button_label": "I Want to send this as a Gift"
+      "checkbox_label": "I Want to send this as a Gift"
     }
   },
   "pickup_availability": {
