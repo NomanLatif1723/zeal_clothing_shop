@@ -1776,7 +1776,8 @@ function initProductForm() {
     cartType: 'page',
     cartPopupContent: document.querySelector('.cart-popup__content'),
     cartDrawerContent: document.querySelector("[data-cart]"),
-    formValidationErrorMessage: document.querySelector('.product-form__errors')
+    formValidationErrorMessage: document.querySelector('.product-form__errors'),
+    giftCardRecipientButton: document.querySelector('.recipient__button button')
   };
   
   // Fetch The Cart Type Rather Page, Drawer or Popup
