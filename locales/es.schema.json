@@ -166,9 +166,6 @@
         "collection_per_row": {
           "label": "Colecciones por fila"
         },
-        "all_collections": {
-          "label": "Mostrar todas las colecciones"
-        },
         "swipe_on_mobile": {
           "label": "Deslizar en el móvil"
         },
@@ -1379,6 +1376,80 @@
             },
             "banner_link": {
               "label": "Enlace"
+            }
+          }
+        }
+      }
+    },
+    "main-collection-list": {
+      "name": "Lista de colección",
+      "settings": {
+        "heading": {
+          "label": "Título"
+        },
+        "collection_per_row": {
+          "label": "Colecciones por fila"
+        },
+        "all_collections": {
+          "label": "Mostrar todas las colecciones"
+        },
+        "swipe_on_mobile": {
+          "label": "Deslizar en el móvil"
+        },
+        "products_count": {
+          "label": "Productos en una colección"
+        },
+        "header_alignment": {
+          "label": "Alineación",
+          "alignment": {
+            "label": "Alineación del texto",
+            "options": {
+              "left": {
+                "label": "Izquierda"
+              },
+              "center": {
+                "label": "Centro"
+              },
+              "right": {
+                "label": "Bien"
+              }
+            }
+          }
+        },
+        "collection_layout": {
+          "label": "disposición",
+          "options": {
+            "grid": {
+              "label": "Red"
+            },
+            "slider": {
+              "label": "control deslizante"
+            }
+          }
+        },
+        "lazyload_images": {
+          "label": "Habilitar imágenes de carga diferida",
+          "info": "Habilite Lazyload si las imágenes están fuera de la pantalla para mejorar el rendimiento"
+        },
+        "header_spacing": {
+          "label": "Espaciado de secciones",
+          "top_spacing": {
+            "label": "Espaciado superior"
+          },
+          "bottom_spacing": {
+            "label": "Espaciado inferior"
+          }
+        }
+      },
+      "blocks": {
+        "collection": {
+          "name": "Recopilación",
+          "settings": {
+            "collection": {
+              "label": "Recopilación"
+            },
+            "collection_heading": {
+              "label": "Título"
             }
           }
         }
