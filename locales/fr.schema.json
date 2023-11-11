@@ -358,6 +358,89 @@
         "name": "Complementary Products"
       }
     },
+    "collection-banner": {
+      "name": "Bannière de collecte",
+      "settings": {
+        "paragraph": {
+          "content": "Pour modifier les descriptions ou les images des collections, [modifiez vos collections](\/admin\/collections)."
+        },
+        "section_height_desktop": {
+          "label": "Hauteur du bureau",
+          "options": {
+            "natural": {
+              "label": "Naturel"
+            },
+            "compact": {
+              "label": "Compacte (200px)"
+            },
+            "standard": {
+              "label": "Standard (300 px)"
+            },
+            "extended": {
+              "label": "Étendu (400px)"
+            }
+          }
+        },
+        "section_height_mobile": {
+          "label": "Hauteur mobile",
+          "options": {
+            "auto": {
+              "label": "Auto"
+            },
+            "compact": {
+              "label": "Compacte (150px)"
+            },
+            "standard": {
+              "label": "Norme (200px)"
+            },
+            "extended": {
+              "label": "Étendu (250px)"
+            }
+          }
+        },
+        "full_width": {
+          "label": "Pleine largeur"
+        },
+        "show_collection_image": {
+          "label": "Afficher l'image de la collection"
+        },
+        "show_collection_description": {
+          "label": "Afficher la description de la collection"
+        },
+        "header_alignment": {
+          "label": "Alignement",
+          "alignment": {
+            "label": "Alignement du texte",
+            "options": {
+              "left": {
+                "label": "Gauche"
+              },
+              "center": {
+                "label": "Centre"
+              },
+              "right": {
+                "label": "Droite"
+              }
+            }
+          }
+        },
+        "header_colors": {
+          "label": "Couleurs",
+          "color_text": {
+            "label": "Texte"
+          }
+        },
+        "header_spacing": {
+          "label": "Espacement des sections",
+          "top_spacing": {
+            "label": "Espacement supérieur"
+          },
+          "bottom_spacing": {
+            "label": "Espacement inférieur"
+          }
+        }
+      }
+    },
     "events-popup": {
       "name": "Fenêtre contextuelle des événements",
       "settings": {
