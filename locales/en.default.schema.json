@@ -358,6 +358,89 @@
         "name": "Complementary Products"
       }
     },
+    "collection-banner": {
+      "name": "Collection Banner",
+      "settings": {
+        "section_height_desktop": {
+          "label": "Desktop Height",
+          "options": {
+            "natural": {
+              "label": "Natural"
+            },
+            "compact": {
+              "label": "Compact (200px)"
+            },
+            "standard": {
+              "label": "Standard (300px)"
+            },
+            "extended": {
+              "label": "Extended (400px)"
+            }
+          }
+        },
+        "section_height_mobile": {
+          "label": "Mobile Height",
+          "options": {
+            "auto": {
+              "label": "Auto"
+            },
+            "compact": {
+              "label": "Compact (150px)"
+            },
+            "standard": {
+              "label": "Standard (200px)"
+            },
+            "extended": {
+              "label": "Extended (250px)"
+            }
+          }
+        },
+        "full_width": {
+          "label": "Full Width"
+        },
+        "show_collection_image": {
+          "label": "Show Collection Image"
+        },
+        "show_collection_title": {
+          "label": "Show Collection Title"
+        },
+        "show_collection_description": {
+          "label": "Show Collection Description"
+        },
+        "header_alignment": {
+          "label": "Alignment",
+          "alignment": {
+            "label": "Text alignment",
+            "options": {
+              "left": {
+                "label": "Left"
+              },
+              "center": {
+                "label": "Center"
+              },
+              "right": {
+                "label": "Right"
+              }
+            }
+          }
+        },
+        "header_colors": {
+          "label": "Colors",
+          "color_text": {
+            "label": "Text"
+          }
+        },
+        "header_spacing": {
+          "label": "Section Spacing",
+          "top_spacing": {
+            "label": "Spacing Top"
+          },
+          "bottom_spacing": {
+            "label": "Spacing Bottom"
+          }
+        }
+      }
+    },
     "events-popup": {
       "name": "Events Popup",
       "settings": {
