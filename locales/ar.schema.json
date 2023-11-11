@@ -358,6 +358,89 @@
         "name": "المنتجات التكميلية"
       }
     },
+    "collection-banner": {
+      "name": "راية المجموعة",
+      "settings": {
+        "paragraph": {
+          "content": "لتغيير أوصاف المجموعة أو صور المجموعة، [عدل مجموعاتك](\/admin\/collections)."
+        },
+        "section_height_desktop": {
+          "label": "ارتفاع سطح المكتب",
+          "options": {
+            "natural": {
+              "label": "طبيعي"
+            },
+            "compact": {
+              "label": "مضغوط (200 بكسل)"
+            },
+            "standard": {
+              "label": "قياسي (300 بكسل)"
+            },
+            "extended": {
+              "label": "ممتد (400 بكسل)"
+            }
+          }
+        },
+        "section_height_mobile": {
+          "label": "ارتفاع الجوال",
+          "options": {
+            "auto": {
+              "label": "آلي"
+            },
+            "compact": {
+              "label": "مضغوط (150 بكسل)"
+            },
+            "standard": {
+              "label": "قياسي (200 بكسل)"
+            },
+            "extended": {
+              "label": "ممتد (250 بكسل)"
+            }
+          }
+        },
+        "full_width": {
+          "label": "العرض الكامل"
+        },
+        "show_collection_image": {
+          "label": "إظهار صورة المجموعة"
+        },
+        "show_collection_description": {
+          "label": "عرض وصف المجموعة"
+        },
+        "header_alignment": {
+          "label": "تنسيق",
+          "alignment": {
+            "label": "محاذاة النص",
+            "options": {
+              "left": {
+                "label": "غادر"
+              },
+              "center": {
+                "label": "مركز"
+              },
+              "right": {
+                "label": "يمين"
+              }
+            }
+          }
+        },
+        "header_colors": {
+          "label": "الألوان",
+          "color_text": {
+            "label": "نص"
+          }
+        },
+        "header_spacing": {
+          "label": "تباعد القسم",
+          "top_spacing": {
+            "label": "تباعد الأعلى"
+          },
+          "bottom_spacing": {
+            "label": "تباعد القاع"
+          }
+        }
+      }
+    },
     "events-popup": {
       "name": "الأحداث المنبثقة",
       "settings": {
