@@ -66,61 +66,47 @@
         <div id="collectionListSlider-{{ section.id }}" class="collection-list__slider swiper">
         {%- endif -%}
         <collection-list class="collection-grid__list collection-grid{% if collection_layout == 'slider' %} swiper-wrapper{% endif %}{% if swipe_on_mobile and collection_layout == 'grid' %} collection-grid__scroll{% endif %}">
-          {%- if show_all_collections -%}
-            {% for collection in collections %}
-              {% render 'collection-list-all', 
-               collection: collection,
-               textAlignment: textAlignment,
-               itemWidth: itemWidth,
-               imageAspectRatio: imageAspectRatio,
-               products_count: products_count,
-               lazyloading: lazyloading,
-               collection_layout: collection_layout,
-               swipe_on_mobile: swipe_on_mobile %}
-            {% endfor %}
-          {%- else -%}
-            {%- for block in section.blocks -%}
-              {%- if collections[block.settings.collection] == blank -%}
-                <collection-item class="collection-grid__item {{ itemWidth }} {% if collection_layout == 'slider' %} swiper-slide{% endif %}{% if swipe_on_mobile and collection_layout == 'grid' %} collection-item__scroll{% endif %}" {{ block.shopify_attributes }}>
-                  <div class="collection-grid__content">
-                    {%- capture count -%}
-                      {%- cycle 1, 2, 3, 4, 5, 6 -%}
-                    {%- endcapture -%}
-                    <div class="collection-grid__image " style="aspect-ratio: {{ imageAspectRatio }};">
-                      {{ 'collection-' | append: count | placeholder_svg_tag: "placeholder__image" }}
-                      {%- if settings.overlay_style == false -%}
-                        <div class="overlay-box__container text__align-{{ textAlignment }}">
-                          <div class="collection-grid__text">
-                            <div class="collection-grid__title">
-                              <h4>{{ 'collection-list.general.title' | t }}</h4>
-                            </div>
+          {%- for block in section.blocks -%}
+            {%- if collections[block.settings.collection] == blank -%}
+              <collection-item class="collection-grid__item {{ itemWidth }} {% if collection_layout == 'slider' %} swiper-slide{% endif %}{% if swipe_on_mobile and collection_layout == 'grid' %} collection-item__scroll{% endif %}" {{ block.shopify_attributes }}>
+                <div class="collection-grid__content">
+                  {%- capture count -%}
+                    {%- cycle 1, 2, 3, 4, 5, 6 -%}
+                  {%- endcapture -%}
+                  <div class="collection-grid__image " style="aspect-ratio: {{ imageAspectRatio }};">
+                    {{ 'collection-' | append: count | placeholder_svg_tag: "placeholder__image" }}
+                    {%- if settings.overlay_style == false -%}
+                      <div class="overlay-box__container text__align-{{ textAlignment }}">
+                        <div class="collection-grid__text">
+                          <div class="collection-grid__title">
+                            <h4>{{ 'collection-list.general.title' | t }}</h4>
                           </div>
-                        </div>
-                      {%- endif -%}
-                    </div>
-                    {%- if settings.overlay_style -%}
-                      <div class="collection-grid__text text__align-{{ textAlignment }}">
-                        <div class="collection-grid__title">
-                          <h4>{{ 'collection-list.general.title' | t }}</h4>
                         </div>
                       </div>
                     {%- endif -%}
                   </div>
-                </collection-item>
-              {%- else -%}
-                {%- render 'collection-item', 
-                  collection: collections[block.settings.collection],
-                  collection_heading: block.settings.collection_heading,
-                  lazyloading: lazyloading,
-                  products_count: products_count,
-                  textAlignment: textAlignment,
-                  itemWidth: itemWidth,
-                  imageAspectRatio: imageAspectRatio,
-                  collection_layout: collection_layout,
-                  swipe_on_mobile: swipe_on_mobile -%}
-              {%- endif -%}
-            {%- endfor -%}
-          {%- endif -%}
+                  {%- if settings.overlay_style -%}
+                    <div class="collection-grid__text text__align-{{ textAlignment }}">
+                      <div class="collection-grid__title">
+                        <h4>{{ 'collection-list.general.title' | t }}</h4>
+                      </div>
+                    </div>
+                  {%- endif -%}
+                </div>
+              </collection-item>
+            {%- else -%}
+              {%- render 'collection-item', 
+                collection: collections[block.settings.collection],
+                collection_heading: block.settings.collection_heading,
+                lazyloading: lazyloading,
+                products_count: products_count,
+                textAlignment: textAlignment,
+                itemWidth: itemWidth,
+                imageAspectRatio: imageAspectRatio,
+                collection_layout: collection_layout,
+                swipe_on_mobile: swipe_on_mobile -%}
+            {%- endif -%}
+          {%- endfor -%}
         </collection-list>
         <div class="swiper-pagination swiper-pagination-{{ section.id }}"></div>
         {%- if collection_layout == 'slider' -%}
