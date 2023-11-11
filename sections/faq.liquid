@@ -69,14 +69,14 @@
       {% for block in section.blocks %}
         {% case block.type %}
           {% when 'question' %}
-            {
+            {          
               "@type": "Question",
               "name": {{ block.settings.question | json }},
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": {{ block.settings.answer | json }}
               }
-            }{% unless forloop.last %},{% endunless %}
+            }       {% unless forloop.last %},{% endunless %}
         {% endcase %}
       {% endfor %}
     ]
