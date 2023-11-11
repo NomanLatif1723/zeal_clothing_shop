@@ -166,9 +166,6 @@
         "collection_per_row": {
           "label": "Samlinger pr. række"
         },
-        "all_collections": {
-          "label": "Vis alle samlinger"
-        },
         "swipe_on_mobile": {
           "label": "Swipe på mobilen"
         },
@@ -1379,6 +1376,80 @@
             },
             "banner_link": {
               "label": "Link"
+            }
+          }
+        }
+      }
+    },
+    "main-collection-list": {
+      "name": "Samlingsliste",
+      "settings": {
+        "heading": {
+          "label": "Overskrift"
+        },
+        "collection_per_row": {
+          "label": "Samlinger pr. række"
+        },
+        "all_collections": {
+          "label": "Vis alle samlinger"
+        },
+        "swipe_on_mobile": {
+          "label": "Swipe på mobilen"
+        },
+        "products_count": {
+          "label": "Produkter i en samling"
+        },
+        "header_alignment": {
+          "label": "Justering",
+          "alignment": {
+            "label": "Tekstjustering",
+            "options": {
+              "left": {
+                "label": "Venstre"
+              },
+              "center": {
+                "label": "Centrum"
+              },
+              "right": {
+                "label": "Højre"
+              }
+            }
+          }
+        },
+        "collection_layout": {
+          "label": "layout",
+          "options": {
+            "grid": {
+              "label": "Gitter"
+            },
+            "slider": {
+              "label": "Skyder"
+            }
+          }
+        },
+        "lazyload_images": {
+          "label": "Aktiver LazyLoad Images",
+          "info": "Aktiver Lazyload, hvis billeder er offscreen for at forbedre ydeevnen"
+        },
+        "header_spacing": {
+          "label": "Sektionsafstand",
+          "top_spacing": {
+            "label": "Afstand Top"
+          },
+          "bottom_spacing": {
+            "label": "Mellemrum bund"
+          }
+        }
+      },
+      "blocks": {
+        "collection": {
+          "name": "Kollektion",
+          "settings": {
+            "collection": {
+              "label": "Kollektion"
+            },
+            "collection_heading": {
+              "label": "Overskrift"
             }
           }
         }
