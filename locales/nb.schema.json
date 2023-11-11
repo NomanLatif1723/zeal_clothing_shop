@@ -358,6 +358,89 @@
         "name": "Komplementære produkter"
       }
     },
+    "collection-banner": {
+      "name": "Samlingsbanner",
+      "settings": {
+        "paragraph": {
+          "content": "For å endre samlingsbeskrivelser eller samlingsbilder, [rediger samlingene dine](\/admin\/collections)."
+        },
+        "section_height_desktop": {
+          "label": "Høyde på skrivebordet",
+          "options": {
+            "natural": {
+              "label": "Naturlig"
+            },
+            "compact": {
+              "label": "Kompakt (200 piksler)"
+            },
+            "standard": {
+              "label": "Standard (300 piksler)"
+            },
+            "extended": {
+              "label": "Utvidet (400 piksler)"
+            }
+          }
+        },
+        "section_height_mobile": {
+          "label": "Mobil høyde",
+          "options": {
+            "auto": {
+              "label": "Auto"
+            },
+            "compact": {
+              "label": "Kompakt (150 piksler)"
+            },
+            "standard": {
+              "label": "Standard (200 piksler)"
+            },
+            "extended": {
+              "label": "Utvidet (250 piksler)"
+            }
+          }
+        },
+        "full_width": {
+          "label": "Full bredde"
+        },
+        "show_collection_image": {
+          "label": "Vis samlingsbilde"
+        },
+        "show_collection_description": {
+          "label": "Vis samlingsbeskrivelse"
+        },
+        "header_alignment": {
+          "label": "Justering",
+          "alignment": {
+            "label": "Tekstjustering",
+            "options": {
+              "left": {
+                "label": "Venstre"
+              },
+              "center": {
+                "label": "Senter"
+              },
+              "right": {
+                "label": "Ikke sant"
+              }
+            }
+          }
+        },
+        "header_colors": {
+          "label": "Farger",
+          "color_text": {
+            "label": "Tekst"
+          }
+        },
+        "header_spacing": {
+          "label": "Seksjonsavstand",
+          "top_spacing": {
+            "label": "Avstand Topp"
+          },
+          "bottom_spacing": {
+            "label": "Avstand bunn"
+          }
+        }
+      }
+    },
     "events-popup": {
       "name": "Popup for hendelser",
       "settings": {
