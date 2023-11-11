@@ -1,9 +1,9 @@
 {%- liquid
   
-  if collection.featured_image
-   assign collection_image = collection.featured_image
+  if collection.image
+   assign collection_image = collection.image
   else
-   assign collection_image = collection.products.first.featured_image
+   assign collection_image = collection.products.first
   endif
 
   assign ratio = 0.75
