@@ -313,6 +313,7 @@
         },
         "58b60cd6-a012-4f73-ae0d-10b47b04ebbc": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "",
             "collection_heading": "Collection Title"
@@ -320,6 +321,7 @@
         },
         "382afd65-600b-4606-ab46-4256d8829337": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "",
             "collection_heading": "Collection Title"
@@ -367,7 +369,7 @@
         "swipe_on_mobile": false,
         "products_count": true,
         "text_alignment": "center",
-        "collection_layout": "slider",
+        "collection_layout": "grid",
         "lazyload_images": true,
         "margin_top": 60,
         "margin_bottom": 60
