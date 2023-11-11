@@ -35,9 +35,6 @@
     when 5
     assign itemWidth = 'block__item--auto block__item--one-fifth'
     endcase
-    for block in section.blocks
-      assign collections = collections[block.settings.collection]
-    endfor
 -%}
 {%- style -%}
   .main__section-{{ section.id }}{
@@ -84,7 +81,8 @@
               {% endfor %}
             {%- else -%}
               {%- for block in section.blocks -%}
-                {%- if collections[block.settings.collection] == blank -%}
+                {%- assign collection = collections[block.settings.collection] -%}
+                {%- if collection == blank -%}
                   <collection-item class="collection-grid__item {{ itemWidth }} {% if collection_layout == 'slider' %} swiper-slide{% endif %}{% if swipe_on_mobile and collection_layout == 'grid' %} collection-item__scroll{% endif %}" {{ block.shopify_attributes }}>
                     <div class="collection-grid__content">
                       {%- capture count -%}
