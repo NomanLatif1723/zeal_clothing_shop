@@ -123,8 +123,9 @@
               {%- endfor -%}
             {%- endif -%}
           </collection-list>
+          {{ collection }}
           {%- if paginate.pages > 1 -%}
-            {%- render 'pagination', paginate: paginate -%}
+            {%- render 'pagination', paginate: paginate, collection: collection -%}
           {%- endif -%}
         {%- endpaginate -%}
         <div class="swiper-pagination swiper-pagination-{{ section.id }}"></div>
