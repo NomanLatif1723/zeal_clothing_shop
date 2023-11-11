@@ -19,7 +19,7 @@
   {%- unless section.settings.full_width -%}
   <div class="page__width">
   {%- endunless -%}
-    <div class="collection-banner__wrapper" data-desktop-height="{{ desktop_height }}" data-mobile-height="{{ mobile_height }}">
+    <div class="collection-banner__wrapper" data-desktop-height="{{ section.settings.desktop_height }}" data-mobile-height="{{ section.settings.mobile_height }}">
       <div class="collection-banner__image-container">
         {%- if collection.image != blank -%}
           <img
@@ -43,12 +43,8 @@
       <div class="scroll__animate collection-banner__text-container">
         <div class="collection-banner__text-shadow text__align-{{ textAlignment }}">
           <div class="collection-banner__text-content">
-            {%- if header_text != blank -%}
-              <h1>{{ header_text }}</h1>
-            {%- elsif template.name == 'blog' -%}
-              <h1>{{ blog.title }}</h1>
-            {%- else -%}
-              <h1>{{ page.title }}</h1>
+            {%- if section.settings.show_collection_title-%}
+              <h2>{{ collection.title }}</h2>
             {%- endif -%}
             {%- if show_breadcrumbs -%}
               <nav role="navigation" aria-label="breadcrumb">
