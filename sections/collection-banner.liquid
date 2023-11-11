@@ -18,6 +18,59 @@
     "name": "Collection Banner",
     "settings": [
       {
+        "type": "select",
+        "id": "section_height_desktop",
+        "label": "t:sections.collection-banner.settings.section_height_desktop.label",
+        "options": [
+          {
+            "value": "natural",
+            "label": "t:sections.collection-banner.settings.section_height_desktop.options.natural.label"
+          },
+          {
+            "value": "compact",
+            "label": "t:sections.collection-banner.settings.section_height_desktop.options.compact.label"
+          },
+          {
+            "value": "standard",
+            "label": "t:sections.collection-banner.settings.section_height_desktop.options.standard.label"
+          },
+          {
+            "value": "extended",
+            "label": "t:sections.collection-banner.settings.section_height_desktop.options.extended.label"
+          }
+        ],
+        "default": "natural"
+      },
+      {
+        "type": "select",
+        "id": "section_height_mobile",
+        "label": "t:sections.collection-banner.settings.section_height_mobile.label",
+        "options": [
+          {
+            "value": "auto",
+            "label": "t:sections.collection-banner.settings.section_height_mobile.options.auto.label"
+          },
+          {
+            "value": "compact",
+            "label": "t:sections.collection-banner.settings.section_height_mobile.options.compact.label"
+          },
+          {
+            "value": "standard",
+            "label": "t:sections.collection-banner.settings.section_height_mobile.options.standard.label"
+          },
+          {
+            "value": "extended",
+            "label": "t:sections.collection-banner.settings.section_height_mobile.options.extended.label"
+          }
+        ],
+        "default": "auto"
+      },
+      {
+        "type": "checkbox",
+        "id": "full_width",
+        "label": "t:sections.collection-banner.settings.full_width.label"
+      },
+      {
         "type": "checkbox",
         "id": "show_collection_image",
         "label": "t:sections.collection-banner.settings.show_collection_image.label",
