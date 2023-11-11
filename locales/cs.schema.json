@@ -166,9 +166,6 @@
         "collection_per_row": {
           "label": "Sbírky na řádek"
         },
-        "all_collections": {
-          "label": "Zobrazit všechny sbírky"
-        },
         "swipe_on_mobile": {
           "label": "Přejeďte na mobilu"
         },
@@ -1382,6 +1379,83 @@
             }
           }
         }
+      }
+    },
+    "main-collection-list": {
+      "name": "Seznam sbírek",
+      "settings": {
+        "heading": {
+          "label": "Nadpis"
+        },
+        "collection_per_row": {
+          "label": "Sbírky na řádek"
+        },
+        "all_collections": {
+          "label": "Zobrazit všechny sbírky"
+        },
+        "swipe_on_mobile": {
+          "label": "Přejeďte na mobilu"
+        },
+        "products_count": {
+          "label": "Produkty V Kolekci"
+        },
+        "header_alignment": {
+          "label": "Zarovnání",
+          "alignment": {
+            "label": "Zarovnání textu",
+            "options": {
+              "left": {
+                "label": "Vlevo, odjet"
+              },
+              "center": {
+                "label": "Centrum"
+              },
+              "right": {
+                "label": "Že jo"
+              }
+            }
+          }
+        },
+        "collection_layout": {
+          "label": "rozložení",
+          "options": {
+            "grid": {
+              "label": "Mřížka"
+            },
+            "slider": {
+              "label": "Posuvník"
+            }
+          }
+        },
+        "lazyload_images": {
+          "label": "Povolit LazyLoad Images",
+          "info": "Povolte Lazyload, pokud jsou obrázky mimo obrazovku, abyste zlepšili výkon"
+        },
+        "header_spacing": {
+          "label": "Rozteč sekcí",
+          "top_spacing": {
+            "label": "Rozteč nahoře"
+          },
+          "bottom_spacing": {
+            "label": "Mezera dole"
+          }
+        }
+      },
+      "blocks": {
+        "collection": {
+          "name": "Sbírka",
+          "settings": {
+            "collection": {
+              "label": "Sbírka"
+            },
+            "collection_heading": {
+              "label": "Nadpis"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Seznam sbírek"
       }
     },
     "main-search": {
