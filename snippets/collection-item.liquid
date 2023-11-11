@@ -1,6 +1,6 @@
 {%- liquid
   assign collection_image = collection.featured_image
-  if collection_image == 'blank'
+  if collection_image == blank
     assign collection_image = collection.products.first
   elsif settings.show_first_product and collection_image
    assign collection_image = collection.products.first
