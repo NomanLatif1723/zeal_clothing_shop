@@ -9,7 +9,7 @@
          assign total_count = article.comments_count
        elsif template.name == 'search'
          assign total_count = search.results_count
-       elsif template.name == 'collection-list'
+       elsif template.name == 'list-collections'
          assign total_count = collections.size
        endif
     -%}
