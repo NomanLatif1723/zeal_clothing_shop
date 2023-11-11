@@ -366,9 +366,8 @@
       "settings": {
         "heading": "Shop by Categories",
         "collection_per_row": 4,
-        "all_collections": false,
         "swipe_on_mobile": false,
-        "products_count": true,
+        "products_count": false,
         "text_alignment": "center",
         "collection_layout": "grid",
         "lazyload_images": true,
@@ -960,7 +959,8 @@
         "template--19980215124290__c0a967db-8ba7-41d1-833e-fbe96989c9c1-buy_buttons-1": {
           "type": "buy_buttons",
           "settings": {
-            "enable_dynamic_checkout": false
+            "enable_dynamic_checkout": false,
+            "enable_gift_card_recipient": false
           }
         },
         "bee06aca-deb8-406a-9d5e-bc0656aca227": {
@@ -1103,7 +1103,8 @@
         "template--19980215124290__f6a0ab30-1339-4dd4-8eb5-070921979e00-buy_buttons-1": {
           "type": "buy_buttons",
           "settings": {
-            "enable_dynamic_checkout": false
+            "enable_dynamic_checkout": false,
+            "enable_gift_card_recipient": false
           }
         }
       },
