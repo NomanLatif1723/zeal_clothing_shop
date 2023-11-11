@@ -166,9 +166,6 @@
         "collection_per_row": {
           "label": "مجموعات لكل صف"
         },
-        "all_collections": {
-          "label": "عرض كافة المجموعات"
-        },
         "swipe_on_mobile": {
           "label": "انتقد على الهاتف المحمول"
         },
@@ -1382,6 +1379,83 @@
             }
           }
         }
+      }
+    },
+    "main-collection-list": {
+      "name": "قائمة المجموعة",
+      "settings": {
+        "heading": {
+          "label": "عنوان"
+        },
+        "collection_per_row": {
+          "label": "مجموعات لكل صف"
+        },
+        "all_collections": {
+          "label": "عرض كافة المجموعات"
+        },
+        "swipe_on_mobile": {
+          "label": "انتقد على الهاتف المحمول"
+        },
+        "products_count": {
+          "label": "المنتجات في مجموعة"
+        },
+        "header_alignment": {
+          "label": "تنسيق",
+          "alignment": {
+            "label": "محاذاة النص",
+            "options": {
+              "left": {
+                "label": "غادر"
+              },
+              "center": {
+                "label": "مركز"
+              },
+              "right": {
+                "label": "يمين"
+              }
+            }
+          }
+        },
+        "collection_layout": {
+          "label": "تَخطِيط",
+          "options": {
+            "grid": {
+              "label": "شبكة"
+            },
+            "slider": {
+              "label": "المنزلق"
+            }
+          }
+        },
+        "lazyload_images": {
+          "label": "تمكين الصور LazyLoad",
+          "info": "قم بتمكين Lazyload إذا كانت الصور خارج الشاشة لتحسين الأداء"
+        },
+        "header_spacing": {
+          "label": "تباعد القسم",
+          "top_spacing": {
+            "label": "تباعد الأعلى"
+          },
+          "bottom_spacing": {
+            "label": "تباعد القاع"
+          }
+        }
+      },
+      "blocks": {
+        "collection": {
+          "name": "مجموعة",
+          "settings": {
+            "collection": {
+              "label": "مجموعة"
+            },
+            "collection_heading": {
+              "label": "عنوان"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "قائمة المجموعة"
       }
     },
     "main-search": {
