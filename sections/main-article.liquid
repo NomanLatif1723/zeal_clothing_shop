@@ -32,7 +32,7 @@
           {%- endif -%}
           {%- if show_date -%}
             <span class="article__date">
-              {{ article.created_at | date: '%d %b %Y' }}
+              {{ article.published_at | date: '%d %b %Y' }}
             </span>
           {%- endif -%}
         </div>
