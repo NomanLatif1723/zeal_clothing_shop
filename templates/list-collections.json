@@ -1,7 +1,7 @@
 {
   "sections": {
     "main": {
-      "type": "collection-list",
+      "type": "main-collection-list",
       "blocks": {
         "9b3db24c-6539-4c14-8151-e6f2746b41d8": {
           "type": "collection",
@@ -47,7 +47,7 @@
         "9dbcd8ab-433a-4b55-bef8-1ba717ff71c2"
       ],
       "settings": {
-        "heading": "Shop by Categories",
+        "heading": "Collections",
         "collection_per_row": 4,
         "all_collections": true,
         "swipe_on_mobile": false,
