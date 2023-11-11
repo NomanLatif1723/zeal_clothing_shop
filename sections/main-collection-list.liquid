@@ -6,6 +6,7 @@
     assign textAlignment = section.settings.text_alignment
     assign swipe_on_mobile = section.settings.swipe_on_mobile
     assign collection_layout = section.settings.collection_layout
+    assign collections = collections[block.settings.collection]
     assign lazyloading = ''
     assign lazyloadImages = section.settings.lazyload_images
     if lazyloadImages
