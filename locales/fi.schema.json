@@ -358,6 +358,89 @@
         "name": "Täydentävät tuotteet"
       }
     },
+    "collection-banner": {
+      "name": "Kokoelman banneri",
+      "settings": {
+        "paragraph": {
+          "content": "Jos haluat muuttaa kokoelman kuvauksia tai kokoelmakuvia, [muokkaa kokoelmiasi](\/admin\/collections)."
+        },
+        "section_height_desktop": {
+          "label": "Työpöydän korkeus",
+          "options": {
+            "natural": {
+              "label": "Luonnollinen"
+            },
+            "compact": {
+              "label": "Kompakti (200px)"
+            },
+            "standard": {
+              "label": "Vakio (300 kuvapistettä)"
+            },
+            "extended": {
+              "label": "Laajennettu (400 pikseliä)"
+            }
+          }
+        },
+        "section_height_mobile": {
+          "label": "Mobiilikorkeus",
+          "options": {
+            "auto": {
+              "label": "Auto"
+            },
+            "compact": {
+              "label": "Kompakti (150px)"
+            },
+            "standard": {
+              "label": "Vakio (200px)"
+            },
+            "extended": {
+              "label": "Laajennettu (250 kuvapistettä)"
+            }
+          }
+        },
+        "full_width": {
+          "label": "Täysi leveys"
+        },
+        "show_collection_image": {
+          "label": "Näytä kokoelman kuva"
+        },
+        "show_collection_description": {
+          "label": "Näytä kokoelman kuvaus"
+        },
+        "header_alignment": {
+          "label": "Tasaus",
+          "alignment": {
+            "label": "Tekstin tasaus",
+            "options": {
+              "left": {
+                "label": "Vasen"
+              },
+              "center": {
+                "label": "Keskusta"
+              },
+              "right": {
+                "label": "Oikein"
+              }
+            }
+          }
+        },
+        "header_colors": {
+          "label": "värit",
+          "color_text": {
+            "label": "Teksti"
+          }
+        },
+        "header_spacing": {
+          "label": "Osavälit",
+          "top_spacing": {
+            "label": "Välilyönti Top"
+          },
+          "bottom_spacing": {
+            "label": "Pohjaväli"
+          }
+        }
+      }
+    },
     "events-popup": {
       "name": "Tapahtumat Popup",
       "settings": {
