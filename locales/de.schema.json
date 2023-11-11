@@ -166,9 +166,6 @@
         "collection_per_row": {
           "label": "Sammlungen pro Zeile"
         },
-        "all_collections": {
-          "label": "Alle Kollektionen anzeigen"
-        },
         "swipe_on_mobile": {
           "label": "Wischen Sie auf dem Handy"
         },
@@ -1375,6 +1372,80 @@
             },
             "banner_link": {
               "label": "Verknüpfung"
+            }
+          }
+        }
+      }
+    },
+    "main-collection-list": {
+      "name": "Sammlungsliste",
+      "settings": {
+        "heading": {
+          "label": "Überschrift"
+        },
+        "collection_per_row": {
+          "label": "Sammlungen pro Zeile"
+        },
+        "all_collections": {
+          "label": "Alle Kollektionen anzeigen"
+        },
+        "swipe_on_mobile": {
+          "label": "Wischen Sie auf dem Handy"
+        },
+        "products_count": {
+          "label": "Produkte in einer Sammlung"
+        },
+        "header_alignment": {
+          "label": "Ausrichtung",
+          "alignment": {
+            "label": "Textausrichtung",
+            "options": {
+              "left": {
+                "label": "Links"
+              },
+              "center": {
+                "label": "Center"
+              },
+              "right": {
+                "label": "Rechts"
+              }
+            }
+          }
+        },
+        "collection_layout": {
+          "label": "Layout",
+          "options": {
+            "grid": {
+              "label": "Netz"
+            },
+            "slider": {
+              "label": "Schieberegler"
+            }
+          }
+        },
+        "lazyload_images": {
+          "label": "Aktivieren Sie LazyLoad-Bilder",
+          "info": "Aktivieren Sie Lazyload, wenn sich Bilder außerhalb des Bildschirms befinden, um die Leistung zu verbessern"
+        },
+        "header_spacing": {
+          "label": "Abschnittsabstand",
+          "top_spacing": {
+            "label": "Abstand oben"
+          },
+          "bottom_spacing": {
+            "label": "Abstand unten"
+          }
+        }
+      },
+      "blocks": {
+        "collection": {
+          "name": "Sammlung",
+          "settings": {
+            "collection": {
+              "label": "Sammlung"
+            },
+            "collection_heading": {
+              "label": "Überschrift"
             }
           }
         }
