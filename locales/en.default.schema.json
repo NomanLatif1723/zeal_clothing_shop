@@ -361,6 +361,9 @@
     "collection-banner": {
       "name": "Collection Banner",
       "settings": {
+        "paragraph": {
+          "content": "To change collection descriptions or collection images, [edit your collections](\/admin\/collections)."
+        },
         "section_height_desktop": {
           "label": "Desktop Height",
           "options": {
