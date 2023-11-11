@@ -166,9 +166,6 @@
         "collection_per_row": {
           "label": "行ごとのコレクション数"
         },
-        "all_collections": {
-          "label": "すべてのコレクションを表示"
-        },
         "swipe_on_mobile": {
           "label": "モバイルでスワイプ"
         },
@@ -1379,6 +1376,80 @@
             },
             "banner_link": {
               "label": "リンク"
+            }
+          }
+        }
+      }
+    },
+    "main-collection-list": {
+      "name": "コレクションリスト",
+      "settings": {
+        "heading": {
+          "label": "見出し"
+        },
+        "collection_per_row": {
+          "label": "行ごとのコレクション数"
+        },
+        "all_collections": {
+          "label": "すべてのコレクションを表示"
+        },
+        "swipe_on_mobile": {
+          "label": "モバイルでスワイプ"
+        },
+        "products_count": {
+          "label": "コレクション内の製品"
+        },
+        "header_alignment": {
+          "label": "位置合わせ",
+          "alignment": {
+            "label": "テキストの配置",
+            "options": {
+              "left": {
+                "label": "左"
+              },
+              "center": {
+                "label": "中心"
+              },
+              "right": {
+                "label": "右"
+              }
+            }
+          }
+        },
+        "collection_layout": {
+          "label": "レイアウト",
+          "options": {
+            "grid": {
+              "label": "グリッド"
+            },
+            "slider": {
+              "label": "スライダー"
+            }
+          }
+        },
+        "lazyload_images": {
+          "label": "LazyLoad イメージを有効にする",
+          "info": "画像が画面外にある場合に Lazyload を有効にしてパフォーマンスを向上させる"
+        },
+        "header_spacing": {
+          "label": "セクションの間隔",
+          "top_spacing": {
+            "label": "上部の間隔"
+          },
+          "bottom_spacing": {
+            "label": "下部の間隔"
+          }
+        }
+      },
+      "blocks": {
+        "collection": {
+          "name": "コレクション",
+          "settings": {
+            "collection": {
+              "label": "コレクション"
+            },
+            "collection_heading": {
+              "label": "見出し"
             }
           }
         }
