@@ -358,6 +358,89 @@
         "name": "Prodotti complementari"
       }
     },
+    "collection-banner": {
+      "name": "Bandiera della raccolta",
+      "settings": {
+        "paragraph": {
+          "content": "Per modificare le descrizioni o le immagini delle collezioni, [modifica le tue collezioni](\/admin\/collections)."
+        },
+        "section_height_desktop": {
+          "label": "Altezza del tavolo",
+          "options": {
+            "natural": {
+              "label": "Naturale"
+            },
+            "compact": {
+              "label": "Compatto (200px)"
+            },
+            "standard": {
+              "label": "Standard (300px)"
+            },
+            "extended": {
+              "label": "Esteso (400px)"
+            }
+          }
+        },
+        "section_height_mobile": {
+          "label": "Altezza mobile",
+          "options": {
+            "auto": {
+              "label": "Auto"
+            },
+            "compact": {
+              "label": "Compatto (150px)"
+            },
+            "standard": {
+              "label": "Standard (200px)"
+            },
+            "extended": {
+              "label": "Esteso (250px)"
+            }
+          }
+        },
+        "full_width": {
+          "label": "Intera larghezza"
+        },
+        "show_collection_image": {
+          "label": "Mostra l'immagine della raccolta"
+        },
+        "show_collection_description": {
+          "label": "Mostra la descrizione della collezione"
+        },
+        "header_alignment": {
+          "label": "Allineamento",
+          "alignment": {
+            "label": "Allineamento del testo",
+            "options": {
+              "left": {
+                "label": "Sinistra"
+              },
+              "center": {
+                "label": "Centro"
+              },
+              "right": {
+                "label": "Giusto"
+              }
+            }
+          }
+        },
+        "header_colors": {
+          "label": "Colori",
+          "color_text": {
+            "label": "Testo"
+          }
+        },
+        "header_spacing": {
+          "label": "Spaziatura della sezione",
+          "top_spacing": {
+            "label": "Spaziatura superiore"
+          },
+          "bottom_spacing": {
+            "label": "Spaziatura inferiore"
+          }
+        }
+      }
+    },
     "events-popup": {
       "name": "Pop-up eventi",
       "settings": {
