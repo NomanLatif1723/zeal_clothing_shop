@@ -5,7 +5,7 @@
       "settings": {
         "section_height_desktop": "standard",
         "section_height_mobile": "auto",
-        "full_width": false,
+        "full_width": true,
         "show_collection_image": true,
         "show_collection_title": true,
         "show_collection_description": true,
