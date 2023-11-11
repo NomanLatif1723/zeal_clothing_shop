@@ -11,7 +11,64 @@
   }
 {%- endstyle -%}
 <div class="collection__banner main__section-{{ section.id }}">
-  
+  {%- unless full_width -%}
+  <div class="page__width">
+  {%- endunless -%}
+    <div class="collection-banner__wrapper" data-desktop-height="{{ desktop_height }}" data-mobile-height="{{ mobile_height }}">
+      <div class="collection-banner__image-container">
+        {%- if collection.image != blank -%}
+          <img
+            src="{{ header_image | img_url: default }}"
+            srcset="
+              {{ collection.image | img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
+              {{ collection.image | img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
+              {{ collection.image | img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
+              {{ collection.image | img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
+              {{ collection.image | img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
+              "
+            width="{{ collection.image.width }}"
+            height="{{ collection.image.height }}"
+            loading="lazy"
+            sizes="{{ sizes }}"
+            alt="{{ collection.image.alt }}" />
+        {%- else -%}
+          {{ 'lifestyle-1' | placeholder_svg_tag: "placeholder__image" }}
+        {%- endif -%}
+      </div>
+      <div class="scroll__animate collection-banner__text-container">
+        <div class="collection-banner__text-shadow text__align-{{ textAlignment }}">
+          <div class="collection-banner__text-content">
+            {%- if header_text != blank -%}
+              <h1>{{ header_text }}</h1>
+            {%- elsif template.name == 'blog' -%}
+              <h1>{{ blog.title }}</h1>
+            {%- else -%}
+              <h1>{{ page.title }}</h1>
+            {%- endif -%}
+            {%- if show_breadcrumbs -%}
+              <nav role="navigation" aria-label="breadcrumb">
+                <ul class="breadcrumb__list page-breadcrumb__list">
+                    <li class="breadcrumb__item">
+                        <a href="{{ routes.root_url }}" title="Home">{{ 'general.breadcrumbs.home' | t }}</a>
+                    </li>
+                    <span class="separater__icon">{% render 'icon-arrow-down' %}</span>
+                    <li class="breadcrumb__item" aria-current="page">
+                      {%- if template.name == 'blog' -%}
+                        <span>{{ blog.title }}</span>
+                      {%- else -%}
+                        <span>{{ page.title }}</span>
+                      {%- endif -%}
+                    </li>
+                </ul>
+              </nav>
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  {%- unless full_width -%}
+  </div>
+  {%- endunless -%}
 </div>
 {% schema %}
   {
