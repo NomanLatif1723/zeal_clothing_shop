@@ -166,9 +166,6 @@
         "collection_per_row": {
           "label": "Samlingar per rad"
         },
-        "all_collections": {
-          "label": "Visa alla samlingar"
-        },
         "swipe_on_mobile": {
           "label": "Svep på mobilen"
         },
@@ -1379,6 +1376,80 @@
             },
             "banner_link": {
               "label": "Länk"
+            }
+          }
+        }
+      }
+    },
+    "main-collection-list": {
+      "name": "Samlingslista",
+      "settings": {
+        "heading": {
+          "label": "Rubrik"
+        },
+        "collection_per_row": {
+          "label": "Samlingar per rad"
+        },
+        "all_collections": {
+          "label": "Visa alla samlingar"
+        },
+        "swipe_on_mobile": {
+          "label": "Svep på mobilen"
+        },
+        "products_count": {
+          "label": "Produkter I En Samling"
+        },
+        "header_alignment": {
+          "label": "Inriktning",
+          "alignment": {
+            "label": "Textjustering",
+            "options": {
+              "left": {
+                "label": "Vänster"
+              },
+              "center": {
+                "label": "Centrum"
+              },
+              "right": {
+                "label": "Höger"
+              }
+            }
+          }
+        },
+        "collection_layout": {
+          "label": "layout",
+          "options": {
+            "grid": {
+              "label": "Rutnät"
+            },
+            "slider": {
+              "label": "Skjutreglage"
+            }
+          }
+        },
+        "lazyload_images": {
+          "label": "Aktivera LazyLoad Images",
+          "info": "Aktivera Lazyload om bilder är utanför skärmen för att förbättra prestanda"
+        },
+        "header_spacing": {
+          "label": "Sektionsavstånd",
+          "top_spacing": {
+            "label": "Avstånd Topp"
+          },
+          "bottom_spacing": {
+            "label": "Avstånd Botten"
+          }
+        }
+      },
+      "blocks": {
+        "collection": {
+          "name": "Samling",
+          "settings": {
+            "collection": {
+              "label": "Samling"
+            },
+            "collection_heading": {
+              "label": "Rubrik"
             }
           }
         }
