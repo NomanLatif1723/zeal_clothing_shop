@@ -166,9 +166,6 @@
         "collection_per_row": {
           "label": "Coleções por linha"
         },
-        "all_collections": {
-          "label": "Mostrar todas as coleções"
-        },
         "swipe_on_mobile": {
           "label": "Deslize no celular"
         },
@@ -1379,6 +1376,80 @@
             },
             "banner_link": {
               "label": "Link"
+            }
+          }
+        }
+      }
+    },
+    "main-collection-list": {
+      "name": "Lista de coleções",
+      "settings": {
+        "heading": {
+          "label": "Cabeçalho"
+        },
+        "collection_per_row": {
+          "label": "Coleções por linha"
+        },
+        "all_collections": {
+          "label": "Mostrar todas as coleções"
+        },
+        "swipe_on_mobile": {
+          "label": "Deslize no celular"
+        },
+        "products_count": {
+          "label": "Produtos em uma coleção"
+        },
+        "header_alignment": {
+          "label": "Alinhamento",
+          "alignment": {
+            "label": "Alinhamento de texto",
+            "options": {
+              "left": {
+                "label": "Esquerda"
+              },
+              "center": {
+                "label": "Centro"
+              },
+              "right": {
+                "label": "Certo"
+              }
+            }
+          }
+        },
+        "collection_layout": {
+          "label": "layout",
+          "options": {
+            "grid": {
+              "label": "Grade"
+            },
+            "slider": {
+              "label": "Controle deslizante"
+            }
+          }
+        },
+        "lazyload_images": {
+          "label": "Habilitar imagens LazyLoad",
+          "info": "Ative o Lazyload se as imagens estiverem fora da tela para melhorar o desempenho"
+        },
+        "header_spacing": {
+          "label": "Espaçamento entre seções",
+          "top_spacing": {
+            "label": "Espaçamento Superior"
+          },
+          "bottom_spacing": {
+            "label": "Espaçamento Inferior"
+          }
+        }
+      },
+      "blocks": {
+        "collection": {
+          "name": "Coleção",
+          "settings": {
+            "collection": {
+              "label": "Coleção"
+            },
+            "collection_heading": {
+              "label": "Cabeçalho"
             }
           }
         }
