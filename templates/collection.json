@@ -11,8 +11,8 @@
         "show_collection_description": true,
         "text_alignment": "center",
         "color_text": "#ffffff",
-        "margin_top": 16,
-        "margin_bottom": 16
+        "margin_top": 60,
+        "margin_bottom": 60
       }
     },
     "main": {
