@@ -76,7 +76,7 @@
                 "@type": "Answer",
                 "text": {{ block.settings.answer | json }}
               }
-            },
+            }{% unless forloop.last %},{% endunless %}
         {% endcase %}
       {% endfor %}
     ]
