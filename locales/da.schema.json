@@ -358,6 +358,89 @@
         "name": "Supplerende produkter"
       }
     },
+    "collection-banner": {
+      "name": "Samling banner",
+      "settings": {
+        "paragraph": {
+          "content": "For at ændre samlingsbeskrivelser eller samlingsbilleder, [rediger dine samlinger](\/admin\/collections)."
+        },
+        "section_height_desktop": {
+          "label": "Højde på skrivebordet",
+          "options": {
+            "natural": {
+              "label": "Naturlig"
+            },
+            "compact": {
+              "label": "Kompakt (200px)"
+            },
+            "standard": {
+              "label": "Standard (300px)"
+            },
+            "extended": {
+              "label": "Udvidet (400px)"
+            }
+          }
+        },
+        "section_height_mobile": {
+          "label": "Mobil højde",
+          "options": {
+            "auto": {
+              "label": "Auto"
+            },
+            "compact": {
+              "label": "Kompakt (150px)"
+            },
+            "standard": {
+              "label": "Standard (200px)"
+            },
+            "extended": {
+              "label": "Udvidet (250px)"
+            }
+          }
+        },
+        "full_width": {
+          "label": "Fuld bredde"
+        },
+        "show_collection_image": {
+          "label": "Vis samlingsbillede"
+        },
+        "show_collection_description": {
+          "label": "Vis samlingsbeskrivelse"
+        },
+        "header_alignment": {
+          "label": "Justering",
+          "alignment": {
+            "label": "Tekstjustering",
+            "options": {
+              "left": {
+                "label": "Venstre"
+              },
+              "center": {
+                "label": "Centrum"
+              },
+              "right": {
+                "label": "Højre"
+              }
+            }
+          }
+        },
+        "header_colors": {
+          "label": "Farver",
+          "color_text": {
+            "label": "Tekst"
+          }
+        },
+        "header_spacing": {
+          "label": "Sektionsafstand",
+          "top_spacing": {
+            "label": "Afstand Top"
+          },
+          "bottom_spacing": {
+            "label": "Mellemrum bund"
+          }
+        }
+      }
+    },
     "events-popup": {
       "name": "Popup-begivenheder",
       "settings": {
