@@ -358,6 +358,89 @@
         "name": "Doplňkové produkty"
       }
     },
+    "collection-banner": {
+      "name": "Kolekce Banner",
+      "settings": {
+        "paragraph": {
+          "content": "Chcete-li změnit popisy sbírek nebo obrázky sbírek, [upravte své sbírky](\/admin\/collections)."
+        },
+        "section_height_desktop": {
+          "label": "Výška pracovní plochy",
+          "options": {
+            "natural": {
+              "label": "Přírodní"
+            },
+            "compact": {
+              "label": "Kompaktní (200 pixelů)"
+            },
+            "standard": {
+              "label": "Standardní (300 pixelů)"
+            },
+            "extended": {
+              "label": "Rozšířené (400px)"
+            }
+          }
+        },
+        "section_height_mobile": {
+          "label": "Mobilní výška",
+          "options": {
+            "auto": {
+              "label": "Auto"
+            },
+            "compact": {
+              "label": "Kompaktní (150 pixelů)"
+            },
+            "standard": {
+              "label": "Standardní (200 pixelů)"
+            },
+            "extended": {
+              "label": "Rozšířené (250px)"
+            }
+          }
+        },
+        "full_width": {
+          "label": "Plná šířka"
+        },
+        "show_collection_image": {
+          "label": "Zobrazit obrázek kolekce"
+        },
+        "show_collection_description": {
+          "label": "Zobrazit popis kolekce"
+        },
+        "header_alignment": {
+          "label": "Zarovnání",
+          "alignment": {
+            "label": "Zarovnání textu",
+            "options": {
+              "left": {
+                "label": "Vlevo, odjet"
+              },
+              "center": {
+                "label": "Centrum"
+              },
+              "right": {
+                "label": "Že jo"
+              }
+            }
+          }
+        },
+        "header_colors": {
+          "label": "Barvy",
+          "color_text": {
+            "label": "Text"
+          }
+        },
+        "header_spacing": {
+          "label": "Rozteč sekcí",
+          "top_spacing": {
+            "label": "Rozteč nahoře"
+          },
+          "bottom_spacing": {
+            "label": "Mezera dole"
+          }
+        }
+      }
+    },
     "events-popup": {
       "name": "Popup událostí",
       "settings": {
