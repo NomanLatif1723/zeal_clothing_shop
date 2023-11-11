@@ -1384,6 +1384,83 @@
         }
       }
     },
+    "main-collection-list": {
+      "name": "Collection List",
+      "settings": {
+        "heading": {
+          "label": "Heading"
+        },
+        "collection_per_row": {
+          "label": "Collections Per Row"
+        },
+        "all_collections": {
+          "label": "Show All Collections"
+        },
+        "swipe_on_mobile": {
+          "label": "Swipe On Mobile"
+        },
+        "products_count": {
+          "label": "Products In A Collection"
+        },
+        "header_alignment": {
+          "label": "Alignment",
+          "alignment": {
+            "label": "Text alignment",
+            "options": {
+              "left": {
+                "label": "Left"
+              },
+              "center": {
+                "label": "Center"
+              },
+              "right": {
+                "label": "Right"
+              }
+            }
+          }
+        },
+        "collection_layout": {
+          "label": "layout",
+          "options": {
+            "grid": {
+              "label": "Grid"
+            },
+            "slider": {
+              "label": "Slider"
+            }
+          }
+        },
+        "lazyload_images": {
+          "label": "Enable LazyLoad Images",
+          "info": "Enable Lazyload If Images are Offscreen to Improve Performance"
+        },
+        "header_spacing": {
+          "label": "Section Spacing",
+          "top_spacing": {
+            "label": "Spacing Top"
+          },
+          "bottom_spacing": {
+            "label": "Spacing Bottom"
+          }
+        }
+      },
+      "blocks": {
+        "collection": {
+          "name": "Collection",
+          "settings": {
+            "collection": {
+              "label": "Collection"
+            },
+            "collection_heading": {
+              "label": "Heading"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Collection List"
+      }
+    },
     "main-search": {
       "name": "Search",
       "settings": {
