@@ -166,9 +166,6 @@
         "collection_per_row": {
           "label": "Kokoelmat per rivi"
         },
-        "all_collections": {
-          "label": "Näytä kaikki kokoelmat"
-        },
         "swipe_on_mobile": {
           "label": "Pyyhkäise mobiilissa"
         },
@@ -1379,6 +1376,80 @@
             },
             "banner_link": {
               "label": "Linkki"
+            }
+          }
+        }
+      }
+    },
+    "main-collection-list": {
+      "name": "Kokoelmaluettelo",
+      "settings": {
+        "heading": {
+          "label": "Otsikko"
+        },
+        "collection_per_row": {
+          "label": "Kokoelmat per rivi"
+        },
+        "all_collections": {
+          "label": "Näytä kaikki kokoelmat"
+        },
+        "swipe_on_mobile": {
+          "label": "Pyyhkäise mobiilissa"
+        },
+        "products_count": {
+          "label": "Tuotteet Kokoelmassa"
+        },
+        "header_alignment": {
+          "label": "Tasaus",
+          "alignment": {
+            "label": "Tekstin tasaus",
+            "options": {
+              "left": {
+                "label": "Vasen"
+              },
+              "center": {
+                "label": "Keskusta"
+              },
+              "right": {
+                "label": "Oikein"
+              }
+            }
+          }
+        },
+        "collection_layout": {
+          "label": "layout",
+          "options": {
+            "grid": {
+              "label": "Ruudukko"
+            },
+            "slider": {
+              "label": "Liukusäädin"
+            }
+          }
+        },
+        "lazyload_images": {
+          "label": "Ota LazyLoad Images käyttöön",
+          "info": "Paranna suorituskykyä ottamalla Lazyload käyttöön, jos kuvat ovat näytön ulkopuolella"
+        },
+        "header_spacing": {
+          "label": "Osavälit",
+          "top_spacing": {
+            "label": "Välilyönti Top"
+          },
+          "bottom_spacing": {
+            "label": "Pohjaväli"
+          }
+        }
+      },
+      "blocks": {
+        "collection": {
+          "name": "Kokoelma",
+          "settings": {
+            "collection": {
+              "label": "Kokoelma"
+            },
+            "collection_heading": {
+              "label": "Otsikko"
             }
           }
         }
