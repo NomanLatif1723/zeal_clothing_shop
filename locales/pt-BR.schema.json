@@ -166,9 +166,6 @@
         "collection_per_row": {
           "label": "Coleções por linha"
         },
-        "all_collections": {
-          "label": "Mostrar todas as coleções"
-        },
         "swipe_on_mobile": {
           "label": "Deslize no celular"
         },
