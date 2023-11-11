@@ -11,6 +11,7 @@
   <div class="collection-grid__content">
     <a href="{{ collection.url }}" title="{{ collection.title }}">
       <div class="collection-grid__image" style="aspect-ratio: {{ imageAspectRatio }};">
+        {% if collection_image %}
         <img
           src="{{ collection_image | img_url: default }}"
           srcset="
@@ -25,6 +26,9 @@
           loading="{{ lazyloading }}"
           sizes="{{ sizes }}"
           alt="{{ collection_image.alt }}" />
+          {% else %}
+            <img src="{{ collection.products.first }}" width="" height="" loading="" />
+          {% endif %}
           {%- if settings.overlay_style == false -%}
             <div class="overlay-box__container text__align-{{ textAlignment }}">
               <div class="collection-grid__text">
