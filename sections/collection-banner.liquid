@@ -16,7 +16,7 @@
   }
 {%- endstyle -%}
 <div class="collection__banner main__section-{{ section.id }}">
-  {%- unless full_width -%}
+  {%- unless section.settings.full_width -%}
   <div class="page__width">
   {%- endunless -%}
     <div class="collection-banner__wrapper" data-desktop-height="{{ desktop_height }}" data-mobile-height="{{ mobile_height }}">
@@ -71,7 +71,7 @@
         </div>
       </div>
     </div>
-  {%- unless full_width -%}
+  {%- unless section.settings.full_width -%}
   </div>
   {%- endunless -%}
 </div>
