@@ -1,6 +1,8 @@
 {%- liquid
-  assign collection_image = collection.featured_image
-  if collection_image == blank 
+  
+  if collection.featured_image
+   assign collection_image = collection.featured_image
+  else
    assign collection_image = collection.products.first.featured_image
   endif
 
