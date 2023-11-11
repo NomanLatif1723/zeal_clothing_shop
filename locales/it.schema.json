@@ -166,9 +166,6 @@
         "collection_per_row": {
           "label": "Raccolte per riga"
         },
-        "all_collections": {
-          "label": "Mostra tutte le collezioni"
-        },
         "swipe_on_mobile": {
           "label": "Scorri sul cellulare"
         },
@@ -1379,6 +1376,80 @@
             },
             "banner_link": {
               "label": "Collegamento"
+            }
+          }
+        }
+      }
+    },
+    "main-collection-list": {
+      "name": "Elenco delle raccolte",
+      "settings": {
+        "heading": {
+          "label": "Intestazione"
+        },
+        "collection_per_row": {
+          "label": "Raccolte per riga"
+        },
+        "all_collections": {
+          "label": "Mostra tutte le collezioni"
+        },
+        "swipe_on_mobile": {
+          "label": "Scorri sul cellulare"
+        },
+        "products_count": {
+          "label": "Prodotti In Una Collezione"
+        },
+        "header_alignment": {
+          "label": "Allineamento",
+          "alignment": {
+            "label": "Allineamento del testo",
+            "options": {
+              "left": {
+                "label": "Sinistra"
+              },
+              "center": {
+                "label": "Centro"
+              },
+              "right": {
+                "label": "Giusto"
+              }
+            }
+          }
+        },
+        "collection_layout": {
+          "label": "disposizione",
+          "options": {
+            "grid": {
+              "label": "Griglia"
+            },
+            "slider": {
+              "label": "Dispositivo di scorrimento"
+            }
+          }
+        },
+        "lazyload_images": {
+          "label": "Abilita immagini LazyLoad",
+          "info": "Abilita Lazyload se le immagini sono fuori schermo per migliorare le prestazioni"
+        },
+        "header_spacing": {
+          "label": "Spaziatura della sezione",
+          "top_spacing": {
+            "label": "Spaziatura superiore"
+          },
+          "bottom_spacing": {
+            "label": "Spaziatura inferiore"
+          }
+        }
+      },
+      "blocks": {
+        "collection": {
+          "name": "Collezione",
+          "settings": {
+            "collection": {
+              "label": "Collezione"
+            },
+            "collection_heading": {
+              "label": "Intestazione"
             }
           }
         }
