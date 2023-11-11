@@ -3,7 +3,7 @@
     "header": {
       "type": "page-header",
       "settings": {
-        "section_height_desktop": "natural",
+        "section_height_desktop": "standard",
         "section_height_mobile": "auto",
         "full_width": false,
         "page_image": "shopify:\/\/shop_images\/8d594142-6cc7-44f9-bb4f-87c313910a1c_1.jpg",
