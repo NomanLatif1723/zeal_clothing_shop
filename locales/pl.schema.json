@@ -358,6 +358,89 @@
         "name": "Produkty uzupełniające"
       }
     },
+    "collection-banner": {
+      "name": "Kolekcja banerów",
+      "settings": {
+        "paragraph": {
+          "content": "Aby zmienić opisy kolekcji lub obrazy kolekcji, [edytuj swoje kolekcje](\/admin\/collections)."
+        },
+        "section_height_desktop": {
+          "label": "Wysokość pulpitu",
+          "options": {
+            "natural": {
+              "label": "Naturalny"
+            },
+            "compact": {
+              "label": "Kompaktowy (200px)"
+            },
+            "standard": {
+              "label": "Standardowy (300 pikseli)"
+            },
+            "extended": {
+              "label": "Rozszerzony (400px)"
+            }
+          }
+        },
+        "section_height_mobile": {
+          "label": "Wysokość mobilna",
+          "options": {
+            "auto": {
+              "label": "Automatyczny"
+            },
+            "compact": {
+              "label": "Kompaktowy (150 pikseli)"
+            },
+            "standard": {
+              "label": "Standardowy (200px)"
+            },
+            "extended": {
+              "label": "Rozszerzony (250px)"
+            }
+          }
+        },
+        "full_width": {
+          "label": "Pełna szerokość"
+        },
+        "show_collection_image": {
+          "label": "Pokaż obraz kolekcji"
+        },
+        "show_collection_description": {
+          "label": "Pokaż opis kolekcji"
+        },
+        "header_alignment": {
+          "label": "Wyrównanie",
+          "alignment": {
+            "label": "Wyrównanie tekstu",
+            "options": {
+              "left": {
+                "label": "Lewy"
+              },
+              "center": {
+                "label": "Centrum"
+              },
+              "right": {
+                "label": "Prawidłowy"
+              }
+            }
+          }
+        },
+        "header_colors": {
+          "label": "Zabarwienie",
+          "color_text": {
+            "label": "Tekst"
+          }
+        },
+        "header_spacing": {
+          "label": "Rozstaw sekcji",
+          "top_spacing": {
+            "label": "Rozstaw górny"
+          },
+          "bottom_spacing": {
+            "label": "Rozstaw na dole"
+          }
+        }
+      }
+    },
     "events-popup": {
       "name": "Wyskakujące okienko wydarzeń",
       "settings": {
