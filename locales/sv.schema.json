@@ -358,6 +358,89 @@
         "name": "Kompletterande produkter"
       }
     },
+    "collection-banner": {
+      "name": "Samling banner",
+      "settings": {
+        "paragraph": {
+          "content": "För att ändra samlingsbeskrivningar eller samlingsbilder, [redigera dina samlingar](\/admin\/collections)."
+        },
+        "section_height_desktop": {
+          "label": "Skrivbordshöjd",
+          "options": {
+            "natural": {
+              "label": "Naturlig"
+            },
+            "compact": {
+              "label": "Kompakt (200px)"
+            },
+            "standard": {
+              "label": "Standard (300px)"
+            },
+            "extended": {
+              "label": "Utökad (400px)"
+            }
+          }
+        },
+        "section_height_mobile": {
+          "label": "Mobil höjd",
+          "options": {
+            "auto": {
+              "label": "Bil"
+            },
+            "compact": {
+              "label": "Kompakt (150px)"
+            },
+            "standard": {
+              "label": "Standard (200px)"
+            },
+            "extended": {
+              "label": "Utökad (250px)"
+            }
+          }
+        },
+        "full_width": {
+          "label": "Full bredd"
+        },
+        "show_collection_image": {
+          "label": "Visa samlingsbild"
+        },
+        "show_collection_description": {
+          "label": "Visa samlingsbeskrivning"
+        },
+        "header_alignment": {
+          "label": "Inriktning",
+          "alignment": {
+            "label": "Textjustering",
+            "options": {
+              "left": {
+                "label": "Vänster"
+              },
+              "center": {
+                "label": "Centrum"
+              },
+              "right": {
+                "label": "Höger"
+              }
+            }
+          }
+        },
+        "header_colors": {
+          "label": "Färger",
+          "color_text": {
+            "label": "Text"
+          }
+        },
+        "header_spacing": {
+          "label": "Sektionsavstånd",
+          "top_spacing": {
+            "label": "Avstånd Topp"
+          },
+          "bottom_spacing": {
+            "label": "Avstånd Botten"
+          }
+        }
+      }
+    },
     "events-popup": {
       "name": "Händelser Popup",
       "settings": {
