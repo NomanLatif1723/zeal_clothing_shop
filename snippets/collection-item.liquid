@@ -1,11 +1,8 @@
 {%- liquid
-  
-  if collection.image
-   assign collection_image = collection.image
-  else
-   assign collection_image = collection.products.first
+  assign collection_image = collection.featured_image
+  if settings.show_first_product
+    assign collection_image = collection.products.first.featured_image
   endif
-
   assign ratio = 0.75
   assign default = 'grande'
   assign sizes = '(min-width: 1200px) 650px, 45vw'
