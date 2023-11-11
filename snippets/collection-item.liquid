@@ -27,7 +27,7 @@
           sizes="{{ sizes }}"
           alt="{{ collection_image.alt }}" />
           {% else %}
-            <img src="{{ collection.products.first }}" width="" height="" loading="" />
+            <img src="{{ collection.products.first | img_url: default }}" width="" height="" loading="" />
           {% endif %}
           {%- if settings.overlay_style == false -%}
             <div class="overlay-box__container text__align-{{ textAlignment }}">
