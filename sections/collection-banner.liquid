@@ -19,7 +19,7 @@
   {%- unless section.settings.full_width -%}
   <div class="page__width">
   {%- endunless -%}
-    <div class="page-header__wrapper collection-banner__wrapper" data-desktop-height="{{ section.settings.desktop_height }}" data-mobile-height="{{ section.settings.mobile_height }}">
+    <div class="page-header__wrapper collection-banner__wrapper" data-desktop-height="{{ section.settings.section_height_desktop }}" data-mobile-height="{{ section.settings.section_height_mobile }}">
       <div class="collection-banner__image-container">
         {%- if section.settings.show_collection_image and collection.image != blank -%}
           <img
