@@ -3,6 +3,16 @@
     "banner": {
       "type": "collection-banner",
       "settings": {
+        "section_height_desktop": "standard",
+        "section_height_mobile": "auto",
+        "full_width": false,
+        "show_collection_image": true,
+        "show_collection_title": true,
+        "show_collection_description": true,
+        "text_alignment": "center",
+        "color_text": "#ffffff",
+        "margin_top": 16,
+        "margin_bottom": 16
       }
     },
     "main": {
