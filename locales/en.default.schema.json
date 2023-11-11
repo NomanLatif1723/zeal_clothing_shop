@@ -1453,9 +1453,6 @@
             }
           }
         }
-      },
-      "presets": {
-        "name": "Collection List"
       }
     },
     "main-search": {
