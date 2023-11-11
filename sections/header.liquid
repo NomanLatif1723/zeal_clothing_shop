@@ -215,6 +215,29 @@
     </div>
   </div>
 </header>
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": {{ shop.name | json }},
+    {% if settings.logo %}
+      "logo": {{ settings.logo | image_url: width: 500 | prepend: "https:" | json }},
+    {% endif %}
+    "sameAs": [
+      {{ settings.social_twitter_url | json }},
+      {{ settings.social_facebook_url | json }},
+      {{ settings.social_pinterest_url | json }},
+      {{ settings.social_instagram_url | json }},
+      {{ settings.social_tiktok_url | json }},
+      {{ settings.social_tumblr_url | json }},
+      {{ settings.social_snapchat_url | json }},
+      {{ settings.social_youtube_url | json }},
+      {{ settings.social_vimeo_url | json }},
+      {{ settings.social_linkedin_url | json }}
+    ],
+    "url": {{ request.origin | append: page.url | json }}
+  }
+</script>
 {% schema %}
   {
     "name": "t:sections.header.name",
