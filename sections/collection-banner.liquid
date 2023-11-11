@@ -1,3 +1,8 @@
+{%- liquid
+    assign ratio = 0.75
+    assign default = 'grande'
+    assign sizes = '(min-width: 1200px) 650px, 45vw'
+-%}
 {%- style -%}
   .main__section-{{ section.id }}{
     margin-top: {{ section.settings.margin_top | times: 0.5 | round: 0 }}px;
