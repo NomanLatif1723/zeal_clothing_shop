@@ -1,12 +1,27 @@
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Collection Banner",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_collection_image",
+        "label": "Show Collection Image",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_collection_title",
+        "label": "Show Title",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_collection_description",
+        "label": "Show Description",
+        "default": true
+      }
+
+
+    ]
   }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
