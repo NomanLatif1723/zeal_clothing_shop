@@ -358,6 +358,89 @@
         "name": "Ergänzende Produkte"
       }
     },
+    "collection-banner": {
+      "name": "Sammlungsbanner",
+      "settings": {
+        "paragraph": {
+          "content": "Um Sammlungsbeschreibungen oder Sammlungsbilder zu ändern, [bearbeiten Sie Ihre Sammlungen](\/admin\/collections)."
+        },
+        "section_height_desktop": {
+          "label": "Tischhöhe",
+          "options": {
+            "natural": {
+              "label": "Natürlich"
+            },
+            "compact": {
+              "label": "Kompakt (200 Pixel)"
+            },
+            "standard": {
+              "label": "Standard (300 Pixel)"
+            },
+            "extended": {
+              "label": "Erweitert (400 Pixel)"
+            }
+          }
+        },
+        "section_height_mobile": {
+          "label": "Mobile Höhe",
+          "options": {
+            "auto": {
+              "label": "Auto"
+            },
+            "compact": {
+              "label": "Kompakt (150 Pixel)"
+            },
+            "standard": {
+              "label": "Standard (200 Pixel)"
+            },
+            "extended": {
+              "label": "Erweitert (250 Pixel)"
+            }
+          }
+        },
+        "full_width": {
+          "label": "Gesamtbreite"
+        },
+        "show_collection_image": {
+          "label": "Sammlungsbild anzeigen"
+        },
+        "show_collection_description": {
+          "label": "Sammlungsbeschreibung anzeigen"
+        },
+        "header_alignment": {
+          "label": "Ausrichtung",
+          "alignment": {
+            "label": "Textausrichtung",
+            "options": {
+              "left": {
+                "label": "Links"
+              },
+              "center": {
+                "label": "Center"
+              },
+              "right": {
+                "label": "Rechts"
+              }
+            }
+          }
+        },
+        "header_colors": {
+          "label": "Farben",
+          "color_text": {
+            "label": "Text"
+          }
+        },
+        "header_spacing": {
+          "label": "Abschnittsabstand",
+          "top_spacing": {
+            "label": "Abstand oben"
+          },
+          "bottom_spacing": {
+            "label": "Abstand unten"
+          }
+        }
+      }
+    },
     "events-popup": {
       "name": "Popup „Ereignisse“.",
       "settings": {
