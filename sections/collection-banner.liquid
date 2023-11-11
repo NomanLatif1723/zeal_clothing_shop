@@ -46,19 +46,15 @@
             {%- if section.settings.show_collection_title-%}
               <h2>{{ collection.title }}</h2>
             {%- endif -%}
-            {%- if show_breadcrumbs -%}
+            {%- if settings.show_breadcrumbs -%}
               <nav role="navigation" aria-label="breadcrumb">
-                <ul class="breadcrumb__list page-breadcrumb__list">
+                <ul class="breadcrumb__list">
                     <li class="breadcrumb__item">
                         <a href="{{ routes.root_url }}" title="Home">{{ 'general.breadcrumbs.home' | t }}</a>
                     </li>
                     <span class="separater__icon">{% render 'icon-arrow-down' %}</span>
                     <li class="breadcrumb__item" aria-current="page">
-                      {%- if template.name == 'blog' -%}
-                        <span>{{ blog.title }}</span>
-                      {%- else -%}
-                        <span>{{ page.title }}</span>
-                      {%- endif -%}
+                        <span>{{ collection.title }}</span>
                     </li>
                 </ul>
               </nav>
