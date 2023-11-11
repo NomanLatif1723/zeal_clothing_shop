@@ -8,14 +8,14 @@
     margin-top: {{ section.settings.margin_top | times: 0.5 | round: 0 }}px;
     margin-bottom: {{ section.settings.margin_bottom | times: 0.5 | round: 0 }}px;
   }
-  {% if section.settings.show_collection_image and collection.image != blank %}
+  {%- if section.settings.show_collection_image and collection.image != blank -%}
     .main__section-{{ section.id }} .collection-banner__text-shadow {
       color: {{ section.settings.color_text }};
     }
     .main__section-{{ section.id }} .breadcrumb__item a {
       color: {{ section.settings.color_text }};
     }
-  {% endif %}
+  {%- endif -%}
   @media only screen and (min-width: 769px) {
     .main__section-{{ section.id }}{
       margin-top: {{ section.settings.margin_top }}px;
