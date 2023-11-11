@@ -123,7 +123,6 @@
               {%- endfor -%}
             {%- endif -%}
           </collection-list>
-          {{ template.name }}
           {%- if paginate.pages > 1 -%}
             {%- render 'pagination', paginate: paginate, collection: collection -%}
           {%- endif -%}
