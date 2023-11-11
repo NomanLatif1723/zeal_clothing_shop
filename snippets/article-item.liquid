@@ -49,7 +49,7 @@
           </a>
         </div>
         <div class="article__content rte">
-          {{ article.content | truncatewords: 15 | strip_html }}
+          {{ article.excerpt_or_content | truncatewords: 15 | strip_html }}
         </div>
         {%- if show_tags -%}
           <ul class="tags__list">
