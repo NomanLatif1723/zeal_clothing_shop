@@ -358,6 +358,89 @@
         "name": "Produtos complementares"
       }
     },
+    "collection-banner": {
+      "name": "Banner de coleção",
+      "settings": {
+        "paragraph": {
+          "content": "Para alterar as descrições ou imagens das coleções, [edite suas coleções](\/admin\/collections)."
+        },
+        "section_height_desktop": {
+          "label": "Altura da área de trabalho",
+          "options": {
+            "natural": {
+              "label": "Natural"
+            },
+            "compact": {
+              "label": "Compacto (200px)"
+            },
+            "standard": {
+              "label": "Padrão (300px)"
+            },
+            "extended": {
+              "label": "Estendido (400px)"
+            }
+          }
+        },
+        "section_height_mobile": {
+          "label": "Altura móvel",
+          "options": {
+            "auto": {
+              "label": "Auto"
+            },
+            "compact": {
+              "label": "Compacto (150px)"
+            },
+            "standard": {
+              "label": "Padrão (200px)"
+            },
+            "extended": {
+              "label": "Estendido (250px)"
+            }
+          }
+        },
+        "full_width": {
+          "label": "Largura completa"
+        },
+        "show_collection_image": {
+          "label": "Mostrar imagem da coleção"
+        },
+        "show_collection_description": {
+          "label": "Mostrar descrição da coleção"
+        },
+        "header_alignment": {
+          "label": "Alinhamento",
+          "alignment": {
+            "label": "Alinhamento de texto",
+            "options": {
+              "left": {
+                "label": "Esquerda"
+              },
+              "center": {
+                "label": "Centro"
+              },
+              "right": {
+                "label": "Certo"
+              }
+            }
+          }
+        },
+        "header_colors": {
+          "label": "Cores",
+          "color_text": {
+            "label": "Texto"
+          }
+        },
+        "header_spacing": {
+          "label": "Espaçamento entre seções",
+          "top_spacing": {
+            "label": "Espaçamento Superior"
+          },
+          "bottom_spacing": {
+            "label": "Espaçamento Inferior"
+          }
+        }
+      }
+    },
     "events-popup": {
       "name": "Pop-up de eventos",
       "settings": {
