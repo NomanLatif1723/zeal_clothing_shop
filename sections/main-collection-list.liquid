@@ -6,6 +6,7 @@
     assign textAlignment = section.settings.text_alignment
     assign swipe_on_mobile = section.settings.swipe_on_mobile
     assign collection_layout = section.settings.collection_layout
+    assign limit = collection_per_row | times: 6
     assign lazyloading = ''
     assign lazyloadImages = section.settings.lazyload_images
     if lazyloadImages
@@ -65,7 +66,7 @@
       {%- if collection_layout == 'slider' -%}
         <div id="collectionListSlider-{{ section.id }}" class="collection-list__slider swiper">
         {%- endif -%}
-        {%- paginate collections by 30 -%}
+        {%- paginate collections by limit -%}
           <collection-list class="collection-grid__list collection-grid{% if collection_layout == 'slider' %} swiper-wrapper{% endif %}{% if swipe_on_mobile and collection_layout == 'grid' %} collection-grid__scroll{% endif %}">
             {%- if show_all_collections -%}
               {% for collection in collections %}
