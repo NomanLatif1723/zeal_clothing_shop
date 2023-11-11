@@ -9,6 +9,8 @@
          assign total_count = article.comments_count
        elsif template.name == 'search'
          assign total_count = search.results_count
+       elsif template.name == 'collection-list'
+         assign total_count = collections.size
        endif
     -%}
     {% if paginate.next.is_link %}
