@@ -358,6 +358,89 @@
         "name": "補完製品"
       }
     },
+    "collection-banner": {
+      "name": "コレクションバナー",
+      "settings": {
+        "paragraph": {
+          "content": "コレクションの説明やコレクション画像を変更するには、[コレクションを編集](\/admin\/collections)してください。"
+        },
+        "section_height_desktop": {
+          "label": "デスクトップの高さ",
+          "options": {
+            "natural": {
+              "label": "自然"
+            },
+            "compact": {
+              "label": "コンパクト (200px)"
+            },
+            "standard": {
+              "label": "標準(300px)"
+            },
+            "extended": {
+              "label": "拡張(400px)"
+            }
+          }
+        },
+        "section_height_mobile": {
+          "label": "モバイルの高さ",
+          "options": {
+            "auto": {
+              "label": "自動"
+            },
+            "compact": {
+              "label": "コンパクト (150px)"
+            },
+            "standard": {
+              "label": "標準(200px)"
+            },
+            "extended": {
+              "label": "拡張(250px)"
+            }
+          }
+        },
+        "full_width": {
+          "label": "全幅"
+        },
+        "show_collection_image": {
+          "label": "コレクション画像を表示"
+        },
+        "show_collection_description": {
+          "label": "コレクションの説明を表示"
+        },
+        "header_alignment": {
+          "label": "位置合わせ",
+          "alignment": {
+            "label": "テキストの配置",
+            "options": {
+              "left": {
+                "label": "左"
+              },
+              "center": {
+                "label": "中心"
+              },
+              "right": {
+                "label": "右"
+              }
+            }
+          }
+        },
+        "header_colors": {
+          "label": "色",
+          "color_text": {
+            "label": "文章"
+          }
+        },
+        "header_spacing": {
+          "label": "セクションの間隔",
+          "top_spacing": {
+            "label": "上部の間隔"
+          },
+          "bottom_spacing": {
+            "label": "下部の間隔"
+          }
+        }
+      }
+    },
     "events-popup": {
       "name": "イベントポップアップ",
       "settings": {
