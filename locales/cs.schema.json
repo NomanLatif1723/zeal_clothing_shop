@@ -1453,9 +1453,6 @@
             }
           }
         }
-      },
-      "presets": {
-        "name": "Seznam sbírek"
       }
     },
     "main-search": {
