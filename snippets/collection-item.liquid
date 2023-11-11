@@ -11,7 +11,7 @@
   <div class="collection-grid__content">
     <a href="{{ collection.url }}" title="{{ collection.title }}">
       <div class="collection-grid__image" style="aspect-ratio: {{ imageAspectRatio }};">
-        {% if collection_image %}
+        {% if collection.featured_image != blank %}
         <img
           src="{{ collection_image | img_url: default }}"
           srcset="
