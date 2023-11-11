@@ -166,9 +166,6 @@
         "collection_per_row": {
           "label": "Kolekcje na wiersz"
         },
-        "all_collections": {
-          "label": "Pokaż wszystkie kolekcje"
-        },
         "swipe_on_mobile": {
           "label": "Przesuń na urządzeniu mobilnym"
         },
@@ -1379,6 +1376,80 @@
             },
             "banner_link": {
               "label": "Połączyć"
+            }
+          }
+        }
+      }
+    },
+    "main-collection-list": {
+      "name": "Lista kolekcji",
+      "settings": {
+        "heading": {
+          "label": "Nagłówek"
+        },
+        "collection_per_row": {
+          "label": "Kolekcje na wiersz"
+        },
+        "all_collections": {
+          "label": "Pokaż wszystkie kolekcje"
+        },
+        "swipe_on_mobile": {
+          "label": "Przesuń na urządzeniu mobilnym"
+        },
+        "products_count": {
+          "label": "Produkty W Kolekcji"
+        },
+        "header_alignment": {
+          "label": "Wyrównanie",
+          "alignment": {
+            "label": "Wyrównanie tekstu",
+            "options": {
+              "left": {
+                "label": "Lewy"
+              },
+              "center": {
+                "label": "Centrum"
+              },
+              "right": {
+                "label": "Prawidłowy"
+              }
+            }
+          }
+        },
+        "collection_layout": {
+          "label": "układ",
+          "options": {
+            "grid": {
+              "label": "Siatka"
+            },
+            "slider": {
+              "label": "Suwak"
+            }
+          }
+        },
+        "lazyload_images": {
+          "label": "Włącz obrazy LazyLoad",
+          "info": "Włącz funkcję Lazyload, jeśli obrazy znajdują się poza ekranem, aby poprawić wydajność"
+        },
+        "header_spacing": {
+          "label": "Rozstaw sekcji",
+          "top_spacing": {
+            "label": "Rozstaw górny"
+          },
+          "bottom_spacing": {
+            "label": "Rozstaw na dole"
+          }
+        }
+      },
+      "blocks": {
+        "collection": {
+          "name": "Kolekcja",
+          "settings": {
+            "collection": {
+              "label": "Kolekcja"
+            },
+            "collection_heading": {
+              "label": "Nagłówek"
             }
           }
         }
