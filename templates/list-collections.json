@@ -6,35 +6,35 @@
         "9b3db24c-6539-4c14-8151-e6f2746b41d8": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "glasses",
             "collection_heading": "Collection Title"
           }
         },
         "f1d1cf05-dd9b-4b1d-af20-bbb998f85ca4": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "mens-wear",
             "collection_heading": "Collection Title"
           }
         },
         "634d37f1-4732-42d2-849b-209f1009ded9": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "promo-collection",
             "collection_heading": "Collection Title"
           }
         },
         "5d1b3f3b-e3ba-4f5c-aa9b-1170e0d9e5bb": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "womens-shorts",
             "collection_heading": "Collection Title"
           }
         },
         "9dbcd8ab-433a-4b55-bef8-1ba717ff71c2": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "womens-tops",
             "collection_heading": "Collection Title"
           }
         }
