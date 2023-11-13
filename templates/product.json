@@ -46,7 +46,7 @@
           "settings": {
             "variant_type": "button",
             "enable_color_swatches": true,
-            "enable_image_swatches": true
+            "enable_image_swatches": false
           }
         },
         "6a2a8b20-17c1-4c25-94d8-5e73e7667cdf": {
