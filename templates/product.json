@@ -208,6 +208,7 @@
       "blocks": {
         "d79f15f8-1aca-4f2b-9dde-54e7b1ff7a07": {
           "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
           "settings": {
           }
         }
