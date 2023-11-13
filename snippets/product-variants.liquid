@@ -15,8 +15,6 @@
                endif
                if block.settings.enable_image_swatches
                  for variant in product.variants
-                   assign option_position = option.position | minus: 1 
-                   assign option_value = variant.options[option_position]
                    if variant.featured_media and optionName == 'color' or optionName == 'colour'
                      assign isImageSwatch = true
                    endif
@@ -31,11 +29,15 @@
                     <input type="radio" data-selected-variant form="{{ product_form_id }}" name="{{ option.name }}-{{ section.id }}" value="{{ value }}" {% if option.selected_value == value %}checked="checked"{% endif %} 
                       id="{{ option.name }}-{{ value }}-{{ section.id }}">
                     {%- if isImageSwatch -%}
-                      {%- if option_value == value -%}
-                        <label class="product__swatches-label product__swatches-image" for="{{ option.name }}-{{ value }}-{{ section.id }}" 
-                          style="background-image: url({{ variant.featured_media | img_url: "70x" }});">
-                        </label>
-                      {%- endif -%}
+                      {%- assign option_position = option.position | minus: 1 -%}
+                      {%- for variant in product.variants -%}
+                        {{ variant.options[option_position].featured_media }}
+                        {%- if variant.options[option_position] == value -%}
+                          <label class="product__swatches-label product__swatches-image" for="{{ option.name }}-{{ value }}-{{ section.id }}" 
+                            style="background-image: url({{ variant.featured_media | img_url: "70x" }});">
+                          </label>
+                        {%- endif -%}
+                      {%- endfor -%}
                     {%- elsif isColorOption -%}
                       {%- liquid
                         assign color_swatch_name = value | handle | append: '.png'
