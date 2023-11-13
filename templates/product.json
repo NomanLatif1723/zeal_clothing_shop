@@ -222,6 +222,7 @@
     },
     "75568190-fb5b-41b3-8150-f93c78ceb178": {
       "type": "related-product",
+      "disabled": true,
       "settings": {
         "heading": "You May Also Like",
         "text_alignment": "center",
