@@ -953,7 +953,7 @@ initCollectionEventListeners();
 // Collection Sorting Using Ajax
 function initCollectionSort() {
   let selectors = {
-    sortContainer: document.querySelectorAll('#sort-by'),
+    sortContainer: document.querySelectorAll('.collection__sort'),
     loader: document.querySelector('.loader'),
     filterForm: document.querySelector('.filter-form'),
     collectionContainer: document.querySelector('.collection-grid')
