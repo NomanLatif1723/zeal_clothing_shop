@@ -4675,3 +4675,17 @@ iframe.product-media__video {
 .shopify-model-viewer-ui__button[hidden]{
   display:none;
 }
+
+
+.theme-event-proxy {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .shopify-model-viewer-ui__controls-area--playing + .theme-event-proxy {
+    display: none;
+  }
