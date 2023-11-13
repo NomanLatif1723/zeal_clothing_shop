@@ -2186,4 +2186,46 @@ productModel.forEach(model => {
 //   if (model.modelViewerUI) model.modelViewerUI.play();
 // });
 
+
+window.Shopify.loadFeatures([
+  {
+    name: 'model-viewer-ui',
+    version: '1.0',
+    onLoad: (function(){
+      $(this).data('player', new Shopify.ModelViewerUI(element));
+      // insert mouseup event proxy, to allow mouseup to bubble up outside 
+      // model viewer ui when player is paused, for carousel swipe gestures
+      $('<div class="theme-event-proxy">').on('mouseup', function(e){
+        e.stopPropagation();
+        e.preventDefault();
+        var newEventTarget = $(e.currentTarget).closest('.product-media')[0];
+        newEventTarget.dispatchEvent(new MouseEvent('mouseup', { bubbles: true }));
+      }).appendTo(
+        $(this).find('.shopify-model-viewer-ui__controls-overlay')
+      );
+      // when playing or loading, intercept events that bubble up outside the viewer:
+      // - prevent bubbling of mouse/touch start, for carousel gestures
+      // - prevent bubbling of keydown, for carousel navigation
+      $(this).find('model-viewer').on('shopify_model_viewer_ui_toggle_play', function(){
+        $(this).closest('.product-media').on('touchstart.themeModelViewerFix mousedown.themeModelViewerFix keydown.themeModelViewerFix', function(e){
+          e.stopPropagation();
+        });
+      }).on('shopify_model_viewer_ui_toggle_pause', function(){
+        $(this).closest('.shopify-model-viewer-ui').off('.themeMediaEventFix');
+      });
+      // ensure play exclusivity
+      $(this).find('model-viewer').on('shopify_model_viewer_ui_toggle_play', function(){
+        $('.product-media').not($currentMedia).trigger('mediaHidden');
+      });
+      // set class and re-trigger visible event now loaded
+      $(this).addClass('product-media--model-loaded').removeClass('product-media--model-loading');
+      if(callbacks.onModelViewerInit) {
+        callbacks.onModelViewerInit(element);
+      }
+      if(autoplay) {
+        $(this).trigger('mediaVisible');
+      }
+    }).bind(this)
+  }
+]);
 })();
