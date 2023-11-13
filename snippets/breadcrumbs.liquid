@@ -1,7 +1,7 @@
 <nav role="navigation" aria-label="breadcrumb" class="breadcrumbs">
   <ul class="breadcrumb__list">
     <li class="breadcrumb__item">
-      <a href="{{ routes.root_url }}">Home</a>
+      <a href="{{ routes.root_url }}" title="{{ 'general.breadcrumbs.home' | t }}">{{ 'general.breadcrumbs.home' | t }}</a>
     </li>
     <li class="divider">/</li>
     {% if template.name == 'search' %}
