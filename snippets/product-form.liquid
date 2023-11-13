@@ -15,11 +15,12 @@
     </div>    
     {%- when 'title' -%}    
     <div class="product__block product__title" {{ block.shopify_attributes }}>
-      {% if featured_product %}
-        <a>{{ product.title }}</a>
-      {% endif %}
       {%- unless product.empty? -%}
-        <h2>{{ product.title }}</h2>
+        {%- if featured_product -%}
+          <h2><a href="{{ product.url }}">{{ product.title }}</a></h2>
+        {%- else -%}
+          <h2>{{ product.title }}</h2>
+        {%- endif -%}
       {%- else -%}
         <h2>{{ 'products.onboarding.product_title' | t }}</h2>
       {%- endunless -%}
