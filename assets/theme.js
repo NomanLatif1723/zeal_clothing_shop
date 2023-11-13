@@ -230,6 +230,7 @@ function initHeaderSearch() {
         return;
       }
       selectors.searchContainer.classList.remove('hidden');
+      document.querySelector('#predictive__input').focus();
     });
   });
   selectors.closeIcon.forEach(button => {
