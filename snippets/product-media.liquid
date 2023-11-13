@@ -76,7 +76,7 @@
       <div class="swiper-wrapper">
         {%- for media in product.media -%}
           <div class="swiper-slide product-media-{{ media.id }}">
-            <a  class="product__thumbs" title="media thumbs">
+            <button  class="product__thumbs" title="media thumbs">
               {%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
                 <span class="product__play-icon">
                   {%- render 'icon-play' -%}
@@ -103,7 +103,7 @@
                 data-media-id="{{ media.id }}"
                 data-index="{{ forloop.index }}"
                 />
-            </a>
+            </button>
           </div>
         {%- endfor -%}
       </div>
