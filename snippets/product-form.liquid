@@ -15,6 +15,9 @@
     </div>    
     {%- when 'title' -%}    
     <div class="product__block product__title" {{ block.shopify_attributes }}>
+      {% if featured %}
+        <a>{{ product.title }}</a>
+      {% endif %}
       {%- unless product.empty? -%}
         <h2>{{ product.title }}</h2>
       {%- else -%}
