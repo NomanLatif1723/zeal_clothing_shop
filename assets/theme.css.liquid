@@ -1,3 +1,25 @@
+:root {
+  --colorBody: {{ settings.body_bg_color }};
+  --colorBodyText: {{ settings.body_text_color }};
+
+  --colorButtonPrimary: {{ settings.color_button_primary }};
+  --colorButtonTextPrimary: {{ settings.color_button_text_primary }};
+  --colorOutlineButton: {{ settings.color_outline_button }};
+
+  --colorButtonSecondary: {{ settings.color_button_secondary }};
+  --colorButtonTextSecondary: {{ settings.color_button_text_secondary }};
+
+  --saleBadgeColor: {{ settings.sale_badge_color }};
+  --soldoutBadgeColor: {{ settings.soldout_badge_color }};
+
+  --bodyTextFont: {{ settings.body_font_family.family }};
+  --headingTextFont: {{ settings.heading_font_family.family }};
+
+  --bodyBackgroundColor: {{ settings.body_bg_color }};
+  --bodyTextColor: {{ settings.body_text_color }};
+
+  --borderColor: {{ settings.border_color }};
+}
 /* resets  */
 *,:before ,:after ,input {
   box-sizing: border-box;
@@ -73,6 +95,7 @@ button {
   padding: 0;
   cursor: pointer;
 }
+
 .rte {
   font-size: 14px;
   line-height: 26px;
@@ -160,7 +183,9 @@ button {
   display: flex;
   justify-content: space-between;
   padding: 30px 25px;
-  border-bottom: 1px solid rgba(1,1,1,0.1);
+  /* border-bottom: 1px solid rgba(1,1,1,0.1); */
+  border-bottom: 1px solid #f2f2f2;
+  border-bottom: 1px solid var(--borderColor);
 }
 .drawer-icon__close {
   display: inline-flex;
@@ -175,29 +200,7 @@ button {
     margin: 60px 0;
   }
 }
-:root {
-  --colorBody: {{ settings.body_bg_color }};
-  --colorBodyText: {{ settings.body_text_color }};
 
-  --colorButtonPrimary: {{ settings.color_button_primary }};
-  --colorButtonTextPrimary: {{ settings.color_button_text_primary }};
-  --colorOutlineButton: {{ settings.color_outline_button }};
-
-  --colorButtonSecondary: {{ settings.color_button_secondary }};
-  --colorButtonTextSecondary: {{ settings.color_button_text_secondary }};
-
-  --saleBadgeColor: {{ settings.sale_badge_color }};
-  --soldoutBadgeColor: {{ settings.soldout_badge_color }};
-
-  --bodyTextFont: {{ settings.body_font_family.family }};
-  --headingTextFont: {{ settings.heading_font_family.family }};
-
-  --bodyBackgroundColor: {{ settings.body_bg_color }};
-  --bodyTextColor: {{ settings.body_text_color }};
-
-  /* not used yet */
-  --borderColor: {{ settings.border_color }};
-}
 body {
   font-family: var(--bodyTextFont), sans-serif;
   background: #ffffff;
@@ -4186,7 +4189,9 @@ iframe.product-media__video {
 }
 .product__thumbs {
   height: 100%;
-  border: 1px solid rgba(1,1,1,0.3);
+  /* border: 1px solid rgba(1,1,1,0.3); */
+  border: 1px solid #f2f2f2;
+  border: 1px solid var(--borderColor);
   padding: 2px;
 }
 .product__image-container .swiper-slide {
@@ -4300,7 +4305,9 @@ iframe.product-media__video {
 }
 .recipient-form__container {
   padding-top: 20px;
-  border-top: 1px solid rgba(1,1,1,0.2);
+  /* border-top: 1px solid rgba(1,1,1,0.2); */
+  border-top: 1px solid #f2f2f2;
+  border-top: 1px solid var(--borderColor);
 }
 .recipient__button {
   display: flex;
@@ -4540,7 +4547,9 @@ iframe.product-media__video {
   padding: 40px 17px;
 }
 .password__banner input {
-  border: 1px solid rgba(17,17,17,0.3);
+  /* border: 1px solid rgba(17,17,17,0.3); */
+  border: 1px solid #f2f2f2;
+  border: 1px solid var(--borderColor);
 }
 .password__title {
   padding-bottom: 20px;
