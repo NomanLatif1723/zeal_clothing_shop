@@ -1867,7 +1867,6 @@ function initProductForm() {
     cartItemCount(cartData);
   }   
   async function updateCartDrawer() {
-    selectors.loader.classList.remove('hidden');
     if (selectors.cartType === 'drawer') {
       const res = await fetch("/?view=ajax-cart");
       const text = await res.text();
@@ -1897,6 +1896,7 @@ function initProductForm() {
         selectors.cartDrawer.classList.add('open-cart__popup');
       }
       selectors.bodyContainer.classList.add('drawer__opening');
+    selectors.loader.classList.remove('hidden');
   }
   function closeCartDrawer() {
     if (selectors.cartDrawer.classList.contains('cart-drawer__left')) {
