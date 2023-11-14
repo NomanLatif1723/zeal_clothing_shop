@@ -13,15 +13,44 @@
     --colorAnnouncementText: {{ settings.announcement_text_color }};
   }
 {%- endstyle -%}
-{%- render 'announcement-bar',
-   section: section,
-   heading_text: heading_text,
-   announcement_text: announcement_text,
-   show_timer: show_timer,
-   timer_hours: timer_hours,
-   timer_minutes: timer_minutes,
-   show_socials: show_socials
+{%- liquid 
+  assign show_locale = settings.show_language
+  assign show_currency = settings.show_currency
 -%}
+<div class="announcement__bar" data-section-id="{{ section.id }}">
+  <div class="page__width">
+    <div class="announcement__wrapper">
+      <div class="social__container">
+        {%- if show_socials -%}
+          {%- render 'social-icons' -%}
+        {%- endif -%}
+      </div>
+      <div class="main__announcement-banner">
+        {%- if heading_text != blank -%}
+          <div class="announcement__heading">{{ heading_text }}</div>
+        {%- endif -%}
+        {%- if show_timer -%}
+          <div
+            class="main__timer"
+            data-hour="{{ timer_hours }}"
+            data-minutes="{{ timer_minutes }}"></div>
+        {%- endif -%}
+        {%- if announcement_text != blank -%}
+          <div class="main__text">{{ announcement_text }}</div>
+        {%- endif -%}
+      </div>
+      {% if show_locale or show_currency %}
+        <div class="language__currency-container">
+          {%- render 'localization',
+             show_locale: show_locale,
+             show_currency: show_currency,
+             show_flags: settings.show_flags 
+          -%}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
 {% schema %}
   {
     "name": "t:sections.announcement-bar.name",
