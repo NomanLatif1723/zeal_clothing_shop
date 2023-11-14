@@ -24,7 +24,7 @@
       </div>
       <div class="map__section-text box__position-{{ section.settings.content_position }}">
         <div class="map__section-box">
-          <div class="scroll__animate map__section-shadow text__align-{{ section.settings.text_alignment }}">
+          <div class="scroll__animate map__section-shadow text__align-{{ section.settings.text_alignment }}{% if section.settings.full_width %} full__map-padding{% endif %}">
             {%- if section.settings.heading != blank -%}
               <h3 class="map__heading">
                 {{ section.settings.heading }}
