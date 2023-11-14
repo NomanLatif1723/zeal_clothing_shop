@@ -1835,13 +1835,15 @@ function initProductForm() {
     }
     form.addEventListener('submit', async (event) => {
       const loader = form.querySelector('.loader__spinner');
-      
+      const span = form.querySelector('span');
       if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
         event.preventDefault();
         loader.classList.remove('hidden');
+        span.classList.add('hidden');
         // Submit Form Ajax
         await submitProductForm(form);
         loader.classList.add('hidden');
+        span.classList.remove('hidden');
       }
     });
   });
