@@ -4377,21 +4377,6 @@ iframe.product-media__video {
 }
 
 /* Map Section */
-.store__locator-section[data-mobile-height="auto"] {
-  height: auto;
-}
-.store__locator-section[data-mobile-height="compact"] {
-  height: 300px;
-}
-.store__locator-section[data-mobile-height="standard"] {
-  height: 400px;
-}
-.store__locator-section[data-mobile-height="extended"] {
-  height: 500px;
-}
-.store__locator-section[data-mobile-height="full"] {
-  height: 100vh;
-}
 .map__heading {
   padding-bottom: 25px;
   font-weight: bold;
@@ -4446,6 +4431,23 @@ iframe.product-media__video {
 }
 .gmnoprint {
   display: none;
+}
+@media only screen and (max-width: 768px) {
+  .map__section-banner[data-mobile-height="auto"] {
+    height: auto;
+  }
+  .map__section-banner[data-mobile-height="compact"] {
+    height: 300px;
+  }
+  .map__section-banner[data-mobile-height="standard"] {
+    height: 400px;
+  }
+  .map__section-banner[data-mobile-height="extended"] {
+    height: 500px;
+  }
+  .map__section-banner[data-mobile-height="full"] {
+    height: 100vh;
+  }
 }
 @media only screen and (min-width: 769px) {
   .store__locator-section[data-desktop-height="natural"] {
