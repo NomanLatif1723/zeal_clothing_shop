@@ -10,6 +10,9 @@
     {% if settings.favicon != blank %}
       <link rel="favicon icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {% endif %}
+    {%- unless settings.heading_font_family.system? and settings.body_font_family.system? -%}
+      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+    {%- endunless -%}
     <title>
       {{ page_title -}}
       {%- if current_tags %}
@@ -26,6 +29,14 @@
     {{ content_for_header }}
     
     {{ 'theme.css' | asset_url | stylesheet_tag: preload: true }}
+    
+    {%- unless settings.body_font_family.system? -%}
+      <link rel="preload" as="font" href="{{ settings.body_font_family | font_url }}" type="font/woff2" crossorigin>
+    {%- endunless -%}
+    {%- unless settings.heading_font_family.system? -%}
+      <link rel="preload" as="font" href="{{ settings.heading_font_family | font_url }}" type="font/woff2" crossorigin>
+    {%- endunless -%}
+    
     {{ 'vendor/qrcode.js' | shopify_asset_url | script_tag }}
   </head>
   <body>
