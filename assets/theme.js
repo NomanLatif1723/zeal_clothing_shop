@@ -1838,20 +1838,20 @@ function initProductForm() {
       
       if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
         event.preventDefault();
-        
+        selectors.loader.classList.remove('hidden');
         // Submit Form Ajax
         await submitProductForm(form);
+        selectors.loader.classList.add('hidden');
       }
     });
   });
 
   async function submitProductForm(form) {
-    selectors.loader.classList.remove('hidden');
+    
     await fetch('/cart/add', {
       method: "POST",
       body: new FormData(form),
     });
-    
 
     // update Cart Drawer
     await updateCartDrawer();
