@@ -11,7 +11,9 @@
   }
 {%- endstyle -%}
 <div class="main__section-{{ section.id }} store__locator-section" data-desktop-height="{{ section.settings.section_height_desktop }}">
+  {%- unless section.settings.full_width -%}
   <div class="page__width">
+  {%- endunless -%}
     <div class="scroll__animate main__map-container">
       <div class="map__section-banner" data-mobile-height="{{ section.settings.section_height_mobile }}">
         {%- if section.settings.map_embed_code != blank -%}
@@ -42,7 +44,9 @@
         </div>
       </div>
     </div>
+  {%- unless section.settings.full_width -%}
   </div>
+  {%- endunless -%}
 </div>
 {% schema %}
   {
