@@ -1883,8 +1883,6 @@ function initProductForm() {
       }
       selectors.cartPopupContent.textContent = window.themeContent.strings.itemAddedSuccess;
     }
-    
-  
     initCartForm();
   }
   function openCartDrawer() {
@@ -1896,7 +1894,6 @@ function initProductForm() {
         selectors.cartDrawer.classList.add('open-cart__popup');
       }
       selectors.bodyContainer.classList.add('drawer__opening');
-    selectors.loader.classList.remove('hidden');
   }
   function closeCartDrawer() {
     if (selectors.cartDrawer.classList.contains('cart-drawer__left')) {
