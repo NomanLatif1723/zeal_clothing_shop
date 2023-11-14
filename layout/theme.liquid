@@ -12,6 +12,9 @@
     {% if settings.favicon != blank %}
       <link rel="favicon icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {% endif %}
+    {%- unless settings.heading_font_family.system? and settings.body_font_family.system? -%}
+      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+    {%- endunless -%}
     <title>
       {{- page_title -}}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
