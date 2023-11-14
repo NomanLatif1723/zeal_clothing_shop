@@ -41,6 +41,7 @@
               "
             width="{{ collection.image.width }}"
             height="{{ collection.image.height }}"
+            loading="lazy"
             sizes="{{ sizes }}"
             alt="{{ collection.image.alt }}" />
         {%- endif -%}
@@ -158,10 +159,12 @@
           {
             "value": "left",
             "label": "t:sections.collection-banner.settings.header_alignment.alignment.options.left.label"
-          }, {
+          },
+          {
             "value": "center",
             "label": "t:sections.collection-banner.settings.header_alignment.alignment.options.center.label"
-          }, {
+          },
+          {
             "value": "right",
             "label": "t:sections.collection-banner.settings.header_alignment.alignment.options.right.label"
           }
