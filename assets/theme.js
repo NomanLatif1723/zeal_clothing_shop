@@ -1842,7 +1842,7 @@ function initProductForm() {
         if (loader) {
           loader.classList.remove('hidden');
         }
-        if (span) {
+        if (span && loader) {
           span.classList.add('hidden');
         }
         // Submit Form Ajax
@@ -1850,7 +1850,7 @@ function initProductForm() {
         if (loader) {
           loader.classList.add('hidden');
         }
-        if (span) {
+        if (span && loader) {
           span.classList.remove('hidden');
         }
       }
