@@ -1839,18 +1839,14 @@ function initProductForm() {
       const span = form.querySelector('span');
       if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
         event.preventDefault();
-        if (loader) {
-          loader.classList.remove('hidden');
-        }
         if (span && loader) {
+          loader.classList.remove('hidden');
           span.classList.add('hidden');
         }
         // Submit Form Ajax
         await submitProductForm(form);
-        if (loader) {
-          loader.classList.add('hidden');
-        }
         if (span && loader) {
+          loader.classList.add('hidden');
           span.classList.remove('hidden');
         }
       }
