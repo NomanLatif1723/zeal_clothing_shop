@@ -68,8 +68,8 @@
         "f4ade60f-6d15-4321-bd20-a58d8b261a56": {
           "type": "buy_buttons",
           "settings": {
-            "enable_dynamic_checkout": false,
-            "enable_gift_card_recipient": true
+            "enable_dynamic_checkout": true,
+            "enable_gift_card_recipient": false
           }
         },
         "a0670cbe-0d41-4504-905b-1a080352120e": {
@@ -206,17 +206,6 @@
     },
     "1696488101f5e649f3": {
       "type": "apps",
-      "blocks": {
-        "d79f15f8-1aca-4f2b-9dde-54e7b1ff7a07": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "disabled": true,
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "d79f15f8-1aca-4f2b-9dde-54e7b1ff7a07"
-      ],
       "settings": {
       }
     },
