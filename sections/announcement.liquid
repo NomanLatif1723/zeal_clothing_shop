@@ -1,11 +1,12 @@
 {%- liquid
-   assign heading_text = section.settings.heading_text
-   assign announcement_text = section.settings.announcement_text
-   assign show_timer = section.settings.show_timer
-   assign timer_hours = section.settings.timer_hours
-   assign timer_minutes = section.settings.timer_minutes
-   assign show_socials = section.settings.show_socials
-
+  assign heading_text = section.settings.heading_text
+  assign announcement_text = section.settings.announcement_text
+  assign show_timer = section.settings.show_timer
+  assign timer_hours = section.settings.timer_hours
+  assign timer_minutes = section.settings.timer_minutes
+  assign show_socials = section.settings.show_socials
+  assign show_locale = settings.show_language
+  assign show_currency = settings.show_currency
 -%}
 {%- style -%}
   :root{
@@ -13,10 +14,6 @@
     --colorAnnouncementText: {{ settings.announcement_text_color }};
   }
 {%- endstyle -%}
-{%- liquid 
-  assign show_locale = settings.show_language
-  assign show_currency = settings.show_currency
--%}
 <div class="announcement__bar" data-section-id="{{ section.id }}">
   <div class="page__width">
     <div class="announcement__wrapper">
