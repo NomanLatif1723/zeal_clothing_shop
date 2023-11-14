@@ -1845,7 +1845,8 @@ function initProductForm() {
     });
   });
 
-  async function submitProductForm(form) {   
+  async function submitProductForm(form) {
+    selectors.loader.classList.add('hidden');
     await fetch('/cart/add', {
       method: "POST",
       body: new FormData(form),
