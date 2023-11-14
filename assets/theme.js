@@ -1839,13 +1839,20 @@ function initProductForm() {
       const span = form.querySelector('span');
       if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
         event.preventDefault();
-        if (!loader || !span) return;
-        loader.classList.remove('hidden');
-        span.classList.add('hidden');
+        if (loader) {
+          loader.classList.remove('hidden');
+        }
+        if (span) {
+          span.classList.add('hidden');
+        }
         // Submit Form Ajax
         await submitProductForm(form);
-        loader.classList.add('hidden');
-        span.classList.remove('hidden');
+        if (loader) {
+          loader.classList.add('hidden');
+        }
+        if (span) {
+          span.classList.remove('hidden');
+        }
       }
     });
   });
