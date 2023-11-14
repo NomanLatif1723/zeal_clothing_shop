@@ -1645,12 +1645,13 @@ function initProductVariants() {
 
   function updateButtons(matchedVariant, product) {
     const productAddToCartBtn = product.querySelector('[name="add"]');
+    const productAddToCartBtnSpan = product.querySelector('[name="add"] span');
     if(!productAddToCartBtn) return;
     if (matchedVariant.available) {
-      productAddToCartBtn.textContent = window.themeContent.strings.addToCart;
+      productAddToCartBtnSpan.textContent = window.themeContent.strings.addToCart;
       productAddToCartBtn.disabled = false;
     } else {
-      productAddToCartBtn.textContent = window.themeContent.strings.soldOut;
+      productAddToCartBtnSpan.textContent = window.themeContent.strings.soldOut;
       productAddToCartBtn.disabled = true;
     }
   }
