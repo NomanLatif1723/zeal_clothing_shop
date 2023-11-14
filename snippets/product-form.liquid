@@ -218,7 +218,7 @@
               {% else %}
                 {{ 'products.sold_out' | t }}
               {% endif %}
-              <div class="loader__spinner"></div>
+              <div class="loader__spinner hidden"></div>
             </button>
             {% if enable_dynamic_checkout %}
               {{ form | payment_button }}
