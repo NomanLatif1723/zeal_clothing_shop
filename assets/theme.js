@@ -1778,7 +1778,8 @@ function initProductForm() {
     cartPopupContent: document.querySelector('.cart-popup__content'),
     cartDrawerContent: document.querySelector("[data-cart]"),
     formValidationErrorMessage: document.querySelector('.product-form__errors'),
-    giftCardRecipientButton: document.querySelector('.recipient__button input')
+    giftCardRecipientButton: document.querySelector('.recipient__button input'),
+    loader: document.querySelector('.loader__spinner')
   };
 
   if(selectors.giftCardRecipientButton){
@@ -1837,6 +1838,7 @@ function initProductForm() {
       
       if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
         event.preventDefault();
+        selectors.loader.classList.remove('hidden');
         // Submit Form Ajax
         await submitProductForm(form);
       }
