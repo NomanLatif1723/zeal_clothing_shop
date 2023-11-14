@@ -1851,7 +1851,7 @@ function initProductForm() {
       method: "POST",
       body: new FormData(form),
     });
-    selectors.loader.classList.remove('hidden');
+    
 
     // update Cart Drawer
     await updateCartDrawer();
@@ -1867,6 +1867,7 @@ function initProductForm() {
     cartItemCount(cartData);
   }   
   async function updateCartDrawer() {
+    selectors.loader.classList.remove('hidden');
     if (selectors.cartType === 'drawer') {
       const res = await fetch("/?view=ajax-cart");
       const text = await res.text();
