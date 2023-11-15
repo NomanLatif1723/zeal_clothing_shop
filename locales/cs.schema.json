@@ -2116,6 +2116,9 @@
     "map": {
       "name": "Mapa",
       "settings": {
+        "full_width": {
+          "label": "Plná šířka"
+        },
         "section_height_desktop": {
           "label": "Výška pracovní plochy",
           "options": {
