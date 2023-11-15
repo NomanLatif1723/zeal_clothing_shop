@@ -345,8 +345,7 @@
     },
     "footer": {
       "copyright": {
-        "text": "Copyright 2023",
-        "powered_by_text": "Drevet av Shopify"
+        "text": "Copyright 2023 {{ shop }},"
       }
     },
     "search": {
