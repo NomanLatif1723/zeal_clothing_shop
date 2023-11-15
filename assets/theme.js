@@ -291,7 +291,10 @@ function initSlideshowSwipers() {
     }
   });
 }
-initSlideshowSwipers();
+document.addEventListener('DOMContentLoaded', () => {
+ initSlideshowSwipers(); 
+});
+
 
 // Collection List Grid Slider
 function initBrandsSwipers() {
