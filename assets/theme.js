@@ -512,7 +512,7 @@ function initCountdown() {
     }, 1000);
   }
 }
-initCountdown();
+// initCountdown();
 
 // Image Comparison 
 function initImageComparison() {
