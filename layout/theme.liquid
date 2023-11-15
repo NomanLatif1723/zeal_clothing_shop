@@ -29,6 +29,9 @@
 
     {{ 'theme.css' | asset_url | stylesheet_tag: preload: true }}
     {{ 'swiper.min.css' | asset_url | stylesheet_tag: preload: true }}
+    {% if template.name == 'product' %}
+      {{ 'image-zoom.css' | asset_url | stylesheet_tag: preload: true }}
+    {% endif %}
     
     {%- unless settings.body_font_family.system? -%}
       <link rel="preload" as="font" href="{{ settings.body_font_family | font_url }}" type="font/woff2" crossorigin>
