@@ -2116,6 +2116,9 @@
     "map": {
       "name": "地図",
       "settings": {
+        "full_width": {
+          "label": "全幅"
+        },
         "section_height_desktop": {
           "label": "デスクトップの高さ",
           "options": {
