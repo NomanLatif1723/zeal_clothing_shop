@@ -2116,6 +2116,9 @@
     "map": {
       "name": "Kort",
       "settings": {
+        "full_width": {
+          "label": "Fuld bredde"
+        },
         "section_height_desktop": {
           "label": "Højde på skrivebordet",
           "options": {
