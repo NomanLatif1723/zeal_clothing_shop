@@ -65,8 +65,10 @@
         }
       }
     </script>
+  {% comment %}
     <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'swiper-slider.min.js' | asset_url }}" defer="defer"></script>
+  {% endcomment %}
     {%- if template.name == 'product' -%}
       <script src="{{ 'photo-swipe.min.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
