@@ -2116,6 +2116,9 @@
     "map": {
       "name": "Carta geografica",
       "settings": {
+        "full_width": {
+          "label": "Intera larghezza"
+        },
         "section_height_desktop": {
           "label": "Altezza del tavolo",
           "options": {
