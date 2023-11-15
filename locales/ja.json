@@ -345,8 +345,7 @@
     },
     "footer": {
       "copyright": {
-        "text": "著作権 2023",
-        "powered_by_text": "提供元: Shopify"
+        "text": "著作権 2023 {{ shop }},"
       }
     },
     "search": {
