@@ -345,7 +345,7 @@
     },
     "footer": {
       "copyright": {
-        "text": "Copyright 2023 {{ shop }}"
+        "text": "Copyright 2023 {{ shop }},"
       }
     },
     "search": {
