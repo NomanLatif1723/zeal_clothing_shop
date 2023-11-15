@@ -2245,7 +2245,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initBrandsSwipers();
   initCollectionListSwipers();
   initTestimonialSwipers();
-  initTestimonialSwipers();
   initVideoSection();
   initCountdown();
   initImageComparison();
