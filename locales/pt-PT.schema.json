@@ -2116,6 +2116,9 @@
     "map": {
       "name": "Mapa",
       "settings": {
+        "full_width": {
+          "label": "Largura completa"
+        },
         "section_height_desktop": {
           "label": "Altura da área de trabalho",
           "options": {
