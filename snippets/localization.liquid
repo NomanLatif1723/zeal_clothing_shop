@@ -51,7 +51,7 @@
                   {% endcomment %}
                 {%- endif -%}
                 <a href="#"{% if country.iso_code == localization.country.iso_code %} aria-current="true"{% endif %} data-value="{{ country.iso_code }}">
-                  ({{ country.currency.iso_code }} {{ country.currency.symbol }})
+                  (USD $)
                 </a>
               </li>
               <li class="disclosure__item" tabindex="-1">
@@ -63,7 +63,7 @@
                   {% endcomment %}
                 {%- endif -%}
                 <a href="#"{% if country.iso_code == localization.country.iso_code %} aria-current="true"{% endif %} data-value="{{ country.iso_code }}">
-                  ({{ country.currency.iso_code }} {{ country.currency.symbol }})
+                  (PKR Rs.)
                 </a>
               </li>
               <li class="disclosure__item" tabindex="-1">
@@ -75,7 +75,7 @@
                   {% endcomment %}
                 {%- endif -%}
                 <a href="#"{% if country.iso_code == localization.country.iso_code %} aria-current="true"{% endif %} data-value="{{ country.iso_code }}">
-                  ({{ country.currency.iso_code }} {{ country.currency.symbol }})
+                  (USD &)
                 </a>
               </li>
             {%- endfor -%}
