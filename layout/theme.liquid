@@ -67,15 +67,10 @@
     </script>
   
     <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
-  {% comment %}
     <script src="{{ 'swiper-slider.min.js' | asset_url }}" defer="defer"></script>
-  {% endcomment %}
     {%- if template.name == 'product' -%}
       <script src="{{ 'photo-swipe.min.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-    {% comment %}
-      <script src="{{ 'swiper.min.js' | asset_url }}"></script>
-    {% endcomment %}
   </head>
   <body>
     <a class="skip__to-content visually__hidden" href="#MainContent">{{ 'general.accessibility.skip-to-content' | t }}</a>
