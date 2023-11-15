@@ -2116,6 +2116,9 @@
     "map": {
       "name": "Mapa",
       "settings": {
+        "full_width": {
+          "label": "Pełna szerokość"
+        },
         "section_height_desktop": {
           "label": "Wysokość pulpitu",
           "options": {
