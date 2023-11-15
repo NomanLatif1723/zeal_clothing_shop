@@ -2116,6 +2116,9 @@
     "map": {
       "name": "Karta",
       "settings": {
+        "full_width": {
+          "label": "Full bredd"
+        },
         "section_height_desktop": {
           "label": "Skrivbordshöjd",
           "options": {
