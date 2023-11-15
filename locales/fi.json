@@ -345,8 +345,7 @@
     },
     "footer": {
       "copyright": {
-        "text": "Tekijänoikeus 2023",
-        "powered_by_text": "Powered by Shopify"
+        "text": "Tekijänoikeus 2023 {{ shop }},"
       }
     },
     "search": {
