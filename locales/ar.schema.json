@@ -2116,6 +2116,9 @@
     "map": {
       "name": "خريطة",
       "settings": {
+        "full_width": {
+          "label": "العرض الكامل"
+        },
         "section_height_desktop": {
           "label": "ارتفاع سطح المكتب",
           "options": {
