@@ -897,6 +897,7 @@
         "b0faa561-d5be-497d-9dbc-12dc207a3a0e",
         "1f935478-ca87-4b17-a813-444813a6ff3a"
       ],
+      "disabled": true,
       "settings": {
         "faq_heading": "Frequently asked questions.",
         "faq_text": "<p>Find answers to your questions about our products, policies, and more.<\/p>",
