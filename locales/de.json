@@ -345,8 +345,7 @@
     },
     "footer": {
       "copyright": {
-        "text": "Urheberrechte © 2023",
-        "powered_by_text": "Unterstützt von Shopify"
+        "text": "Urheberrechte © 2023 {{ shop }},"
       }
     },
     "search": {
