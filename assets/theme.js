@@ -2232,7 +2232,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
       };
 
-      new PhotoSwipe(document.querySelector('.pswp'), PhotoSwipeUI_Default, gallery, options).init();
+      new PhotoSwipe(document.querySelector('.pswp'), gallery, options).init();
     });
   });
 });
