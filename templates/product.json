@@ -148,7 +148,7 @@
         "media_layout": "thumbnail",
         "thumbnail_position": "below",
         "show_thumbnail_arrows": true,
-        "show_image_zoom": false,
+        "show_image_zoom": true,
         "size_chart_page": "size-chart",
         "margin_top": 40,
         "margin_bottom": 60
