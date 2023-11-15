@@ -16,6 +16,13 @@
   .copyright__text {
     color: {{ settings.footer_text }};
   }
+  .copyright__text a {
+    color: {{ settings.footer_text }};
+    transition: all 3s ease;
+  }
+  .copyright__text a:hover {
+      border-bottom: 1px solid {{ settings.footer_text }};
+  }
 {%- endstyle -%}
 {%- for block in section.blocks -%}
   {%- style -%}
