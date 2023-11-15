@@ -133,7 +133,7 @@ function initStickyHeader() {
     }
   } 
 }
-initStickyHeader();
+// initStickyHeader();
 
 // Header Toggle button
 function initHeaderNavigation() {
@@ -201,7 +201,7 @@ function initHeaderNavigation() {
     })
   }
 }
-initHeaderNavigation();
+// initHeaderNavigation();
 
 // Header Search Events
 function initHeaderSearch() {
@@ -245,7 +245,7 @@ function initHeaderSearch() {
     });
   });
 }
-initHeaderSearch();
+// initHeaderSearch();
 
 // Slideshow
 function initSlideshowSwipers() {
@@ -291,10 +291,7 @@ function initSlideshowSwipers() {
     }
   });
 }
-document.addEventListener('DOMContentLoaded', () => {
- initSlideshowSwipers(); 
-});
-
+// initSlideshowSwipers(); 
 
 // Collection List Grid Slider
 function initBrandsSwipers() {
@@ -328,7 +325,7 @@ function initBrandsSwipers() {
     }
   })
 }
-initBrandsSwipers();
+// initBrandsSwipers();
   
 // Collection List Grid Slider
 function initCollectionListSwipers() {
@@ -373,7 +370,7 @@ function initCollectionListSwipers() {
     }
   })
 }
-initCollectionListSwipers();
+// initCollectionListSwipers();
 
 // Testimonial Slider
 function initTestimonialSwipers() {
@@ -423,7 +420,7 @@ function initTestimonialSwipers() {
     }
   });
 }
-initTestimonialSwipers();
+// initTestimonialSwipers();
 
 // Video Section Events
 function initVideoSection() {
@@ -470,7 +467,7 @@ function initVideoSection() {
     }
   });
 }
-initVideoSection();
+// initVideoSection();
 
 // Countdown Timer For Promotional Grid and Product Page
 function initCountdown() {
@@ -563,7 +560,7 @@ function initImageComparison() {
     
   })
 }
-initImageComparison();
+// initImageComparison();
 
 // Age Verification Popup 
 function initageVerificationPopUp() {
@@ -1071,7 +1068,6 @@ function initFilterFacetForm() {
   });
 }
 initFilterFacetForm();
-
 
 // Predictive Search 
 class PredictiveSearch extends HTMLElement {
@@ -2241,6 +2237,19 @@ productModel.forEach(model => {
 //     }).bind(this)
 //   }
 // ]);
-
+document.addEventListener('DOMContentLoaded', () => {
+  initStickyHeader();
+  initHeaderNavigation();
+  initHeaderSearch();
+  initSlideshowSwipers(); 
+  initBrandsSwipers();
+  initCollectionListSwipers();
+  initTestimonialSwipers();
+  initTestimonialSwipers();
+  initVideoSection();
+  initCountdown();
+  initImageComparison();
+  initageVerificationPopUp();
+});
   
 })();
