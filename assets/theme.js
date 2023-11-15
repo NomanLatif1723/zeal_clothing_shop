@@ -2137,7 +2137,7 @@ function initPasswordModal() {
 }
 // initPasswordModal();
 
-// The element to observe
+// The element observe For 3d Product Modal
 const productModel = document.querySelectorAll('product-model');
 productModel.forEach(model => {
   const viewInModelBtn = model.querySelector('.product-single__view-in-space');
