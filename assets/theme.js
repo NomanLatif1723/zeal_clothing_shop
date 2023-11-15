@@ -522,12 +522,12 @@ function initImageComparison() {
     let compareImageWrapper = wrapper.querySelector('.after__Image');
     let isdraggable = false;
     wrapper.addEventListener('mousemove', () => handleMouserMove(event));
-    wrapper.addEventListener('touchmove', () => handleMouseMove(event));
+    // wrapper.addEventListener('touchmove', () => handleMouseMove(event));
     wrapper.addEventListener('mouseup', () => handleMouseUp());
-    wrapper.addEventListener('touchend', () => handleMouseUp());
+    // wrapper.addEventListener('touchend', () => handleMouseUp());
     wrapper.addEventListener('mouseleave', () => handleMouseLeave());
     wrapper.addEventListener('mousedown', () => handleMouseDown(event));
-    wrapper.addEventListener('touchstart', () => handleMouseDown(event));
+    // wrapper.addEventListener('touchstart', () => handleMouseDown(event));
     function handleMouserMove(event) {
       if (isdraggable) return;
       let sliderLeftX = wrapper.offsetLeft;
