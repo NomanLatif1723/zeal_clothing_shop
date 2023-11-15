@@ -2198,5 +2198,43 @@ document.addEventListener('DOMContentLoaded', () => {
   initPasswordModal();
   productModalObserve();
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  var galleryItems = document.querySelectorAll('.product-media__gallery--thumbnail a');
+  
+  galleryItems.forEach(function(item) {
+    item.addEventListener('click', function(event) {
+      event.preventDefault();
+      
+      var currentIndex = Array.from(galleryItems).indexOf(item);
+      
+      var gallery = galleryItems.forEach(function(galleryItem, index) {
+        return {
+          src: galleryItem.getAttribute('href'),
+          type: 'image'
+        };
+      });
+      
+      var options = {
+        index: currentIndex,
+        tLoading: 'Loading image #' + (currentIndex + 1) + '...',
+        mainClass: 'mfp-img-mobile',
+        gallery: {
+          enabled: true,
+          navigateByImgClick: true,
+          preload: [0, 1]
+        },
+        image: {
+          tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+          titleSrc: function(item) {
+            return item.el.getAttribute('title') + '<small>by Marsel Van Oosten</small>';
+          }
+        }
+      };
+
+      new PhotoSwipe(document.querySelector('.pswp'), PhotoSwipeUI_Default, gallery, options).init();
+    });
+  });
+});
   
 })();
