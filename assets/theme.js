@@ -1152,7 +1152,7 @@ function initHandleQuestions() {
     }
   })
 }
-initHandleQuestions();
+// initHandleQuestions();
 
 // Cart Form Ajax
 function initCartForm() {
@@ -1415,7 +1415,7 @@ function initCartForm() {
     })
   }
 }
-initCartForm();
+// initCartForm();
 
 // function for product collapsibles 
 function initProductCollapsibles() {
@@ -1434,7 +1434,7 @@ function initProductCollapsibles() {
     })
   })
 }
-initProductCollapsibles();
+// initProductCollapsibles();
 
 // function for product Media Sliders
 function initMediaGallery() {
@@ -2256,6 +2256,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initCollectionEventListeners();
   initCollectionSort();
   initFilterFacetForm();
+  initHandleQuestions();
+  initCartForm();
+  initProductCollapsibles();
 });
   
 })();
