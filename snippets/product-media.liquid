@@ -18,7 +18,7 @@
       {%- for media in product.media -%}
         <div class="product__image{% if thumbnails %} swiper-slide{% endif %} product-image__{{ section.settings.media_layout }}{% if media.id == product.selected_or_first_available_variant.featured_media.id %} active{% endif %}">
           {%- if media.media_type == 'image' -%}
-            {% if section.setting.show_image_zoom %}
+            {% if section.settings.show_image_zoom %}
               <a href="{{ media | img_url: "2048x2048" }}" title="{{ media.alt }}">
             {% endif %}
             <img
@@ -39,7 +39,7 @@
               data-media-id="{{ media.id }}"
               data-index="{{ forloop.index }}"
             />
-            {% if section.setting.show_image_zoom %}
+            {% if section.settings.show_image_zoom %}
               </a>
             {% endif %}
           {%- elsif media.media_type == 'video' -%}
