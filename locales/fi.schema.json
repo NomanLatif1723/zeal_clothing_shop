@@ -2116,6 +2116,9 @@
     "map": {
       "name": "Kartta",
       "settings": {
+        "full_width": {
+          "label": "Täysi leveys"
+        },
         "section_height_desktop": {
           "label": "Työpöydän korkeus",
           "options": {
