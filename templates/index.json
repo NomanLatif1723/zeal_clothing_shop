@@ -788,6 +788,7 @@
     },
     "9913ff1c-3076-4a2f-ba8f-22edb1d6e44e": {
       "type": "custom-content",
+      "disabled": true,
       "settings": {
         "subheading": "Sub Heading",
         "heading": "Custom Content",
