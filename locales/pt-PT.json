@@ -345,8 +345,7 @@
     },
     "footer": {
       "copyright": {
-        "text": "Direitos autorais 2023",
-        "powered_by_text": "Desenvolvido por Shopify"
+        "text": "Direitos autorais 2023 {{ shop }},"
       }
     },
     "search": {
