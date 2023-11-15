@@ -1487,7 +1487,7 @@ function initMediaGallery() {
     }
   })
 }
-initMediaGallery();
+// initMediaGallery();
 
 // Product Quantity Selectors Event
 function initProductQuantitySelector() {
@@ -1514,7 +1514,7 @@ function initProductQuantitySelector() {
     });
   });
 }
-initProductQuantitySelector(); 
+// initProductQuantitySelector(); 
 
 // Product Variants js
 function initProductVariants() {
@@ -1762,7 +1762,7 @@ function initProductVariants() {
     option3.querySelector('[data-option-name]').textContent = matchedVariant.option3;
   }
 }  
-initProductVariants();
+// initProductVariants();
 
 // Product Form Add To Cart Ajax
 function initProductForm() {
@@ -2259,6 +2259,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initHandleQuestions();
   initCartForm();
   initProductCollapsibles();
+  initMediaGallery();
+  initProductQuantitySelector();
+  initProductVariants();
 });
   
 })();
