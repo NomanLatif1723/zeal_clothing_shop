@@ -819,7 +819,7 @@ function initCustomerForms() {
   }
   customerAddressesForm();
 }
-initCustomerForms();
+// initCustomerForms();
 
 // Document General Event Listeners
 function initCollectionEventListeners() {
@@ -948,7 +948,7 @@ function initCollectionEventListeners() {
     selectors.bodyContainer.classList.remove('drawer__opening');
   }
 }
-initCollectionEventListeners();
+// initCollectionEventListeners();
 
 // Collection Sorting Using Ajax
 function initCollectionSort() {
@@ -994,7 +994,7 @@ function initCollectionSort() {
     history.replaceState(null, null, baseURL);
   }
 }
-initCollectionSort();
+// initCollectionSort();
 
 // Collection Facets Filters 
 function initFilterFacetForm() {
@@ -1067,7 +1067,7 @@ function initFilterFacetForm() {
     });
   });
 }
-initFilterFacetForm();
+// initFilterFacetForm();
 
 // Predictive Search 
 class PredictiveSearch extends HTMLElement {
@@ -2253,6 +2253,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initNewsletterPopup();
   initModalPopup();
   initCustomerForms();
+  initCollectionEventListeners();
+  initCollectionSort();
+  initFilterFacetForm();
 });
   
 })();
