@@ -2138,31 +2138,34 @@ function initPasswordModal() {
 // initPasswordModal();
 
 // The element observe For 3d Product Modal
-const productModel = document.querySelectorAll('product-model');
-productModel.forEach(model => {
-  const viewInModelBtn = model.querySelector('.product-single__view-in-space');
-  const id = model.closest('.product-grid').dataset.sectionId;
-  const options = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.5,
-  };
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        model.classList.add('visible');
-        setTimeout(function hideButton() {
-          viewInModelBtn.classList.add('hidden');
-        },3000);
-        mediaSwiper[id].allowTouchMove = false;
-        observer.unobserve(model);
-      }
-    });
-  }, options);
-  viewInModelBtn.classList.remove('hidden');
-  mediaSwiper[id].allowTouchMove = true;
-  observer.observe(model);
-});
+function productModalObserve() {
+  const productModel = document.querySelectorAll('product-model');
+  productModel.forEach(model => {
+    const viewInModelBtn = model.querySelector('.product-single__view-in-space');
+    const id = model.closest('.product-grid').dataset.sectionId;
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5,
+    };
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          model.classList.add('visible');
+          setTimeout(function hideButton() {
+            viewInModelBtn.classList.add('hidden');
+          },3000);
+          mediaSwiper[id].allowTouchMove = false;
+          observer.unobserve(model);
+        }
+      });
+    }, options);
+    viewInModelBtn.classList.remove('hidden');
+    mediaSwiper[id].allowTouchMove = true;
+    observer.observe(model);
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initStickyHeader();
   initHeaderNavigation();
@@ -2193,6 +2196,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initProductRecommendations();
   backToTopScrolling();
   initPasswordModal();
+  productModalObserve();
 });
   
 })();
