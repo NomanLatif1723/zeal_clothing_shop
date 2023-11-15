@@ -616,7 +616,7 @@ function initageVerificationPopUp() {
   }
   
 }
-initageVerificationPopUp();
+// initageVerificationPopUp();
 
 // Newsletter Popup
 function initNewsletterPopup() {
@@ -640,7 +640,7 @@ function initNewsletterPopup() {
     })
   }
 }
-initNewsletterPopup();
+// initNewsletterPopup();
 
 //  General Modal Button Events 
 function initModalPopup() {
@@ -677,7 +677,7 @@ function initModalPopup() {
     }
   }
 }
-initModalPopup();
+// initModalPopup();
   
 // Localization Language and Currency Selector 
 class LocalizationForm extends HTMLElement {
@@ -2250,6 +2250,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initCountdown();
   initImageComparison();
   initageVerificationPopUp();
+  initNewsletterPopup();
+  initModalPopup();
+  initCustomerForms();
 });
   
 })();
