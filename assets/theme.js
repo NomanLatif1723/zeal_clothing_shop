@@ -1926,7 +1926,7 @@ function initProductForm() {
     })
   }
 }
-initProductForm();
+// initProductForm();
 
 // Sticky Add To Cart Function 
 function initStickyAddCart() {
@@ -1943,7 +1943,7 @@ function initStickyAddCart() {
     });
   }
 }
-initStickyAddCart();
+// initStickyAddCart();
 
 // Product Quick View 
 function initQuickShopCollection() {
@@ -2056,7 +2056,7 @@ function initQuickShopCollection() {
     });
   }
 }
-initQuickShopCollection();
+// initQuickShopCollection();
 
 // Product Recommendations
 function initProductRecommendations() {
@@ -2093,7 +2093,7 @@ function initProductRecommendations() {
     })
   }
 }
-initProductRecommendations();
+// initProductRecommendations();
 
 // Back To Top Function
 function backToTopScrolling() {
@@ -2112,7 +2112,7 @@ function backToTopScrolling() {
     }
   }
 }
-backToTopScrolling();
+// backToTopScrolling();
 
 // Passowrd page Modal Event Listeners
 function initPasswordModal() {
@@ -2135,7 +2135,7 @@ function initPasswordModal() {
     });
   }
 }
-initPasswordModal();
+// initPasswordModal();
 
 // The element to observe
 const productModel = document.querySelectorAll('product-model');
@@ -2262,6 +2262,12 @@ document.addEventListener('DOMContentLoaded', () => {
   initMediaGallery();
   initProductQuantitySelector();
   initProductVariants();
+  initProductForm();
+  initStickyAddCart();
+  initQuickShopCollection();
+  initProductRecommendations();
+  backToTopScrolling();
+  initPasswordModal();
 });
   
 })();
