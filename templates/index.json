@@ -400,7 +400,7 @@
     "6c915974-bf41-4211-adbb-e966c2df30a9": {
       "type": "video",
       "settings": {
-        "section_width": false,
+        "section_width": true,
         "height_desktop": "extended",
         "height_mobile": "full",
         "sub_heading": "The Design and Production",
