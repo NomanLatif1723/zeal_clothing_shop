@@ -168,11 +168,11 @@
         </a>
         {%- unless show_icons -%}
           {%- if settings.enable_search -%}
-            <a href="{{ routes.search_url }}" class="icon icon__search icon__hide-mobile">{{ 'sections.search.title' | t }}</a>
+            <a href="{{ routes.search_url }}" class="icon links icon__search icon__hide-mobile">{{ 'sections.search.title' | t }}</a>
           {%- endif -%}
           {%- if shop.customer_accounts_enabled -%}
               <a href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}"
-                class="icon icon__accounts icon__hide-mobile">
+                class="icon links icon__accounts icon__hide-mobile">
                 {% if customer %}
                   {{ 'sections.header.general.login' | t }}
                 {% else %}
@@ -180,7 +180,7 @@
                 {% endif %}
               </a>
           {%- endif -%}
-          <a href="{{ routes.cart_url }}" data-cart-type="{{ settings.cart_type }}" aria-label="{{ 'sections.header.general.cart' | t }}" class="icon icon__cart icon__hide-mobile">
+          <a href="{{ routes.cart_url }}" data-cart-type="{{ settings.cart_type }}" aria-label="{{ 'sections.header.general.cart' | t }}" class="icon links icon__cart icon__hide-mobile">
             {{ 'sections.header.general.cart' | t }}
             <span data-cart-count class="cart-item__count{% if cart.item_count <= 0 %} hidden{% endif %}">{{ cart.item_count }}</span>
           </a>
