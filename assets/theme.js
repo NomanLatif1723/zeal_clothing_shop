@@ -2232,7 +2232,7 @@ function productModalObserve() {
 
 // Product Zoom Gallery
 function productPopupSlider() {
-  const popupWrapper = document..querySelectorAll('.product__zoom-gallery');
+  const popupWrapper = document.querySelectorAll('.product__zoom-gallery');
   popupWrapper.forEach(wrapper => {
     if(!wrapper) return;
     const id = wrapper.dataset.sectionId;
