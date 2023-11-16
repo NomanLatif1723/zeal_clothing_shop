@@ -1,6 +1,7 @@
 (function(){
   let mediaSwiper = {};
   let swiperThumbs;
+  let popupSwiper = {};
   
 // shopify formate money function
 const moneyFormat = '${{amount}}';
@@ -2233,9 +2234,21 @@ function productModalObserve() {
 function productPopupSlider() {
   const popupWrapper = document..querySelectorAll('.product__zoom-gallery');
   popupWrapper.forEach(wrapper => {
+    if(!wrapper) return;
     const id = wrapper.dataset.sectionId;
-    
-  })
+    const sliderContainer = wrapper.querySelector('product__zoom-'+ id);
+    if(sliderContainer.swiper){
+      sliderContainer.swiper.destroy();
+    }
+    let swiperOptions = {
+      slidesPerView: 1,
+      speed: 1000,
+      navigation: {
+        nextEl: '.swiper-button-next.swiper-button-' + id,
+        prevEl: '.swiper-button-prev.swiper-button-' + id
+      },
+    }
+  });
 }
 function initProductZoomGallery() {
   let selectors = {
