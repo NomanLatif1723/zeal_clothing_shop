@@ -2229,18 +2229,25 @@ function productModalObserve() {
   });
 }
 
-// Product Zoom Gallery 
+// Product Zoom Gallery
+function productPopupSlider() {
+  const popupWrapper = document..querySelectorAll('.product__zoom-gallery');
+  popupWrapper.forEach(wrapper => {
+    const id = wrapper.dataset.sectionId;
+    
+  })
+}
 function initProductZoomGallery() {
   let selectors = {
-    productZoomBtn: document.querySelectorAll('.image__zoom-btn'),
-    galleryModalZoom: document.querySelector('.product__zoom-gallery')
+    productPopupBtn: document.querySelectorAll('.image__zoom-btn'),
+    galleryPopup: document.querySelector('.product__zoom-gallery')
   }
-  selectors.productZoomBtn.forEach(button => {
+  selectors.productPopupBtn.forEach(button => {
     if(!button) return;
     button.addEventListener('click', () => {
       const id = button.dataset.mediaId;
       console.log(id);
-      selectors.galleryModalZoom.classList.add('open__modal');
+      selectors.galleryPopup.classList.add('open__modal');
     });
   });
 }
