@@ -73,6 +73,26 @@
         }
       }
     },
+    "apps": {
+      "name": "Sovellukset",
+      "settings": {
+        "full_width": {
+          "label": "Täysi leveys"
+        },
+        "header_spacing": {
+          "label": "Osavälit",
+          "top_spacing": {
+            "label": "Välilyönti Top"
+          },
+          "bottom_spacing": {
+            "label": "Pohjaväli"
+          }
+        }
+      },
+      "presets": {
+        "name": "Sovellukset"
+      }
+    },
     "blog-posts": {
       "name": "Blogiviestit",
       "settings": {
