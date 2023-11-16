@@ -2245,8 +2245,8 @@ function productPopupSlider() {
       slidesPerView: 1,
       speed: 1000,
       navigation: {
-        nextEl: '.swiper-button-next.swiper-button-' + id,
-        prevEl: '.swiper-button-prev.swiper-button-' + id
+        nextEl: '.swiper-button-next.popup-button-' + id,
+        prevEl: '.swiper-button-prev.popup-button-' + id
       },
     }
     popupSwiper[id] = new Swiper(sliderContainer, swiperOptions);
