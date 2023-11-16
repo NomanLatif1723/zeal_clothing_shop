@@ -32,7 +32,7 @@
 {%- endstyle -%}
 
 {%- if section.settings.show_image_zoom -%}
-  <product-image-zoom class="product__zoom-gallery" tabindex="-1" role="dialog" data-section-id="{{ section.id }}">
+  <product-image-zoom class="product__zoom-gallery" tabindex="-1" role="dialog" data-section-id="{{ section.id }}" data-popup-modal>
     <div class="page__width">
       <div id="product__zoom-{{ section.id }}" class="swiper product__popup">
         <div class="swiper-wrapper">
