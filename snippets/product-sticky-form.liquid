@@ -29,7 +29,7 @@
                 <span class="badge hidden soldout__badge{% if settings.soldout_badge_color contains '#f' %} badge-color__dark{% else %} badge-color__light{% endif %}">{{ 'products.badges.sold_out' | t }}</span>
               {%- endif -%}
             </div>
-            
+             
             <div data-unit-price class="product__unit-price hidden">
               {%- if product.selected_or_first_available_variant.price > 0 -%}
                 {%- if product.selected_or_first_available_variant.unit_price_measurement -%}
@@ -51,27 +51,29 @@
               {%- if shop.shipping_policy.body != blank -%}
                 <span>{{ 'products.shipping_policy_html' | t: link: shop.shipping_policy.url  }}</span>
               {%- endif -%}
-            </div>
-          </div>
-        </div>
-      </div>
+            </div> 
+          </div> 
+        </div> 
+      </div>       
       <div class="product__sticky-form--form">
         <div class="product__sticky-form--selectBox">
-          <variant-selects data-section="{{ section.id }}" data-url="{{ product.url }}">
-            <div class="product__options product-select__options">
-              {%- for option in product.options_with_values -%}
-                <div class="sticky-product-form__select">
-                <select form="{{ product_form_id }}" class="product__select" data-selected-variant id="product-select-{{ forloop.index }}">
-                  {% for value in option.values %}
-                    <option value="{{ value }}" {% if option.selected_value == value %}selected{% endif %}>
-                      {{ value }}
-                    </option>
-                  {% endfor %}
-                </select>
-                </div>
-              {%- endfor -%}
-            </div>
-          </variant-selects>
+          {%- unless product.has_only_default_variant -%}
+            <variant-selects data-section="{{ section.id }}" data-url="{{ product.url }}">
+              <div class="product__options product-select__options">
+                {%- for option in product.options_with_values -%}
+                  <div class="sticky-product-form__select">
+                  <select form="{{ product_form_id }}" class="product__select" data-selected-variant id="product-select-{{ forloop.index }}">
+                    {% for value in option.values %}
+                      <option value="{{ value }}" {% if option.selected_value == value %}selected{% endif %}>
+                        {{ value }}
+                      </option>
+                    {% endfor %}
+                  </select>
+                  </div>
+                {%- endfor -%}
+              </div>
+            </variant-selects>
+          {%- endunless -%}
         </div>
         <div class="product__sticky-form--cartButton">
           {%- liquid
