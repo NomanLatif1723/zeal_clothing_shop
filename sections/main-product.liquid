@@ -33,30 +33,32 @@
 
 {%- if section.settings.show_image_zoom -%}
   <product-image-zoom class="product__zoom-gallery" product-handle="{{ product.handle }}" id="product-{{ section.id }}-{{ product.id }}-zoom" tabindex="-1" role="dialog" data-section-id="{{ section.id }}">
-    <div id="product__zoom-{{ section.id }}" class="swiper product__popup">
-      <div class="swiper-wrapper">
-        {%- for media in product.media -%}
-          <div class="swiper-slide">
-            {%- if media.media_type == 'image' -%}
-              <img
-                src="{{ media | img_url: "300x" }}"
-                width="{{ media.width }}"
-                height="{{ media.height }}"
-                alt="{{ media.alt }}"
-                loading = 'lazy'
-                data-media-id="{{ media.id }}"
-                data-index="{{ forloop.index }}"
-              />
-            {%- elsif media.media_type == 'modal' -%}
-              <model-viewer class="product__media-model">
-                {{ media | media_tag: image_size: "2048", toggleable: true, data-media-id: media.id, data-index: forloop.index }}
-              </model-viewer>
-            {%- endif -%}
-          </div>
-        {%- endfor -%}
+    <div class="page__width">
+      <div id="product__zoom-{{ section.id }}" class="swiper product__popup">
+        <div class="swiper-wrapper">
+          {%- for media in product.media -%}
+            <div class="swiper-slide">
+              {%- if media.media_type == 'image' -%}
+                <img
+                  src="{{ media | img_url: "300x" }}"
+                  width="{{ media.width }}"
+                  height="{{ media.height }}"
+                  alt="{{ media.alt }}"
+                  loading = 'lazy'
+                  data-media-id="{{ media.id }}"
+                  data-index="{{ forloop.index }}"
+                />
+              {%- elsif media.media_type == 'modal' -%}
+                <model-viewer class="product__media-model">
+                  {{ media | media_tag: image_size: "2048", toggleable: true, data-media-id: media.id, data-index: forloop.index }}
+                </model-viewer>
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+        </div>
+        <div class="swiper-button-next swiper-button-{{ section.id }}"></div>
+        <div class="swiper-button-prev swiper-button-{{ section.id }}"></div>
       </div>
-      <div class="swiper-button-next swiper-button-{{ section.id }}"></div>
-      <div class="swiper-button-prev swiper-button-{{ section.id }}"></div>
     </div>
   </product-image-zoom>
 {%- endif -%}
