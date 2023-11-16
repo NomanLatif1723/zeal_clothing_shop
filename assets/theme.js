@@ -218,7 +218,7 @@ function initHeaderNavigation() {
       event.stopPropagation();
     });
   }
-  if (closeMenuDrawer) {
+  if (closeMenuDrawerBtn) {
     closeMenuDrawerBtn.addEventListener('click', () => {
       closeMenuDrawer();
     });
