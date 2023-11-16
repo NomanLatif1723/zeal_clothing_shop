@@ -2241,8 +2241,8 @@ function initProductZoomGallery() {
       const id = button.dataset.mediaId;
       console.log(id);
       selectors.galleryModalZoom.classList.add('open__modal');
-    })
-  })
+    });
+  });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -2276,6 +2276,7 @@ document.addEventListener('DOMContentLoaded', () => {
   backToTopScrolling();
   initPasswordModal();
   productModalObserve();
+  initProductZoomGallery();
 });
 
 })();
