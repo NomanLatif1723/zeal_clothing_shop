@@ -2208,12 +2208,12 @@ function productModalObserve() {
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          LibraryLoader.load('shopifyXr', () => {
-          });
-          LibraryLoader.load('modelViewerUi', () => {
-          });
-          LibraryLoader.load('modelViewerUiStyles', () => {
-          });
+          // LibraryLoader.load('shopifyXr', () => {
+          // });
+          // LibraryLoader.load('modelViewerUi', () => {
+          // });
+          // LibraryLoader.load('modelViewerUiStyles', () => {
+          // });
           model.classList.add('visible');
           setTimeout(function hideButton() {
             viewInModelBtn.classList.add('hidden');
