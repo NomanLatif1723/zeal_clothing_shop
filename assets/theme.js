@@ -2248,6 +2248,7 @@ function productPopupSlider() {
         prevEl: '.swiper-button-prev.swiper-button-' + id
       },
     }
+    popupSwiper[id] = new Swiper(sliderContainer, swiperOptions);
   });
 }
 function initProductZoomGallery() {
@@ -2296,6 +2297,7 @@ document.addEventListener('DOMContentLoaded', () => {
   backToTopScrolling();
   initPasswordModal();
   productModalObserve();
+  productPopupSlider();
   initProductZoomGallery();
 });
 
