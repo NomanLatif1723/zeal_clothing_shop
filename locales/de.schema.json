@@ -73,6 +73,26 @@
         }
       }
     },
+    "apps": {
+      "name": "Apps",
+      "settings": {
+        "full_width": {
+          "label": "Gesamtbreite"
+        },
+        "header_spacing": {
+          "label": "Abschnittsabstand",
+          "top_spacing": {
+            "label": "Abstand oben"
+          },
+          "bottom_spacing": {
+            "label": "Abstand unten"
+          }
+        }
+      },
+      "presets": {
+        "name": "Apps"
+      }
+    },
     "blog-posts": {
       "name": "Blogeinträge",
       "settings": {
