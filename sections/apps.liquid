@@ -1,4 +1,14 @@
-
+<div class="main__section-{{ section.id }}">
+  {%- unless section.settings.full_width -%}
+    <div class="page__width">
+  {%- endunless -%}
+  {%- for block in section.blocks -%}
+    {%- render block -%}
+  {%- endfor -%}
+  {%- unless section.settings.full_width -%}
+    </div>
+  {%- endunless -%}
+</div>
 {% schema %}
   {
     "name": "t:sections.apps.name",
