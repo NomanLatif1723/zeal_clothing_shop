@@ -73,6 +73,26 @@
         }
       }
     },
+    "apps": {
+      "name": "تطبيقات",
+      "settings": {
+        "full_width": {
+          "label": "العرض الكامل"
+        },
+        "header_spacing": {
+          "label": "تباعد القسم",
+          "top_spacing": {
+            "label": "تباعد الأعلى"
+          },
+          "bottom_spacing": {
+            "label": "تباعد القاع"
+          }
+        }
+      },
+      "presets": {
+        "name": "تطبيقات"
+      }
+    },
     "blog-posts": {
       "name": "منشورات المدونة",
       "settings": {
