@@ -73,6 +73,26 @@
         }
       }
     },
+    "apps": {
+      "name": "アプリ",
+      "settings": {
+        "full_width": {
+          "label": "全幅"
+        },
+        "header_spacing": {
+          "label": "セクションの間隔",
+          "top_spacing": {
+            "label": "上部の間隔"
+          },
+          "bottom_spacing": {
+            "label": "下部の間隔"
+          }
+        }
+      },
+      "presets": {
+        "name": "アプリ"
+      }
+    },
     "blog-posts": {
       "name": "ブログ投稿",
       "settings": {
