@@ -80,7 +80,7 @@
     </div>
   </div>
   {%- if section.settings.show_image_zoom -%}
-    <product-image-zoom product-handle="{{ product.handle }}" id="product-{{ section.id }}-{{ product.id }}-zoom" tabindex="-1" role="dialog">
+    <product-image-zoom class="product__zoom-gallery" product-handle="{{ product.handle }}" id="product-{{ section.id }}-{{ product.id }}-zoom" tabindex="-1" role="dialog">
       <div id="product__zoom-{{ section.id }}">
         {%- for media in product.media -%}
           {%- if media.media_type == 'image' -%}
