@@ -133,36 +133,3 @@
     </div>
   </div>
 {%- endunless -%}
-
-{%- if section.settings.show_image_zoom -%}
-  <product-image-zoom class="product__zoom-gallery" product-handle="{{ product.handle }}" id="product-{{ section.id }}-{{ product.id }}-zoom" tabindex="-1" role="dialog">
-    <div id="product__zoom-{{ section.id }}">
-      {%- for media in product.media -%}
-        {%- if media.media_type == 'image' -%}
-          <img
-            src="{{ media | img_url: default }}"
-            srcset="
-              {{ media | img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
-              {{ media | img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
-              {{ media | img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
-              {{ media | img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
-              {{ media | img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w"
-            width="{{ media.width }}"
-            height="{{ media.height }}"
-            sizes="{{ sizes }}"
-            alt="{{ media.alt }}"
-            {%- if featured_product -%}
-              loading = 'lazy'
-            {%- endif -%}
-            data-media-id="{{ media.id }}"
-            data-index="{{ forloop.index }}"
-          />
-        {%- elsif media.media_type == 'modal' -%}
-          <model-viewer class="product__media-model">
-            {{ media | media_tag: image_size: "2048", toggleable: true, data-media-id: media.id, data-index: forloop.index }}
-          </model-viewer>
-        {%- endif -%}
-      {%- endfor -%}
-    </div>
-  </product-image-zoom>
-{%- endif -%}
