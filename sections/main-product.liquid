@@ -14,6 +14,9 @@
     assign product_content_width = 'product-block__extra--small'
     assign media_size = '760px'
   endif
+  assign ratio = 0.75
+  assign default = 'grande'
+  assign sizes = '(min-width: 1200px) 650px, 45vw'
 -%}
 {%- style -%}
   .main__section-{{ section.id }}{
@@ -30,7 +33,7 @@
 
 {%- if section.settings.show_image_zoom -%}
   <product-image-zoom class="product__zoom-gallery" product-handle="{{ product.handle }}" id="product-{{ section.id }}-{{ product.id }}-zoom" tabindex="-1" role="dialog" data-section-id="{{ section.id }}">
-    <div id="product__zoom-{{ section.id }}" class="swiper">
+    <div id="product__zoom-{{ section.id }}" class="swiper product__popup">
       <div class="swiper-wrapper">
         {%- for media in product.media -%}
           <div class="swiper-slide">
