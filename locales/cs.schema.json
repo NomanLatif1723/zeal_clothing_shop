@@ -73,6 +73,26 @@
         }
       }
     },
+    "apps": {
+      "name": "Aplikace",
+      "settings": {
+        "full_width": {
+          "label": "Plná šířka"
+        },
+        "header_spacing": {
+          "label": "Rozteč sekcí",
+          "top_spacing": {
+            "label": "Rozteč nahoře"
+          },
+          "bottom_spacing": {
+            "label": "Mezera dole"
+          }
+        }
+      },
+      "presets": {
+        "name": "Aplikace"
+      }
+    },
     "blog-posts": {
       "name": "Příspěvky na blogu",
       "settings": {
