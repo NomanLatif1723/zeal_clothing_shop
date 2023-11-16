@@ -2229,6 +2229,22 @@ function productModalObserve() {
   });
 }
 
+// Product Zoom Gallery 
+function initProductZoomGallery() {
+  let selectors = {
+    productZoomBtn: document.querySelectorAll('.image__zoom-btn'),
+    galleryModalZoom: document.querySelector('.product__zoom-gallery')
+  }
+  selectors.productZoomBtn.forEach(button => {
+    if(!button) return;
+    button.addEventListener('click', () => {
+      const id = button.dataset.mediaId;
+      console.log(id);
+      selectors.galleryModalZoom.classList.add('open__modal');
+    })
+  })
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initStickyHeader();
   initHeaderNavigation();
