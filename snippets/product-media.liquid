@@ -78,8 +78,39 @@
         </div>
       {%- endfor -%}
     </div>
-    
   </div>
+  {%- if section.settings.show_image_zoom -%}
+    <product-image-zoom product-handle="{{ product.handle }}" id="product-{{ section.id }}-{{ product.id }}-zoom" tabindex="-1" role="dialog">
+      <div id="product__zoom-{{ section.id }}">
+        {%- for media in product.media -%}
+          {%- if media.media_type == 'image' -%}
+            <img
+              src="{{ media | img_url: default }}"
+              srcset="
+                {{ media | img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
+                {{ media | img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
+                {{ media | img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
+                {{ media | img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
+                {{ media | img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w"
+              width="{{ media.width }}"
+              height="{{ media.height }}"
+              sizes="{{ sizes }}"
+              alt="{{ media.alt }}"
+              {%- if featured_product -%}
+                loading = 'lazy'
+              {%- endif -%}
+              data-media-id="{{ media.id }}"
+              data-index="{{ forloop.index }}"
+            />
+          {%- elsif media.media_type == 'modal' -%}
+            <model-viewer class="product__media-model">
+              {{ media | media_tag: image_size: "2048", toggleable: true, data-media-id: media.id }}
+            </model-viewer>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </product-image-zoom>
+  {%- endif -%}
   {%- if product.media.size > 1 and thumbnails %}
     <div id="product__thumbnail-{{ section.id }}" class="product-media__thumbnails swiper">
       <div class="swiper-wrapper">
@@ -134,46 +165,3 @@
     </div>
   </div>
 {%- endunless -%}
-
-
-{%- if section.settings.show_image_zoom -%}
-  {%- comment -%}This code MUST NOT be changed, and is part of the PhotoSwipe required interface{%- endcomment -%}
-  <product-image-zoom product-handle="{{ product.handle }}" id="product-{{ section.id }}-{{ product.id }}-zoom" class="pswp" tabindex="-1" role="dialog">
-    <div class="pswp__bg"></div>
-
-    <div class="pswp__scroll-wrap">
-      <div class="pswp__container">
-        <div class="pswp__item"></div>
-        <div class="pswp__item"></div>
-        <div class="pswp__item"></div>
-      </div>
-
-      <div class="pswp__ui pswp__ui--hidden">
-        <div class="pswp__top-bar">
-          <button class="pswp__button pswp__button--close prev-next-button" data-action="pswp-close" title="Close">{% render 'icon-close' %}</button>
-        </div>
-
-        <div class="pswp__prev-next-buttons hidden-pocket">
-          <button class="pswp__button prev-next-button prev-next-button--prev" data-action="pswp-prev" title="previous">{% render 'icon-arrow-down' %}</button>
-          <button class="pswp__button prev-next-button prev-next-button--next" data-action="pswp-next" title="Next">{% render 'icon-arrow-down' %}</button>
-        </div>
-
-        <div class="pswp__dots-nav-wrapper hidden-lap-and-up">
-          <button class="tap-area tap-area--large" data-action="pswp-prev">
-            <span class="visually-hidden">Previous</span>
-            {%- render 'icon-arrow-down' -%}
-          </button>
-
-          <div class="dots-nav dots-nav--centered">
-            <!-- This will be fill at runtime as the number of items will be dynamic -->
-          </div>
-
-          <button class="tap-area tap-area--large" data-action="pswp-next">
-            <span class="visually-hidden">Next</span>
-            {%- render 'icon-arrow-down' -%}
-          </button>
-        </div>
-      </div>
-    </div>
-  </product-image-zoom>
-{%- endif -%}
