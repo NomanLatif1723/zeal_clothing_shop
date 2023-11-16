@@ -92,7 +92,7 @@
         "mobile_menu": "",
         "header_styles": "left",
         "sticky_header": true,
-        "show_icons": false
+        "show_icons": true
       }
     }
   },
