@@ -73,6 +73,26 @@
         }
       }
     },
+    "apps": {
+      "name": "Apps",
+      "settings": {
+        "full_width": {
+          "label": "Fuld bredde"
+        },
+        "header_spacing": {
+          "label": "Sektionsafstand",
+          "top_spacing": {
+            "label": "Afstand Top"
+          },
+          "bottom_spacing": {
+            "label": "Mellemrum bund"
+          }
+        }
+      },
+      "presets": {
+        "name": "Apps"
+      }
+    },
     "blog-posts": {
       "name": "Blogindlæg",
       "settings": {
