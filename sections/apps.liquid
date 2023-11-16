@@ -1,12 +1,23 @@
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "t:sections.apps.name",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "full_width",
+        "label": "t:sections.apps.settings.full_width.label",
+        "default": false
+      }
+    ],
+    "blocks": [
+      {
+        "type": "@app"
+      }
+    ],
+    "presets": [
+      {
+        "name": "t:sections.apps.presets.name"
+      }
+    ]
   }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
