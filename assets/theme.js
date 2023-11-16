@@ -2199,42 +2199,65 @@ document.addEventListener('DOMContentLoaded', () => {
   productModalObserve();
 });
 
-// document.addEventListener("DOMContentLoaded", function() {
-//   var galleryItems = document.querySelectorAll('.product-media__gallery--thumbnail a');
-  
-//   galleryItems.forEach(function(item) {
-//     item.addEventListener('click', function(event) {
-//       event.preventDefault();
-      
-//       var currentIndex = Array.from(galleryItems).indexOf(item);
-      
-//       var gallery = galleryItems.forEach(function(galleryItem, index) {
-//         return {
-//           src: galleryItem.getAttribute('href'),
-//           type: 'image'
-//         };
-//       });
-      
-//       var options = {
-//         index: currentIndex,
-//         tLoading: 'Loading image #' + (currentIndex + 1) + '...',
-//         mainClass: 'mfp-img-mobile',
-//         gallery: {
-//           enabled: true,
-//           navigateByImgClick: true,
-//           preload: [0, 1]
-//         },
-//         image: {
-//           tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-//           titleSrc: function(item) {
-//             return item.el.getAttribute('title') + '<small>by Marsel Van Oosten</small>';
-//           }
-//         }
-//       };
+const LibraryLoader = (() => {
+  const types = {
+    link: 'link',
+    script: 'script',
+  };
 
-//       new PhotoSwipe(document.querySelector('.pswp'), gallery, options).init();
-//     });
-//   });
-// });
+  const status = {
+    requested: 'requested',
+    loaded: 'loaded',
+  };
+
+  const cloudCdn = 'https://cdn.shopify.com/shopifycloud/';
+
+  const libraries = {
+    youtubeSdk: { tagId: 'youtube-sdk', src: 'https://www.youtube.com/iframe_api', type: types.script },
+    vimeo: { tagId: 'vimeo-api', src: 'https://player.vimeo.com/api/player.js', type: types.script },
+    shopifyXr: { tagId: 'shopify-model-viewer-xr', src: cloudCdn + 'shopify-xr-js/assets/v1.0/shopify-xr.en.js', type: types.script },
+    modelViewerUi: { tagId: 'shopify-model-viewer-ui', src: cloudCdn + 'model-viewer-ui/assets/v1.0/model-viewer-ui.en.js', type: types.script },
+    modelViewerUiStyles: { tagId: 'shopify-model-viewer-ui-styles', src: cloudCdn + 'model-viewer-ui/assets/v1.0/model-viewer-ui.css', type: types.link },
+  };
+
+  function load(libraryName, callback = () => {}) {
+    const library = libraries[libraryName];
+
+    if (!library || library.status === status.requested) return;
+    if (library.status === status.loaded) {
+      callback();
+      return;
+    }
+
+    library.status = status.requested;
+    const tag = createTag(library, callback);
+
+    Object.assign(tag, { id: library.tagId, element: tag });
+    document.querySelector(library.type).parentNode.insertBefore(tag, document.querySelector(library.type));
+  }
+
+  function createTag(library, callback) {
+    const tag = document.createElement(library.type);
+
+    Object.assign(tag, { [library.type === types.script ? 'src' : 'href']: library.src });
+
+    if (library.type === types.link) Object.assign(tag, { rel: 'stylesheet', type: 'text/css' });
+
+    tag.addEventListener('load', () => {
+      library.status = status.loaded;
+      callback();
+    });
+
+    return tag;
+  }
+
+  return { load };
+})();
+
+// Example usage:
+LibraryLoader.load('modelViewerUiStyles', () => {
+  console.log('modelViewerUiStyles loaded!');
+});
+
   
 })();
