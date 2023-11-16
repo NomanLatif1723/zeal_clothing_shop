@@ -72,12 +72,12 @@
           {%- endif -%}
         </div>
       {%- endfor -%}
-      {%- if section.settings.show_image_zoom -%}
-        <button class="image__zoom-btn" type="button" title="photoswipe Zoom">
-          {%- render 'icon-search' -%}
-        </button>
-      {%- endif -%}
     </div>
+    {%- if section.settings.show_image_zoom -%}
+      <button class="image__zoom-btn" type="button" title="photoswipe Zoom">
+        {%- render 'icon-search' -%}
+      </button>
+    {%- endif -%}
   </div>
   {%- if product.media.size > 1 and thumbnails %}
     <div id="product__thumbnail-{{ section.id }}" class="product-media__thumbnails swiper">
