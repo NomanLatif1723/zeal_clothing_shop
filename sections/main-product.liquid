@@ -33,7 +33,7 @@
 
 {%- if section.settings.show_image_zoom -%}
   <product-image-zoom class="product__zoom-gallery popup__hidden" tabindex="-1" role="dialog" data-section-id="{{ section.id }}" data-popup-modal>
-    <!-- <div class="page__width"> -->
+    <div class="page__width">
       <div id="product__zoom-{{ section.id }}" class="swiper product__popup">
         <div class="swiper-wrapper">
           {%- for media in product.media -%}
@@ -59,10 +59,11 @@
         <div class="swiper-button-next popup-button-{{ section.id }}"></div>
         <div class="swiper-button-prev popup-button-{{ section.id }}"></div>
       </div>
-    <!-- </div> -->
-    <button class="close__modal btn btn__primary close-modal__newsletter--popup" aria-label="{{ 'general.accessibility.close-modal' | t }}">
-      {%- render 'icon-close' -%}
-    </button>
+      <button class="close__modal btn btn__primary close-modal__newsletter--popup" aria-label="{{ 'general.accessibility.close-modal' | t }}">
+        {%- render 'icon-close' -%}
+      </button>
+    </div>
+    
   </product-image-zoom>
 {%- endif -%}
 
