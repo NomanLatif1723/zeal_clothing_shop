@@ -104,7 +104,7 @@
             />
           {%- elsif media.media_type == 'modal' -%}
             <model-viewer class="product__media-model">
-              {{ media | media_tag: image_size: "2048", toggleable: true, data-media-id: media.id }}
+              {{ media | media_tag: image_size: "2048", toggleable: true, data-media-id: media.id, data-index: forloop.index }}
             </model-viewer>
           {%- endif -%}
         {%- endfor -%}
