@@ -2236,7 +2236,7 @@ function productPopupSlider() {
   popupWrapper.forEach(wrapper => {
     if(!wrapper) return;
     const id = wrapper.dataset.sectionId;
-    const sliderContainer = wrapper.querySelector('product__zoom-'+ id);
+    const sliderContainer = wrapper.querySelector('.product__zoom-'+ id);
     console.log(sliderContainer);
     if(sliderContainer.swiper){
       sliderContainer.swiper.destroy();
