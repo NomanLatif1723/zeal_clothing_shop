@@ -73,6 +73,26 @@
         }
       }
     },
+    "apps": {
+      "name": "Aplicativos",
+      "settings": {
+        "full_width": {
+          "label": "Largura completa"
+        },
+        "header_spacing": {
+          "label": "Espaçamento entre seções",
+          "top_spacing": {
+            "label": "Espaçamento Superior"
+          },
+          "bottom_spacing": {
+            "label": "Espaçamento Inferior"
+          }
+        }
+      },
+      "presets": {
+        "name": "Aplicativos"
+      }
+    },
     "blog-posts": {
       "name": "Postagens no blog",
       "settings": {
