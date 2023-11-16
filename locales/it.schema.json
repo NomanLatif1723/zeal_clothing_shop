@@ -73,6 +73,26 @@
         }
       }
     },
+    "apps": {
+      "name": "App",
+      "settings": {
+        "full_width": {
+          "label": "Intera larghezza"
+        },
+        "header_spacing": {
+          "label": "Spaziatura della sezione",
+          "top_spacing": {
+            "label": "Spaziatura superiore"
+          },
+          "bottom_spacing": {
+            "label": "Spaziatura inferiore"
+          }
+        }
+      },
+      "presets": {
+        "name": "App"
+      }
+    },
     "blog-posts": {
       "name": "I post del blog",
       "settings": {
