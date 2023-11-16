@@ -18,9 +18,6 @@
       {%- for media in product.media -%}
         <div class="product__image{% if thumbnails %} swiper-slide{% endif %} product-image__{{ section.settings.media_layout }}{% if media.id == product.selected_or_first_available_variant.featured_media.id %} active{% endif %}">
           {%- if media.media_type == 'image' -%}
-            {% if section.settings.show_image_zoom %}
-              <a href="{{ media | img_url: "2048x2048" }}" title="{{ media.alt }}">
-            {% endif %}
             <img
               src="{{ media | img_url: default }}"
               srcset="
@@ -39,9 +36,6 @@
               data-media-id="{{ media.id }}"
               data-index="{{ forloop.index }}"
             />
-            {% if section.settings.show_image_zoom %}
-              </a>
-            {% endif %}
           {%- elsif media.media_type == 'video' -%}
             {{ media | media_tag: image_size: "2048x", autoplay: true, loop: loop, controls: true, preload: "none", class: "product-media__video" }}
           {%- elsif media.media_type == 'external_video' -%}
@@ -78,6 +72,11 @@
           {%- endif -%}
         </div>
       {%- endfor -%}
+      {%- if section.settings.show_image_zoom -%}
+        <button class="image__zoom-btn" type="button" title="photoswipe Zoom">
+          {%- render 'icon-search' -%}
+        </button>
+      {%- endif -%}
     </div>
   </div>
   {%- if product.media.size > 1 and thumbnails %}
