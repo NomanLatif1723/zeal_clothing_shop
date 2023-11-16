@@ -2262,7 +2262,7 @@ function initProductZoomGallery() {
     button.addEventListener('click', () => {
       const id = button.dataset.mediaId;
       console.log(id);
-      selectors.galleryPopup.classList.add('open__modal');
+      selectors.galleryPopup.classList.remove('popup__hidden');
     });
   });
 }
