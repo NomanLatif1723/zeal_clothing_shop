@@ -3511,9 +3511,6 @@
         "show_language": {
           "label": "Sprachauswahl anzeigen"
         },
-        "show_flags": {
-          "label": "Flaggen anzeigen"
-        },
         "text_direction": {
           "label": "Textrichtung",
           "options": {
