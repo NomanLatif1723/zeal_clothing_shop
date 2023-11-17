@@ -133,6 +133,7 @@
                   </div>
                 </div>
               {%- endfor -%}
+              <drawer-recommendations data-intent="related" data-section-id="{{ section.id }}" data-product-id="{{ cart.items.first.product_id }}" data-limit="4">
               <div class="cart__recommendation-products">
                 <div class="cart__recommendation-header">Consider These Items As Well</div>
                 <div class="cart__recommendations-list">
@@ -198,6 +199,7 @@
                   </div>
                 </div>
               </div>
+              </drawer-recommendations>
             </div>
             <div class="cart-drawer__footer">
               {% if cart.discount_applications != blank %}
