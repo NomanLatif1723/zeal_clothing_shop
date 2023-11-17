@@ -2156,41 +2156,7 @@ function initProductRecommendations() {
 
 // Cart Drawer Recommendations 
 function initDrawerRecommendations() {
-  function buildblock(product) {
-    const html = `
-     <div class="cart__recommendations-item">
-      <div class="cart__recommendations-item--image">
-        <img src="{{ product.image | img_url: "100x" }}" width="100" height="100" loading="lazy"/>
-      </div>
-      <div class="cart__recommendations-item--content">
-        <div class="cart__recommendations-item--title"><h3>{{ product.title }}</h3></div>
-        <div class="cart__recommendations-item--meta">
-          <div class="cart__recommendations-item--price">{{ product.price | money }}</div>
-          <div class="cart__recommendations-item--variants">
-            {%- unless product.has_only_default_variant -%}
-              <variant-selects data-section="{{ section.id }}" data-url="{{ product.url }}">
-                <div class="product__options product-select__options">
-                  <div class="product-form__select">
-                    <select form="{{ product_form_id }}" class="product__select" data-selected-variant id="product-select-{{ forloop.index }}">
-                      {% for variant in product.variants %}
-                        <option value="{{ variant.id }}" {% if variant == product.selected_or_first_available_variant %}selected{% endif %}>
-                          {{ variant.title }}
-                        </option>
-                      {% endfor %}
-                    </select>
-                  </div>
-                </div>
-              </variant-selects>
-            {%- endunless -%}
-          </div>
-        </div>
-        <div class="cart__recommendations-item--button">
-          <button type="button" name="add" class="btn btn__primary">Add To Cart</button>
-        </div>
-      </div>
-    </div>
-    `;
-  }
+
   fetch(window.Shopify.routes.root + "recommendations/products.json?product_id=8457435971906&limit=4)
   .then(response => response.json())
   .then(({ products }) => {
