@@ -1839,7 +1839,7 @@
           "label": "Show Arrows"
         },
         "show_image_zoom": {
-          "label": "Show Image Zoom"
+          "label": "Enable Image Zoom"
         },
         "header_size_chart": {
           "label": "Size Chart",
