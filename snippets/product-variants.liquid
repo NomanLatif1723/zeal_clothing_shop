@@ -57,9 +57,6 @@
             </fieldset>
           {%- endfor -%}
         </div>
-        <script type="application/json">
-          {{ product.variants | json }}
-        </script>
       </variant-radios>
     {%- endif -%}
   {%- elsif block.settings.variant_type == 'dropdown' -%}
@@ -78,9 +75,6 @@
           </div>
         {%- endfor -%}
       </div>
-      <script type="application/json">
-        {{ product.variants | json }}
-      </script>
     </variant-selects>
   {%- endif -%}
 {%- endunless -%}
