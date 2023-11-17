@@ -2156,7 +2156,7 @@ function initProductRecommendations() {
 
 // Cart Drawer Recommendations 
 function initDrawerRecommendations() {
-  const drawerRecommendationContainer = document.querySelectorAll('product-recommendations');
+  const drawerRecommendationContainer = document.querySelectorAll('drawer-recommendations');
   if (drawerRecommendationContainer) {
     drawerRecommendationContainer.forEach(container => {
       const sectionId = container.getAttribute('data-section-id');
