@@ -1838,6 +1838,9 @@
         "show_thumbnail_arrows": {
           "label": "Näytä nuolet"
         },
+        "show_image_zoom": {
+          "label": "Ota kuvan zoomaus käyttöön"
+        },
         "header_size_chart": {
           "label": "Kokotaulukko",
           "size_chart_page": {
@@ -3495,6 +3498,9 @@
         },
         "show_terms": {
           "label": "Ota käyttöehdot käyttöön"
+        },
+        "cart_terms_page": {
+          "label": "Ostoskorin käyttöehdot -sivu"
         },
         "show_note": {
           "label": "Näytä tilaushuomautus"
