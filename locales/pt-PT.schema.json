@@ -3496,6 +3496,9 @@
         "show_terms": {
           "label": "Ativar Termos e Condições"
         },
+        "cart_terms_page": {
+          "label": "Página de termos e condições do carrinho"
+        },
         "show_note": {
           "label": "Mostrar nota do pedido"
         }
