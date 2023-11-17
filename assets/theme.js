@@ -2174,14 +2174,24 @@ function initDrawerRecommendations() {
     </div>
     `
   }
-  fetch(window.Shopify.routes.root + "recommendations/products.json?product_id=8457435971906&limit=4")
-  .then(response => response.json())
-  .then(({ products }) => {
-    products.forEach(product => {
-      const html = buildblock(product);
-      document.querySelector('.cart__recommendations-list').innerHTML += html;
-    })
+  const productRecommendationContainer = document.querySelectorAll('product-recommendations');
+  if (productRecommendationContainer) {
+    productRecommendationContainer.forEach(container => {
+      const intent = container.getAttribute('data-intent');
+      const sectionId = container.getAttribute('data-section-id');
+      const productId = container.getAttribute('data-product-id');
+      const recommendationsCount = container.getAttribute('data-limit');
+      fetch(window.Shopify.routes.root + `recommendations/products.json?product_id=${productId}&limit=4`)
+      .then(response => response.json())
+      .then(({ products }) => {
+        products.forEach(product => {
+          const html = buildblock(product);
+          document.querySelector('.cart__recommendations-list').innerHTML += html;
+        })
+      }
+    });
   }
+  
 );
 
   // const drawerRecommendationContainer = document.querySelectorAll('drawer-recommendations');
