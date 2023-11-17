@@ -1838,6 +1838,9 @@
         "show_thumbnail_arrows": {
           "label": "السهام المعرض"
         },
+        "show_image_zoom": {
+          "label": "تمكين تكبير الصورة"
+        },
         "header_size_chart": {
           "label": "حجم الرسم البياني",
           "size_chart_page": {
@@ -3495,6 +3498,9 @@
         },
         "show_terms": {
           "label": "تمكين الشروط والأحكام"
+        },
+        "cart_terms_page": {
+          "label": "صفحة شروط وأحكام عربة التسوق"
         },
         "show_note": {
           "label": "إظهار مذكرة الطلب"
