@@ -1838,6 +1838,9 @@
         "show_thumbnail_arrows": {
           "label": "Vis pile"
         },
+        "show_image_zoom": {
+          "label": "تمكين تكبير الصورة"
+        },
         "header_size_chart": {
           "label": "Størrelses skema",
           "size_chart_page": {
@@ -3495,6 +3498,9 @@
         },
         "show_terms": {
           "label": "Aktiver vilkår og betingelser"
+        },
+        "cart_terms_page": {
+          "label": "Cart Terms and Conditions Page"
         },
         "show_note": {
           "label": "Vis ordrebemærkning"
