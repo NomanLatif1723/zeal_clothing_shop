@@ -2156,36 +2156,36 @@ function initProductRecommendations() {
 
 // Cart Drawer Recommendations 
 function initDrawerRecommendations() {
-  const drawerRecommendationContainer = document.querySelectorAll('drawer-recommendations');
-  if (drawerRecommendationContainer) {
-    drawerRecommendationContainer.forEach(container => {
-      const sectionId = container.getAttribute('data-section-id');
-      const productId = container.getAttribute('data-product-id');
-      const recommendationsCount = container.getAttribute('data-limit');
-      async function fetchData() {
-        try {
-          const response = await fetch(`${window.themeContent.routes.productRecommendation}?product_id=${productId}&section_id=${sectionId}&limit=${recommendationsCount}`);
-          if (response.ok) {
-            const data = await response.text();
-            return data;
-          } else {
-            console.error(`Failed to fetch data: ${response.status} - ${response.statusText}`);
-            return null;
-          }
-        } catch (error) {
-          console.error('Error fetching data:', error);
-          return null;
-        }
-      }
-      async function replaceContent() {
-        const data = await fetchData();
-        if (data !== null) {
-          container.innerHTML = data;
-        }
-      }
-      replaceContent();
-    })
-  }
+  // const drawerRecommendationContainer = document.querySelectorAll('drawer-recommendations');
+  // if (drawerRecommendationContainer) {
+  //   drawerRecommendationContainer.forEach(container => {
+  //     const sectionId = container.getAttribute('data-section-id');
+  //     const productId = container.getAttribute('data-product-id');
+  //     const recommendationsCount = container.getAttribute('data-limit');
+  //     async function fetchData() {
+  //       try {
+  //         const response = await fetch(`${window.themeContent.routes.productRecommendation}?product_id=${productId}&section_id=${sectionId}&limit=${recommendationsCount}`);
+  //         if (response.ok) {
+  //           const data = await response.text();
+  //           return data;
+  //         } else {
+  //           console.error(`Failed to fetch data: ${response.status} - ${response.statusText}`);
+  //           return null;
+  //         }
+  //       } catch (error) {
+  //         console.error('Error fetching data:', error);
+  //         return null;
+  //       }
+  //     }
+  //     async function replaceContent() {
+  //       const data = await fetchData();
+  //       if (data !== null) {
+  //         container.innerHTML = data;
+  //       }
+  //     }
+  //     replaceContent();
+  //   })
+  // }
 }
 
 // Back To Top Function
