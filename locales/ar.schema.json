@@ -3516,9 +3516,6 @@
         "show_language": {
           "label": "إظهار محدد اللغة"
         },
-        "show_flags": {
-          "label": "إظهار الأعلام"
-        },
         "text_direction": {
           "label": "اتجاه النص",
           "options": {
