@@ -3499,6 +3499,9 @@
         "show_terms": {
           "label": "Aktiver vilkår og betingelser"
         },
+        "cart_terms_page": {
+          "label": "Side med handlekurv vilkår og betingelser"
+        },
         "show_note": {
           "label": "Vis ordrenotat"
         }
