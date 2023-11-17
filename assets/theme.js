@@ -1532,7 +1532,6 @@ function initMediaGallery() {
       }
       let mediaSwiperOptions = {
         slidesPerView: 1,
-        effect: fade,
         speed: 1000,
         navigation: {
           nextEl: '.swiper-button-next.swiper-button-' + id,
