@@ -2260,11 +2260,17 @@ function initProductZoomGallery() {
   selectors.productPopupBtn.forEach(button => {
     if(!button) return;
     button.addEventListener('click', () => {
-      const id = button.dataset.mediaId;
+      const mediaId = button.dataset.mediaId;
       console.log(id);
       selectors.galleryPopup.classList.remove('popup__hidden');
-      const slide = selectors.galleryPopup.querySelector(`.product__popup [data-media-id="${id}"] `);
-      console.log(slide);
+      const slide = selectors.galleryPopup.querySelector(`.product__popup [data-media-id="${mediaId}"]`);
+      if (slide) {
+        const index = slide.dataset.index;
+        const sectionId = selectors.galleryPopup.dataset.sectionId;
+        const popupSlider = popupSwiper[sectionId];
+        popupSlider.slideTo(index);
+      }
+      
     });
   });
 }
