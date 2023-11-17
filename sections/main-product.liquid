@@ -37,23 +37,19 @@
       <div id="product__zoom-{{ section.id }}" class="swiper product__popup">
         <div class="swiper-wrapper">
           {%- for media in product.media -%}
-            <div class="swiper-slide">
-              {%- if media.media_type == 'image' -%}
-                <img
-                  src="{{ media | img_url: "1200x" }}"
-                  width="{{ media.width }}"
-                  height="{{ media.height }}"
-                  alt="{{ media.alt }}"
-                  loading = 'lazy'
-                  data-media-id="{{ media.id }}"
-                  data-index="{{ forloop.index }}"
-                />
-              {%- elsif media.media_type == 'modal' -%}
-                <model-viewer class="product__media-model">
-                  {{ media | media_tag: image_size: "2048", toggleable: true, data-media-id: media.id, data-index: forloop.index }}
-                </model-viewer>
-              {%- endif -%}
-            </div>
+            {%- if media.media_type == 'image' -%}
+              <div class="swiper-slide">
+                  <img
+                    src="{{ media | img_url: "1200x" }}"
+                    width="{{ media.width }}"
+                    height="{{ media.height }}"
+                    alt="{{ media.alt }}"
+                    loading = 'lazy'
+                    data-media-id="{{ media.id }}"
+                    data-index="{{ forloop.index }}"
+                  />
+              </div>
+            {%- endif -%}
           {%- endfor -%}
         </div>
         <div class="swiper-button-next popup-button-{{ section.id }}"></div>
