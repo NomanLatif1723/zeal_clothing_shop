@@ -1838,6 +1838,9 @@
         "show_thumbnail_arrows": {
           "label": "Mostrar flechas"
         },
+        "show_image_zoom": {
+          "label": "Habilitar zoom de imagen"
+        },
         "header_size_chart": {
           "label": "Carta del tamaño",
           "size_chart_page": {
@@ -3495,6 +3498,9 @@
         },
         "show_terms": {
           "label": "Habilitar términos y condiciones"
+        },
+        "cart_terms_page": {
+          "label": "Página de términos y condiciones del carrito"
         },
         "show_note": {
           "label": "Mostrar nota de pedido"
