@@ -3519,9 +3519,6 @@
         "show_language": {
           "label": "Afficher le sélecteur de langue"
         },
-        "show_flags": {
-          "label": "Afficher les drapeaux"
-        },
         "text_direction": {
           "label": "Direction du texte",
           "options": {
