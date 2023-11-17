@@ -18,7 +18,7 @@
     "cart_icon": "minimal_bag",
     "is_free_shipping_bar": true,
     "free_shipping_threshold": "2000",
-    "additional_checkout_buttons": true,
+    "additional_checkout_buttons": false,
     "show_terms": true,
     "cart_terms_page": "",
     "show_note": true,
