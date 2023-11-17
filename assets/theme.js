@@ -2263,6 +2263,8 @@ function initProductZoomGallery() {
       const id = button.dataset.mediaId;
       console.log(id);
       selectors.galleryPopup.classList.remove('popup__hidden');
+      const slide = selectors.galleryPopup.querySelector(`.product__popup [data-media-id="${id}"] `);
+      console.log(slide);
     });
   });
 }
