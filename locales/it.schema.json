@@ -1838,6 +1838,9 @@
         "show_thumbnail_arrows": {
           "label": "Mostra frecce"
         },
+        "show_image_zoom": {
+          "label": "Abilita lo zoom dell'immagine"
+        },
         "header_size_chart": {
           "label": "Tabella di formato",
           "size_chart_page": {
@@ -3495,6 +3498,9 @@
         },
         "show_terms": {
           "label": "Abilita Termini e condizioni"
+        },
+        "cart_terms_page": {
+          "label": "Pagina Termini e condizioni del carrello"
         },
         "show_note": {
           "label": "Mostra nota ordine"
