@@ -1838,6 +1838,9 @@
         "show_thumbnail_arrows": {
           "label": "Zobrazit šipky"
         },
+        "show_image_zoom": {
+          "label": "Povolit přiblížení obrázku"
+        },
         "header_size_chart": {
           "label": "Tabulka velikostí",
           "size_chart_page": {
@@ -3495,6 +3498,9 @@
         },
         "show_terms": {
           "label": "Povolit Smluvní podmínky"
+        },
+        "cart_terms_page": {
+          "label": "Stránka Obchodní podmínky košíku"
         },
         "show_note": {
           "label": "Zobrazit poznámku k objednávce"
