@@ -2338,6 +2338,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initStickyAddCart();
   initQuickShopCollection();
   initProductRecommendations();
+  initDrawerRecommendations();
   backToTopScrolling();
   initPasswordModal();
   productModalObserve();
