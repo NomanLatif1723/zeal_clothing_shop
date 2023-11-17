@@ -2153,79 +2153,6 @@ function initProductRecommendations() {
   }
 }
 // initProductRecommendations();
-
-// Cart Drawer Recommendations 
-function initDrawerRecommendations() {
-  function buildblock(product) {
-    const html = `
-    <div class="cart__recommendations-item">
-      <div class="cart__recommendations-item--image">
-        <img src="${product.featured_image}" width="100" height="100" loading="lazy"/>
-      </div>
-      <div class="cart__recommendations-item--content">
-        <div class="cart__recommendations-item--title"><h3>${product.title}</h3></div>
-        <div class="cart__recommendations-item--meta">
-          <div class="cart__recommendations-item--price">${product.price}</div>
-        </div>
-        <div class="cart__recommendations-item--button">
-          <button type="button" name="add" class="btn btn__primary">Add To Cart</button>
-        </div>
-      </div>
-    </div>
-    `
-  }
-  const productRecommendationContainer = document.querySelectorAll('product-recommendations');
-  if (productRecommendationContainer) {
-    productRecommendationContainer.forEach(container => {
-      const intent = container.getAttribute('data-intent');
-      const sectionId = container.getAttribute('data-section-id');
-      const productId = container.getAttribute('data-product-id');
-      const recommendationsCount = container.getAttribute('data-limit');
-      console.log(productId);
-      fetch(window.Shopify.routes.root + `recommendations/products.json?product_id=${productId}&limit=4`)
-      .then(response => response.json())
-      .then(({ products }) => {
-        products.forEach(product => {
-          const html = buildblock(product);
-          document.querySelector('.cart__recommendations-list').innerHTML += html;
-        })
-      }
-    });
-  }
-  
-);
-
-  // const drawerRecommendationContainer = document.querySelectorAll('drawer-recommendations');
-  // if (drawerRecommendationContainer) {
-  //   drawerRecommendationContainer.forEach(container => {
-  //     const sectionId = container.getAttribute('data-section-id');
-  //     const productId = container.getAttribute('data-product-id');
-  //     const recommendationsCount = container.getAttribute('data-limit');
-  //     async function fetchData() {
-  //       try {
-  //         const response = await fetch(`${window.themeContent.routes.productRecommendation}?product_id=${productId}&section_id=${sectionId}&limit=${recommendationsCount}`);
-  //         if (response.ok) {
-  //           const data = await response.text();
-  //           return data;
-  //         } else {
-  //           console.error(`Failed to fetch data: ${response.status} - ${response.statusText}`);
-  //           return null;
-  //         }
-  //       } catch (error) {
-  //         console.error('Error fetching data:', error);
-  //         return null;
-  //       }
-  //     }
-  //     async function replaceContent() {
-  //       const data = await fetchData();
-  //       if (data !== null) {
-  //         container.innerHTML = data;
-  //       }
-  //     }
-  //     replaceContent();
-  //   })
-  // }
-}
    
 // Back To Top Function
 function backToTopScrolling() {
@@ -2376,7 +2303,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initStickyAddCart();
   initQuickShopCollection();
   initProductRecommendations();
-  // initDrawerRecommendations();
   backToTopScrolling();
   initPasswordModal();
   productModalObserve();
