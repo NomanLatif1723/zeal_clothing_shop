@@ -1838,6 +1838,9 @@
         "show_thumbnail_arrows": {
           "label": "Mostrar Setas"
         },
+        "show_image_zoom": {
+          "label": "Ativar zoom de imagem"
+        },
         "header_size_chart": {
           "label": "Tabela de tamanhos",
           "size_chart_page": {
@@ -3495,6 +3498,9 @@
         },
         "show_terms": {
           "label": "Ativar Termos e Condições"
+        },
+        "cart_terms_page": {
+          "label": "Página de termos e condições do carrinho"
         },
         "show_note": {
           "label": "Mostrar nota do pedido"
