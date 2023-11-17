@@ -3499,6 +3499,9 @@
         "show_terms": {
           "label": "Aktivera villkor"
         },
+        "cart_terms_page": {
+          "label": "Sida för kundvagnsvillkor och villkor"
+        },
         "show_note": {
           "label": "Visa beställningsanmärkning"
         }
