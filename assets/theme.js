@@ -1833,7 +1833,7 @@ function initProductForm() {
     bodyContainer: document.querySelector('body'),
     cartItemCounter: document.querySelectorAll('[data-cart-count]'),
     cartType: 'page',
-    cartPopupContent: document.querySelector('.cart-popup__content'),
+    cartPopupMessage: document.querySelector('.cart-popup__message'),
     cartDrawerContent: document.querySelector("[data-cart]"),
     formValidationErrorMessage: document.querySelector('.product-form__errors'),
     giftCardRecipientButton: document.querySelector('.recipient__button input')
@@ -1942,10 +1942,10 @@ function initProductForm() {
       }
       selectors.cartDrawerContent.innerHTML = newBox;
     } else if (selectors.cartType === 'popup') {
-      if (!selectors.cartPopupContent) {
+      if (!selectors.cartPopupMessage) {
         return;
       }
-      selectors.cartPopupContent.textContent = window.themeContent.strings.itemAddedSuccess;
+      selectors.cartPopupMessage.textContent = window.themeContent.strings.itemAddedSuccess;
     }
     initCartForm();
   }
