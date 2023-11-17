@@ -38,15 +38,13 @@
         <div class="swiper-wrapper">
           {%- for media in product.media -%}
             {%- if media.media_type == 'image' -%}
-              <div class="swiper-slide">
+              <div class="swiper-slide" data-media-id="{{ media.id }}" data-index="{{ forloop.index }}">
                   <img
                     src="{{ media | img_url: "1200x" }}"
                     width="{{ media.width }}"
                     height="{{ media.height }}"
                     alt="{{ media.alt }}"
                     loading = 'lazy'
-                    data-media-id="{{ media.id }}"
-                    data-index="{{ forloop.index }}"
                   />
               </div>
             {%- endif -%}
