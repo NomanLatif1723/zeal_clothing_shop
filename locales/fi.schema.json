@@ -3516,9 +3516,6 @@
         "show_language": {
           "label": "Näytä kielivalitsin"
         },
-        "show_flags": {
-          "label": "Näytä liput"
-        },
         "text_direction": {
           "label": "Tekstin suunta",
           "options": {
