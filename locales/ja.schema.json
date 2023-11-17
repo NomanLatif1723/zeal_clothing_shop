@@ -1838,6 +1838,9 @@
         "show_thumbnail_arrows": {
           "label": "矢印を表示"
         },
+        "show_image_zoom": {
+          "label": "画像ズームを有効にする"
+        },
         "header_size_chart": {
           "label": "サイズチャート",
           "size_chart_page": {
@@ -3495,6 +3498,9 @@
         },
         "show_terms": {
           "label": "利用規約を有効にする"
+        },
+        "cart_terms_page": {
+          "label": "カート利用規約ページ"
         },
         "show_note": {
           "label": "注文メモを表示"
