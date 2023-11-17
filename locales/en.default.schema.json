@@ -3499,6 +3499,9 @@
         "show_terms": {
           "label": "Enable Terms and Conditions"
         },
+        "cart_terms_page": {
+          "label": "Cart Terms and Conditions Page"
+        },
         "show_note": {
           "label": "Show Order Note"
         }
