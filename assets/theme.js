@@ -2181,6 +2181,7 @@ function initDrawerRecommendations() {
       const sectionId = container.getAttribute('data-section-id');
       const productId = container.getAttribute('data-product-id');
       const recommendationsCount = container.getAttribute('data-limit');
+      console.log(productId);
       fetch(window.Shopify.routes.root + `recommendations/products.json?product_id=${productId}&limit=4`)
       .then(response => response.json())
       .then(({ products }) => {
