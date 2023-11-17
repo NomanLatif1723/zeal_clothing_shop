@@ -40,7 +40,7 @@
             {%- if media.media_type == 'image' -%}
               <div class="swiper-slide product__popup-images" data-media-id="{{ media.id }}" data-index="{{ forloop.index }}">
                   <img
-                    src="{{ media | img_url: "1200x" }}"
+                    src="{{ media | img_url: "2048x" }}"
                     width="{{ media.width }}"
                     height="{{ media.height }}"
                     alt="{{ media.alt }}"
