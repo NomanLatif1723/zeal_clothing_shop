@@ -1838,6 +1838,9 @@
         "show_thumbnail_arrows": {
           "label": "Visa pilar"
         },
+        "show_image_zoom": {
+          "label": "Aktivera bildzoom"
+        },
         "header_size_chart": {
           "label": "Storleksdiagram",
           "size_chart_page": {
