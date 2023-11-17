@@ -2164,7 +2164,7 @@ function initDrawerRecommendations() {
       const recommendationsCount = container.getAttribute('data-limit');
       async function fetchData() {
         try {
-          const response = await fetch(`${window.themeContent.routes.productRecommendation}?section_id=${sectionId}&product_id=${productId}&limit=${recommendationsCount}`);
+          const response = await fetch(`${window.themeContent.routes.productRecommendation}?product_id=${productId}&section_id=${sectionId}&limit=${recommendationsCount}`);
           if (response.ok) {
             const data = await response.text();
             return data;
