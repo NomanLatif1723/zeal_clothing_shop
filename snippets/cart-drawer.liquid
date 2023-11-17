@@ -133,7 +133,7 @@
                   </div>
                 </div>
               {%- endfor -%}
-              <drawer-recommendations data-intent="related" data-section-id="{{ section.id }}" data-product-id="{{ cart.items.first.product_id }}" data-limit="4">
+              <drawer-recommendations data-section-id="{{ section.id }}" data-product-id="{{ cart.items.first.product_id }}" data-limit="4">
               {% if recommendation.performed %}
                 <div class="cart__recommendation-products">
                   <div class="cart__recommendation-header">Consider These Items As Well</div>
