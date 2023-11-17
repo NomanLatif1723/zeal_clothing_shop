@@ -2164,7 +2164,7 @@ function initDrawerRecommendations() {
       const recommendationsCount = container.getAttribute('data-limit');
       async function fetchData() {
         try {
-          const response = await fetch(`${window.themeContent.routes.productRecommendation}?section_id=${sectionId}&product_id=${productId}&limit=${recommendationsCount}&intent=${intent}`);
+          const response = await fetch(`${window.themeContent.routes.productRecommendation}?section_id=${sectionId}&product_id=${productId}&limit=${recommendationsCount}`);
           if (response.ok) {
             const data = await response.text();
             return data;
@@ -2181,7 +2181,6 @@ function initDrawerRecommendations() {
         const data = await fetchData();
         if (data !== null) {
           container.innerHTML = data;
-          initQuickShopCollection();
         }
       }
       replaceContent();
