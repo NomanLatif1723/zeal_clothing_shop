@@ -2191,7 +2191,7 @@ function initDrawerRecommendations() {
     </div>
     `;
   }
-  fetch(window.Shopify.routes.root + "recommendations/products.json?product_id=1234567890123&limit=4&intent=related")
+  fetch(window.Shopify.routes.root + "recommendations/products.json?product_id=8457435971906&limit=4)
   .then(response => response.json())
   .then(({ products }) => {
     console.log(products);
