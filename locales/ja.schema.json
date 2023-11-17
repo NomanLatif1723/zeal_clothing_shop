@@ -3516,9 +3516,6 @@
         "show_language": {
           "label": "言語セレクターを表示"
         },
-        "show_flags": {
-          "label": "フラグを表示"
-        },
         "text_direction": {
           "label": "テキストの方向",
           "options": {
