@@ -1838,6 +1838,9 @@
         "show_thumbnail_arrows": {
           "label": "Mostrar Setas"
         },
+        "show_image_zoom": {
+          "label": "Ativar zoom de imagem"
+        },
         "header_size_chart": {
           "label": "Tabela de tamanhos",
           "size_chart_page": {
