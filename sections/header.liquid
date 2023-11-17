@@ -33,7 +33,7 @@
    mobile_menu: mobile_menu
 -%}
 {%- if settings.cart_type == 'drawer' -%}
-{%- render 'cart-drawer' -%}
+{%- render 'cart-drawer', section: section -%}
   {%- elsif settings.cart_type == 'popup' -%}
   {%- render 'cart-popup' -%}
 {%- endif -%}
