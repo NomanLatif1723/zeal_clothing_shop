@@ -81,7 +81,7 @@
                   <input type="checkbox" id="cartTerms1">
                   <label for="cartTerms1">
                     {%- if settings.cart_terms_page -%}
-                      <a class="links" href="{{ settings.cart_terms_page }}" title="{{ 'cart.general.terms_at_checkout' | t }}">
+                      <a class="links" target="_blank" href="{{ settings.cart_terms_page }}" title="{{ 'cart.general.terms_at_checkout' | t }}">
                     {%- endif -%}
                     {{ 'cart.general.terms_at_checkout' | t }}
                     {%- if settings.cart_terms_page -%}
