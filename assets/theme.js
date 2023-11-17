@@ -1933,9 +1933,9 @@ function initProductForm() {
   async function updateCartDrawer() {
     if (selectors.cartType === 'drawer') {
       const res = await fetch("/?view=ajax-cart");
-      console.log(res);
       const text = await res.text();
       const html = document.createElement("div");
+      console.log(html);
       html.innerHTML = text;
       const newBox = html.querySelector("[data-cart]").innerHTML;
       if (!selectors.cartDrawerContent) {
