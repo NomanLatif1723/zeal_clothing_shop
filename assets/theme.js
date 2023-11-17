@@ -2268,7 +2268,7 @@ function initProductZoomGallery() {
         const index = slide.dataset.index;
         const sectionId = selectors.galleryPopup.dataset.sectionId;
         const popupSlider = popupSwiper[sectionId];
-        popupSlider.slideTo(index);
+        popupSlider.slideTo(index - 1);
       }
       
     });
