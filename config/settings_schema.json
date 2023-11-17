@@ -209,6 +209,11 @@
         "default": false
       },
       {
+        "type": "page",
+        "id": "cart_terms_page",
+        "label": "t:schema_settings.cart.settings.cart_terms_page.label"
+      },
+      {
         "type": "checkbox",
         "id": "show_note",
         "label": "t:schema_settings.cart.settings.show_note.label",
