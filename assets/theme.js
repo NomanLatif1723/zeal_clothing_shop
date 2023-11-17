@@ -2261,8 +2261,9 @@ function initProductZoomGallery() {
     if(!button) return;
     button.addEventListener('click', () => {
       const mediaId = button.dataset.mediaId;
-      console.log(mediaId);
-      selectors.galleryPopup.classList.remove('popup__hidden');
+      if (selectors.galleryPopup) {
+        selectors.galleryPopup.classList.remove('popup__hidden');
+      }
       const slide = selectors.galleryPopup.querySelector(`.product__popup [data-media-id="${mediaId}"]`);
       if (slide) {
         const index = slide.dataset.index;
