@@ -2244,7 +2244,6 @@ function productPopupSlider() {
     let swiperOptions = {
       slidesPerView: 1,
       effect: "fade",
-      speed: 1000,
       navigation: {
         nextEl: '.swiper-button-next.popup-button-' + id,
         prevEl: '.swiper-button-prev.popup-button-' + id
