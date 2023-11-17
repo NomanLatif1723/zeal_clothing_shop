@@ -2270,7 +2270,6 @@ function initProductZoomGallery() {
         const popupSlider = popupSwiper[sectionId];
         popupSlider.slideTo(index - 1);
       }
-      
     });
   });
 }
