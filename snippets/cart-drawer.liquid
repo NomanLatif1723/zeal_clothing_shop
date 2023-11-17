@@ -134,71 +134,34 @@
                 </div>
               {%- endfor -%}
               <drawer-recommendations data-intent="related" data-section-id="{{ section.id }}" data-product-id="{{ cart.items.first.product_id }}" data-limit="4">
-              <div class="cart__recommendation-products">
-                <div class="cart__recommendation-header">Consider These Items As Well</div>
-                <div class="cart__recommendations-list">
-                  <div class="cart__recommendations-item">
-                    <div class="cart__recommendations-item--image">
-                      <img src="https://cdn.shopify.com/s/files/1/0794/3716/8962/files/Rectangle77_0d9c19db-ae60-4b81-bd91-f51fc5229248.jpg?v=1694780840" width="100" height="100" loading="lazy"/>
-                    </div>
-                    <div class="cart__recommendations-item--content">
-                      <div class="cart__recommendations-item--title"><h3>Product Title</h3></div>
-                      <div class="cart__recommendations-item--meta">
-                        <div class="cart__recommendations-item--price">$30</div>
-                        <div class="cart__recommendations-item--variants">Black/Small</div>
+              {% if recommendation.performed %}
+                <div class="cart__recommendation-products">
+                  <div class="cart__recommendation-header">Consider These Items As Well</div>
+                  <div class="cart__recommendations-list">
+                    {%- for product in recommendation.products -%}
+                      <div class="cart__recommendations-item">
+                        <div class="cart__recommendations-item--image">
+                          <img src="{{ product.image | img_url: "100x" }}" width="100" height="100" loading="lazy"/>
+                        </div>
+                        <div class="cart__recommendations-item--content">
+                          <div class="cart__recommendations-item--title"><h3>{{ product.title }}</h3></div>
+                          <div class="cart__recommendations-item--meta">
+                            <div class="cart__recommendations-item--price">{{ product.price | money }}</div>
+                            <div class="cart__recommendations-item--variants">
+                              {%- unless product.has_only_default_variant -%}
+                                
+                              {%- endunless -%}
+                            </div>
+                          </div>
+                          <div class="cart__recommendations-item--button">
+                            <button type="button" name="add" class="btn btn__primary">Add To Cart</button>
+                          </div>
+                        </div>
                       </div>
-                      <div class="cart__recommendations-item--button">
-                        <button type="button" name="add" class="btn btn__primary">Add To Cart</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="cart__recommendations-item">
-                    <div class="cart__recommendations-item--image">
-                      <img src="https://cdn.shopify.com/s/files/1/0794/3716/8962/files/Rectangle78_9dfb807b-ff98-4651-a9b8-7a1c53f8f869.jpg?v=1694780840" width="100" height="100" loading="lazy"/>
-                    </div>
-                    <div class="cart__recommendations-item--content">
-                      <div class="cart__recommendations-item--title"><h3>Product Title</h3></div>
-                      <div class="cart__recommendations-item--meta">
-                        <div class="cart__recommendations-item--price">$30</div>
-                        <div class="cart__recommendations-item--variants">Black/Small</div>
-                      </div>
-                      <div class="cart__recommendations-item--button">
-                        <button type="button" name="add" class="btn btn__primary">Add To Cart</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="cart__recommendations-item">
-                    <div class="cart__recommendations-item--image">
-                      <img src="https://cdn.shopify.com/s/files/1/0794/3716/8962/files/Rectangle78_1_7d1de412-6062-41b6-949f-e7a8082d72a0.jpg?v=1694780840" width="100" height="100" loading="lazy"/>
-                    </div>
-                    <div class="cart__recommendations-item--content">
-                      <div class="cart__recommendations-item--title"><h3>Product Title</h3></div>
-                      <div class="cart__recommendations-item--meta">
-                        <div class="cart__recommendations-item--price">$30</div>
-                        <div class="cart__recommendations-item--variants">Black/Small</div>
-                      </div>
-                      <div class="cart__recommendations-item--button">
-                        <button type="button" name="add" class="btn btn__primary">Add To Cart</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="cart__recommendations-item">
-                    <div class="cart__recommendations-item--image">
-                      <img src="https://cdn.shopify.com/s/files/1/0794/3716/8962/files/image31_1be72625-802c-4547-b0d9-a3d2ce6641fd.jpg?v=1694780840" width="100" height="100" loading="lazy"/>
-                    </div>
-                    <div class="cart__recommendations-item--content">
-                      <div class="cart__recommendations-item--title"><h3>Product Title</h3></div>
-                      <div class="cart__recommendations-item--meta">
-                        <div class="cart__recommendations-item--price">$30</div>
-                        <div class="cart__recommendations-item--variants">Black/Small</div>
-                      </div>
-                      <div class="cart__recommendations-item--button">
-                        <button type="button" name="add" class="btn btn__primary">Add To Cart</button>
-                      </div>
-                    </div>
+                    {%- endfor -%}
                   </div>
                 </div>
-              </div>
+              {% endif %}
               </drawer-recommendations>
             </div>
             <div class="cart-drawer__footer">
