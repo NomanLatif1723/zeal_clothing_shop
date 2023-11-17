@@ -1834,6 +1834,9 @@
         "show_thumbnail_arrows": {
           "label": "Pfeile zeigen"
         },
+        "show_image_zoom": {
+          "label": "Bildzoom aktivieren"
+        },
         "header_size_chart": {
           "label": "Größentabelle",
           "size_chart_page": {
