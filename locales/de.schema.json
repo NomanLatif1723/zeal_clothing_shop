@@ -3491,6 +3491,9 @@
         "show_terms": {
           "label": "Allgemeine Geschäftsbedingungen aktivieren"
         },
+        "cart_terms_page": {
+          "label": "Seite mit den Allgemeinen Geschäftsbedingungen für den Warenkorb"
+        },
         "show_note": {
           "label": "Bestellhinweis anzeigen"
         }
