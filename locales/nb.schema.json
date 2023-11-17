@@ -1838,6 +1838,9 @@
         "show_thumbnail_arrows": {
           "label": "Vis piler"
         },
+        "show_image_zoom": {
+          "label": "Aktiver bildezoom"
+        },
         "header_size_chart": {
           "label": "Størrelsesoversikt",
           "size_chart_page": {
