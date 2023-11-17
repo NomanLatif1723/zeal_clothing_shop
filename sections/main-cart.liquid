@@ -79,7 +79,15 @@
               {%- if settings.show_terms -%}
                 <div class="cart__terms-checkbox" data-checkout-terms>
                   <input type="checkbox" id="cartTerms1">
-                  <label for="cartTerms1">{{ 'cart.general.terms_at_checkout' | t }}</label>
+                  <label for="cartTerms1">
+                    {%- if settings.cart_terms_page -%}
+                      <a href="{{ settings.cart_terms_page }}" title="{{ 'cart.general.terms_at_checkout' | t }}">
+                    {%- endif -%}
+                    {{ 'cart.general.terms_at_checkout' | t }}
+                    {%- if settings.cart_terms_page -%}
+                      </a>
+                    {%- endif -%}
+                  </label>
                 </div>
               {%- endif -%}
               <div class="cart__checkout-wrapper">
