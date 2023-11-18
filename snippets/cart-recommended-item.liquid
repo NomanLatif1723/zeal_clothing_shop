@@ -51,7 +51,7 @@
            assign add_to_cart_text = 'products.add_to_cart' | t
          endif
       -%}
-    <button data-add-to-cart type="submit" name="add" aria-label="Add to cart" form="{{ productFormId }}"
+    <button data-add-to-cart type="submit" name="add" aria-label="Add to cart" form="{{ product_form_id }}"
       class="btn btn__link btn__primary"{% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>
       <span>  
         {% if product.selected_or_first_available_variant.available %}
