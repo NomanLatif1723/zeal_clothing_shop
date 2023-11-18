@@ -1896,7 +1896,6 @@ function initCartRecommendations() {
             this.hidden = true;
           }
         }
-        
       }
     
       get productId() {
