@@ -2345,4 +2345,42 @@ document.addEventListener("DOMContentLoaded", function() {
   initProductZoomGallery();
 });
 
+function initCartRecommendations() {
+  const productRecommendationContainer = document.querySelectorAll('drawer-recommendations');
+  if (productRecommendationContainer) {
+    productRecommendationContainer.forEach(container => {
+      const intent = container.getAttribute('data-intent');
+      const sectionId = container.getAttribute('data-section-id');
+      const productId = container.getAttribute('data-product-id');
+      const recommendationsCount = container.getAttribute('data-limit');
+      async function fetchData() {
+        try {
+          const response = await fetch(`${window.themeContent.routes.productRecommendation}?section_id=${sectionId}&product_id=${productId}&limit=${recommendationsCount}&intent=${intent}`);
+          if (response.ok) {
+            const data = await response.text();
+            return data;
+          } else {
+            console.error(`Failed to fetch data: ${response.status} - ${response.statusText}`);
+            return null;
+          }
+        } catch (error) {
+          console.error('Error fetching data:', error);
+          return null;
+        }
+      }
+      async function replaceContent() {
+        const data = await fetchData();
+        if (data !== null) {
+          container.innerHTML = data;
+          initQuickShopCollection();
+        }
+      }
+      replaceContent();
+    })
+  }
+}
+document.addEventListener("DOMContentLoaded", function() {
+  initCartRecommendations();
+});
+
 })();
