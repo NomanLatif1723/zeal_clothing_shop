@@ -2345,6 +2345,7 @@ document.addEventListener("DOMContentLoaded", function() {
   initProductZoomGallery();
 });
 
+// Cart Recommendations based on the first line item 
 function initCartRecommendations() {
   const productRecommendationContainer = document.querySelectorAll('cart-recommendations');
   if (productRecommendationContainer) {
