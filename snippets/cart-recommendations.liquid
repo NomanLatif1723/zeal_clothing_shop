@@ -19,7 +19,6 @@
   {%- endif -%}
 {%- endfor -%}
 
-{%- if recommendations.performed -%}
   {%- if acceptable_recommendations_count > 0 -%}
     <div class="mini-cart__recommendations-inner">
         <p class="mini-cart__recommendations-heading heading heading--small hidden-pocket">Consider These Items As Well</p>
@@ -46,5 +45,4 @@
       </div>
     </div>
   {%- endif -%}
-{%- endif -%}
 </cart-drawer-recommendations>
