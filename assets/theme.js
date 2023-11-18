@@ -1923,7 +1923,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // });
 
 // Create the custom element class
-class CartDrawerRecommendations extends HTMLElement {
+var cardDrawerRecommendation = class CartDrawerRecommendations extends HTMLElement {
   async connectedCallback() {
     try {
       const response = await fetch(`${window.themeContent.routes.productRecommendation}?product_id=${this.productId}&limit=10&section_id=${this.sectionId}`);
@@ -1955,7 +1955,7 @@ class CartDrawerRecommendations extends HTMLElement {
 }
 
 // Create an instance of the custom element
-const cartDrawerRecommendations = new CartDrawerRecommendations();
+// const cartDrawerRecommendations = new CartDrawerRecommendations();
 
 // Append the custom element to a container in your HTML
 const container = document.querySelector(".cart__recommendations-list");
