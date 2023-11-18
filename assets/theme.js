@@ -1941,7 +1941,7 @@ class CartDrawerRecommendations extends HTMLElement {
       }
     } catch (error) {
       console.error('Error fetching recommendations:', error);
-      this.hidden = true; // Handle the error by hiding the element or other appropriate action.
+      this.hidden = true;
     }
   }
 
@@ -1958,7 +1958,7 @@ class CartDrawerRecommendations extends HTMLElement {
 const cartDrawerRecommendations = new CartDrawerRecommendations();
 
 // Append the custom element to a container in your HTML
-const container = document.getElementById(".cart__recommendations-list");
+const container = document.querySelector(".cart__recommendations-list");
 container.appendChild(cartDrawerRecommendations);
 
 
