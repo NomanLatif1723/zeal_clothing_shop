@@ -114,6 +114,29 @@
               </div>
             </div>
           {%- endfor -%}
+          <cart-recommendations data-section-id="{{ section.id }}" data-product-id="{{ cart.items.first.product_id }}" data-limit="4">
+            {%- if recommendations.performed -%}
+              <div class="cart__recommendation-products">
+                <div class="cart__recommendation-header">Consider These Items As Well</div>
+                <div class="cart__recommendations-list">
+                  {%- assign shown_products_count = 0 -%}
+          
+                  {%- for product in recommendations.products -%}
+                    {%- if shown_products_count >= 4 -%}
+                      {%- break -%}
+                    {%- endif -%}
+          
+                    {%- assign matching_product = cart.items | where: 'product_id', product.id -%}
+          
+                    {%- if matching_product.size == 0 -%}
+                      {%- assign shown_products_count = shown_products_count | plus: 1 -%}
+                      {%- render 'cart-recommended-item', product: product -%}
+                    {%- endif -%}
+                  {%- endfor -%}
+                </div>
+              </div>
+            {%- endif -%}
+          </cart-recommendations>
         </div>
         <div class="cart-drawer__footer">
           {% if cart.discount_applications != blank %}
