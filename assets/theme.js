@@ -2355,16 +2355,10 @@ function initCartRecommendations() {
       const recommendationsCount = container.getAttribute('data-limit');
       console.log(sectionId,productId,recommendationsCount);
 
-      fetch(window.Shopify.routes.root + "recommendations/products.json?product_id=1234567890123&limit=4&intent=related")
+      fetch(window.Shopify.routes.root + `recommendations/products.json?product_id=${productId}&limit=${recommendationsCount}`)
         .then(response => response.json())
         .then(({ products }) => {
-          if (products.length > 0) {
-            const firstRecommendedProduct = products[0];
-      
-            alert(
-              `The title of the first recommended product is: ${firstRecommendedProduct.title}`
-            );
-          }
+          console.log(products);
         }
       );
     });
