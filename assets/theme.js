@@ -1922,44 +1922,43 @@ document.addEventListener("DOMContentLoaded", function() {
 //   initCartRecommendations();
 // });
 
-// Create the custom element class
-var cardDrawerRecommendation = class CartDrawerRecommendations extends HTMLElement {
-  async connectedCallback() {
+function createCartDrawerRecommendations(productID, sectionID) {
+  const element = document.createElement("cart-recommendations");
+
+  (async () => {
     try {
-      const response = await fetch(`${window.themeContent.routes.productRecommendation}?product_id=${this.productId}&limit=10&section_id=${this.sectionId}`);
+      const response = await fetch(`${window.themeContent.routes.productRecommendation}?product_id=${productID}&limit=10&section_id=${sectionID}`);
       const html = await response.text();
 
       const div = document.createElement("div");
       div.innerHTML = html;
 
-      const productRecommendationsElement = div.querySelector("cart-recommendations");
+      const productRecommendationsElement = div.querySelector("cart-drawer-recommendations");
 
       if (productRecommendationsElement && productRecommendationsElement.hasChildNodes()) {
-        this.innerHTML = productRecommendationsElement.innerHTML;
+        element.innerHTML = productRecommendationsElement.innerHTML;
       } else {
-        this.hidden = true;
+        element.hidden = true;
       }
     } catch (error) {
       console.error('Error fetching recommendations:', error);
-      this.hidden = true;
+      element.hidden = true; // Handle the error by hiding the element or other appropriate action.
     }
-  }
+  })();
 
-  get productId() {
-    return this.getAttribute("data-product-id");
-  }
-
-  get sectionId() {
-    return this.getAttribute("data-section-id");
-  }
+  return element;
 }
+const test1 = document.querySelector('cart-recommendations');
+// Example usage:
+const productID = test1.dataset.productId;
+const sectionID = test1.dataset.sectionId;
 
-// Create an instance of the custom element
-// const cartDrawerRecommendations = new CartDrawerRecommendations();
+const cartDrawerRecommendations = createCartDrawerRecommendations(productID, sectionID);
 
 // Append the custom element to a container in your HTML
-const container = document.querySelector(".cart__recommendations-list");
-container.innerHTML = cardDrawerRecommendation;
+const container = document.getElementById("your-container-id"); // Replace with the actual container ID
+container.appendChild(cartDrawerRecommendations);
+
 
 
 // Product Form Add To Cart Ajax
