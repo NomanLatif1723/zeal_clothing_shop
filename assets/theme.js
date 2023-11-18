@@ -2044,7 +2044,7 @@ function initProductForm() {
       selectors.cartPopupMessage.textContent = window.themeContent.strings.itemAddedSuccess;
     }
     initCartForm();
-    initCartRecommendations();
+    showRecommendedProducts();
   }
   function openCartDrawer() {
     if (selectors.cartDrawer.classList.contains('cart-drawer__left')) {
