@@ -1926,7 +1926,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Product Form Add To Cart Ajax
 function initProductForm() {
   let selectors = {
-    productForm: document.querySelectorAll('form[action="/cart/add"]'),
+    productForm: document.querySelectorAll('[name="add"]'),
     cartDrawer: document.querySelector('[data-cart-modal]'),
     cartHeaderButton: document.querySelector('.icon__cart'),
     closeDrawerBtn: document.querySelector('.cart-icon__close'),
