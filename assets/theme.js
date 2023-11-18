@@ -1874,28 +1874,28 @@ function initCartRecommendations() {
   const productRecommendationContainer = document.querySelectorAll('cart-recommendations');
   productRecommendationContainer.forEach(container => {
     if(!container) return;
+    function showRecommendedProducts() {
+      try {
+        const response = await fetch(`${window.themeContent.routes.productRecommendation}?product_id=${this.productId}&limit=${this.limit}&section_id=${this.sectionId}`);
+        const html = await response.text();
+  
+        const div = document.createElement("div");
+        div.innerHTML = html;
+  
+        const productRecommendationsElement = div.querySelector("cart-recommendations");
+  
+        if (productRecommendationsElement && productRecommendationsElement.hasChildNodes()) {
+          this.innerHTML = productRecommendationsElement.innerHTML;
+        } else {
+          this.hidden = true;
+        }
+      } catch (error) {
+        console.error('Error fetching recommendations:', error);
+        this.hidden = true;
+      }
+    }
     var CartDrawerRecommendations = class extends HTMLElement {
       async connectedCallback() {
-        async function showRecommendedProducts() {
-          try {
-            const response = await fetch(`${window.themeContent.routes.productRecommendation}?product_id=${this.productId}&limit=${this.limit}&section_id=${this.sectionId}`);
-            const html = await response.text();
-      
-            const div = document.createElement("div");
-            div.innerHTML = html;
-      
-            const productRecommendationsElement = div.querySelector("cart-recommendations");
-      
-            if (productRecommendationsElement && productRecommendationsElement.hasChildNodes()) {
-              this.innerHTML = productRecommendationsElement.innerHTML;
-            } else {
-              this.hidden = true;
-            }
-          } catch (error) {
-            console.error('Error fetching recommendations:', error);
-            this.hidden = true;
-          }
-        }
         showRecommendedProducts();
       }
     
