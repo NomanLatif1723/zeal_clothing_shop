@@ -1909,7 +1909,7 @@ function initCartRecommendations() {
     };
     
     var CartDrawerRecommendations = CartDrawerRecommendations;
-    window.customElements.define("cart-recommendations", CartDrawerRecommendations);
+    customElements.define("cart-recommendations", CartDrawerRecommendations);
   });
 }
 document.addEventListener("DOMContentLoaded", function() {
