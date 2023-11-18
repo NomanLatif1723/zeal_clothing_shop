@@ -63,8 +63,8 @@
         settings: {
           quickView: {{ settings.show_quick_view }},
           templateName: "{{ template.name }}",
-          cartType: "{{ settings.cart_type }}"
-          giftCartProduct: "{{ product.gift_card? }}"
+          cartType: "{{ settings.cart_type }}",
+          giftCartProduct: {{ product.gift_card? }}
         }
       }
     </script>
