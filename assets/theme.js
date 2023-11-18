@@ -2355,7 +2355,7 @@ function initCartRecommendations() {
         const html = `
         <div class="cart__recommendations-item">
           <div class="cart__recommendations-item--image">
-            <img src="${product.featured_image}" width="100" height="100" loading="lazy"/>
+            <img src="${product.images[0]}" width="100" height="100" loading="lazy"/>
           </div>
           <div class="cart__recommendations-item--content">
             <div class="cart__recommendations-item--title"><h3>${product.title}</h3></div>
