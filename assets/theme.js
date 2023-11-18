@@ -1892,7 +1892,7 @@ function initCartRecommendations() {
           }
         } catch (error) {
           console.error('Error fetching recommendations:', error);
-          this.hidden = true; // Handle the error by hiding the element or other appropriate action.
+          this.hidden = true;
         }
       }
     
