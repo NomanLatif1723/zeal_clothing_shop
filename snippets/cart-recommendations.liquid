@@ -1,3 +1,13 @@
+{% comment %}
+<cart-recommendations data-section-id="{{ section.id }}" data-product-id="{{ cart.items.first.product_id }}" data-limit="4">
+  <div class="cart__recommendation-products">
+    <div class="cart__recommendation-header">Consider These Items As Well</div>
+    <div class="cart__recommendations-list">
+      
+    </div>
+  </div>
+</cart-recommendations>
+{% endcomment %}
 <cart-drawer-recommendations section-id="{{ section.id }}" product-id="{{ cart.items.first.product_id }}" class="mini-cart__recommendations">
 {%- assign acceptable_recommendations_count = 0 -%}
 
