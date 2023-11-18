@@ -47,6 +47,7 @@
     </div>
     <div class="cart__recommendations-item--button">
       <form id="product-form" action="/cart/add" method="post">
+        <input type="hidden" name="id" class="selected-variant__id" value="{{ product.selected_or_first_available_variant.id }}">
         {%- liquid
            if template contains 'preorder'
              assign add_to_cart_text = 'products.preorder' | t
@@ -65,7 +66,7 @@
           </span>
           <div class="loader__spinner hidden"></div>
         </button>
-        <input type="hidden" name="id" class="selected-variant__id" value="{{ product.selected_or_first_available_variant.id }}" />
+        
       </form>
     </div>
   </div>
