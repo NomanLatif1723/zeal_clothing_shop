@@ -2397,7 +2397,7 @@ document.addEventListener("DOMContentLoaded", function() {
 var _CartDrawerRecommendations = class extends HTMLElement {
   async connectedCallback() {
     try {
-      const response = await fetch(`${window.themeContent.routes.productRecommendation}?product_id=${this.productId}&limit=10&section_id=${this.sectionId}`);
+      const response = await fetch(`${window.themeContent.routes.productRecommendation}?product_id=${this.productId}&limit=${this.limit}&section_id=${this.sectionId}`);
       const html = await response.text();
 
       const div = document.createElement("div");
