@@ -2403,7 +2403,7 @@ var _CartDrawerRecommendations = class extends HTMLElement {
       const div = document.createElement("div");
       div.innerHTML = html;
 
-      const productRecommendationsElement = div.querySelector("cart-drawer-recommendations");
+      const productRecommendationsElement = div.querySelector("cart-recommendations");
 
       if (productRecommendationsElement && productRecommendationsElement.hasChildNodes()) {
         this.innerHTML = productRecommendationsElement.innerHTML;
@@ -2429,7 +2429,7 @@ var _CartDrawerRecommendations = class extends HTMLElement {
 };
 
 var CartDrawerRecommendations = _CartDrawerRecommendations;
-window.customElements.define("cart-drawer-recommendations", CartDrawerRecommendations);
+window.customElements.define("cart-recommendations", CartDrawerRecommendations);
 
 
 })();
