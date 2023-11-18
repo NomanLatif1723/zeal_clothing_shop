@@ -323,6 +323,18 @@ display: inline-block;
 .cart__recommendations-item--variants select {
   padding: 10px;
 }
+.cart__recommendations-item--variants {
+  padding: 10px 0;
+}
+.cart__recommendations-item--button button {
+  width: 100%;
+}
+.cart__recommendations-item--image {
+  width: 30%;
+}
+.cart__recommendations-item--content {
+  width: 70%;
+}
 @media only screen and (min-width: 481px) {
   .cart-drawer__box {
     max-width: 420px;
