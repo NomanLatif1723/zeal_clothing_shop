@@ -1952,6 +1952,8 @@ function initProductForm() {
   }
   
   // Fetch The Cart Type Rather Page, Drawer or Popup
+  const cartType = window.themeContent.settings.cartType;
+  console.log(cartType);
   if (!selectors.cartHeaderButton) {
     return;
   }
