@@ -1876,7 +1876,7 @@ function initCartRecommendations() {
     if(!container) return;
     var CartDrawerRecommendations = class extends HTMLElement {
       async connectedCallback() {
-        function showRecommendedProducts() {
+        async function showRecommendedProducts() {
           try {
             const response = await fetch(`${window.themeContent.routes.productRecommendation}?product_id=${this.productId}&limit=${this.limit}&section_id=${this.sectionId}`);
             const html = await response.text();
