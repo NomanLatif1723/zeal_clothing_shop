@@ -1914,8 +1914,8 @@ function initCartRecommendations() {
     recommendedListContainer.appendChild(cartDrawerRecommendations);
 
     
-    var CartDrawerRecommendations = CartDrawerRecommendations;
-    customElements.define("cart-recommendations", CartDrawerRecommendations);
+    // var CartDrawerRecommendations = CartDrawerRecommendations;
+    // customElements.define("cart-recommendations", CartDrawerRecommendations);
   });
 }
 document.addEventListener("DOMContentLoaded", function() {
