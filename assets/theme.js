@@ -772,6 +772,7 @@ class LocalizationForm extends HTMLElement {
       button: this.querySelector('button'),
       panel: this.querySelector('ul'),
     };
+    if(!this.elements.button) return;
     this.elements.button.addEventListener('click', this.openSelector.bind(this));
     this.elements.button.addEventListener('focusout', this.closeSelector.bind(this));
     this.addEventListener('keyup', this.onContainerKeyUp.bind(this));
