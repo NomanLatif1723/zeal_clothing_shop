@@ -2396,9 +2396,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // js/custom-element/section/cart/cart-drawer-recommendations.js
   var _CartDrawerRecommendations = class extends HTMLElement {
     async connectedCallback() {
-      if (!_CartDrawerRecommendations.recommendationsCache[this.productId]) {
-        _CartDrawerRecommendations.recommendationsCache[this.productId] = fetch(`${window.themeContent.routes.productRecommendation}?product_id=${this.productId}&limit=10&section_id=${this.sectionId}`);
-      }
+      _CartDrawerRecommendations.recommendationsCache[this.productId] = fetch(`${window.themeContent.routes.productRecommendation}?product_id=${this.productId}&limit=10&section_id=${this.sectionId}`);
       const response = await _CartDrawerRecommendations.recommendationsCache[this.productId];
       const div = document.createElement("div");
       div.innerHTML = await response.clone().text();
