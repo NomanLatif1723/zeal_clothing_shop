@@ -317,26 +317,12 @@ display: inline-block;
   gap: 20px;
   padding-bottom: 20px;
 }
-/* .cart__recommendations-item--image {
-  flex: 0 0 100px;
-} */
-.cart__recommendations-item--meta {
-  display: flex;
-  gap: 20px;
-  padding-top: 10px;
-}
 .cart__recommendations-item--variants select {
   padding: 10px;
 }
 .cart__recommendations-item--variants select {
   padding: 10px;
 }
-/* .cart__recommendations-item--button button {
-  width: 100%;
-} */
-/* .cart__recommendations-item--content {
-  flex: 1 0 auto;
-} */
 @media only screen and (min-width: 481px) {
   .cart-drawer__box {
     max-width: 420px;
