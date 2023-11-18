@@ -93,7 +93,7 @@
                     </div>
                     {%- if show_sorting -%}
                       <div class="catalog-sorting__drawer filter-drawer__header">
-                        <select id="sort-by">
+                        <select class="collection__sort" id="sort-by">
                           {%- assign sort_by = search.sort_by | default: search.default_sort_by -%}
                           {%- for option in search.sort_options -%}
                             <option value="{{ option.value }}" {% if option.value == sort_by %}selected="selected"{% endif %}>
@@ -122,7 +122,7 @@
                   {%- endif -%}
                   {%- if show_sorting -%}
                   <div class="catalog__sorting">
-                    <select id="sort-by">
+                    <select class="collection__sort" id="sort-by">
                       {%- assign sort_by = search.sort_by | default: search.default_sort_by -%}
                       {%- for option in search.sort_options -%}
                         <option value="{{ option.value }}" {% if option.value == sort_by %}selected="selected"{% endif %}>
