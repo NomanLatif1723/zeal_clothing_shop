@@ -1896,6 +1896,7 @@ function initCartRecommendations() {
             this.hidden = true;
           }
         }
+        showRecommendedProducts();
       }
     
       get productId() {
