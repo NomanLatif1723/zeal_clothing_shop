@@ -2354,30 +2354,20 @@ function initCartRecommendations() {
       const productId = container.getAttribute('data-product-id');
       const recommendationsCount = container.getAttribute('data-limit');
       console.log(sectionId,productId,recommendationsCount);
-      async function fetchData() {
-        try {
-          const response = await fetch(`${window.themeContent.routes.productRecommendation}?section_id=${sectionId}&product_id=${productId}&limit=${recommendationsCount}`);
-          if (response.ok) {
-            const data = await response.text();
-            return data;
-          } else {
-            console.error(`Failed to fetch data: ${response.status} - ${response.statusText}`);
-            return null;
+
+      fetch(window.Shopify.routes.root + "recommendations/products.json?product_id=1234567890123&limit=4&intent=related")
+        .then(response => response.json())
+        .then(({ products }) => {
+          if (products.length > 0) {
+            const firstRecommendedProduct = products[0];
+      
+            alert(
+              `The title of the first recommended product is: ${firstRecommendedProduct.title}`
+            );
           }
-        } catch (error) {
-          console.error('Error fetching data:', error);
-          return null;
         }
-      }
-      async function replaceContent() {
-        const data = await fetchData();
-        if (data !== null) {
-          container.innerHTML = data;
-          initQuickShopCollection();
-        }
-      }
-      replaceContent();
-    })
+      );
+    });
   }
 }
 document.addEventListener("DOMContentLoaded", function() {
