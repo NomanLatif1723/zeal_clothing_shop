@@ -1917,7 +1917,6 @@ function initCartRecommendations() {
     }
   });
 }
-
 document.addEventListener("DOMContentLoaded", function () {
   initCartRecommendations();
 });
