@@ -23,7 +23,7 @@
               {%- break -%}
             {%- endif -%}
 
-            {%- assign matching_product = cart.items | where: 'product_id', product.id -%}
+            {%- assign matching_product = cart.items -%}
 
             {%- if matching_product.size == 0 -%}
               {%- assign shown_products_count = shown_products_count | plus: 1 -%}
