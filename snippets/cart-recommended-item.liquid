@@ -4,6 +4,7 @@
   </div>
   <div class="cart__recommendations-item--content">
     <div class="cart__recommendations-item--title"><h3>{{ product.title }}</h3></div>
+    <div class="cart__recommendations-item--meta">
     <div class="grid-product__price">
       <span class="visually__hidden">{{ 'products.price.sale_price' | t }}</span>
       <span class="product__sale-price">{{ product.price | money_without_trailing_zeros }}</span>
@@ -12,7 +13,7 @@
         <span class="product__compare-price">{{ product.compare_at_price | money_without_trailing_zeros }}</span>
       {%- endif -%}
       {%- if product.selected_or_first_available_variant.unit_price_measurement -%}
-        <span data-unit-price class="product__unit-price">
+        <div data-unit-price class="product__unit-price">
           {%- if product.selected_or_first_available_variant.price > 0 -%}
             {%- if product.selected_or_first_available_variant.unit_price_measurement -%}
               <span>{{ product.selected_or_first_available_variant.unit_price | money }}/
@@ -25,7 +26,7 @@
             {%- else -%}
               {{ 'products.free_unit_price' | t }}
           {%- endif -%}
-        </span>
+        </div>
       {%- endif -%}
     </div>
     <div class="cart__recommendations-item--variants">
@@ -42,6 +43,7 @@
           </div>
         </variant-selects>
       {%- endunless -%}
+    </div>
     </div>
     <div class="cart__recommendations-item--button">
       {%- liquid
