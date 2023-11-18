@@ -32,15 +32,13 @@
       {%- unless product.has_only_default_variant -%}
         <variant-selects data-section="{{ section.id }}" data-url="{{ product.url }}">
           <div class="product__options product-select__options">
-            <div class="product-form__select">
-              <select form="{{ product_form_id }}" class="product__select" data-selected-variant id="product-select-{{ forloop.index }}">
-                {% for variant in product.variants %}
-                  <option value="{{ variant.id }}" {% if variant == product.selected_or_first_available_variant %}selected{% endif %}>
-                    {{ variant.title }}
-                  </option>
-                {% endfor %}
-              </select>
-            </div>
+            <select form="{{ product_form_id }}" class="product__select" data-selected-variant id="product-select-{{ forloop.index }}">
+              {% for variant in product.variants %}
+                <option value="{{ variant.id }}" {% if variant == product.selected_or_first_available_variant %}selected{% endif %}>
+                  {{ variant.title }}
+                </option>
+              {% endfor %}
+            </select>
           </div>
         </variant-selects>
       {%- endunless -%}
