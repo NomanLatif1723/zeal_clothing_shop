@@ -1986,9 +1986,9 @@ function initProductForm() {
 
   // Event For product Form Submit Using Ajax If Cart Type set to Drawer or Popup
   selectors.productForm.forEach(form => {
-    // if (!form) {
-    //   return;
-    // }
+    if (!form) {
+      return;
+    }
     form.addEventListener('submit', async (event) => {
       const loader = form.querySelector('.loader__spinner');
       const span = form.querySelector('span');
