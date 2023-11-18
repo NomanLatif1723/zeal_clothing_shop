@@ -328,6 +328,9 @@ display: inline-block;
 .cart__recommendations-item--variants select {
   padding: 10px;
 }
+.cart__recommendations-item--variants select {
+  padding: 10px;
+}
 /* .cart__recommendations-item--button button {
   width: 100%;
 } */
