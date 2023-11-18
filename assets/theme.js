@@ -1982,7 +1982,6 @@ function initProductForm() {
       const res = await fetch("/?view=ajax-cart");
       const text = await res.text();
       const html = document.createElement("div");
-      console.log(html);
       html.innerHTML = text;
       const newBox = html.querySelector("[data-cart]").innerHTML;
       if (!selectors.cartDrawerContent) {
