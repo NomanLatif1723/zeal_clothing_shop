@@ -1,13 +1,27 @@
-{% comment %}
 <cart-recommendations data-section-id="{{ section.id }}" data-product-id="{{ cart.items.first.product_id }}" data-limit="4">
-  <div class="cart__recommendation-products">
-    <div class="cart__recommendation-header">Consider These Items As Well</div>
-    <div class="cart__recommendations-list">
-      
+  {%- if recommendations.performed -%}
+    <div class="cart__recommendation-products">
+      <div class="cart__recommendation-header">Consider These Items As Well</div>
+      <div class="cart__recommendations-list">
+        {%- assign shown_products_count = 0 -%}
+
+        {%- for product in recommendations.products -%}
+          {%- if shown_products_count >= 4 -%}
+            {%- break -%}
+          {%- endif -%}
+
+          {%- assign matching_product = cart.items | where: 'product_id', product.id -%}
+
+          {%- if matching_product.size == 0 -%}
+            {%- assign shown_products_count = shown_products_count | plus: 1 -%}
+            {%- render 'cart-recommended-item', product: product -%}
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
     </div>
-  </div>
+  {%- endif -%}
 </cart-recommendations>
-{% endcomment %}
+
 <cart-drawer-recommendations section-id="{{ section.id }}" product-id="{{ cart.items.first.product_id }}" class="mini-cart__recommendations">
 {%- if recommendations.performed -%}
   <div class="mini-cart__recommendations-inner">
