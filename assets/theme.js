@@ -1877,7 +1877,7 @@ function initCartRecommendations() {
     var CartDrawerRecommendations = class extends HTMLElement {
       async connectedCallback() {
         try {
-          const response = await fetch(`${window.themeContent.routes.productRecommendation}?product_id=${this.productId}&limit=${this.limit}`);
+          const response = await fetch(`${window.themeContent.routes.productRecommendation}?product_id=${this.productId}&limit=${this.limit}&section_id=${this.sectionId}`);
           const html = await response.text();
     
           const div = document.createElement("div");
@@ -1900,7 +1900,9 @@ function initCartRecommendations() {
         return this.getAttribute("data-product-id");
       }
     
-      
+      get sectionId() {
+        return this.getAttribute("data-section-id");
+      }
       get limit() {
         return this.getAttribute("data-limit");
       }
