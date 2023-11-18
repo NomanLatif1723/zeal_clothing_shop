@@ -1956,7 +1956,7 @@ const sectionID = test1.dataset.sectionId;
 const cartDrawerRecommendations = createCartDrawerRecommendations(productID, sectionID);
 
 // Append the custom element to a container in your HTML
-const container = document.getElementById("your-container-id"); // Replace with the actual container ID
+const container = document.querySelector(".cart__recommendations-list");
 container.appendChild(cartDrawerRecommendations);
 
 
