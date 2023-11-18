@@ -2349,13 +2349,13 @@ function initCartRecommendations() {
   const productRecommendationContainer = document.querySelectorAll('cart-recommendations');
   if (productRecommendationContainer) {
     productRecommendationContainer.forEach(container => {
-      const intent = container.getAttribute('data-intent');
       const sectionId = container.getAttribute('data-section-id');
       const productId = container.getAttribute('data-product-id');
       const recommendationsCount = container.getAttribute('data-limit');
+      console.log(sectionId,productId,recommendationsCount);
       async function fetchData() {
         try {
-          const response = await fetch(`${window.themeContent.routes.productRecommendation}?section_id=${sectionId}&product_id=${productId}&limit=${recommendationsCount}&intent=${intent}`);
+          const response = await fetch(`${window.themeContent.routes.productRecommendation}?section_id=${sectionId}&product_id=${productId}&limit=${recommendationsCount}`);
           if (response.ok) {
             const data = await response.text();
             return data;
