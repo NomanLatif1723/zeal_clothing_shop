@@ -1874,10 +1874,11 @@ function initCartRecommendations() {
   const productRecommendationContainer = document.querySelectorAll('cart-recommendations');
   productRecommendationContainer.forEach(container => {
     if(!container) return;
-    var CartDrawerRecommendations = class extends HTMLElement {
+    // Create the custom element class
+    class CartDrawerRecommendations extends HTMLElement {
       async connectedCallback() {
         try {
-          const response = await fetch(`${window.themeContent.routes.productRecommendation}?product_id=${this.productId}&limit=${this.limit}&section_id=${this.sectionId}`);
+          const response = await fetch(`${window.themeContent.routes.productRecommendation}?product_id=${this.productId}&limit=10&section_id=${this.sectionId}`);
           const html = await response.text();
     
           const div = document.createElement("div");
@@ -1892,21 +1893,26 @@ function initCartRecommendations() {
           }
         } catch (error) {
           console.error('Error fetching recommendations:', error);
-          this.hidden = true;
+          this.hidden = true; 
         }
       }
     
       get productId() {
-        return this.getAttribute("data-product-id");
+        return this.getAttribute("product-id");
       }
     
       get sectionId() {
-        return this.getAttribute("data-section-id");
+        return this.getAttribute("section-id");
       }
-      get limit() {
-        return this.getAttribute("data-limit");
-      }
-    };
+    }
+    
+    // Create an instance of the custom element
+    const cartDrawerRecommendations = new CartDrawerRecommendations();
+    
+    // Append the custom element to a container in your HTML
+    const container = document.querySelector(".cart__recommendations-list");
+    container.appendChild(cartDrawerRecommendations);
+
     
     var CartDrawerRecommendations = CartDrawerRecommendations;
     customElements.define("cart-recommendations", CartDrawerRecommendations);
