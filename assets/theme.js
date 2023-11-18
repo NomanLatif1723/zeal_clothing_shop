@@ -1049,8 +1049,9 @@ function initCollectionSort() {
   };
   let currentURL, baseURL;
   Shopify.queryParams = {};
-  if (!selectors.sortContainer || !selectors.loader) return;
+  if (!selectors.loader) return;
   selectors.sortContainer.forEach(el => {
+    if(!el) return;
     el.addEventListener('change', function(event) {
       sortingSubmitForm(event);
       updateUrl(event);
