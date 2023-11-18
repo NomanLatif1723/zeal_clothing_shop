@@ -44,26 +44,24 @@
       {%- endunless -%}
     </div>
     <div class="cart__recommendations-item--button">
-      {%- form 'product', product, id: product_form_id, class: "product__form", novalidate: 'novalidate', data-section-id: section.id -%}
-        {%- liquid
-           if template contains 'preorder'
-             assign add_to_cart_text = 'products.preorder' | t
-           else
-             assign add_to_cart_text = 'products.add_to_cart' | t
-           endif
-        -%}
-      <button data-add-to-cart type="submit" name="add" aria-label="Add to cart" 
-        class="btn btn__link btn__primary"{% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>
-        <span>  
-          {% if product.selected_or_first_available_variant.available %}
-            {{ add_to_cart_text }}
-          {% else %}
-            {{ 'products.sold_out' | t }}
-          {% endif %}
-        </span>
-        <div class="loader__spinner hidden"></div>
-      </button>
-      {%- endform -%}
+      {%- liquid
+         if template contains 'preorder'
+           assign add_to_cart_text = 'products.preorder' | t
+         else
+           assign add_to_cart_text = 'products.add_to_cart' | t
+         endif
+      -%}
+    <button data-add-to-cart type="submit" name="add" aria-label="Add to cart" form="{{ productFormId }}"
+      class="btn btn__link btn__primary"{% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>
+      <span>  
+        {% if product.selected_or_first_available_variant.available %}
+          {{ add_to_cart_text }}
+        {% else %}
+          {{ 'products.sold_out' | t }}
+        {% endif %}
+      </span>
+      <div class="loader__spinner hidden"></div>
+    </button>
     </div>
   </div>
 </div>
