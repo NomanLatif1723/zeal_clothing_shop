@@ -1876,24 +1876,27 @@ function initCartRecommendations() {
     if(!container) return;
     var CartDrawerRecommendations = class extends HTMLElement {
       async connectedCallback() {
-        try {
-          const response = await fetch(`${window.themeContent.routes.productRecommendation}?product_id=${this.productId}&limit=${this.limit}&section_id=${this.sectionId}`);
-          const html = await response.text();
-    
-          const div = document.createElement("div");
-          div.innerHTML = html;
-    
-          const productRecommendationsElement = div.querySelector("cart-recommendations");
-    
-          if (productRecommendationsElement && productRecommendationsElement.hasChildNodes()) {
-            this.innerHTML = productRecommendationsElement.innerHTML;
-          } else {
+        function showRecommendedProducts() {
+          try {
+            const response = await fetch(`${window.themeContent.routes.productRecommendation}?product_id=${this.productId}&limit=${this.limit}&section_id=${this.sectionId}`);
+            const html = await response.text();
+      
+            const div = document.createElement("div");
+            div.innerHTML = html;
+      
+            const productRecommendationsElement = div.querySelector("cart-recommendations");
+      
+            if (productRecommendationsElement && productRecommendationsElement.hasChildNodes()) {
+              this.innerHTML = productRecommendationsElement.innerHTML;
+            } else {
+              this.hidden = true;
+            }
+          } catch (error) {
+            console.error('Error fetching recommendations:', error);
             this.hidden = true;
           }
-        } catch (error) {
-          console.error('Error fetching recommendations:', error);
-          this.hidden = true;
         }
+        
       }
     
       get productId() {
