@@ -9,17 +9,6 @@
 </cart-recommendations>
 {% endcomment %}
 <cart-drawer-recommendations section-id="{{ section.id }}" product-id="{{ cart.items.first.product_id }}" class="mini-cart__recommendations">
-  {% comment %}
-{%- assign acceptable_recommendations_count = 0 -%}
-
-{%- for product in recommendations.products -%}
-  {%- assign matching_product = cart.items | where: 'product_id', product.id | first -%}
-
-  {%- if matching_product == blank -%}
-    {%- assign acceptable_recommendations_count = acceptable_recommendations_count | plus: 1 -%}
-  {%- endif -%}
-{%- endfor -%}
-{% endcomment %}
 {%- if recommendations.performed -%}
   <div class="mini-cart__recommendations-inner">
     <div class="cart__recommendation-header">Consider These Items As Well</div>
@@ -30,7 +19,7 @@
           {%- assign shown_products_count = 0 -%}
 
           {%- for product in recommendations.products -%}
-            {%- if shown_products_count >= 6 -%}
+            {%- if shown_products_count >= 4 -%}
               {%- break -%}
             {%- endif -%}
 
