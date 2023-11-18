@@ -2346,7 +2346,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function initCartRecommendations() {
-  const productRecommendationContainer = document.querySelectorAll('drawer-recommendations');
+  const productRecommendationContainer = document.querySelectorAll('cart-recommendations');
   if (productRecommendationContainer) {
     productRecommendationContainer.forEach(container => {
       const intent = container.getAttribute('data-intent');
