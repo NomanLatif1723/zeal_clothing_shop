@@ -47,7 +47,7 @@
     </div>
     <div class="cart__recommendations-item--button">
       <form id="{{ product_form_id }}" action="/cart/add" method="post">
-        <input type="hidden" name="id" class="selected-variant__id" value="{{ product.selected_or_first_available_variant.id }}">
+        <input type="hidden" form="{{ product_form_id }}" name="id" class="selected-variant__id" value="{{ product.selected_or_first_available_variant.id }}">
         {%- liquid
            if template contains 'preorder'
              assign add_to_cart_text = 'products.preorder' | t
@@ -55,7 +55,7 @@
              assign add_to_cart_text = 'products.add_to_cart' | t
            endif
         -%}
-        <input type="submit" form="{{ product_form_id }}" class="btn btn__link btn__primary" value="{% if product.selected_or_first_available_variant.available %}{{ add_to_cart_text }}{%- else -%}{{ 'products.sold_out' | t }}{%- endif -%}">
+        <input type="submit" class="btn btn__link btn__primary" value="{% if product.selected_or_first_available_variant.available %}{{ add_to_cart_text }}{%- else -%}{{ 'products.sold_out' | t }}{%- endif -%}">
         <div class="loader__spinner hidden"></div>
       </form>
     </div>
