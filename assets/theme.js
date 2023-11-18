@@ -2293,7 +2293,7 @@ document.addEventListener("DOMContentLoaded", function() {
   productModalObserve();
 });
 
-// Product Popup Gallery
+// Product Popup Gallery Slider
 function productPopupSlider() {
   const popupWrapper = document.querySelectorAll('.product__zoom-gallery');
   popupWrapper.forEach(wrapper => {
@@ -2317,6 +2317,8 @@ function productPopupSlider() {
 document.addEventListener("DOMContentLoaded", function() {
   productPopupSlider();
 });
+
+// Product Popup Gallery Open Modal Event
 function initProductZoomGallery() {
   let selectors = {
     productPopupBtn: document.querySelectorAll('.image__zoom-btn'),
