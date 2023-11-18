@@ -22,10 +22,7 @@
 {%- if recommendations.performed -%}
   {%- if acceptable_recommendations_count > 0 -%}
     <div class="mini-cart__recommendations-inner">
-      {%- if section.settings.recommendations_title != blank -%}
-        <p class="mini-cart__recommendations-heading heading heading--small hidden-pocket">{{ section.settings.recommendations_title | escape }}</p>
-        <p class="mini-cart__recommendations-heading heading heading--xsmall text--subdued hidden-lap-and-up">{{ section.settings.recommendations_title | escape }}</p>
-      {%- endif -%}
+        <p class="mini-cart__recommendations-heading heading heading--small hidden-pocket">Consider These Items As Well</p>
 
       <div class="scroller">
         <div class="scroller__inner">
