@@ -2394,7 +2394,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // js/custom-element/section/cart/cart-drawer-recommendations.js
-  var _CartDrawerRecommendations = class extends HTMLElement {
+var _CartDrawerRecommendations = class extends HTMLElement {
   async connectedCallback() {
     try {
       const response = await fetch(`${window.themeContent.routes.productRecommendation}?product_id=${this.productId}&limit=10&section_id=${this.sectionId}`);
@@ -2412,7 +2412,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     } catch (error) {
       console.error('Error fetching recommendations:', error);
-      this.hidden = true; // Handle the error by hiding the element or other appropriate action.
+      this.hidden = true;
     }
   }
 
