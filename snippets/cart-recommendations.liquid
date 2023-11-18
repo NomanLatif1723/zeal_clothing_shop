@@ -21,7 +21,7 @@
     </div>
   {%- endif -%}
 </cart-recommendations>
-
+{% comment %}
 <cart-drawer-recommendations section-id="{{ section.id }}" product-id="{{ cart.items.first.product_id }}" class="mini-cart__recommendations">
 {%- if recommendations.performed -%}
   <div class="mini-cart__recommendations-inner">
@@ -50,3 +50,4 @@
   </div>
 {%- endif -%}
 </cart-drawer-recommendations>
+{% endcomment %}
