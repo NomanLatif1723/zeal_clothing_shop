@@ -2397,7 +2397,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var _CartDrawerRecommendations = class extends HTMLElement {
     async connectedCallback() {
       if (!_CartDrawerRecommendations.recommendationsCache[this.productId]) {
-        _CartDrawerRecommendations.recommendationsCache[this.productId] = fetch(`${window.themeVariables.routes.productRecommendationsUrl}?product_id=${this.productId}&limit=10&section_id=${this.sectionId}`);
+        _CartDrawerRecommendations.recommendationsCache[this.productId] = fetch(`${window.themeContent.routes.productRecommendation}?product_id=${this.productId}&limit=10&section_id=${this.sectionId}`);
       }
       const response = await _CartDrawerRecommendations.recommendationsCache[this.productId];
       const div = document.createElement("div");
