@@ -2395,26 +2395,38 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // js/custom-element/section/cart/cart-drawer-recommendations.js
   var _CartDrawerRecommendations = class extends HTMLElement {
-    async connectedCallback() {
-      _CartDrawerRecommendations.recommendationsCache[this.productId] = fetch(`${window.themeContent.routes.productRecommendation}?product_id=${this.productId}&limit=10&section_id=${this.sectionId}`);
-      const response = await _CartDrawerRecommendations.recommendationsCache[this.productId];
+  async connectedCallback() {
+    try {
+      const response = await fetch(`${window.themeContent.routes.productRecommendation}?product_id=${this.productId}&limit=10&section_id=${this.sectionId}`);
+      const html = await response.text();
+
       const div = document.createElement("div");
-      div.innerHTML = await response.clone().text();
+      div.innerHTML = html;
+
       const productRecommendationsElement = div.querySelector("cart-drawer-recommendations");
+
       if (productRecommendationsElement && productRecommendationsElement.hasChildNodes()) {
         this.innerHTML = productRecommendationsElement.innerHTML;
       } else {
         this.hidden = true;
       }
+    } catch (error) {
+      console.error('Error fetching recommendations:', error);
+      this.hidden = true; // Handle the error by hiding the element or other appropriate action.
     }
-    get productId() {
-      return this.getAttribute("product-id");
-    }
-    get sectionId() {
-      return this.getAttribute("section-id");
-    }
-  };
-  var CartDrawerRecommendations = _CartDrawerRecommendations;
-  window.customElements.define("cart-drawer-recommendations", CartDrawerRecommendations);
+  }
+
+  get productId() {
+    return this.getAttribute("product-id");
+  }
+
+  get sectionId() {
+    return this.getAttribute("section-id");
+  }
+};
+
+var CartDrawerRecommendations = _CartDrawerRecommendations;
+window.customElements.define("cart-drawer-recommendations", CartDrawerRecommendations);
+
 
 })();
