@@ -26,7 +26,7 @@
     "show_first_product": false,
     "collection_image_size": "portrait",
     "show_currency": true,
-    "show_language": true,
+    "show_language": false,
     "text_direction": "ltr",
     "show_breadcrumbs": true,
     "show_back_to_top": true,
