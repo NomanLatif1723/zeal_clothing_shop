@@ -322,9 +322,8 @@ display: inline-block;
 } */
 .cart__recommendations-item--meta {
   display: flex;
-  align-items: center;
   gap: 20px;
-  padding-bottom: 10px;
+  padding-top: 10px;
 }
 /* .cart__recommendations-item--button button {
   width: 100%;
