@@ -1877,13 +1877,13 @@ function initCartRecommendations() {
     var CartDrawerRecommendations = class extends HTMLElement {
       async connectedCallback() {
         try {
-          const response = await fetch(`${window.themeContent.routes.productRecommendation}?product_id=${this.productId}&limit=10&section_id=${this.sectionId}`);
+          const response = await fetch(`${window.themeContent.routes.productRecommendation}?product_id=${this.productId}&limit=${this.limit}&section_id=${this.sectionId}`);
           const html = await response.text();
     
           const div = document.createElement("div");
           div.innerHTML = html;
     
-          const productRecommendationsElement = div.querySelector("cart-drawer-recommendations");
+          const productRecommendationsElement = div.querySelector("cart-recommendations");
     
           if (productRecommendationsElement && productRecommendationsElement.hasChildNodes()) {
             this.innerHTML = productRecommendationsElement.innerHTML;
@@ -1897,16 +1897,22 @@ function initCartRecommendations() {
       }
     
       get productId() {
-        return this.getAttribute("product-id");
+        return this.getAttribute("data-product-id");
       }
     
       get sectionId() {
-        return this.getAttribute("section-id");
+        return this.getAttribute("data-section-id");
       }
+
+      get limit() {
+        return this.getAttribute("data-limit");
+      }
+      
     };
     
     var CartDrawerRecommendations = CartDrawerRecommendations;
-    customElements.define("cart-drawer-recommendations", CartDrawerRecommendations);
+    
+    customElements.define("cart-recommendations", CartDrawerRecommendations);
 
   });
 }
