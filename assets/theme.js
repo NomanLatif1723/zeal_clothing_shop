@@ -2417,11 +2417,11 @@ var _CartDrawerRecommendations = class extends HTMLElement {
   }
 
   get productId() {
-    return this.getAttribute("product-id");
+    return this.getAttribute("data-product-id");
   }
 
   get sectionId() {
-    return this.getAttribute("section-id");
+    return this.getAttribute("data-section-id");
   }
   get limit() {
     return this.getAttribute("data-limit");
