@@ -133,6 +133,7 @@
                   </div>
                 </div>
               {%- endfor -%}
+              {% render 'cart-recommendations', cart: cart %}
             </div>
             <div class="cart-drawer__footer">
               {% if cart.discount_applications != blank %}
