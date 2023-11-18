@@ -15,19 +15,8 @@
     <div class="scroller">
       <div class="scroller__inner">
         <div class="mini-cart__recommendations-list">
-          {%- assign shown_products_count = 0 -%}
-
           {%- for product in recommendations.products -%}
-            {%- if shown_products_count >= 6 -%}
-              {%- break -%}
-            {%- endif -%}
-
-            {%- assign matching_product = cart.items -%}
-
-            {%- if matching_product.size == 0 -%}
-              {%- assign shown_products_count = shown_products_count | plus: 1 -%}
               {%- render 'product-item', product: product, -%}
-            {%- endif -%}
           {%- endfor -%}
         </div>
       </div>
