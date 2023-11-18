@@ -1900,9 +1900,7 @@ function initCartRecommendations() {
         return this.getAttribute("data-product-id");
       }
     
-      get sectionId() {
-        return this.getAttribute("data-section-id");
-      }
+      
       get limit() {
         return this.getAttribute("data-limit");
       }
