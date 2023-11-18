@@ -1932,7 +1932,6 @@ function initProductForm() {
     cartBox: document.querySelector('[data-cart-modal] .cart-drawer__box'),
     bodyContainer: document.querySelector('body'),
     cartItemCounter: document.querySelectorAll('[data-cart-count]'),
-    cartType: 'page',
     cartPopupMessage: document.querySelector('.cart-popup__message'),
     cartDrawerContent: document.querySelector("[data-cart]"),
     formValidationErrorMessage: document.querySelector('.product-form__errors'),
@@ -1953,15 +1952,11 @@ function initProductForm() {
   
   // Fetch The Cart Type Rather Page, Drawer or Popup
   const cartType = window.themeContent.strings.cartType;
-  console.log(cartType);
   if (!selectors.cartHeaderButton) {
     return;
   }
-  if (selectors.cartHeaderButton) {
-    selectors.cartType = selectors.cartHeaderButton.dataset.cartType;
-  }
   selectors.cartHeaderButton.addEventListener('click', (event) => {
-    if (selectors.cartType === 'drawer') {
+    if (cartType === 'drawer') {
       event.preventDefault();
       openCartDrawer();
     }
@@ -1996,7 +1991,7 @@ function initProductForm() {
     form.addEventListener('submit', async (event) => {
       const loader = form.querySelector('.loader__spinner');
       const span = form.querySelector('span');
-      if (selectors.cartType === 'drawer' || selectors.cartType === 'popup') {
+      if (cartType === 'drawer' || cartType === 'popup') {
         event.preventDefault();
         if (span && loader) {
           loader.classList.remove('hidden');
@@ -2033,7 +2028,7 @@ function initProductForm() {
     cartItemCount(cartData);
   }   
   async function updateCartDrawer() {
-    if (selectors.cartType === 'drawer') {
+    if (cartType === 'drawer') {
       const res = await fetch("/?view=ajax-cart");
       const text = await res.text();
       const html = document.createElement("div");
@@ -2043,7 +2038,7 @@ function initProductForm() {
         return;
       }
       selectors.cartDrawerContent.innerHTML = newBox;
-    } else if (selectors.cartType === 'popup') {
+    } else if (cartType === 'popup') {
       if (!selectors.cartPopupMessage) {
         return;
       }
