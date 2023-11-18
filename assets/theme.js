@@ -1910,8 +1910,8 @@ function initCartRecommendations() {
     const cartDrawerRecommendations = new CartDrawerRecommendations();
     
     // Append the custom element to a container in your HTML
-    const container = document.querySelector(".cart__recommendations-list");
-    container.appendChild(cartDrawerRecommendations);
+    const recommendedListContainer = document.querySelector(".cart__recommendations-list");
+    recommendedListContainer.appendChild(cartDrawerRecommendations);
 
     
     var CartDrawerRecommendations = CartDrawerRecommendations;
