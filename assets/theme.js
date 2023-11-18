@@ -191,7 +191,9 @@ function initStickyHeader() {
     }
   } 
 }
-// initStickyHeader();
+document.addEventListener("DOMContentLoaded", function() {
+  initStickyHeader();
+});
 
 // Header Toggle button
 function initHeaderNavigation() {
@@ -259,7 +261,9 @@ function initHeaderNavigation() {
     })
   }
 }
-// initHeaderNavigation();
+document.addEventListener("DOMContentLoaded", function() {
+  initHeaderNavigation();
+});
 
 // Header Search Events
 function initHeaderSearch() {
@@ -303,7 +307,9 @@ function initHeaderSearch() {
     });
   });
 }
-// initHeaderSearch();
+document.addEventListener("DOMContentLoaded", function() {
+  initHeaderSearch();
+});
 
 // Slideshow
 function initSlideshowSwipers() {
@@ -349,7 +355,9 @@ function initSlideshowSwipers() {
     }
   });
 }
-// initSlideshowSwipers(); 
+document.addEventListener("DOMContentLoaded", function() {
+  initSlideshowSwipers();
+});
 
 // Collection List Grid Slider
 function initBrandsSwipers() {
@@ -383,7 +391,9 @@ function initBrandsSwipers() {
     }
   })
 }
-// initBrandsSwipers();
+document.addEventListener("DOMContentLoaded", function() {
+  initBrandsSwipers();
+});
   
 // Collection List Grid Slider
 function initCollectionListSwipers() {
@@ -428,7 +438,9 @@ function initCollectionListSwipers() {
     }
   })
 }
-// initCollectionListSwipers();
+document.addEventListener("DOMContentLoaded", function() {
+  initCollectionListSwipers();
+});
 
 // Testimonial Slider
 function initTestimonialSwipers() {
@@ -478,7 +490,9 @@ function initTestimonialSwipers() {
     }
   });
 }
-// initTestimonialSwipers();
+document.addEventListener("DOMContentLoaded", function() {
+  initTestimonialSwipers();
+});
 
 // Video Section Events
 function initVideoSection() {
@@ -525,7 +539,9 @@ function initVideoSection() {
     }
   });
 }
-// initVideoSection();
+document.addEventListener("DOMContentLoaded", function() {
+  initVideoSection();
+});
 
 // Countdown Timer For Promotional Grid and Product Page
 function initCountdown() {
@@ -570,7 +586,9 @@ function initCountdown() {
     }, 1000);
   }
 }
-// initCountdown();
+document.addEventListener("DOMContentLoaded", function() {
+  initCountdown();
+});
 
 // Image Comparison 
 function initImageComparison() {
@@ -618,7 +636,9 @@ function initImageComparison() {
     
   })
 }
-// initImageComparison();
+document.addEventListener("DOMContentLoaded", function() {
+  initImageComparison();
+});
 
 // Age Verification Popup 
 function initageVerificationPopUp() {
@@ -674,7 +694,9 @@ function initageVerificationPopUp() {
   }
   
 }
-// initageVerificationPopUp();
+document.addEventListener("DOMContentLoaded", function() {
+  initageVerificationPopUp();
+});
 
 // Newsletter Popup
 function initNewsletterPopup() {
@@ -698,7 +720,9 @@ function initNewsletterPopup() {
     })
   }
 }
-// initNewsletterPopup();
+document.addEventListener("DOMContentLoaded", function() {
+  initNewsletterPopup();
+});
 
 //  General Modal Button Events 
 function initModalPopup() {
@@ -735,7 +759,9 @@ function initModalPopup() {
     }
   }
 }
-// initModalPopup();
+document.addEventListener("DOMContentLoaded", function() {
+  initModalPopup();
+});
   
 // Localization Language and Currency Selector 
 class LocalizationForm extends HTMLElement {
@@ -877,7 +903,9 @@ function initCustomerForms() {
   }
   customerAddressesForm();
 }
-// initCustomerForms();
+document.addEventListener("DOMContentLoaded", function() {
+  initCustomerForms();
+});
 
 // Document General Event Listeners
 function initCollectionEventListeners() {
@@ -1006,7 +1034,9 @@ function initCollectionEventListeners() {
     selectors.bodyContainer.classList.remove('drawer__opening');
   }
 }
-// initCollectionEventListeners();
+document.addEventListener("DOMContentLoaded", function() {
+  initCollectionEventListeners();
+});
 
 // Collection Sorting Using Ajax
 function initCollectionSort() {
@@ -1052,7 +1082,9 @@ function initCollectionSort() {
     history.replaceState(null, null, baseURL);
   }
 }
-// initCollectionSort();
+document.addEventListener("DOMContentLoaded", function() {
+  initCollectionSort();
+});
 
 // Collection Facets Filters 
 function initFilterFacetForm() {
@@ -1125,7 +1157,9 @@ function initFilterFacetForm() {
     });
   });
 }
-// initFilterFacetForm();
+document.addEventListener("DOMContentLoaded", function() {
+  initFilterFacetForm();
+});
 
 // Predictive Search 
 class PredictiveSearch extends HTMLElement {
@@ -1210,7 +1244,9 @@ function initHandleQuestions() {
     }
   })
 }
-// initHandleQuestions();
+document.addEventListener("DOMContentLoaded", function() {
+  initHandleQuestions();
+});
 
 // Cart Form Ajax
 function initCartForm() {
@@ -1473,7 +1509,9 @@ function initCartForm() {
     })
   }
 }
-// initCartForm();
+document.addEventListener("DOMContentLoaded", function() {
+  initCartForm();
+});
 
 // function for product collapsibles 
 function initProductCollapsibles() {
@@ -1492,7 +1530,9 @@ function initProductCollapsibles() {
     })
   })
 }
-// initProductCollapsibles();
+document.addEventListener("DOMContentLoaded", function() {
+  initProductCollapsibles();
+});
 
 // function for product Media Sliders
 function initMediaGallery() {
@@ -1545,7 +1585,9 @@ function initMediaGallery() {
     }
   })
 }
-// initMediaGallery();
+document.addEventListener("DOMContentLoaded", function() {
+  initMediaGallery();
+});
 
 // Product Quantity Selectors Event
 function initProductQuantitySelector() {
@@ -1572,7 +1614,9 @@ function initProductQuantitySelector() {
     });
   });
 }
-// initProductQuantitySelector(); 
+document.addEventListener("DOMContentLoaded", function() {
+  initProductQuantitySelector();
+});
 
 // Product Variants js
 function initProductVariants() {
@@ -1820,7 +1864,9 @@ function initProductVariants() {
     option3.querySelector('[data-option-name]').textContent = matchedVariant.option3;
   }
 }  
-// initProductVariants();
+document.addEventListener("DOMContentLoaded", function() {
+  initProductVariants();
+});
 
 // Product Form Add To Cart Ajax
 function initProductForm() {
@@ -1985,7 +2031,9 @@ function initProductForm() {
     })
   }
 }
-// initProductForm();
+document.addEventListener("DOMContentLoaded", function() {
+  initProductForm();
+});
 
 // Sticky Add To Cart Function 
 function initStickyAddCart() {
@@ -2002,7 +2050,9 @@ function initStickyAddCart() {
     });
   }
 }
-// initStickyAddCart();
+document.addEventListener("DOMContentLoaded", function() {
+  initStickyAddCart();
+});
 
 // Product Quick View 
 function initQuickShopCollection() {
@@ -2115,7 +2165,9 @@ function initQuickShopCollection() {
     });
   }
 }
-// initQuickShopCollection();
+document.addEventListener("DOMContentLoaded", function() {
+  initQuickShopCollection();
+});
 
 // Product Recommendations
 function initProductRecommendations() {
@@ -2152,7 +2204,9 @@ function initProductRecommendations() {
     })
   }
 }
-// initProductRecommendations();
+document.addEventListener("DOMContentLoaded", function() {
+  initProductRecommendations();
+});
    
 // Back To Top Function
 function backToTopScrolling() {
@@ -2171,7 +2225,9 @@ function backToTopScrolling() {
     }
   }
 }
-// backToTopScrolling();
+document.addEventListener("DOMContentLoaded", function() {
+  backToTopScrolling();
+});
 
 // Passowrd page Modal Event Listeners
 function initPasswordModal() {
@@ -2194,7 +2250,9 @@ function initPasswordModal() {
     });
   }
 }
-// initPasswordModal();
+document.addEventListener("DOMContentLoaded", function() {
+  initPasswordModal();
+});
 
 // The element observe For 3d Product Modal
 function productModalObserve() {
@@ -2230,8 +2288,11 @@ function productModalObserve() {
     observer.observe(model);
   });
 }
+document.addEventListener("DOMContentLoaded", function() {
+  productModalObserve();
+});
 
-// Product Zoom Gallery
+// Product Popup Gallery
 function productPopupSlider() {
   const popupWrapper = document.querySelectorAll('.product__zoom-gallery');
   popupWrapper.forEach(wrapper => {
@@ -2252,6 +2313,9 @@ function productPopupSlider() {
     popupSwiper[id] = new Swiper(sliderContainer, swiperOptions);
   });
 }
+document.addEventListener("DOMContentLoaded", function() {
+  productPopupSlider();
+});
 function initProductZoomGallery() {
   let selectors = {
     productPopupBtn: document.querySelectorAll('.image__zoom-btn'),
@@ -2274,39 +2338,7 @@ function initProductZoomGallery() {
     });
   });
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-  initStickyHeader();
-  initHeaderNavigation();
-  initHeaderSearch();
-  initSlideshowSwipers(); 
-  initBrandsSwipers();
-  initCollectionListSwipers();
-  initTestimonialSwipers();
-  initVideoSection();
-  initCountdown();
-  initImageComparison();
-  initageVerificationPopUp();
-  initNewsletterPopup();
-  initModalPopup();
-  initCustomerForms();
-  initCollectionEventListeners();
-  initCollectionSort();
-  initFilterFacetForm();
-  initHandleQuestions();
-  initCartForm();
-  initProductCollapsibles();
-  initMediaGallery();
-  initProductQuantitySelector();
-  initProductVariants();
-  initProductForm();
-  initStickyAddCart();
-  initQuickShopCollection();
-  initProductRecommendations();
-  backToTopScrolling();
-  initPasswordModal();
-  productModalObserve();
-  productPopupSlider();
+document.addEventListener("DOMContentLoaded", function() {
   initProductZoomGallery();
 });
 
