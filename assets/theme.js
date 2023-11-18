@@ -1869,6 +1869,53 @@ document.addEventListener("DOMContentLoaded", function() {
   initProductVariants();
 });
 
+// Cart Recommendations based on the first line item 
+function initCartRecommendations() {
+  const productRecommendationContainer = document.querySelectorAll('cart-recommendations');
+  productRecommendationContainer.forEach(container => {
+    if(!container) return;
+    var CartDrawerRecommendations = class extends HTMLElement {
+      async connectedCallback() {
+        try {
+          const response = await fetch(`${window.themeContent.routes.productRecommendation}?product_id=${this.productId}&limit=${this.limit}&section_id=${this.sectionId}`);
+          const html = await response.text();
+    
+          const div = document.createElement("div");
+          div.innerHTML = html;
+    
+          const productRecommendationsElement = div.querySelector("cart-recommendations");
+    
+          if (productRecommendationsElement && productRecommendationsElement.hasChildNodes()) {
+            this.innerHTML = productRecommendationsElement.innerHTML;
+          } else {
+            this.hidden = true;
+          }
+        } catch (error) {
+          console.error('Error fetching recommendations:', error);
+          this.hidden = true;
+        }
+      }
+    
+      get productId() {
+        return this.getAttribute("data-product-id");
+      }
+    
+      get sectionId() {
+        return this.getAttribute("data-section-id");
+      }
+      get limit() {
+        return this.getAttribute("data-limit");
+      }
+    };
+    
+    var CartDrawerRecommendations = CartDrawerRecommendations;
+    window.customElements.define("cart-recommendations", CartDrawerRecommendations);
+  });
+}
+document.addEventListener("DOMContentLoaded", function() {
+  initCartRecommendations();
+});
+
 // Product Form Add To Cart Ajax
 function initProductForm() {
   let selectors = {
@@ -1995,6 +2042,7 @@ function initProductForm() {
       selectors.cartPopupMessage.textContent = window.themeContent.strings.itemAddedSuccess;
     }
     initCartForm();
+    initCartRecommendations();
   }
   function openCartDrawer() {
     if (selectors.cartDrawer.classList.contains('cart-drawer__left')) {
@@ -2342,53 +2390,6 @@ function initProductZoomGallery() {
 }
 document.addEventListener("DOMContentLoaded", function() {
   initProductZoomGallery();
-});
-
-// Cart Recommendations based on the first line item 
-function initCartRecommendations() {
-  const productRecommendationContainer = document.querySelectorAll('cart-recommendations');
-  productRecommendationContainer.forEach(container => {
-    if(!container) return;
-    var CartDrawerRecommendations = class extends HTMLElement {
-      async connectedCallback() {
-        try {
-          const response = await fetch(`${window.themeContent.routes.productRecommendation}?product_id=${this.productId}&limit=${this.limit}&section_id=${this.sectionId}`);
-          const html = await response.text();
-    
-          const div = document.createElement("div");
-          div.innerHTML = html;
-    
-          const productRecommendationsElement = div.querySelector("cart-recommendations");
-    
-          if (productRecommendationsElement && productRecommendationsElement.hasChildNodes()) {
-            this.innerHTML = productRecommendationsElement.innerHTML;
-          } else {
-            this.hidden = true;
-          }
-        } catch (error) {
-          console.error('Error fetching recommendations:', error);
-          this.hidden = true;
-        }
-      }
-    
-      get productId() {
-        return this.getAttribute("data-product-id");
-      }
-    
-      get sectionId() {
-        return this.getAttribute("data-section-id");
-      }
-      get limit() {
-        return this.getAttribute("data-limit");
-      }
-    };
-    
-    var CartDrawerRecommendations = CartDrawerRecommendations;
-    window.customElements.define("cart-recommendations", CartDrawerRecommendations);
-  });
-}
-document.addEventListener("DOMContentLoaded", function() {
-  initCartRecommendations();
 });
 
 })();
