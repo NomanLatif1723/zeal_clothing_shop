@@ -12,16 +12,20 @@
 {%- assign acceptable_recommendations_count = 0 -%}
 
 {%- for product in recommendations.products -%}
-  {%- assign matching_product = cart.items -%}
+  {%- assign matching_product = cart.items | where: 'product_id', product.id | first -%}
 
   {%- if matching_product == blank -%}
     {%- assign acceptable_recommendations_count = acceptable_recommendations_count | plus: 1 -%}
   {%- endif -%}
 {%- endfor -%}
 
+{%- if recommendations.performed -%}
   {%- if acceptable_recommendations_count > 0 -%}
     <div class="mini-cart__recommendations-inner">
-        <p class="mini-cart__recommendations-heading heading heading--small hidden-pocket">Consider These Items As Well</p>
+      {%- if section.settings.recommendations_title != blank -%}
+        <p class="mini-cart__recommendations-heading heading heading--small hidden-pocket">{{ section.settings.recommendations_title | escape }}</p>
+        <p class="mini-cart__recommendations-heading heading heading--xsmall text--subdued hidden-lap-and-up">{{ section.settings.recommendations_title | escape }}</p>
+      {%- endif -%}
 
       <div class="scroller">
         <div class="scroller__inner">
@@ -37,7 +41,7 @@
 
               {%- if matching_product.size == 0 -%}
                 {%- assign shown_products_count = shown_products_count | plus: 1 -%}
-                {%- render 'cart-recommended-item', product: product, -%}
+                {%- render 'cart-recommended-item', product: product -%}
               {%- endif -%}
             {%- endfor -%}
           </div>
@@ -45,4 +49,5 @@
       </div>
     </div>
   {%- endif -%}
+{%- endif -%}
 </cart-drawer-recommendations>
