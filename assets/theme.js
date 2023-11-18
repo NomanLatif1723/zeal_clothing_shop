@@ -2350,6 +2350,27 @@ function initCartRecommendations() {
   const productRecommendationContainer = document.querySelectorAll('cart-recommendations');
   if (productRecommendationContainer) {
     productRecommendationContainer.forEach(container => {
+      function buildProductBlock(product) {
+        const prouductPrice = formatMoney(product.price)
+        const html = `
+        <div class="cart__recommendations-item">
+          <div class="cart__recommendations-item--image">
+            <img src="${product.featured_image}" width="100" height="100" loading="lazy"/>
+          </div>
+          <div class="cart__recommendations-item--content">
+            <div class="cart__recommendations-item--title"><h3>${product.title}</h3></div>
+            <div class="cart__recommendations-item--meta">
+              <div class="cart__recommendations-item--price">${prouductPrice}</div>
+              <div class="cart__recommendations-item--variants">
+              </div>
+            </div>
+            <div class="cart__recommendations-item--button">
+              <button type="button" name="add" class="btn btn__primary">Add To Cart</button>
+            </div>
+          </div>
+        </div>
+        `
+      }
       const sectionId = container.getAttribute('data-section-id');
       const productId = container.getAttribute('data-product-id');
       const recommendationsCount = container.getAttribute('data-limit');
