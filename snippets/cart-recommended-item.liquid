@@ -1,4 +1,35 @@
-{{ product.title }}
+<div class="cart__recommendations-item">
+  <div class="cart__recommendations-item--image">
+    <img src="{{ product.image | img_url: "100x" }}" width="100" height="100" loading="lazy"/>
+  </div>
+  <div class="cart__recommendations-item--content">
+    <div class="cart__recommendations-item--title"><h3>{{ product.title }}</h3></div>
+    <div class="cart__recommendations-item--meta">
+      <div class="cart__recommendations-item--price">{{ product.price | money }}</div>
+      <div class="cart__recommendations-item--variants">
+        {%- unless product.has_only_default_variant -%}
+          <variant-selects data-section="{{ section.id }}" data-url="{{ product.url }}">
+            <div class="product__options product-select__options">
+              <div class="product-form__select">
+                <select form="{{ product_form_id }}" class="product__select" data-selected-variant id="product-select-{{ forloop.index }}">
+                  {% for variant in product.variants %}
+                    <option value="{{ variant.id }}" {% if variant == product.selected_or_first_available_variant %}selected{% endif %}>
+                      {{ variant.title }}
+                    </option>
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+          </variant-selects>
+        {%- endunless -%}
+      </div>
+    </div>
+    <div class="cart__recommendations-item--button">
+      <button type="button" name="add" class="btn btn__primary">Add To Cart</button>
+    </div>
+  </div>
+</div>
+{% comment %}
 {%- assign color_label_list = 'general.label.color' | t | replace: ', ', ',' | downcase | split: ',' -%}
 {%- assign color_white_label = 'general.label.white' | t | downcase -%}
 {%- assign quick_buy_icon_name = 'quick-buy-' | append: settings.cart_icon | replace: '_', '-' -%}
@@ -80,9 +111,7 @@
           </button>
         {%- endform -%}
       {%- else -%}
-        {%- comment -%}
-        IMPLEMENTATION NOTE: Depending on the device we show a different icon or open a different mode (either popover or drawer)
-        {%- endcomment -%}
+
 
         <div class="product-item__quick-form">
           <button is="toggle-button" loader aria-controls="product-{{ section.id }}-{{ block.id }}-{{ product.id }}-drawer" aria-expanded="false" class="button button--outline button--text button--full {% if section.settings.desktop_products_per_row >= 5 %}button--small{% endif %} hidden-touch hidden-phone">{{ 'collection.product.quick_view' | t }}</button>
@@ -288,3 +317,4 @@
     {%- endif -%}
   </div>
 </product-item>
+{% endcomment %}
