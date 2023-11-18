@@ -16,6 +16,7 @@
       <div class="scroller__inner">
         <div class="mini-cart__recommendations-list">
           {%- for product in recommendations.products -%}
+              {%- assign product = cart.items -%}
               {%- render 'product-item', product: product, -%}
           {%- endfor -%}
         </div>
