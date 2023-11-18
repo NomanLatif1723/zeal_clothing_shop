@@ -12,7 +12,7 @@
 {%- assign acceptable_recommendations_count = 0 -%}
 
 {%- for product in recommendations.products -%}
-  {%- assign matching_product = cart.items | where: 'product_id', product.id | first -%}
+  {%- assign matching_product = cart.items -%}
 
   {%- if matching_product == blank -%}
     {%- assign acceptable_recommendations_count = acceptable_recommendations_count | plus: 1 -%}
