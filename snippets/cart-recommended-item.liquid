@@ -41,7 +41,7 @@
     {%- endif -%}
 
     <a href="{{ product.url }}" data-instant class="product-item__aspect-ratio aspect-ratio {% if settings.product_image_size != 'natural' %}aspect-ratio--{{ settings.product_image_size }}{% endif %}" style="padding-bottom: {{ 100.0 | divided_by: product.featured_media.preview_image.aspect_ratio }}%; --aspect-ratio: {{ product.featured_media.preview_image.aspect_ratio }}">
-      {{ product.featured_media | image_url: width: product.featured_media.width | image_tag: loading: 'lazy', sizes: sizes_attribute, widths: '200,300,400,500,600,700,800,900,1000,1100,1200', class: 'product-item__primary-image', data-media-id: product.featured_media.id }}
+      {{ product.featured_media | image_url: width: product.featured_media.width | image_tag: loading: 'lazy', class: 'product-item__primary-image', data-media-id: product.featured_media.id }}
 
       {%- if settings.product_color_display == 'swatch' -%}
         {%- for color_label in color_label_list -%}
@@ -50,7 +50,7 @@
        		    {%- for variant in product.variants -%}
       			    {%- if variant.options contains color_option -%}
           		    {%- unless variant.featured_media == product.featured_media -%}
-                    {{ variant.featured_media | image_url: width: variant.featured_media.width | image_tag: loading: 'lazy', sizes: sizes_attribute, widths: '200,300,400,500,600,700,800,900,1000,1100,1200', class: 'product-item__primary-image', data-media-id: variant.featured_media.id, hidden: true }}
+                    {{ variant.featured_media | image_url: width: variant.featured_media.width | image_tag: loading: 'lazy', class: 'product-item__primary-image', data-media-id: variant.featured_media.id, hidden: true }}
       				      {% break %}
           		    {%- endunless -%}
       			    {%- endif -%}
@@ -62,7 +62,7 @@
 
       {%- if settings.show_secondary_image and product.media.size > 1 -%}
         {%- assign next_media = product.media[product.featured_media.position] | default: product.media[1] -%}
-        {{- next_media | image_url: width: next_media.width | image_tag: loading: 'lazy', sizes: sizes_attribute, widths: '200,300,400,500,600,700,800,900,1000,1100,1200', class: 'product-item__secondary-image' -}}
+        {{- next_media | image_url: width: next_media.width | image_tag: loading: 'lazy', class: 'product-item__secondary-image' -}}
       {%- endif -%}
     </a>
 
