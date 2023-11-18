@@ -1870,95 +1870,57 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // Cart Recommendations based on the first line item 
-// function initCartRecommendations() {
-//   const productRecommendationContainer = document.querySelectorAll('cart-recommendations');
-//   productRecommendationContainer.forEach(container => {
-//     if(!container) return;
-//     // Create the custom element class
-//     class CartDrawerRecommendations extends HTMLElement {
-//       async connectedCallback() {
-//         try {
-//           const response = await fetch(`${window.themeContent.routes.productRecommendation}?product_id=${this.productId}&limit=10&section_id=${this.sectionId}`);
-//           const html = await response.text();
+function initCartRecommendations() {
+  const productRecommendationContainer = document.querySelectorAll('cart-recommendations');
+  productRecommendationContainer.forEach(container => {
+    if(!container) return;
+    var CartDrawerRecommendations = class extends HTMLElement {
+      async connectedCallback() {
+        try {
+          const response = await fetch(`${window.themeContent.routes.productRecommendation}?product_id=${this.productId}&limit=10&section_id=${this.sectionId}`);
+          const html = await response.text();
     
-//           const div = document.createElement("div");
-//           div.innerHTML = html;
+          const div = document.createElement("div");
+          div.innerHTML = html;
     
-//           const productRecommendationsElement = div.querySelector("cart-recommendations");
+          const productRecommendationsElement = div.querySelector("cart-drawer-recommendations");
     
-//           if (productRecommendationsElement && productRecommendationsElement.hasChildNodes()) {
-//             this.innerHTML = productRecommendationsElement.innerHTML;
-//           } else {
-//             this.hidden = true;
-//           }
-//         } catch (error) {
-//           console.error('Error fetching recommendations:', error);
-//           this.hidden = true; 
-//         }
-//       }
-    
-//       get productId() {
-//         return this.getAttribute("product-id");
-//       }
-    
-//       get sectionId() {
-//         return this.getAttribute("section-id");
-//       }
-//     }
-    
-//     // Create an instance of the custom element
-//     const cartDrawerRecommendations = new CartDrawerRecommendations();
-    
-//     // Append the custom element to a container in your HTML
-//     const recommendedListContainer = document.querySelector(".cart__recommendations-list");
-//     recommendedListContainer.appendChild(cartDrawerRecommendations);
-
-    
-//     // var CartDrawerRecommendations = CartDrawerRecommendations;
-//     // customElements.define("cart-recommendations", CartDrawerRecommendations);
-//   });
-// }
-// document.addEventListener("DOMContentLoaded", function() {
-//   initCartRecommendations();
-// });
-
-function createCartDrawerRecommendations(productID, sectionID) {
-  const element = document.createElement("cart-recommendations");
-
-  (async () => {
-    try {
-      const response = await fetch(`${window.themeContent.routes.productRecommendation}?product_id=${productID}&limit=10&section_id=${sectionID}`);
-      const html = await response.text();
-
-      const div = document.createElement("div");
-      div.innerHTML = html;
-
-      const productRecommendationsElement = div.querySelector("cart-recommendations");
-
-      if (productRecommendationsElement && productRecommendationsElement.hasChildNodes()) {
-        element.innerHTML = productRecommendationsElement.innerHTML;
-      } else {
-        element.hidden = true;
+          if (productRecommendationsElement && productRecommendationsElement.hasChildNodes()) {
+            this.innerHTML = productRecommendationsElement.innerHTML;
+          } else {
+            this.hidden = true;
+          }
+        } catch (error) {
+          console.error('Error fetching recommendations:', error);
+          this.hidden = true; // Handle the error by hiding the element or other appropriate action.
+        }
       }
-    } catch (error) {
-      console.error('Error fetching recommendations:', error);
-      element.hidden = true; // Handle the error by hiding the element or other appropriate action.
-    }
-  })();
+    
+      get productId() {
+        return this.getAttribute("product-id");
+      }
+    
+      get sectionId() {
+        return this.getAttribute("section-id");
+      }
+    };
+    
+    var CartDrawerRecommendations = CartDrawerRecommendations;
+    customElements.define("cart-drawer-recommendations", CartDrawerRecommendations);
 
-  return element;
+  });
 }
-const test1 = document.querySelector('cart-recommendations');
-// Example usage:
-const productID = test1.dataset.productId;
-const sectionID = test1.dataset.sectionId;
+document.addEventListener("DOMContentLoaded", function() {
+  initCartRecommendations();
+});
 
-const cartDrawerRecommendations = createCartDrawerRecommendations(productID, sectionID);
+
+// Create an instance of the custom element
+const cartDrawerRecommendations = new CartDrawerRecommendations();
 
 // Append the custom element to a container in your HTML
-const container = document.querySelector(".cart__recommendations-list");
+const container = document.getElementById("your-container-id");
 container.appendChild(cartDrawerRecommendations);
-
 
 
 // Product Form Add To Cart Ajax
