@@ -1951,7 +1951,7 @@ function initProductForm() {
   }
   
   // Fetch The Cart Type Rather Page, Drawer or Popup
-  const cartType = window.themeContent.strings.cartType;
+  const cartType = window.themeContent.settings.cartType;
   if (!selectors.cartHeaderButton) {
     return;
   }

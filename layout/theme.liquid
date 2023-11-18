@@ -58,12 +58,12 @@
           continue_shopping: "{{ 'cart.general.continue_shopping' | t }}",
           freeShippingSuccess: "{{ 'cart.general.free_shipping_success_html' | t: amount: threshold }}",
           itemAddedSuccess: "{{ 'products.item_added_success_message' | t }}",
-          view_full_info: "{{ 'products.view_full_info' | t }}",
-          templateName: "{{ template.name }}",
-          cartType: "{{ settings.cart_type }}"
+          view_full_info: "{{ 'products.view_full_info' | t }}"
         },
         settings: {
-          quickView: {{ settings.show_quick_view }}
+          quickView: {{ settings.show_quick_view }},
+          templateName: "{{ template.name }}",
+          cartType: "{{ settings.cart_type }}"
         }
       }
     </script>
