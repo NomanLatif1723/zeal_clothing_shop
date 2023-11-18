@@ -2380,6 +2380,10 @@ function initCartRecommendations() {
         .then(response => response.json())
         .then(({ products }) => {
           console.log(products);
+          products.forEach(product => {
+            const html = buildProductBlock(product);
+            document.querySelector('.cart__recommendations-list').innerHTML += html;
+          });
         }
       );
     });
