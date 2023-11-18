@@ -1920,15 +1920,6 @@ document.addEventListener("DOMContentLoaded", function() {
   initCartRecommendations();
 });
 
-
-// Create an instance of the custom element
-const cartDrawerRecommendations = new CartDrawerRecommendations();
-
-// Append the custom element to a container in your HTML
-const container = document.getElementById("your-container-id");
-container.appendChild(cartDrawerRecommendations);
-
-
 // Product Form Add To Cart Ajax
 function initProductForm() {
   let selectors = {
