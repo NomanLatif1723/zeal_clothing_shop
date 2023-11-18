@@ -310,6 +310,7 @@ display: inline-block;
 .cart__recommendations-list {
   padding: 20px 0;
   font-size: 14px;
+  display: block;
 }
 .cart__recommendations-item {
   display: flex;
