@@ -156,7 +156,7 @@
             {%- render 'icon-account' -%}
           </a>
         {%- endif -%}
-        <a href="{{ routes.cart_url }}" data-cart-type="{{ settings.cart_type }}" aria-label="{{ 'sections.header.general.cart' | t }}" title="{{ 'sections.header.general.cart' | t }}" class="icon links icon__cart{% unless show_icons %} icon__hide-desktop{% endunless %}">
+        <a href="{{ routes.cart_url }}" aria-label="{{ 'sections.header.general.cart' | t }}" title="{{ 'sections.header.general.cart' | t }}" class="icon links icon__cart{% unless show_icons %} icon__hide-desktop{% endunless %}">
           {%- if cart_icon == 'cart' -%}
             {%- render 'icon-cart' -%}
           {%- elsif cart_icon == 'bag' -%}
@@ -180,7 +180,7 @@
                 {% endif %}
               </a>
           {%- endif -%}
-          <a href="{{ routes.cart_url }}" data-cart-type="{{ settings.cart_type }}" aria-label="{{ 'sections.header.general.cart' | t }}" class="icon links icon__cart icon__hide-mobile">
+          <a href="{{ routes.cart_url }}" aria-label="{{ 'sections.header.general.cart' | t }}" class="icon links icon__cart icon__hide-mobile">
             {{ 'sections.header.general.cart' | t }}
             <span data-cart-count class="cart-item__count{% if cart.item_count <= 0 %} hidden{% endif %}">{{ cart.item_count }}</span>
           </a>
