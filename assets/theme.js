@@ -2423,6 +2423,9 @@ var _CartDrawerRecommendations = class extends HTMLElement {
   get sectionId() {
     return this.getAttribute("section-id");
   }
+  get limit() {
+    return this.getAttribute("data-limit");
+  }
 };
 
 var CartDrawerRecommendations = _CartDrawerRecommendations;
