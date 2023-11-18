@@ -1060,7 +1060,7 @@ function initCollectionSort() {
     selectors.loader.classList.remove('hidden');
     const sortValue = event.target.value;
     const filterParams = new URLSearchParams(new FormData(selectors.filterForm)).toString();
-    if (window.themeContent.strings.templateName == 'collection') {
+    if (window.themeContent.settings.templateName == 'collection') {
       currentURL = window.location.pathname;
       baseURL = `${currentURL}?${filterParams}&sort_by=${sortValue}`;
     } else {
