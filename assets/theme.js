@@ -1933,7 +1933,7 @@ function createCartDrawerRecommendations(productID, sectionID) {
       const div = document.createElement("div");
       div.innerHTML = html;
 
-      const productRecommendationsElement = div.querySelector("cart-drawer-recommendations");
+      const productRecommendationsElement = div.querySelector("cart-recommendations");
 
       if (productRecommendationsElement && productRecommendationsElement.hasChildNodes()) {
         element.innerHTML = productRecommendationsElement.innerHTML;
