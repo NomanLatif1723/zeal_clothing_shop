@@ -9,7 +9,6 @@
 </cart-recommendations>
 {% endcomment %}
 <cart-drawer-recommendations section-id="{{ section.id }}" product-id="{{ cart.items.first.product_id }}" class="mini-cart__recommendations">
-{%- if recommendations.performed -%}
   <div class="mini-cart__recommendations-inner">
       <p class="mini-cart__recommendations-heading heading heading--small hidden-pocket">Consider These Items As Well</p>
 
@@ -34,5 +33,4 @@
       </div>
     </div>
   </div>
-{%- endif -%}
 </cart-drawer-recommendations>
