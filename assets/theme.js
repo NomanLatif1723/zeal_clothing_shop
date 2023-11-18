@@ -2347,88 +2347,48 @@ document.addEventListener("DOMContentLoaded", function() {
 // Cart Recommendations based on the first line item 
 function initCartRecommendations() {
   const productRecommendationContainer = document.querySelectorAll('cart-recommendations');
-  if (productRecommendationContainer) {
-    productRecommendationContainer.forEach(container => {
-      function buildProductBlock(product) {
-        const prouductPrice = formatMoney(product.price)
-        const html = `
-        <div class="cart__recommendations-item">
-          <div class="cart__recommendations-item--image">
-            <img src="${product.images[0]}" width="100" height="100" loading="lazy"/>
-          </div>
-          <div class="cart__recommendations-item--content">
-            <div class="cart__recommendations-item--title"><h3>${product.title}</h3></div>
-            <div class="cart__recommendations-item--meta">
-              <div class="cart__recommendations-item--price">${prouductPrice}</div>
-              <div class="cart__recommendations-item--variants">
-              </div>
-            </div>
-            <div class="cart__recommendations-item--button">
-              <button type="button" name="add" class="btn btn__primary">Add To Cart</button>
-            </div>
-          </div>
-        </div>
-        `
-      }
-      const sectionId = container.getAttribute('data-section-id');
-      const productId = container.getAttribute('data-product-id');
-      const recommendationsCount = container.getAttribute('data-limit');
-      console.log(sectionId,productId,recommendationsCount);
-
-      fetch(window.Shopify.routes.root + `recommendations/products.json?product_id=${productId}&limit=${recommendationsCount}`)
-        .then(response => response.json())
-        .then(({ products }) => {
-          console.log(products);
-          products.forEach(product => {
-            const html = buildProductBlock(product);
-            document.querySelector('.cart__recommendations-list').innerHTML += html;
-          });
+  productRecommendationContainer.forEach(container => {
+    if(!container) return;
+    var CartDrawerRecommendations = class extends HTMLElement {
+      async connectedCallback() {
+        try {
+          const response = await fetch(`${window.themeContent.routes.productRecommendation}?product_id=${this.productId}&limit=${this.limit}&section_id=${this.sectionId}`);
+          const html = await response.text();
+    
+          const div = document.createElement("div");
+          div.innerHTML = html;
+    
+          const productRecommendationsElement = div.querySelector("cart-recommendations");
+    
+          if (productRecommendationsElement && productRecommendationsElement.hasChildNodes()) {
+            this.innerHTML = productRecommendationsElement.innerHTML;
+          } else {
+            this.hidden = true;
+          }
+        } catch (error) {
+          console.error('Error fetching recommendations:', error);
+          this.hidden = true;
         }
-      );
-    });
-  }
+      }
+    
+      get productId() {
+        return this.getAttribute("data-product-id");
+      }
+    
+      get sectionId() {
+        return this.getAttribute("data-section-id");
+      }
+      get limit() {
+        return this.getAttribute("data-limit");
+      }
+    };
+    
+    var CartDrawerRecommendations = CartDrawerRecommendations;
+    window.customElements.define("cart-recommendations", CartDrawerRecommendations);
+  });
 }
 document.addEventListener("DOMContentLoaded", function() {
-  // initCartRecommendations();
+  initCartRecommendations();
 });
-
-// js/custom-element/section/cart/cart-drawer-recommendations.js
-var _CartDrawerRecommendations = class extends HTMLElement {
-  async connectedCallback() {
-    try {
-      const response = await fetch(`${window.themeContent.routes.productRecommendation}?product_id=${this.productId}&limit=${this.limit}&section_id=${this.sectionId}`);
-      const html = await response.text();
-
-      const div = document.createElement("div");
-      div.innerHTML = html;
-
-      const productRecommendationsElement = div.querySelector("cart-recommendations");
-
-      if (productRecommendationsElement && productRecommendationsElement.hasChildNodes()) {
-        this.innerHTML = productRecommendationsElement.innerHTML;
-      } else {
-        this.hidden = true;
-      }
-    } catch (error) {
-      console.error('Error fetching recommendations:', error);
-      this.hidden = true;
-    }
-  }
-
-  get productId() {
-    return this.getAttribute("data-product-id");
-  }
-
-  get sectionId() {
-    return this.getAttribute("data-section-id");
-  }
-  get limit() {
-    return this.getAttribute("data-limit");
-  }
-};
-
-var CartDrawerRecommendations = _CartDrawerRecommendations;
-window.customElements.define("cart-recommendations", CartDrawerRecommendations);
-
 
 })();
