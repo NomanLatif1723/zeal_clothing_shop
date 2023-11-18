@@ -2390,7 +2390,33 @@ function initCartRecommendations() {
   }
 }
 document.addEventListener("DOMContentLoaded", function() {
-  initCartRecommendations();
+  // initCartRecommendations();
 });
+
+// js/custom-element/section/cart/cart-drawer-recommendations.js
+  var _CartDrawerRecommendations = class extends HTMLElement {
+    async connectedCallback() {
+      if (!_CartDrawerRecommendations.recommendationsCache[this.productId]) {
+        _CartDrawerRecommendations.recommendationsCache[this.productId] = fetch(`${window.themeVariables.routes.productRecommendationsUrl}?product_id=${this.productId}&limit=10&section_id=${this.sectionId}`);
+      }
+      const response = await _CartDrawerRecommendations.recommendationsCache[this.productId];
+      const div = document.createElement("div");
+      div.innerHTML = await response.clone().text();
+      const productRecommendationsElement = div.querySelector("cart-drawer-recommendations");
+      if (productRecommendationsElement && productRecommendationsElement.hasChildNodes()) {
+        this.innerHTML = productRecommendationsElement.innerHTML;
+      } else {
+        this.hidden = true;
+      }
+    }
+    get productId() {
+      return this.getAttribute("product-id");
+    }
+    get sectionId() {
+      return this.getAttribute("section-id");
+    }
+  };
+  var CartDrawerRecommendations = _CartDrawerRecommendations;
+  window.customElements.define("cart-drawer-recommendations", CartDrawerRecommendations);
 
 })();
