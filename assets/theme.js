@@ -1939,6 +1939,7 @@ function initProductForm() {
     giftCardRecipientButton: document.querySelector('.recipient__button input')
   };
 
+  console.log(window.themeContent.settings.giftCardProduct);
   if(selectors.giftCardRecipientButton){
     selectors.giftCardRecipientButton.addEventListener('change', () => {
       document.querySelector('.recipient-form__container').classList.toggle('hidden');
