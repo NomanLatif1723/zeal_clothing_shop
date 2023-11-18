@@ -1959,7 +1959,7 @@ var cardDrawerRecommendation = class CartDrawerRecommendations extends HTMLEleme
 
 // Append the custom element to a container in your HTML
 const container = document.querySelector(".cart__recommendations-list");
-container.appendChild(cartDrawerRecommendations);
+container.innerHTML = cardDrawerRecommendation;
 
 
 // Product Form Add To Cart Ajax
