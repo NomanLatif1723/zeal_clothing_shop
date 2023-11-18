@@ -59,11 +59,11 @@
           freeShippingSuccess: "{{ 'cart.general.free_shipping_success_html' | t: amount: threshold }}",
           itemAddedSuccess: "{{ 'products.item_added_success_message' | t }}",
           view_full_info: "{{ 'products.view_full_info' | t }}",
-          templateName: "{{ template.name }}"
+          templateName: "{{ template.name }}",
+          cartType: "{{ settings.cart_type }}"
         },
         settings: {
-          quickView: {{ settings.show_quick_view }},
-          cartType: {{ settings.cart_type }}
+          quickView: {{ settings.show_quick_view }}
         }
       }
     </script>
