@@ -2029,7 +2029,6 @@ function initProductForm() {
               return; 
             }
           }
-          
           errorMessageEmail.classList.add('hidden');
           errorMessageDate.classList.add('hidden');
           // Submit Form Ajax
@@ -2046,7 +2045,6 @@ function initProductForm() {
             span.classList.remove('hidden');
           }
         }
-        
       }
     });
   });
