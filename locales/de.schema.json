@@ -375,6 +375,56 @@
         "name": "Ergänzende Produkte"
       }
     },
+    "cart-recommendations": {
+      "name": "Warenkorbempfehlungen",
+      "settings": {
+        "show_dynamic_recommendation": {
+          "info": "Dynamische Empfehlungen nutzen Bestell- und Produktinformationen, um sie im Laufe der Zeit zu ändern und zu verbessern. [Learn more](https:\/\/help.shopify.com\/en\/themes\/development\/recommended-products)"
+        },
+        "heading": {
+          "label": "Überschrift"
+        },
+        "products_to_show": {
+          "label": "Zu zeigende Produkte"
+        },
+        "products_per_row": {
+          "label": "Produkte pro Zeile"
+        },
+        "header_alignment": {
+          "label": "Ausrichtung",
+          "alignment": {
+            "label": "Textausrichtung",
+            "options": {
+              "left": {
+                "label": "Links"
+              },
+              "center": {
+                "label": "Center"
+              },
+              "right": {
+                "label": "Rechts"
+              }
+            }
+          }
+        },
+        "lazyload_images": {
+          "label": "Aktivieren Sie LazyLoad-Bilder",
+          "info": "Aktivieren Sie Lazyload, wenn sich Bilder außerhalb des Bildschirms befinden, um die Leistung zu verbessern"
+        },
+        "header_spacing": {
+          "label": "Abschnittsabstand",
+          "top_spacing": {
+            "label": "Abstand oben"
+          },
+          "bottom_spacing": {
+            "label": "Abstand unten"
+          }
+        }
+      },
+      "presets": {
+        "name": "Warenkorbempfehlungen"
+      }
+    },
     "collection-banner": {
       "name": "Sammlungsbanner",
       "settings": {
@@ -3499,6 +3549,9 @@
         },
         "show_note": {
           "label": "Bestellhinweis anzeigen"
+        },
+        "enable_cart_recommendations": {
+          "label": "Warenkorbempfehlungen aktivieren"
         }
       }
     },
