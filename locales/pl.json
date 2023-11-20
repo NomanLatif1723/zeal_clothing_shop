@@ -307,7 +307,9 @@
       "name": "Imię: (opcjonalnie)",
       "message": "Wiadomość (opcjonalnie)",
       "send_on": "Wyślij dalej (opcjonalnie)",
-      "checkbox_label": "Chcę to wysłać jako prezent"
+      "checkbox_label": "Chcę to wysłać jako prezent",
+      "email_error_mesage": "Adres e-mail nie może być pusty",
+      "date_error_message": "Wybierz prawidłową datę w ciągu najbliższych 90 dni."
     }
   },
   "pickup_availability": {
