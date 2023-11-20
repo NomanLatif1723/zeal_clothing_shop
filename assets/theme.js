@@ -1950,7 +1950,7 @@ function initProductForm() {
       });
     });
   }
-  
+  console.log(window.themeContent.routes.cartAddedUrl);
   // Fetch The Cart Type Rather Page, Drawer or Popup
   const cartType = window.themeContent.settings.cartType;
   if (!selectors.cartHeaderButton) {
