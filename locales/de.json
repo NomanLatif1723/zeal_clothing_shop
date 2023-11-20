@@ -307,7 +307,9 @@
       "name": "Name (Optional)",
       "message": "Nachricht (optional)",
       "send_on": "Senden am (Optional)",
-      "checkbox_label": "Ich möchte dies als Geschenk verschicken"
+      "checkbox_label": "Ich möchte dies als Geschenk verschicken",
+      "email_error_mesage": "E-Mail darf nicht leer sein",
+      "date_error_message": "Bitte wählen Sie ein gültiges Datum innerhalb der nächsten 90 Tage aus."
     }
   },
   "pickup_availability": {
