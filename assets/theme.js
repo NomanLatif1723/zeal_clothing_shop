@@ -2035,6 +2035,13 @@ function initProductForm() {
               loader.classList.add('hidden');
               span.classList.remove('hidden');
             }
+          } else {
+            // Submit Form Ajax
+            await submitProductForm(form);
+            if (span && loader) {
+              loader.classList.add('hidden');
+              span.classList.remove('hidden');
+            }
           }
         } else {
           // Submit Form Ajax
