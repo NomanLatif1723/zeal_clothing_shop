@@ -2006,7 +2006,10 @@ function initProductForm() {
           span.classList.add('hidden');
         }
         if (isGiftCartProduct && isGift) {
-          console.log('hello there ')
+          if (!recipientEmail.value) {
+            alert('Recipient email and name are required for a gift card!');
+            return;
+          }
         } else {
           // Submit Form Ajax
           await submitProductForm(form);
