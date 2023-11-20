@@ -2015,19 +2015,13 @@ function initProductForm() {
             }
             return;
           }
-          if(!recipientName.value) {
+          if(!recipientName.value || !recipientMessage.value || !recipientDate.value) {
             recipientName.disabled = true;
-          } else {
-            recipientName.disabled = false;
-          }
-          if(!recipientMessage.value) {
             recipientMessage.disabled = true;
-          } else {
-            recipientMessage.disabled = false;
-          }
-          if(!recipientDate.value) {
             recipientDate.disabled = true;
           } else {
+            recipientName.disabled = false;
+            recipientMessage.disabled = false;
             recipientDate.disabled = false;
           }
           errorMessage.classList.add('hidden');
