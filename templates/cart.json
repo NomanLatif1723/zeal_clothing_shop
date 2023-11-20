@@ -6,9 +6,15 @@
         "show_vendor": false,
         "text_alignment": "left"
       }
+    },
+    "cart-recommendations": {
+      "type": "cart-recommendations",
+      "settings": {
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "cart-recommendations"
   ]
 }
