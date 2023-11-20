@@ -375,6 +375,56 @@
         "name": "Komplementære produkter"
       }
     },
+    "cart-recommendations": {
+      "name": "Handlevognanbefalinger",
+      "settings": {
+        "show_dynamic_recommendation": {
+          "info": "Dynamiske anbefalinger bruker ordre- og produktinformasjon for å endre og forbedre over tid. "
+        },
+        "heading": {
+          "label": "Overskrift"
+        },
+        "products_to_show": {
+          "label": "Produkter å vise"
+        },
+        "products_per_row": {
+          "label": "Produkter per rad"
+        },
+        "header_alignment": {
+          "label": "Justering",
+          "alignment": {
+            "label": "Tekstjustering",
+            "options": {
+              "left": {
+                "label": "Venstre"
+              },
+              "center": {
+                "label": "Senter"
+              },
+              "right": {
+                "label": "Ikke sant"
+              }
+            }
+          }
+        },
+        "lazyload_images": {
+          "label": "Aktiver LazyLoad Images",
+          "info": "Aktiver Lazyload hvis bildene er utenfor skjermen for å forbedre ytelsen"
+        },
+        "header_spacing": {
+          "label": "Seksjonsavstand",
+          "top_spacing": {
+            "label": "Avstand Topp"
+          },
+          "bottom_spacing": {
+            "label": "Avstand bunn"
+          }
+        }
+      },
+      "presets": {
+        "name": "Handlevognanbefalinger"
+      }
+    },
     "collection-banner": {
       "name": "Samlingsbanner",
       "settings": {
@@ -3504,6 +3554,9 @@
         },
         "show_note": {
           "label": "Vis ordrenotat"
+        },
+        "enable_cart_recommendations": {
+          "label": "Aktiver handlevognanbefalinger"
         }
       }
     },
