@@ -1993,15 +1993,21 @@ function initProductForm() {
       const loader = form.querySelector('.loader__spinner');
       const span = form.querySelector('span');
       const recipientCheckboxInput = form.querySelector('.recipient__button input');
+      const isGift = document.querySelector(`#recipient_gift_card-${form.dataset.sectionId}`).checked;
+      const recipientEmail = document.querySelector(`#recipient-email-${form.dataset.sectionId}`);
+      const recipientName = document.querySelector(`#recipient-name-${form.dataset.sectionId}`);
+      const recipientMessage = document.querySelector(`#recipient-message-${form.dataset.sectionId}`);
+      const recipientDate = document.querySelector(`#recipient-date-${form.dataset.sectionId}`);
+
       if (cartType === 'drawer' || cartType === 'popup') {
         event.preventDefault();
-        if (isGiftCartProduct && recipientCheckboxInput.checked) {
-          console.log("hello there ");
+        if (span && loader) {
+          loader.classList.remove('hidden');
+          span.classList.add('hidden');
+        }
+        if (isGiftCartProduct && isGift) {
+          const 
         } else {
-          if (span && loader) {
-            loader.classList.remove('hidden');
-            span.classList.add('hidden');
-          }
           // Submit Form Ajax
           await submitProductForm(form);
           if (span && loader) {
