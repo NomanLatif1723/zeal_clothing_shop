@@ -309,7 +309,8 @@
       "send_on": "Odeslat (volitelné)",
       "checkbox_label": "Chci to poslat jako dárek",
       "email_error_mesage": "Email nemůže být prázdný",
-      "date_error_message": "Vyberte prosím platné datum během následujících 90 dnů."
+      "date_error_message": "Vyberte prosím platné datum během následujících 90 dnů.",
+      "message_max_characters": "Max. 200 znaků"
     }
   },
   "pickup_availability": {
