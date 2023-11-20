@@ -2019,14 +2019,17 @@ function initProductForm() {
             }
             return;
           }
-          if (isNaN(selectedDate.getTime()) || selectedDate > maxDate) {
-           errorMessageDate.classList.remove('hidden');
-            if (span && loader) {
-              loader.classList.add('hidden');
-              span.classList.remove('hidden');
+          if (recipientDate.value != empty) {
+            if (isNaN(selectedDate.getTime()) || selectedDate > maxDate) {
+             errorMessageDate.classList.remove('hidden');
+              if (span && loader) {
+                loader.classList.add('hidden');
+                span.classList.remove('hidden');
+              }
+              return; 
             }
-            return; 
           }
+          
           errorMessage.classList.add('hidden');
           // Submit Form Ajax
           await submitProductForm(form);
