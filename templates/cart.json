@@ -10,6 +10,13 @@
     "cart-recommendations": {
       "type": "cart-recommendations",
       "settings": {
+        "heading": "You May Also Like",
+        "text_alignment": "center",
+        "products_to_show": 4,
+        "products_per_row": 4,
+        "lazyload_images": false,
+        "margin_top": 60,
+        "margin_bottom": 60
       }
     }
   },
