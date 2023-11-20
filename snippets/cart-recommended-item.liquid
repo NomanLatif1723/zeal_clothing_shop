@@ -1,6 +1,4 @@
 <div class="cart__recommendations-item">
-  <form id="product-form-{{ product.id }}" action="/cart/add" method="post">
-    <input type="hidden" name="id" class="" value="{{ product.selected_or_first_available_variant.id }}">
   <div class="cart__recommendations-item--image">
     <img src="{{ product.featured_image | img_url: "100x" }}" width="100" height="100" loading="lazy"/>
   </div>
@@ -48,8 +46,8 @@
     </div>
     </div>
     <div class="cart__recommendations-item--button">
-      <!-- <form id="product-form-{{ product.id }}" action="/cart/add" method="post"> -->
-        <!-- <input type="hidden" name="id" class="" value="{{ product.selected_or_first_available_variant.id }}"> -->
+      <form id="product-form-{{ product.id }}" action="/cart/add" method="post">
+        <input type="hidden" name="id" class="" value="{{ product.selected_or_first_available_variant.id }}">
         {%- liquid
            if template contains 'preorder'
              assign add_to_cart_text = 'products.preorder' | t
@@ -59,8 +57,7 @@
         -%}
         <input type="submit" class="btn btn__link btn__primary" value="{% if product.selected_or_first_available_variant.available %}{{ add_to_cart_text }}{%- else -%}{{ 'products.sold_out' | t }}{%- endif -%}">
         <div class="loader__spinner hidden"></div>
-      <!-- </form> -->
+      </form>
     </div>
   </div>
-  </form>
 </div>
