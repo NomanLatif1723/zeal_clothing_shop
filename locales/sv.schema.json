@@ -375,6 +375,56 @@
         "name": "Kompletterande produkter"
       }
     },
+    "cart-recommendations": {
+      "name": "Kundvagnsrekommendationer",
+      "settings": {
+        "show_dynamic_recommendation": {
+          "info": "Dynamiska rekommendationer använder order- och produktinformation för att ändra och förbättra över tiden. "
+        },
+        "heading": {
+          "label": "Rubrik"
+        },
+        "products_to_show": {
+          "label": "Produkter att visa"
+        },
+        "products_per_row": {
+          "label": "Produkter per rad"
+        },
+        "header_alignment": {
+          "label": "Inriktning",
+          "alignment": {
+            "label": "Textjustering",
+            "options": {
+              "left": {
+                "label": "Vänster"
+              },
+              "center": {
+                "label": "Centrum"
+              },
+              "right": {
+                "label": "Höger"
+              }
+            }
+          }
+        },
+        "lazyload_images": {
+          "label": "Aktivera LazyLoad Images",
+          "info": "Aktivera Lazyload om bilder är utanför skärmen för att förbättra prestanda"
+        },
+        "header_spacing": {
+          "label": "Sektionsavstånd",
+          "top_spacing": {
+            "label": "Avstånd Topp"
+          },
+          "bottom_spacing": {
+            "label": "Avstånd Botten"
+          }
+        }
+      },
+      "presets": {
+        "name": "Kundvagnsrekommendationer"
+      }
+    },
     "collection-banner": {
       "name": "Samling banner",
       "settings": {
@@ -3504,6 +3554,9 @@
         },
         "show_note": {
           "label": "Visa beställningsanmärkning"
+        },
+        "enable_cart_recommendations": {
+          "label": "Aktivera kundvagnsrekommendationer"
         }
       }
     },
