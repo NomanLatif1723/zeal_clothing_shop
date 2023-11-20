@@ -3554,6 +3554,9 @@
         },
         "show_note": {
           "label": "إظهار مذكرة الطلب"
+        },
+        "enable_cart_recommendations": {
+          "label": "تمكين توصيات سلة التسوق"
         }
       }
     },
