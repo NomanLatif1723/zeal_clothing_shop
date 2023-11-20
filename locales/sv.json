@@ -309,7 +309,8 @@
       "send_on": "Skicka vidare (valfritt)",
       "checkbox_label": "Jag vill skicka detta som en gåva",
       "email_error_mesage": "E-post kan inte vara tomt",
-      "date_error_message": "Välj ett giltigt datum inom de närmaste 90 dagarna."
+      "date_error_message": "Välj ett giltigt datum inom de närmaste 90 dagarna.",
+      "message_max_characters": "M200 tecken Max"
     }
   },
   "pickup_availability": {
