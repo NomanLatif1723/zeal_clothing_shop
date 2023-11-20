@@ -50,7 +50,7 @@
               {{ media | external_video_url: autoplay: true, loop: loop | external_video_tag: class: video_class, loading: "lazy", class: "product-media__video" }}
             {%- endif -%}
           {%- elsif media.media_type == 'model' -%}
-            <model-viewer class="product__media-model">
+            <product-model class="product__media-model">
               {%- if first_3d_model -%}
                 <button
                   aria-label="View In Space"
@@ -64,7 +64,7 @@
                 </button>
               {%- endif -%}
               {{ media | media_tag: image_size: "2048", toggleable: true, data-media-id: media.id }}
-                </model-viewer>
+            </product-model>
           {%- else -%}
             <div class="product__image" data-media-id="{{ media.id }}">
               {{ media | media_tag }}
