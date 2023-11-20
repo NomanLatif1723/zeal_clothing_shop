@@ -375,6 +375,56 @@
         "name": "Täydentävät tuotteet"
       }
     },
+    "cart-recommendations": {
+      "name": "Ostoskorisuositukset",
+      "settings": {
+        "show_dynamic_recommendation": {
+          "info": "Dynaamiset suositukset käyttävät tilaus- ja tuotetietoja muuttuakseen ja parantaakseen ajan myötä. "
+        },
+        "heading": {
+          "label": "Otsikko"
+        },
+        "products_to_show": {
+          "label": "Tuotteet näytettäväksi"
+        },
+        "products_per_row": {
+          "label": "Tuotteet per rivi"
+        },
+        "header_alignment": {
+          "label": "Tasaus",
+          "alignment": {
+            "label": "Tekstin tasaus",
+            "options": {
+              "left": {
+                "label": "Vasen"
+              },
+              "center": {
+                "label": "Keskusta"
+              },
+              "right": {
+                "label": "Oikein"
+              }
+            }
+          }
+        },
+        "lazyload_images": {
+          "label": "Ota LazyLoad Images käyttöön",
+          "info": "Paranna suorituskykyä ottamalla Lazyload käyttöön, jos kuvat ovat näytön ulkopuolella"
+        },
+        "header_spacing": {
+          "label": "Osavälit",
+          "top_spacing": {
+            "label": "Välilyönti Top"
+          },
+          "bottom_spacing": {
+            "label": "Pohjaväli"
+          }
+        }
+      },
+      "presets": {
+        "name": "Ostoskorisuositukset"
+      }
+    },
     "collection-banner": {
       "name": "Kokoelman banneri",
       "settings": {
@@ -3504,6 +3554,9 @@
         },
         "show_note": {
           "label": "Näytä tilaushuomautus"
+        },
+        "enable_cart_recommendations": {
+          "label": "Ota ostoskorisuositukset käyttöön"
         }
       }
     },
