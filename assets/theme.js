@@ -1926,7 +1926,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Product Form Add To Cart Ajax
 function initProductForm() {
   let selectors = {
-    productForm: document.querySelectorAll('form[action="/cart/add"]'),
+    productForm: document.querySelectorAll(`form[action="${window.themeContent.routes.cartAddedUrl}"]`),
     cartDrawer: document.querySelector('[data-cart-modal]'),
     cartHeaderButton: document.querySelector('.icon__cart'),
     closeDrawerBtn: document.querySelector('.cart-icon__close'),
@@ -1950,7 +1950,6 @@ function initProductForm() {
       });
     });
   }
-  console.log(window.themeContent.routes.cartAddedUrl);
   // Fetch The Cart Type Rather Page, Drawer or Popup
   const cartType = window.themeContent.settings.cartType;
   if (!selectors.cartHeaderButton) {
