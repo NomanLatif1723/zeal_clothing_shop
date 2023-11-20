@@ -8,7 +8,7 @@
   Usage:
   {% render 'gift-card-recipient-form', product: product, form: form, section: section %}
 {% endcomment %}
-
+<form action="/cart/add" method="post" enctype="multipart/form-data">
 <recipient-form data-section-id="{{ section.id }}" data-product-variant-id="{{ product.selected_or_first_available_variant.id }}">
   <div class="recipient__button">
     <input type="checkbox" id="recipient_gift_card-{{ section.id }}" />
@@ -37,3 +37,5 @@
     </div>
   </div>
 </recipient-form>
+  <button type="submit">Add to Cart</button>
+</form>
