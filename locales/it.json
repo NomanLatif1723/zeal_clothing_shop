@@ -307,7 +307,9 @@
       "name": "Nome (facoltativo)",
       "message": "Messaggio (facoltativo)",
       "send_on": "Invia (facoltativo)",
-      "checkbox_label": "Voglio inviarlo come regalo"
+      "checkbox_label": "Voglio inviarlo come regalo",
+      "email_error_mesage": "L'e-mail non può essere vuota",
+      "date_error_message": "Seleziona una data valida entro i prossimi 90 giorni."
     }
   },
   "pickup_availability": {
