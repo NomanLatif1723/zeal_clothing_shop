@@ -10,7 +10,7 @@
     <div class="product__sticky-form product-grid" data-product-handle="{{ product.handle }}">
       <div class="product__sticky-form--content">
         <div class="product__sticky-form--images">
-          <img class="product__sticky-image" src="{{ featured_image | product_img_url: "60x" }}" width="60" height="60" loading="lazy" />
+          <img class="product__sticky-image{% if product.gift_card? %} gift_card-product--image{% endif %}" src="{{ featured_image | product_img_url: "60x" }}" width="60" height="60" loading="lazy" />
         </div>
         <div class="product__sticky-form--price">
           <div class="sticky-product__title">
