@@ -375,6 +375,56 @@
         "name": "Complementary Products"
       }
     },
+    "cart-recommendations": {
+      "name": "Recommandations de panier",
+      "settings": {
+        "show_dynamic_recommendation": {
+          "info": "Les recommandations dynamiques utilisent les informations sur les commandes et les produits pour changer et s'améliorer au fil du temps. [Learn more](https:\/\/help.shopify.com\/en\/themes\/development\/recommended-products)"
+        },
+        "heading": {
+          "label": "Titre"
+        },
+        "products_to_show": {
+          "label": "Produits à afficher"
+        },
+        "products_per_row": {
+          "label": "Produits par rangée"
+        },
+        "header_alignment": {
+          "label": "Alignement",
+          "alignment": {
+            "label": "Alignement du texte",
+            "options": {
+              "left": {
+                "label": "Gauche"
+              },
+              "center": {
+                "label": "Center"
+              },
+              "right": {
+                "label": "Droit"
+              }
+            }
+          }
+        },
+        "lazyload_images": {
+          "label": "Activer les images LazyLoad",
+          "info": "Activer Lazyload si les images sont hors écran pour améliorer les performances"
+        },
+        "header_spacing": {
+          "label": "Espacement des sections",
+          "top_spacing": {
+            "label": "Espacement supérieur"
+          },
+          "bottom_spacing": {
+            "label": "Espacement inférieur"
+          }
+        }
+      },
+      "presets": {
+        "name": "Recommandations de panier"
+      }
+    },
     "collection-banner": {
       "name": "Bannière de collecte",
       "settings": {
@@ -3507,6 +3557,9 @@
         },
         "show_note": {
           "label": "Afficher la note de commande"
+        },
+        "enable_cart_recommendations": {
+          "label": "Activer les recommandations de panier"
         }
       }
     },
