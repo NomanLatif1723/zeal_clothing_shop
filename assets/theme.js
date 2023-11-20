@@ -2006,7 +2006,7 @@ function initProductForm() {
           span.classList.add('hidden');
         }
         if (isGiftCartProduct && isGift) {
-          const 
+          console.log('hello there ')
         } else {
           // Submit Form Ajax
           await submitProductForm(form);
