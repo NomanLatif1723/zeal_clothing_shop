@@ -307,7 +307,9 @@
       "name": "Jméno (volitelné)",
       "message": "Zpráva (volitelné)",
       "send_on": "Odeslat (volitelné)",
-      "checkbox_label": "Chci to poslat jako dárek"
+      "checkbox_label": "Chci to poslat jako dárek",
+      "email_error_mesage": "Email nemůže být prázdný",
+      "date_error_message": "Vyberte prosím platné datum během následujících 90 dnů."
     }
   },
   "pickup_availability": {
