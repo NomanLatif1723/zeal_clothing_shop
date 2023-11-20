@@ -307,7 +307,9 @@
       "name": "Nimi (valinnainen)",
       "message": "Viesti (valinnainen)",
       "send_on": "Lähetä (valinnainen)",
-      "checkbox_label": "Haluan lähettää tämän lahjaksi"
+      "checkbox_label": "Haluan lähettää tämän lahjaksi",
+      "email_error_mesage": "Sähköposti ei voi olla tyhjä",
+      "date_error_message": "Valitse kelvollinen päivämäärä seuraavien 90 päivän sisällä."
     }
   },
   "pickup_availability": {
