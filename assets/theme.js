@@ -1999,6 +1999,7 @@ function initProductForm() {
       const recipientMessage = form.querySelector(`#recipient-message-${form.dataset.sectionId}`);
       const recipientDate = form.querySelector(`#recipient-date-${form.dataset.sectionId}`);
       const errorMessage = form.querySelector('.recipient-form__error--message');
+      const pattern = /\d{4}-\d{2}-\d{2}/;
 
       if (cartType === 'drawer' || cartType === 'popup') {
         event.preventDefault();
