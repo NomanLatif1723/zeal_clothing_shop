@@ -14,6 +14,9 @@
     <label for="recipient_gift_card-{{ section.id }}">{{ 'products.recipient.checkbox_label' | t }}</label>
   </div>
   <div class="recipient-form__container hidden">
+    <div class="recipient-form__error--message errors">
+      Email Can't be blank
+    </div>
     <div class="form__group">
       <label for="recipient-email-{{ section.id }}" class="form__label visually__hidden">{{ 'products.recipient.email' | t }}</label>
       <input type="email" id="recipient-email-{{ section.id }}" name="properties[Recipient Email]" placeholder="{{ 'products.recipient.email' | t }}"
