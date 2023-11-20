@@ -375,6 +375,56 @@
         "name": "Supplerende produkter"
       }
     },
+    "cart-recommendations": {
+      "name": "Anbefalet indkøbskurv",
+      "settings": {
+        "show_dynamic_recommendation": {
+          "info": "Dynamiske anbefalinger bruger ordre- og produktinformation til at ændre og forbedre over tid. "
+        },
+        "heading": {
+          "label": "Overskrift"
+        },
+        "products_to_show": {
+          "label": "Produkter at vise"
+        },
+        "products_per_row": {
+          "label": "Produkter pr. række"
+        },
+        "header_alignment": {
+          "label": "Justering",
+          "alignment": {
+            "label": "Tekstjustering",
+            "options": {
+              "left": {
+                "label": "Venstre"
+              },
+              "center": {
+                "label": "Centrum"
+              },
+              "right": {
+                "label": "Højre"
+              }
+            }
+          }
+        },
+        "lazyload_images": {
+          "label": "Aktiver LazyLoad Images",
+          "info": "Aktiver Lazyload, hvis billeder er offscreen for at forbedre ydeevnen"
+        },
+        "header_spacing": {
+          "label": "Sektionsafstand",
+          "top_spacing": {
+            "label": "Afstand Top"
+          },
+          "bottom_spacing": {
+            "label": "Mellemrum bund"
+          }
+        }
+      },
+      "presets": {
+        "name": "Anbefalet indkøbskurv"
+      }
+    },
     "collection-banner": {
       "name": "Samling banner",
       "settings": {
@@ -3504,6 +3554,9 @@
         },
         "show_note": {
           "label": "Vis ordrebemærkning"
+        },
+        "enable_cart_recommendations": {
+          "label": "Aktiver indkøbskurvsanbefalinger"
         }
       }
     },
