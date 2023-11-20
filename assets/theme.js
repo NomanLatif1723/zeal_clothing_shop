@@ -1998,7 +1998,8 @@ function initProductForm() {
       const recipientName = form.querySelector(`#recipient-name-${form.dataset.sectionId}`);
       const recipientMessage = form.querySelector(`#recipient-message-${form.dataset.sectionId}`);
       const recipientDate = form.querySelector(`#recipient-date-${form.dataset.sectionId}`);
-      const errorMessage = form.querySelector('.recipient-form__error--message');
+      const errorMessageEmail = form.querySelector('.recipient-form__error--email');
+      const errorMessageDate = form.querySelector('.recipient-form__error--date');
 
       if (cartType === 'drawer' || cartType === 'popup') {
         event.preventDefault();
@@ -2011,7 +2012,7 @@ function initProductForm() {
           const currentDate = new Date();
           const maxDate = new Date(currentDate.getTime() + (90 * 24 * 60 * 60 * 1000));          
           if (!recipientEmail.value) {
-            errorMessage.classList.remove('hidden');
+            errorMessageEmail.classList.remove('hidden');
             if (span && loader) {
               loader.classList.add('hidden');
               span.classList.remove('hidden');
@@ -2019,7 +2020,11 @@ function initProductForm() {
             return;
           }
           if (isNaN(selectedDate.getTime()) || selectedDate > maxDate) {
-            alert('Please select a valid date within the next 90 days.');
+           errorMessageDate.classList.remove('hidden');
+            if (span && loader) {
+              loader.classList.add('hidden');
+              span.classList.remove('hidden');
+            }
             return; 
           }
           errorMessage.classList.add('hidden');
