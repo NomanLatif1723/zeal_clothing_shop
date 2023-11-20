@@ -375,6 +375,56 @@
         "name": "Produkty uzupełniające"
       }
     },
+    "cart-recommendations": {
+      "name": "Zalecenia dotyczące koszyka",
+      "settings": {
+        "show_dynamic_recommendation": {
+          "info": "Rekomendacje dynamiczne korzystają z informacji o zamówieniach i produktach, aby z biegiem czasu zmieniać się i ulepszać. "
+        },
+        "heading": {
+          "label": "Nagłówek"
+        },
+        "products_to_show": {
+          "label": "Produkty do pokazania"
+        },
+        "products_per_row": {
+          "label": "Produkty w rzędzie"
+        },
+        "header_alignment": {
+          "label": "Wyrównanie",
+          "alignment": {
+            "label": "Wyrównanie tekstu",
+            "options": {
+              "left": {
+                "label": "Lewy"
+              },
+              "center": {
+                "label": "Centrum"
+              },
+              "right": {
+                "label": "Prawidłowy"
+              }
+            }
+          }
+        },
+        "lazyload_images": {
+          "label": "Włącz obrazy LazyLoad",
+          "info": "Włącz funkcję Lazyload, jeśli obrazy znajdują się poza ekranem, aby poprawić wydajność"
+        },
+        "header_spacing": {
+          "label": "Rozstaw sekcji",
+          "top_spacing": {
+            "label": "Rozstaw górny"
+          },
+          "bottom_spacing": {
+            "label": "Rozstaw na dole"
+          }
+        }
+      },
+      "presets": {
+        "name": "Zalecenia dotyczące koszyka"
+      }
+    },
     "collection-banner": {
       "name": "Kolekcja banerów",
       "settings": {
@@ -3504,6 +3554,9 @@
         },
         "show_note": {
           "label": "Pokaż notatkę o zamówieniu"
+        },
+        "enable_cart_recommendations": {
+          "label": "Włącz rekomendacje koszyka"
         }
       }
     },
