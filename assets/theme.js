@@ -2015,6 +2015,21 @@ function initProductForm() {
             }
             return;
           }
+          if(!recipientName.value) {
+            recipientName.disabled = true;
+          } else {
+            recipientName.disabled = false;
+          }
+          if(!recipientMessage.value) {
+            recipientMessage.disabled = true;
+          } else {
+            recipientMessage.disabled = false;
+          }
+          if(!recipientDate.value) {
+            recipientDate.disabled = true;
+          } else {
+            recipientDate.disabled = false;
+          }
           errorMessage.classList.add('hidden');
           // Submit Form Ajax
           await submitProductForm(form);
