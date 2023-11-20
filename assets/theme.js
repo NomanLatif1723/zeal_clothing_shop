@@ -1938,8 +1938,8 @@ function initProductForm() {
     formValidationErrorMessage: document.querySelector('.product-form__errors'),
     giftCardRecipientButton: document.querySelector('.recipient__button input')
   };
-
-  console.log(window.themeContent.settings.giftCartProduct);
+  const isGiftCartProduct = window.themeContent.settings.giftCartProduct;
+  console.log(isGiftCartProduct);
   if(selectors.giftCardRecipientButton){
     selectors.giftCardRecipientButton.addEventListener('change', () => {
       document.querySelector('.recipient-form__container').classList.toggle('hidden');
