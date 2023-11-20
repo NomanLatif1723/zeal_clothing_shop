@@ -54,7 +54,8 @@
           home: {{ routes.root_url | json }},
           productUrl: {{ product.url | json }},
           money_format: {{ shop.money_format | json }},
-          search: {{ routes.search_url | json }}
+          search: {{ routes.search_url | json }},
+          cartAddedUrl: {{ routes.cart_add_url | json }}
         },
         strings: {
           addToCart: "{{ 'products.add_to_cart' | t }}",
