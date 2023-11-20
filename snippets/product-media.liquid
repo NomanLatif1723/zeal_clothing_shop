@@ -64,6 +64,9 @@
                 </button>
               {%- endif -%}
               {{ media | media_tag: image_size: "2048", toggleable: true, data-media-id: media.id }}
+              <button>
+                {% render 'icon-3d-model' %}
+              </button>
             </product-model>
           {%- else -%}
             <div class="product__image" data-media-id="{{ media.id }}">
