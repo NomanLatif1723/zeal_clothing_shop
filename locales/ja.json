@@ -309,7 +309,8 @@
       "send_on": "送信 (オプション)",
       "checkbox_label": "これをギフトとして送りたい",
       "email_error_mesage": "メールアドレスを空白にすることはできません",
-      "date_error_message": "今後 90 日以内の有効な日付を選択してください。"
+      "date_error_message": "今後 90 日以内の有効な日付を選択してください。",
+      "message_max_characters": "最大 200 キャラクタ"
     }
   },
   "pickup_availability": {
