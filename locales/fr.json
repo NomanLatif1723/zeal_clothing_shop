@@ -309,7 +309,8 @@
       "send_on": "Envoyer (optionnel)",
       "checkbox_label": "Je veux l'envoyer en cadeau",
       "email_error_mesage": "L'e-mail ne peut pas être vide",
-      "date_error_message": "Veuillez sélectionner une date valide dans les 90 prochains jours."
+      "date_error_message": "Veuillez sélectionner une date valide dans les 90 prochains jours.",
+      "message_max_characters": "200 caractères maximum"
     }
   },
   "pickup_availability": {
