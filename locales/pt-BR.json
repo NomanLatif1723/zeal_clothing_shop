@@ -307,7 +307,9 @@
       "name": "Nome (opcional)",
       "message": "Mensagem (opcional)",
       "send_on": "Enviar (opcional)",
-      "checkbox_label": "Quero enviar isso como presente"
+      "checkbox_label": "Quero enviar isso como presente",
+      "email_error_mesage": "E-mail não pode ficar em branco",
+      "date_error_message": "Selecione uma data válida nos próximos 90 dias."
     }
   },
   "pickup_availability": {
