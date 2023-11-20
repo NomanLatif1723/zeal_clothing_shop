@@ -90,6 +90,7 @@
         -%}
       </div>
       <div class="product-grid__item {{ product_content_width }} product__content-container">
+        <product-form>
         {%- render 'product-form',
           product: product,
           block: block,
@@ -97,6 +98,7 @@
           show_vendor: settings.show_vendor,
           product_form_id: product_form_id
         -%}
+        </product-form>
       </div>
     </div>
   </div>
