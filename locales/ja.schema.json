@@ -375,6 +375,56 @@
         "name": "補完製品"
       }
     },
+    "cart-recommendations": {
+      "name": "カートの推奨事項",
+      "settings": {
+        "show_dynamic_recommendation": {
+          "info": "動的な推奨事項では、注文と製品の情報を使用して、時間の経過とともに変更および改善します。 "
+        },
+        "heading": {
+          "label": "見出し"
+        },
+        "products_to_show": {
+          "label": "展示する製品"
+        },
+        "products_per_row": {
+          "label": "行ごとの製品"
+        },
+        "header_alignment": {
+          "label": "位置合わせ",
+          "alignment": {
+            "label": "テキストの配置",
+            "options": {
+              "left": {
+                "label": "左"
+              },
+              "center": {
+                "label": "中心"
+              },
+              "right": {
+                "label": "右"
+              }
+            }
+          }
+        },
+        "lazyload_images": {
+          "label": "LazyLoad イメージを有効にする",
+          "info": "画像が画面外にある場合に Lazyload を有効にしてパフォーマンスを向上させる"
+        },
+        "header_spacing": {
+          "label": "セクションの間隔",
+          "top_spacing": {
+            "label": "上部の間隔"
+          },
+          "bottom_spacing": {
+            "label": "下部の間隔"
+          }
+        }
+      },
+      "presets": {
+        "name": "カートの推奨事項"
+      }
+    },
     "collection-banner": {
       "name": "コレクションバナー",
       "settings": {
@@ -3504,6 +3554,9 @@
         },
         "show_note": {
           "label": "注文メモを表示"
+        },
+        "enable_cart_recommendations": {
+          "label": "カートの推奨事項を有効にする"
         }
       }
     },
