@@ -1995,7 +1995,9 @@ function initProductForm() {
       const recipientCheckboxInput = form.querySelector('.recipient__button input');
       if (cartType === 'drawer' || cartType === 'popup') {
         event.preventDefault();
-        if (recipientCheckboxInput.checked) {
+        if (isGiftCartProduct && recipientCheckboxInput.checked) {
+          console.log("hello there ");
+        } else {
           if (span && loader) {
             loader.classList.remove('hidden');
             span.classList.add('hidden');
