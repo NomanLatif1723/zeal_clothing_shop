@@ -15,7 +15,7 @@
   </div>
   <div class="recipient-form__container hidden">
     <div class="recipient-form__error--email hidden errors">
-      Email Can't be blank
+      {{ 'products.recipient.email_error_mesage' | t }}
     </div>
     <div class="form__group">
       <label for="recipient-email-{{ section.id }}" class="form__label visually__hidden">{{ 'products.recipient.email' | t }}</label>
@@ -33,7 +33,7 @@
         maxlength="200" id="recipient-message-{{ section.id }}" aria-label="{{ 'products.recipient.message' | t }}" disabled></textarea>
     </div>
      <div class="recipient-form__error--date hidden errors">
-      Please select a valid date within the next 90 days.
+      {{ 'products.recipient.date_error_message' | t }}
     </div>
     <div class="form__group">
       <label for="recipient-date-{{ section.id }}" class="form__label visually__hidden">{{ 'products.recipient.send_on' | t }}</label>
