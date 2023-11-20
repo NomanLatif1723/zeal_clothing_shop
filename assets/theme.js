@@ -1993,11 +1993,12 @@ function initProductForm() {
       const loader = form.querySelector('.loader__spinner');
       const span = form.querySelector('span');
       const recipientCheckboxInput = form.querySelector('.recipient__button input');
-      const isGift = document.querySelector(`#recipient_gift_card-${form.dataset.sectionId}`).checked;
-      const recipientEmail = document.querySelector(`#recipient-email-${form.dataset.sectionId}`);
-      const recipientName = document.querySelector(`#recipient-name-${form.dataset.sectionId}`);
-      const recipientMessage = document.querySelector(`#recipient-message-${form.dataset.sectionId}`);
-      const recipientDate = document.querySelector(`#recipient-date-${form.dataset.sectionId}`);
+      const isGift = form.querySelector(`#recipient_gift_card-${form.dataset.sectionId}`).checked;
+      const recipientEmail = form.querySelector(`#recipient-email-${form.dataset.sectionId}`);
+      const recipientName = form.querySelector(`#recipient-name-${form.dataset.sectionId}`);
+      const recipientMessage = form.querySelector(`#recipient-message-${form.dataset.sectionId}`);
+      const recipientDate = form.querySelector(`#recipient-date-${form.dataset.sectionId}`);
+      const errorMessage = form.querySelector('.recipient-form__error--message');
 
       if (cartType === 'drawer' || cartType === 'popup') {
         event.preventDefault();
@@ -2007,7 +2008,7 @@ function initProductForm() {
         }
         if (isGiftCartProduct && isGift) {
           if (!recipientEmail.value) {
-            alert('Recipient email and name are required for a gift card!');
+            errorMessage.classList.remove('hidden');
             return;
           }
         } else {
