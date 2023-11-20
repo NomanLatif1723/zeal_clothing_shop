@@ -375,6 +375,56 @@
         "name": "Doplňkové produkty"
       }
     },
+    "cart-recommendations": {
+      "name": "Doporučení košíku",
+      "settings": {
+        "show_dynamic_recommendation": {
+          "info": "Dynamická doporučení využívají informace o objednávkách a produktech ke změnám a zlepšování v průběhu času. "
+        },
+        "heading": {
+          "label": "Nadpis"
+        },
+        "products_to_show": {
+          "label": "Produkty k zobrazení"
+        },
+        "products_per_row": {
+          "label": "Produkty na řádek"
+        },
+        "header_alignment": {
+          "label": "Zarovnání",
+          "alignment": {
+            "label": "Zarovnání textu",
+            "options": {
+              "left": {
+                "label": "Vlevo, odjet"
+              },
+              "center": {
+                "label": "Centrum"
+              },
+              "right": {
+                "label": "Že jo"
+              }
+            }
+          }
+        },
+        "lazyload_images": {
+          "label": "Povolit LazyLoad Images",
+          "info": "Povolte Lazyload, pokud jsou obrázky mimo obrazovku, abyste zlepšili výkon"
+        },
+        "header_spacing": {
+          "label": "Rozteč sekcí",
+          "top_spacing": {
+            "label": "Rozteč nahoře"
+          },
+          "bottom_spacing": {
+            "label": "Mezera dole"
+          }
+        }
+      },
+      "presets": {
+        "name": "Doporučení košíku"
+      }
+    },
     "collection-banner": {
       "name": "Kolekce Banner",
       "settings": {
