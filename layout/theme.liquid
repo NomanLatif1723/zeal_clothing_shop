@@ -40,6 +40,8 @@
     {% endcomment %}
     {%- if template.name == 'product' -%}
       {% assign isgiftCard = product.gift_card? %}
+    {% else %}
+      {% assign isgiftCard = false %}
     {%- endif -%}
     <script>
       window.themeContent = {
