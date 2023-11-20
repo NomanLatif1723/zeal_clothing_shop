@@ -1992,18 +1992,22 @@ function initProductForm() {
     form.addEventListener('submit', async (event) => {
       const loader = form.querySelector('.loader__spinner');
       const span = form.querySelector('span');
+      const recipientCheckboxInput = form.querySelector('.recipient__button input');
       if (cartType === 'drawer' || cartType === 'popup') {
         event.preventDefault();
-        if (span && loader) {
-          loader.classList.remove('hidden');
-          span.classList.add('hidden');
+        if (recipientCheckboxInput.checked) {
+          if (span && loader) {
+            loader.classList.remove('hidden');
+            span.classList.add('hidden');
+          }
+          // Submit Form Ajax
+          await submitProductForm(form);
+          if (span && loader) {
+            loader.classList.add('hidden');
+            span.classList.remove('hidden');
+          }
         }
-        // Submit Form Ajax
-        await submitProductForm(form);
-        if (span && loader) {
-          loader.classList.add('hidden');
-          span.classList.remove('hidden');
-        }
+        
       }
     });
   });
