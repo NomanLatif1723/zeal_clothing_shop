@@ -309,7 +309,8 @@
       "send_on": "Invia (facoltativo)",
       "checkbox_label": "Voglio inviarlo come regalo",
       "email_error_mesage": "L'e-mail non può essere vuota",
-      "date_error_message": "Seleziona una data valida entro i prossimi 90 giorni."
+      "date_error_message": "Seleziona una data valida entro i prossimi 90 giorni.",
+      "message_max_characters": "200 caratteri max"
     }
   },
   "pickup_availability": {
