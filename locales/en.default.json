@@ -308,8 +308,8 @@
       "message": "Message (Optional)",
       "send_on": "Send on (Optional)",
       "checkbox_label": "I Want to send this as a Gift",
-      "email_error_mesage": "Email Can't be Blank",
-      "date_error_message": "Please select a valid date within the next 90 days."
+      "email_error_mesage": "メールアドレスを空白にすることはできません",
+      "date_error_message": "今後 90 日以内の有効な日付を選択してください。"
     }
   },
   "pickup_availability": {
