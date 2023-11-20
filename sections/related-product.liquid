@@ -2,6 +2,11 @@
   assign products_per_row = section.settings.products_per_row
   assign products_to_show = section.settings.products_to_show
   assign product_limit = products_per_row | times: products_to_show
+  if template.name == 'product'
+    assign recommendedProductId = product.id
+  elsif template.name == 'cart'
+    assign recommendedProductId = cart.items.first.product_id
+  endif
 -%}
 {%- style -%}
   .main__section-{{ section.id }} {
@@ -15,11 +20,6 @@
     }
   }
 {%- endstyle -%}
-{% if template.name == 'product' %}
-  {% assign recommendedProductId = product.id %}
-{% elsif template.name == 'cart' %}
-  {% assign recommendedProductId = cart.items.first.product_id %}
-{% endif %}
 <div class="main__section-{{ section.id }}">
   <product-recommendations data-intent="related" data-section-id="{{ section.id }}" data-product-id="{{ recommendedProductId }}" data-limit="{{ products_to_show }}">
     <div class="page__width">
