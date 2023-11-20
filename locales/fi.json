@@ -309,7 +309,8 @@
       "send_on": "Lähetä (valinnainen)",
       "checkbox_label": "Haluan lähettää tämän lahjaksi",
       "email_error_mesage": "Sähköposti ei voi olla tyhjä",
-      "date_error_message": "Valitse kelvollinen päivämäärä seuraavien 90 päivän sisällä."
+      "date_error_message": "Valitse kelvollinen päivämäärä seuraavien 90 päivän sisällä.",
+      "message_max_characters": "200 merkkiä max"
     }
   },
   "pickup_availability": {
