@@ -2015,6 +2015,7 @@ function initProductForm() {
             }
             return;
           }
+          errorMessage.classList.add('hidden');
           // Submit Form Ajax
           await submitProductForm(form);
           if (span && loader) {
