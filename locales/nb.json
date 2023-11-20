@@ -309,7 +309,8 @@
       "send_on": "Send videre (valgfritt)",
       "checkbox_label": "Jeg ønsker å sende dette som gave",
       "email_error_mesage": "E-post kan ikke være tom",
-      "date_error_message": "Velg en gyldig dato innen de neste 90 dagene."
+      "date_error_message": "Velg en gyldig dato innen de neste 90 dagene.",
+      "message_max_characters": "200 tegn Maks"
     }
   },
   "pickup_availability": {
