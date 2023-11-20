@@ -2009,6 +2009,10 @@ function initProductForm() {
         if (isGiftCartProduct && isGift) {
           if (!recipientEmail.value) {
             errorMessage.classList.remove('hidden');
+            if (span && loader) {
+              loader.classList.add('hidden');
+              span.classList.remove('hidden');
+            }
             return;
           }
         } else {
