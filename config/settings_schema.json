@@ -218,6 +218,12 @@
         "id": "show_note",
         "label": "t:schema_settings.cart.settings.show_note.label",
         "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_cart_recommendations",
+        "label": "t:schema_settings.cart.settings.enable_cart_recommendations.label",
+        "default": false
       }
     ]
   },
