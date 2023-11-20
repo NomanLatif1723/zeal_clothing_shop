@@ -2030,7 +2030,8 @@ function initProductForm() {
             }
           }
           
-          errorMessage.classList.add('hidden');
+          errorMessageEmail.classList.add('hidden');
+          errorMessageDate.classList.add('hidden');
           // Submit Form Ajax
           await submitProductForm(form);
           if (span && loader) {
