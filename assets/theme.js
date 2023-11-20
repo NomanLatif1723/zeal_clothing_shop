@@ -2025,7 +2025,7 @@ function initProductForm() {
             recipientMessage.disabled = false;
             recipientDate.disabled = false;
           }
-          if (!pattern.test(recipientDateInput.value)) {
+          if (!pattern.test(recipientDate.value)) {
             alert('Please enter a date in the format YYYY-MM-DD.');
             return; 
           }
