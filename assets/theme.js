@@ -1999,7 +1999,6 @@ function initProductForm() {
       const recipientMessage = form.querySelector(`#recipient-message-${form.dataset.sectionId}`);
       const recipientDate = form.querySelector(`#recipient-date-${form.dataset.sectionId}`);
       const errorMessage = form.querySelector('.recipient-form__error--message');
-      const pattern = /\d{4}-\d{2}-\d{2}/;
 
       if (cartType === 'drawer' || cartType === 'popup') {
         event.preventDefault();
@@ -2016,18 +2015,20 @@ function initProductForm() {
             }
             return;
           }
-          if(!recipientName.value || !recipientMessage.value || !recipientDate.value) {
+          if(!recipientName.value) {
             recipientName.disabled = true;
-            recipientMessage.disabled = true;
-            recipientDate.disabled = true;
           } else {
             recipientName.disabled = false;
-            recipientMessage.disabled = false;
-            recipientDate.disabled = false;
           }
-          if (!pattern.test(recipientDate.value)) {
-            alert('Please enter a date in the format YYYY-MM-DD.');
-            return; 
+          if(!recipientMessage.value) {
+            recipientMessage.disabled = true;
+          } else {
+            recipientMessage.disabled = false;
+          }
+          if(!recipientDate.value) {
+            recipientDate.disabled = true;
+          } else {
+            recipientDate.disabled = false;
           }
           errorMessage.classList.add('hidden');
           // Submit Form Ajax
