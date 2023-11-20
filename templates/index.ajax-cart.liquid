@@ -83,14 +83,16 @@
                 {%- endif -%}
                 {%- unless item.properties == empty -%}
                   {%- for property in item.properties -%}
-                    <div class="cart__item-property">
-                      {{ property.first }}:
-                      {%- if property.last contains '/uploads/' -%}
-                        <a href="{{ property.last }}">{{ property.last | split: '/' | last }}</a>
-                      {%- else -%}
-                        {{ property.last }}
-                      {%- endif -%}
-                    </div>
+                    {%- if property.last != empty -%}
+                      <div class="cart__item-property">
+                        {{ property.first }}:
+                        {%- if property.last contains '/uploads/' -%}
+                          <a href="{{ property.last }}">{{ property.last | split: '/' | last }}</a>
+                        {%- else -%}
+                          {{ property.last }}
+                        {%- endif -%}
+                      </div>
+                    {%- endif -%}
                   {%- endfor -%}
                 {%- endunless -%}
                 <div class="cart-quantity__wrapper">
