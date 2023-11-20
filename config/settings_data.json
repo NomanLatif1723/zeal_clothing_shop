@@ -22,6 +22,7 @@
     "show_terms": true,
     "cart_terms_page": "",
     "show_note": true,
+    "enable_cart_recommendations": true,
     "overlay_style": false,
     "show_first_product": false,
     "collection_image_size": "portrait",
