@@ -2019,7 +2019,7 @@ function initProductForm() {
             }
             return;
           }
-          if (recipientDate.value != empty) {
+          if (recipientDate.value) {
             if (isNaN(selectedDate.getTime()) || selectedDate > maxDate) {
              errorMessageDate.classList.remove('hidden');
               if (span && loader) {
