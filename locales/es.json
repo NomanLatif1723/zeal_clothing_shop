@@ -309,7 +309,8 @@
       "send_on": "Enviar (opcional)",
       "checkbox_label": "Quiero enviar esto como regalo",
       "email_error_mesage": "El correo electrónico no puede estar en blanco",
-      "date_error_message": "Seleccione una fecha válida dentro de los próximos 90 días."
+      "date_error_message": "Seleccione una fecha válida dentro de los próximos 90 días.",
+      "message_max_characters": "200 caracteres máx."
     }
   },
   "pickup_availability": {
