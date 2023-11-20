@@ -375,6 +375,56 @@
         "name": "المنتجات التكميلية"
       }
     },
+    "cart-recommendations": {
+      "name": "توصيات العربة",
+      "settings": {
+        "show_dynamic_recommendation": {
+          "info": "تستخدم التوصيات الديناميكية معلومات الطلب والمنتج للتغيير والتحسين بمرور الوقت. "
+        },
+        "heading": {
+          "label": "عنوان"
+        },
+        "products_to_show": {
+          "label": "المنتجات للعرض"
+        },
+        "products_per_row": {
+          "label": "المنتجات لكل صف"
+        },
+        "header_alignment": {
+          "label": "تنسيق",
+          "alignment": {
+            "label": "محاذاة النص",
+            "options": {
+              "left": {
+                "label": "غادر"
+              },
+              "center": {
+                "label": "مركز"
+              },
+              "right": {
+                "label": "يمين"
+              }
+            }
+          }
+        },
+        "lazyload_images": {
+          "label": "تمكين الصور LazyLoad",
+          "info": "قم بتمكين Lazyload إذا كانت الصور خارج الشاشة لتحسين الأداء"
+        },
+        "header_spacing": {
+          "label": "تباعد القسم",
+          "top_spacing": {
+            "label": "تباعد الأعلى"
+          },
+          "bottom_spacing": {
+            "label": "تباعد القاع"
+          }
+        }
+      },
+      "presets": {
+        "name": "توصيات العربة"
+      }
+    },
     "collection-banner": {
       "name": "راية المجموعة",
       "settings": {
