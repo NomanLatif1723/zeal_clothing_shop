@@ -375,6 +375,56 @@
         "name": "Productos complementarios"
       }
     },
+    "cart-recommendations": {
+      "name": "Recomendaciones de carrito",
+      "settings": {
+        "show_dynamic_recommendation": {
+          "info": "Las recomendaciones dinámicas utilizan información de pedidos y productos para cambiar y mejorar con el tiempo. "
+        },
+        "heading": {
+          "label": "Título"
+        },
+        "products_to_show": {
+          "label": "Productos para mostrar"
+        },
+        "products_per_row": {
+          "label": "Productos por fila"
+        },
+        "header_alignment": {
+          "label": "Alineación",
+          "alignment": {
+            "label": "Alineación del texto",
+            "options": {
+              "left": {
+                "label": "Izquierda"
+              },
+              "center": {
+                "label": "Centro"
+              },
+              "right": {
+                "label": "Bien"
+              }
+            }
+          }
+        },
+        "lazyload_images": {
+          "label": "Habilitar imágenes de carga diferida",
+          "info": "Habilite Lazyload si las imágenes están fuera de la pantalla para mejorar el rendimiento"
+        },
+        "header_spacing": {
+          "label": "Espaciado de secciones",
+          "top_spacing": {
+            "label": "Espaciado superior"
+          },
+          "bottom_spacing": {
+            "label": "Espaciado inferior"
+          }
+        }
+      },
+      "presets": {
+        "name": "Recomendaciones de carrito"
+      }
+    },
     "collection-banner": {
       "name": "Bandera de colección",
       "settings": {
@@ -3504,6 +3554,9 @@
         },
         "show_note": {
           "label": "Mostrar nota de pedido"
+        },
+        "enable_cart_recommendations": {
+          "label": "Habilitar recomendaciones de carrito"
         }
       }
     },
