@@ -2007,6 +2007,9 @@ function initProductForm() {
           span.classList.add('hidden');
         }
         if (isGiftCartProduct && isGift) {
+          const selectedDate = new Date(recipientDate.value);
+          const currentDate = new Date();
+          const maxDate = new Date(currentDate.getTime() + (90 * 24 * 60 * 60 * 1000));          
           if (!recipientEmail.value) {
             errorMessage.classList.remove('hidden');
             if (span && loader) {
@@ -2014,6 +2017,10 @@ function initProductForm() {
               span.classList.remove('hidden');
             }
             return;
+          }
+          if (isNaN(selectedDate.getTime()) || selectedDate > maxDate) {
+            alert('Please select a valid date within the next 90 days.');
+            return; 
           }
           errorMessage.classList.add('hidden');
           // Submit Form Ajax
