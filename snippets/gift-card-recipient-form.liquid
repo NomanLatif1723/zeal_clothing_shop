@@ -458,12 +458,12 @@
       onChange() {
         if (this.checkboxInput.checked) {
           this.enableInputFields();
-          this.recipientFieldsLiveRegion.innerText = window.accessibilityStrings.recipientFormExpanded;
+          this.recipientFieldsLiveRegion.innerText = "expanded";
         } else {
           this.clearInputFields();
           this.disableInputFields();
           this.clearErrorMessage();
-          this.recipientFieldsLiveRegion.innerText = window.accessibilityStrings.recipientFormCollapsed;
+          this.recipientFieldsLiveRegion.innerText = "collapsed";
         }
       }
 
