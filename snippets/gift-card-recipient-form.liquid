@@ -31,8 +31,9 @@
       <label for="recipient-message-{{ section.id }}" class="form__label visually__hidden">{{ 'products.recipient.message' | t }}</label>
       <textarea class="form__input" rows="5" name="properties[Message]" placeholder="{{ 'products.recipient.message' | t }}" 
         maxlength="200" id="recipient-message-{{ section.id }}" aria-label="{{ 'products.recipient.message' | t }}" disabled></textarea>
+      <span>200 Charaters Max</span>
     </div>
-    <span>200 Charaters Max</span>
+    
      <div class="recipient-form__error--date hidden errors">
       {{ 'products.recipient.date_error_message' | t }}
     </div>
