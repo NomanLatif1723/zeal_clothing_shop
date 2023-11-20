@@ -309,7 +309,8 @@
       "send_on": "Wyślij dalej (opcjonalnie)",
       "checkbox_label": "Chcę to wysłać jako prezent",
       "email_error_mesage": "Adres e-mail nie może być pusty",
-      "date_error_message": "Wybierz prawidłową datę w ciągu najbliższych 90 dni."
+      "date_error_message": "Wybierz prawidłową datę w ciągu najbliższych 90 dni.",
+      "message_max_characters": "Maks. 200 znaków"
     }
   },
   "pickup_availability": {
