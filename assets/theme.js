@@ -1161,9 +1161,9 @@ function initFilterFacetForm() {
     });
   });
 }
-document.addEventListener("DOMContentLoaded", function() {
+// document.addEventListener("DOMContentLoaded", function() {
   initFilterFacetForm();
-});
+// });
 
 // Predictive Search 
 class PredictiveSearch extends HTMLElement {
