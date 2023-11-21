@@ -2058,7 +2058,7 @@ function initProductForm() {
   });
 
   selectors.upsellCartItem.forEach(item => {
-    if(!item) return;
+    // if(!item) return;
     const upsellBtnAdd = item.querySelector('[data-upsell-cart]');
     upsellBtnAdd.addEventListener('click', () => {
       // const variantId = upsellBtnAdd.dataset.variantId;
