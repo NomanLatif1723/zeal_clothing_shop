@@ -2141,9 +2141,9 @@ function initProductForm() {
     }
   }
 }
-document.addEventListener("DOMContentLoaded", function() {
+// document.addEventListener("DOMContentLoaded", function() {
   initProductForm();
-});
+// });
 
 
 // Sticky Add To Cart Function 
