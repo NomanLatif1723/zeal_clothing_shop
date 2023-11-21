@@ -1995,22 +1995,14 @@ function initProductForm() {
       const span = form.querySelector('span');
       if (cartType === 'drawer' || cartType === 'popup') {
         event.preventDefault();
+        if (span && loader) {
+          loader.classList.remove('hidden');
+          span.classList.add('hidden');
+        }
         if (isGiftCartProduct) {
-          if (span && loader) {
-            loader.classList.remove('hidden');
-            span.classList.add('hidden');
-          }
           // Submit Form Ajax
           await giftCardSubmitForm(form);
-          if (span && loader) {
-            loader.classList.add('hidden');
-            span.classList.remove('hidden');
-          }
         } else {
-          if (span && loader) {
-            loader.classList.remove('hidden');
-            span.classList.add('hidden');
-          }
           // Submit Form Ajax
           await submitProductForm(form);
           if (span && loader) {
