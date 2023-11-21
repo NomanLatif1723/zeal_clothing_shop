@@ -2046,12 +2046,16 @@ function initProductForm() {
             // }
           }
         } else {
+          if (span && loader) {
+            loader.classList.remove('hidden');
+            span.classList.add('hidden');
+          }
           // Submit Form Ajax
           await submitProductForm(form);
-          // if (span && loader) {
-          //   loader.classList.remove('hidden');
-          //   span.classList.add('hidden');
-          // }
+          if (span && loader) {
+            loader.classList.remove('hidden');
+            span.classList.add('hidden');
+          }
         }
       }
     });
