@@ -1995,7 +1995,7 @@ function initProductForm() {
       const span = form.querySelector('span');
       if (cartType === 'drawer' || cartType === 'popup') {
         event.preventDefault();
-        
+        showLoader(loader,span);
         if (isGiftCartProduct) {
           const isGift = form.querySelector(`#recipient_gift_card-${form.dataset.sectionId}`).checked;
           const recipientEmail = form.querySelector(`#recipient-email-${form.dataset.sectionId}`);
@@ -2008,7 +2008,6 @@ function initProductForm() {
             const selectedDate = new Date(recipientDate.value);
             const currentDate = new Date();
             const maxDate = new Date(currentDate.getTime() + (90 * 24 * 60 * 60 * 1000));
-            showLoader(loader,span);
             if (!recipientEmail.value) {
               errorMessageEmail.classList.remove('hidden');
               hideLoader(loader,span);
@@ -2027,13 +2026,11 @@ function initProductForm() {
             await submitProductForm(form);
             hideLoader(loader,span);
           } else {
-            showLoader(loader, span);
             // Submit Form Ajax
             await submitProductForm(form);
             hideLoader(loader,span);
           }
         } else {
-          showLoader(loader,span);
           // Submit Form Ajax
           await submitProductForm(form);
           hideLoader(loader,span);
