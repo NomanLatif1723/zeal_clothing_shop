@@ -2002,6 +2002,10 @@ function initProductForm() {
           }
           // Submit Form Ajax
           await giftCardSubmitForm(form);
+          if (span && loader) {
+            loader.classList.add('hidden');
+            span.classList.remove('hidden');
+          }
         } else {
           if (span && loader) {
             loader.classList.remove('hidden');
