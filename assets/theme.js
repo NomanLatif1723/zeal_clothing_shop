@@ -2000,6 +2000,7 @@ function initProductForm() {
           span.classList.add('hidden');
         }
         if (isGiftCartProduct) {
+          console.log(isGiftCartProduct);
           const isGift = form.querySelector(`#recipient_gift_card-${form.dataset.sectionId}`).checked;
           const recipientEmail = form.querySelector(`#recipient-email-${form.dataset.sectionId}`);
           const recipientName = form.querySelector(`#recipient-name-${form.dataset.sectionId}`);
