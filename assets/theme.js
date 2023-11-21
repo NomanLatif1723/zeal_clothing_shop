@@ -2048,7 +2048,7 @@ function initProductForm() {
       const span = item.querySelector('[data-upsell-cart] span');
       upsellBtnAdd.addEventListener('click', (event) => {
         const variantId = event.target.dataset.variantId;
-        console.log('hy there', variantId);
+        showLoader(loader,span);
       });
     }
   });
