@@ -1938,7 +1938,7 @@ function initProductForm() {
     cartDrawerContent: document.querySelector("[data-cart]"),
     formValidationErrorMessage: document.querySelector('.product-form__errors'),
     giftCardRecipientButton: document.querySelector('.recipient__button input'),
-    upsellAddCartBtn: document.querySelectorAll('[data-upsell-cart]')
+    upsellCartItem: document.querySelectorAll('.cart__recommendations-item')
   };
   const isGiftCartProduct = window.themeContent.settings.giftCartProduct;
   if(selectors.giftCardRecipientButton){
@@ -2057,12 +2057,14 @@ function initProductForm() {
     });
   });
 
-  // selectors.upsellAddCartBtn.forEach(button => {
-  //   if(!button) return;
-  //   button.addEventListener('click', () => {
-  //     console.log("button clicked");
-  //   });
-  // });
+  selectors.upsellCartItem.forEach(item => {
+    if(!item) return;
+    const upsellBtnAdd = item.querySelector('[data-upsell-cart]');
+    console.log(upsellBtnAdd);
+    // button.addEventListener('click', () => {
+    //   console.log("button clicked");
+    // });
+  });
 
   async function submitProductForm(form) {
     
