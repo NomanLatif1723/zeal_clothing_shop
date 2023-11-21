@@ -996,28 +996,32 @@ function reInitEventListeners() {
   });
 
   // Filter/Sort Button Click Event For Opening Filter Drawer
-  if (!selectors.filterSortBtn) return;
-  selectors.filterSortBtn.addEventListener('click', () => {
-    openFilterDrawer();
-  });
+  if (selectors.filterSortBtn) {
+    selectors.filterSortBtn.addEventListener('click', () => {
+      openFilterDrawer();
+    });
+  }
 
   // Close Drawer Button Event For Filters Drawer
-  if (!selectors.filterIconClose) return;
-  selectors.filterIconClose.addEventListener('click', () => {
-    closeFilterDrawer();
-  });
+  if (selectors.filterIconClose) {
+    selectors.filterIconClose.addEventListener('click', () => {
+      closeFilterDrawer();
+    });
+  }
 
   // Click Event On The Background To Close Drawer
-  if (!selectors.filterDrawer) return;
-  selectors.filterDrawer.addEventListener('click', () => {
-    closeFilterDrawer();
-  });
+  if (selectors.filterDrawer) {
+    selectors.filterDrawer.addEventListener('click', () => {
+      closeFilterDrawer();
+    });
+  }
 
   // Stop The Propagtion Event
-  if (!selectors.filterDrawerBox) return;
-  selectors.filterDrawerBox.addEventListener('click', (event) => {
-     event.stopPropagation();
-  });
+  if (selectors.filterDrawerBox) {
+    selectors.filterDrawerBox.addEventListener('click', (event) => {
+       event.stopPropagation();
+    });
+  }
   
   // Open Filter Drawer Function
   function openFilterDrawer() {
