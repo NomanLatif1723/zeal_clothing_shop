@@ -1899,6 +1899,7 @@ function initCartRecommendations() {
 
             if (productRecommendationsElement && productRecommendationsElement.hasChildNodes()) {
               this.innerHTML = productRecommendationsElement.innerHTML;
+              reInitEventListeners();
             } else {
               this.hidden = true;
             }
