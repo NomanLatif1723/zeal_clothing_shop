@@ -909,7 +909,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // Document General Event Listeners
-function initCollectionEventListeners() {
+function reInitEventListeners() {
   let selectors = {
     loader: document.querySelector('.loader'),
     filterDrawer: document.querySelector('.filter-drawer'),
@@ -1036,7 +1036,7 @@ function initCollectionEventListeners() {
   }
 }
 document.addEventListener("DOMContentLoaded", function() {
-  initCollectionEventListeners();
+  reInitEventListeners();
 });
 
 // Collection Sorting Using Ajax
@@ -1075,7 +1075,7 @@ function initCollectionSort() {
       html.innerHTML = data;
       let productData = html.querySelector('.collection-grid').innerHTML;
       selectors.collectionContainer.innerHTML = productData;
-      initCollectionEventListeners();
+      reInitEventListeners();
     })
     .catch(error => console.log('Error', error))
     .finally(() => selectors.loader.classList.add('hidden'));
@@ -1140,7 +1140,7 @@ function initFilterFacetForm() {
           } else {
             window.location.href = `?${queryString.toString()}`;
           }
-          initCollectionEventListeners();
+          reInitEventListeners();
           initCollectionSort();
         }
       })
