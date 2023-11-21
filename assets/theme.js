@@ -2000,7 +2000,8 @@ function initProductForm() {
           span.classList.add('hidden');
         }
         if (isGiftCartProduct) {
-          
+          // Submit Form Ajax
+          await giftCardSubmitForm(form);
         } else {
           // Submit Form Ajax
           await submitProductForm(form);
@@ -2025,7 +2026,7 @@ function initProductForm() {
     }
   });
 
-  async function giftCardSubmitForm() {
+  async function giftCardSubmitForm(form) {
     const isGift = form.querySelector(`#recipient_gift_card-${form.dataset.sectionId}`).checked;
     const recipientEmail = form.querySelector(`#recipient-email-${form.dataset.sectionId}`);
     const recipientName = form.querySelector(`#recipient-name-${form.dataset.sectionId}`);
