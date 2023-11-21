@@ -2126,16 +2126,16 @@ function initProductForm() {
     })
   }
   function showLoader(loader,span) {
-    if (span && loader) {
+    // if (span && loader) {
       loader.classList.remove('hidden');
       span.classList.add('hidden');
-    }
+    // }
   }
   function hideLoader(loader,span) {
-    if (span && loader) {
+    // if (span && loader) {
       loader.classList.add('hidden');
       span.classList.remove('hidden');
-    }
+    // }
   }
 }
 document.addEventListener("DOMContentLoaded", function() {
