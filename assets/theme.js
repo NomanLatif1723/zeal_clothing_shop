@@ -2369,6 +2369,24 @@ function productModalObserve() {
         if (entry.isIntersecting) {
           LibraryLoader.load('shopifyXr', () => {
             console.log('shopifyXr loaded');
+            function setupShopifyXr(){
+              if (!window.ShopifyXR) {
+                document.addEventListener('shopify_xr_initialized', function() {
+                  setupShopifyXr();
+                });
+              }else{
+                window.ShopifyXR.addModels();
+                window.ShopifyXR.setupXRElements();
+              }
+            }
+          
+            window.Shopify.loadFeatures([
+              {
+                name: 'shopify-xr',
+                version: '1.0',
+                onLoad: setupShopifyXr
+              }
+            ]);
           });
           // LibraryLoader.load('modelViewerUi', () => {
           // });
