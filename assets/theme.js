@@ -2058,6 +2058,8 @@ function initProductForm() {
   });
 
   selectors.upsellCartItem.forEach(item => {
+    const key = item.dataset.key;
+    console.log(key);
     // if(!item) return;
     const upsellBtnAdd = item.querySelector('[data-upsell-cart]');
     upsellBtnAdd.addEventListener('click', () => {
