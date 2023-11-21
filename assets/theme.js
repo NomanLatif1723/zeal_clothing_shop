@@ -1140,8 +1140,8 @@ function initFilterFacetForm() {
           } else {
             window.location.href = `?${queryString.toString()}`;
           }
-          reInitEventListeners();
           initCollectionSort();
+          reInitEventListeners();
         }
       })
       .catch(error => console.log('Error', error))
