@@ -1952,6 +1952,15 @@ function initProductForm() {
       });
     });
   }
+
+  selectors.upsellCartItem.forEach(item => {
+    if(!item) return;
+    const upsellBtnAdd = item.querySelector('[data-upsell-cart]');
+    console.log(upsellBtnAdd);
+    // button.addEventListener('click', () => {
+    //   console.log("button clicked");
+    // });
+  });
   // Fetch The Cart Type Rather Page, Drawer or Popup
   const cartType = window.themeContent.settings.cartType;
   if (!selectors.cartHeaderButton) {
