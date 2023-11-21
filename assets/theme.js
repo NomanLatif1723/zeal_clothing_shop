@@ -2360,8 +2360,8 @@ function setupShopifyXr(){
       setupShopifyXr();
     });
   }else{
-    // window.ShopifyXR.addModels();
-    // window.ShopifyXR.setupXRElements();
+    window.ShopifyXR.addModels();
+    window.ShopifyXR.setupXRElements();
   }
 }
 
