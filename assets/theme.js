@@ -1929,7 +1929,6 @@ document.addEventListener("DOMContentLoaded", function () {
   initCartRecommendations();
 });
 
-
 // Product Form Add To Cart Ajax
 function initProductForm() {
   let selectors = {
