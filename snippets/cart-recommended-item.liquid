@@ -53,7 +53,7 @@
            assign add_to_cart_text = 'products.add_to_cart' | t
          endif
       -%}
-      <button type="button" class="btn btn__link btn__primary upsell-add-to-cart" form="{{ product_form_id }}" title="{{ add_to_cart_text }}" data-variant-id="{{ product.selected_or_first_available_variant.id }}">
+      <button type="submit" class="btn btn__link btn__primary" data-upsell-cart form="{{ product_form_id }}" title="{{ add_to_cart_text }}" data-variant-id="{{ product.selected_or_first_available_variant.id }}">
         {% if product.selected_or_first_available_variant.available %}
           {{ add_to_cart_text }}
         {% else %}
