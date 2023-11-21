@@ -1042,9 +1042,9 @@ function reInitEventListeners() {
     selectors.bodyContainer.classList.remove('drawer__opening');
   }
 }
-// document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
   reInitEventListeners();
-// });
+});
 
 // Collection Sorting Using Ajax
 function initCollectionSort() {
@@ -1091,9 +1091,9 @@ function initCollectionSort() {
     history.replaceState(null, null, baseURL);
   }
 }
-// document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
   initCollectionSort();
-// });
+});
 
 // Collection Facets Filters 
 function initFilterFacetForm() {
@@ -1137,8 +1137,7 @@ function initFilterFacetForm() {
         html.innerHTML = data;
         let productData = html.querySelector('.catalog__content').innerHTML;
         document.querySelector('.catalog__content').innerHTML = productData;
-        initCollectionSort();
-        reInitEventListeners();
+        
         // Check if there are no products
         const noProductsMessage = html.querySelector('.empty-products__message');
         if (noProductsMessage) {
@@ -1152,6 +1151,8 @@ function initFilterFacetForm() {
           // initCollectionSort();
           // reInitEventListeners();
         }
+        initCollectionSort();
+        reInitEventListeners();
       })
       .catch(error => console.log('Error', error))
       .finally(() => selectors.loader.classList.add('hidden'));
@@ -1168,9 +1169,9 @@ function initFilterFacetForm() {
     });
   });
 }
-// document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
   initFilterFacetForm();
-// });
+});
 
 // Predictive Search 
 class PredictiveSearch extends HTMLElement {
