@@ -2004,8 +2004,6 @@ function initProductForm() {
           const recipientDate = form.querySelector(`#recipient-date-${form.dataset.sectionId}`);
           const errorMessageEmail = form.querySelector('.recipient-form__error--email');
           const errorMessageDate = form.querySelector('.recipient-form__error--date');
-          const loader = form.querySelector('.loader__spinner');
-          const span = form.querySelector('span');
           if(isGift) {
             const selectedDate = new Date(recipientDate.value);
             const currentDate = new Date();
