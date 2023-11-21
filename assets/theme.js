@@ -941,7 +941,7 @@ function reInitEventListeners() {
   // Change the feature collection images on swatches On Change
   selectors.collectionSwatchesGrid.forEach(grid => {
     const collectionOptionSwatches = grid.querySelectorAll('.color-swatch__item input');
-    collectionOptionSwatches.forEach(selector => {
+    collectionOptionSwatches.forEach(selector => {    
       if(selector) {
         selector.addEventListener('change', async() => {
           let selectedOptions = [];
@@ -955,33 +955,33 @@ function reInitEventListeners() {
             await updateMedia(selectedOptions);
           }
         });
-        async function updateMedia(selectedOptions) {
-          // get the matched variant
-          const prouductHandle = selector.closest('[data-product-handle]').dataset.productHandle;
-          let url = `/products/${prouductHandle}.js`;
-          fetch(url)
-          .then(function(responce) {
-            return responce.json();
-          })
-          .then(function(products) {
-            let matchedVariant = products.variants.find(variant => {
-              return selectedOptions.every(option => variant.options.includes(option));
-            });
-            if (matchedVariant) {
-              // updateMedia(matchedVariant);
-              if (matchedVariant.featured_image) {
-                const selectedImage = selector.closest('[data-product-handle]').querySelector('.product__image');
-                selectedImage.setAttribute('src', matchedVariant.featured_image.src);
-                selectedImage.setAttribute('srcset', matchedVariant.featured_image.src);
-              }
-            }
-          })
-          .catch(function(error) {
-            console.log('Error', error);
+      }
+    async function updateMedia(selectedOptions) {
+        // get the matched variant
+        const prouductHandle = selector.closest('[data-product-handle]').dataset.productHandle;
+        let url = `/products/${prouductHandle}.js`;
+        fetch(url)
+        .then(function(responce) {
+          return responce.json();
+        })
+        .then(function(products) {
+          let matchedVariant = products.variants.find(variant => {
+            return selectedOptions.every(option => variant.options.includes(option));
           });
-        }
-      });
-    }
+          if (matchedVariant) {
+            // updateMedia(matchedVariant);
+            if (matchedVariant.featured_image) {
+              const selectedImage = selector.closest('[data-product-handle]').querySelector('.product__image');
+              selectedImage.setAttribute('src', matchedVariant.featured_image.src);
+              selectedImage.setAttribute('srcset', matchedVariant.featured_image.src);
+            }
+          }
+        })
+        .catch(function(error) {
+          console.log('Error', error);
+        });
+      }
+    });
   });
   
 
