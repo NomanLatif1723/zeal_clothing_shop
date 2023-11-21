@@ -2013,13 +2013,19 @@ function initProductForm() {
             const maxDate = new Date(currentDate.getTime() + (90 * 24 * 60 * 60 * 1000));          
             if (!recipientEmail.value) {
               errorMessageEmail.classList.remove('hidden');
-              hideLoader(loader, span);
+              if (span && loader) {
+                loader.classList.remove('hidden');
+                span.classList.add('hidden');
+              }
               return;
             }
             if (recipientDate.value) {
               if (isNaN(selectedDate.getTime()) || selectedDate > maxDate) {
-               errorMessageDate.classList.remove('hidden');
-                hideLoader(loader, span);
+                errorMessageDate.classList.remove('hidden');
+                if (span && loader) {
+                  loader.classList.remove('hidden');
+                  span.classList.add('hidden');
+                }
                 return; 
               }
             }
@@ -2027,11 +2033,17 @@ function initProductForm() {
             errorMessageDate.classList.add('hidden');
             // Submit Form Ajax
             await submitProductForm(form);
-            hideLoader(loader, span);
+            if (span && loader) {
+              loader.classList.remove('hidden');
+              span.classList.add('hidden');
+            }
           } else {
             // Submit Form Ajax
             await submitProductForm(form);
-            hideLoader(loader, span);
+            if (span && loader) {
+              loader.classList.remove('hidden');
+              span.classList.add('hidden');
+            }
           }
         } else {
           // Submit Form Ajax
