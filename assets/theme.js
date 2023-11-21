@@ -1995,7 +1995,10 @@ function initProductForm() {
       const span = form.querySelector('span');
       if (cartType === 'drawer' || cartType === 'popup') {
         event.preventDefault();
-        showLoader(loader,span);
+        if (span && loader) {
+          loader.classList.remove('hidden');
+          span.classList.add('hidden');
+        }
         if (isGiftCartProduct) {
           const isGift = form.querySelector(`#recipient_gift_card-${form.dataset.sectionId}`).checked;
           const recipientEmail = form.querySelector(`#recipient-email-${form.dataset.sectionId}`);
@@ -2126,10 +2129,10 @@ function initProductForm() {
     })
   }
   function showLoader(loader, span) {
-    // if (span && loader) {
+    if (span && loader) {
       loader.classList.remove('hidden');
       span.classList.add('hidden');
-    // }
+    }
   }
   function hideLoader(loader, span) {
     // if (span && loader) {
