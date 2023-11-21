@@ -2036,7 +2036,10 @@ function initProductForm() {
         } else {
           // Submit Form Ajax
           await submitProductForm(form);
-          hideLoader(loader, span);
+          if (span && loader) {
+            loader.classList.remove('hidden');
+            span.classList.add('hidden');
+          }
         }
       }
     });
@@ -2135,10 +2138,10 @@ function initProductForm() {
     }
   }
   function hideLoader(loader, span) {
-    // if (span && loader) {
+    if (span && loader) {
       loader.classList.remove('hidden');
       span.classList.add('hidden');
-    // }
+    }
   }
 }
 document.addEventListener("DOMContentLoaded", function() {
