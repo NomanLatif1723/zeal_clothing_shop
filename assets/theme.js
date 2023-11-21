@@ -1042,9 +1042,9 @@ function reInitEventListeners() {
     selectors.bodyContainer.classList.remove('drawer__opening');
   }
 }
-document.addEventListener("DOMContentLoaded", function() {
+// document.addEventListener("DOMContentLoaded", function() {
   reInitEventListeners();
-});
+// });
 
 // Collection Sorting Using Ajax
 function initCollectionSort() {
@@ -1091,9 +1091,9 @@ function initCollectionSort() {
     history.replaceState(null, null, baseURL);
   }
 }
-document.addEventListener("DOMContentLoaded", function() {
+// document.addEventListener("DOMContentLoaded", function() {
   initCollectionSort();
-});
+// });
 
 // Collection Facets Filters 
 function initFilterFacetForm() {
@@ -1168,9 +1168,9 @@ function initFilterFacetForm() {
     });
   });
 }
-document.addEventListener("DOMContentLoaded", function() {
+// document.addEventListener("DOMContentLoaded", function() {
   initFilterFacetForm();
-});
+// });
 
 // Predictive Search 
 class PredictiveSearch extends HTMLElement {
