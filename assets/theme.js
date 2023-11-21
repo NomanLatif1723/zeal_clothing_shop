@@ -2058,13 +2058,11 @@ function initProductForm() {
   });
 
   selectors.upsellCartItem.forEach(item => {
-    const key = item.getAttribute('data-key');
-    console.log(key);
-    // if(!item) return;
+    if(!item) return;
     const upsellBtnAdd = item.querySelector('[data-upsell-cart]');
     upsellBtnAdd.addEventListener('click', () => {
-      const variantId = upsellBtnAdd.dataset.variantId;
-      console.log(variantId);
+      // const variantId = upsellBtnAdd.dataset.variantId;
+      console.log('hy there');
     });
   });
 
