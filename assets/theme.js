@@ -2026,6 +2026,7 @@ function initProductForm() {
             await submitProductForm(form);
             hideLoader(loader,span);
           } else {
+            showLoader(loader,span);
             // Submit Form Ajax
             await submitProductForm(form);
             hideLoader(loader,span);
