@@ -2125,13 +2125,13 @@ function initProductForm() {
     })
   }
   function showLoader(loader,span) {
-    if (span && loader) {
+    if (loader && span) {
       loader.classList.remove('hidden');
       span.classList.add('hidden');
     }
   }
   function hideLoader(loader,span) {
-    if (span && loader) {
+    if (loader && span) {
       loader.classList.add('hidden');
       span.classList.remove('hidden');
     }
