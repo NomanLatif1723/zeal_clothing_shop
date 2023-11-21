@@ -2194,6 +2194,18 @@ function initProductForm() {
       
     })
   }
+  function showLoader(loader, span) {
+    if (span && loader) {
+      loader.classList.remove('hidden');
+      span.classList.add('hidden');
+    }
+  }
+  function hideLoader(loader, span) {
+    if (span && loader) {
+      loader.classList.remove('hidden');
+      span.classList.add('hidden');
+    }
+  }
 }
 document.addEventListener("DOMContentLoaded", function() {
   initProductForm();
