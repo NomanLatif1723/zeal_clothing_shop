@@ -2060,7 +2060,6 @@ function initProductForm() {
   selectors.upsellCartItem.forEach(item => {
     // if(!item) return;
     const upsellBtnAdd = item.querySelector('[data-upsell-cart]');
-    console.log(upsellBtnAdd);
     upsellBtnAdd.addEventListener('click', () => {
       console.log("button clicked");
     });
