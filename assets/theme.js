@@ -2372,6 +2372,10 @@ window.Shopify.loadFeatures([
     onLoad: setupShopifyXr
   }
 ]);
+	window.ShopifyXR.launchXR({
+    model3dId: [media-id],
+    title: "{{ product.title | escape }}",
+  });
 // The element observe For 3d Product Modal
 function productModalObserve() {
   const productModel = document.querySelectorAll('product-model');
