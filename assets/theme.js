@@ -2058,12 +2058,13 @@ function initProductForm() {
   });
 
   selectors.upsellCartItem.forEach(item => {
-    // if(!item) return;
-    const upsellBtnAdd = item.querySelector('[data-upsell-cart]');
-    upsellBtnAdd.addEventListener('click', (event) => {
-      const variantId = event.target.dataset.variantId;
-      console.log('hy there', variantId);
-    });
+    if(item){
+      const upsellBtnAdd = item.querySelector('[data-upsell-cart]');
+      upsellBtnAdd.addEventListener('click', (event) => {
+        const variantId = event.target.dataset.variantId;
+        console.log('hy there', variantId);
+      });
+    }
   });
 
   async function submitProductForm(form) {
