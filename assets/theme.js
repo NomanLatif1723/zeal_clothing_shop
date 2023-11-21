@@ -1130,6 +1130,7 @@ function initFilterFacetForm() {
         html.innerHTML = data;
         let productData = html.querySelector('.catalog__content').innerHTML;
         document.querySelector('.catalog__content').innerHTML = productData;
+        reInitEventListeners();
         // Check if there are no products
         const noProductsMessage = html.querySelector('.empty-products__message');
         if (noProductsMessage) {
@@ -1141,7 +1142,7 @@ function initFilterFacetForm() {
             window.location.href = `?${queryString.toString()}`;
           }
           initCollectionSort();
-          reInitEventListeners();
+          // reInitEventListeners();
         }
       })
       .catch(error => console.log('Error', error))
