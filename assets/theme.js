@@ -2140,8 +2140,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   addToCartButtons.forEach(function(button) {
     button.addEventListener('click', function() {
-      var variantId = this.getAttribute('data-variant-id');
-
+      var variantId = button.getAttribute('data-variant-id');
+      console.log(variantId);
       // Make AJAX request to add product to cart
       var xhr = new XMLHttpRequest();
       xhr.open('POST', '/cart/add.js', true);
