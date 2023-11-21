@@ -2045,17 +2045,17 @@ function initProductForm() {
     });
   });
 
-  selectors.upsellCartItem.forEach(item => {
-    if(item){
-      const upsellBtnAdd = item.querySelector('[data-upsell-cart]');
-      const loader = item.querySelector('.loader__spinner');
-      const span = item.querySelector('span');
-      upsellBtnAdd.addEventListener('click', (event) => {
-        const variantId = event.target.dataset.variantId;
-        console.log('hy there', variantId);
-      });
-    }
-  });
+  // selectors.upsellCartItem.forEach(item => {
+  //   if(item){
+  //     const upsellBtnAdd = item.querySelector('[data-upsell-cart]');
+  //     const loader = item.querySelector('.loader__spinner');
+  //     const span = item.querySelector('span');
+  //     upsellBtnAdd.addEventListener('click', (event) => {
+  //       const variantId = event.target.dataset.variantId;
+  //       console.log('hy there', variantId);
+  //     });
+  //   }
+  // });
 
   async function submitProductForm(form) {
     
