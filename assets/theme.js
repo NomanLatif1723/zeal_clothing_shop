@@ -1990,8 +1990,8 @@ function initProductForm() {
       return;
     }
     form.addEventListener('submit', async (event) => {
-      const loader = form.querySelector('.loader__spinner');
-      const span = form.querySelector('span');
+      const loader = form.querySelector('[data-add-to-cart] .loader__spinner');
+      const span = form.querySelector('[data-add-to-cart] span');
       if (cartType === 'drawer' || cartType === 'popup') {
         event.preventDefault();
         showLoader(loader,span);
