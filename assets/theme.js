@@ -1936,7 +1936,8 @@ function initProductForm() {
     cartPopupMessage: document.querySelector('.cart-popup__message'),
     cartDrawerContent: document.querySelector("[data-cart]"),
     formValidationErrorMessage: document.querySelector('.product-form__errors'),
-    giftCardRecipientButton: document.querySelector('.recipient__button input')
+    giftCardRecipientButton: document.querySelector('.recipient__button input'),
+    upsellAddCartBtn: document.querySelectorAll('[data-upsell-cart]')
   };
   const isGiftCartProduct = window.themeContent.settings.giftCartProduct;
   if(selectors.giftCardRecipientButton){
