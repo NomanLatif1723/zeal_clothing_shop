@@ -85,7 +85,6 @@
         {%- for media in product.media -%}
           <div class="swiper-slide product-media-{{ media.id }}">
             <button type="button" class="product__thumbs" title="media thumbs">
-              {% comment %}
               {%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
                 <span class="product__play-icon">
                   {%- render 'icon-play' -%}
@@ -98,7 +97,6 @@
                   </svg>
                 </span>
               {%- endif -%}
-              {% endcomment %}
               <img class="product__image" src="{{ media | img_url: '360x' }}"
                 srcset="
                   {{ media.preview_image | img_url: '120x' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}120{% endif %}w,
