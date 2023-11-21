@@ -2151,8 +2151,8 @@ function initProductForm() {
   }
   function hideLoader(loader, span) {
     if (span && loader) {
-      loader.classList.remove('hidden');
-      span.classList.add('hidden');
+      loader.classList.add('hidden');
+      span.classList.remove('hidden');
     }
   }
 }
