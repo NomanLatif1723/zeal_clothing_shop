@@ -924,17 +924,18 @@ function reInitEventListeners() {
 
   // Show More Swatches on Plus Icon Click 
   selectors.ShowMoreSwatches.forEach(swatch => {
-    if (!swatch) return;
-    swatch.addEventListener('click', () => {
-      let colorSwatchList = event.target.closest('.color-swatch__list');
-      if (colorSwatchList) {
-        let hiddenSwatches = colorSwatchList.querySelector('.hidden__swatches');
-        if (hiddenSwatches) {
-          event.target.classList.add('hide');
-          hiddenSwatches.classList.add('show');
+    if (swatch) {
+      swatch.addEventListener('click', () => {
+        let colorSwatchList = event.target.closest('.color-swatch__list');
+        if (colorSwatchList) {
+          let hiddenSwatches = colorSwatchList.querySelector('.hidden__swatches');
+          if (hiddenSwatches) {
+            event.target.classList.add('hide');
+            hiddenSwatches.classList.add('show');
+          }
         }
-      }
-    });
+      });
+    }
   });
   
   // Change the feature collection images on swatches On Change
