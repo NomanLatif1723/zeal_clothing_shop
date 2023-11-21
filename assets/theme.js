@@ -2007,7 +2007,8 @@ function initProductForm() {
           if(isGift) {
             const selectedDate = new Date(recipientDate.value);
             const currentDate = new Date();
-            const maxDate = new Date(currentDate.getTime() + (90 * 24 * 60 * 60 * 1000));          
+            const maxDate = new Date(currentDate.getTime() + (90 * 24 * 60 * 60 * 1000));
+            showLoader(loader,span);
             if (!recipientEmail.value) {
               errorMessageEmail.classList.remove('hidden');
               hideLoader(loader,span);
