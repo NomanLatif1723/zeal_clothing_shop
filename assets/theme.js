@@ -2056,6 +2056,13 @@ function initProductForm() {
     });
   });
 
+  selectors.upsellAddCartBtn.forEach(button => {
+    if(!button) return;
+    button.addEventListener('click', () => {
+      console.log("button clicked");
+    });
+  });
+
   async function submitProductForm(form) {
     
     await fetch('/cart/add', {
