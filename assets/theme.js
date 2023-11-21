@@ -2361,89 +2361,91 @@ document.addEventListener("DOMContentLoaded", function() {
   initPasswordModal();
 });
 
-class DeferredMedia extends HTMLElement {
-  constructor() {
-    super();
-    const poster = this.querySelector('[id^="Deferred-Poster-"]');
-    if (!poster) return;
-    poster.addEventListener('click', this.loadContent.bind(this));
-  }
+// class DeferredMedia extends HTMLElement {
+//   constructor() {
+//     super();
+//     const poster = this.querySelector('[id^="Deferred-Poster-"]');
+//     if (!poster) return;
+//     poster.addEventListener('click', this.loadContent.bind(this));
+//   }
 
-  loadContent(focus = true) {
-    window.pauseAllMedia();
-    if (!this.getAttribute('loaded')) {
-      const content = document.createElement('div');
-      content.appendChild(this.querySelector('template').content.firstElementChild.cloneNode(true));
+//   loadContent(focus = true) {
+//     window.pauseAllMedia();
+//     if (!this.getAttribute('loaded')) {
+//       const content = document.createElement('div');
+//       content.appendChild(this.querySelector('template').content.firstElementChild.cloneNode(true));
 
-      this.setAttribute('loaded', true);
-      const deferredElement = this.appendChild(content.querySelector('video, model-viewer, iframe'));
-      if (focus) deferredElement.focus();
-      if (deferredElement.nodeName == 'VIDEO' && deferredElement.getAttribute('autoplay')) {
-        // force autoplay for safari
-        deferredElement.play();
-      }
-    }
-  }
-}
-if (!customElements.get('product-model')) {
-  customElements.define(
-    'product-model',
-    class ProductModel extends DeferredMedia {
-      constructor() {
-        super();
-      }
+//       this.setAttribute('loaded', true);
+//       const deferredElement = this.appendChild(content.querySelector('video, model-viewer, iframe'));
+//       if (focus) deferredElement.focus();
+//       if (deferredElement.nodeName == 'VIDEO' && deferredElement.getAttribute('autoplay')) {
+//         // force autoplay for safari
+//         deferredElement.play();
+//       }
+//     }
+//   }
+// }
+// if (!customElements.get('product-model')) {
+//   customElements.define(
+//     'product-model',
+//     class ProductModel extends DeferredMedia {
+//       constructor() {
+//         super();
+//       }
 
-      loadContent() {
-        super.loadContent();
+//       loadContent() {
+//         super.loadContent();
 
-        Shopify.loadFeatures([
-          {
-            name: 'model-viewer-ui',
-            version: '1.0',
-            onLoad: this.setupModelViewerUI.bind(this),
-          },
-        ]);
-      }
+//         Shopify.loadFeatures([
+//           {
+//             name: 'model-viewer-ui',
+//             version: '1.0',
+//             onLoad: this.setupModelViewerUI.bind(this),
+//           },
+//         ]);
+//       }
 
-      setupModelViewerUI(errors) {
-        if (errors) return;
+//       setupModelViewerUI(errors) {
+//         if (errors) return;
 
-        this.modelViewerUI = new Shopify.ModelViewerUI(this.querySelector('model-viewer'));
-      }
-    }
-  );
-}
+//         this.modelViewerUI = new Shopify.ModelViewerUI(this.querySelector('model-viewer'));
+//       }
+//     }
+//   );
+// }
 
-window.ProductModel = {
-  loadShopifyXR() {
-    Shopify.loadFeatures([
-      {
-        name: 'shopify-xr',
-        version: '1.0',
-        onLoad: this.setupShopifyXR.bind(this),
-      },
-    ]);
-  },
+// window.ProductModel = {
+//   loadShopifyXR() {
+//     Shopify.loadFeatures([
+//       {
+//         name: 'shopify-xr',
+//         version: '1.0',
+//         onLoad: this.setupShopifyXR.bind(this),
+//       },
+//     ]);
+//   },
 
-  setupShopifyXR(errors) {
-    if (errors) return;
+//   setupShopifyXR(errors) {
+//     if (errors) return;
 
-    if (!window.ShopifyXR) {
-      document.addEventListener('shopify_xr_initialized', () => this.setupShopifyXR());
-      return;
-    }
+//     if (!window.ShopifyXR) {
+//       document.addEventListener('shopify_xr_initialized', () => this.setupShopifyXR());
+//       return;
+//     }
 
-    document.querySelectorAll('[id^="ProductJSON-"]').forEach((modelJSON) => {
-      window.ShopifyXR.addModels(JSON.parse(modelJSON.textContent));
-      modelJSON.remove();
-    });
-    window.ShopifyXR.setupXRElements();
-  },
-};
+//     document.querySelectorAll('[id^="ProductJSON-"]').forEach((modelJSON) => {
+//       window.ShopifyXR.addModels(JSON.parse(modelJSON.textContent));
+//       modelJSON.remove();
+//     });
+//     window.ShopifyXR.setupXRElements();
+//   },
+// };
 
-window.addEventListener('DOMContentLoaded', () => {
-  if (window.ProductModel) window.ProductModel.loadShopifyXR();
-});  
+// window.addEventListener('DOMContentLoaded', () => {
+//   if (window.ProductModel) window.ProductModel.loadShopifyXR();
+// });  
+
+  
 // The element observe For 3d Product Modal
 function productModalObserve() {
   const productModel = document.querySelectorAll('product-model');
@@ -2458,9 +2460,9 @@ function productModalObserve() {
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          LibraryLoader.load('shopifyXr', () => {
-            console.log('shopifyXr loaded');
-          });
+          // LibraryLoader.load('shopifyXr', () => {
+          //   console.log('shopifyXr loaded');
+          // });
           // LibraryLoader.load('modelViewerUi', () => {
           // });
           // LibraryLoader.load('modelViewerUiStyles', () => {
