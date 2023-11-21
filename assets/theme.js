@@ -2355,13 +2355,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Initiate the xr library for 3d model
 function setupShopifyXr(){
-  if (!ShopifyXR) {
+  if (!window.ShopifyXR) {
     document.addEventListener('shopify_xr_initialized', function() {
       setupShopifyXr();
     });
   }else{
-    ShopifyXR.addModels();
-    ShopifyXR.setupXRElements();
+    window.ShopifyXR.addModels();
+    window.ShopifyXR.setupXRElements();
   }
 }
 // The element observe For 3d Product Modal
@@ -2378,14 +2378,14 @@ function productModalObserve() {
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          Shopify.loadFeatures([
+          window.Shopify.loadFeatures([
             {
               name: 'shopify-xr',
               version: '1.0',
               onLoad: setupShopifyXr
             }
           ]);
-          ShopifyXR.launchXR({
+          window.ShopifyXR.launchXR({
             model3dId: [media-id],
             title: "{{ product.title | escape }}",
           });
