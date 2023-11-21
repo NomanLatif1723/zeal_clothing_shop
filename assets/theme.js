@@ -1995,10 +1995,10 @@ function initProductForm() {
       const span = form.querySelector('span');
       if (cartType === 'drawer' || cartType === 'popup') {
         event.preventDefault();
-        // if (span && loader) {
-        //   loader.classList.remove('hidden');
-        //   span.classList.add('hidden');
-        // }
+        if (span && loader) {
+          loader.classList.remove('hidden');
+          span.classList.add('hidden');
+        }
         if (isGiftCartProduct) {
           const isGift = form.querySelector(`#recipient_gift_card-${form.dataset.sectionId}`).checked;
           const recipientEmail = form.querySelector(`#recipient-email-${form.dataset.sectionId}`);
@@ -2046,15 +2046,11 @@ function initProductForm() {
             // }
           }
         } else {
-          if (span && loader) {
-            loader.classList.remove('hidden');
-            span.classList.add('hidden');
-          }
           // Submit Form Ajax
           await submitProductForm(form);
           if (span && loader) {
-            loader.classList.remove('hidden');
-            span.classList.add('hidden');
+            loader.classList.add('hidden');
+            span.classList.remove('hidden');
           }
         }
       }
