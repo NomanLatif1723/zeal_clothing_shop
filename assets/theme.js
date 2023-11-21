@@ -1995,10 +1995,7 @@ function initProductForm() {
       const span = form.querySelector('span');
       if (cartType === 'drawer' || cartType === 'popup') {
         event.preventDefault();
-        if (span && loader) {
-          loader.classList.remove('hidden');
-          span.classList.add('hidden');
-        }
+        showLoader(loader, span);
         if (isGiftCartProduct) {
           const isGift = form.querySelector(`#recipient_gift_card-${form.dataset.sectionId}`).checked;
           const recipientEmail = form.querySelector(`#recipient-email-${form.dataset.sectionId}`);
@@ -2015,19 +2012,13 @@ function initProductForm() {
             const maxDate = new Date(currentDate.getTime() + (90 * 24 * 60 * 60 * 1000));          
             if (!recipientEmail.value) {
               errorMessageEmail.classList.remove('hidden');
-              if (span && loader) {
-                loader.classList.add('hidden');
-                span.classList.remove('hidden');
-              }
+              hideLoader(loader, span);
               return;
             }
             if (recipientDate.value) {
               if (isNaN(selectedDate.getTime()) || selectedDate > maxDate) {
                errorMessageDate.classList.remove('hidden');
-                if (span && loader) {
-                  loader.classList.add('hidden');
-                  span.classList.remove('hidden');
-                }
+                hideLoader(loader, span);
                 return; 
               }
             }
@@ -2035,25 +2026,16 @@ function initProductForm() {
             errorMessageDate.classList.add('hidden');
             // Submit Form Ajax
             await submitProductForm(form);
-            if (span && loader) {
-              loader.classList.add('hidden');
-              span.classList.remove('hidden');
-            }
+            hideLoader(loader, span);
           } else {
             // Submit Form Ajax
             await submitProductForm(form);
-            if (span && loader) {
-              loader.classList.add('hidden');
-              span.classList.remove('hidden');
-            }
+            hideLoader(loader, span);
           }
         } else {
           // Submit Form Ajax
           await submitProductForm(form);
-          if (span && loader) {
-            loader.classList.add('hidden');
-            span.classList.remove('hidden');
-          }
+          hideLoader(loader, span);
         }
       }
     });
