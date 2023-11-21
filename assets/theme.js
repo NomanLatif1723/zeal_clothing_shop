@@ -2061,9 +2061,9 @@ function initProductForm() {
     // if(!item) return;
     const upsellBtnAdd = item.querySelector('[data-upsell-cart]');
     console.log(upsellBtnAdd);
-    button.addEventListener('click', () => {
-      console.log("button clicked");
-    });
+    // button.addEventListener('click', () => {
+    //   console.log("button clicked");
+    // });
   });
 
   async function submitProductForm(form) {
