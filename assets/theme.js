@@ -2015,18 +2015,18 @@ function initProductForm() {
             if (recipientDate.value) {
               if (isNaN(selectedDate.getTime()) || selectedDate > maxDate) {
                 errorMessageDate.classList.remove('hidden');
-                // if (loader && span) {
-                //   loader.classList.add('hidden');
-                //   span.classList.remove('hidden');
-                // }
+                if (loader && span) {
+                  loader.classList.add('hidden');
+                  span.classList.remove('hidden');
+                }
                 return; 
               }
             }
             errorMessageEmail.classList.add('hidden');
             errorMessageDate.classList.add('hidden');
             // Submit Form Ajax
-            // await submitProductForm(form);
-            // hideLoader(loader,span);
+            await submitProductForm(form);
+            hideLoader(loader,span);
           } else {
             // Submit Form Ajax
             await submitProductForm(form);
