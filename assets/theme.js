@@ -2353,6 +2353,25 @@ document.addEventListener("DOMContentLoaded", function() {
   initPasswordModal();
 });
 
+// Initiate the xr library for 3d model
+function setupShopifyXr(){
+  if (!window.ShopifyXR) {
+    document.addEventListener('shopify_xr_initialized', function() {
+      setupShopifyXr();
+    });
+  }else{
+    window.ShopifyXR.addModels();
+    window.ShopifyXR.setupXRElements();
+  }
+}
+
+window.Shopify.loadFeatures([
+  {
+    name: 'shopify-xr',
+    version: '1.0',
+    onLoad: setupShopifyXr
+  }
+]);
 // The element observe For 3d Product Modal
 function productModalObserve() {
   const productModel = document.querySelectorAll('product-model');
