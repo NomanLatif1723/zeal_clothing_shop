@@ -2002,6 +2002,10 @@ function initProductForm() {
         if (isGiftCartProduct) {
           // Submit Form Ajax
           await giftCardSubmitForm(form);
+          if (span && loader) {
+            loader.classList.add('hidden');
+            span.classList.remove('hidden');
+          }
         } else {
           // Submit Form Ajax
           await submitProductForm(form);
@@ -2042,19 +2046,19 @@ function initProductForm() {
       const maxDate = new Date(currentDate.getTime() + (90 * 24 * 60 * 60 * 1000));          
       if (!recipientEmail.value) {
         errorMessageEmail.classList.remove('hidden');
-        if (span && loader) {
-          loader.classList.add('hidden');
-          span.classList.remove('hidden');
-        }
+        // if (span && loader) {
+        //   loader.classList.add('hidden');
+        //   span.classList.remove('hidden');
+        // }
         return;
       }
       if (recipientDate.value) {
         if (isNaN(selectedDate.getTime()) || selectedDate > maxDate) {
          errorMessageDate.classList.remove('hidden');
-          if (span && loader) {
-            loader.classList.add('hidden');
-            span.classList.remove('hidden');
-          }
+          // if (span && loader) {
+          //   loader.classList.add('hidden');
+          //   span.classList.remove('hidden');
+          // }
           return; 
         }
       }
@@ -2062,17 +2066,17 @@ function initProductForm() {
       errorMessageDate.classList.add('hidden');
       // Submit Form Ajax
       await submitProductForm(form);
-      if (span && loader) {
-        loader.classList.add('hidden');
-        span.classList.remove('hidden');
-      }
+      // if (span && loader) {
+      //   loader.classList.add('hidden');
+      //   span.classList.remove('hidden');
+      // }
     } else {
       // Submit Form Ajax
       await submitProductForm(form);
-      if (span && loader) {
-        loader.classList.add('hidden');
-        span.classList.remove('hidden');
-      }
+      // if (span && loader) {
+      //   loader.classList.add('hidden');
+      //   span.classList.remove('hidden');
+      // }
     }
   }
   async function submitProductForm(form) {
