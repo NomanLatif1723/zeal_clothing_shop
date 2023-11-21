@@ -942,45 +942,46 @@ function reInitEventListeners() {
   selectors.collectionSwatchesGrid.forEach(grid => {
     const collectionOptionSwatches = grid.querySelectorAll('.color-swatch__item input');
     collectionOptionSwatches.forEach(selector => {
-      if(!selector) return;
-      selector.addEventListener('change', async() => {
-        let selectedOptions = [];
-        if (selector.type == 'radio' || selector.type == 'checkbox') {
-          // const swatchesOptions = selector.closest('.color-swatch__item');
-          // swatchesOptions.classList.remove('selected');
-          if (selector.checked) {
-            selectedOptions.push(selector.value);
-            // swatchesOptions.classList.add('selected');
+      if(selector) {
+        selector.addEventListener('change', async() => {
+          let selectedOptions = [];
+          if (selector.type == 'radio' || selector.type == 'checkbox') {
+            // const swatchesOptions = selector.closest('.color-swatch__item');
+            // swatchesOptions.classList.remove('selected');
+            if (selector.checked) {
+              selectedOptions.push(selector.value);
+              // swatchesOptions.classList.add('selected');
+            }
+            await updateMedia(selectedOptions);
           }
-          await updateMedia(selectedOptions);
+        });
+        async function updateMedia(selectedOptions) {
+          // get the matched variant
+          const prouductHandle = selector.closest('[data-product-handle]').dataset.productHandle;
+          let url = `/products/${prouductHandle}.js`;
+          fetch(url)
+          .then(function(responce) {
+            return responce.json();
+          })
+          .then(function(products) {
+            let matchedVariant = products.variants.find(variant => {
+              return selectedOptions.every(option => variant.options.includes(option));
+            });
+            if (matchedVariant) {
+              // updateMedia(matchedVariant);
+              if (matchedVariant.featured_image) {
+                const selectedImage = selector.closest('[data-product-handle]').querySelector('.product__image');
+                selectedImage.setAttribute('src', matchedVariant.featured_image.src);
+                selectedImage.setAttribute('srcset', matchedVariant.featured_image.src);
+              }
+            }
+          })
+          .catch(function(error) {
+            console.log('Error', error);
+          });
         }
       });
-      async function updateMedia(selectedOptions) {
-        // get the matched variant
-        const prouductHandle = selector.closest('[data-product-handle]').dataset.productHandle;
-        let url = `/products/${prouductHandle}.js`;
-        fetch(url)
-        .then(function(responce) {
-          return responce.json();
-        })
-        .then(function(products) {
-          let matchedVariant = products.variants.find(variant => {
-            return selectedOptions.every(option => variant.options.includes(option));
-          });
-          if (matchedVariant) {
-            // updateMedia(matchedVariant);
-            if (matchedVariant.featured_image) {
-              const selectedImage = selector.closest('[data-product-handle]').querySelector('.product__image');
-              selectedImage.setAttribute('src', matchedVariant.featured_image.src);
-              selectedImage.setAttribute('srcset', matchedVariant.featured_image.src);
-            }
-          }
-        })
-        .catch(function(error) {
-          console.log('Error', error);
-        });
-      }
-    });
+    }
   });
   
 
