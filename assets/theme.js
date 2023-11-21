@@ -2046,11 +2046,13 @@ function initProductForm() {
       const upsellBtnAdd = item.querySelector('[data-upsell-cart]');
       const loader = item.querySelector('[data-upsell-cart] .loader__spinner');
       const span = item.querySelector('[data-upsell-cart] span');
-      upsellBtnAdd.addEventListener('click', (event) => {
-        const variantId = event.target.dataset.variantId;
-        console.log('hy there', variantId);
-        showLoader(loader,span);
-      });
+      if (upsellBtnAdd) {
+        upsellBtnAdd.addEventListener('click', (event) => {
+          const variantId = event.target.dataset.variantId;
+          console.log('hy there', variantId);
+          showLoader(loader,span);
+        });
+      }
     }
   });
 
