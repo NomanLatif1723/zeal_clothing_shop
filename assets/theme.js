@@ -2025,8 +2025,8 @@ function initProductForm() {
             errorMessageEmail.classList.add('hidden');
             errorMessageDate.classList.add('hidden');
             // Submit Form Ajax
-            await submitProductForm(form);
-            hideLoader(loader,span);
+            // await submitProductForm(form);
+            // hideLoader(loader,span);
           } else {
             // Submit Form Ajax
             await submitProductForm(form);
