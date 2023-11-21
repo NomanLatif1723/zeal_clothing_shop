@@ -2060,9 +2060,9 @@ function initProductForm() {
   selectors.upsellCartItem.forEach(item => {
     // if(!item) return;
     const upsellBtnAdd = item.querySelector('[data-upsell-cart]');
-    upsellBtnAdd.addEventListener('click', () => {
-      // const variantId = upsellBtnAdd.dataset.variantId;
-      console.log('hy there');
+    upsellBtnAdd.addEventListener('click', (event) => {
+      const variantId = event.target.dataset.variantId;
+      console.log('hy there', variantId);
     });
   });
 
