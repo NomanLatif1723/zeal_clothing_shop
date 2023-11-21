@@ -2000,51 +2000,7 @@ function initProductForm() {
           span.classList.add('hidden');
         }
         if (isGiftCartProduct) {
-          const isGift = form.querySelector(`#recipient_gift_card-${form.dataset.sectionId}`).checked;
-          const recipientEmail = form.querySelector(`#recipient-email-${form.dataset.sectionId}`);
-          const recipientName = form.querySelector(`#recipient-name-${form.dataset.sectionId}`);
-          const recipientMessage = form.querySelector(`#recipient-message-${form.dataset.sectionId}`);
-          const recipientDate = form.querySelector(`#recipient-date-${form.dataset.sectionId}`);
-          const errorMessageEmail = form.querySelector('.recipient-form__error--email');
-          const errorMessageDate = form.querySelector('.recipient-form__error--date');
-          if(isGift) {
-            const selectedDate = new Date(recipientDate.value);
-            const currentDate = new Date();
-            const maxDate = new Date(currentDate.getTime() + (90 * 24 * 60 * 60 * 1000));          
-            if (!recipientEmail.value) {
-              errorMessageEmail.classList.remove('hidden');
-              if (span && loader) {
-                loader.classList.add('hidden');
-                span.classList.remove('hidden');
-              }
-              return;
-            }
-            if (recipientDate.value) {
-              if (isNaN(selectedDate.getTime()) || selectedDate > maxDate) {
-               errorMessageDate.classList.remove('hidden');
-                if (span && loader) {
-                  loader.classList.add('hidden');
-                  span.classList.remove('hidden');
-                }
-                return; 
-              }
-            }
-            errorMessageEmail.classList.add('hidden');
-            errorMessageDate.classList.add('hidden');
-            // Submit Form Ajax
-            await submitProductForm(form);
-            if (span && loader) {
-              loader.classList.add('hidden');
-              span.classList.remove('hidden');
-            }
-          } else {
-            // Submit Form Ajax
-            await submitProductForm(form);
-            if (span && loader) {
-              loader.classList.add('hidden');
-              span.classList.remove('hidden');
-            }
-          }
+          
         } else {
           // Submit Form Ajax
           await submitProductForm(form);
@@ -2060,6 +2016,8 @@ function initProductForm() {
   selectors.upsellCartItem.forEach(item => {
     if(item){
       const upsellBtnAdd = item.querySelector('[data-upsell-cart]');
+      const loader = item.querySelector('.loader__spinner');
+      const span = item.querySelector('span');
       upsellBtnAdd.addEventListener('click', (event) => {
         const variantId = event.target.dataset.variantId;
         console.log('hy there', variantId);
@@ -2067,6 +2025,53 @@ function initProductForm() {
     }
   });
 
+  async function giftCardSubmitForm() {
+    const isGift = form.querySelector(`#recipient_gift_card-${form.dataset.sectionId}`).checked;
+    const recipientEmail = form.querySelector(`#recipient-email-${form.dataset.sectionId}`);
+    const recipientName = form.querySelector(`#recipient-name-${form.dataset.sectionId}`);
+    const recipientMessage = form.querySelector(`#recipient-message-${form.dataset.sectionId}`);
+    const recipientDate = form.querySelector(`#recipient-date-${form.dataset.sectionId}`);
+    const errorMessageEmail = form.querySelector('.recipient-form__error--email');
+    const errorMessageDate = form.querySelector('.recipient-form__error--date');
+    if(isGift) {
+      const selectedDate = new Date(recipientDate.value);
+      const currentDate = new Date();
+      const maxDate = new Date(currentDate.getTime() + (90 * 24 * 60 * 60 * 1000));          
+      if (!recipientEmail.value) {
+        errorMessageEmail.classList.remove('hidden');
+        if (span && loader) {
+          loader.classList.add('hidden');
+          span.classList.remove('hidden');
+        }
+        return;
+      }
+      if (recipientDate.value) {
+        if (isNaN(selectedDate.getTime()) || selectedDate > maxDate) {
+         errorMessageDate.classList.remove('hidden');
+          if (span && loader) {
+            loader.classList.add('hidden');
+            span.classList.remove('hidden');
+          }
+          return; 
+        }
+      }
+      errorMessageEmail.classList.add('hidden');
+      errorMessageDate.classList.add('hidden');
+      // Submit Form Ajax
+      await submitProductForm(form);
+      if (span && loader) {
+        loader.classList.add('hidden');
+        span.classList.remove('hidden');
+      }
+    } else {
+      // Submit Form Ajax
+      await submitProductForm(form);
+      if (span && loader) {
+        loader.classList.add('hidden');
+        span.classList.remove('hidden');
+      }
+    }
+  }
   async function submitProductForm(form) {
     
     await fetch('/cart/add', {
