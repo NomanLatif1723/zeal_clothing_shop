@@ -2010,7 +2010,7 @@ function initProductForm() {
             const maxDate = new Date(currentDate.getTime() + (90 * 24 * 60 * 60 * 1000));          
             if (!recipientEmail.value) {
               errorMessageEmail.classList.remove('hidden');
-              showLoader(loader, span);
+              hideLoader(loader, span);
               return;
             }
             if (recipientDate.value) {
