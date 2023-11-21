@@ -136,7 +136,7 @@
                 </div>
               {%- endfor -%}
               {%- if settings.enable_cart_recommendations -%}
-                <cart-recommendations data-section-id="{{ section.id }}" data-product-id="{{ cart.items.first.product_id }}" data-limit="4">
+                <cart-recommendations data-section-id="{{ section.id }}" data-product-id="{{ cart.items.first.product_id }}" data-limit="2">
                   {%- if recommendations.performed -%}
                     <div class="cart__recommendation-products">
                       <div class="cart__recommendation-header">Consider These Items As Well</div>
