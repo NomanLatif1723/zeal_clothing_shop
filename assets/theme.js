@@ -2134,37 +2134,6 @@ document.addEventListener("DOMContentLoaded", function() {
   initProductForm();
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-  var addToCartButtons = document.querySelectorAll('.upsell-add-to-cart');
-
-  addToCartButtons.forEach(function(button) {
-    button.addEventListener('click', function() {
-      var variantId = button.getAttribute('data-variant-id');
-      console.log(variantId);
-      // Make AJAX request to add product to cart
-      // var xhr = new XMLHttpRequest();
-      // xhr.open('POST', '/cart/add.js', true);
-      // xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
-      // xhr.onload = function() {
-      //   if (xhr.status >= 200 && xhr.status < 300) {
-      //     // Cart updated successfully, you can handle the response as needed
-      //     console.log('Product added to cart!');
-      //   } else {
-      //     // Handle error, you can log the error or show an alert to the user
-      //     console.error('Error adding product to cart:', xhr.responseText);
-      //   }
-      // };
-      // xhr.onerror = function() {
-      //   // Handle network error
-      //   console.error('Network error while adding product to cart');
-      // };
-      // xhr.send(JSON.stringify({
-      //   id: variantId,
-      //   quantity: 1 // You can adjust the quantity if needed
-      // }));
-    });
-  });
-});
 
 // Sticky Add To Cart Function 
 function initStickyAddCart() {
