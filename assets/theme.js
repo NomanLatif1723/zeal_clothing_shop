@@ -2026,10 +2026,10 @@ function initProductForm() {
             await submitProductForm(form);
             hideLoader(loader,span);
           } else {
-            // Submit Form Ajax
-            await submitProductForm(form);
-            hideLoader(loader,span);
-          }
+          //   // Submit Form Ajax
+          //   await submitProductForm(form);
+          //   hideLoader(loader,span);
+          // }
         } else {
           // Submit Form Ajax
           await submitProductForm(form);
