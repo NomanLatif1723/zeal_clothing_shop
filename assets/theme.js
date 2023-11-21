@@ -2368,6 +2368,7 @@ function productModalObserve() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           LibraryLoader.load('shopifyXr', () => {
+            console.log('shopifyXr loaded');
           });
           // LibraryLoader.load('modelViewerUi', () => {
           // });
