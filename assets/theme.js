@@ -1899,7 +1899,7 @@ function initCartRecommendations() {
 
             if (productRecommendationsElement && productRecommendationsElement.hasChildNodes()) {
               this.innerHTML = productRecommendationsElement.innerHTML;
-              reInitEventListeners();
+              // reInitEventListeners();
             } else {
               this.hidden = true;
             }
