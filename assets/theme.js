@@ -987,11 +987,12 @@ function reInitEventListeners() {
 
   // Fliter Dropdown Event for filters 
   selectors.filterItem.forEach(item => {
-    if (!item) return;
-    item.addEventListener('click', () => {
-      item.closest('.filter-group').querySelector('.filter-group__dropdown').classList.toggle('hidden');
-      item.closest('.filter-group').querySelector('.icon__arrow').classList.toggle('icon__rotate');
-    });
+    if (item) {
+      item.addEventListener('click', () => {
+        item.closest('.filter-group').querySelector('.filter-group__dropdown').classList.toggle('hidden');
+        item.closest('.filter-group').querySelector('.icon__arrow').classList.toggle('icon__rotate');
+      });
+    }
   });
 
   // Filter/Sort Button Click Event For Opening Filter Drawer
