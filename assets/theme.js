@@ -919,7 +919,8 @@ function reInitEventListeners() {
     filterIconClose: document.querySelector('.filter-icon__close'),
     filterDrawerBox: document.querySelector('.filter-drawer__box'),
     ShowMoreSwatches: document.querySelectorAll('.show-more__swatches'),
-    collectionSwatchesGrid: document.querySelectorAll('.grid-product__variants')
+    collectionSwatchesGrid: document.querySelectorAll('.grid-product__variants'),
+    upsellAddCartBtn: document.querySelectorAll('[data-upsell-cart]')
   }
 
   // Show More Swatches on Plus Icon Click 
@@ -1014,6 +1015,13 @@ function reInitEventListeners() {
   if (!selectors.filterDrawerBox) return;
   selectors.filterDrawerBox.addEventListener('click', (event) => {
      event.stopPropagation();
+  });
+
+  selectors.upsellAddCartBtn.forEach(button => {
+    if(!button) return;
+    button.addEventListener('click', () => {
+      console.log("button clicked");
+    });
   });
   
   // Open Filter Drawer Function
@@ -2056,12 +2064,12 @@ function initProductForm() {
     });
   });
 
-  selectors.upsellAddCartBtn.forEach(button => {
-    if(!button) return;
-    button.addEventListener('click', () => {
-      console.log("button clicked");
-    });
-  });
+  // selectors.upsellAddCartBtn.forEach(button => {
+  //   if(!button) return;
+  //   button.addEventListener('click', () => {
+  //     console.log("button clicked");
+  //   });
+  // });
 
   async function submitProductForm(form) {
     
