@@ -1137,7 +1137,7 @@ function initFilterFacetForm() {
         html.innerHTML = data;
         let productData = html.querySelector('.catalog__content').innerHTML;
         document.querySelector('.catalog__content').innerHTML = productData;
-        // initCollectionSort();
+        initCollectionSort();
         reInitEventListeners();
         // Check if there are no products
         const noProductsMessage = html.querySelector('.empty-products__message');
