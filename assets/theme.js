@@ -1995,7 +1995,7 @@ function initProductForm() {
       const span = form.querySelector('span');
       if (cartType === 'drawer' || cartType === 'popup') {
         event.preventDefault();
-        showLoader(loader, span);
+        showLoader(loader,span);
         if (isGiftCartProduct) {
           const isGift = form.querySelector(`#recipient_gift_card-${form.dataset.sectionId}`).checked;
           const recipientEmail = form.querySelector(`#recipient-email-${form.dataset.sectionId}`);
