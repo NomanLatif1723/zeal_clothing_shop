@@ -1995,7 +1995,7 @@ function initProductForm() {
       const span = form.querySelector('span');
       if (cartType === 'drawer' || cartType === 'popup') {
         event.preventDefault();
-        showLoader(loader,span);
+        
         if (isGiftCartProduct) {
           const isGift = form.querySelector(`#recipient_gift_card-${form.dataset.sectionId}`).checked;
           const recipientEmail = form.querySelector(`#recipient-email-${form.dataset.sectionId}`);
@@ -2031,6 +2031,7 @@ function initProductForm() {
             hideLoader(loader,span);
           }
         } else {
+          showLoader(loader,span);
           // Submit Form Ajax
           await submitProductForm(form);
           hideLoader(loader,span);
