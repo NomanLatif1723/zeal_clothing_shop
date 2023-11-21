@@ -2353,17 +2353,6 @@ document.addEventListener("DOMContentLoaded", function() {
   initPasswordModal();
 });
 
-// Initiate the xr library for 3d model
-function setupShopifyXr(){
-  if (!window.ShopifyXR) {
-    document.addEventListener('shopify_xr_initialized', function() {
-      setupShopifyXr();
-    });
-  }else{
-    window.ShopifyXR.addModels();
-    window.ShopifyXR.setupXRElements();
-  }
-}
 // The element observe For 3d Product Modal
 function productModalObserve() {
   const productModel = document.querySelectorAll('product-model');
@@ -2378,19 +2367,8 @@ function productModalObserve() {
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          window.Shopify.loadFeatures([
-            {
-              name: 'shopify-xr',
-              version: '1.0',
-              onLoad: setupShopifyXr
-            }
-          ]);
-          window.ShopifyXR.launchXR({
-            model3dId: [media-id],
-            title: "{{ product.title | escape }}",
+          LibraryLoader.load('shopifyXr', () => {
           });
-          // LibraryLoader.load('shopifyXr', () => {
-          // });
           // LibraryLoader.load('modelViewerUi', () => {
           // });
           // LibraryLoader.load('modelViewerUiStyles', () => {
