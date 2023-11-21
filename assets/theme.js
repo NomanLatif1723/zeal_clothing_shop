@@ -1996,6 +1996,10 @@ function initProductForm() {
       if (cartType === 'drawer' || cartType === 'popup') {
         event.preventDefault();
         if (isGiftCartProduct) {
+          if (span && loader) {
+            loader.classList.remove('hidden');
+            span.classList.add('hidden');
+          }
           // Submit Form Ajax
           await giftCardSubmitForm(form);
         } else {
