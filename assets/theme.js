@@ -2026,7 +2026,10 @@ function initProductForm() {
             await submitProductForm(form);
             hideLoader(loader,span);
           } else {
-            showLoader(loader,span);
+            if (span && loader) {
+              loader.classList.remove('hidden');
+              span.classList.add('hidden');
+            }
             // Submit Form Ajax
             await submitProductForm(form);
             hideLoader(loader,span);
