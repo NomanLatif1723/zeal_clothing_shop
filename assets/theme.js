@@ -1138,7 +1138,7 @@ function initFilterFacetForm() {
         let productData = html.querySelector('.catalog__content').innerHTML;
         document.querySelector('.catalog__content').innerHTML = productData;
         // initCollectionSort();
-        // reInitEventListeners();
+        reInitEventListeners();
         // Check if there are no products
         const noProductsMessage = html.querySelector('.empty-products__message');
         if (noProductsMessage) {
@@ -1149,8 +1149,8 @@ function initFilterFacetForm() {
           } else {
             window.location.href = `?${queryString.toString()}`;
           }
-          initCollectionSort();
-          reInitEventListeners();
+          // initCollectionSort();
+          // reInitEventListeners();
         }
       })
       .catch(error => console.log('Error', error))
