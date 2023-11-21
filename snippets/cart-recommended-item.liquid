@@ -68,7 +68,17 @@
       <form id="product-form-{{ product.id }}" action="/cart/add" method="post">
         <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
         <input type="submit" class="btn btn__link btn__primary" value="{% if product.selected_or_first_available_variant.available %}{{ add_to_cart_text }}{%- else -%}{{ 'products.sold_out' | t }}{%- endif -%}">
-        <div class="loader__spinner hidden"></div>
+        <button data-add-to-cart type="submit" name="add" aria-label="Add to cart" data-inventory-count="{{ product.selected_or_first_available_variant.inventory_quantity }}" 
+              class="btn btn__link btn__primary"{% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>
+          <span>
+            {% if product.selected_or_first_available_variant.available %}
+              {{ add_to_cart_text }}
+            {% else %}
+              {{ 'products.sold_out' | t }}
+            {% endif %}
+          </span>
+          <div class="loader__spinner hidden"></div>
+        </button>
       </form>
     </div>
   </div>
