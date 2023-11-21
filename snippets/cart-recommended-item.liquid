@@ -54,14 +54,14 @@
          endif
       -%}
       <button type="button" class="btn btn__link btn__primary" data-upsell-cart title="{{ add_to_cart_text }}" data-variant-id="{{ product.selected_or_first_available_variant.id }}">
-        <!-- <span> -->
+        <span>
           {% if product.selected_or_first_available_variant.available %}
             {{ add_to_cart_text }}
           {% else %}
             {{ 'products.sold_out' | t }}
           {% endif %}
-        <!-- </span> -->
-        <!-- <div class="loader__spinner hidden"></div> -->
+        </span>
+        <div class="loader__spinner hidden"></div>
       </button>
       {% comment %}
       <form id="product-form-{{ product.id }}" action="/cart/add" method="post">
