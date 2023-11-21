@@ -2410,7 +2410,7 @@ function productModalObserve() {
   });
 }
 document.addEventListener("DOMContentLoaded", function() {
-  // productModalObserve();
+  productModalObserve();
 });
 
 // Product Popup Gallery Slider
