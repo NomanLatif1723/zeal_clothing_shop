@@ -308,6 +308,7 @@ display: inline-block;
   height: 100vh;
 }
 .cart__recommendations-list {
+  display: block;
   padding: 20px 0;
   font-size: 14px;
 }
