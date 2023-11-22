@@ -332,6 +332,9 @@ display: inline-block;
 }
 .cart__recommendations-item--button button {
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .cart__recommendations-item--image {
   width: 30%;
