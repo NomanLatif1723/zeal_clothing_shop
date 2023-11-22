@@ -2473,8 +2473,13 @@ function productModalObserve() {
           // LibraryLoader.load('shopifyXr', () => {
           //   console.log('shopifyXr loaded');
           // });
-          // LibraryLoader.load('modelViewerUi', () => {
-          // });
+          LibraryLoader.load('modelViewerUi', () => {
+            modelViewerUI.createZoomButtons();
+            modelViewerUI.createFullscreenButton();
+        
+            // Initialize the UI
+            modelViewerUI.init();
+          });
           // LibraryLoader.load('modelViewerUiStyles', () => {
           // });
           model.classList.add('visible');
