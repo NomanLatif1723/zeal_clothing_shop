@@ -118,7 +118,7 @@
           {%- endfor -%}
           {%- if settings.enable_cart_recommendations -%}
             <cart-recommendations data-section-id="sections--19982386430274__header" data-product-id="{{ cart.items.first.product_id }}" data-limit="4">
-              {%- assign product_form_id = 'addToCartForm-' | append: section.id | append: '-' | append: product.id -%}
+              {%- assign product_form_id = 'addToCartForm-' | append: product.id -%}
               {%- if recommendations.performed -%}
                 <div class="cart__recommendation-products">
                   <div class="cart__recommendation-header">Consider These Items As Well</div>
