@@ -1940,8 +1940,8 @@ function initProductForm() {
 
   // Upsell Variants Change Event Listener
   selectors.upsellCartItem.forEach(item => {
-    if(item) {
-      const variantsSelect = item.querySelector('[data-upsell-variants]');
+    const variantsSelect = item.querySelector('[data-upsell-variants]');
+    if (variantsSelect) {
       variantsSelect.addEventListener('change', () => {
         console.log(variantsSelect.value);
       });
