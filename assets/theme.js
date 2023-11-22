@@ -1942,22 +1942,9 @@ function initProductForm() {
   selectors.upsellCartItem.forEach(item => {
     const variantsSelect = item.querySelector('[data-upsell-variants]');
     const hiddenInput = item.querySelector('.selected_variant_id');
-    const productAddToCartBtn = product.querySelector('[name="add"]');
-    const productAddToCartBtnSpan = product.querySelector('[name="add"] span');
     if (variantsSelect) {
       variantsSelect.addEventListener('change', () => {
         hiddenInput.value = variantsSelect.value;
-
-        // if(productAddToCartBtn) {
-        //   if (matchedVariant.available) {
-        //     productAddToCartBtnSpan.textContent = window.themeContent.strings.addToCart;
-        //     productAddToCartBtn.disabled = false;
-        //   } else {
-        //     productAddToCartBtnSpan.textContent = window.themeContent.strings.soldOut;
-        //     productAddToCartBtn.disabled = true;
-        //   }
-        // }
-        
       });
     }
   });
