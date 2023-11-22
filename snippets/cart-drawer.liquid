@@ -141,7 +141,7 @@
                   {%- if recommendations.performed -%}
                     <div class="cart__recommendation-products">
                       <div class="cart__recommendation-header">Consider These Items As Well</div>
-                      <div class="cart__recommendations-list product-grid">
+                      <div class="cart__recommendations-list">
                         {%- for product in recommendations.products -%}
                           {%- render 'cart-recommended-item', product: product, product_form_id: product_form_id -%}
                         {%- endfor -%}
