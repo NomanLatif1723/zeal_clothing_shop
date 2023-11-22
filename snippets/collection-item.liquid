@@ -11,7 +11,7 @@
   <div class="collection-grid__content">
     <a href="{{ collection.url }}" title="{{ collection.title }}">
       <div class="collection-grid__image" style="aspect-ratio: {{ imageAspectRatio }};">
-        <img
+        <img class="collection__image"
           src="{{ collection_image | img_url: default }}"
           srcset="
               {{ collection_image | img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
