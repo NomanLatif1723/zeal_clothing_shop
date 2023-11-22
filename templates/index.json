@@ -971,7 +971,7 @@
         "template--19980215124290__c0a967db-8ba7-41d1-833e-fbe96989c9c1-buy_buttons-1": {
           "type": "buy_buttons",
           "settings": {
-            "enable_dynamic_checkout": false,
+            "enable_dynamic_checkout": true,
             "enable_gift_card_recipient": false
           }
         },
