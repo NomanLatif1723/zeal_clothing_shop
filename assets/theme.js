@@ -2478,13 +2478,11 @@ function productModalObserve() {
           // });
           // LibraryLoader.load('modelViewerUiStyles', () => {
           // });
-          // var modelViewer = document.querySelector('model-viewer');
-          //   var modelViewerUI = new ModelViewerUI(modelViewer);
-          //   modelViewerUI.createZoomButtons();
-          //   modelViewerUI.createFullscreenButton();
-        
-            // Initialize the UI
-            modelViewerUI.init();
+          var modelViewer = document.querySelector('model-viewer');
+            var modelViewerUI = new ModelViewerUI(modelViewer);
+            modelViewerUI.createZoomButtons();
+            modelViewerUI.createFullscreenButton();
+      
           model.classList.add('visible');
           setTimeout(function hideButton() {
             viewInModelBtn.classList.add('hidden');
