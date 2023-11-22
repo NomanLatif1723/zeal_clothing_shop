@@ -33,7 +33,7 @@
       {%- unless product.has_only_default_variant -%}
         <variant-selects data-section="{{ section.id }}" data-url="{{ product.url }}">
           <div class="product__options product-select__options">
-            <select form="{{ product_form_id }}" class="product__select" data-selected-variant id="product-select-{{ forloop.index }}">
+            <select form="{{ product_form_id }}" class="product__select" data-upsell-variant id="product-select-{{ forloop.index }}">
               {% for variant in product.variants %}
                 <option value="{{ variant.id }}" {% if variant == product.selected_or_first_available_variant %}selected{% endif %}>
                   {{ variant.title }}
@@ -54,9 +54,7 @@
          endif
       -%}
       {%- form 'product', product, id: product_form_id, class: "product__form", novalidate: 'novalidate', data-section-id: section.id -%}
-        {% comment %}
         <input type="hidden" class="selected_variant_id" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-        {% endcomment %}
         <button data-add-to-cart type="submit" name="add" aria-label="Add to cart" data-inventory-count="{{ product.selected_or_first_available_variant.inventory_quantity }}" 
               class="btn btn__link btn__primary"{% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>
           <span>
@@ -68,22 +66,6 @@
           </span>
           <div class="loader__spinner hidden"></div>
         </button>
-
-        <select name="id" class="selected-variant__id hidden">
-          {%- for variant in product.variants -%}
-            {%- if variant.available -%}
-              <option {% if variant == product.selected_or_first_available_variant %}
-                selected="selected"{% endif %}
-                value="{{ variant.id }}">
-                {{ variant.title }} - {{ variant.price | money_with_currency }}
-              </option>
-            {%- else -%}
-              <option disabled="disabled">
-                {{ variant.title }} - {{ 'products.badges.sold_out' | t }}
-              </option>
-            {%- endif -%}
-          {%- endfor -%}
-        </select>
       {%- endform -%}
     </div>
   </div>
