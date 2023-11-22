@@ -2093,6 +2093,7 @@ function initProductForm() {
       span.classList.remove('hidden');
     }
   }
+  
 }
 document.addEventListener("DOMContentLoaded", function() {
   initProductForm();
