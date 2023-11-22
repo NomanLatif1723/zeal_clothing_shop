@@ -27,7 +27,6 @@
       </button>
     </div>
     <div data-cart>
-      {%- form 'cart', cart -%}
         {%- if cart.item_count > 0 -%}
           <div class="drawer__scrollable">
             {%- if free_shipping -%}
@@ -173,37 +172,39 @@
                   <textarea name="note" rows="10" class="form__input" id="CartNote" placeholder="{{ 'cart.general.note_placeholder' | t }}">{{ cart.note }}</textarea>
                 </div>
               {%- endif -%}
-              {%- if settings.show_terms -%}
-                <div class="cart__terms-checkbox" data-checkout-terms>
-                  <input type="checkbox" id="cartTerms">
-                  <label for="cartTerms">
-                    {%- if settings.cart_terms_page != blank -%}
-                      <a class="links" target="_blank" href="{{ settings.cart_terms_page }}" title="{{ 'cart.general.terms_at_checkout' | t }}">
-                    {%- endif -%}
-                    {{ 'cart.general.terms_at_checkout' | t }}
-                    {%- if settings.cart_terms_page != blank -%}
-                      </a>
-                    {%- endif -%}
-                  </label>
+              {% form 'cart', cart %}
+                {%- if settings.show_terms -%}
+                  <div class="cart__terms-checkbox" data-checkout-terms>
+                    <input type="checkbox" id="cartTerms">
+                    <label for="cartTerms">
+                      {%- if settings.cart_terms_page != blank -%}
+                        <a class="links" target="_blank" href="{{ settings.cart_terms_page }}" title="{{ 'cart.general.terms_at_checkout' | t }}">
+                      {%- endif -%}
+                      {{ 'cart.general.terms_at_checkout' | t }}
+                      {%- if settings.cart_terms_page != blank -%}
+                        </a>
+                      {%- endif -%}
+                    </label>
+                  </div>
+                {%- endif -%}
+                {%- if cart.cart_level_discount_applications != blank -%}
+                  <div class="cart__discounts">
+                    <h3>{{ 'cart.general.discount' | t }}</h3>
+                    {%- for cart__discount in cart.cart_level_discount_applications -%}
+                      {{ cart__discount.title }} - {{ cart__discount.total_allocated_amount }}
+                    {%- endfor -%}
+                  </div>
+                {%- endif -%}
+                <div class="cart__checkout-wrapper">
+                  <a href="{{ routes.cart_url }}" class="btn btn__link btn__outline" title="{{ 'cart.general.view_cart' | t }}">{{ 'cart.general.view_cart' | t }}</a>
+                  <button class="btn btn__link btn__primary" type="submit" name="checkout" value="Checkout" aria-label="{{ 'cart.general.checkout' | t }}">
+                    {{ 'cart.general.checkout' | t }}
+                  </button>
+                  {% if additional_checkout_buttons and settings.additional_checkout_buttons %}
+                    <div class="additional__buttons">{{ content_for_additional_checkout_buttons }}</div>
+                  {% endif %}
                 </div>
-              {%- endif -%}
-              {%- if cart.cart_level_discount_applications != blank -%}
-                <div class="cart__discounts">
-                  <h3>{{ 'cart.general.discount' | t }}</h3>
-                  {%- for cart__discount in cart.cart_level_discount_applications -%}
-                    {{ cart__discount.title }} - {{ cart__discount.total_allocated_amount }}
-                  {%- endfor -%}
-                </div>
-              {%- endif -%}
-              <div class="cart__checkout-wrapper">
-                <a href="{{ routes.cart_url }}" class="btn btn__link btn__outline" title="{{ 'cart.general.view_cart' | t }}">{{ 'cart.general.view_cart' | t }}</a>
-                <button class="btn btn__link btn__primary" type="submit" name="checkout" value="Checkout" aria-label="{{ 'cart.general.checkout' | t }}">
-                  {{ 'cart.general.checkout' | t }}
-                </button>
-                {% if additional_checkout_buttons and settings.additional_checkout_buttons %}
-                  <div class="additional__buttons">{{ content_for_additional_checkout_buttons }}</div>
-                {% endif %}
-              </div>
+              {% endform %}
             </div>
           </div>
         {%- else -%}
@@ -212,7 +213,6 @@
             <a href="{{ routes.all_products_collection_url }}" title="{{ 'cart.general.continue_shopping' | t }}" class="links form__links">{{ 'cart.general.continue_shopping' | t }}</a>
           </div>
         {%- endif -%}
-      {%- endform -%}
     </div>
   </div>
 </div>
