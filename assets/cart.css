@@ -317,6 +317,9 @@ display: inline-block;
   gap: 20px;
   padding-bottom: 20px;
 }
+.cart__recommendations-item--title{
+  padding-bottom: 4px;
+}
 .cart__recommendations-item--meta{
   display: flex;
   align-items: center;
