@@ -1941,8 +1941,10 @@ function initProductForm() {
   // Upsell Variants Change Event Listener
   selectors.upsellCartItem.forEach(item => {
     const variantsSelect = item.querySelector('[data-upsell-variants]');
+    const hiddenInput = item.querySelector('.selected_variant_id');
     if (variantsSelect) {
       variantsSelect.addEventListener('change', () => {
+        hiddenInput.value = variantsSelect.value;
         console.log(variantsSelect.value);
       });
     }
