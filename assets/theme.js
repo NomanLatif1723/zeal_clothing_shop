@@ -1948,15 +1948,15 @@ function initProductForm() {
       variantsSelect.addEventListener('change', () => {
         hiddenInput.value = variantsSelect.value;
 
-        if(productAddToCartBtn) {
-          if (matchedVariant.available) {
-            productAddToCartBtnSpan.textContent = window.themeContent.strings.addToCart;
-            productAddToCartBtn.disabled = false;
-          } else {
-            productAddToCartBtnSpan.textContent = window.themeContent.strings.soldOut;
-            productAddToCartBtn.disabled = true;
-          }
-        }
+        // if(productAddToCartBtn) {
+        //   if (matchedVariant.available) {
+        //     productAddToCartBtnSpan.textContent = window.themeContent.strings.addToCart;
+        //     productAddToCartBtn.disabled = false;
+        //   } else {
+        //     productAddToCartBtnSpan.textContent = window.themeContent.strings.soldOut;
+        //     productAddToCartBtn.disabled = true;
+        //   }
+        // }
         
       });
     }
