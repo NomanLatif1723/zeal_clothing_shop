@@ -9,6 +9,7 @@
   assign first_3d_model = product.media | where: 'media_type', 'model' | first
   
 -%}
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
 {%- unless product.empty? -%}
 {%- if section.settings.thumbnail_position == 'left' -%}
   <div class="product-media__grid" data-thumbnail="{{ section.settings.thumbnail_position }}">
