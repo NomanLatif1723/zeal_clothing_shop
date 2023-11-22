@@ -2474,6 +2474,8 @@ function productModalObserve() {
           //   console.log('shopifyXr loaded');
           // });
           LibraryLoader.load('modelViewerUi', () => {
+            var modelViewer = document.querySelector('model-viewer');
+            var modelViewerUI = new ModelViewerUI(modelViewer);
             modelViewerUI.createZoomButtons();
             modelViewerUI.createFullscreenButton();
         
