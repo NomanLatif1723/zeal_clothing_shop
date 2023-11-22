@@ -2473,17 +2473,18 @@ function productModalObserve() {
           // LibraryLoader.load('shopifyXr', () => {
           //   console.log('shopifyXr loaded');
           // });
-          LibraryLoader.load('modelViewerUi', () => {
-            var modelViewer = document.querySelector('model-viewer');
+          // LibraryLoader.load('modelViewerUi', () => {
+            
+          // });
+          // LibraryLoader.load('modelViewerUiStyles', () => {
+          // });
+          var modelViewer = document.querySelector('model-viewer');
             var modelViewerUI = new ModelViewerUI(modelViewer);
             modelViewerUI.createZoomButtons();
             modelViewerUI.createFullscreenButton();
         
             // Initialize the UI
             modelViewerUI.init();
-          });
-          // LibraryLoader.load('modelViewerUiStyles', () => {
-          // });
           model.classList.add('visible');
           setTimeout(function hideButton() {
             viewInModelBtn.classList.add('hidden');
