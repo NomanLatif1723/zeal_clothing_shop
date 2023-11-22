@@ -33,7 +33,7 @@
       {%- unless product.has_only_default_variant -%}
         <variant-selects data-section="{{ section.id }}" data-url="{{ product.url }}">
           <div class="product__options product-select__options">
-            <select form="{{ product_form_id }}" class="product__select" data-upsell-variants id="product-select-{{ forloop.index }}">
+            <select form="{{ product_form_id }}" name="id" class="product__select" data-upsell-variants id="product-select-{{ forloop.index }}">
               {% for variant in product.variants %}
                 <option value="{{ variant.id }}" {% if variant == product.selected_or_first_available_variant %}selected{% endif %}>
                   {{ variant.title }}
