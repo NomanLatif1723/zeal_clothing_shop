@@ -1945,7 +1945,6 @@ function initProductForm() {
     if (variantsSelect) {
       variantsSelect.addEventListener('change', () => {
         hiddenInput.value = variantsSelect.value;
-        console.log(variantsSelect.value);
       });
     }
   });
