@@ -1939,14 +1939,14 @@ function initProductForm() {
   });
 
   // Upsell Variants Change Event Listener
-  selectors.upsellCartItem.forEach(item => {
-    if(item) {
-      const variantsSelect = item.querySelector('[data-upsell-variants]');
-      variantsSelect.addEventListener('change', () => {
-        console.log(variantsSelect.value);
-      });
-    }
-  });
+  // selectors.upsellCartItem.forEach(item => {
+  //   if(item) {
+  //     const variantsSelect = item.querySelector('[data-upsell-variants]');
+  //     variantsSelect.addEventListener('change', () => {
+  //       console.log(variantsSelect.value);
+  //     });
+  //   }
+  // });
 
   // Event For product Form Submit Using Ajax If Cart Type set to Drawer or Popup
   selectors.productForm.forEach(form => {
