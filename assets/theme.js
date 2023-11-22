@@ -1481,7 +1481,7 @@ function initCartForm() {
         return;
       }
       const freeShippingBar = container.querySelector('.free-shipping');
-      const cartForm = container.querySelector('[data-cart]');
+      const cartForm = container.querySelector('.cart-form__content');
       const emptyCart = document.createElement('div');
       emptyCart.className = 'cart__empty-message';
       emptyCart.innerHTML = `
