@@ -26,16 +26,18 @@
             </div>
           {%- endif -%}
         </div>
-        <div class="collection-grid">
-          {%- for product in recommendations.products limit: product_limit -%}
-            {%- render 'product-item',
-               product: product,
-               products_per_row: section.settings.products_per_row,
-               lazyloadImages: section.settings.lazyload_images,
-               textAlignment: section.settings.text_alignment
-            -%}
-          {%- endfor -%}
-        </div>
+        {%- if settings.enable_cart_recommendations -%}
+          <div class="collection-grid">
+            {%- for product in recommendations.products limit: product_limit -%}
+              {%- render 'product-item',
+                 product: product,
+                 products_per_row: section.settings.products_per_row,
+                 lazyloadImages: section.settings.lazyload_images,
+                 textAlignment: section.settings.text_alignment
+              -%}
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
       {%- endif -%}
     </div>
   </product-recommendations>
