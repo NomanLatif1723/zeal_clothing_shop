@@ -31,7 +31,6 @@
         {%- endif -%}
       </div>
       {%- if cart.item_count > 0 -%}
-        {%- form 'cart', cart -%}
           <div class="cart__main">
             <div class="cart__items">    
               {%- for item in cart.items -%}
@@ -91,16 +90,17 @@
                 </div>
               {%- endif -%}
               <div class="cart__checkout-wrapper">
+                {%- form 'cart', cart -%}
                 <button class="btn btn__link btn__primary" type="submit" name="checkout" value="Checkout" aria-label="{{ 'cart.general.checkout' | t }}">
                   {{ 'cart.general.checkout' | t }}
                 </button>
                 {% if additional_checkout_buttons and settings.additional_checkout_buttons %}
                   <div class="additional__buttons">{{ content_for_additional_checkout_buttons }}</div>
                 {% endif %}
+                {%- endform -%}
               </div>
             </div>
           </div>
-        {%- endform -%}
       {%- else -%}
       <div class="scroll__animate cart__empty-message">
         <div class="rte">{{ 'cart.general.empty_cart' | t }}</div>
