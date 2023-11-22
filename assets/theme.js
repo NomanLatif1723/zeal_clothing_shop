@@ -1890,7 +1890,8 @@ function initProductForm() {
     cartPopupMessage: document.querySelector('.cart-popup__message'),
     cartDrawerContent: document.querySelector("[data-cart]"),
     formValidationErrorMessage: document.querySelector('.product-form__errors'),
-    giftCardRecipientButton: document.querySelector('.recipient__button input')
+    giftCardRecipientButton: document.querySelector('.recipient__button input'),
+    upsellCartItem: document.querySelectorAll('.cart__recommendations-item')
   };
   const isGiftCartProduct = window.themeContent.settings.giftCartProduct;
   if(selectors.giftCardRecipientButton){
@@ -1935,6 +1936,15 @@ function initProductForm() {
   // Event for Close Cart Drawer
   selectors.closeDrawerBtn.addEventListener('click', () => {
     closeCartDrawer();
+  });
+
+  selectors.upsellCartItem.forEach(item => {
+    if(item) {
+      const variantsSelect = item.querySelector('[data-upsell-variants]');
+      variantsSelect.addEventListener('change', () => {
+        console.log(variantsSelect.value);
+      });
+    }
   });
 
   // Event For product Form Submit Using Ajax If Cart Type set to Drawer or Popup
