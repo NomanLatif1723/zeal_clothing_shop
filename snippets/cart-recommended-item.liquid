@@ -35,9 +35,15 @@
           <div class="product__options product-select__options">
             <select form="{{ product_form_id }}" class="product__select" data-upsell-variants id="product-select-{{ forloop.index }}">
               {% for variant in product.variants %}
-                <option value="{{ variant.id }}" {% if variant == product.selected_or_first_available_variant %}selected{% endif %}>
-                  {{ variant.title }}
-                </option>
+                {%- if variant.available -%}
+                  <option value="{{ variant.id }}" {% if variant == product.selected_or_first_available_variant %}selected{% endif %}>
+                    {{ variant.title }}
+                  </option>
+                {%- else -%}
+                  <option value="{{ variant.id }}" disabled="disabled">
+                    {{ variant.title }}
+                  </option>
+                {%- endif -%}
               {% endfor %}
             </select>
           </div>
