@@ -1890,8 +1890,7 @@ function initProductForm() {
     cartPopupMessage: document.querySelector('.cart-popup__message'),
     cartDrawerContent: document.querySelector("[data-cart]"),
     formValidationErrorMessage: document.querySelector('.product-form__errors'),
-    giftCardRecipientButton: document.querySelector('.recipient__button input'),
-    upsellCartItem: document.querySelectorAll('.cart__recommendations-item')
+    giftCardRecipientButton: document.querySelector('.recipient__button input')
   };
   const isGiftCartProduct = window.themeContent.settings.giftCartProduct;
   if(selectors.giftCardRecipientButton){
@@ -1993,21 +1992,6 @@ function initProductForm() {
         }
       }
     });
-  });
-
-  selectors.upsellCartItem.forEach(item => {
-    if(item){
-      const upsellBtnAdd = item.querySelector('[data-upsell-cart]');
-      const loader = item.querySelector('[data-upsell-cart] .loader__spinner');
-      const span = item.querySelector('[data-upsell-cart] span');
-      if (upsellBtnAdd) {
-        upsellBtnAdd.addEventListener('click', (event) => {
-          const variantId = event.target.dataset.variantId;
-          console.log('hy there', variantId);
-          showLoader(loader,span);
-        });
-      }
-    }
   });
 
   async function submitProductForm(form) {
