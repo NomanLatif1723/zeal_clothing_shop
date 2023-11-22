@@ -1938,6 +1938,7 @@ function initProductForm() {
     closeCartDrawer();
   });
 
+  // Upsell Variants Change Event Listener
   selectors.upsellCartItem.forEach(item => {
     if(item) {
       const variantsSelect = item.querySelector('[data-upsell-variants]');
