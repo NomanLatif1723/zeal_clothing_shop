@@ -1481,7 +1481,7 @@ function initCartForm() {
         return;
       }
       const freeShippingBar = container.querySelector('.free-shipping');
-      const cartForm = container.querySelector('.cart-form__content');
+      const cartFormContent = container.querySelector('.cart-form__content');
       const emptyCart = document.createElement('div');
       emptyCart.className = 'cart__empty-message';
       emptyCart.innerHTML = `
@@ -1489,11 +1489,11 @@ function initCartForm() {
         <a href="${window.themeContent.routes.all_collections}" title="${window.themeContent.strings.continue_shopping}" class="links form__links">${window.themeContent.strings.continue_shopping}</a>
       `;
       if (items.length === 0) {
-        if(!freeShippingBar || !cartForm){
+        if(!freeShippingBar || !cartFormContent){
           return;
         }
         freeShippingBar.remove();
-        cartForm.remove();
+        cartFormContent.remove();
         container.appendChild(emptyCart);
       } else {
         itemToRemove.remove();
