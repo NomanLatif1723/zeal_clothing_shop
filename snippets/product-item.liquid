@@ -1,5 +1,5 @@
-{%- assign product_form_id = 'addToCartForm-' | append: section.id | append: '-' | append: product.id -%}
 {%- liquid
+   assign product_form_id = 'addToCartForm-' | append: section.id | append: '-' | append: product.id
    case products_per_row   
     when 1
       assign itemWidth = ''
