@@ -1186,7 +1186,6 @@ function initFilterFacetForm() {
             window.location.href = `?${queryString.toString()}`;
           }
         }
-        // reInitEventListeners();
         initCollectionSort();
       })
       .catch(error => console.log('Error', error))
