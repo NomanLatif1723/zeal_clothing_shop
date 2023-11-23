@@ -1720,7 +1720,8 @@ blockquote.testimonial__text {
 .quick-shop__box {
   position: relative;
   background: white;
-  max-width: 880px;
+  max-width: calc(100% - 40px);
+  /* max-width: 880px; */
   padding: 40px;
   margin: 3% auto;
 }
@@ -1764,6 +1765,11 @@ blockquote.testimonial__text {
   }
   .block__item--one-fifth{
       width: 20%;
+  }
+}
+@media only screen and (min-width: 993px) {
+  .quick-shop__box{
+    max-width: 880px;
   }
 }
 @media only screen and (min-width: 769px) {
