@@ -110,6 +110,7 @@
               </span>
               <div class="loader__spinner hidden"></div>
             </button>
+          {% comment %}
             <select name="id" class="selected-variant__id hidden">
               {%- for variant in product.variants -%}
                 {%- if variant.available -%}
@@ -125,6 +126,7 @@
                 {%- endif -%}
               {%- endfor -%}
             </select>
+            {% endcomment %}
           {%- endform -%}
         </div>
       </div>
