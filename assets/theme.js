@@ -54,7 +54,8 @@ function formatMoney$1(cents, format) {
 }
 var formatMoney = (val => formatMoney$1(val, window.themeContent.routes.money_format || "${{amount}}"));
 
-// Libaray Loader Function 
+
+// Library Loader Function (function not used yet should be removed)
 const LibraryLoader = (() => {
   const types = {
     link: 'link',
