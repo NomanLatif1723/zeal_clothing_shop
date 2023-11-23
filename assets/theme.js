@@ -2100,7 +2100,6 @@ document.addEventListener("DOMContentLoaded", function() {
   initProductForm();
 });
 
-
 // Sticky Add To Cart Function 
 function initStickyAddCart() {
   const stickyCart = document.querySelector(".product__sticky-wrapper");
