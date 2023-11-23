@@ -38,7 +38,7 @@
         <variant-selects data-section="{{ section.id }}" data-url="{{ product.url }}">
           <div class="product__options product-select__options">
             <label for="upsell__select-{{ forloop.index }}" class="visually__hidden">Product Variants</label>
-            <select class="product__select" data-upsell-variants id="upsell__select-{{ product_variant }}" name="masterSelect">
+            <select class="product__select" data-upsell-variants id="upsell__select-{{ product.handle }}" name="masterSelect">
               {% for variant in product.variants %}
                 {%- if variant.available -%}
                   <option value="{{ variant.id }}" {% if variant == product.selected_or_first_available_variant %}selected{% endif %}>
