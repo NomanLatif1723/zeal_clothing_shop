@@ -1274,10 +1274,7 @@ function initHandleQuestions() {
     }
   });
 }
-// document.addEventListener("DOMContentLoaded", function() {
-  initHandleQuestions();
-  // document.querySelector('.faq__item-1 .faq-question__header').click();
-// });
+initHandleQuestions();
 
 // Cart Form Ajax
 function initCartForm() {
