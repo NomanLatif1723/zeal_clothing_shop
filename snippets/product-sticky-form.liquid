@@ -85,11 +85,14 @@
           -%}
           {%- form 'product', product, id: product_form_id, class: "product__form", novalidate: 'novalidate', data-section-id: section.id -%}
             <button type="submit" form="{{ product_form_id }}" name="add" aria-label="Add to cart" data-inventory-count="{{ product.selected_or_first_available_variant.inventory_quantity }}" class="btn btn__link btn__primary"{% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>
-              {% if product.selected_or_first_available_variant.available %}
-                {{ add_to_cart_text }}
-              {% else %}
-                {{ 'products.sold_out' | t }}
-              {% endif %}
+              <span>
+                {% if product.selected_or_first_available_variant.available %}
+                  {{ add_to_cart_text }}
+                {% else %}
+                  {{ 'products.sold_out' | t }}
+                {% endif %}
+              </span>
+              <div class="loader__spinner hidden"></div>
             </button>
             <select name="id" class="selected-variant__id hidden">
               {%- for variant in product.variants -%}
