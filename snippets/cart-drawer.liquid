@@ -137,13 +137,12 @@
               {%- endfor -%}
               {%- if settings.enable_cart_recommendations -%}
                 <cart-recommendations data-section-id="{{ section.id }}" data-product-id="{{ cart.items.first.product_id }}" data-limit="4">
-                  {%- assign product_form_id = 'addToCartForm-' | append: item.product.title -%}
                   {%- if recommendations.performed -%}
                     <div class="cart__recommendation-products">
                       <div class="cart__recommendation-header">Consider These Items As Well</div>
                       <div class="cart__recommendations-list">
                         {%- for product in recommendations.products -%}
-                          {%- render 'cart-recommended-item', product: product, product_form_id: product_form_id -%}
+                          {%- render 'cart-recommended-item', product: product -%}
                         {%- endfor -%}
                       </div>
                     </div>
