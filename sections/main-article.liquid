@@ -110,7 +110,7 @@
               {% if blog.moderated? %}
                 <div class="success__message">{{ 'article.comments.comment_sent' | t }}</div>
               {% else %}
-                <div class="success__message">{{ 'article.comments.comment_published' | t:link: article.url }}</div>
+                <div class="success__message">{{ 'article.comments.comment_published_html' | t:link: article.url }}</div>
               {% endif %}
             {%- endif -%}
             <h3 class="comments-form__heading">{{ 'article.comments.leave_comments' | t }}</h3>
