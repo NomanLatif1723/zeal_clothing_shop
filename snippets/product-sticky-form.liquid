@@ -84,7 +84,6 @@
              endif
           -%}
           {%- form 'product', product, class: "product__form", novalidate: 'novalidate', data-section-id: section.id -%}
-            <input type="hidden" class="selected_variant_id" name="id" value="{{ product.selected_or_first_available_variant.id }}">
             <button data-add-to-cart type="submit" form="{{ product_form_id }}" name="add" aria-label="Add to cart" data-inventory-count="{{ product.selected_or_first_available_variant.inventory_quantity }}" class="btn btn__link btn__primary"{% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>
               <span>
                 {% if product.selected_or_first_available_variant.available %}
