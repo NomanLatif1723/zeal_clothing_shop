@@ -58,6 +58,7 @@
       <div class="product__sticky-form--form">
         <div class="product__sticky-form--selectBox">
           {%- unless product.has_only_default_variant -%}
+            {% comment %}
             <variant-selects data-section="{{ section.id }}" data-url="{{ product.url }}">
               <div class="product__options product-select__options">
                 {%- for option in product.options_with_values -%}
@@ -73,6 +74,7 @@
                 {%- endfor -%}
               </div>
             </variant-selects>
+          {% endcomment %}
             <select class="product__select" data-upsell-variants name="masterSelect">
               {% for variant in product.variants %}
                 {%- if variant.available -%}
