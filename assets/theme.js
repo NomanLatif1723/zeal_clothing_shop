@@ -1266,16 +1266,14 @@ function initHandleQuestions() {
           event.target.closest('.faq-question__item').querySelector('.faq-question__dropdown').classList.toggle('hidden');
           event.target.closest('.faq-question__item').querySelector('.icon__plus').classList.toggle('hidden');
           event.target.closest('.faq-question__item').querySelector('.icon__minus').classList.toggle('hidden');
-        })
-      })
-      document.addEventListener('DOMContentLoaded', () => {
-        document.querySelector('.faq__item-1 .faq-question__header').click();
-      })
+        });
+      });
     }
-  })
+  });
 }
 document.addEventListener("DOMContentLoaded", function() {
   initHandleQuestions();
+  document.querySelector('.faq__item-1 .faq-question__header').click();
 });
 
 // Cart Form Ajax
