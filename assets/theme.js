@@ -1060,6 +1060,30 @@ document.addEventListener("DOMContentLoaded", function() {
   reInitEventListeners();
 });
 
+// Show More Swatches Event Listeners
+function showMoreSwatches() {
+  const ShowMoreSwatches = document.querySelectorAll('.show-more__swatches');
+  // Show More Swatches on Plus Icon Click 
+  ShowMoreSwatches.forEach(swatch => {
+    if (swatch) {
+      swatch.addEventListener('click', () => {
+        let colorSwatchList = event.target.closest('.color-swatch__list');
+        if (colorSwatchList) {
+          let hiddenSwatches = colorSwatchList.querySelector('.hidden__swatches');
+          if (hiddenSwatches) {
+            event.target.classList.add('hide');
+            hiddenSwatches.classList.add('show');
+          }
+        }
+      });
+    }
+  });
+
+}
+document.addEventListener("DOMContentLoaded", function() {
+  showMoreSwatches();
+});
+
 // Collection Sorting Using Ajax
 function initCollectionSort() {
   let selectors = {
