@@ -123,7 +123,8 @@
           <div class="main__heading contact-main__heading"><h2>{{ main_heading }}</h2></div>
         {%- endif -%}  
         <div class="contact__form">
-          {%- form 'contact' -%}
+          {%- assign contact_form_id = 'contact_form-' | append: section.id -%}
+          {%- form 'contact', id: contact_form_id -%}
             {%- if form.posted_successfully? -%}
               <p class="success__message">
                 {{ 'contact.form.success_mesage' | t }}
