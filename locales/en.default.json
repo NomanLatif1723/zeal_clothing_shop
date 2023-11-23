@@ -15,7 +15,7 @@
       "leave_comments": "leave a Comment",
       "submit": "Submit",
       "back": "Back",
-      "comment_published": "Your Comment has been Published.Please <a href='{{ link }}' title='Refresh Page'>Refresh Page<\/a>",
+      "comment_published_html": "Your Comment has been Published.Please <a href='{{ link }}' title='Refresh Page'>Refresh Page<\/a>",
       "comment_sent": "Your Comment has been sent. It will be visible when owner accepted it.",
       "empty": "You don't have any comments yet"
     }
