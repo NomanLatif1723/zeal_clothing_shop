@@ -110,7 +110,10 @@
               {% if blog.moderated? %}
                 <div class="success__message">{{ 'article.comments.comment_sent' | t }}</div>
               {% else %}
-                <div class="success__message">{{ 'article.comments.comment_published' | t }}</div>
+                <div class="success__message">
+                {{ 'article.comments.comment_published' | t }}
+                <a href="{{ article.url }}"class="btn btn__link btn__primary" title="Refresh Page">Refresh Page</a>
+                </div>
               {% endif %}
             {%- endif -%}
             <h3 class="comments-form__heading">{{ 'article.comments.leave_comments' | t }}</h3>
