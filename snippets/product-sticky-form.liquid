@@ -73,6 +73,19 @@
                 {%- endfor -%}
               </div>
             </variant-selects>
+            <select class="product__select" data-upsell-variants name="masterSelect">
+              {% for variant in product.variants %}
+                {%- if variant.available -%}
+                  <option value="{{ variant.id }}" {% if variant == product.selected_or_first_available_variant %}selected{% endif %}>
+                    {{ variant.title }}
+                  </option>
+                {%- else -%}
+                  <option value="{{ variant.id }}" disabled="disabled">
+                    {{ variant.title }}
+                  </option>
+                {%- endif -%}
+              {% endfor %}
+            </select>
           {%- endunless -%}
         </div>
         <div class="product__sticky-form--cartButton">
