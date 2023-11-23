@@ -1894,18 +1894,6 @@ function initProductForm() {
     giftCardRecipientButton: document.querySelector('.recipient__button input'),
     upsellCartItem: document.querySelectorAll('.cart__recommendations-item')
   };
-  const isGiftCartProduct = window.themeContent.settings.giftCartProduct;
-  if(selectors.giftCardRecipientButton){
-    selectors.giftCardRecipientButton.addEventListener('change', () => {
-      document.querySelector('.recipient-form__container').classList.toggle('hidden');
-      document.querySelectorAll('.recipient-form__container input').forEach(field => {
-        field.toggleAttribute('disabled');
-      });
-      document.querySelectorAll('.recipient-form__container textarea').forEach(field => {
-        field.toggleAttribute('disabled');
-      });
-    });
-  }
   // Fetch The Cart Type Rather Page, Drawer or Popup
   const cartType = window.themeContent.settings.cartType;
   if (!selectors.cartHeaderButton) {
@@ -1949,6 +1937,19 @@ function initProductForm() {
       });
     }
   });
+
+  const isGiftCartProduct = window.themeContent.settings.giftCartProduct;
+  if(selectors.giftCardRecipientButton){
+    selectors.giftCardRecipientButton.addEventListener('change', () => {
+      document.querySelector('.recipient-form__container').classList.toggle('hidden');
+      document.querySelectorAll('.recipient-form__container input').forEach(field => {
+        field.toggleAttribute('disabled');
+      });
+      document.querySelectorAll('.recipient-form__container textarea').forEach(field => {
+        field.toggleAttribute('disabled');
+      });
+    });
+  }
 
   // Event For product Form Submit Using Ajax If Cart Type set to Drawer or Popup
   selectors.productForm.forEach(form => {
