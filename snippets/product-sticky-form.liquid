@@ -58,7 +58,6 @@
       <div class="product__sticky-form--form">
         <div class="product__sticky-form--selectBox">
           {%- unless product.has_only_default_variant -%}
-            {% comment %}
             <variant-selects data-section="{{ section.id }}" data-url="{{ product.url }}">
               <div class="product__options product-select__options">
                 {%- for option in product.options_with_values -%}
@@ -74,20 +73,6 @@
                 {%- endfor -%}
               </div>
             </variant-selects>
-          {% endcomment %}
-            <select class="product__select" data-upsell-variants name="masterSelect">
-              {% for variant in product.variants %}
-                {%- if variant.available -%}
-                  <option value="{{ variant.id }}" {% if variant == product.selected_or_first_available_variant %}selected{% endif %}>
-                    {{ variant.title }}
-                  </option>
-                {%- else -%}
-                  <option value="{{ variant.id }}" disabled="disabled">
-                    {{ variant.title }}
-                  </option>
-                {%- endif -%}
-              {% endfor %}
-            </select>
           {%- endunless -%}
         </div>
         <div class="product__sticky-form--cartButton">
@@ -110,7 +95,6 @@
               </span>
               <div class="loader__spinner hidden"></div>
             </button>
-          {% comment %}
             <select name="id" class="selected-variant__id hidden">
               {%- for variant in product.variants -%}
                 {%- if variant.available -%}
@@ -126,7 +110,6 @@
                 {%- endif -%}
               {%- endfor -%}
             </select>
-            {% endcomment %}
           {%- endform -%}
         </div>
       </div>
