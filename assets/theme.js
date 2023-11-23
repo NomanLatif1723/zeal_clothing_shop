@@ -1723,7 +1723,7 @@ function initProductVariants() {
   function updateMasterVariant(matchedVariant, product) {
     const masterVariantSelector = product.querySelector('.selected-variant__id');
     if(!masterVariantSelector) return;
-    masterVariantSelector.value = matchedVariant.id
+    masterVariantSelector.value = matchedVariant.id;
     // selectors.masterVariantSelector.forEach(masterSelect => {
     //   if (!masterSelect) {
     //     return;
