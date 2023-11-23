@@ -1170,6 +1170,7 @@ function initFilterFacetForm() {
           }
         }
         initCollectionSort();
+        showMoreSwatches();
       })
       .catch(error => console.log('Error', error))
       .finally(() => selectors.loader.classList.add('hidden'));
