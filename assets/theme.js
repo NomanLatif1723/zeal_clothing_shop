@@ -1950,8 +1950,6 @@ function initProductForm() {
     }
   });
 
-  const isGiftCartProduct = window.themeContent.settings.giftCartProduct;
-
   // Event For product Form Submit Using Ajax If Cart Type set to Drawer or Popup
   selectors.productForm.forEach(form => {
     if (!form) {
@@ -1960,6 +1958,7 @@ function initProductForm() {
     form.addEventListener('submit', async (event) => {
       const loader = form.querySelector('[data-add-to-cart] .loader__spinner');
       const span = form.querySelector('[data-add-to-cart] span');
+      const isGiftCartProduct = window.themeContent.settings.giftCartProduct;
       if (cartType === 'drawer' || cartType === 'popup') {
         event.preventDefault();
         showLoader(loader,span);
