@@ -549,7 +549,7 @@ function initCountdown() {
   let countdownWrapper = document.querySelectorAll('[data-countdown]');
   countdownWrapper.forEach(wrapper => {
     countdownCalculate(wrapper);
-  })
+  });
   function countdownCalculate(wrapper) {
     let years = wrapper.getAttribute('data-year');
     let months = wrapper.getAttribute('data-month');
