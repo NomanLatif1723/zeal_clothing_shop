@@ -329,8 +329,6 @@ display: inline-block;
 }
 .cart__recommendations-item--variants select {
   padding: 10px;
-  -webkit-appearance: none;
-  font-size: 12px;
 }
 .cart__recommendations-item--variants select {
   padding: 10px;
@@ -346,6 +344,12 @@ display: inline-block;
 }
 .cart__recommendations-item--content {
   width: 70%;
+}
+@media only screen and (max-width: 380px) {
+  .cart__recommendations-item--variants select {
+    -webkit-appearance: none;
+    font-size: 12px;
+  }
 }
 @media only screen and (min-width: 481px) {
   .cart-drawer__box {
