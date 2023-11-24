@@ -1968,14 +1968,14 @@ function initProductForm() {
         event.preventDefault();
         showLoader(loader,span);
         if (isGiftCartProduct) {
-          const isGift = form.querySelector(`#recipient_gift_card-${form.dataset.sectionId}`).checked;
+          const isGift = form.querySelector(`#recipient_gift_card-${form.dataset.sectionId}`);
           const recipientEmail = form.querySelector(`#recipient-email-${form.dataset.sectionId}`);
           const recipientName = form.querySelector(`#recipient-name-${form.dataset.sectionId}`);
           const recipientMessage = form.querySelector(`#recipient-message-${form.dataset.sectionId}`);
           const recipientDate = form.querySelector(`#recipient-date-${form.dataset.sectionId}`);
           const errorMessageEmail = form.querySelector('.recipient-form__error--email');
           const errorMessageDate = form.querySelector('.recipient-form__error--date');
-          if(isGift) {
+          if(isGift.checked) {
             const selectedDate = new Date(recipientDate.value);
             const currentDate = new Date();
             const maxDate = new Date(currentDate.getTime() + (90 * 24 * 60 * 60 * 1000));
