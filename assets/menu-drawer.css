@@ -113,6 +113,6 @@
 @media only screen and (min-width: 381px) {
   .nav-drawer__footer {
     justify-content: space-between;
-    gap: 0;
+    /* gap: 0; */
   }
 }
