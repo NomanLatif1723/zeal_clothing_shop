@@ -587,9 +587,9 @@ function initCountdown() {
     }, 1000);
   }
 }
-document.addEventListener("DOMContentLoaded", function() {
+// document.addEventListener("DOMContentLoaded", function() {
   initCountdown();
-});
+// });
 
 // Image Comparison 
 function initImageComparison() {
