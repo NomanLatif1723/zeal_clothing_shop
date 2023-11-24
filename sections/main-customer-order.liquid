@@ -34,7 +34,7 @@
               {% for line_item in order.line_items %}
                 <tr>
                   <td><label class="label__hidden">{{ 'customers.order.product' | t }}</label>
-                    {{ line_item.title | link_to: line_item.product.url }}
+                    <a href="{{ line_item.product.url }}" class="links" title="{{ line_item.title }}">{{ line_item.title }}</a>
                     {%- assign property_size = line_item.properties | size -%}
                     {% unless line_item.selling_plan_allocation == nil and property_size == 0 %}
                       <div>
