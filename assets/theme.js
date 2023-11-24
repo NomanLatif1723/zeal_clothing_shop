@@ -2268,6 +2268,7 @@ function initProductRecommendations() {
         if (data !== null) {
           container.innerHTML = data;
           initQuickShopCollection();
+          showMoreSwatches();
         }
       }
       replaceContent();
