@@ -329,6 +329,8 @@ display: inline-block;
 }
 .cart__recommendations-item--variants select {
   padding: 10px;
+  -webkit-appearance: none;
+  font-size: 12px;
 }
 .cart__recommendations-item--variants select {
   padding: 10px;
