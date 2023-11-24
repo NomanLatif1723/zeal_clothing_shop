@@ -1969,6 +1969,7 @@ function initProductForm() {
         showLoader(loader,span);
         if (isGiftCartProduct) {
           const isGift = form.querySelector(`#recipient_gift_card-${form.dataset.sectionId}`).checked;
+          console.log(isGift);
           const recipientEmail = form.querySelector(`#recipient-email-${form.dataset.sectionId}`);
           const recipientName = form.querySelector(`#recipient-name-${form.dataset.sectionId}`);
           const recipientMessage = form.querySelector(`#recipient-message-${form.dataset.sectionId}`);
