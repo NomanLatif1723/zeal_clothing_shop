@@ -5,6 +5,8 @@
   if textDirection == 'rtl'
     assign menu_drawer_position = 'right'
   endif
+  assign show_locale = settings.show_language
+  assign show_currency = settings.show_currency
 -%}
 
 <div class="nav-drawer menu-drawer__{{ menu_drawer_position }}">
@@ -34,7 +36,7 @@
         {%- render 'social-icons' -%}
       </div>
       <div class="nav-drawer-locales">
-        {%- render 'localization' -%}
+        {%- render 'localization', show_locale: show_locale, show_currency: show_currency -%}
       </div>
     </div>
   </div>
