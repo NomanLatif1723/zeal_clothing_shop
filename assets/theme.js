@@ -1979,15 +1979,15 @@ function initProductForm() {
             const selectedDate = new Date(recipientDate.value);
             const currentDate = new Date();
             const maxDate = new Date(currentDate.getTime() + (90 * 24 * 60 * 60 * 1000));
-            if (!recipientEmail.value) {
+            if (!recipientEmail.checkValidity()) {
               errorMessageEmail.classList.remove('hidden');
               hideLoader(loader,span);
-              return;
-            } else if (!isValidEmail(recipientEmail.value)) {
-              alert("invalid Email format");
-              hideLoader(loader,span);
-              return;
-            }
+              return;}
+            // } else if (!isValidEmail(recipientEmail.value)) {
+            //   alert("invalid Email format");
+            //   hideLoader(loader,span);
+            //   return;
+            // }
             if (recipientDate.value) {
               if (isNaN(selectedDate.getTime()) || selectedDate > maxDate) {
                 errorMessageDate.classList.remove('hidden');
