@@ -658,7 +658,6 @@
     },
     "7b9de0b8-2dd6-471d-8652-5e3493fedd6b": {
       "type": "video",
-      "disabled": true,
       "settings": {
         "section_width": true,
         "height_desktop": "full",
@@ -1116,7 +1115,7 @@
         "template--19980215124290__f6a0ab30-1339-4dd4-8eb5-070921979e00-buy_buttons-1": {
           "type": "buy_buttons",
           "settings": {
-            "enable_dynamic_checkout": false,
+            "enable_dynamic_checkout": true,
             "enable_gift_card_recipient": false
           }
         }
