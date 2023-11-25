@@ -1985,6 +1985,7 @@ function initProductForm() {
               return;
             } else if (!isValidEmail(recipientEmail.value)) {
               alert("invalid Email format");
+              hideLoader(loader,span);
               return;
             }
             if (recipientDate.value) {
