@@ -32,10 +32,10 @@
     {{ 'swiper.min.css' | asset_url | stylesheet_tag: preload: true }}
 
     {%- unless settings.body_font_family.system? -%}
-      <link rel="preload" as="font" href="{{ settings.body_font_family | font_url }}" type="font/woff2" crossorigin>
+      <link rel="preload" as="font" href="{{ settings.body_font_family | font_url }}" type="font/woff2">
     {%- endunless -%}
     {%- unless settings.heading_font_family.system? -%}
-      <link rel="preload" as="font" href="{{ settings.heading_font_family | font_url }}" type="font/woff2" crossorigin>
+      <link rel="preload" as="font" href="{{ settings.heading_font_family | font_url }}" type="font/woff2">
     {%- endunless -%}
 
     <script>
