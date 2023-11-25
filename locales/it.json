@@ -15,7 +15,7 @@
       "leave_comments": "lascia un commento",
       "submit": "Invia",
       "back": "Indietro",
-      "comment_published": "Il tuo commento è stato pubblicato",
+      "comment_published_html": "Il tuo commento è stato pubblicato. Per favore <a class='form__links' href='{{ link }}' title='Refresh Page'>Aggiorna pagina<\/a>",
       "comment_sent": "Il tuo commento è stato inviato. ",
       "empty": "Non hai ancora commenti"
     }
@@ -308,7 +308,7 @@
       "message": "Messaggio (facoltativo)",
       "send_on": "Invia (facoltativo)",
       "checkbox_label": "Voglio inviarlo come regalo",
-      "email_error_mesage": "L'e-mail non può essere vuota",
+      "email_error_mesage": "L'e-mail non può essere vuota.",
       "date_error_message": "Seleziona una data valida entro i prossimi 90 giorni.",
       "message_max_characters": "200 caratteri max"
     }
