@@ -67,6 +67,7 @@
 }
 .drawer-child__list, .drawer-grandchild__list {
   padding-left: 15px;
+  padding-bottom: 15px;
 }
 .drawer-child__list .menu-item__link,
 .drawer-grandchild__list .menu-item__link{
