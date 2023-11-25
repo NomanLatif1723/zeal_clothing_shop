@@ -1983,6 +1983,8 @@ function initProductForm() {
               errorMessageEmail.classList.remove('hidden');
               hideLoader(loader,span);
               return;
+            } else if (!isValidEmail(recipientEmail.value)) {
+              alert("invalid Email format");
             }
             if (recipientDate.value) {
               if (isNaN(selectedDate.getTime()) || selectedDate > maxDate) {
@@ -2099,7 +2101,10 @@ function initProductForm() {
       span.classList.remove('hidden');
     }
   }
-  
+  function isValidEmail(email) {
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
 }
 document.addEventListener("DOMContentLoaded", function() {
   initProductForm();
