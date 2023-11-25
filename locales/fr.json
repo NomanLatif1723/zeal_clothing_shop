@@ -15,7 +15,7 @@
       "leave_comments": "laissez un commentaire",
       "submit": "Soumettre",
       "back": "Dos",
-      "comment_published": "Votre commentaire à été publié",
+      "comment_published_html": "Votre commentaire a été publié. S'il vous plaît <a class='form__links' href='{{ link }}' title='Refresh Page'>Rafraîchir la page<\/a>",
       "comment_sent": "Votre commentaire a été envoyé. Il sera visible lorsque le propriétaire l'aura accepté.",
       "empty": "Vous n'avez pas encore de commentaires"
     }
@@ -308,7 +308,7 @@
       "message": "Message (optionnel)",
       "send_on": "Envoyer (optionnel)",
       "checkbox_label": "Je veux l'envoyer en cadeau",
-      "email_error_mesage": "L'e-mail ne peut pas être vide",
+      "email_error_mesage": "L'e-mail ne peut pas être vide.",
       "date_error_message": "Veuillez sélectionner une date valide dans les 90 prochains jours.",
       "message_max_characters": "200 caractères maximum"
     }
