@@ -1982,12 +1982,8 @@ function initProductForm() {
             if (!recipientEmail.checkValidity()) {
               errorMessageEmail.classList.remove('hidden');
               hideLoader(loader,span);
-              return;}
-            // } else if (!isValidEmail(recipientEmail.value)) {
-            //   alert("invalid Email format");
-            //   hideLoader(loader,span);
-            //   return;
-            // }
+              return;
+            }
             if (recipientDate.value) {
               if (isNaN(selectedDate.getTime()) || selectedDate > maxDate) {
                 errorMessageDate.classList.remove('hidden');
@@ -2102,10 +2098,6 @@ function initProductForm() {
       loader.classList.add('hidden');
       span.classList.remove('hidden');
     }
-  }
-  function isValidEmail(email) {
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
   }
 }
 document.addEventListener("DOMContentLoaded", function() {
