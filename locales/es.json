@@ -15,7 +15,7 @@
       "leave_comments": "Deja un comentario",
       "submit": "Entregar",
       "back": "Atrás",
-      "comment_published": "Su comentario ha sido publicado",
+      "comment_published_html": "Su comentario ha sido publicado. Por favor <a class='form__links' href='{{ link }}' title='Refresh Page'>Actualizar página<\/a>",
       "comment_sent": "Su comentario ha sido enviado. Será visible cuando el propietario lo acepte.",
       "empty": "Aún no tienes ningún comentario"
     }
@@ -308,7 +308,7 @@
       "message": "Mensaje (opcional)",
       "send_on": "Enviar (opcional)",
       "checkbox_label": "Quiero enviar esto como regalo",
-      "email_error_mesage": "El correo electrónico no puede estar en blanco",
+      "email_error_mesage": "El correo electrónico no puede estar en blanco.",
       "date_error_message": "Seleccione una fecha válida dentro de los próximos 90 días.",
       "message_max_characters": "200 caracteres máx."
     }
