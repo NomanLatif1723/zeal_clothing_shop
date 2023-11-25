@@ -15,7 +15,7 @@
       "leave_comments": "Lämna en kommentar",
       "submit": "Skicka in",
       "back": "Tillbaka",
-      "comment_published": "Din kommentar har publicerats",
+      "comment_published_html": "Din kommentar har publicerats. Snälla <a class='form__links' href='{{ link }}' title='Refresh Page'>Uppdatera sida<\/a>",
       "comment_sent": "Din kommentar har skickats. ",
       "empty": "Du har inga kommentarer än"
     }
@@ -308,7 +308,7 @@
       "message": "Meddelande (valfritt)",
       "send_on": "Skicka vidare (valfritt)",
       "checkbox_label": "Jag vill skicka detta som en gåva",
-      "email_error_mesage": "E-post kan inte vara tomt",
+      "email_error_mesage": "E-post kan inte vara tomt.",
       "date_error_message": "Välj ett giltigt datum inom de närmaste 90 dagarna.",
       "message_max_characters": "M200 tecken Max"
     }
