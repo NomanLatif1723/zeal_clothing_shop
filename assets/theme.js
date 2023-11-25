@@ -1020,15 +1020,15 @@ function reInitEventListeners() {
     });
   }
   
-  // Open Filter Drawer Function
-  function openFilterDrawer() {
-    if (selectors.filterDrawer.classList.contains('filter-drawer__left')) {
-      selectors.filterDrawer.classList.add('drawer-open__left');
-    } else {
-      selectors.filterDrawer.classList.add('drawer-open__right');
-    }
-    selectors.bodyContainer.classList.add('drawer__opening');
-  }
+  // // Open Filter Drawer Function
+  // function openFilterDrawer() {
+  //   if (selectors.filterDrawer.classList.contains('filter-drawer__left')) {
+  //     selectors.filterDrawer.classList.add('drawer-open__left');
+  //   } else {
+  //     selectors.filterDrawer.classList.add('drawer-open__right');
+  //   }
+  //   selectors.bodyContainer.classList.add('drawer__opening');
+  // }
   // Close Filter Drawer Function
   function closeFilterDrawer() {
     if (selectors.filterDrawer.classList.contains('filter-drawer__left')) {
@@ -1074,7 +1074,9 @@ function initCollectionSort() {
     loader: document.querySelector('.loader'),
     filterForm: document.querySelector('.filter-form'),
     collectionContainer: document.querySelector('.collection-grid'),
-    filterSortBtn: document.querySelector('.filter__btn')
+    filterSortBtn: document.querySelector('.filter__btn'),
+    filterDrawer: document.querySelector('.filter-drawer'),
+    bodyContainer: document.querySelector('body')
   };
   let currentURL, baseURL;
   Shopify.queryParams = {};
@@ -1119,6 +1121,16 @@ function initCollectionSort() {
   }
   function updateUrl(event) {
     history.replaceState(null, null, baseURL);
+  }
+  
+  // Open Filter Drawer Function
+  function openFilterDrawer() {
+    if (selectors.filterDrawer.classList.contains('filter-drawer__left')) {
+      selectors.filterDrawer.classList.add('drawer-open__left');
+    } else {
+      selectors.filterDrawer.classList.add('drawer-open__right');
+    }
+    selectors.bodyContainer.classList.add('drawer__opening');
   }
 }
 document.addEventListener("DOMContentLoaded", function() {
