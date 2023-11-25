@@ -661,7 +661,7 @@
       "settings": {
         "section_width": true,
         "height_desktop": "full",
-        "height_mobile": "auto",
+        "height_mobile": "full",
         "sub_heading": "Sub Heading",
         "heading": "Video",
         "cover_image": "shopify:\/\/shop_images\/david-taffet-mzbju_-fnnE-unsplash.jpg",
