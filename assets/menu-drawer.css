@@ -65,7 +65,7 @@
   justify-content: space-between;
   gap: initial;
 }
-.drawer-child__list {
+.drawer-child__list, .drawer-grandchild__list {
   padding-left: 15px;
 }
 .drawer-child__list .menu-item__link {
