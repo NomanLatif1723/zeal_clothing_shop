@@ -308,7 +308,7 @@
       "message": "Message (Optional)",
       "send_on": "Send on (Optional)",
       "checkbox_label": "I Want to send this as a Gift",
-      "email_error_mesage": "Email Can't be Blank",
+      "email_error_mesage": "Email Can't be Blank. Use Proper Email Format",
       "date_error_message": "Please select a valid date within the next 90 days.",
       "message_max_characters": "200 Charaters Max"
     }
