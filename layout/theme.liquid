@@ -38,12 +38,6 @@
       <link rel="preload" as="font" href="{{ settings.heading_font_family | font_url }}" type="font/woff2" crossorigin>
     {%- endunless -%}
     {% endcomment %}
-    {%- liquid
-      assign isgiftCard = false
-      if template.name == 'product'
-       assign isgiftCard = product.gift_card?
-      endif
-    -%}
     <script>
       window.themeContent = {
         routes: {
@@ -70,8 +64,7 @@
         settings: {
           quickView: {{ settings.show_quick_view }},
           templateName: "{{ template.name }}",
-          cartType: "{{ settings.cart_type }}",
-          giftCartProduct: {{ isgiftCard }}
+          cartType: "{{ settings.cart_type }}"
         }
       }
     </script>
