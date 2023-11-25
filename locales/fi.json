@@ -15,7 +15,7 @@
       "leave_comments": "Jätä kommentti",
       "submit": "Lähetä",
       "back": "Takaisin",
-      "comment_published": "Kommenttisi on julkaistu",
+      "comment_published_html": "Kommenttisi on julkaistu. Ole hyvä <a class='form__links' href='{{ link }}' title='Refresh Page'>Päivitä sivu<\/a>",
       "comment_sent": "Kommenttisi on lähetetty. Se näkyy, kun omistaja hyväksyy sen.",
       "empty": "Sinulla ei ole vielä kommentteja"
     }
@@ -308,7 +308,7 @@
       "message": "Viesti (valinnainen)",
       "send_on": "Lähetä (valinnainen)",
       "checkbox_label": "Haluan lähettää tämän lahjaksi",
-      "email_error_mesage": "Sähköposti ei voi olla tyhjä",
+      "email_error_mesage": "Sähköposti ei voi olla tyhjä.",
       "date_error_message": "Valitse kelvollinen päivämäärä seuraavien 90 päivän sisällä.",
       "message_max_characters": "200 merkkiä max"
     }
