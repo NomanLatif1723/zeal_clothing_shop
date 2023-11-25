@@ -979,12 +979,12 @@ function reInitEventListeners() {
     }
   });
 
-  // Filter/Sort Button Click Event For Opening Filter Drawer
-  if (selectors.filterSortBtn) {
-    selectors.filterSortBtn.addEventListener('click', () => {
-      openFilterDrawer();
-    });
-  }
+  // // Filter/Sort Button Click Event For Opening Filter Drawer
+  // if (selectors.filterSortBtn) {
+  //   selectors.filterSortBtn.addEventListener('click', () => {
+  //     openFilterDrawer();
+  //   });
+  // }
 
   // Close Drawer Button Event For Filters Drawer
   if (selectors.filterIconClose) {
@@ -1073,7 +1073,8 @@ function initCollectionSort() {
     sortContainer: document.querySelectorAll('.collection__sort'),
     loader: document.querySelector('.loader'),
     filterForm: document.querySelector('.filter-form'),
-    collectionContainer: document.querySelector('.collection-grid')
+    collectionContainer: document.querySelector('.collection-grid'),
+    filterSortBtn: document.querySelector('.filter__btn')
   };
   let currentURL, baseURL;
   Shopify.queryParams = {};
@@ -1085,6 +1086,14 @@ function initCollectionSort() {
       updateUrl(event);
     });
   });
+
+  // Filter/Sort Button Click Event For Opening Filter Drawer
+  if (selectors.filterSortBtn) {
+    selectors.filterSortBtn.addEventListener('click', () => {
+      openFilterDrawer();
+    });
+  }
+  
   function sortingSubmitForm(event) {
     selectors.loader.classList.remove('hidden');
     const sortValue = event.target.value;
