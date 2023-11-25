@@ -15,7 +15,7 @@
       "leave_comments": "コメントを残す",
       "submit": "提出する",
       "back": "戻る",
-      "comment_published": "コメントが公開されました",
+      "comment_published_html": "あなたのコメントは公開されました。お願いします。 <a class='form__links' href='{{ link }}' title='Refresh Page'>ページの更新<\/a>",
       "comment_sent": "コメントが送信されました。",
       "empty": "まだコメントがありません"
     }
