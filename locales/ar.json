@@ -15,7 +15,7 @@
       "leave_comments": "اترك تعليقا",
       "submit": "يُقدِّم",
       "back": "خلف",
-      "comment_published_html": "وقد تم نشر تعليقك",
+      "comment_published_html": "لقد تم نشر تعليقك.من فضلك <a class='form__links' href='{{ link }}' title='إعادة تحميل الصفحة'>إعادة تحميل الصفحة<\/a>",
       "comment_sent": "لقد تم ارسال تعليقك. سيكون مرئيًا عندما يقبله المالك.",
       "empty": "ليس لديك أي تعليقات حتى الآن"
     }
