@@ -15,7 +15,7 @@
       "leave_comments": "Efterlad en kommentar",
       "submit": "Indsend",
       "back": "Tilbage",
-      "comment_published": "Din kommentar er blevet offentliggjort",
+      "comment_published_html": "Din kommentar er blevet offentliggjort. Venligst <a class='form__links' href='{{ link }}' title='Refresh Page'>Opdater siden<\/a>",
       "comment_sent": "Din kommentar er blevet sendt. ",
       "empty": "Du har ingen kommentarer endnu"
     }
@@ -308,7 +308,7 @@
       "message": "Besked (valgfrit)",
       "send_on": "Send videre (valgfrit)",
       "checkbox_label": "Jeg vil gerne sende dette som gave",
-      "email_error_mesage": "E-mail kan ikke være tom",
+      "email_error_mesage": "E-mail kan ikke være tom.",
       "date_error_message": "Vælg venligst en gyldig dato inden for de næste 90 dage.",
       "message_max_characters": "200 tegn Max"
     }
