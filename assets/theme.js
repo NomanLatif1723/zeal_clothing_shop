@@ -1965,12 +1965,11 @@ function initProductForm() {
       const loader = form.querySelector('[data-add-to-cart] .loader__spinner');
       const span = form.querySelector('[data-add-to-cart] span');
       const isGiftCartProduct = window.themeContent.settings.giftCartProduct;
+      const isGift = form.querySelector(`#recipient_gift_card-${form.dataset.sectionId}`);
       if (cartType === 'drawer' || cartType === 'popup') {
         event.preventDefault();
         showLoader(loader,span);
-        if (isGiftCartProduct) {
-          const isGift = form.querySelector(`#recipient_gift_card-${form.dataset.sectionId}`);
-          // console.log(isGift);
+        if (isGift) {
           const recipientEmail = form.querySelector(`#recipient-email-${form.dataset.sectionId}`);
           const recipientName = form.querySelector(`#recipient-name-${form.dataset.sectionId}`);
           const recipientMessage = form.querySelector(`#recipient-message-${form.dataset.sectionId}`);
