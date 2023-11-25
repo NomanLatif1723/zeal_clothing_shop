@@ -916,7 +916,6 @@ function reInitEventListeners() {
     filterDrawer: document.querySelector('.filter-drawer'),
     bodyContainer: document.querySelector('body'),
     filterItem: document.querySelectorAll('.filter-group__item'),
-    filterSortBtn: document.querySelector('.filter__btn'),
     filterIconClose: document.querySelector('.filter-icon__close'),
     filterDrawerBox: document.querySelector('.filter-drawer__box'),
     collectionSwatchesGrid: document.querySelectorAll('.grid-product__variants')
@@ -930,11 +929,8 @@ function reInitEventListeners() {
         selector.addEventListener('change', async() => {
           let selectedOptions = [];
           if (selector.type == 'radio' || selector.type == 'checkbox') {
-            // const swatchesOptions = selector.closest('.color-swatch__item');
-            // swatchesOptions.classList.remove('selected');
             if (selector.checked) {
               selectedOptions.push(selector.value);
-              // swatchesOptions.classList.add('selected');
             }
             await updateMedia(selectedOptions);
           }
@@ -979,13 +975,6 @@ function reInitEventListeners() {
     }
   });
 
-  // // Filter/Sort Button Click Event For Opening Filter Drawer
-  // if (selectors.filterSortBtn) {
-  //   selectors.filterSortBtn.addEventListener('click', () => {
-  //     openFilterDrawer();
-  //   });
-  // }
-
   // Close Drawer Button Event For Filters Drawer
   if (selectors.filterIconClose) {
     selectors.filterIconClose.addEventListener('click', () => {
@@ -1020,15 +1009,6 @@ function reInitEventListeners() {
     });
   }
   
-  // // Open Filter Drawer Function
-  // function openFilterDrawer() {
-  //   if (selectors.filterDrawer.classList.contains('filter-drawer__left')) {
-  //     selectors.filterDrawer.classList.add('drawer-open__left');
-  //   } else {
-  //     selectors.filterDrawer.classList.add('drawer-open__right');
-  //   }
-  //   selectors.bodyContainer.classList.add('drawer__opening');
-  // }
   // Close Filter Drawer Function
   function closeFilterDrawer() {
     if (selectors.filterDrawer.classList.contains('filter-drawer__left')) {
