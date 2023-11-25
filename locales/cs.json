@@ -15,7 +15,7 @@
       "leave_comments": "Zanechat komentář",
       "submit": "Předložit",
       "back": "Zadní",
-      "comment_published": "Váš komentář byl zveřejněn",
+      "comment_published_html": "Váš komentář byl zveřejněn. Prosím <a class='form__links' href='{{ link }}' title='Refresh Page'>Obnovit stránku<\/a>",
       "comment_sent": "Váš komentář byl odeslán. ",
       "empty": "Zatím nemáte žádné komentáře"
     }
@@ -308,7 +308,7 @@
       "message": "Zpráva (volitelné)",
       "send_on": "Odeslat (volitelné)",
       "checkbox_label": "Chci to poslat jako dárek",
-      "email_error_mesage": "Email nemůže být prázdný",
+      "email_error_mesage": "Email nemůže být prázdný.",
       "date_error_message": "Vyberte prosím platné datum během následujících 90 dnů.",
       "message_max_characters": "Max. 200 znaků"
     }
