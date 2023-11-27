@@ -2164,9 +2164,8 @@ function initQuickShopCollection() {
     // selectors.quickShopModal.classList.remove('hidden');
     quickShopModal.classList.remove('hidden');
   }
-  function closeQuickShopModal(quickShopModal) {
-    // selectors.quickShopModal.classList.add('hidden');
-    quickShopModal.classList.remove('hidden');
+  function closeQuickShopModal() {
+    selectors.quickShopModal.classList.add('hidden');
   }
   
   const products = document.querySelectorAll('.collection-grid__image--wrapper');
