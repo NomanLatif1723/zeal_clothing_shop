@@ -2129,19 +2129,16 @@ document.addEventListener("DOMContentLoaded", function() {
 function initQuickShopCollection() {
   let selectors = {
     quickShopBtn: document.querySelectorAll('.quick-shop__btn'),
-    collectionGridItem: document.querySelectorAll('.collection-grid__item'),
     quickShopModal: document.querySelector('.quick-shop__modal'),
     modalCloseBtn: document.querySelector('.quickview-modal__close'),
     quickShopModalBox: document.querySelector('.quick-shop__box'),
     quickViewContainer: document.querySelector('.quick-view__container')
   }
   
-  selectors.collectionGridItem.forEach(item => {
-    if (!item) return;
-    const quickShopBtn = item.querySelector('.quick-shop__btn');
-    const quickShopModal = quickShopBtn.closest('.collection-grid__item').querySelector('.quick-shop__modal');
-    quickShopBtn.addEventListener('click', () => {
-      openQuickShopModal(quickShopBtn);
+  selectors.quickShopBtn.forEach(button => {
+    if (!button) return;
+    button.addEventListener('click', () => {
+      openQuickShopModal();
     });
   });
   
@@ -2160,9 +2157,8 @@ function initQuickShopCollection() {
     event.stopPropagation();
   });
 
-  function openQuickShopModal(quickShopModal) {
-    // selectors.quickShopModal.classList.remove('hidden');
-    quickShopModal.classList.remove('hidden');
+  function openQuickShopModal() {
+    selectors.quickShopModal.classList.remove('hidden');
   }
   function closeQuickShopModal() {
     selectors.quickShopModal.classList.add('hidden');
