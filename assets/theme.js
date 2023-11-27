@@ -2129,7 +2129,7 @@ document.addEventListener("DOMContentLoaded", function() {
 function initQuickShopCollection() {
   let selectors = {
     quickShopBtn: document.querySelectorAll('.quick-shop__btn'),
-    collectionGridItem: dicument.querySelectorAll('.collection-grid__item'),
+    collectionGridItem: document.querySelectorAll('.collection-grid__item'),
     quickShopModal: document.querySelector('.quick-shop__modal'),
     modalCloseBtn: document.querySelector('.quickview-modal__close'),
     quickShopModalBox: document.querySelector('.quick-shop__box'),
