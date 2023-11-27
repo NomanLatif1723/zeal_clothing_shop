@@ -192,9 +192,9 @@ function initStickyHeader() {
     }
   } 
 }
-// document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
   initStickyHeader();
-// });
+});
 
 // Header Toggle button
 function initHeaderNavigation() {
