@@ -2137,7 +2137,7 @@ function initQuickShopCollection() {
   }
   
   selectors.collectionGridItem.forEach(item => {
-    if (!button) return;
+    if (!item) return;
     const quickShopBtn = item.querySelector('.quick-shop__btn');
     const quickShopModal = quickShopBtn.closest('.collection-grid__item').querySelector('.quick-shop__modal');
     quickShopBtn.addEventListener('click', () => {
