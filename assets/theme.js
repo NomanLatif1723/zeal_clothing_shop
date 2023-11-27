@@ -2129,16 +2129,19 @@ document.addEventListener("DOMContentLoaded", function() {
 function initQuickShopCollection() {
   let selectors = {
     quickShopBtn: document.querySelectorAll('.quick-shop__btn'),
+    collectionGridItem: dicument.querySelectorAll('.collection-grid__item'),
     quickShopModal: document.querySelector('.quick-shop__modal'),
     modalCloseBtn: document.querySelector('.quickview-modal__close'),
     quickShopModalBox: document.querySelector('.quick-shop__box'),
     quickViewContainer: document.querySelector('.quick-view__container')
   }
   
-  selectors.quickShopBtn.forEach(button => {
+  selectors.collectionGridItem.forEach(item => {
     if (!button) return;
-    button.addEventListener('click', () => {
-      openQuickShopModal();
+    const quickShopBtn = item.querySelector('.quick-shop__btn');
+    const quickShopModal = quickShopBtn.closest('.collection-grid__item').querySelector('.quick-shop__modal');
+    quickShopBtn.addEventListener('click', () => {
+      openQuickShopModal(quickShopBtn);
     });
   });
   
@@ -2157,11 +2160,13 @@ function initQuickShopCollection() {
     event.stopPropagation();
   });
 
-  function openQuickShopModal() {
-    selectors.quickShopModal.classList.remove('hidden');
+  function openQuickShopModal(quickShopModal) {
+    // selectors.quickShopModal.classList.remove('hidden');
+    quickShopModal.classList.remove('hidden');
   }
-  function closeQuickShopModal() {
-    selectors.quickShopModal.classList.add('hidden');
+  function closeQuickShopModal(quickShopModal) {
+    // selectors.quickShopModal.classList.add('hidden');
+    quickShopModal.classList.remove('hidden');
   }
   
   const products = document.querySelectorAll('.collection-grid__image--wrapper');
