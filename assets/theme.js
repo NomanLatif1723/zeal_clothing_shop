@@ -2225,6 +2225,7 @@ function initQuickShopCollection() {
         selectors.quickViewContainer.appendChild(newData);
         document.querySelector('.quick-view__container .product-full__info--btn').classList.remove('hidden');
         document.querySelector('.product-grid').setAttribute('data-history-url', 'false');
+        document.querySelector('.image__zoom-btn').classList.add('hidden');
         initMediaGallery();
         initProductVariants();
         initProductForm();
