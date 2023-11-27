@@ -2229,6 +2229,7 @@ function initQuickShopCollection() {
         initProductVariants();
         initProductForm();
         initCountdown();
+        initProductZoomGallery();
       }
     })
     .catch(function(error) {
