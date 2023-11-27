@@ -174,7 +174,7 @@ function initStickyHeader() {
       let isSticky = false;
       let lastScrollY = 0;
       function updateStickyHeader() {
-        const scrollY = window.scrollY;
+        const scrollY = document.body.scrollTop;
         if (scrollY > lastScrollY) {
           if (!isSticky) {
             header.classList.add('sticky__header');
