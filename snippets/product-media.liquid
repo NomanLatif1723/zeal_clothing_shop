@@ -70,7 +70,7 @@
               {{ media | media_tag }}
             </div> 
           {%- endif -%}
-          {%- if section.settings.show_image_zoom and media.media_type == 'image' or media.media_type == 'model' -%}
+          {%- if section.settings.show_image_zoom and media.media_type == 'image' -%}
             <button class="image__zoom-btn btn btn__primary" type="button" title="photoswipe Zoom" data-media-id="{{ media.id }}">
               {%- render 'icon-search' -%}
             </button>
