@@ -361,7 +361,17 @@
   },
   "social-media": {
     "general": {
-      "social_label": "Liity meihin {{ social }}"
+      "social_label": "Liity meihin {{ social }}",
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "twitter": "Viserrys",
+      "pinterest": "Pinterest",
+      "snapchat": "Snapchat",
+      "youtube": "Youtube",
+      "vimeo": "Vimeo",
+      "tiktok": "Tiktok",
+      "tumblr": "Tumblr",
+      "linkedin": "LinkedIn"
     },
     "socials_share": {
       "facebook": "Facebook",
