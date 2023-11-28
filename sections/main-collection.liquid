@@ -48,7 +48,7 @@
                 <div class="drawer__title">{{ 'collections.general.sort_drawer' | t }}</div>
               </div>
               {%- if show_sorting -%}
-                <div class="catalog-sorting__drawer filter-drawer__header">
+                <div class="catalog__sorting catalog-sorting__drawer filter-drawer__header">
                   <label for="sort-byDrawer" class="visually__hidden">{{ 'collections.general.sort_drawer' | t }}</label>
                   <select id="sort-byDrawer" class="collection__sort">
                     {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
