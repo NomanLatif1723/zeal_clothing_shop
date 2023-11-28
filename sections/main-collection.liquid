@@ -48,17 +48,19 @@
                 <div class="drawer__title">{{ 'collections.general.sort_drawer' | t }}</div>
               </div>
               {%- if show_sorting -%}
-                <div class="catalog__sorting catalog-sorting__drawer filter-drawer__header">
-                  <label for="sort-byDrawer" class="visually__hidden">{{ 'collections.general.sort_drawer' | t }}</label>
-                  <select id="sort-byDrawer" class="collection__sort">
-                    {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
-                    {%- for option in collection.sort_options -%}
-                      <option value="{{ option.value }}" {% if option.value == sort_by %}selected="selected"{% endif %}>
-                        {{ option.name }}
-                      </option>
-                    {%- endfor -%}
-                  </select>
-                  <span class="select__icon">{% render 'icon-arrow-down' %}</span>
+                <div class="catalog-sorting__drawer filter-drawer__header">
+                  <div class="catalog__sorting">
+                    <label for="sort-byDrawer" class="visually__hidden">{{ 'collections.general.sort_drawer' | t }}</label>
+                    <select id="sort-byDrawer" class="collection__sort">
+                      {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
+                      {%- for option in collection.sort_options -%}
+                        <option value="{{ option.value }}" {% if option.value == sort_by %}selected="selected"{% endif %}>
+                          {{ option.name }}
+                        </option>
+                      {%- endfor -%}
+                    </select>
+                    <span class="select__icon">{% render 'icon-arrow-down' %}</span>
+                  </div>
                 </div>
               {%- endif -%}
             </div>
