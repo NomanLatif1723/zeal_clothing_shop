@@ -361,7 +361,17 @@
   },
   "social-media": {
     "general": {
-      "social_label": "参加しましょう {{ social }}"
+      "social_label": "参加しましょう {{ social }}",
+      "facebook": "フェイスブック",
+      "instagram": "インスタグラム",
+      "twitter": "ツイッター",
+      "pinterest": "ピンタレスト",
+      "snapchat": "スナップチャット",
+      "youtube": "ユーチューブ",
+      "vimeo": "ヴィメオ",
+      "tiktok": "チクタク",
+      "tumblr": "タンブラー",
+      "linkedin": "リンクトイン"
     },
     "socials_share": {
       "facebook": "フェイスブック",
