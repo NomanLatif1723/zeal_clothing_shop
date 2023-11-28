@@ -316,9 +316,6 @@ display: inline-block;
   gap: 20px;
   padding-bottom: 20px;
 }
-.cart__recommendations-item--variants .product__options {
-  position: relative;
-}
 .cart__recommendations-item--title{
   padding-bottom: 4px;
 }
