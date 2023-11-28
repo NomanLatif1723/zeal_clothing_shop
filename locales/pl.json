@@ -361,7 +361,17 @@
   },
   "social-media": {
     "general": {
-      "social_label": "Dołącz do nas na {{ social }}"
+      "social_label": "Dołącz do nas na {{ social }}",
+      "facebook": "Facebook",
+      "instagram": "Instagrama",
+      "twitter": "Świergot",
+      "pinterest": "Pinteresta",
+      "snapchat": "Snapchat",
+      "youtube": "youtube",
+      "vimeo": "Vimeo",
+      "tiktok": "TIK Tok",
+      "tumblr": "Tumblr",
+      "linkedin": "LinkedIn"
     },
     "socials_share": {
       "facebook": "Facebook",
