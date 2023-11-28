@@ -361,7 +361,17 @@
   },
   "social-media": {
     "general": {
-      "social_label": "Přidejte se k nám {{ social }}"
+      "social_label": "Přidejte se k nám {{ social }}",
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "twitter": "Cvrlikání",
+      "pinterest": "Pinterest",
+      "snapchat": "Snapchat",
+      "youtube": "Youtube",
+      "vimeo": "Vimeo",
+      "tiktok": "Tik tak",
+      "tumblr": "Tumblr",
+      "linkedin": "LinkedIn"
     },
     "socials_share": {
       "facebook": "Facebook",
