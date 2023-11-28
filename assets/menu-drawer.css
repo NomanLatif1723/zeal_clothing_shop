@@ -93,8 +93,11 @@
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-  /* gap: 20px; */
+  margin: -10px;
   border-top: 1px solid rgba(1,1,1,0.1);
+}
+.nav-footer__block {
+  margin: 10px;
 }
 .nav-drawer-socials .icon {
   fill: #111111;
