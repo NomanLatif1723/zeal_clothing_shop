@@ -115,8 +115,9 @@ display: none;
   height: 100%;
 }
 .cart__terms-checkbox input {
-  width: auto;
-  cursor: pointer;
+  /* width: auto;
+  cursor: pointer; */
+  display: none;
 }
 .cart__terms-checkbox label {
   cursor: pointer;
