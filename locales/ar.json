@@ -361,7 +361,17 @@
   },
   "social-media": {
     "general": {
-      "social_label": "انضم إلينا على {{ social }}"
+      "social_label": "انضم إلينا على {{ social }}",
+      "facebook": "فيسبوك",
+      "instagram": "انستغرام",
+      "twitter": "تويتر",
+      "pinterest": "بينتريست",
+      "snapchat": "سناب شات",
+      "youtube": "موقع YouTube",
+      "vimeo": "فيميو",
+      "tiktok": "تيك توك",
+      "tumblr": "نعرفكم",
+      "linkedin": "ينكدين"
     },
     "socials_share": {
       "facebook": "فيسبوك",
