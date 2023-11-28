@@ -17,12 +17,12 @@
 <div class="announcement__bar" data-section-id="{{ section.id }}">
   <div class="page__width">
     <div class="announcement__wrapper">
-      <div class="social__container">
+      <div class="announcement__block social__container">
         {%- if show_socials -%}
           {%- render 'social-icons' -%}
         {%- endif -%}
       </div>
-      <div class="main__announcement-banner">
+      <div class="announcement__block main__announcement-banner">
         {%- if heading_text != blank -%}
           <div class="announcement__heading">{{ heading_text }}</div>
         {%- endif -%}
@@ -37,7 +37,7 @@
         {%- endif -%}
       </div>
       {% if show_locale or show_currency %}
-        <div class="language__currency-container">
+        <div class="announcement__block language__currency-container">
           {%- render 'localization',
              show_locale: show_locale,
              show_currency: show_currency
