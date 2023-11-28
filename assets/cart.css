@@ -115,16 +115,8 @@ display: none;
 .cart__item-image a {
   height: 100%;
 }
-.cart__terms-checkbox input {
-  /* width: auto;
-  cursor: pointer; */
-  display: none;
-}
 .cart__terms-checkbox label {
   cursor: pointer;
-}
-.cart__terms-checkbox span {
-  padding-left: 30px;
 }
 .cart__checkout-wrapper .btn__link {
   width: 100%;
