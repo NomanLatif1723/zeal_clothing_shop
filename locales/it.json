@@ -361,7 +361,17 @@
   },
   "social-media": {
     "general": {
-      "social_label": "Unisciti a noi su {{ social }}"
+      "social_label": "Unisciti a noi su {{ social }}",
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "twitter": "Twitter",
+      "pinterest": "Pinterest",
+      "snapchat": "Snapchat",
+      "youtube": "Youtube",
+      "vimeo": "Vimeo",
+      "tiktok": "Tic toc",
+      "tumblr": "Tumblr",
+      "linkedin": "LinkedIn"
     },
     "socials_share": {
       "facebook": "Facebook",
