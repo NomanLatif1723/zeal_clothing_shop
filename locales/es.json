@@ -361,7 +361,17 @@
   },
   "social-media": {
     "general": {
-      "social_label": "Únase a nosotros en {{ social }}"
+      "social_label": "Únase a nosotros en {{ social }}",
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "twitter": "Gorjeo",
+      "pinterest": "Pinterest",
+      "snapchat": "Snapchat",
+      "youtube": "Youtube",
+      "vimeo": "Vimeo",
+      "tiktok": "Tiktok",
+      "tumblr": "Tumblr",
+      "linkedin": "LinkedIn"
     },
     "socials_share": {
       "facebook": "Facebook",
