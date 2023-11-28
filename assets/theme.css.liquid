@@ -4560,6 +4560,8 @@ iframe.product-media__video {
   transform: translate(-50%, -50%);
   background: white;
   padding: 50px 30px;
+  max-width: calc(100% - 30px);
+  width: 100%;
   cursor: auto;
 }
 .password__form .form__grid {
@@ -4636,6 +4638,9 @@ iframe.product-media__video {
 @media only screen and (min-width: 769px) {
   .main__password-section {
     height: 700px;
+  }
+  .popup__modal{
+    max-width: 450px;
   }
   .password__image-container {
     position: absolute;
