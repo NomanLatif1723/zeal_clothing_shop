@@ -172,7 +172,8 @@
           <div class="product__sizeguide" >
             {%- if section.settings.size_chart_page != blank -%}
             <button id="sizeChartBtn" type="button" aria-label="{{ 'products.sizeguide_text' | t }}">
-              {%- render 'icon-sizeguide' -%}{{ 'products.sizeguide_text' | t }}
+              {%- render 'icon-sizeguide' -%}
+              <span>{{ 'products.sizeguide_text' | t }}</span>
             </button>
             <div class="sizeguide-popup popup__hidden" data-popup-modal>
               <div class="sizeguide-popup__box">
