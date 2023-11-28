@@ -1,6 +1,4 @@
 .nav-drawer {
-  /* position: relative;
-  z-index: 999; */
   position: fixed;
   top: 0;
   height: 100vh;
@@ -13,9 +11,6 @@
   visibility: visible;
 }
 .nav-content__wrapper {
-  /* position: fixed;
-  z-index: 99;
-  top: 0; */
   background: #ffffff;
   background: var(--colorBody);
   height: 100vh;
@@ -51,7 +46,6 @@
   display: none;
 }
 .drawer-child__list {
-  /* margin-top: -10px; */
   display: none;
 }
 .drawer-grandchild__list{
