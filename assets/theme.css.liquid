@@ -2894,6 +2894,35 @@ input#show-popup {
 .text__center{
   text-align: center;
 }
+.form-default__box input+label:before {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  background-color: #e2e2e2;
+  transition: .15s all ease-out;
+}
+
+.form-default__box input+label:after {
+  transform: rotate(45deg);
+  content: "";
+  width: 5px;
+  height: 9px;
+  display: block;
+  border: solid #ffffff;
+  border: solid var(--colorBody);
+  border-width: 0 2px 2px 0;
+  position: absolute;
+  top: 4px;
+  left: 7px;
+  opacity: 0;
+}
+.form-default__box input[type="checkbox"]:checked+label:after {
+  opacity: 1;
+}
+.form-default__box input[type="checkbox"]:checked+label:before {
+  background-color: #1f1f1f;
+}
 .form__group {
   padding-bottom: 20px;
 }
