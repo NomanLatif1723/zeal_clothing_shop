@@ -177,13 +177,15 @@
                   <div class="cart__terms-checkbox" data-checkout-terms>
                     <input type="checkbox" id="cartTerms">
                     <label for="cartTerms">
-                      {%- if settings.cart_terms_page != blank -%}
-                        <a class="links" target="_blank" href="{{ settings.cart_terms_page }}" title="{{ 'cart.general.terms_at_checkout' | t }}">
-                      {%- endif -%}
-                      {{ 'cart.general.terms_at_checkout' | t }}
-                      {%- if settings.cart_terms_page != blank -%}
-                        </a>
-                      {%- endif -%}
+                      <span>
+                        {%- if settings.cart_terms_page != blank -%}
+                          <a class="links" target="_blank" href="{{ settings.cart_terms_page }}" title="{{ 'cart.general.terms_at_checkout' | t }}">
+                        {%- endif -%}
+                        {{ 'cart.general.terms_at_checkout' | t }}
+                        {%- if settings.cart_terms_page != blank -%}
+                          </a>
+                        {%- endif -%}
+                      </span>
                     </label>
                   </div>
                 {%- endif -%}
