@@ -41,9 +41,7 @@
         </div>
       {%- endif -%}
       <div class="events-popup-newsletter">
-        {%- render 'newsletter-form',
-           confirm_button_label: confirm_button_label 
-        -%}
+        {%- render 'newsletter-form', confirm_button_label: confirm_button_label -%}
         {%- if cancel_button_label != blank -%}
           <div class="popup-cancel__btn">
             <button class="links" title="{{ cancel_button_label }}">{{ cancel_button_label }}</button>
