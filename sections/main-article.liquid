@@ -117,16 +117,16 @@
             <div class="form__grid">
               <div class="form__group">
                 <label class="form__label" for="name-{{ section.id }}">{{ 'article.comments.name' | t }}</label>
-                <input class="form__input" type="text" name="comment[author]" placeholder="{{ 'article.comments.name_placeholder' | t }}" id="name-{{ section.id }}" value="{{ form.author }}">
+                <input class="form__input" type="text" name="comment[author]" placeholder="{{ 'article.comments.name_placeholder' | t }}" required id="name-{{ section.id }}" value="{{ form.author }}">
               </div>
               <div class="form__group">
                 <label class="form__label" for="email-{{ section.id }}">{{ 'article.comments.email' | t }}</label>
-                <input class="form__input" type="email" name="comment[email]" placeholder="{{ 'article.comments.email_placeholder' | t }}" id="email-{{ section.id }}" value="{{ form.email }}">
+                <input class="form__input" type="email" name="comment[email]" placeholder="{{ 'article.comments.email_placeholder' | t }}" required id="email-{{ section.id }}" value="{{ form.email }}">
               </div>
             </div>
             <div class="form__group">
               <label class="form__label" for="comment-{{ section.id }}">{{ 'article.comments.message' | t }}</label>
-              <textarea class="form__input" rows="5" name="comment[body]" placeholder="{{ 'article.comments.message_placeholder' | t }}" id="comment-{{ section.id }}">{{ form.body }}</textarea>
+              <textarea class="form__input" rows="5" name="comment[body]" placeholder="{{ 'article.comments.message_placeholder' | t }}" required id="comment-{{ section.id }}">{{ form.body }}</textarea>
             </div>
             <div class="text__center">
               <div class="comments-form__submit">
