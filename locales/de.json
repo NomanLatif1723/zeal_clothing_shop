@@ -361,7 +361,17 @@
   },
   "social-media": {
     "general": {
-      "social_label": "Machen Sie mit {{ social }}"
+      "social_label": "Machen Sie mit {{ social }}",
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "twitter": "Twitter",
+      "pinterest": "Pinterest",
+      "snapchat": "Snapchat",
+      "youtube": "Youtube",
+      "vimeo": "Vimeo",
+      "tiktok": "Tick Tack",
+      "tumblr": "Tumblr",
+      "linkedin": "LinkedIn"
     },
     "socials_share": {
       "facebook": "Facebook",
