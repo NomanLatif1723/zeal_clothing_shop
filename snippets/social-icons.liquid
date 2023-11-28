@@ -1,10 +1,7 @@
 <ul class="social__icons-list">
   {%- if settings.social_instagram_url != blank -%}
     <li>
-      <a
-        target="_blank"
-        href="{{ settings.social_instagram_url }}"
-        title="{{ 'social-media.general.social_label' | t: social: "Instagram" }}">
+      <a target="_blank" href="{{ settings.social_instagram_url }}" title="{{ 'social-media.general.social_label' | t: social: "Instagram" }}">
         {% render 'icon-instagram' %}
         <span class="social__fallback-text">Instagram</span>
       </a>
@@ -12,10 +9,7 @@
   {%- endif -%}
   {%- if settings.social_facebook_url != blank -%}
     <li>
-      <a
-        target="_blank"
-        href="{{ settings.social_facebook_url }}"
-        title="{{ 'social-media.general.social_label' | t: social: "Facebook" }}">
+      <a target="_blank" href="{{ settings.social_facebook_url }}" title="{{ 'social-media.general.social_label' | t: social: "Facebook" }}">
         {% render 'icon-facebook' %}
         <span class="social__fallback-text">Facebook</span>
       </a>
