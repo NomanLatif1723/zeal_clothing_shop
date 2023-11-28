@@ -100,9 +100,9 @@ display: none;
   padding-bottom: 20px;
   font-size: 13px;
   line-height: 16px;
-  display: flex;
+  /* display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 10px; */
   position: relative;
 }
 .cart__unit-price {
