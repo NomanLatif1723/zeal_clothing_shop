@@ -558,7 +558,7 @@ function initCountdown() {
     let minutes = wrapper.getAttribute('data-minute');
     let timerMessage = wrapper.querySelector('.timer__message');
 
-    let endDate = `${years}-${months}-${days} ${hours}:${minutes}`;
+    let endDate = `${years}/${months}/${days} ${hours}:${minutes}`;
     let targetDate = new Date(endDate).getTime();
 
     let countdownInterval = setInterval(() => {
