@@ -45,10 +45,15 @@
     padding-bottom: 0;
   }
 }
+@media only screen and (min-width: 769px) {
+  .contact-form__main-wrapper {
+    margin-left: 50px;
+  }
+}
 @media only screen and (min-width: 1201px){
   .contact-form__container {
     display: flex;
-    gap: 50px;
+    /* gap: 50px; */
     align-items: center;
   }
   .contact-info__container {
