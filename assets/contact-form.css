@@ -13,6 +13,9 @@
   display: flex;
   padding-bottom: 25px;
 }
+.contact-block__info-item {
+  padding-left: 15px;
+}
 .contact-info__container {
   padding-bottom: 30px;
 }
