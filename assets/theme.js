@@ -1591,7 +1591,7 @@ function initMediaGallery() {
           prevEl: '.swiper-button-prev.swiper-button-' + id
         },
       }
-      if (thumbnailMediaPosition) {
+      if (thumbnailMediaPosition and matchingMedia) {
         let thumbnailPosition = thumbnailMediaPosition.dataset.thumbnail;
         if (thumbnailPosition === 'left') {
           thumbsSwiperOptions.direction = "vertical";
