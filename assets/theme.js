@@ -1582,7 +1582,7 @@ function initMediaGallery() {
         ThumbnailSliderContainer.swiper.destroy();
       }
       let thumbsSwiperOptions = {
-        slidesPerView: 6,
+        slidesPerView: 5,
         spaceBetween: 10,
         watchSlidesProgress: true,
         speed: 1000,
