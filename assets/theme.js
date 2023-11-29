@@ -559,7 +559,6 @@ function initCountdown() {
     let timerMessage = wrapper.querySelector('.timer__message');
 
     let endDate = `${years}/${months}/${days} ${hours}:${minutes}`;
-    console.log(endDate);
     let targetDate = new Date(endDate).getTime();
 
     let countdownInterval = setInterval(() => {
