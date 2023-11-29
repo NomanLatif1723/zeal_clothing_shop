@@ -36,7 +36,7 @@
             <span class="visually__hidden">{{ 'products.price.sale_price' | t }}</span>
             <span class="item__price">{{ item.final_price | money }}</span>
             {%- else -%}
-              <span class="item__price">{{ item.original_price | money }}</span>{{ item.final_price | money }}
+              <span class="item__price">{{ item.original_price | money }}</span>
           {%- endif -%}
           {%- if item.line_level_discount_allocations != blank -%}
             {%- for discount_allocation in item.line_level_discount_allocations -%}
