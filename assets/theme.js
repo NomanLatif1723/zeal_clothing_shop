@@ -1576,7 +1576,6 @@ function initMediaGallery() {
     let MediaSliderContainer = wrapper.querySelector('#product__media-' + id);
     let ThumbnailSliderContainer = wrapper.querySelector('#product__thumbnail-' + id);
     let thumbnailMediaPosition = wrapper.querySelector('.product-media__grid');
-    const matchingMedia = window.matchMedia("(min-width: 769px)");
     if (ThumbnailSliderContainer) {
       if (ThumbnailSliderContainer.swiper) {
         ThumbnailSliderContainer.swiper.destroy();
