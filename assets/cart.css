@@ -166,6 +166,9 @@ input[type=number] {
   display: flex;
   align-items: center;
 }
+.cart__item-remove svg {
+  margin-right: 4px;
+}
 .drawer__item-remove{
   color: #111111;
   color: var(--colorBodyText);
