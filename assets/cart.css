@@ -165,7 +165,6 @@ input[type=number] {
   color: #9D1339;
   display: flex;
   align-items: center;
-  gap: 4px;
 }
 .drawer__item-remove{
   color: #111111;
