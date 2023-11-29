@@ -710,6 +710,7 @@ function initNewsletterPopup() {
 
     const shouldShowPopup = () => !storageType.getItem(consentPropertyName);
     const saveToStorage = () => storageType.setItem(consentPropertyName, true);
+    const removeFromStorage = () => storageType.setItem(consentPropertyName, false);
 
     if (shouldShowPopup(storageType)) {
       newsletterPopup.classList.remove('popup__hidden');
@@ -717,6 +718,8 @@ function initNewsletterPopup() {
     hidePopupInput.addEventListener('change', () => {
       if (hidePopupInput.checked) {
         saveToStorage(storageType);
+      } else {
+        
       }
     })
   }
