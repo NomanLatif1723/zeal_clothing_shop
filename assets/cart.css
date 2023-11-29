@@ -60,6 +60,7 @@ input[type=number] {
   display: flex;
   align-items: center;
   border: 1px solid rgba(1,1,1,0.2);
+  padding-right: 10px;
 }
 .line__item-quantity button {
   padding: 15px;
