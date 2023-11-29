@@ -228,6 +228,7 @@ display: inline-block;
   .cart__items {
     padding-bottom: 0;
     flex: 1 1 auto;
+    padding-right: 30px;
   }
   .mobile__hidden{
     display: flex;
