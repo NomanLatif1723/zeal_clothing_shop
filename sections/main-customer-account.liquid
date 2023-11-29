@@ -1,7 +1,7 @@
 <div class="scroll__animate customer-account__wrapper">
   <div class="page__width">
     <div class="form__header account-form__header">
-      <h4>{{ 'customers.account.title' | t }}</h4>
+      <h2>{{ 'customers.account.title' | t }}</h2>
       <a class="links logout__container" href="{{ routes.account_logout_url }}"title="{{ 'customers.logout.title' | t }}">
         <svg width="25" height="25" viewBox="-2.5 -2.5 30.00 30.00" fill="none"  transform="matrix(-1, 0, 0, 1, 0, 0)rotate(0)">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -18,7 +18,7 @@
         {%- paginate customer.orders by 10 -%}
           <div class="form__grid-item orders__container">
             <div class="form__header">
-              <h2>{{ 'customers.orders.title' | t }}</h2>
+              <h4>{{ 'customers.orders.title' | t }}</h4>
             </div>
             {%- if customer.orders.size == 0 -%}
               <div>{{ 'customers.orders.no_orders_yet' | t }}</div>
