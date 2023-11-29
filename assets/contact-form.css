@@ -38,13 +38,16 @@
   .contact-block__info-grid {
     display: flex;
     flex-wrap: wrap;
-    row-gap: 25px;
   }
   .contact-block__info-flex {
     width: 50%;
   }
   .contact-block__info-flex {
     padding-bottom: 0;
+  }
+  .contact-block__info-flex:first-child,
+  .contact-block__info-flex:nth-child(2){
+    padding-bottom: 25px;
   }
 }
 @media only screen and (min-width: 1201px){
