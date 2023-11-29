@@ -26,7 +26,7 @@ input[type=number] {
   padding-bottom: 20px;
   border-bottom: 1px solid rgba(1,1,1,0.2);
   margin-bottom: 20px;
-  gap: 15px;
+  /* gap: 15px; */
   align-items: flex-start;
 }
 .cart__item-content {
@@ -233,10 +233,11 @@ display: inline-block;
   .desktop__hidden{
     display: none;
   }
-  .cart__item-block{
+  /* .cart__item-block{
     gap: 20px;
-  }
+  } */
 }
+
 /* Cart Drawer */
 .cart-drawer {
   position: fixed;
