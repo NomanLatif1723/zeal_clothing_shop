@@ -1591,11 +1591,11 @@ function initMediaGallery() {
           prevEl: '.swiper-button-prev.swiper-button-' + id
         },
         breakpoints: {
-        768: {
-          slidesPerView: 6,
-          spaceBetween: 20,
+          768: {
+            slidesPerView: 6,
+            spaceBetween: 20,
+          },
         },
-      },
       }
       if (thumbnailMediaPosition) {
         let thumbnailPosition = thumbnailMediaPosition.dataset.thumbnail;
