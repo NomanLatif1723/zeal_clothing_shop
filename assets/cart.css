@@ -238,6 +238,9 @@ display: inline-block;
   .cart__item-content {
     padding-left: 20px;
   }
+  .line__item-quantity {
+    margin: 0;
+  }
 }
 
 /* Cart Drawer */
