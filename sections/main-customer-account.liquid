@@ -18,7 +18,7 @@
         {%- paginate customer.orders by 10 -%}
           <div class="form__grid-item orders__container">
             <div class="form__header">
-              <h4>{{ 'customers.orders.title' | t }}</h4>
+              <h2>{{ 'customers.orders.title' | t }}</h2>
             </div>
             {%- if customer.orders.size == 0 -%}
               <div>{{ 'customers.orders.no_orders_yet' | t }}</div>
