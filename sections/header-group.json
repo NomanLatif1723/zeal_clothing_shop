@@ -108,7 +108,7 @@
       "settings": {
         "desktop_menu": "main-menu",
         "mobile_menu": "",
-        "header_styles": "drawer_center",
+        "header_styles": "left",
         "sticky_header": true,
         "show_icons": true
       }
