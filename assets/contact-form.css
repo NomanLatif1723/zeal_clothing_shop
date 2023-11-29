@@ -61,7 +61,6 @@
   }
   .contact-form__grid {
     display: flex;
-    gap: 20px;
   }
   .contact-form__grid .form__group {
     width: 50%;
