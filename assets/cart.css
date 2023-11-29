@@ -314,7 +314,6 @@ display: inline-block;
 .cart__recommendations-item {
   display: flex;
   align-items: flex-start;
-  gap: 20px;
   padding-bottom: 20px;
 }
 .cart__recommendations-item--title{
@@ -324,7 +323,6 @@ display: inline-block;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
   padding-bottom: 10px;
   padding-top: 4px;
 }
