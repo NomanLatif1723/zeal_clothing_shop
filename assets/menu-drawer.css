@@ -57,7 +57,7 @@
 .drawer-menu__item .menu-item__link {
   padding: 18px 0;
   justify-content: space-between;
-  gap: initial;
+  /* gap: initial; */
 }
 .drawer-child__list, .drawer-grandchild__list {
   padding-left: 15px;
