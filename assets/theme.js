@@ -1592,7 +1592,7 @@ function initMediaGallery() {
         },
         breakpoints: {
         768: {
-          slidesPerView: 5,
+          slidesPerView: 6,
           spaceBetween: 20,
         },
       },
