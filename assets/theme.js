@@ -1590,6 +1590,12 @@ function initMediaGallery() {
           nextEl: '.swiper-button-next.swiper-button-' + id,
           prevEl: '.swiper-button-prev.swiper-button-' + id
         },
+        breakpoints: {
+        768: {
+          slidesPerView: 5,
+          spaceBetween: 20,
+        },
+      },
       }
       if (thumbnailMediaPosition) {
         let thumbnailPosition = thumbnailMediaPosition.dataset.thumbnail;
