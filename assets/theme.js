@@ -1583,7 +1583,7 @@ function initMediaGallery() {
       }
       let thumbsSwiperOptions = {
         slidesPerView: 5,
-        spaceBetween: 20,
+        spaceBetween: 10,
         watchSlidesProgress: true,
         speed: 1000,
         navigation: {
