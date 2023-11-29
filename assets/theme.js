@@ -1586,14 +1586,18 @@ function initMediaGallery() {
         spaceBetween: 10,
         watchSlidesProgress: true,
         speed: 1000,
-        navigation: {
-          nextEl: '.swiper-button-next.swiper-button-' + id,
-          prevEl: '.swiper-button-prev.swiper-button-' + id
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
         },
         breakpoints: {
           768: {
             slidesPerView: 6,
             spaceBetween: 20,
+            navigation: {
+              nextEl: '.swiper-button-next.swiper-button-' + id,
+              prevEl: '.swiper-button-prev.swiper-button-' + id
+            },
           },
         },
       }
