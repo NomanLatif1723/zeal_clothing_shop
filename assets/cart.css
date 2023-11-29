@@ -60,6 +60,8 @@ input[type=number] {
   display: flex;
   align-items: center;
   border: 1px solid rgba(1,1,1,0.2);
+  border: 1px solid #f2f2f2;
+  border: 1px solid var(--borderColor);
   padding-right: 10px;
 }
 .line__item-quantity button {
