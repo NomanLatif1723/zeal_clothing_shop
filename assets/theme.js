@@ -710,7 +710,7 @@ function initNewsletterPopup() {
 
     const shouldShowPopup = () => !storageType.getItem(consentPropertyName);
     const saveToStorage = () => storageType.setItem(consentPropertyName, true);
-    const removeFromStorage = () => storageType.setItem(consentPropertyName, false);
+    const removeFromStorage = () => storageType.removeItem(consentPropertyName);
 
     if (shouldShowPopup(storageType)) {
       newsletterPopup.classList.remove('popup__hidden');
