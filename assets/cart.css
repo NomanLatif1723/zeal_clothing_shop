@@ -224,7 +224,6 @@ display: inline-block;
   .cart__main {
     display: flex;
     justify-content: space-between;
-    gap: 30px;
   }
   .cart__items {
     padding-bottom: 0;
