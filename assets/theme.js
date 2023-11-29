@@ -719,7 +719,7 @@ function initNewsletterPopup() {
       if (hidePopupInput.checked) {
         saveToStorage(storageType);
       } else {
-        
+        removeFromStorage(storageType);
       }
     })
   }
