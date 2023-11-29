@@ -29,14 +29,12 @@ input[type=number] {
   /* gap: 15px; */
   align-items: flex-start;
 }
-.cart__item-image {
-  padding-right: 15px;
-}
 .cart__item-content {
   flex: 1 1 auto;
   justify-content: space-between;
   display: flex;
   flex-direction: column;
+  padding-left: 15px;
 }
 .cart__item-title {
   display: flex;
@@ -236,8 +234,8 @@ display: inline-block;
   .desktop__hidden{
     display: none;
   }
-  .cart__item-image {
-    padding-right: 20px;
+  .cart__item-content {
+    padding-left: 20px;
   }
 }
 
