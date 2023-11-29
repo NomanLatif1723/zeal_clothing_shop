@@ -343,6 +343,7 @@ display: inline-block;
 }
 .cart__recommendations-item--content {
   width: 70%;
+  padding-left: 20px;
 }
 @media only screen and (max-width: 380px) {
   .cart__recommendations-item--variants select {
