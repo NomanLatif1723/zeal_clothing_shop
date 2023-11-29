@@ -326,6 +326,9 @@ display: inline-block;
   padding-bottom: 10px;
   padding-top: 4px;
 }
+.cart__recommendations-item--price {
+  padding-right: 10px;
+}
 .cart__recommendations-item--variants select {
   padding: 10px;
 }
