@@ -61,8 +61,10 @@
   }
   .contact-form__grid {
     display: flex;
+    margin: -10px;
   }
   .contact-form__grid .form__group {
     width: 50%;
+    margin: 10px;
   }
 }
