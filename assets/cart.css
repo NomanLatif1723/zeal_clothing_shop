@@ -356,7 +356,6 @@ display: inline-block;
 }
 @media only screen and (max-width: 380px) {
   .cart__recommendations-item--variants select {
-    -webkit-appearance: none;
     font-size: 12px;
   }
 }
