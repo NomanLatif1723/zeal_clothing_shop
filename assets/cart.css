@@ -293,7 +293,7 @@ display: inline-block;
   height: 100%;
 }
 .cart-drawer__footer {
-  padding: 20px 25px 130px;
+  padding: 20px 15px 130px;
   border-top: 1px solid rgba(1,1,1,0.2);
 }
 .cart-drawer #cartNoteBtn {
@@ -369,6 +369,9 @@ display: inline-block;
   }
   .cart-drawer__content {
     padding: 10px 25px;
+  }
+  .cart-drawer__footer {
+    padding: 20px 25px 130px;
   }
 }
 @media only screen and (min-width: 481px) {
