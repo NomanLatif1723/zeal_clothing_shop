@@ -2239,6 +2239,7 @@ function initQuickShopCollection() {
         initProductForm();
         initCountdown();
         initProductQuantitySelector();
+        initModalPopup();
       }
     })
     .catch(function(error) {
