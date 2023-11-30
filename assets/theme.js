@@ -2179,7 +2179,7 @@ function initQuickShopCollection() {
   }
 
   products.forEach(product => {
-    product.addEventListener('mouseover', productMouseover);
+    product.addEventListener('click', productMouseover);
   });
 
   function productMouseover(evt) {
