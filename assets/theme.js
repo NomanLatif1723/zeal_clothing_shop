@@ -1997,11 +1997,9 @@ function initProductForm() {
             }
             if (recipientDate.value) {
               if (isNaN(selectedDate.getTime()) || selectedDate > maxDate) {
+                errorMessageEmail.classList.add('hidden');
                 errorMessageDate.classList.remove('hidden');
-                if (loader && span) {
-                  loader.classList.add('hidden');
-                  span.classList.remove('hidden');
-                }
+                hideLoader(loader,span);
                 return; 
               }
             }
