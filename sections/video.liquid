@@ -88,13 +88,9 @@
                   <h1>{{ heading }}</h1>
                 </div>
               {%- endif -%}
-              <div class="video-section__playicon">
-                {% comment %}
-                <img src="{{ 'play.png' | asset_url }}" width="25" height="25" loading="lazy" />
-                {% endcomment %}
+              <button class="video-section__playicon">
                 {%- render 'icon-play' -%}
-                
-              </div>
+              </button>
             </div>
           </div>
         </div>
