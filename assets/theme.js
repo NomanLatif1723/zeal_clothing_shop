@@ -731,12 +731,11 @@ document.addEventListener("DOMContentLoaded", function() {
 //  General Modal Button Events 
 function initModalPopup() {
   let popupModal = document.querySelectorAll('[data-popup-modal]');
-  let sizeGuideContainer = document.querySelector('.product__sizeguide');
-  let sizeGuidePopup = document.querySelector('.sizeguide-popup')
+  // let sizeGuideContainer = document.querySelector('.product__sizeguide');
+  // let sizeGuidePopup = document.querySelector('.sizeguide-popup');
   popupModal.forEach(popup => {
     let closeModalBtn = popup.querySelector('.close__modal');
     let eventCancelBtn = popup.querySelector('.popup-cancel__btn button');
-    let sizeChartBtn = document.querySelector('#sizeChartBtn');
     if (closeModalBtn) {
         closeModalBtn.addEventListener('click', () => {
         closeModalBtn.closest('[data-popup-modal]').classList.add('popup__hidden');
