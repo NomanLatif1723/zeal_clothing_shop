@@ -288,7 +288,7 @@ display: inline-block;
   display: block;
 }
 .cart-drawer__content {
-  padding: 10px 25px;
+  padding: 10px 15px;
   overflow: auto;
   height: 100%;
 }
@@ -366,6 +366,9 @@ display: inline-block;
   }
   .free-shipping__modal {
     padding: 25px;
+  }
+  .cart-drawer__content {
+    padding: 10px 25px;
   }
 }
 @media only screen and (min-width: 481px) {
