@@ -83,15 +83,15 @@ function animateOnScroll() {
     }
   });
 }
-function debounce(func, delay) {
-  let timeoutId;
-  return function () {
-    clearTimeout(timeoutId);
-    timeoutId = setTimeout(func, delay);
-  };
-}
+// function debounce(func, delay) {
+//   let timeoutId;
+//   return function () {
+//     clearTimeout(timeoutId);
+//     timeoutId = setTimeout(func, delay);
+//   };
+// }
 
-const debouncedAnimateOnScroll = debounce(animateOnScroll, 200);
+// const debouncedAnimateOnScroll = debounce(animateOnScroll, 200);
   
 document.addEventListener("DOMContentLoaded", animateOnScroll);
 window.addEventListener("scroll", debouncedAnimateOnScroll);
