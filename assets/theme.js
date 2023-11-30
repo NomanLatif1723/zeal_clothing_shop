@@ -143,7 +143,7 @@ function initStickyHeader() {
       const debouncedUpdateStickyHeader = debounce(updateStickyHeader, 50);
       
       window.addEventListener('scroll', debouncedUpdateStickyHeader);
-      window.addEventListener('scroll', updateStickyHeader);
+      // window.addEventListener('scroll', updateStickyHeader);
     }
   } 
 }
