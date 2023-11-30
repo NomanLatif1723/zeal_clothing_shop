@@ -137,7 +137,17 @@ function initStickyHeader() {
   } 
 }
 document.addEventListener("DOMContentLoaded", function() {
-  initStickyHeader();
+  const header = document.querySelector('.section__header');
+const observer = new IntersectionObserver(
+  ([entry]) => {
+    header.classList.toggle('sticky__header', entry.intersectionRatio < 1);
+  },
+  { threshold: 1 }
+);
+
+observer.observe(header);
+
+  // initStickyHeader();
 });
 
 // Header Toggle button
