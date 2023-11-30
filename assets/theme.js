@@ -132,21 +132,21 @@ function initStickyHeader() {
         }
         lastScrollY = scrollY;
       }
+      function debounce(func, delay) {
+        let timeoutId;
+        return function () {
+          clearTimeout(timeoutId);
+          timeoutId = setTimeout(func, delay);
+        };
+      }
+      
+      const debouncedUpdateStickyHeader = debounce(updateStickyHeader, 50);
+      
+      window.addEventListener('scroll', debouncedUpdateStickyHeader);
       window.addEventListener('scroll', updateStickyHeader);
     }
   } 
 }
-function debounce(func, delay) {
-  let timeoutId;
-  return function () {
-    clearTimeout(timeoutId);
-    timeoutId = setTimeout(func, delay);
-  };
-}
-
-const debouncedUpdateStickyHeader = debounce(updateStickyHeader, 50);
-
-window.addEventListener('scroll', debouncedUpdateStickyHeader);
 
 document.addEventListener("DOMContentLoaded", function() {
   initStickyHeader();
