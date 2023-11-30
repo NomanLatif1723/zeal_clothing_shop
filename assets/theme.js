@@ -2233,6 +2233,7 @@ function initQuickShopCollection() {
         selectors.quickViewContainer.appendChild(newData);
         document.querySelector('.quick-view__container .product-full__info--btn').classList.remove('hidden');
         document.querySelector('.product-grid').setAttribute('data-history-url', 'false');
+        document.querySelector('.shopify-payment-button').classList.add('hidden');
         document.querySelectorAll('.image__zoom-btn').forEach(button => { button.classList.add('hidden') });
         initMediaGallery();
         initProductVariants();
