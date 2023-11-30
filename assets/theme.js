@@ -70,31 +70,46 @@ var formatMoney = (val => formatMoney$1(val, window.themeContent.routes.money_fo
 // document.addEventListener("DOMContentLoaded", animateOnScroll);
 // window.addEventListener("scroll", animateOnScroll);
   
+// function animateOnScroll() {
+//   const elements = document.querySelectorAll(".scroll__animate");
+//   const windowHeight = window.innerHeight;
+
+//   function animate() {
+//     elements.forEach((element) => {
+//       const elementTop = element.getBoundingClientRect().top;
+
+//       if (elementTop < windowHeight - 100) {
+//         element.classList.add("animate");
+//       }
+//     });
+//   }
+
+//   requestAnimationFrame(animate);
+// }
+
+window.addEventListener("scroll", animateOnScroll);
+function isIOS() {
+  return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+}
+
 function animateOnScroll() {
   const elements = document.querySelectorAll(".scroll__animate");
-  const scrollPosition = window.scrollY;
   const windowHeight = window.innerHeight;
 
   elements.forEach((element) => {
-    const elementTop = element.getBoundingClientRect().top + scrollPosition;
+    const elementTop = element.getBoundingClientRect().top;
 
     if (elementTop < windowHeight - 100) {
-      element.classList.add("animate");
+      if (isIOS()) {
+        // Apply different animation for iOS
+        element.classList.add("animate-ios");
+      } else {
+        element.classList.add("animate");
+      }
     }
   });
 }
-// function debounce(func, delay) {
-//   let timeoutId;
-//   return function () {
-//     clearTimeout(timeoutId);
-//     timeoutId = setTimeout(func, delay);
-//   };
-// }
 
-// const debouncedAnimateOnScroll = debounce(animateOnScroll, 200);
-  
-document.addEventListener("DOMContentLoaded", animateOnScroll);
-window.addEventListener("scroll", animateOnScroll);
 
 // Announcement Bar Timer 
 function initAnnouncementTimer() {
