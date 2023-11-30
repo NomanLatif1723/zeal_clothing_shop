@@ -1709,6 +1709,7 @@ blockquote.testimonial__text {
   padding: 6px;
   visibility: hidden;
   transition: visibility 0.1s ease;
+  display: none;
 }
 .quick-shop__btn {
   display: flex;
@@ -1723,7 +1724,6 @@ blockquote.testimonial__text {
 }
 .quick-shop__desktop--hidden {
   width: auto;
-  display: none;
 }
 .quick-shop__text {
   font-size: 9px;
@@ -1881,7 +1881,10 @@ blockquote.testimonial__text {
     padding-left: 20px;
   }
   .quick-shop__desktop--hidden {
-    display: flex;
+    display: none;
+  }
+  .quick-shop__wrapper {
+    display: block;
   }
 }
 /* Collection List  */
