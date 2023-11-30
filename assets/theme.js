@@ -1992,19 +1992,20 @@ function initProductForm() {
             const maxDate = new Date(currentDate.getTime() + (90 * 24 * 60 * 60 * 1000));
             if (!recipientEmail.checkValidity()) {
               errorMessageEmail.classList.remove('hidden');
-              hideLoader(loader,span);
+              // hideLoader(loader,span);
               return;
             }
             if (recipientDate.value) {
               if (isNaN(selectedDate.getTime()) || selectedDate > maxDate) {
                 errorMessageEmail.classList.add('hidden');
                 errorMessageDate.classList.remove('hidden');
-                hideLoader(loader,span);
+                // hideLoader(loader,span);
                 return; 
               }
             }
             errorMessageEmail.classList.add('hidden');
             errorMessageDate.classList.add('hidden');
+            hideLoader(loader,span);
             // Submit Form Ajax
             await submitProductForm(form);
             hideLoader(loader,span);
