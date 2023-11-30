@@ -1996,6 +1996,7 @@ function initProductForm() {
             //   return;
             // }
             await validateEmail(recipientEmail,errorMessageEmail);
+            hideLoader(loader,span);
             if (recipientDate.value) {
               if (isNaN(selectedDate.getTime()) || selectedDate > maxDate) {
                 errorMessageEmail.classList.add('hidden');
