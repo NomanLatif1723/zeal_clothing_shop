@@ -30,7 +30,6 @@
     },
     "event-popup": {
       "type": "events-popup",
-      "disabled": true,
       "settings": {
         "heading": "announce your event",
         "first_subheading": "get Upto",
