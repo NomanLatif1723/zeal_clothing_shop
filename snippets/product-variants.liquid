@@ -44,7 +44,7 @@
                         assign swatch_value = value | downcase
                       -%}
                       <label class="product__swatches-label" for="{{ option.name }}-{{ value }}-{{ section.id }}" 
-                        style="background-color:{{ swatch_value }};{% if images[color_swatch_name] != blank %}  background-image: url({{ swatch_image }}); background-repeat: no-repeat; background-size: cover; background-position: center;{% endif %}">
+                        style="background-color:{{ swatch_value }};{% if images[color_swatch_name] != blank %}  background-image: url({{ swatch_image }});{% endif %}">
                       </label>
                     {%- else -%}
                       <label for="{{ option.name }}-{{ value }}-{{ section.id }}">
