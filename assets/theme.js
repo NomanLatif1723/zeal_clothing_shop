@@ -1945,8 +1945,11 @@ function initProductForm() {
 
   // Size Chart Button Event Listener
   if(selectors.sizeChartBtn) {
+    const sizeGuidePopup = document.querySelector('.sizeguide-popup');
+    const sizeGuideContainer = document.querySelector('.product__sizeguide');
     selectors.sizeChartBtn.addEventListener('click', () => {
-      
+      sizeGuidePopup.classList.toggle('popup__hidden');
+      sizeGuideContainer.classList.toggle('sizeguide__overlay');
     });
   }
 
