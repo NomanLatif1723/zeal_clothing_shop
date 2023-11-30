@@ -110,32 +110,32 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // Sticky Header 
-function initStickyHeader() {
-  const header = document.querySelector('.section__header');
-  if (header) {
-    const stickyHeader = header.getAttribute('data-sticky-header');
-    if (stickyHeader == 'true') {
-      let isSticky = false;
-      let lastScrollY = 0;
-      function updateStickyHeader() {
-        const scrollY = window.scrollY;
-        if (scrollY > lastScrollY) {
-          if (!isSticky) {
-            header.classList.add('sticky__header');
-            isSticky = true;
-          }
-        } else {
-          if (isSticky && (scrollY <= header.offsetTop || scrollY === 0)) {
-            header.classList.remove('sticky__header'); 
-            isSticky = false;
-          }
-        }
-        lastScrollY = scrollY;
-      }
-      window.addEventListener('scroll', updateStickyHeader);
-    }
-  } 
-}
+// function initStickyHeader() {
+//   const header = document.querySelector('.section__header');
+//   if (header) {
+//     const stickyHeader = header.getAttribute('data-sticky-header');
+//     if (stickyHeader == 'true') {
+//       let isSticky = false;
+//       let lastScrollY = 0;
+//       function updateStickyHeader() {
+//         const scrollY = window.scrollY;
+//         if (scrollY > lastScrollY) {
+//           if (!isSticky) {
+//             header.classList.add('sticky__header');
+//             isSticky = true;
+//           }
+//         } else {
+//           if (isSticky && (scrollY <= header.offsetTop || scrollY === 0)) {
+//             header.classList.remove('sticky__header'); 
+//             isSticky = false;
+//           }
+//         }
+//         lastScrollY = scrollY;
+//       }
+//       window.addEventListener('scroll', updateStickyHeader);
+//     }
+//   } 
+// }
 
 function debounce(func, delay) {
   let timeoutId;
@@ -147,7 +147,7 @@ function debounce(func, delay) {
 
 function updateStickyHeader() {
   const scrollY = window.scrollY;
-  let lastScrollY = 0;
+  // let lastScrollY = 0;
   if (scrollY > lastScrollY) {
     if (!isSticky) {
       header.classList.add('sticky__header');
