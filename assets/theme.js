@@ -137,6 +137,18 @@ function initStickyHeader() {
   } 
 }
 document.addEventListener("DOMContentLoaded", function() {
+  function debounce(func, delay) {
+  let timeoutId;
+  return function () {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(func, delay);
+  };
+}
+
+const debouncedUpdateStickyHeader = debounce(updateStickyHeader, 50);
+
+window.addEventListener('scroll', debouncedUpdateStickyHeader);
+
   const header = document.querySelector('.section__header');
 const observer = new IntersectionObserver(
   ([entry]) => {
