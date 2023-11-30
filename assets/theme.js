@@ -55,19 +55,46 @@ function formatMoney$1(cents, format) {
 var formatMoney = (val => formatMoney$1(val, window.themeContent.routes.money_format || "${{amount}}"));
 
 // On scroll Animations to the whole site 
+// function animateOnScroll() {
+//   const elements = document.querySelectorAll(".scroll__animate");
+//   elements.forEach((element) => {
+//     const elementTop = element.getBoundingClientRect().top;
+//     const windowHeight = window.innerHeight;
+
+//     if (elementTop < windowHeight -100) {
+//       element.classList.add("animate");
+//     }
+//   });
+// }
+  
+// document.addEventListener("DOMContentLoaded", animateOnScroll);
+// window.addEventListener("scroll", animateOnScroll);
+  
 function animateOnScroll() {
   const elements = document.querySelectorAll(".scroll__animate");
-  elements.forEach((element) => {
-    const elementTop = element.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
+  const scrollPosition = window.scrollY;
+  const windowHeight = window.innerHeight;
 
-    if (elementTop < windowHeight -100) {
+  elements.forEach((element) => {
+    const elementTop = element.getBoundingClientRect().top + scrollPosition;
+
+    if (elementTop < windowHeight - 100) {
       element.classList.add("animate");
     }
   });
 }
+function debounce(func, delay) {
+  let timeoutId;
+  return function () {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(func, delay);
+  };
+}
+
+const debouncedAnimateOnScroll = debounce(animateOnScroll, 200);
+  
 document.addEventListener("DOMContentLoaded", animateOnScroll);
-window.addEventListener("scroll", animateOnScroll);
+window.addEventListener("scroll", debouncedAnimateOnScroll);
 
 // Announcement Bar Timer 
 function initAnnouncementTimer() {
