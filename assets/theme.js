@@ -136,8 +136,7 @@ function initStickyHeader() {
     }
   } 
 }
-document.addEventListener("DOMContentLoaded", function() {
-  function debounce(func, delay) {
+function debounce(func, delay) {
   let timeoutId;
   return function () {
     clearTimeout(timeoutId);
@@ -149,17 +148,8 @@ const debouncedUpdateStickyHeader = debounce(updateStickyHeader, 50);
 
 window.addEventListener('scroll', debouncedUpdateStickyHeader);
 
-  const header = document.querySelector('.section__header');
-const observer = new IntersectionObserver(
-  ([entry]) => {
-    header.classList.toggle('sticky__header', entry.intersectionRatio < 1);
-  },
-  { threshold: 1 }
-);
-
-observer.observe(header);
-
-  // initStickyHeader();
+document.addEventListener("DOMContentLoaded", function() {
+  initStickyHeader();
 });
 
 // Header Toggle button
