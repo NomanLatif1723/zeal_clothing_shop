@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function() {
   initAnnouncementTimer();
 });
 
-Sticky Header 
+// Sticky Header 
 function initStickyHeader() {
   const header = document.querySelector('.section__header');
   if (header) {
