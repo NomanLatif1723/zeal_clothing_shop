@@ -331,7 +331,7 @@
       "login_form_password_placeholder": "パスワード",
       "login_form_submit": "提出する",
       "powered_by_shopify_html": "このショップは {{ shopify }}",
-      "admin_link_html": "あなたはストアのオーナーですか? <a class='links' href=\"\/admin\" class=\"text-link\">ここでログイン<\/a>"
+      "admin_link_html": "あなたはストアのオーナーですか? <a href=\"\/admin\" class=\"text-link\">ここでログイン<\/a>"
     }
   },
   "sections": {
