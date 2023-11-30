@@ -1951,6 +1951,11 @@ function initProductForm() {
       sizeGuidePopup.classList.toggle('popup__hidden');
       sizeGuideContainer.classList.toggle('sizeguide__overlay');
     });
+    if (sizeGuidePopup) {
+      sizeGuidePopup.addEventListener('click', (event) => {
+        event.stopPropagation();
+      })
+    }
   }
 
   // Upsell Variants Change Event Listener
