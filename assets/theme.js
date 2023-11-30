@@ -2172,7 +2172,7 @@ function initQuickShopCollection() {
     selectors.quickShopModal.classList.add('hidden');
   }
   
-  const products = document.querySelectorAll('.collection-grid__image--wrapper');
+  const products = document.querySelectorAll('.quick-shop__btn');
 
   if (!products.length || !window.themeContent.settings.quickView) {
     return;
