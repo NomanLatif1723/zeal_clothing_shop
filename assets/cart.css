@@ -33,7 +33,7 @@ input[type=number] {
   justify-content: space-between;
   display: flex;
   flex-direction: column;
-  padding-left: 15px;
+  padding-left: 10px;
 }
 .cart__item-title {
   display: flex;
