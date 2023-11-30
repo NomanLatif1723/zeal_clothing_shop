@@ -54,63 +54,6 @@ function formatMoney$1(cents, format) {
 }
 var formatMoney = (val => formatMoney$1(val, window.themeContent.routes.money_format || "${{amount}}"));
 
-
-// Library Loader Function (function not used yet should be removed)
-const LibraryLoader = (() => {
-  const types = {
-    link: 'link',
-    script: 'script',
-  };
-
-  const status = {
-    requested: 'requested',
-    loaded: 'loaded',
-  };
-
-  const cloudCdn = 'https://cdn.shopify.com/shopifycloud/';
-
-  const libraries = {
-    youtubeSdk: { tagId: 'youtube-sdk', src: 'https://www.youtube.com/iframe_api', type: types.script },
-    vimeo: { tagId: 'vimeo-api', src: 'https://player.vimeo.com/api/player.js', type: types.script },
-    shopifyXr: { tagId: 'shopify-model-viewer-xr', src: cloudCdn + 'shopify-xr-js/assets/v1.0/shopify-xr.en.js', type: types.script },
-    modelViewerUi: { tagId: 'shopify-model-viewer-ui', src: cloudCdn + 'model-viewer-ui/assets/v1.0/model-viewer-ui.en.js', type: types.script },
-    modelViewerUiStyles: { tagId: 'shopify-model-viewer-ui-styles', src: cloudCdn + 'model-viewer-ui/assets/v1.0/model-viewer-ui.css', type: types.link },
-  };
-
-  function load(libraryName, callback = () => {}) {
-    const library = libraries[libraryName];
-
-    if (!library || library.status === status.requested) return;
-    if (library.status === status.loaded) {
-      callback();
-      return;
-    }
-
-    library.status = status.requested;
-    const tag = createTag(library, callback);
-
-    Object.assign(tag, { id: library.tagId, element: tag });
-    document.querySelector(library.type).parentNode.insertBefore(tag, document.querySelector(library.type));
-  }
-
-  function createTag(library, callback) {
-    const tag = document.createElement(library.type);
-
-    Object.assign(tag, { [library.type === types.script ? 'src' : 'href']: library.src });
-
-    if (library.type === types.link) Object.assign(tag, { rel: 'stylesheet', type: 'text/css' });
-
-    tag.addEventListener('load', () => {
-      library.status = status.loaded;
-      callback();
-    });
-
-    return tag;
-  }
-
-  return { load };
-})();
-
 // On scroll Animations to the whole site 
 function animateOnScroll() {
   const elements = document.querySelectorAll(".scroll__animate");
