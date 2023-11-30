@@ -1995,7 +1995,7 @@ function initProductForm() {
             //   hideLoader(loader,span);
             //   return;
             // }
-            await validateEmail(recipientEmail,errorMessageEmail);
+            validateEmail(recipientEmail,errorMessageEmail);
             hideLoader(loader,span);
             if (recipientDate.value) {
               if (isNaN(selectedDate.getTime()) || selectedDate > maxDate) {
@@ -2111,7 +2111,7 @@ function initProductForm() {
       span.classList.remove('hidden');
     }
   }
-  async function validateEmail(recipientEmail, errorMessageEmail) {
+  function validateEmail(recipientEmail, errorMessageEmail) {
     if (!recipientEmail.checkValidity()) {
       errorMessageEmail.classList.remove('hidden');
       // hideLoader(loader,span);
