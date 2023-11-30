@@ -98,7 +98,8 @@
           </button>
         </div>
         <div class="line__item-final--price rte">
-          {{ 'cart.general.final_line_price' | t }}<strong class="final-line__price">{{ item.final_line_price | money }}</strong>
+          <div>{{ 'cart.general.final_line_price' | t }}</div>
+          <strong class="final-line__price">{{ item.final_line_price | money }}</strong>
         </div>
       </div>
     </div>
