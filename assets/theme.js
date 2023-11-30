@@ -147,7 +147,7 @@ function debounce(func, delay) {
 
 function updateStickyHeader() {
   const scrollY = window.scrollY;
-  // let lastScrollY = 0;
+  let lastScrollY = 0;
   if (scrollY > lastScrollY) {
     if (!isSticky) {
       header.classList.add('sticky__header');
