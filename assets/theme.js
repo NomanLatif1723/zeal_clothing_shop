@@ -55,61 +55,20 @@ function formatMoney$1(cents, format) {
 var formatMoney = (val => formatMoney$1(val, window.themeContent.routes.money_format || "${{amount}}"));
 
 // On scroll Animations to the whole site 
-// function animateOnScroll() {
-//   const elements = document.querySelectorAll(".scroll__animate");
-//   elements.forEach((element) => {
-//     const elementTop = element.getBoundingClientRect().top;
-//     const windowHeight = window.innerHeight;
-
-//     if (elementTop < windowHeight -100) {
-//       element.classList.add("animate");
-//     }
-//   });
-// }
-  
-// document.addEventListener("DOMContentLoaded", animateOnScroll);
-// window.addEventListener("scroll", animateOnScroll);
-  
-// function animateOnScroll() {
-//   const elements = document.querySelectorAll(".scroll__animate");
-//   const windowHeight = window.innerHeight;
-
-//   function animate() {
-//     elements.forEach((element) => {
-//       const elementTop = element.getBoundingClientRect().top;
-
-//       if (elementTop < windowHeight - 100) {
-//         element.classList.add("animate");
-//       }
-//     });
-//   }
-
-//   requestAnimationFrame(animate);
-// }
-
-window.addEventListener("scroll", animateOnScroll);
-function isIOS() {
-  return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-}
-
 function animateOnScroll() {
   const elements = document.querySelectorAll(".scroll__animate");
-  const windowHeight = window.innerHeight;
-
   elements.forEach((element) => {
     const elementTop = element.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
 
-    if (elementTop < windowHeight - 100) {
-      if (isIOS()) {
-        // Apply different animation for iOS
-        element.classList.add("animate-ios");
-      } else {
-        element.classList.add("animate");
-      }
+    if (elementTop < windowHeight -100) {
+      element.classList.add("animate");
     }
   });
 }
-
+  
+document.addEventListener("DOMContentLoaded", animateOnScroll);
+window.addEventListener("scroll", animateOnScroll);
 
 // Announcement Bar Timer 
 function initAnnouncementTimer() {
