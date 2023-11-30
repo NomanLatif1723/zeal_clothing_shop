@@ -1826,9 +1826,10 @@ blockquote.testimonial__text {
 }
 .quickview-modal__close {
   position: absolute;
-  top: -15px;
-  right: -13px;
+  top: 0;
+  right: 0;
   padding: 6px;
+  z-index: 9;
 }
 @media only screen and (max-width: 1200px){
   .block__item--auto{
@@ -1893,6 +1894,10 @@ blockquote.testimonial__text {
   }
   .quick-shop__wrapper {
     display: block;
+  }
+  .quickview-modal__close {
+    top: -15px;
+    right: -13px;
   }
 }
 /* Collection List  */
