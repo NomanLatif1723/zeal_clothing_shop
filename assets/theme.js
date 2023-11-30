@@ -94,7 +94,7 @@ function animateOnScroll() {
 // const debouncedAnimateOnScroll = debounce(animateOnScroll, 200);
   
 document.addEventListener("DOMContentLoaded", animateOnScroll);
-window.addEventListener("scroll", debouncedAnimateOnScroll);
+window.addEventListener("scroll", animateOnScroll);
 
 // Announcement Bar Timer 
 function initAnnouncementTimer() {
