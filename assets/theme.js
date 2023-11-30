@@ -1907,7 +1907,8 @@ function initProductForm() {
     cartPopupMessage: document.querySelector('.cart-popup__message'),
     cartDrawerContent: document.querySelector("[data-cart]"),
     formValidationErrorMessage: document.querySelector('.product-form__errors'),
-    upsellCartItem: document.querySelectorAll('.cart__recommendations-item')
+    upsellCartItem: document.querySelectorAll('.cart__recommendations-item'),
+    sizeChartBtn: document.querySelector('#sizeChartBtn')
   };
   // Fetch The Cart Type Rather Page, Drawer or Popup
   const cartType = window.themeContent.settings.cartType;
@@ -1941,6 +1942,13 @@ function initProductForm() {
   selectors.closeDrawerBtn.addEventListener('click', () => {
     closeCartDrawer();
   });
+
+  // Size Chart Button Event Listener
+  if(selectors.sizeChartBtn) {
+    selectors.sizeChartBtn.addEventListener('click', () => {
+      
+    });
+  }
 
   // Upsell Variants Change Event Listener
   selectors.upsellCartItem.forEach(item => {
