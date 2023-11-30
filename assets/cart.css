@@ -291,9 +291,6 @@ display: inline-block;
   overflow: auto;
   height: 100%;
 }
-.cart-drawer__content .cart__item-content {
-  padding: 0;
-}
 .cart-drawer__footer {
   padding: 20px 25px 130px;
   border-top: 1px solid rgba(1,1,1,0.2);
