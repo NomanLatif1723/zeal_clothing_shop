@@ -54,10 +54,10 @@
               {%- render 'icon-quickview' -%}
             </span>
           </button>
-          <button class="quick-shop__btn quick-shop__desktop--hidden">
-            {%- render 'icon-quickview' -%}
-          </button>
         </div>
+        <button class="quick-shop__btn quick-shop__desktop--hidden">
+          {%- render 'icon-quickview' -%}
+        </button>
       {%- endif -%}
       <div class="collection-grid__image--wrapper" data-product-id="{{ product.id }}" data-product-handle="{{ product.handle }}">
         <a href="{{ product.url }}" title="{{ image.alt }}">
