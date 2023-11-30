@@ -281,7 +281,7 @@ display: inline-block;
   margin-left: auto;
 }
 .cart__modal-header {
-  padding: 20px 25px 20px;
+  padding: 20px 15px;
 }
 .free-shipping__modal {
   padding: 25px 25px;
@@ -358,6 +358,11 @@ display: inline-block;
   .cart__recommendations-item--variants select {
     -webkit-appearance: none;
     font-size: 12px;
+  }
+}
+@media only screen and (min-width: 381px) {
+  .cart__modal-header {
+    padding: 20px 25px;
   }
 }
 @media only screen and (min-width: 481px) {
