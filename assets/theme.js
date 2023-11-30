@@ -1990,18 +1990,16 @@ function initProductForm() {
             const selectedDate = new Date(recipientDate.value);
             const currentDate = new Date();
             const maxDate = new Date(currentDate.getTime() + (90 * 24 * 60 * 60 * 1000));
-            // if (!recipientEmail.checkValidity()) {
-            //   errorMessageEmail.classList.remove('hidden');
-            //   hideLoader(loader,span);
-            //   return;
-            // }
-            validateEmail(recipientEmail,errorMessageEmail);
-            hideLoader(loader,span);
+            if (!recipientEmail.checkValidity()) {
+              errorMessageEmail.classList.remove('hidden');
+              hideLoader(loader,span);
+              return;
+            }
             if (recipientDate.value) {
               if (isNaN(selectedDate.getTime()) || selectedDate > maxDate) {
                 errorMessageEmail.classList.add('hidden');
                 errorMessageDate.classList.remove('hidden');
-                // hideLoader(loader,span);
+                hideLoader(loader,span);
                 return; 
               }
             }
@@ -2109,13 +2107,6 @@ function initProductForm() {
     if (loader && span) {
       loader.classList.add('hidden');
       span.classList.remove('hidden');
-    }
-  }
-  function validateEmail(recipientEmail, errorMessageEmail) {
-    if (!recipientEmail.checkValidity()) {
-      errorMessageEmail.classList.remove('hidden');
-      // hideLoader(loader,span);
-      return;
     }
   }
 }
