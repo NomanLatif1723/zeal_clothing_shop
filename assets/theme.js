@@ -146,7 +146,7 @@ function debounce(func, delay) {
 }
 
 function initializeStickyHeader() {
-  const header = document.querySelector('.your-header-class');
+  const header = document.querySelector('.section__header');
 
   if (header) {
     const stickyHeader = header.getAttribute('data-sticky-header');
