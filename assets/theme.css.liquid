@@ -4420,6 +4420,15 @@ iframe.product-media__video {
 .recipient__button label {
   cursor: pointer;
 }
+.form__group {
+  position: relative;
+}
+.form__input:not(:placeholder-shown)~.form__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 12px;
+}
 .image__zoom-btn {
   position: absolute;
   top: 0;
