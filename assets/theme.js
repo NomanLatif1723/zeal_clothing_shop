@@ -109,51 +109,14 @@ document.addEventListener("DOMContentLoaded", function() {
   initAnnouncementTimer();
 });
 
-// Sticky Header 
-// function initStickyHeader() {
-//   const header = document.querySelector('.section__header');
-//   if (header) {
-//     const stickyHeader = header.getAttribute('data-sticky-header');
-//     if (stickyHeader == 'true') {
-//       let isSticky = false;
-//       let lastScrollY = 0;
-//       function updateStickyHeader() {
-//         const scrollY = window.scrollY;
-//         if (scrollY > lastScrollY) {
-//           if (!isSticky) {
-//             header.classList.add('sticky__header');
-//             isSticky = true;
-//           }
-//         } else {
-//           if (isSticky && (scrollY <= header.offsetTop || scrollY === 0)) {
-//             header.classList.remove('sticky__header'); 
-//             isSticky = false;
-//           }
-//         }
-//         lastScrollY = scrollY;
-//       }
-//       window.addEventListener('scroll', updateStickyHeader);
-//     }
-//   } 
-// }
-
-function debounce(func, delay) {
-  let timeoutId;
-  return function () {
-    clearTimeout(timeoutId);
-    timeoutId = setTimeout(func, delay);
-  };
-}
-
-function initializeStickyHeader() {
+Sticky Header 
+function initStickyHeader() {
   const header = document.querySelector('.section__header');
-
   if (header) {
     const stickyHeader = header.getAttribute('data-sticky-header');
-    if (stickyHeader === 'true') {
+    if (stickyHeader == 'true') {
       let isSticky = false;
       let lastScrollY = 0;
-
       function updateStickyHeader() {
         const scrollY = window.scrollY;
         if (scrollY > lastScrollY) {
@@ -163,26 +126,63 @@ function initializeStickyHeader() {
           }
         } else {
           if (isSticky && (scrollY <= header.offsetTop || scrollY === 0)) {
-            header.classList.remove('sticky__header');
+            header.classList.remove('sticky__header'); 
             isSticky = false;
           }
         }
         lastScrollY = scrollY;
       }
-
-      const debouncedUpdateStickyHeader = debounce(updateStickyHeader, 50);
-      window.addEventListener('scroll', debouncedUpdateStickyHeader);
+      window.addEventListener('scroll', updateStickyHeader);
     }
-  }
+  } 
 }
 
-initializeStickyHeader();
+// function debounce(func, delay) {
+//   let timeoutId;
+//   return function () {
+//     clearTimeout(timeoutId);
+//     timeoutId = setTimeout(func, delay);
+//   };
+// }
+
+// function initializeStickyHeader() {
+//   const header = document.querySelector('.section__header');
+
+//   if (header) {
+//     const stickyHeader = header.getAttribute('data-sticky-header');
+//     if (stickyHeader === 'true') {
+//       let isSticky = false;
+//       let lastScrollY = 0;
+
+//       function updateStickyHeader() {
+//         const scrollY = window.scrollY;
+//         if (scrollY > lastScrollY) {
+//           if (!isSticky) {
+//             header.classList.add('sticky__header');
+//             isSticky = true;
+//           }
+//         } else {
+//           if (isSticky && (scrollY <= header.offsetTop || scrollY === 0)) {
+//             header.classList.remove('sticky__header');
+//             isSticky = false;
+//           }
+//         }
+//         lastScrollY = scrollY;
+//       }
+
+//       const debouncedUpdateStickyHeader = debounce(updateStickyHeader, 50);
+//       window.addEventListener('scroll', debouncedUpdateStickyHeader);
+//     }
+//   }
+// }
+
+// initializeStickyHeader();
 
 
 
-// document.addEventListener("DOMContentLoaded", function() {
-//   initStickyHeader();
-// });
+document.addEventListener("DOMContentLoaded", function() {
+  initStickyHeader();
+});
 
 // Header Toggle button
 function initHeaderNavigation() {
