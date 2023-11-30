@@ -731,6 +731,7 @@ document.addEventListener("DOMContentLoaded", function() {
 //  General Modal Button Events 
 function initModalPopup() {
   let popupModal = document.querySelectorAll('[data-popup-modal]');
+  let sizeGuideContainer = document.querySelector('.product__sizeguide');
   popupModal.forEach(popup => {
     let closeModalBtn = popup.querySelector('.close__modal');
     let eventCancelBtn = popup.querySelector('.popup-cancel__btn button');
