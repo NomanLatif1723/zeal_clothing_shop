@@ -1990,11 +1990,12 @@ function initProductForm() {
             const selectedDate = new Date(recipientDate.value);
             const currentDate = new Date();
             const maxDate = new Date(currentDate.getTime() + (90 * 24 * 60 * 60 * 1000));
-            if (!recipientEmail.checkValidity()) {
-              errorMessageEmail.classList.remove('hidden');
-              // hideLoader(loader,span);
-              return;
-            }
+            // if (!recipientEmail.checkValidity()) {
+            //   errorMessageEmail.classList.remove('hidden');
+            //   hideLoader(loader,span);
+            //   return;
+            // }
+            await validateEmail(recipientEmail,errorMessageEmail);
             if (recipientDate.value) {
               if (isNaN(selectedDate.getTime()) || selectedDate > maxDate) {
                 errorMessageEmail.classList.add('hidden');
@@ -2107,6 +2108,13 @@ function initProductForm() {
     if (loader && span) {
       loader.classList.add('hidden');
       span.classList.remove('hidden');
+    }
+  }
+  async function validateEmail(recipientEmail, errorMessageEmail) {
+    if (!recipientEmail.checkValidity()) {
+      errorMessageEmail.classList.remove('hidden');
+      // hideLoader(loader,span);
+      return;
     }
   }
 }
