@@ -680,6 +680,7 @@ document.addEventListener("DOMContentLoaded", function() {
 function initModalPopup() {
   let popupModal = document.querySelectorAll('[data-popup-modal]');
   let sizeGuideContainer = document.querySelector('.product__sizeguide');
+  const bodyContainer = document.querySelector('body');
   popupModal.forEach(popup => {
     let closeModalBtn = popup.querySelector('.close__modal');
     let eventCancelBtn = popup.querySelector('.popup-cancel__btn button');
@@ -688,6 +689,7 @@ function initModalPopup() {
         closeModalBtn.closest('[data-popup-modal]').classList.add('popup__hidden');
         if (sizeGuideContainer) {
           sizeGuideContainer.classList.remove('sizeguide__overlay');
+          bodyContainer.classList.remove('drawer__opening');
         }
       });
     }
