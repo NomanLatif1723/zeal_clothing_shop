@@ -110,36 +110,58 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // Sticky Header 
-function initStickyHeader() {
-  const header = document.querySelector('.section__header');
-  if (header) {
-    const stickyHeader = header.getAttribute('data-sticky-header');
-    if (stickyHeader == 'true') {
-      let isSticky = false;
-      let lastScrollY = 0;
-      function updateStickyHeader() {
-        const scrollY = window.scrollY;
-        if (scrollY > lastScrollY) {
-          if (!isSticky) {
-            header.classList.add('sticky__header');
-            isSticky = true;
-          }
-        } else {
-          if (isSticky && (scrollY <= header.offsetTop || scrollY === 200)) {
-            header.classList.remove('sticky__header'); 
-            isSticky = false;
-          }
-        }
-        lastScrollY = scrollY;
-      }
-      window.addEventListener('scroll', updateStickyHeader);
-    }
-  } 
+// function initStickyHeader() {
+//   const header = document.querySelector('.section__header');
+//   if (header) {
+//     const stickyHeader = header.getAttribute('data-sticky-header');
+//     if (stickyHeader == 'true') {
+//       let isSticky = false;
+//       let lastScrollY = 0;
+//       function updateStickyHeader() {
+//         const scrollY = window.scrollY;
+//         if (scrollY > lastScrollY) {
+//           if (!isSticky) {
+//             header.classList.add('sticky__header');
+//             isSticky = true;
+//           }
+//         } else {
+//           if (isSticky && (scrollY <= header.offsetTop || scrollY === 200)) {
+//             header.classList.remove('sticky__header'); 
+//             isSticky = false;
+//           }
+//         }
+//         lastScrollY = scrollY;
+//       }
+//       window.addEventListener('scroll', updateStickyHeader);
+//     }
+//   } 
+// }
+
+// document.addEventListener("DOMContentLoaded", function() {
+//   initStickyHeader();
+// });
+// Get the header element
+var header = document.querySelector(".section__header");
+
+// Function to add the sticky class
+function addStickyClass() {
+  if (window.scrollY === 0) {
+    header.classList.remove("sticky__header");
+  } else {
+    header.classList.add("sticky__header");
+  }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-  initStickyHeader();
-});
+// Add an event listener for the scroll event
+window.addEventListener("scroll", addStickyClass);
+function addStickyClass() {
+  if (window.scrollY === 0 || document.body.scrollTop === 0) {
+    header.classList.remove("sticky__header");
+  } else {
+    header.classList.add("sticky__header");
+  }
+}
+
 
 // Header Toggle button
 function initHeaderNavigation() {
