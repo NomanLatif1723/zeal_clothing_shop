@@ -2091,7 +2091,8 @@ function initQuickShopCollection() {
     quickShopModal: document.querySelector('.quick-shop__modal'),
     modalCloseBtn: document.querySelector('.quickview-modal__close'),
     quickShopModalBox: document.querySelector('.quick-shop__box'),
-    quickViewContainer: document.querySelector('.quick-view__container')
+    quickViewContainer: document.querySelector('.quick-view__container'),
+    bodyContainer: document.querySelector('body')
   }
   
   selectors.quickShopBtn.forEach(button => {
@@ -2118,9 +2119,11 @@ function initQuickShopCollection() {
 
   function openQuickShopModal() {
     selectors.quickShopModal.classList.remove('hidden');
+    selectors.bodyContainer.classList.add('drawer__opening');
   }
   function closeQuickShopModal() {
     selectors.quickShopModal.classList.add('hidden');
+    selectors.bodyContainer.classList.remove('drawer__opening');
   }
   
   const products = document.querySelectorAll('.quick-shop__btn');
