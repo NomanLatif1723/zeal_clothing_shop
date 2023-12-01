@@ -152,8 +152,8 @@ function addStickyClass() {
   }
 }
 
-// // Add an event listener for the scroll event
-// window.addEventListener("scroll", addStickyClass);
+// Add an event listener for the scroll event
+window.addEventListener("scroll", addStickyClass);
 // function addStickyClass() {
 //   if (window.scrollY === 0 || document.body.scrollTop === 0) {
 //     header.classList.remove("sticky__header");
