@@ -116,7 +116,7 @@ function initStickyHeader() {
     const stickyHeader = header.getAttribute('data-sticky-header');
     if (stickyHeader == 'true') {
       let isSticky = false;
-      let lastScrollY = 0;
+      let lastScrollY = 40;
       function updateStickyHeader() {
         const scrollY = window.scrollY;
         if (scrollY > lastScrollY) {
