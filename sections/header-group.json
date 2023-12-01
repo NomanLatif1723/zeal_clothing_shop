@@ -91,7 +91,7 @@
         "desktop_menu": "main-menu",
         "mobile_menu": "",
         "header_styles": "left",
-        "sticky_header": false,
+        "sticky_header": true,
         "show_icons": true
       }
     }
