@@ -115,6 +115,18 @@ function initStickyHeader() {
   if (header) {
     const stickyHeader = header.getAttribute('data-sticky-header');
     if (stickyHeader == 'true') {
+      // Debounce function
+      function debounce(func, delay) {
+        let timeout;
+        return function () {
+          const context = this;
+          const args = arguments;
+          clearTimeout(timeout);
+          timeout = setTimeout(function () {
+            func.apply(context, args);
+          }, delay);
+        };
+      }
       function updateStickyHeader() {
         if (window.scrollY === 0) {
           header.classList.remove("sticky__header");
@@ -122,7 +134,9 @@ function initStickyHeader() {
           header.classList.add("sticky__header");
         }
       }
-      window.addEventListener('scroll', updateStickyHeader);
+      const debouncedAddStickyClass = debounce(updateStickyHeader, 250);
+      window.addEventListener("scroll", debouncedAddStickyClass);
+      // window.addEventListener('scroll', updateStickyHeader);
     }
   } 
 }
