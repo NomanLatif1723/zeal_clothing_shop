@@ -94,7 +94,7 @@ function animateOnScroll() {
   });
 }
 const debouncedAnimateOnScroll = debounce(animateOnScroll, 50);
-window.addEventListener("scroll", debouncedAnimateOnScroll);
+window.addEventListener("scroll", animateOnScroll);
 // document.addEventListener("DOMContentLoaded", animateOnScroll);
 // window.addEventListener("scroll", animateOnScroll);
 
