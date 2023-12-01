@@ -116,7 +116,7 @@ function initStickyHeader() {
     const stickyHeader = header.getAttribute('data-sticky-header');
     if (stickyHeader == 'true') {
       let isSticky = false;
-      let lastScrollY = 40;
+      let lastScrollY = 0;
       function updateStickyHeader() {
         const scrollY = window.scrollY;
         if (scrollY > lastScrollY) {
@@ -125,7 +125,7 @@ function initStickyHeader() {
             isSticky = true;
           }
         } else {
-          if (isSticky && (scrollY <= header.offsetTop || scrollY === 0)) {
+          if (isSticky && (scrollY <= header.offsetTop || scrollY === 40)) {
             header.classList.remove('sticky__header'); 
             isSticky = false;
           }
