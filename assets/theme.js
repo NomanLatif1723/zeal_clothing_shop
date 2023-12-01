@@ -125,7 +125,7 @@ function initStickyHeader() {
             isSticky = true;
           }
         } else {
-          if (isSticky && (scrollY <= header.offsetTop || scrollY === 40)) {
+          if (isSticky && (scrollY <= header.offsetTop || scrollY === 200)) {
             header.classList.remove('sticky__header'); 
             isSticky = false;
           }
