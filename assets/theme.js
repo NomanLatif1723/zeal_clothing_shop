@@ -54,6 +54,19 @@ function formatMoney$1(cents, format) {
 }
 var formatMoney = (val => formatMoney$1(val, window.themeContent.routes.money_format || "${{amount}}"));
 
+// Debounce function
+function debounce(func, delay) {
+  let timeout;
+  return function () {
+    const context = this;
+    const args = arguments;
+    clearTimeout(timeout);
+    timeout = setTimeout(function () {
+      func.apply(context, args);
+    }, delay);
+  };
+}
+  
 // On scroll Animations to the whole site 
 function animateOnScroll() {
   const elements = document.querySelectorAll(".scroll__animate");
@@ -115,18 +128,6 @@ function initStickyHeader() {
   if (header) {
     const stickyHeader = header.getAttribute('data-sticky-header');
     if (stickyHeader == 'true') {
-      // Debounce function
-      function debounce(func, delay) {
-        let timeout;
-        return function () {
-          const context = this;
-          const args = arguments;
-          clearTimeout(timeout);
-          timeout = setTimeout(function () {
-            func.apply(context, args);
-          }, delay);
-        };
-      }
       function updateStickyHeader() {
         if (window.scrollY === 0) {
           header.classList.remove("sticky__header");
