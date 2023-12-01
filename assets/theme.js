@@ -1899,7 +1899,7 @@ function initProductForm() {
     const sizeGuidePopup = document.querySelector('.sizeguide-popup');
     const sizeGuideContainer = document.querySelector('.product__sizeguide');
     selectors.sizeChartBtn.addEventListener('click', () => {
-      sizeGuidePopup.classList.toggle('popup__hidden');
+      sizeGuidePopup.classList.remove('popup__hidden');
       sizeGuideContainer.classList.add('sizeguide__overlay');
       selectors.bodyContainer.classList.add('drawer__opening');
     });
