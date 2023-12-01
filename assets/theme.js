@@ -68,20 +68,35 @@ function debounce(func, delay) {
 }
   
 // On scroll Animations to the whole site 
+// function animateOnScroll() {
+//   const elements = document.querySelectorAll(".scroll__animate");
+//   elements.forEach((element) => {
+//     const elementTop = element.getBoundingClientRect().top;
+//     const windowHeight = window.innerHeight;
+
+//     if (elementTop < windowHeight -100) {
+//       element.classList.add("animate");
+//     }
+//   });
+// }
+
 function animateOnScroll() {
   const elements = document.querySelectorAll(".scroll__animate");
-  elements.forEach((element) => {
-    const elementTop = element.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
+  const scrollPosition = window.scrollY;
+  const windowHeight = window.innerHeight;
 
-    if (elementTop < windowHeight -100) {
+  elements.forEach((element) => {
+    const elementTop = element.getBoundingClientRect().top + scrollPosition;
+
+    if (elementTop < windowHeight - 100) {
       element.classList.add("animate");
     }
   });
 }
-  
-document.addEventListener("DOMContentLoaded", animateOnScroll);
-window.addEventListener("scroll", animateOnScroll);
+const debouncedAnimateOnScroll = debounce(animateOnScroll, 50);
+window.addEventListener("scroll", debouncedAnimateOnScroll);
+// document.addEventListener("DOMContentLoaded", animateOnScroll);
+// window.addEventListener("scroll", animateOnScroll);
 
 // Announcement Bar Timer 
 function initAnnouncementTimer() {
