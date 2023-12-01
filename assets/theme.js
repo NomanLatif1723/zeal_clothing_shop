@@ -1899,6 +1899,7 @@ function initProductForm() {
     selectors.sizeChartBtn.addEventListener('click', () => {
       sizeGuidePopup.classList.toggle('popup__hidden');
       sizeGuideContainer.classList.toggle('sizeguide__overlay');
+      selectors.bodyContainer.classList.add('drawer__opening');
     });
     // if (sizeGuidePopup) {
     //   sizeGuidePopup.addEventListener('click', (event) => {
