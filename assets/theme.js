@@ -86,12 +86,13 @@ function animateOnScroll() {
   const windowHeight = window.innerHeight;
 
   elements.forEach((element) => {
-    const elementTop = element.getBoundingClientRect().top + scrollPosition;
+  const elementTop = element.getBoundingClientRect().top + scrollPosition;
+  console.log("Element Top:", elementTop, "Window Height:", windowHeight);
 
-    if (elementTop < windowHeight - 100) {
-      element.classList.add("animate");
-    }
-  });
+  if (elementTop < windowHeight - 100) {
+    element.classList.add("animate");
+  }
+});
 }
 const debouncedAnimateOnScroll = debounce(animateOnScroll, 50);
 window.addEventListener("scroll", animateOnScroll);
