@@ -135,13 +135,11 @@ function initStickyHeader() {
           header.classList.add("sticky__header");
         }
       }
-      const debouncedAddStickyClass = debounce(updateStickyHeader, 50);
-      window.addEventListener("scroll", debouncedAddStickyClass);
-      // window.addEventListener('scroll', updateStickyHeader);
+      const debouncedAddSticky = debounce(updateStickyHeader, 50);
+      window.addEventListener("scroll", debouncedAddSticky);
     }
   } 
 }
-
 document.addEventListener("DOMContentLoaded", function() {
   initStickyHeader();
 });
